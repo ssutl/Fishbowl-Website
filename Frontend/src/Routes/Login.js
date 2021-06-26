@@ -1,17 +1,37 @@
-import React from 'react'
+import React, {useState} from 'react'
+import App from '../App'
+import { GoogleLogin } from 'react-google-login';
+import '../Styling/Login.css'
 
 function Login() {
-    function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        }
-   
-    return (
-        <div>
-            <div className="g-signin2" data-onsuccess="onSignIn"></div>
+    const [logged, setLogged] = useState("");
+
+    const responseGoogle = (response) => {
+        setLogged(response.hasOwnProperty('tokenId'))
+      }
+
+    if(logged){
+        return(
+            <App/>
+        )
+    }else return (
+        <div className="login-page">
+            <div className="login-holder">
+                <div className="upper">
+                    <p className="title">Welcome</p>
+                    <p>Join and socialize on a network for students</p>
+                </div>
+                <div className="lower">
+                    <GoogleLogin
+                    className="login-button"
+                            clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
+                            onSuccess={responseGoogle}
+                            onFailure={responseGoogle}
+                            cookiePolicy={'single_host_origin'}
+                            isSignedIn={true}
+                    >Login With Google</GoogleLogin>
+                </div>
+            </div>
         </div>
     )
 }
