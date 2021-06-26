@@ -1,0 +1,32 @@
+@import "./Breakpoints.scss";
+@import "./Theme.scss";
+
+.nav-holder {
+  display: none;
+}
+@include breakpoint-mixin("tablet") {
+  .nav-holder {
+    display: flex;
+    width: 20%;
+    height: 100vh;
+    background-color: brown;
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  .nav-holder {
+    display: flex;
+    width: 10%;
+    height: 100vh;
+    background-color: brown;
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .nav-holder {
+    display: flex;
+    width: 15%;
+    height: 100vh;
+    background-color: aqua;
+  }
+}

@@ -1,0 +1,37 @@
+.nav-holder {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20%;
+    height: 100vh;
+    background-color: brown;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 10%;
+    height: 100vh;
+    background-color: brown;
+  }
+}
+
+@media only screen and (min-width: 1248px) {
+  .nav-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 15%;
+    height: 100vh;
+    background-color: aqua;
+  }
+}
+/*# sourceMappingURL=NavBar.css.map */

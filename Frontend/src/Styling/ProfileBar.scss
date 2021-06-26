@@ -1,0 +1,29 @@
+@import "./Breakpoints.scss";
+@import "./Theme.scss";
+
+.profile-holder {
+  display: none;
+}
+@include breakpoint-mixin("tablet") {
+  .profile-holder {
+    display: none;
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  .profile-holder {
+    display: flex;
+    width: 25%;
+    height: 100vh;
+    background-color: pink;
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .profile-holder {
+    display: flex;
+    width: 20%;
+    height: 100vh;
+    background-color: orange;
+  }
+}

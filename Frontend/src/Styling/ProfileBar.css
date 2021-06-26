@@ -1,0 +1,32 @@
+.profile-holder {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .profile-holder {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .profile-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 25%;
+    height: 100vh;
+    background-color: pink;
+  }
+}
+
+@media only screen and (min-width: 1248px) {
+  .profile-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20%;
+    height: 100vh;
+    background-color: orange;
+  }
+}
+/*# sourceMappingURL=ProfileBar.css.map */
