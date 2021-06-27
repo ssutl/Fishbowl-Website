@@ -1,0 +1,68 @@
+@import "./Breakpoints.scss";
+@import "./Theme.scss";
+
+.global-main {
+  background-color: pink;
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+
+  .global-holder {
+    width: 83%;
+    height: 100%;
+    background-color: aqua;
+  }
+}
+
+@include breakpoint-mixin("tablet") {
+  .global-main {
+    background-color: pink;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+
+    .global-holder {
+      width: 83%;
+      height: 100%;
+      background-color: aqua;
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  .global-main {
+    background-color: pink;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+
+    .global-holder {
+      width: 83%;
+      height: 100%;
+      background-color: aqua;
+    }
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .global-main {
+    background-color: pink;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+
+    .global-holder {
+      width: 83%;
+      height: 100%;
+      background-color: aqua;
+    }
+  }
+}

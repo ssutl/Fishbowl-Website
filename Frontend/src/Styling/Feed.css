@@ -19,7 +19,7 @@
 }
 
 .feed-section .top-section .holder {
-  width: 81%;
+  width: 83%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,7 +39,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 165px;
+  width: 140px;
 }
 
 .feed-section .top-section .holder .feed-BTN a {
@@ -49,7 +49,8 @@
 }
 
 .feed-section .top-section .holder .feed-BTN a p {
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 600;
   font-family: "Red Hat Text", sans-serif;
 }
 
@@ -59,7 +60,7 @@
 
 .feed-section .top-section .holder .create-BTN {
   height: 45px;
-  width: 120px;
+  width: 115px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,6 +124,7 @@
     text-decoration: none;
   }
   .feed-section .top-section .holder .feed-BTN a p {
+    font-weight: 600;
     font-size: 20px;
     font-family: "Red Hat Text", sans-serif;
   }
@@ -196,6 +198,7 @@
     text-decoration: none;
   }
   .feed-section .top-section .holder .feed-BTN a p {
+    font-weight: 600;
     font-size: 20px;
     font-family: "Red Hat Text", sans-serif;
   }
