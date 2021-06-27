@@ -5,14 +5,21 @@ import '../Styling/Login.css'
 
 function Login() {
     const [logged, setLogged] = useState("");
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [image, setImage] = useState("")
 
     const responseGoogle = (response) => {
         setLogged(response.hasOwnProperty('tokenId'))
+        setName(response.dt.Ve)
+        setEmail(response.dt.Nt)
+        setImage(response.dt.CJ)
+        console.log(response)
       }
 
     if(logged){
         return(
-            <App/>
+            <App name={name} email={email} image={image}/>
         )
     }else return (
         <div className="login-page">

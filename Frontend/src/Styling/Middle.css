@@ -23,8 +23,13 @@
 @media only screen and (min-width: 1248px) {
   .middle-holder {
     background-color: lightgreen;
-    width: 66%;
+    width: 50%;
     height: 100vh;
+  }
+  .middle-holder .section1 {
+    height: 10vh;
+    width: 100%;
+    background-color: aqua;
   }
 }
 /*# sourceMappingURL=Middle.css.map */

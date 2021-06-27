@@ -24,7 +24,25 @@
 @include breakpoint-mixin("desktop") {
   .middle-holder {
     background-color: lightgreen;
-    width: 66%;
+    width: 50%;
     height: 100vh;
+
+    .section1 {
+      height: 10vh;
+      width: 100%;
+      background-color: aqua;
+    }
+
+    // .section2 {
+    //   height: 15vh;
+    //   width: 100%;
+    //   background-color: orange;
+    // }
+
+    // .section3 {
+    //   height: 75vh;
+    //   width: 100%;
+    //   background-color: pink;
+    // }
   }
 }
