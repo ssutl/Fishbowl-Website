@@ -1,2 +1,168 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
+
+.feed-section {
+  height: 90vh;
+  width: 100%;
+
+  .top-section {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+
+    .holder {
+      width: 81%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .feed-BTN {
+        display: flex;
+        justify-content: space-between;
+        width: 165px;
+
+        a {
+          opacity: 0.7;
+          color: white;
+          text-decoration: none;
+          p {
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+          }
+        }
+        a:hover {
+          opacity: 1;
+        }
+      }
+
+      .create-BTN {
+        height: 45px;
+        width: 120px;
+        display: flex;
+        background-color: $highlight;
+        border-radius: 5px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        font-family: "Red Hat Text", sans-serif;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet") {
+  .feed-section {
+    height: 90vh;
+    width: 100%;
+
+    .top-section {
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        width: 81%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          display: flex;
+          justify-content: space-between;
+          width: 165px;
+
+          a {
+            opacity: 0.7;
+            color: white;
+            text-decoration: none;
+            p {
+              font-size: 20px;
+              font-family: "Red Hat Text", sans-serif;
+            }
+          }
+          a:hover {
+            opacity: 1;
+          }
+        }
+
+        .create-BTN {
+          height: 45px;
+          width: 130px;
+          display: flex;
+          background-color: $highlight;
+          border-radius: 5px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .feed-section {
+    height: 90vh;
+    width: 100%;
+
+    .top-section {
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        width: 81%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          display: flex;
+          justify-content: space-between;
+          width: 165px;
+
+          a {
+            opacity: 0.7;
+            color: white;
+            text-decoration: none;
+            p {
+              font-size: 20px;
+              font-family: "Red Hat Text", sans-serif;
+            }
+          }
+          a:hover {
+            opacity: 1;
+          }
+        }
+
+        .create-BTN {
+          height: 45px;
+          width: 160px;
+          display: flex;
+          background-color: $highlight;
+          border-radius: 5px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
