@@ -4,12 +4,13 @@ import { GoogleLogout } from 'react-google-login';
 import { UserContext } from "../Context/CurrentUser";
 
 function ProfileBar() {
-    const responseGoogle = (response) => {
-        console.log(response);
-      }
 
       const info = useContext(UserContext)
       console.log('stuff: ', info);
+
+      const logout = () =>{
+          
+      }
       
     return (
         <div className="profile-holder">
@@ -27,10 +28,9 @@ function ProfileBar() {
                 </div>
                 <div className="lower-profile">
                     <GoogleLogout
-                    className="Logout of account"
                     clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
-                    buttonText="Logout of Account"
-                    onLogoutSuccess={responseGoogle}
+                    buttonText="Logout"
+                    onLogoutSuccess={logout}
                     >
                     </GoogleLogout>
                 </div>

@@ -25,17 +25,13 @@
         justify-content: space-between;
         width: 140px;
 
-        a {
-          opacity: 0.7;
-          color: white;
-          text-decoration: none;
-          p {
-            font-size: 17px;
-            font-weight: 600;
-            font-family: "Red Hat Text", sans-serif;
-          }
+        p {
+          cursor: pointer;
+          font-size: 17px;
+          font-weight: 600;
+          font-family: "Red Hat Text", sans-serif;
         }
-        a:hover {
+        p:hover {
           opacity: 1;
         }
       }

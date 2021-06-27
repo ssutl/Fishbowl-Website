@@ -42,19 +42,14 @@
   width: 140px;
 }
 
-.feed-section .top-section .holder .feed-BTN a {
-  opacity: 0.7;
-  color: white;
-  text-decoration: none;
-}
-
-.feed-section .top-section .holder .feed-BTN a p {
+.feed-section .top-section .holder .feed-BTN p {
+  cursor: pointer;
   font-size: 17px;
   font-weight: 600;
   font-family: "Red Hat Text", sans-serif;
 }
 
-.feed-section .top-section .holder .feed-BTN a:hover {
+.feed-section .top-section .holder .feed-BTN p:hover {
   opacity: 1;
 }
 
