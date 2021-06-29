@@ -155,6 +155,7 @@
         -ms-flex-align: center;
             align-items: center;
     padding-left: 15px;
+    color: white;
   }
   .middle-holder .section1 .search-wrapper .searchBar {
     width: 100%;
