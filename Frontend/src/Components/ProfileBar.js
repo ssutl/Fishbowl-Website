@@ -6,7 +6,7 @@ import { UserContext } from "../Context/CurrentUser";
 function ProfileBar() {
 
       const info = useContext(UserContext)
-      console.log('stuff: ', info);
+      console.log('stuff: ', info.image);
 
       const logout = () =>{
           

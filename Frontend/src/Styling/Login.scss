@@ -50,6 +50,15 @@
   }
 }
 
+@include breakpoint-mixin("tablet-wide") {
+  .login-page {
+    .login-holder {
+      width: 45%;
+      height: 40%;
+    }
+  }
+}
+
 @include breakpoint-mixin("desktop") {
   .login-page {
     .login-holder {
