@@ -10,11 +10,11 @@ function Login() {
     const [image, setImage] = useState("")
 
     const onLoginSuccess = (response) => {
-        console.log("Login Successful", response)
+        console.log("Login Successful")
         setLogged(response.hasOwnProperty('tokenId'))
-        setName(response.Ys.Ve)
-        setEmail(response.Ys.It)
-        setImage(response.Ys.gJ)
+        setName(response.dt.Ve)
+        setEmail(response.dt.Nt)
+        setImage(response.dt.CJ)
         console.log(response)
       }
 
