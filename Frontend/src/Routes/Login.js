@@ -8,14 +8,14 @@ function Login() {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [image, setImage] = useState("")
+    const [id,setID] = useState("")
 
     const onLoginSuccess = (response) => {
-        console.log("Login Successful")
         setLogged(response.hasOwnProperty('tokenId'))
-        setName(response.dt.Ve)
-        setEmail(response.dt.Nt)
-        setImage(response.dt.CJ)
-        console.log(response)
+        setName(response.Ys.Ve)
+        setEmail(response.Ys.It)
+        setImage(response.Ys.gJ)
+        setID(response.Ys.xS)
       }
 
     const onFailureSuccess = (response)=>{

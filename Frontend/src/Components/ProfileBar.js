@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext} from "react";
 import '../Styling/ProfileBar.css'
 import { GoogleLogout } from 'react-google-login';
 import { UserContext } from "../Context/CurrentUser";
@@ -6,7 +6,6 @@ import { UserContext } from "../Context/CurrentUser";
 function ProfileBar() {
 
       const info = useContext(UserContext)
-      console.log('stuff: ', info.image);
 
       const logout = () =>{
           
@@ -18,7 +17,7 @@ function ProfileBar() {
                 <div className="upper-profile">
                     <div className="left">
                         <div className="image-holder">
-                            <img src={info.image} className="image"></img>
+                            <img src={info.image} className="image" alt=""></img>
                         </div>
                     </div>
                     <div className="right">

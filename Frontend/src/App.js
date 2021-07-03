@@ -1,5 +1,4 @@
 import './Styling/App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from './Components/NavBar';
 import ProfileBar from './Components/ProfileBar';
 import Middle from './Routes/Middle';

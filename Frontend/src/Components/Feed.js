@@ -1,7 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import '../Styling/Feed.css'
-import { Link } from "react-router-dom";
 import AddIcon from '@material-ui/icons/Add';
 import '../Styling/Feed.css'
 
