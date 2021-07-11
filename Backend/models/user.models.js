@@ -7,6 +7,8 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema({ //Creating model
     username: { type: String},
+    email: { type: String},
+    image: {type:String},
     subjects: [{type:String}]
 })
 

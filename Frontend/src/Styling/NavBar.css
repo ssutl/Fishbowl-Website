@@ -31,7 +31,88 @@
     display: flex;
     width: 22%;
     height: 100vh;
-    background-color: aqua;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-holder .people-holder {
+    width: 80%;
+    height: 95vh;
+  }
+  .nav-holder .people-holder .upper {
+    height: 15%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-holder .people-holder .upper h1,
+  .nav-holder .people-holder .upper h2 {
+    margin-left: 25px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .nav-holder .people-holder .upper h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .nav-holder .people-holder .upper h2 {
+    font-size: 18px;
+    opacity: 0.7;
+  }
+  .nav-holder .people-holder .lower {
+    height: 85%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-holder .people-holder .lower .user-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-holder .people-holder .lower .user-holder .circle {
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+    background-color: #2b323b;
+    overflow: hidden;
+  }
+  .nav-holder .people-holder .lower .user-holder .circle img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .nav-holder .people-holder .lower .user-holder p {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
   }
 }
 /*# sourceMappingURL=NavBar.css.map */
