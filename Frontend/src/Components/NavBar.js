@@ -2,6 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import '../Styling/NavBar.css'
 import axios from 'axios';
 import { UserContext } from "../Context/CurrentUser";
+import { Link } from "react-router-dom";
 
 function NavBar() {
     const info = useContext(UserContext)
@@ -33,12 +34,15 @@ function NavBar() {
                         return newUser.username !== info.name
                     }).map((user,index)=>{
                         return(
-                            <div className="user-holder" key={index}>
-                                <div className="circle">
-                                    <img src={user.image}></img>
-                                </div>  
-                                <p>{user.username}</p>  
-                            </div>    
+                            <Link to="/people">
+                                <div className="user-holder" key={index}>
+                                    <div className="circle">
+                                        <img src={user.image}></img>
+                                    </div>  
+                                    <p>{user.username}</p>  
+                                </div>
+                            </Link>
+                                
                         )
                     })}
 

@@ -1,0 +1,19 @@
+@import "./Breakpoints.scss";
+@import "./Theme.scss";
+
+@include breakpoint-mixin("tablet") {
+}
+
+@include breakpoint-mixin("tablet-wide") {
+}
+
+@include breakpoint-mixin("desktop") {
+  .section2 {
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+    h1 {
+      color: white;
+    }
+  }
+}

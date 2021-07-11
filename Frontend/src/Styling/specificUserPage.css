@@ -1,0 +1,11 @@
+@media only screen and (min-width: 1248px) {
+  .section2 {
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+  }
+  .section2 h1 {
+    color: white;
+  }
+}
+/*# sourceMappingURL=specificUserPage.css.map */
