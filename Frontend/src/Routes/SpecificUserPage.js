@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../Styling/specificUserPage.css"
 import axios from "axios";
@@ -12,7 +12,7 @@ function SpecificUserPage() {
         method:"GET",
         url: "http://localhost:5000/users/get",
         }).then((response)=>{
-            response.data.map((user)=>{
+            response.data.forEach((user)=>{
                 if(user._id === current_user_ID){
                     setClickedUser(user)
                 }

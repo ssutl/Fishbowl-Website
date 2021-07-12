@@ -9,7 +9,8 @@ const userSchema = new Schema({ //Creating model
     username: { type: String},
     email: { type: String},
     image: {type:String},
-    subjects: [{type:String}]
+    subjects: [{type:String}],
+    online: {type:Boolean}
 })
 
 const User = mongoose.model('User', userSchema) //Exporting model for use elsewhere

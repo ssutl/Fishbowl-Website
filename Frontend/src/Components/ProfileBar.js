@@ -2,13 +2,25 @@ import React, { useContext} from "react";
 import '../Styling/ProfileBar.css'
 import { GoogleLogout } from 'react-google-login';
 import { UserContext } from "../Context/CurrentUser";
+import axios from 'axios';
 
 function ProfileBar() {
 
       const info = useContext(UserContext)
 
+      
+
       const logout = () =>{
-          
+
+        axios({ //On logout changing users status to offline
+            method:`PUT`,
+            url: `http://localhost:5000/users/update/${info.id}`,
+            data: {"online":false}
+        }).then((response)=>{
+            console.log(response)
+        }).catch((error)=>{
+            console.log("error", error)
+        })
       }
       
     return (

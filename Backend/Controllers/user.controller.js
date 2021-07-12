@@ -6,7 +6,7 @@ const router = require('express').Router() //Express
 
 router.route('/new').post((req, res)=>{ //Req is the data that the front end is sending to the backend 
     console.log('req from login: ', req);
-    const {username, email, image} = req.body;
+    const {username, email, image, online} = req.body;
     
 User.findOne({ username })
     .then((user)=>{
@@ -32,8 +32,16 @@ router.route('/get').get((req,res)=>{
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
-router.route('/delete/:id').delete()
+router.route('/delete/:id').delete((req, res) => {
+    User.deleteOne({ _id: req.params.id })
+        .then(success => res.json('Success! User deleted.'))
+        .catch(err => res.status(400).json('Error! ' + err))
+})
 
-router.route('/update/:id').put()
+router.route('/update/:id').put((req, res) => {
+    User.findByIdAndUpdate(req.params.id, req.body)
+        .then(user => res.json('Success! User updated.'))
+        .catch(err => res.status(400).json('Error! ' + err))
+})
 
 module.exports = router;

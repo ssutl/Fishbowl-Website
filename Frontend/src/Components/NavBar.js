@@ -34,15 +34,16 @@ function NavBar() {
                         return newUser.username !== info.name
                     }).map((user,index)=>{
                         return(
-                            <Link to={`/people/${user._id}`} >
-                                <div className="user-holder" key={index}>
-                                    <div className="circle">
-                                        <img src={user.image}></img>
-                                    </div>  
-                                    <p>{user.username}</p>  
-                                </div>
-                            </Link>
-                                
+                                <div className="user-holder" >
+                                   <Link to={`/people/${user._id}`} key={index}>
+                                        <div className="circle">
+                                            <img src={user.image} alt=""></img>
+                                        </div>  
+                                        <div className={user.online?"online-circle":"offline-circle"}>
+                                        </div>  
+                                        <p>{user.username}</p>  
+                                    </Link>
+                                </div>  
                         )
                     })}
 

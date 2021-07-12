@@ -184,18 +184,12 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .nav-holder .people-holder .lower a {
-    text-decoration: none;
-  }
-  .nav-holder .people-holder .lower a .user-holder {
+  .nav-holder .people-holder .lower .user-holder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -206,22 +200,54 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .nav-holder .people-holder .lower a .user-holder .circle {
+  .nav-holder .people-holder .lower .user-holder a {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-holder .people-holder .lower .user-holder a .circle {
     margin-left: 20px;
-    margin-right: 15px;
     border-radius: 100%;
     height: 45px;
     width: 45px;
     background-color: #2b323b;
     overflow: hidden;
   }
-  .nav-holder .people-holder .lower a .user-holder .circle img {
+  .nav-holder .people-holder .lower .user-holder a .circle img {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .nav-holder .people-holder .lower a .user-holder p {
+  .nav-holder .people-holder .lower .user-holder a .online-circle {
+    position: relative;
+    top: 18px;
+    right: 15px;
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    background-color: #1a68ef;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+  }
+  .nav-holder .people-holder .lower .user-holder a .offline-circle {
+    position: relative;
+    top: 18px;
+    right: 15px;
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    background-color: #1a68ef;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    background-color: #fd4d4d;
+  }
+  .nav-holder .people-holder .lower .user-holder a p {
+    margin-left: 5px;
     display: block;
     font-weight: 500;
     font-size: 20px;

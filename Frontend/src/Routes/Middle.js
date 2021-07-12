@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 import Feed from '../Components/Feed';
 import '../Styling/Middle.css'
 import SearchIcon from '@material-ui/icons/Search';
