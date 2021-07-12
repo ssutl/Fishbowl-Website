@@ -9,7 +9,60 @@
     display: flex;
     width: 20%;
     height: 100vh;
-    background-color: brown;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-holder .people-holder {
+    width: 80%;
+    height: 95vh;
+  }
+  .nav-holder .people-holder .upper {
+    display: none;
+  }
+  .nav-holder .people-holder .lower {
+    height: 85%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-holder .people-holder .lower .user-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-holder .people-holder .lower .user-holder .circle {
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+    background-color: #2b323b;
+    overflow: hidden;
+  }
+  .nav-holder .people-holder .lower .user-holder .circle img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .nav-holder .people-holder .lower .user-holder p {
+    display: none;
   }
 }
 
@@ -20,7 +73,60 @@
     display: flex;
     width: 10%;
     height: 100vh;
-    background-color: brown;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-holder .people-holder {
+    width: 80%;
+    height: 95vh;
+  }
+  .nav-holder .people-holder .upper {
+    display: none;
+  }
+  .nav-holder .people-holder .lower {
+    height: 85%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-holder .people-holder .lower .user-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-holder .people-holder .lower .user-holder .circle {
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+    background-color: #2b323b;
+    overflow: hidden;
+  }
+  .nav-holder .people-holder .lower .user-holder .circle img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .nav-holder .people-holder .lower .user-holder p {
+    display: none;
   }
 }
 
@@ -78,12 +184,18 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .nav-holder .people-holder .lower .user-holder {
+  .nav-holder .people-holder .lower a {
+    text-decoration: none;
+  }
+  .nav-holder .people-holder .lower a .user-holder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -94,7 +206,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .nav-holder .people-holder .lower .user-holder .circle {
+  .nav-holder .people-holder .lower a .user-holder .circle {
     margin-left: 20px;
     margin-right: 15px;
     border-radius: 100%;
@@ -103,13 +215,14 @@
     background-color: #2b323b;
     overflow: hidden;
   }
-  .nav-holder .people-holder .lower .user-holder .circle img {
+  .nav-holder .people-holder .lower a .user-holder .circle img {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .nav-holder .people-holder .lower .user-holder p {
+  .nav-holder .people-holder .lower a .user-holder p {
+    display: block;
     font-weight: 500;
     font-size: 20px;
     font-family: "Red Hat Text", sans-serif;

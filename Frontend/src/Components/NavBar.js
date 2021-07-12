@@ -34,7 +34,7 @@ function NavBar() {
                         return newUser.username !== info.name
                     }).map((user,index)=>{
                         return(
-                            <Link to="/people">
+                            <Link to={`/people/${user._id}`} >
                                 <div className="user-holder" key={index}>
                                     <div className="circle">
                                         <img src={user.image}></img>

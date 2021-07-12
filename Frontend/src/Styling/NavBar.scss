@@ -9,7 +9,50 @@
     display: flex;
     width: 20%;
     height: 100vh;
-    background-color: brown;
+    align-items: center;
+    justify-content: center;
+
+    .people-holder {
+      width: 80%;
+      height: 95vh;
+
+      .upper {
+        display: none;
+      }
+      .lower {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .user-holder {
+          display: flex;
+
+          height: 60px;
+          width: 100%;
+          margin-bottom: 20px;
+          align-items: center;
+
+          .circle {
+            border-radius: 100%;
+            height: 45px;
+            width: 45px;
+            background-color: $secondary-background;
+            overflow: hidden;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          p {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -18,7 +61,50 @@
     display: flex;
     width: 10%;
     height: 100vh;
-    background-color: brown;
+    justify-content: center;
+    align-items: center;
+
+    .people-holder {
+      width: 80%;
+      height: 95vh;
+
+      .upper {
+        display: none;
+      }
+      .lower {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .user-holder {
+          display: flex;
+
+          height: 60px;
+          width: 100%;
+          margin-bottom: 20px;
+          align-items: center;
+
+          .circle {
+            border-radius: 100%;
+            height: 45px;
+            width: 45px;
+            background-color: $secondary-background;
+            overflow: hidden;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          p {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -60,36 +146,42 @@
         height: 85%;
         width: 100%;
         display: flex;
+        align-items: start;
         flex-direction: column;
 
-        .user-holder {
-          display: flex;
+        a {
+          text-decoration: none;
 
-          height: 60px;
-          width: 100%;
-          margin-bottom: 20px;
-          align-items: center;
+          .user-holder {
+            display: flex;
 
-          .circle {
-            margin-left: 20px;
-            margin-right: 15px;
-            border-radius: 100%;
-            height: 45px;
-            width: 45px;
-            background-color: $secondary-background;
-            overflow: hidden;
+            height: 60px;
+            width: 100%;
+            margin-bottom: 20px;
+            align-items: center;
 
-            img {
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
+            .circle {
+              margin-left: 20px;
+              margin-right: 15px;
+              border-radius: 100%;
+              height: 45px;
+              width: 45px;
+              background-color: $secondary-background;
+              overflow: hidden;
+
+              img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+              }
             }
-          }
-          p {
-            font-weight: 500;
-            font-size: 20px;
-            font-family: "Red Hat Text", sans-serif;
-            color: white;
+            p {
+              display: block;
+              font-weight: 500;
+              font-size: 20px;
+              font-family: "Red Hat Text", sans-serif;
+              color: white;
+            }
           }
         }
       }

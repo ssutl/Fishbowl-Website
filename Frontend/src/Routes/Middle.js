@@ -8,7 +8,6 @@ import SpecificUserPage from './SpecificUserPage';
 function Middle() {
     return (
         <div className="middle-holder">
-            <Router>
                 <div className="section1">
                     <div className="search-wrapper">
                         <SearchIcon/>
@@ -16,12 +15,9 @@ function Middle() {
                     </div>
                 </div>
                 <Switch>
-                    <Route path="/" exact component={Feed}/>
-                    <Route path="/people" exact component={SpecificUserPage}/>
+                    <Route exact path="/" component={Feed}/>
+                    <Route path="/people" component={SpecificUserPage}/>
                 </Switch>
-            </Router>
-            
-            
         </div>
     )
 }
