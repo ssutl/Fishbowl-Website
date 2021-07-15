@@ -1,33 +1,18 @@
-import React, {useState } from "react";
+import React, {useState, useEffect} from "react";
 import { useLocation } from "react-router-dom";
 import "../Styling/specificUserPage.css"
 import axios from "axios";
 
 function SpecificUserPage() {
-    let current_user_ID = useLocation().pathname.split("/").pop();
-    const [clickedUser,setClickedUser] = useState("")
-    console.log('clickedUser: ', clickedUser);
-    
-        axios({
-        method:"GET",
-        url: "http://localhost:5000/users/get",
-        }).then((response)=>{
-            response.data.forEach((user)=>{
-                if(user._id === current_user_ID){
-                    setClickedUser(user)
-                }
-            })
-        }).catch((error)=>{
-            console.log("error:", error)
-        })
+    const { state } = useLocation();
+
 
     return (
         <div className="section2">
             <div className="holder">
-                <div className="navigation">
-                    <h1>{clickedUser.username}</h1>
+                
 
-                </div>
+                <h1>{state.user.username}</h1>
             </div>
         </div>
     )

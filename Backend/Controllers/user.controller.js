@@ -8,7 +8,7 @@ router.route('/new').post((req, res)=>{ //Req is the data that the front end is 
     console.log('req from login: ', req);
     const {username, email, image, online} = req.body;
     
-User.findOne({ username })
+    User.findOne({ username })
     .then((user)=>{
         if (user) {
             return res.status(200).json({ msg: "user already exists" }); //if true that means user is already present in the DB
@@ -29,6 +29,12 @@ User.findOne({ username })
 router.route('/get').get((req,res)=>{
     User.find()
         .then(allUsers => res.json(allUsers))
+        .catch(err => res.status(400).json('Error! ' + err))
+})
+
+router.route('/get/:name').get((req,res)=>{
+    User.find({ username: req.params.name })
+        .then(specificUser => res.json(specificUser))
         .catch(err => res.status(400).json('Error! ' + err))
 })
 

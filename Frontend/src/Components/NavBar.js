@@ -34,8 +34,8 @@ function NavBar() {
                         return newUser.username !== info.name
                     }).map((user,index)=>{
                         return(
-                                <div className="user-holder" >
-                                   <Link to={`/people/${user._id}`} key={index}>
+                                <div className="user-holder" key={index}>
+                                   <Link to={{pathname: `/People/${user.username}`, state:{user}}} key={index}>
                                         <div className="circle">
                                             <img src={user.image} alt=""></img>
                                         </div>  
