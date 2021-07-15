@@ -85,17 +85,24 @@
 
 @include breakpoint-mixin("desktop") {
   .profile-holder {
-    display: flex;
     width: 22%;
     height: 100vh;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    .profile-container {
+      height: 95vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 
     .profile {
-      margin-top: 10vh;
+      margin-top: 0px;
       background-color: $secondary-background;
       border-radius: 5px;
-      width: 90%;
-      height: 250px;
+      width: 80%;
+      height: 300px;
       display: flex;
       flex-direction: column;
 
@@ -111,7 +118,7 @@
           align-items: center;
           justify-content: center;
           height: 100%;
-          width: 30%;
+          width: 40%;
 
           .image-holder {
             height: 80px;
@@ -133,7 +140,7 @@
           justify-content: center;
           flex-direction: column;
           height: 100%;
-          width: 65%;
+          width: 60%;
           .name {
             font-family: "Red Hat Text", sans-serif;
             font-weight: 900;

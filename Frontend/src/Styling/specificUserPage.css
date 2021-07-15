@@ -2,19 +2,60 @@
   .section2 {
     height: 90vh;
     width: 100%;
-    background-color: yellow;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section2 .holder {
+    width: 90%;
+    height: 100%;
+  }
+  .section2 .banner {
+    height: 20vh;
+    width: 100%;
+    background-color: orange;
+  }
+  .section2 .banner .arrow-holder {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    height: 45px;
+    width: 45px;
+    background-color: #1a68ef;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    color: white;
   }
-  .section2 .holder {
-    width: 85%;
+  .section2 .banner .profile-image {
+    top: 60px;
+    left: 80%;
+    position: relative;
+    height: 160px;
+    width: 160px;
+    border-radius: 100%;
+    background-color: black;
+    overflow: hidden;
+  }
+  .section2 .banner .profile-image img {
     height: 100%;
-    background-color: orange;
-    color: black;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /*# sourceMappingURL=specificUserPage.css.map */

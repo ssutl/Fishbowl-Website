@@ -111,21 +111,31 @@
 
 @media only screen and (min-width: 1248px) {
   .profile-holder {
+    width: 22%;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 22%;
-    height: 100vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile-holder .profile-container {
+    height: 95vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .profile-holder .profile {
-    margin-top: 10vh;
+    margin-top: 0px;
     background-color: #2b323b;
     border-radius: 5px;
-    width: 90%;
-    height: 250px;
+    width: 80%;
+    height: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -156,7 +166,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     height: 100%;
-    width: 30%;
+    width: 40%;
   }
   .profile-holder .profile .upper-profile .left .image-holder {
     height: 80px;
@@ -184,7 +194,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100%;
-    width: 65%;
+    width: 60%;
   }
   .profile-holder .profile .upper-profile .right .name {
     font-family: "Red Hat Text", sans-serif;
