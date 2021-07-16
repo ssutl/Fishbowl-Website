@@ -6,7 +6,6 @@ import EditIcon from '@material-ui/icons/Edit';
 
 function SpecificUserPage() {
     const { state } = useLocation();
-    const [incomingFile, setIncomingFile] = useState("");
 
 
     return (

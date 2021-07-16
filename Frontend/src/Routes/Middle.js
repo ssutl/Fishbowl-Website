@@ -4,6 +4,7 @@ import Feed from '../Components/Feed';
 import '../Styling/Middle.css'
 import SearchIcon from '@material-ui/icons/Search';
 import SpecificUserPage from './SpecificUserPage';
+import MyPage from './MyPage';
 
 function Middle() {
     return (
@@ -18,6 +19,7 @@ function Middle() {
                 <Switch>
                     <Route  exact path="/" exact component={Feed}/>
                     <Route path="/People/:name" exact component={SpecificUserPage}/>
+                    <Route path="/:name" exact component={MyPage}/>
                 </Switch>
         </div>
         

@@ -3,6 +3,7 @@ import '../Styling/ProfileBar.css'
 import { GoogleLogout } from 'react-google-login';
 import { UserContext } from "../Context/CurrentUser";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 function ProfileBar() {
 
@@ -28,9 +29,11 @@ function ProfileBar() {
             <div className="profile">
                 <div className="upper-profile">
                     <div className="left">
-                        <div className="image-holder">
-                            <img src={info.image} className="image" alt=""></img>
-                        </div>
+                        <Link to={{pathname: `/${info.name}`, state:{info}}}>
+                            <div className="image-holder">
+                                <img src={info.image} className="image" alt=""></img>
+                            </div>
+                        </Link>
                     </div>
                     <div className="right">
                         <p className="name">{info.name}</p>

@@ -29,6 +29,35 @@
     width: 100%;
     background-color: palegreen;
   }
+  .section2 .holder .banner #incomingBanner {
+    display: none;
+  }
+  .section2 .holder .banner .edit {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #1a68ef;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .section2 .holder .banner .edit:hover {
+    background-color: #1a68ef;
+    color: white;
+  }
   .section2 .holder .imageHolder {
     height: 160px;
     width: 160px;
