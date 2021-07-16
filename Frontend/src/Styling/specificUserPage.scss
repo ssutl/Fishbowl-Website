@@ -11,51 +11,15 @@
   .section2 {
     height: 90vh;
     width: 100%;
-    // background-color: yellow;
+    background-color: yellow;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 
     .holder {
-      width: 90%;
+      width: 85%;
       height: 100%;
-    }
-
-    .banner {
-      height: 20vh;
-      width: 100%;
       background-color: orange;
-
-      .arrow-holder {
-        position: relative;
-        top: 10px;
-        left: 10px;
-        height: 45px;
-        width: 45px;
-        background-color: $highlight;
-        border-radius: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-      }
-
-      .profile-image {
-        top: 60px;
-        left: 80%;
-        position: relative;
-        height: 160px;
-        width: 160px;
-        border-radius: 100%;
-        background-color: black;
-        overflow: hidden;
-
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-        }
-      }
+      color: black;
     }
   }
 }

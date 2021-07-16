@@ -106,16 +106,6 @@
   .middle-holder {
     width: 50%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .middle-container {
-      height: 95vh;
-      width: 100%;
-      border-radius: 5px;
-      background-color: $secondary-background;
-    }
 
     .section1 {
       height: 10vh;

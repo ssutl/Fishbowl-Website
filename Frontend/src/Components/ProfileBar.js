@@ -25,31 +25,27 @@ function ProfileBar() {
       
     return (
         <div className="profile-holder">
-            <div className="profile-container">
-                <div className="profile">
-                    <div className="upper-profile">
-                        <div className="left">
-                            <div className="image-holder">
-                                <img src={info.image} className="image" alt=""></img>
-                            </div>
-                        </div>
-                        <div className="right">
-                            <p className="name">{info.name}</p>
-                            <p className="email">@{info.email}</p>
+            <div className="profile">
+                <div className="upper-profile">
+                    <div className="left">
+                        <div className="image-holder">
+                            <img src={info.image} className="image" alt=""></img>
                         </div>
                     </div>
-                    <div className="lower-profile">
-                        <GoogleLogout
-                        clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
-                        buttonText="Logout"
-                        onLogoutSuccess={logout}
-                        >
-                        </GoogleLogout>
+                    <div className="right">
+                        <p className="name">{info.name}</p>
+                        <p className="email">@{info.email}</p>
                     </div>
                 </div>
-
+                <div className="lower-profile">
+                    <GoogleLogout
+                    clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
+                    buttonText="Logout"
+                    onLogoutSuccess={logout}
+                    >
+                    </GoogleLogout>
+                </div>
             </div>
-            
         </div>
     )
 }

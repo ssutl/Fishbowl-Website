@@ -9,7 +9,6 @@ function Middle() {
     return (
 
             <div className="middle-holder">
-                <div className="middle-container">
                 <div className="section1">
                     <div className="search-wrapper">
                         <SearchIcon/>
@@ -20,9 +19,6 @@ function Middle() {
                     <Route  exact path="/" exact component={Feed}/>
                     <Route path="/People/:name" exact component={SpecificUserPage}/>
                 </Switch>
-
-                </div>
-                
         </div>
         
     )
