@@ -1,0 +1,77 @@
+@import "./Breakpoints.scss";
+@import "./Theme.scss";
+
+@include breakpoint-mixin("tablet") {
+}
+
+@include breakpoint-mixin("tablet-wide") {
+}
+
+@include breakpoint-mixin("desktop") {
+  .section2 {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .holder {
+      width: 86.4%;
+      height: 100%;
+      background-color: $secondary-background;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .banner {
+        height: 20%;
+        width: 100%;
+        background-color: palegreen;
+
+        #incomingBanner {
+          display: none;
+        }
+
+        .edit {
+          position: absolute;
+          left: 30%;
+          top: 20%;
+          height: 50px;
+          width: 50px;
+          border-radius: 100%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $highlight;
+          transition: background 0.2s ease-in;
+          cursor: pointer;
+        }
+
+        .edit:hover {
+          background-color: $highlight;
+          color: white;
+        }
+      }
+
+      .imageHolder {
+        height: 160px;
+        width: 160px;
+        border-radius: 100%;
+        background-color: pink;
+        position: absolute;
+        top: 175px;
+        right: 30%;
+        overflow: hidden;
+        border: 3px solid black;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

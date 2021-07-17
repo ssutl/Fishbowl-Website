@@ -107,6 +107,13 @@
     width: 50%;
     height: 100vh;
 
+    .middle-container {
+      height: 95vh;
+      width: 100%;
+      border-radius: 5px;
+      background-color: $secondary-background;
+    }
+
     .section1 {
       height: 10vh;
       width: 100%;
@@ -118,7 +125,7 @@
         border-radius: 5px;
         display: flex;
         height: 45px;
-        width: 80%;
+        width: 85%;
         background-color: $buttons;
         align-items: center;
         padding-left: 15px;

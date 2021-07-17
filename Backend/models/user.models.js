@@ -7,7 +7,10 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema({ //Creating model
     username: { type: String},
-    subjects: [{type:String}]
+    email: { type: String},
+    image: {type:String},
+    subjects: [{type:String}],
+    online: {type:Boolean}
 })
 
 const User = mongoose.model('User', userSchema) //Exporting model for use elsewhere
