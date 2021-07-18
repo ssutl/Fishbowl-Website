@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import "../Styling/specificUserPage.css"
 // import axios from "axios";
-import EditIcon from '@material-ui/icons/Edit';
 
 function SpecificUserPage() {
     const { state } = useLocation();
@@ -14,7 +13,7 @@ function SpecificUserPage() {
                     <div className="banner">
                     </div>
                     <div className="imageHolder">
-                        <img src={state.user.image}/>
+                        <img src={state.user.image} alt=""/>
                     </div>
             </div>
             

@@ -49,13 +49,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    color: #35a7ff;
+    color: #0096ff;
     -webkit-transition: background 0.2s ease-in;
     transition: background 0.2s ease-in;
     cursor: pointer;
   }
   .section2 .holder .banner .edit:hover {
-    background-color: #35a7ff;
+    background-color: #0096ff;
     color: white;
   }
   .section2 .holder .imageHolder {

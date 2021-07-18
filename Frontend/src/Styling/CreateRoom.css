@@ -1,3 +1,481 @@
+@media only screen and (min-width: 768px) {
+  .section {
+    height: 70vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder {
+    width: 81.4%;
+    height: 100%;
+    background-color: #2b323b;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .section .section-holder .title {
+    height: 7vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section .section-holder .title h1 {
+    margin-left: 50px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .section .section-holder .inputs {
+    height: 55vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section .section-holder .inputs .upper {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .section .section-holder .inputs .upper .roomInput {
+    height: 240px;
+    width: 42%;
+    background-color: #141414;
+    border-radius: 5px;
+  }
+  .section .section-holder .inputs .upper .roomInput .name {
+    height: 25%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .section .section-holder .inputs .upper .roomInput .name h3 {
+    color: white;
+    margin-left: 18px;
+    border-left: 2px solid white;
+    padding-left: 15px;
+  }
+  .section .section-holder .inputs .upper .roomInput .input {
+    height: 75%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .inputs .upper .roomInput .input .inputField {
+    border: none;
+    height: 80%;
+    width: 90%;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .section .section-holder .inputs .upper .roomInput .input .inputField:focus {
+    outline: none;
+  }
+  .section .section-holder .inputs .lower {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .section .section-holder .inputs .lower .tags {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 89%;
+    background-color: #141414;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 25px 0px 25px 0px;
+  }
+  .section .section-holder .inputs .lower .tags .titleB {
+    height: 25%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .section .section-holder .inputs .lower .tags .titleB h3 {
+    color: white;
+    margin-left: 18px;
+    border-left: 2px solid white;
+    padding-left: 15px;
+  }
+  .section .section-holder .inputs .lower .tags .boxes {
+    height: 75%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .inputs .lower .tags .boxes .box-holder {
+    width: 95%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section .section-holder .inputs .lower .tags .boxes .box-holder .tag {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 10px 5px 10px;
+  }
+  .section .section-holder .inputs .lower .tags .boxes .box-holder .selected {
+    background-color: orange;
+  }
+  .section .section-holder .upload {
+    height: 10vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .upload #uploadBtn {
+    display: none;
+  }
+  .section .section-holder .upload .uploadLabel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 170px;
+    height: 50px;
+    background-color: #0096ff;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section {
+    height: 70vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder {
+    width: 81.4%;
+    height: 100%;
+    background-color: #2b323b;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .section .section-holder .title {
+    height: 7vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section .section-holder .title h1 {
+    margin-left: 50px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .section .section-holder .inputs {
+    height: 55vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section .section-holder .inputs .upper {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .section .section-holder .inputs .upper .roomInput {
+    height: 240px;
+    width: 42%;
+    background-color: #141414;
+    border-radius: 5px;
+  }
+  .section .section-holder .inputs .upper .roomInput .name {
+    height: 25%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .section .section-holder .inputs .upper .roomInput .name h3 {
+    color: white;
+    margin-left: 18px;
+    border-left: 2px solid white;
+    padding-left: 15px;
+  }
+  .section .section-holder .inputs .upper .roomInput .input {
+    height: 75%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .inputs .upper .roomInput .input .inputField {
+    border: none;
+    height: 80%;
+    width: 90%;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .section .section-holder .inputs .upper .roomInput .input .inputField:focus {
+    outline: none;
+  }
+  .section .section-holder .inputs .lower {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .section .section-holder .inputs .lower .tags {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 89%;
+    background-color: #141414;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 25px 0px 25px 0px;
+  }
+  .section .section-holder .inputs .lower .tags .titleB {
+    height: 25%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .section .section-holder .inputs .lower .tags .titleB h3 {
+    color: white;
+    margin-left: 18px;
+    border-left: 2px solid white;
+    padding-left: 15px;
+  }
+  .section .section-holder .inputs .lower .tags .boxes {
+    height: 75%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .inputs .lower .tags .boxes .box-holder {
+    width: 95%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section .section-holder .inputs .lower .tags .boxes .box-holder .tag {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 10px 5px 10px;
+  }
+  .section .section-holder .inputs .lower .tags .boxes .box-holder .selected {
+    background-color: orange;
+  }
+  .section .section-holder .upload {
+    height: 10vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .upload #uploadBtn {
+    display: none;
+  }
+  .section .section-holder .upload .uploadLabel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 170px;
+    height: 50px;
+    background-color: #0096ff;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media only screen and (min-width: 1248px) {
   .section {
     height: 70vh;
@@ -39,18 +517,7 @@
     font-family: "Red Hat Text", sans-serif;
     color: white;
   }
-  .section .section-holder .form {
-    height: 63vh;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section .section-holder .form .inputs {
+  .section .section-holder .inputs {
     height: 50vh;
     width: 100%;
     display: -webkit-box;
@@ -61,7 +528,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .section .section-holder .form .inputs .upper {
+  .section .section-holder .inputs .upper {
     height: 50%;
     width: 100%;
     display: -webkit-box;
@@ -74,13 +541,13 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .section .section-holder .form .inputs .upper .roomInput {
+  .section .section-holder .inputs .upper .roomInput {
     height: 200px;
     width: 42%;
     background-color: #141414;
     border-radius: 5px;
   }
-  .section .section-holder .form .inputs .upper .roomInput .name {
+  .section .section-holder .inputs .upper .roomInput .name {
     height: 25%;
     width: 100%;
     display: -webkit-box;
@@ -91,13 +558,13 @@
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
   }
-  .section .section-holder .form .inputs .upper .roomInput .name h3 {
+  .section .section-holder .inputs .upper .roomInput .name h3 {
     color: white;
     margin-left: 18px;
     border-left: 2px solid white;
     padding-left: 15px;
   }
-  .section .section-holder .form .inputs .upper .roomInput .input {
+  .section .section-holder .inputs .upper .roomInput .input {
     height: 75%;
     width: 100%;
     display: -webkit-box;
@@ -111,17 +578,17 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .section .section-holder .form .inputs .upper .roomInput .input .inputField {
+  .section .section-holder .inputs .upper .roomInput .input .inputField {
     border: none;
     height: 80%;
     width: 90%;
     border-radius: 5px;
     font-size: 20px;
   }
-  .section .section-holder .form .inputs .upper .roomInput .input .inputField:focus {
+  .section .section-holder .inputs .upper .roomInput .input .inputField:focus {
     outline: none;
   }
-  .section .section-holder .form .inputs .lower {
+  .section .section-holder .inputs .lower {
     height: 50%;
     width: 100%;
     display: -webkit-box;
@@ -134,8 +601,11 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .section .section-holder .form .inputs .lower .tags {
-    height: 200px;
+  .section .section-holder .inputs .lower .tags {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 15px 0px 15px 0px;
     width: 89%;
     background-color: #141414;
     border-radius: 5px;
@@ -147,7 +617,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .section .section-holder .form .inputs .lower .tags .titleB {
+  .section .section-holder .inputs .lower .tags .titleB {
     height: 25%;
     width: 100%;
     display: -webkit-box;
@@ -158,13 +628,13 @@
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
   }
-  .section .section-holder .form .inputs .lower .tags .titleB h3 {
+  .section .section-holder .inputs .lower .tags .titleB h3 {
     color: white;
-    margin-left: 18px;
+    margin: 0px 0px 15px 18px;
     border-left: 2px solid white;
     padding-left: 15px;
   }
-  .section .section-holder .form .inputs .lower .tags .boxes {
+  .section .section-holder .inputs .lower .tags .boxes {
     height: 75%;
     width: 100%;
     display: -webkit-box;
@@ -174,7 +644,7 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .section .section-holder .form .inputs .lower .tags .boxes .box-holder {
+  .section .section-holder .inputs .lower .tags .boxes .box-holder {
     width: 95%;
     height: 100%;
     display: -webkit-box;
@@ -183,7 +653,7 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .section .section-holder .form .inputs .lower .tags .boxes .box-holder .tag {
+  .section .section-holder .inputs .lower .tags .boxes .box-holder .tag {
     cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -206,10 +676,10 @@
     background-color: #384357;
     margin: 5px 10px 5px 10px;
   }
-  .section .section-holder .form .inputs .lower .tags .boxes .box-holder .selected {
+  .section .section-holder .inputs .lower .tags .boxes .box-holder .selected {
     background-color: orange;
   }
-  .section .section-holder .form .upload {
+  .section .section-holder .upload {
     height: 15vh;
     width: 100%;
     display: -webkit-box;
@@ -222,10 +692,10 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .section .section-holder .form .upload #uploadBtn {
+  .section .section-holder .upload #uploadBtn {
     display: none;
   }
-  .section .section-holder .form .upload .uploadLabel {
+  .section .section-holder .upload .uploadLabel {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -1,9 +1,26 @@
 import React, { useState } from "react";
 import '../Styling/CreateRoom.css'
+import { Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
+
 
 function CreateRoom() {
+    const history = useHistory();
+    const info = useContext(UserContext)
+
+    const handleSubmit = () => {
+        axios({
+            method:`POST`,
+            data:{
+                
+            }
+        })
+    }
+
     const [roomName, setRoomName] = useState("")
+    console.log('roomName: ', roomName);
     const [roomQuestion, setRoomQuestion] = useState("")
+    console.log('roomQuestion: ', roomQuestion);
     const [Math,setMath] = useState(false)
     console.log('Math: ', Math);
     const [English,setEnglish] = useState(false)
@@ -34,7 +51,7 @@ function CreateRoom() {
 
                                 </div>
                                 <div className="input">
-                                    <textarea type="text" placeholder="Room Name" className="inputField" onChange={(event)=>setRoomName(event.target.value)}/>
+                                    <textarea type="text" placeholder="Room Name" className="inputField" onChange={(event)=>setRoomName(event.target.value)} required/>
 
                                 </div>
                             </div>
@@ -44,7 +61,7 @@ function CreateRoom() {
 
                                 </div>
                                 <div className="input">
-                                    <textarea type="text" placeholder="Room Question" className="inputField" onChange={(event)=> setRoomQuestion(event.target.value)}/>
+                                    <textarea type="text" placeholder="Room Question" className="inputField" onChange={(event)=> setRoomQuestion(event.target.value)} required/>
                                 </div>
                             </div>
                         </div>
@@ -78,11 +95,11 @@ function CreateRoom() {
                         <input type="submit" id="uploadBtn">
 
                         </input>
-                        <label htmlFor="uploadBtn" className="uploadLabel">
-                            <h2>Create</h2>
-
-                        </label>
-
+                        {/* <Link to={`/Chat/${roomName}`}> */}
+                            <label htmlFor="uploadBtn" className="uploadLabel" onClick={handleSubmit()}>
+                                <h2>Create</h2>
+                            </label>
+                        {/* </Link> */}
                     </div>
                 </form>
             </div>

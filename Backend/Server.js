@@ -22,7 +22,9 @@ mongoose.connect(source, { //Mongoose.connect opens a connection between express
 })
 
 const userRoutes = require('./Controllers/user.controller.js') //Requiring controller so that the backend knows how to repond to requests
+const chatRoutes = require('./Controllers/chat.controller.js') //Requiring controller so that the backend knows how to repond to requests
 app.use('/users', userRoutes) //Showing which routes app should use
+app.use('/chat', chatRoutes) //Showing which routes app should use
 
 
 

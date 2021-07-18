@@ -1,8 +1,7 @@
-import React, { useEffect, useContext, useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import "../Styling/specificUserPage.css"
 import EditIcon from '@material-ui/icons/Edit';
-import axios from "axios";
 
 function MyPage() {
     const { state } = useLocation();
@@ -31,7 +30,7 @@ function MyPage() {
                        
                     </div>
                     <div className="imageHolder">
-                        <img src={state.info.image}/>
+                        <img src={state.info.image} alt=""/>
                     </div>
             </div>
             
