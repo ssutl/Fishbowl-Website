@@ -36,17 +36,22 @@
         }
       }
 
-      .create-BTN {
-        height: 45px;
-        width: 115px;
-        display: flex;
-        background-color: $highlight;
-        border-radius: 5px;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        font-family: "Red Hat Text", sans-serif;
-        font-size: 16px;
+      a {
+        text-decoration: none;
+        color: white;
+
+        .create-BTN {
+          height: 45px;
+          width: 115px;
+          display: flex;
+          background-color: $highlight;
+          border-radius: 5px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          font-size: 16px;
+        }
       }
     }
   }
@@ -92,17 +97,22 @@
           }
         }
 
-        .create-BTN {
-          height: 45px;
-          width: 130px;
-          display: flex;
-          background-color: $highlight;
-          border-radius: 5px;
-          justify-content: center;
-          display: flex;
-          align-items: center;
-          font-family: "Red Hat Text", sans-serif;
-          font-size: 16px;
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            height: 45px;
+            width: 130px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 16px;
+          }
         }
       }
     }
@@ -149,17 +159,22 @@
           }
         }
 
-        .create-BTN {
-          height: 45px;
-          width: 160px;
-          display: flex;
-          background-color: $highlight;
-          border-radius: 5px;
-          justify-content: center;
-          display: flex;
-          align-items: center;
-          font-family: "Red Hat Text", sans-serif;
-          font-size: 16px;
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            height: 45px;
+            width: 160px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 16px;
+          }
         }
       }
     }

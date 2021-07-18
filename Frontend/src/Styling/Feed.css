@@ -53,13 +53,18 @@
   opacity: 1;
 }
 
-.feed-section .top-section .holder .create-BTN {
+.feed-section .top-section .holder a {
+  text-decoration: none;
+  color: white;
+}
+
+.feed-section .top-section .holder a .create-BTN {
   height: 45px;
   width: 115px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #1a68ef;
+  background-color: #0096ff;
   border-radius: 5px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -126,13 +131,17 @@
   .feed-section .top-section .holder .feed-BTN a:hover {
     opacity: 1;
   }
-  .feed-section .top-section .holder .create-BTN {
+  .feed-section .top-section .holder a {
+    text-decoration: none;
+    color: white;
+  }
+  .feed-section .top-section .holder a .create-BTN {
     height: 45px;
     width: 130px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #1a68ef;
+    background-color: #0096ff;
     border-radius: 5px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -200,13 +209,17 @@
   .feed-section .top-section .holder .feed-BTN a:hover {
     opacity: 1;
   }
-  .feed-section .top-section .holder .create-BTN {
+  .feed-section .top-section .holder a {
+    text-decoration: none;
+    color: white;
+  }
+  .feed-section .top-section .holder a .create-BTN {
     height: 45px;
     width: 160px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #1a68ef;
+    background-color: #0096ff;
     border-radius: 5px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
