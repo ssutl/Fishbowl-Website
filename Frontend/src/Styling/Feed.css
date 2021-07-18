@@ -231,5 +231,84 @@
     font-family: "Red Hat Text", sans-serif;
     font-size: 16px;
   }
+  .feed-section .bottom-section {
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .feed-section .bottom-section .scroll {
+    height: 100%;
+    width: 80%;
+    overflow: auto;
+  }
+  .feed-section .bottom-section .scroll .room-holder {
+    margin-top: 40px;
+    height: 160px;
+    width: 100%;
+    background-color: #2b323b;
+    border-radius: 5px;
+  }
+  .feed-section .bottom-section .scroll .room-holder .top-section {
+    height: 60%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .feed-section .bottom-section .scroll .room-holder .top-section p {
+    margin-left: 60px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .feed-section .bottom-section .scroll .room-holder .top-section #Question {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .feed-section .bottom-section .scroll .room-holder .top-section #Title {
+    font-size: 17px;
+  }
+  .feed-section .bottom-section .scroll .room-holder .low-section {
+    height: 40%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .feed-section .bottom-section .scroll .room-holder .low-section .roomTag {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 90px 5px 10px;
+  }
 }
 /*# sourceMappingURL=Feed.css.map */

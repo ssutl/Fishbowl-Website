@@ -119,6 +119,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    overflow: hidden;
   }
   .profile-holder .profile {
     margin-top: 10vh;

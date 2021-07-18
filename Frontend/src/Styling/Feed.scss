@@ -178,5 +178,73 @@
         }
       }
     }
+    .bottom-section {
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+
+      .scroll {
+        height: 100%;
+        width: 80%;
+        overflow: auto;
+
+        .room-holder {
+          margin-top: 40px;
+          height: 160px;
+          width: 100%;
+          background-color: $secondary-background;
+          border-radius: 5px;
+
+          .top-section {
+            height: 60%;
+            width: 100%;
+            // background-color: green;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+              margin-left: 60px;
+              font-family: "Red Hat Text", sans-serif;
+            }
+
+            #Question {
+              font-size: 22px;
+              font-weight: 600;
+              margin-bottom: 10px;
+            }
+
+            #Title {
+              font-size: 17px;
+            }
+          }
+
+          .low-section {
+            height: 40%;
+            width: 100%;
+            // background-color: orange;
+            display: flex;
+            flex-wrap: wrap;
+
+            .roomTag {
+              // background-color: aqua;
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 30px;
+              width: fit-content;
+              font-family: "Red Hat Text", sans-serif;
+              color: white;
+              border-radius: 50px;
+              font-size: 15px;
+              padding: 0px 15px 0px 15px;
+              background-color: $buttons;
+              margin: 5px 90px 5px 10px;
+            }
+          }
+        }
+      }
+    }
   }
 }
