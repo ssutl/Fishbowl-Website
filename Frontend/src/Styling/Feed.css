@@ -245,14 +245,17 @@
     width: 80%;
     overflow: auto;
   }
-  .feed-section .bottom-section .scroll .room-holder {
+  .feed-section .bottom-section .scroll .link {
+    text-decoration: none;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder {
     margin-top: 40px;
     height: 160px;
     width: 100%;
     background-color: #2b323b;
     border-radius: 5px;
   }
-  .feed-section .bottom-section .scroll .room-holder .top-section {
+  .feed-section .bottom-section .scroll .link .room-holder .top-section {
     height: 60%;
     width: 100%;
     display: -webkit-box;
@@ -266,19 +269,19 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .feed-section .bottom-section .scroll .room-holder .top-section p {
+  .feed-section .bottom-section .scroll .link .room-holder .top-section p {
     margin-left: 60px;
     font-family: "Red Hat Text", sans-serif;
   }
-  .feed-section .bottom-section .scroll .room-holder .top-section #Question {
+  .feed-section .bottom-section .scroll .link .room-holder .top-section #Title {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
   }
-  .feed-section .bottom-section .scroll .room-holder .top-section #Title {
+  .feed-section .bottom-section .scroll .link .room-holder .top-section #Question {
     font-size: 17px;
   }
-  .feed-section .bottom-section .scroll .room-holder .low-section {
+  .feed-section .bottom-section .scroll .link .room-holder .low-section {
     height: 40%;
     width: 100%;
     display: -webkit-box;
@@ -287,7 +290,7 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .feed-section .bottom-section .scroll .room-holder .low-section .roomTag {
+  .feed-section .bottom-section .scroll .link .room-holder .low-section .roomTag {
     cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;

@@ -1,21 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../Context/CurrentUser";
 import '../Styling/CreateRoom.css'
 import { Link } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
-
+import axios from 'axios';
 
 function CreateRoom() {
     const history = useHistory();
     const info = useContext(UserContext)
 
-    const handleSubmit = () => {
-        axios({
-            method:`POST`,
-            data:{
-                
+    const [roomExists, setRoomExists] = useState(false)
+
+
+        const handleSubmit = (event) => {
+            event.preventDefault();
+
+            if(roomName.trim().length){
+                console.log("name is valid")
+
+                axios({
+                    method:`POST`,
+                    url: `http://localhost:5000/chat/new`,
+                    data:{
+                        CreatedById: info.id,
+                        Tags:{
+                            Math:Math,
+                            English:English,
+                            Geography:Geography,
+                            FM:FM,
+                            CS:CS,
+                            Economics:Economics,
+                            History:History,
+                            Biology:Biology,
+                            Psychology:Psychology,
+                            Physics:Physics,
+                            Polotics:Polotics,
+                            Music:Music,
+                            RE:RE
+                        },
+                        Deleted: false,
+                        Title:roomName,
+                        Question: roomQuestion
+                    }
+                })
+                .then((res)=>{
+                    if(res.data.msg === "Room name already exists"){
+                        setRoomExists(true)
+                    }else{
+                        setRoomExists(false)
+                        history.push(`/Chat/${roomName}`)
+                    }
+                    
+                })
+                .catch((error)=>{
+                    console.log("error", error)
+                })
+
+            }else{
+                console.log("name is invalid")
             }
-        })
-    }
+
+        }
 
     const [roomName, setRoomName] = useState("")
     console.log('roomName: ', roomName);
@@ -51,8 +96,7 @@ function CreateRoom() {
 
                                 </div>
                                 <div className="input">
-                                    <textarea type="text" placeholder="Room Name" className="inputField" onChange={(event)=>setRoomName(event.target.value)} required/>
-
+                                    <textarea type="text" placeholder="Room Name" className={roomExists?"inputField exists":"inputField"} onChange={(event)=>setRoomName(event.target.value)} required/>
                                 </div>
                             </div>
                             <div className="roomInput">
@@ -95,11 +139,9 @@ function CreateRoom() {
                         <input type="submit" id="uploadBtn">
 
                         </input>
-                        {/* <Link to={`/Chat/${roomName}`}> */}
-                            <label htmlFor="uploadBtn" className="uploadLabel" onClick={handleSubmit()}>
+                            <label htmlFor="uploadBtn" className="uploadLabel" onClick={(event)=>handleSubmit(event)}>
                                 <h2>Create</h2>
                             </label>
-                        {/* </Link> */}
                     </div>
                 </form>
             </div>

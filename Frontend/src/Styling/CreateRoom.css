@@ -478,7 +478,7 @@
 
 @media only screen and (min-width: 1248px) {
   .section {
-    height: 70vh;
+    height: 85vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -503,7 +503,7 @@
     overflow: hidden;
   }
   .section .section-holder .title {
-    height: 7vh;
+    height: 12vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -587,6 +587,9 @@
   }
   .section .section-holder .inputs .upper .roomInput .input .inputField:focus {
     outline: none;
+  }
+  .section .section-holder .inputs .upper .roomInput .input .exists {
+    border: 2px solid orange;
   }
   .section .section-holder .inputs .lower {
     height: 50%;

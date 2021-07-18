@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import Feed from '../Components/Feed';
 import '../Styling/Middle.css'
 import SearchIcon from '@material-ui/icons/Search';
@@ -19,11 +19,11 @@ function Middle() {
                     </div>
                 </div>
                 <Switch>
-                    <Route  exact path="/" component={Feed}/>
-                    <Route path="/People/:name" exact component={SpecificUserPage}/>
-                    <Route path="/:name" exact component={MyPage}/>
-                    <Route path="/Create/:name" exact component={CreateRoom}/>
-                    <Route path="/Chat/:roomId" exact component={ChatRoom}/>
+                    <Route exact path="/" component={withRouter(Feed)}/>
+                    <Route exact path="/People/:name" component={withRouter(SpecificUserPage)}/>
+                    <Route exact path="/:name" component={withRouter(MyPage)}/>
+                    <Route exact path="/Create/:name" component={withRouter(CreateRoom)}/>
+                    <Route exact path="/Chat/:roomId" component={withRouter(ChatRoom)}/>
                 </Switch>
         </div>
         
