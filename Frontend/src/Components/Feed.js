@@ -49,13 +49,13 @@ function Feed() {
                 </div>
                 <div className="bottom-section">
                     <div className="scroll">
-                        {allRooms === null? <h1>No Current Rooms</h1>: allRooms.map((room, index)=>{
+                        {allRooms === null? <h1>No Current Rooms</h1>: allRooms.reverse().map((room, index)=>{
                                 return(
-                                    <Link to={{pathname:`/Chat/${room.Title}`, state:{room}}} className="link">
+                                    <Link to={{pathname:`/Chat/${room.Title}`, state:{room}}} className="link" key={index}>
                                         <div className="room-holder" key={index}>
                                             <div className="top-section">
                                                 <p id="Title">{room.Title}</p>
-                                                <p id="Question">{room.Question}</p>
+                                                <p id="Question">{room.Question.substring(0,70)}</p>
                                                 
                                             </div>
                                             <div className="low-section">

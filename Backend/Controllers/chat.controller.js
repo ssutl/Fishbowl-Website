@@ -35,5 +35,11 @@ router.route('/get').get((req,res)=>{
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
+router.route('/get/:id').get((req,res)=>{
+    ChatRoom.find({  CreatedById: req.params.id})
+        .then(SpecificRoom => res.json(SpecificRoom))
+        .catch(err => res.status(400).json('Error! ' + err))
+})
+
 
 module.exports = router;

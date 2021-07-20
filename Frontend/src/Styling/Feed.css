@@ -253,6 +253,7 @@
     height: 160px;
     width: 100%;
     background-color: #2b323b;
+    word-break: break-all;
     border-radius: 5px;
   }
   .feed-section .bottom-section .scroll .link .room-holder .top-section {
@@ -271,6 +272,7 @@
   }
   .feed-section .bottom-section .scroll .link .room-holder .top-section p {
     margin-left: 60px;
+    margin-right: 60px;
     font-family: "Red Hat Text", sans-serif;
   }
   .feed-section .bottom-section .scroll .link .room-holder .top-section #Title {
@@ -289,29 +291,6 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder .low-section .roomTag {
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 30px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-    border-radius: 50px;
-    font-size: 15px;
-    padding: 0px 15px 0px 15px;
-    background-color: #384357;
-    margin: 5px 90px 5px 10px;
   }
 }
 /*# sourceMappingURL=Feed.css.map */
