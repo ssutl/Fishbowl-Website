@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 function ProfileBar() {
 
       const info = useContext(UserContext)
+      const token = localStorage.getItem('session-token')
 
       
 
@@ -16,6 +17,7 @@ function ProfileBar() {
         axios({ //On logout changing users status to offline
             method:`PUT`,
             url: `http://localhost:5000/users/update/${info.id}`,
+            headers: {"x-auth-token":`${token}`},
             data: {"online":false}
         }).then((response)=>{
             console.log(response)
