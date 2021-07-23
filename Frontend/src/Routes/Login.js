@@ -11,44 +11,47 @@ function Login() {
     ============================
     */
     const [username,setUserName] = useState("")
-    const [signedIn, setSignedIn] = useState()
+    const [userClicked, setUserClicked] = useState()
     const [image,setImage] = useState("")
     const [email, setEmail] = useState("")
     const [online, setOnline] = useState(false)
     const [logged, setLogged] = useState()
     const [id, setUserId] = useState()
+    const [token, setToken] = useState()
 
 
     const responseSuccessGoogle = (response) =>{
-        setUserName(response.Ys.Ve) //Using Google Response to set current User
-        setEmail(response.Ys.It)
-        setImage(response.Ys.gJ)
+        console.log('response: ', response);
+        setUserName(response.Os.Ne) //Using Google Response to set current User
+        setEmail(response.Os.zt)
+        setImage(response.Os.KI)
+        setToken(response.tokenId)
         setOnline(true) //Marking that user is online
-        setSignedIn(true)
+        setUserClicked(true)
         
     }
     
-    if(signedIn){
+    if(userClicked){
+        localStorage.setItem('session-token',token)
         
+        axios({ //Retrieving the user table to get the id of the current user
+            method:"GET",
+            url: "http://localhost:5000/users/get",
+        }).then((response)=>{
+            // console.log('response from get request: ', response);
+            response.data.forEach((student)=>{
+                if(student.username === username){
+                    setUserId(student._id)
+                }
+            })
+        })
+
         axios({ //Creating users account & if user already has account it wont be created again
             method:"POST",
             url: "http://localhost:5000/users/new",
             data: {username,email, image, online}
         }).then(()=>{
             setLogged(true)
-        })
-
-
-
-        axios({ //Retrieving the user table to get the id of the current user
-            method:"GET",
-            url: "http://localhost:5000/users/get",
-        }).then((response)=>{
-            response.data.forEach((student)=>{
-                if(student.username === username){
-                    setUserId(student._id)
-                }
-            })
         })
 
         
@@ -64,9 +67,10 @@ function Login() {
         axios({ //Changin Status to online if user already existed
             method:`PUT`,
             url: `http://localhost:5000/users/update/${id}`,
+            headers: {"x-auth-token":`${token}`},
             data: {"online":true}
         }).then((response)=>{
-            
+            console.log("online put request successful")
         }).catch((error)=>{
             console.log("error", error)
         })
