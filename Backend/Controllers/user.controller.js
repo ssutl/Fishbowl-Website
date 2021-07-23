@@ -4,7 +4,7 @@ const User = require('../models/user.models.js') //User Model from Schema
 const router = require('express').Router() //Express
 
 
-router.route('/new').post((req, res)=>{ //Req is the data that the front end is sending to the backend 
+router.post('/new',auth,(req, res)=>{ //Req is the data that the front end is sending to the backend 
     console.log('req from login: ', req);
     const {username, email, image, online} = req.body;
     
@@ -26,7 +26,7 @@ router.route('/new').post((req, res)=>{ //Req is the data that the front end is 
 
 })
 
-router.route('/get').get((req,res)=>{
+router.get('/get',auth,(req,res)=>{
     User.find()
         .then(allUsers => res.json(allUsers))
         .catch(err => res.status(400).json('Error! ' + err))
@@ -87,7 +87,7 @@ function auth(req, res, next) {
             res.status(401).json({ msg: "auth invalid" });
         }
     }
-  }
+}
 
 
 module.exports = router;

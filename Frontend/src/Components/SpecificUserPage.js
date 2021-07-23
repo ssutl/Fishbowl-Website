@@ -6,6 +6,7 @@ import axios from 'axios';
 
 function SpecificUserPage() {
     const { state } = useLocation();
+    const token = localStorage.getItem('session-token')
 
 
     const[usersRooms,setUsersRooms] = useState(null)
@@ -14,7 +15,8 @@ function SpecificUserPage() {
     useEffect(()=>{
         axios({
             method:'GET',
-            url: `http://localhost:5000/chat/get/${state.user._id}`
+            url: `http://localhost:5000/chat/get/${state.user._id}`,
+            headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setUsersRooms(res.data)
         })

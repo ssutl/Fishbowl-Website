@@ -8,6 +8,7 @@ import axios from 'axios';
 function CreateRoom() {
     const history = useHistory();
     const info = useContext(UserContext)
+    const token = localStorage.getItem('session-token')
 
     const [roomExists, setRoomExists] = useState(false)
 
@@ -21,6 +22,7 @@ function CreateRoom() {
                 axios({
                     method:`POST`,
                     url: `http://localhost:5000/chat/new`,
+                    headers: {"x-auth-token":`${token}`},
                     data:{
                         CreatedById: info.id,
                         Tags:{

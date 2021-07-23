@@ -6,12 +6,14 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
     const info = useContext(UserContext)
+    const token = localStorage.getItem('session-token')
     const [users, setUsers] = useState("")
 
     useEffect(()=>{
         axios({
         method:"GET",
         url: "http://localhost:5000/users/get",
+        headers: {"x-auth-token":`${token}`}
         }).then((response)=>{
             setUsers(response.data)
         }).catch((error)=>{

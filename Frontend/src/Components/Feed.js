@@ -8,6 +8,7 @@ import axios from 'axios';
 
 function Feed() {
     const info = useContext(UserContext)
+    const token = localStorage.getItem('session-token')
     const [allRooms, setAllRooms] = useState(null)
 
     const [friendFeed,setFriendFeed] = useState(false)
@@ -19,7 +20,8 @@ function Feed() {
     useEffect(()=>{
         axios({
             method:'GET',
-            url: `http://localhost:5000/chat/get`
+            url: `http://localhost:5000/chat/get`,
+            headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setAllRooms(res.data)
         })
@@ -56,10 +58,13 @@ function Feed() {
                                             <div className="top-section">
                                                 <p id="Title">{room.Title}</p>
                                                 <p id="Question">{room.Question.substring(0,70)}</p>
-                                                
                                             </div>
                                             <div className="low-section">
-                                                
+                                                <div className="low-holder">
+                                                    {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag,index)=>{
+                                                        return <div className="roomTag">{tag}</div>
+                                                        })}
+                                                </div>
                                             </div>        
                                         </div>
                                     </Link>
