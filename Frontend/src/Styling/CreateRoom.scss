@@ -1,0 +1,762 @@
+@import "./Breakpoints.scss";
+@import "./Theme.scss";
+
+// .section {
+//   height: 150vh;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   // background-color: yellow;
+
+//   .section-holder {
+//     width: 81.4%;
+//     height: 100%;
+//     background-color: $secondary-background;
+//     color: black;
+//     display: flex;
+//     flex-direction: column;
+//     border-radius: 5px;
+//     overflow: hidden;
+
+//     .title {
+//       height: 7vh;
+//       width: 100%;
+//       display: flex;
+//       align-items: center;
+
+//       h1 {
+//         margin-left: 50px;
+//         font-family: "Red Hat Text", sans-serif;
+//         color: white;
+//       }
+//     }
+
+//     .form {
+//       height: 143vh;
+//       // background-color: sienna;
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+
+//       .inputs {
+//         height: 150vh;
+//         width: 100%;
+//         display: flex;
+//         flex-direction: column;
+
+//         .upper {
+//           // background-color: green;
+//           height: 55%;
+//           width: 100%;
+//           display: flex;
+//           flex-direction: column;
+//           align-items: center;
+//           justify-content: space-evenly;
+
+//           .roomInput {
+//             height: 180px;
+//             width: 85%;
+//             background-color: #141414;
+//             border-radius: 5px;
+
+//             .name {
+//               height: 25%;
+//               width: 100%;
+//               display: flex;
+//               align-items: center;
+//               // background-color: aqua;
+//               font-family: "Red Hat Text", sans-serif;
+
+//               h3 {
+//                 color: white;
+//                 margin-left: 18px;
+//                 border-left: 2px solid white;
+//                 padding-left: 15px;
+//               }
+//             }
+
+//             .input {
+//               height: 75%;
+//               width: 100%;
+//               display: flex;
+//               display: flex;
+//               align-items: center;
+//               justify-content: center;
+
+//               .inputField {
+//                 //   background-color: transparent;
+//                 border: none;
+//                 height: 80%;
+//                 width: 90%;
+//                 border-radius: 5px;
+//                 font-size: 20px;
+//               }
+
+//               .inputField:focus {
+//                 outline: none;
+//               }
+//             }
+//           }
+//         }
+
+//         .lower {
+//           background-color: pink;
+//           height: 45%;
+//           width: 100%;
+//           display: flex;
+//           align-items: center;
+//           justify-content: space-evenly;
+
+//           .tags {
+//             height: fit-content;
+//             width: 89%;
+//             background-color: #141414;
+//             border-radius: 5px;
+//             display: flex;
+//             flex-direction: column;
+//             padding: 25px 0px 25px 0px;
+
+//             .titleB {
+//               height: 25%;
+//               width: 100%;
+//               // background-color: aquamarine;
+//               display: flex;
+//               align-items: center;
+//               font-family: "Red Hat Text", sans-serif;
+
+//               h3 {
+//                 color: white;
+//                 margin: 0px 0px 15px 15px;
+//                 border-left: 2px solid white;
+//                 padding-left: 15px;
+//               }
+//             }
+
+//             .boxes {
+//               height: 75%;
+//               width: 100%;
+//               display: flex;
+//               justify-content: center;
+
+//               .box-holder {
+//                 width: 95%;
+//                 height: 100%;
+//                 display: flex;
+//                 flex-wrap: wrap;
+
+//                 .tag {
+//                   cursor: pointer;
+//                   display: flex;
+//                   justify-content: center;
+//                   align-items: center;
+//                   height: 30px;
+//                   width: fit-content;
+//                   font-family: "Red Hat Text", sans-serif;
+//                   color: white;
+//                   border-radius: 50px;
+//                   font-size: 15px;
+//                   padding: 0px 15px 0px 15px;
+//                   background-color: $buttons;
+//                   margin: 5px 10px 5px 10px;
+//                 }
+
+//                 .selected {
+//                   background-color: orange;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+
+//       .upload {
+//         background-color: brown;
+//         height: 15vh;
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         #uploadBtn {
+//           display: none;
+//         }
+
+//         .uploadLabel {
+//           display: flex;
+//           width: 170px;
+//           height: 50px;
+//           background-color: $highlight;
+//           font-family: "Red Hat Text", sans-serif;
+//           color: white;
+//           border-radius: 15px;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@include breakpoint-mixin("tablet") {
+  .section {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .section-holder {
+      width: 81.4%;
+      height: 100%;
+      background-color: $secondary-background;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .title {
+        height: 7vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+          margin-left: 50px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+        }
+      }
+
+      .inputs {
+        height: 55vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .upper {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .roomInput {
+            height: 240px;
+            width: 42%;
+            background-color: #141414;
+            border-radius: 5px;
+
+            .name {
+              height: 25%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              // background-color: aqua;
+              font-family: "Red Hat Text", sans-serif;
+
+              h3 {
+                color: white;
+                margin-left: 18px;
+                border-left: 2px solid white;
+                padding-left: 15px;
+              }
+            }
+
+            .input {
+              height: 75%;
+              width: 100%;
+              display: flex;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .inputField {
+                //   background-color: transparent;
+                border: none;
+                height: 80%;
+                width: 90%;
+                border-radius: 5px;
+                font-size: 20px;
+              }
+
+              .inputField:focus {
+                outline: none;
+              }
+            }
+          }
+        }
+
+        .lower {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .tags {
+            height: fit-content;
+            width: 89%;
+            background-color: #141414;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 0px 25px 0px;
+
+            .titleB {
+              height: 25%;
+              width: 100%;
+              // background-color: aquamarine;
+              display: flex;
+              align-items: center;
+              font-family: "Red Hat Text", sans-serif;
+
+              h3 {
+                color: white;
+                margin-left: 18px;
+                border-left: 2px solid white;
+                padding-left: 15px;
+              }
+            }
+
+            .boxes {
+              height: 75%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+
+              .box-holder {
+                width: 95%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .tag {
+                  cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 10px 5px 10px;
+                }
+
+                .selected {
+                  background-color: orange;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .upload {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #uploadBtn {
+          display: none;
+        }
+
+        .uploadLabel {
+          display: flex;
+          width: 170px;
+          height: 50px;
+          background-color: $highlight;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  .section {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .section-holder {
+      width: 81.4%;
+      height: 100%;
+      background-color: $secondary-background;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .title {
+        height: 7vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+          margin-left: 50px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+        }
+      }
+
+      .inputs {
+        height: 55vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .upper {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .roomInput {
+            height: 240px;
+            width: 42%;
+            background-color: #141414;
+            border-radius: 5px;
+
+            .name {
+              height: 25%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              // background-color: aqua;
+              font-family: "Red Hat Text", sans-serif;
+
+              h3 {
+                color: white;
+                margin-left: 18px;
+                border-left: 2px solid white;
+                padding-left: 15px;
+              }
+            }
+
+            .input {
+              height: 75%;
+              width: 100%;
+              display: flex;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .inputField {
+                //   background-color: transparent;
+                border: none;
+                height: 80%;
+                width: 90%;
+                border-radius: 5px;
+                font-size: 20px;
+              }
+
+              .inputField:focus {
+                outline: none;
+              }
+            }
+          }
+        }
+
+        .lower {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .tags {
+            height: fit-content;
+            width: 89%;
+            background-color: #141414;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 0px 25px 0px;
+
+            .titleB {
+              height: 25%;
+              width: 100%;
+              // background-color: aquamarine;
+              display: flex;
+              align-items: center;
+              font-family: "Red Hat Text", sans-serif;
+
+              h3 {
+                color: white;
+                margin-left: 18px;
+                border-left: 2px solid white;
+                padding-left: 15px;
+              }
+            }
+
+            .boxes {
+              height: 75%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+
+              .box-holder {
+                width: 95%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .tag {
+                  cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 10px 5px 10px;
+                }
+
+                .selected {
+                  background-color: orange;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .upload {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #uploadBtn {
+          display: none;
+        }
+
+        .uploadLabel {
+          display: flex;
+          width: 170px;
+          height: 50px;
+          background-color: $highlight;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .section {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .section-holder {
+      width: 86.4%;
+      height: 100%;
+      background-color: $secondary-background;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .title {
+        height: 12vh;
+        // background-color: yellow;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+          margin-left: 50px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+        }
+      }
+
+      .inputs {
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .upper {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .roomInput {
+            height: 200px;
+            width: 42%;
+            background-color: #141414;
+            border-radius: 5px;
+
+            .name {
+              height: 25%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              // background-color: aqua;
+              font-family: "Red Hat Text", sans-serif;
+
+              h3 {
+                color: white;
+                margin-left: 18px;
+                border-left: 2px solid white;
+                padding-left: 15px;
+              }
+            }
+
+            .input {
+              height: 75%;
+              width: 100%;
+              display: flex;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .inputField {
+                //   background-color: transparent;
+                border: none;
+                height: 80%;
+                width: 90%;
+                border-radius: 5px;
+                font-size: 20px;
+              }
+
+              .inputField:focus {
+                outline: none;
+              }
+
+              .exists {
+                border: 2px solid orange;
+              }
+            }
+          }
+        }
+
+        .lower {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .tags {
+            height: fit-content;
+            padding: 15px 0px 15px 0px;
+            width: 89%;
+            background-color: #141414;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+
+            .titleB {
+              height: 25%;
+              width: 100%;
+              // background-color: aquamarine;
+              display: flex;
+              align-items: center;
+              font-family: "Red Hat Text", sans-serif;
+
+              h3 {
+                color: white;
+                margin: 0px 0px 15px 18px;
+                border-left: 2px solid white;
+                padding-left: 15px;
+              }
+            }
+
+            .boxes {
+              height: 75%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+
+              .box-holder {
+                width: 95%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .tag {
+                  cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 10px 5px 10px;
+                }
+
+                .selected {
+                  background-color: orange;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .upload {
+        height: 15vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #uploadBtn {
+          display: none;
+        }
+
+        .uploadLabel {
+          display: flex;
+          width: 170px;
+          height: 50px;
+          background-color: $highlight;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

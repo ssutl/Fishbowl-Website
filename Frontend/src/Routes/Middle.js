@@ -1,10 +1,12 @@
 import React from 'react'
-import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import Feed from '../Components/Feed';
 import '../Styling/Middle.css'
 import SearchIcon from '@material-ui/icons/Search';
-import SpecificUserPage from './SpecificUserPage';
-import MyPage from './MyPage';
+import SpecificUserPage from '../Components/SpecificUserPage';
+import MyPage from '../Components/MyPage';
+import CreateRoom from '../Components/CreateRoom';
+import ChatRoom from '../Components/ChatRoom';
 
 function Middle() {
     return (
@@ -17,9 +19,11 @@ function Middle() {
                     </div>
                 </div>
                 <Switch>
-                    <Route  exact path="/" exact component={Feed}/>
-                    <Route path="/People/:name" exact component={SpecificUserPage}/>
-                    <Route path="/:name" exact component={MyPage}/>
+                    <Route exact path="/" component={withRouter(Feed)}/>
+                    <Route exact path="/People/:name" component={withRouter(SpecificUserPage)}/>
+                    <Route exact path="/:name" component={withRouter(MyPage)}/>
+                    <Route exact path="/Create/:name" component={withRouter(CreateRoom)}/>
+                    <Route exact path="/Chat/:roomId" component={withRouter(ChatRoom)}/>
                 </Switch>
         </div>
         
