@@ -16,10 +16,23 @@
         -ms-flex-align: center;
             align-items: center;
     overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .nav-holder .logo {
+    height: 10%;
+    width: 100%;
+    background-color: orange;
   }
   .nav-holder .people-holder {
     width: 80%;
-    height: 80vh;
+    height: 85vh;
+    overflow-y: auto;
   }
   .nav-holder .people-holder .upper {
     display: none;
@@ -56,7 +69,7 @@
             align-items: center;
   }
   .nav-holder .people-holder .lower .user-holder a .circle {
-    margin-left: 20px;
+    margin-left: 8px;
     border-radius: 100%;
     height: 45px;
     width: 45px;
@@ -104,16 +117,27 @@
     display: flex;
     width: 10%;
     height: 100vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: transparent;
+  }
+  .nav-holder .logo {
+    height: 10%;
+    width: 100%;
+    background-color: orange;
   }
   .nav-holder .people-holder {
     width: 80%;
-    height: 80vh;
+    height: 85vh;
+    overflow-y: auto;
   }
   .nav-holder .people-holder .upper {
     display: none;
@@ -204,11 +228,20 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-color: transparent;
+  }
+  .nav-holder .logo {
+    height: 10%;
+    width: 100%;
   }
   .nav-holder .people-holder {
     width: 80%;
-    height: 95vh;
+    height: 88vh;
+    overflow-y: auto;
   }
   .nav-holder .people-holder .upper {
     height: 15%;

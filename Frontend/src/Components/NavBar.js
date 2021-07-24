@@ -25,6 +25,9 @@ function NavBar() {
 
     return (
         <div className="nav-holder">
+            <div className="logo">
+                {/* <h1>Season</h1> */}
+            </div>
             <div className="people-holder">
                 <div className="upper">
                     <h1>People</h1>
