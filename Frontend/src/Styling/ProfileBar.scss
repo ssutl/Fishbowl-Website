@@ -12,74 +12,7 @@
 
 @include breakpoint-mixin("tablet-wide") {
   .profile-holder {
-    display: flex;
-    width: 25%;
-    height: 100vh;
-    justify-content: center;
-
-    .profile {
-      margin-top: 10vh;
-      background-color: $secondary-background;
-      border-radius: 5px;
-      width: 90%;
-      height: 250px;
-      display: flex;
-      flex-direction: column;
-
-      .upper-profile {
-        height: 50%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-
-        .left {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-          width: 40%;
-
-          .image-holder {
-            height: 75px;
-            width: 75px;
-            border-radius: 100%;
-            overflow: hidden;
-
-            .image {
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
-            }
-          }
-        }
-        .right {
-          color: white;
-          word-wrap: break-word;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          height: 100%;
-          width: 60%;
-          padding-left: 10px;
-          .name {
-            font-family: "Red Hat Text", sans-serif;
-            font-weight: 900;
-            margin-bottom: 5px;
-          }
-          .email {
-            display: none;
-          }
-        }
-      }
-      .lower-profile {
-        height: 50%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
+    display: none;
   }
 }
 

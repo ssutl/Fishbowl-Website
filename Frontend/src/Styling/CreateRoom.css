@@ -1,7 +1,5 @@
 .section {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 85vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,100 +10,41 @@
 }
 
 .section .section-holder {
-  width: 84.4%;
-  height: 140vh;
-  margin-bottom: 30px;
-  background-color: #2b323b;
-  color: black;
+  height: 100%;
+  width: 87%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #2b323b;
+  border-radius: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 5px;
-  overflow: hidden;
 }
 
 .section .section-holder .title {
-  height: 12vh;
+  height: 5vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Red Hat Text", sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.section .section-holder .title h1 {
-  margin-left: 50px;
-  font-family: "Red Hat Text", sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.267);
 }
 
 .section .section-holder .inputs {
-  height: 110vh;
+  height: 25vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.section .section-holder .inputs .upper {
-  height: 50%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.section .section-holder .inputs .upper .roomInput {
-  height: 150px;
-  width: 90%;
-  background-color: #141414;
-  border-radius: 5px;
-}
-
-.section .section-holder .inputs .upper .roomInput .name {
-  height: 25%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Red Hat Text", sans-serif;
-}
-
-.section .section-holder .inputs .upper .roomInput .name h3 {
-  color: white;
-  margin-left: 5px;
-  padding-left: 15px;
-}
-
-.section .section-holder .inputs .upper .roomInput .input {
-  height: 75%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -113,76 +52,35 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.section .section-holder .inputs .upper .roomInput .input .inputField {
-  border: none;
-  height: 80%;
-  width: 90%;
-  border-radius: 5px;
-  font-size: 20px;
-}
-
-.section .section-holder .inputs .upper .roomInput .input .inputField:focus {
-  outline: none;
-}
-
-.section .section-holder .inputs .upper .roomInput .input .exists {
-  border: 2px solid orange;
-}
-
-.section .section-holder .inputs .lower {
-  height: 50%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.section .section-holder .inputs .lower .tags {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 15px 0px 15px 0px;
-  width: 89%;
-  background-color: #141414;
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.section .section-holder .inputs .lower .tags .titleB {
-  height: 25%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Red Hat Text", sans-serif;
-}
-
-.section .section-holder .inputs .lower .tags .titleB h3 {
+.section .section-holder .inputs .input_field {
   color: white;
-  margin: 0px 0px 15px 18px;
-  border-left: 2px solid white;
-  padding-left: 15px;
+  font-size: 18px;
+  width: 250px;
+  height: 30px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 2px solid white;
 }
 
-.section .section-holder .inputs .lower .tags .boxes {
-  height: 75%;
+.section .section-holder .inputs .input_label {
+  width: 100px;
+  height: 40px;
+  background-color: aqua;
+}
+
+.section .section-holder .inputs #question {
+  margin-top: 25px;
+}
+
+.section .section-holder .boxes {
+  height: 45vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,17 +90,20 @@
           justify-content: center;
 }
 
-.section .section-holder .inputs .lower .tags .boxes .box-holder {
-  width: 95%;
+.section .section-holder .boxes .box-holder {
+  width: 90%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.section .section-holder .inputs .lower .tags .boxes .box-holder .tag {
+.section .section-holder .boxes .box-holder .tag {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,12 +127,12 @@
   margin: 5px 10px 5px 10px;
 }
 
-.section .section-holder .inputs .lower .tags .boxes .box-holder .selected {
+.section .section-holder .boxes .box-holder .selected {
   background-color: orange;
 }
 
-.section .section-holder .upload {
-  height: 15vh;
+.section .section-holder .submit {
+  height: 10vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,32 +145,27 @@
           justify-content: center;
 }
 
-.section .section-holder .upload #uploadBtn {
-  display: none;
-}
-
-.section .section-holder .upload .uploadLabel {
+.section .section-holder .submit .BTN {
+  height: 50px;
+  width: 120px;
+  border-radius: 5px;
+  background-color: #0096ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 170px;
-  height: 50px;
-  background-color: #0096ff;
-  font-family: "Red Hat Text", sans-serif;
-  color: white;
-  border-radius: 15px;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Red Hat Text", sans-serif;
+  color: white;
 }
 
 @media only screen and (min-width: 768px) {
   .section {
-    height: 75vh;
+    height: 85vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -279,92 +175,42 @@
             justify-content: center;
   }
   .section .section-holder {
-    width: 82.4%;
-    height: 100%;
-    background-color: #2b323b;
-    color: black;
+    height: 60vh;
+    width: 87%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #2b323b;
+    border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-radius: 5px;
-    overflow: hidden;
   }
   .section .section-holder .title {
-    height: 8vh;
+    height: 10vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-family: "Red Hat Text", sans-serif;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .section .section-holder .title h1 {
-    margin-left: 50px;
-    font-family: "Red Hat Text", sans-serif;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
   }
   .section .section-holder .inputs {
-    height: 50vh;
+    height: 25vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section .section-holder .inputs .upper {
-    height: 50%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .section .section-holder .inputs .upper .roomInput {
-    height: 200px;
-    width: 42%;
-    background-color: #141414;
-    border-radius: 5px;
-  }
-  .section .section-holder .inputs .upper .roomInput .name {
-    height: 25%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: "Red Hat Text", sans-serif;
-  }
-  .section .section-holder .inputs .upper .roomInput .name h3 {
-    color: white;
-    margin-left: 18px;
-    border-left: 2px solid white;
-    padding-left: 15px;
-  }
-  .section .section-holder .inputs .upper .roomInput .input {
-    height: 75%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -372,86 +218,52 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .section .section-holder .inputs .upper .roomInput .input .inputField {
-    border: none;
-    height: 80%;
+  .section .section-holder .inputs .input_field {
+    color: white;
+    font-size: 18px;
+    width: 350px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .section .section-holder .inputs .input_label {
+    width: 100px;
+    height: 40px;
+    background-color: aqua;
+  }
+  .section .section-holder .inputs #question {
+    margin-top: 25px;
+  }
+  .section .section-holder .boxes {
+    height: 15vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .boxes .box-holder {
     width: 90%;
-    border-radius: 5px;
-    font-size: 20px;
-  }
-  .section .section-holder .inputs .upper .roomInput .input .inputField:focus {
-    outline: none;
-  }
-  .section .section-holder .inputs .upper .roomInput .input .exists {
-    border: 2px solid orange;
-  }
-  .section .section-holder .inputs .lower {
-    height: 50%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .section .section-holder .inputs .lower .tags {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 15px 0px 15px 0px;
-    width: 89%;
-    background-color: #141414;
-    border-radius: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section .section-holder .inputs .lower .tags .titleB {
-    height: 25%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: "Red Hat Text", sans-serif;
-  }
-  .section .section-holder .inputs .lower .tags .titleB h3 {
-    color: white;
-    margin: 0px 0px 15px 18px;
-    border-left: 2px solid white;
-    padding-left: 15px;
-  }
-  .section .section-holder .inputs .lower .tags .boxes {
-    height: 75%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .section .section-holder .inputs .lower .tags .boxes .box-holder {
-    width: 95%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .section .section-holder .inputs .lower .tags .boxes .box-holder .tag {
+  .section .section-holder .boxes .box-holder .tag {
     cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -474,11 +286,11 @@
     background-color: #384357;
     margin: 5px 10px 5px 10px;
   }
-  .section .section-holder .inputs .lower .tags .boxes .box-holder .selected {
+  .section .section-holder .boxes .box-holder .selected {
     background-color: orange;
   }
-  .section .section-holder .upload {
-    height: 15vh;
+  .section .section-holder .submit {
+    height: 10vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -486,36 +298,33 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
-  .section .section-holder .upload #uploadBtn {
-    display: none;
-  }
-  .section .section-holder .upload .uploadLabel {
+  .section .section-holder .submit .BTN {
+    margin-right: 30px;
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: #0096ff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 170px;
-    height: 50px;
-    background-color: #0096ff;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-    border-radius: 15px;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section {
-    height: 65vh;
+    height: 85vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -525,92 +334,42 @@
             justify-content: center;
   }
   .section .section-holder {
-    width: 86.4%;
-    height: 100%;
-    background-color: #2b323b;
-    color: black;
+    height: 60vh;
+    width: 87%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #2b323b;
+    border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-radius: 5px;
-    overflow: hidden;
   }
   .section .section-holder .title {
-    height: 7vh;
+    height: 10vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-family: "Red Hat Text", sans-serif;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .section .section-holder .title h1 {
-    margin-left: 50px;
-    font-family: "Red Hat Text", sans-serif;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
   }
   .section .section-holder .inputs {
-    height: 40vh;
+    height: 25vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section .section-holder .inputs .upper {
-    height: 50%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .section .section-holder .inputs .upper .roomInput {
-    height: 200px;
-    width: 42%;
-    background-color: #141414;
-    border-radius: 5px;
-  }
-  .section .section-holder .inputs .upper .roomInput .name {
-    height: 25%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: "Red Hat Text", sans-serif;
-  }
-  .section .section-holder .inputs .upper .roomInput .name h3 {
-    color: white;
-    margin-left: 18px;
-    border-left: 2px solid white;
-    padding-left: 15px;
-  }
-  .section .section-holder .inputs .upper .roomInput .input {
-    height: 75%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -618,86 +377,52 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .section .section-holder .inputs .upper .roomInput .input .inputField {
-    border: none;
-    height: 80%;
+  .section .section-holder .inputs .input_field {
+    color: white;
+    font-size: 18px;
+    width: 350px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .section .section-holder .inputs .input_label {
+    width: 100px;
+    height: 40px;
+    background-color: aqua;
+  }
+  .section .section-holder .inputs #question {
+    margin-top: 25px;
+  }
+  .section .section-holder .boxes {
+    height: 15vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .boxes .box-holder {
     width: 90%;
-    border-radius: 5px;
-    font-size: 20px;
-  }
-  .section .section-holder .inputs .upper .roomInput .input .inputField:focus {
-    outline: none;
-  }
-  .section .section-holder .inputs .upper .roomInput .input .exists {
-    border: 2px solid orange;
-  }
-  .section .section-holder .inputs .lower {
-    height: 50%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .section .section-holder .inputs .lower .tags {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 15px 0px 15px 0px;
-    width: 89%;
-    background-color: #141414;
-    border-radius: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section .section-holder .inputs .lower .tags .titleB {
-    height: 25%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: "Red Hat Text", sans-serif;
-  }
-  .section .section-holder .inputs .lower .tags .titleB h3 {
-    color: white;
-    margin: 0px 0px 15px 18px;
-    border-left: 2px solid white;
-    padding-left: 15px;
-  }
-  .section .section-holder .inputs .lower .tags .boxes {
-    height: 75%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .section .section-holder .inputs .lower .tags .boxes .box-holder {
-    width: 95%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .section .section-holder .inputs .lower .tags .boxes .box-holder .tag {
+  .section .section-holder .boxes .box-holder .tag {
     cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -720,11 +445,11 @@
     background-color: #384357;
     margin: 5px 10px 5px 10px;
   }
-  .section .section-holder .inputs .lower .tags .boxes .box-holder .selected {
+  .section .section-holder .boxes .box-holder .selected {
     background-color: orange;
   }
-  .section .section-holder .upload {
-    height: 15vh;
+  .section .section-holder .submit {
+    height: 10vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -732,30 +457,27 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
-  .section .section-holder .upload #uploadBtn {
-    display: none;
-  }
-  .section .section-holder .upload .uploadLabel {
+  .section .section-holder .submit .BTN {
+    margin-right: 30px;
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: #0096ff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 170px;
-    height: 50px;
-    background-color: #0096ff;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-    border-radius: 15px;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
   }
 }
 
@@ -771,92 +493,42 @@
             justify-content: center;
   }
   .section .section-holder {
-    width: 86.4%;
-    height: 100%;
-    background-color: #2b323b;
-    color: black;
+    height: 60vh;
+    width: 87%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #2b323b;
+    border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-radius: 5px;
-    overflow: hidden;
   }
   .section .section-holder .title {
-    height: 12vh;
+    height: 10vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-family: "Red Hat Text", sans-serif;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .section .section-holder .title h1 {
-    margin-left: 50px;
-    font-family: "Red Hat Text", sans-serif;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
   }
   .section .section-holder .inputs {
-    height: 50vh;
+    height: 25vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section .section-holder .inputs .upper {
-    height: 50%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .section .section-holder .inputs .upper .roomInput {
-    height: 200px;
-    width: 42%;
-    background-color: #141414;
-    border-radius: 5px;
-  }
-  .section .section-holder .inputs .upper .roomInput .name {
-    height: 25%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: "Red Hat Text", sans-serif;
-  }
-  .section .section-holder .inputs .upper .roomInput .name h3 {
-    color: white;
-    margin-left: 18px;
-    border-left: 2px solid white;
-    padding-left: 15px;
-  }
-  .section .section-holder .inputs .upper .roomInput .input {
-    height: 75%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -864,78 +536,41 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .section .section-holder .inputs .upper .roomInput .input .inputField {
-    border: none;
-    height: 80%;
+  .section .section-holder .inputs .input_field {
+    color: white;
+    font-size: 18px;
+    width: 350px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .section .section-holder .inputs .input_label {
+    width: 100px;
+    height: 40px;
+    background-color: aqua;
+  }
+  .section .section-holder .inputs #question {
+    margin-top: 25px;
+  }
+  .section .section-holder .boxes {
+    height: 15vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .boxes .box-holder {
     width: 90%;
-    border-radius: 5px;
-    font-size: 20px;
-  }
-  .section .section-holder .inputs .upper .roomInput .input .inputField:focus {
-    outline: none;
-  }
-  .section .section-holder .inputs .upper .roomInput .input .exists {
-    border: 2px solid orange;
-  }
-  .section .section-holder .inputs .lower {
-    height: 50%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .section .section-holder .inputs .lower .tags {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 15px 0px 15px 0px;
-    width: 89%;
-    background-color: #141414;
-    border-radius: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section .section-holder .inputs .lower .tags .titleB {
-    height: 25%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: "Red Hat Text", sans-serif;
-  }
-  .section .section-holder .inputs .lower .tags .titleB h3 {
-    color: white;
-    margin: 0px 0px 15px 18px;
-    border-left: 2px solid white;
-    padding-left: 15px;
-  }
-  .section .section-holder .inputs .lower .tags .boxes {
-    height: 75%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .section .section-holder .inputs .lower .tags .boxes .box-holder {
-    width: 95%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -943,7 +578,7 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .section .section-holder .inputs .lower .tags .boxes .box-holder .tag {
+  .section .section-holder .boxes .box-holder .tag {
     cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -966,11 +601,11 @@
     background-color: #384357;
     margin: 5px 10px 5px 10px;
   }
-  .section .section-holder .inputs .lower .tags .boxes .box-holder .selected {
+  .section .section-holder .boxes .box-holder .selected {
     background-color: orange;
   }
-  .section .section-holder .upload {
-    height: 15vh;
+  .section .section-holder .submit {
+    height: 10vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -978,30 +613,27 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
-  .section .section-holder .upload #uploadBtn {
-    display: none;
-  }
-  .section .section-holder .upload .uploadLabel {
+  .section .section-holder .submit .BTN {
+    margin-right: 30px;
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: #0096ff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 170px;
-    height: 50px;
-    background-color: #0096ff;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-    border-radius: 15px;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
   }
 }
 /*# sourceMappingURL=CreateRoom.css.map */

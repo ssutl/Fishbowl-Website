@@ -2,198 +2,118 @@
 @import "./Theme.scss";
 
 .section {
-  height: fit-content;
+  height: 85vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  // background-color: aquamarine;
+  // background-color: aqua;
 
   .section-holder {
-    width: 84.4%;
-    height: 140vh;
-    margin-bottom: 30px;
-    background-color: $secondary-background;
-    color: black;
+    height: 100%;
+    width: 87%;
     display: flex;
-    flex-direction: column;
+    // justify-content: center;
+    background-color: $secondary-background;
     border-radius: 5px;
-    overflow: hidden;
+    flex-direction: column;
 
     .title {
-      height: 12vh;
-      // background-color: yellow;
+      height: 5vh;
       width: 100%;
+      // background-color: yellow;
       display: flex;
+      font-family: "Red Hat Text", sans-serif;
       align-items: center;
-
-      h1 {
-        margin-left: 50px;
-        font-family: "Red Hat Text", sans-serif;
-        color: white;
-      }
+      justify-content: center;
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.267);
     }
 
     .inputs {
-      // background-color: orange;
-      height: 110vh;
+      height: 25vh;
       width: 100%;
+      // background-color: orange;
       display: flex;
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
 
-      .upper {
-        // background-color: green;
-        height: 50%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-
-        .roomInput {
-          height: 150px;
-          width: 90%;
-          background-color: #141414;
-          border-radius: 5px;
-
-          .name {
-            height: 25%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            // background-color: aqua;
-            font-family: "Red Hat Text", sans-serif;
-
-            h3 {
-              color: white;
-              margin-left: 5px;
-              // border-left: 2px solid white;
-              padding-left: 15px;
-            }
-          }
-
-          .input {
-            height: 75%;
-            width: 100%;
-            display: flex;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .inputField {
-              //   background-color: transparent;
-              border: none;
-              height: 80%;
-              width: 90%;
-              border-radius: 5px;
-              font-size: 20px;
-            }
-
-            .inputField:focus {
-              outline: none;
-            }
-
-            .exists {
-              border: 2px solid orange;
-            }
-          }
-        }
+      .input_field {
+        color: white;
+        font-size: 18px;
+        width: 250px;
+        height: 30px;
+        outline: 0;
+        border: 0;
+        background-color: transparent;
+        border-bottom: 2px solid white;
       }
 
-      .lower {
-        height: 50%;
-        width: 100%;
+      .input_label {
+        width: 100px;
+        height: 40px;
+        background-color: aqua;
+      }
+
+      #question {
+        margin-top: 25px;
+      }
+    }
+    .boxes {
+      height: 45vh;
+      width: 100%;
+      // background-color: aqua;
+      display: flex;
+      justify-content: center;
+
+      .box-holder {
+        // background-color: orange;
+        width: 90%;
+        height: 100%;
         display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        // background-color: pink;
+        justify-content: center;
+        flex-wrap: wrap;
 
-        .tags {
-          height: fit-content;
-          padding: 15px 0px 15px 0px;
-          width: 89%;
-          background-color: #141414;
-          border-radius: 5px;
+        .tag {
+          cursor: pointer;
           display: flex;
-          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+          width: fit-content;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          border-radius: 50px;
+          font-size: 15px;
+          padding: 0px 15px 0px 15px;
+          background-color: $buttons;
+          margin: 5px 10px 5px 10px;
+        }
 
-          .titleB {
-            height: 25%;
-            width: 100%;
-            // background-color: aquamarine;
-            display: flex;
-            align-items: center;
-            font-family: "Red Hat Text", sans-serif;
-
-            h3 {
-              color: white;
-              margin: 0px 0px 15px 18px;
-              border-left: 2px solid white;
-              padding-left: 15px;
-            }
-          }
-
-          .boxes {
-            height: 75%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            // background-color: rebeccapurple;
-
-            .box-holder {
-              // background-color: saddlebrown;
-              width: 95%;
-              height: 100%;
-              display: flex;
-              // justify-content: center;
-              flex-wrap: wrap;
-
-              .tag {
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 30px;
-                width: fit-content;
-                font-family: "Red Hat Text", sans-serif;
-                color: white;
-                border-radius: 50px;
-                font-size: 15px;
-                padding: 0px 15px 0px 15px;
-                background-color: $buttons;
-                margin: 5px 10px 5px 10px;
-              }
-
-              .selected {
-                background-color: orange;
-              }
-            }
-          }
+        .selected {
+          background-color: orange;
         }
       }
     }
-
-    .upload {
-      height: 15vh;
+    .submit {
+      height: 10vh;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      // background-color: green;
 
-      #uploadBtn {
-        display: none;
-      }
-
-      .uploadLabel {
-        display: flex;
-        width: 170px;
+      .BTN {
+        // margin-right: 30px;
         height: 50px;
+        width: 120px;
+        border-radius: 5px;
         background-color: $highlight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: "Red Hat Text", sans-serif;
         color: white;
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
     }
   }
@@ -201,190 +121,118 @@
 
 @include breakpoint-mixin("tablet") {
   .section {
-    height: 75vh;
+    height: 85vh;
     width: 100%;
     display: flex;
     justify-content: center;
+    // background-color: aqua;
 
     .section-holder {
-      width: 82.4%;
-      height: 100%;
-      background-color: $secondary-background;
-      color: black;
+      height: 60vh;
+      width: 87%;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      background-color: $secondary-background;
       border-radius: 5px;
-      overflow: hidden;
+      flex-direction: column;
 
       .title {
-        height: 8vh;
-        // background-color: yellow;
+        height: 10vh;
         width: 100%;
+        // background-color: yellow;
         display: flex;
+        font-family: "Red Hat Text", sans-serif;
         align-items: center;
-
-        h1 {
-          margin-left: 50px;
-          font-family: "Red Hat Text", sans-serif;
-          color: white;
-        }
+        justify-content: center;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
       }
 
       .inputs {
-        height: 50vh;
+        height: 25vh;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .upper {
-          height: 50%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          justify-content: space-evenly;
-
-          .roomInput {
-            height: 200px;
-            width: 42%;
-            background-color: #141414;
-            border-radius: 5px;
-
-            .name {
-              height: 25%;
-              width: 100%;
-              display: flex;
-              align-items: center;
-              // background-color: aqua;
-              font-family: "Red Hat Text", sans-serif;
-
-              h3 {
-                color: white;
-                margin-left: 18px;
-                border-left: 2px solid white;
-                padding-left: 15px;
-              }
-            }
-
-            .input {
-              height: 75%;
-              width: 100%;
-              display: flex;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              .inputField {
-                //   background-color: transparent;
-                border: none;
-                height: 80%;
-                width: 90%;
-                border-radius: 5px;
-                font-size: 20px;
-              }
-
-              .inputField:focus {
-                outline: none;
-              }
-
-              .exists {
-                border: 2px solid orange;
-              }
-            }
-          }
-        }
-
-        .lower {
-          height: 50%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-
-          .tags {
-            height: fit-content;
-            padding: 15px 0px 15px 0px;
-            width: 89%;
-            background-color: #141414;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-
-            .titleB {
-              height: 25%;
-              width: 100%;
-              // background-color: aquamarine;
-              display: flex;
-              align-items: center;
-              font-family: "Red Hat Text", sans-serif;
-
-              h3 {
-                color: white;
-                margin: 0px 0px 15px 18px;
-                border-left: 2px solid white;
-                padding-left: 15px;
-              }
-            }
-
-            .boxes {
-              height: 75%;
-              width: 100%;
-              display: flex;
-              justify-content: center;
-
-              .box-holder {
-                width: 95%;
-                height: 100%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .tag {
-                  cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 10px 5px 10px;
-                }
-
-                .selected {
-                  background-color: orange;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .upload {
-        height: 15vh;
-        width: 100%;
+        // background-color: yellow;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
 
-        #uploadBtn {
-          display: none;
+        .input_field {
+          color: white;
+          font-size: 18px;
+          width: 350px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          border-bottom: 2px solid white;
         }
 
-        .uploadLabel {
+        .input_label {
+          width: 100px;
+          height: 40px;
+          background-color: aqua;
+        }
+
+        #question {
+          margin-top: 25px;
+        }
+      }
+      .boxes {
+        height: 15vh;
+        width: 100%;
+        // background-color: aqua;
+        display: flex;
+        justify-content: center;
+
+        .box-holder {
+          // background-color: orange;
+          width: 90%;
+          height: 100%;
           display: flex;
-          width: 170px;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
           height: 50px;
+          width: 120px;
+          border-radius: 5px;
           background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           font-family: "Red Hat Text", sans-serif;
           color: white;
-          border-radius: 15px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
       }
     }
@@ -393,192 +241,118 @@
 
 @include breakpoint-mixin("tablet-wide") {
   .section {
-    // background-color: yellow;
-    height: 65vh;
+    height: 85vh;
     width: 100%;
     display: flex;
     justify-content: center;
+    // background-color: aqua;
 
     .section-holder {
-      width: 86.4%;
-      height: 100%;
-      background-color: $secondary-background;
-      color: black;
+      height: 60vh;
+      width: 87%;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      background-color: $secondary-background;
       border-radius: 5px;
-      overflow: hidden;
+      flex-direction: column;
 
       .title {
-        height: 7vh;
-        // background-color: yellow;
+        height: 10vh;
         width: 100%;
+        // background-color: yellow;
         display: flex;
+        font-family: "Red Hat Text", sans-serif;
         align-items: center;
-
-        h1 {
-          margin-left: 50px;
-          font-family: "Red Hat Text", sans-serif;
-          color: white;
-        }
+        justify-content: center;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
       }
 
       .inputs {
-        height: 40vh;
+        height: 25vh;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .upper {
-          height: 50%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          justify-content: space-evenly;
-
-          .roomInput {
-            height: 200px;
-            width: 42%;
-            background-color: #141414;
-            border-radius: 5px;
-
-            .name {
-              height: 25%;
-              width: 100%;
-              display: flex;
-              align-items: center;
-              // background-color: aqua;
-              font-family: "Red Hat Text", sans-serif;
-
-              h3 {
-                color: white;
-                margin-left: 18px;
-                border-left: 2px solid white;
-                padding-left: 15px;
-              }
-            }
-
-            .input {
-              height: 75%;
-              width: 100%;
-              display: flex;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              .inputField {
-                //   background-color: transparent;
-                border: none;
-                height: 80%;
-                width: 90%;
-                border-radius: 5px;
-                font-size: 20px;
-              }
-
-              .inputField:focus {
-                outline: none;
-              }
-
-              .exists {
-                border: 2px solid orange;
-              }
-            }
-          }
-        }
-
-        .lower {
-          // background-color: pink;
-          height: 50%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-
-          .tags {
-            height: fit-content;
-            padding: 15px 0px 15px 0px;
-            width: 89%;
-            background-color: #141414;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-
-            .titleB {
-              height: 25%;
-              width: 100%;
-              // background-color: aquamarine;
-              display: flex;
-              align-items: center;
-              font-family: "Red Hat Text", sans-serif;
-
-              h3 {
-                color: white;
-                margin: 0px 0px 15px 18px;
-                border-left: 2px solid white;
-                padding-left: 15px;
-              }
-            }
-
-            .boxes {
-              height: 75%;
-              width: 100%;
-              display: flex;
-              justify-content: center;
-
-              .box-holder {
-                width: 95%;
-                height: 100%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .tag {
-                  cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 10px 5px 10px;
-                }
-
-                .selected {
-                  background-color: orange;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .upload {
-        height: 15vh;
-        width: 100%;
+        // background-color: yellow;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
 
-        #uploadBtn {
-          display: none;
+        .input_field {
+          color: white;
+          font-size: 18px;
+          width: 350px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          border-bottom: 2px solid white;
         }
 
-        .uploadLabel {
+        .input_label {
+          width: 100px;
+          height: 40px;
+          background-color: aqua;
+        }
+
+        #question {
+          margin-top: 25px;
+        }
+      }
+      .boxes {
+        height: 15vh;
+        width: 100%;
+        // background-color: aqua;
+        display: flex;
+        justify-content: center;
+
+        .box-holder {
+          // background-color: orange;
+          width: 90%;
+          height: 100%;
           display: flex;
-          width: 170px;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
           height: 50px;
+          width: 120px;
+          border-radius: 5px;
           background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           font-family: "Red Hat Text", sans-serif;
           color: white;
-          border-radius: 15px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
       }
     }
@@ -591,186 +365,114 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    // background-color: aqua;
 
     .section-holder {
-      width: 86.4%;
-      height: 100%;
-      background-color: $secondary-background;
-      color: black;
+      height: 60vh;
+      width: 87%;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      background-color: $secondary-background;
       border-radius: 5px;
-      overflow: hidden;
+      flex-direction: column;
 
       .title {
-        height: 12vh;
-        // background-color: yellow;
+        height: 10vh;
         width: 100%;
+        // background-color: yellow;
         display: flex;
+        font-family: "Red Hat Text", sans-serif;
         align-items: center;
-
-        h1 {
-          margin-left: 50px;
-          font-family: "Red Hat Text", sans-serif;
-          color: white;
-        }
+        justify-content: center;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
       }
 
       .inputs {
-        height: 50vh;
+        height: 25vh;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .upper {
-          height: 50%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          justify-content: space-evenly;
-
-          .roomInput {
-            height: 200px;
-            width: 42%;
-            background-color: #141414;
-            border-radius: 5px;
-
-            .name {
-              height: 25%;
-              width: 100%;
-              display: flex;
-              align-items: center;
-              // background-color: aqua;
-              font-family: "Red Hat Text", sans-serif;
-
-              h3 {
-                color: white;
-                margin-left: 18px;
-                border-left: 2px solid white;
-                padding-left: 15px;
-              }
-            }
-
-            .input {
-              height: 75%;
-              width: 100%;
-              display: flex;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              .inputField {
-                //   background-color: transparent;
-                border: none;
-                height: 80%;
-                width: 90%;
-                border-radius: 5px;
-                font-size: 20px;
-              }
-
-              .inputField:focus {
-                outline: none;
-              }
-
-              .exists {
-                border: 2px solid orange;
-              }
-            }
-          }
-        }
-
-        .lower {
-          height: 50%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-
-          .tags {
-            height: fit-content;
-            padding: 15px 0px 15px 0px;
-            width: 89%;
-            background-color: #141414;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-
-            .titleB {
-              height: 25%;
-              width: 100%;
-              // background-color: aquamarine;
-              display: flex;
-              align-items: center;
-              font-family: "Red Hat Text", sans-serif;
-
-              h3 {
-                color: white;
-                margin: 0px 0px 15px 18px;
-                border-left: 2px solid white;
-                padding-left: 15px;
-              }
-            }
-
-            .boxes {
-              height: 75%;
-              width: 100%;
-              display: flex;
-              justify-content: center;
-
-              .box-holder {
-                width: 95%;
-                height: 100%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .tag {
-                  cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 10px 5px 10px;
-                }
-
-                .selected {
-                  background-color: orange;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .upload {
-        height: 15vh;
-        width: 100%;
+        // background-color: yellow;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
 
-        #uploadBtn {
-          display: none;
+        .input_field {
+          color: white;
+          font-size: 18px;
+          width: 350px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          border-bottom: 2px solid white;
         }
 
-        .uploadLabel {
+        .input_label {
+          width: 100px;
+          height: 40px;
+          background-color: aqua;
+        }
+
+        #question {
+          margin-top: 25px;
+        }
+      }
+      .boxes {
+        height: 15vh;
+        width: 100%;
+        // background-color: aqua;
+        display: flex;
+        justify-content: center;
+
+        .box-holder {
+          // background-color: orange;
+          width: 90%;
+          height: 100%;
           display: flex;
-          width: 170px;
+          // justify-content: center;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
           height: 50px;
+          width: 120px;
+          border-radius: 5px;
           background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           font-family: "Red Hat Text", sans-serif;
           color: white;
-          border-radius: 15px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
       }
     }
