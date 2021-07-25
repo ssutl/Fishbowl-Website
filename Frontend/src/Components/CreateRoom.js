@@ -18,12 +18,8 @@ function CreateRoom() {
             if(roomName.trim().length){
                 console.log("name is valid")
 
-                axios({
-                    method:`POST`,
-                    url: `http://localhost:5000/chat/new`,
-                    headers: {"x-auth-token":`${token}`},
-                    data:{
-                        CreatedById: info.id,
+                const data = {
+                    CreatedById: info.id,
                         Tags:{
                             Math:Math,
                             English:English,
@@ -42,14 +38,23 @@ function CreateRoom() {
                         Deleted: false,
                         Title:roomName,
                         Question: roomQuestion
-                    }
+                }
+
+                axios({
+                    method:`POST`,
+                    url: `http://localhost:5000/chat/new`,
+                    headers: {"x-auth-token":`${token}`},
+                    data: data
                 })
                 .then((res)=>{
                     if(res.data.msg === "Room name already exists"){
                         setRoomExists(true)
                     }else{
                         setRoomExists(false)
-                        history.push(`/Chat/${roomName}`)
+                        history.push({
+                            pathname: `/Chat/${roomName}`,
+                            state: {room: data}
+                        })
                     }
                     
                 })

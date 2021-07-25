@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import "../Styling/specificUserPage.css"
 import EditIcon from '@material-ui/icons/Edit';
 
+
 function MyPage() {
     const { state } = useLocation();
 
@@ -11,6 +12,9 @@ function MyPage() {
 
     
     
+
+
+   
 
 
     return (

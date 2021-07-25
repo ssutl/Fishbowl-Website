@@ -25,6 +25,7 @@ function SpecificUserPage() {
 
 
     return (
+        
         <div className="section2">
             <div className="holder">
                     <div className="banner">
