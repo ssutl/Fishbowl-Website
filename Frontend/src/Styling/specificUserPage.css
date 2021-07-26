@@ -12,7 +12,6 @@
   .section2 .holder {
     width: 86.4%;
     height: 100%;
-    background-color: #2b323b;
     color: black;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -21,7 +20,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-radius: 5px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
     overflow: hidden;
   }
   .section2 .holder .banner {
@@ -35,8 +35,8 @@
   }
   .section2 .holder .banner .edit {
     position: absolute;
-    left: 30%;
-    top: 20%;
+    left: 34%;
+    top: 21%;
     height: 50px;
     width: 50px;
     border-radius: 100%;
@@ -66,7 +66,7 @@
     background-color: pink;
     position: absolute;
     top: 175px;
-    right: 30%;
+    right: 34%;
     overflow: hidden;
     border: 3px solid black;
   }
@@ -89,6 +89,7 @@
     height: 100%;
     width: 80%;
     overflow: auto;
+    scroll-behavior: smooth;
   }
   .section2 .holder .specificFeedHolder .scrollUser a {
     text-decoration: none;
@@ -98,7 +99,7 @@
     margin-top: 40px;
     height: 160px;
     width: 100%;
-    background-color: #141414;
+    background-color: #28303b;
     word-break: break-all;
     border-radius: 5px;
   }

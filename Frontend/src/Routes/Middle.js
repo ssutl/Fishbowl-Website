@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Switch, Route, withRouter } from "react-router-dom";
 import Feed from '../Components/Feed';
 import '../Styling/Middle.css'
@@ -7,19 +7,27 @@ import SpecificUserPage from '../Components/SpecificUserPage';
 import MyPage from '../Components/MyPage';
 import CreateRoom from '../Components/CreateRoom';
 import ChatRoom from '../Components/ChatRoom';
+import { useHistory } from 'react-router-dom';
+// import Feed from '../Components/Feed';
 
 function Middle() {
+    const history = useHistory();
+    const [search,setSearch] = useState("")
     return (
 
             <div className="middle-holder">
                 <div className="section1">
                     <div className="search-wrapper">
                         <SearchIcon/>
-                        <input className="searchBar" type="text" placeholder="Search for rooms, users or subjects"></input>
+                        <input className="searchBar" type="text" placeholder="Search for rooms, users or subjects" onChange={(event)=>{setSearch(event.target.value); history.push('/'); }}></input>
                     </div>
                 </div>
                 <Switch>
-                    <Route exact path="/" component={withRouter(Feed)}/>
+                    
+                    {/* <Route exact path="/" component={withRouter(Feed)} value={search}/> */}
+                    <Route exact path="/" render={(props)=>(
+                        <Feed search={search}/>
+                    )}/>
                     <Route exact path="/People/:name" component={withRouter(SpecificUserPage)}/>
                     <Route exact path="/:name" component={withRouter(MyPage)}/>
                     <Route exact path="/Create/:name" component={withRouter(CreateRoom)}/>
