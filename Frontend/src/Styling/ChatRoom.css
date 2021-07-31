@@ -1,3 +1,371 @@
+.chat-room-section {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chat-room-section .chat-room-holder {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 83%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #28303b;
+  border-radius: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chat-room-section .chat-room-holder .question {
+  padding: 15px 0px 15px 0px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 10vh;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chat-room-section .chat-room-holder .question p {
+  color: white;
+  display: block;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.chat-room-section .chat-room-holder .question #title {
+  font-size: 22px;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.chat-room-section .chat-room-holder .question #question {
+  font-size: 19px;
+}
+
+.chat-room-section .chat-room-holder .messaging {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 32vh;
+  width: 100%;
+}
+
+.chat-room-section .chat-room-holder .chat-bar {
+  border-radius: 5px;
+  height: 8vh;
+  width: 100%;
+  background-color: #333c47;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat-room-section .chat-room-holder .chat-bar .input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 60%;
+  height: 40px;
+  text-align: center;
+  font-size: 15px;
+  background-color: #141414;
+  color: white;
+}
+
+.chat-room-section .chat-room-holder .chat-bar .send {
+  height: 40px;
+  width: 20%;
+  border-radius: 5px;
+  background-color: #141414;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat-room-section .chat-room-holder .chat-bar .send p {
+  display: none;
+}
+
+.chat-room-section .chat-room-holder .chat-bar .send #upload {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .chat-room-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 40px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 82.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #28303b;
+    border-radius: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chat-room-section .chat-room-holder .question {
+    padding: 15px 0px 15px 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 10vh;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .question p {
+    color: white;
+    display: block;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .chat-room-section .chat-room-holder .question #title {
+    font-size: 25px;
+    opacity: 0.5;
+    margin-bottom: 10px;
+  }
+  .chat-room-section .chat-room-holder .question #question {
+    font-size: 22px;
+  }
+  .chat-room-section .chat-room-holder .messaging {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 32vh;
+    width: 100%;
+  }
+  .chat-room-section .chat-room-holder .chat-bar {
+    border-radius: 5px;
+    height: 8vh;
+    width: 100%;
+    background-color: #333c47;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .input {
+    text-align: start;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 75%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    background-color: #141414;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send {
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #141414;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send p {
+    display: block;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .chat-room-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 40px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 87%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #28303b;
+    border-radius: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chat-room-section .chat-room-holder .question {
+    padding: 15px 0px 15px 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 10vh;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .question p {
+    color: white;
+    display: block;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .chat-room-section .chat-room-holder .question #title {
+    font-size: 25px;
+    opacity: 0.5;
+    margin-bottom: 10px;
+  }
+  .chat-room-section .chat-room-holder .question #question {
+    font-size: 22px;
+  }
+  .chat-room-section .chat-room-holder .messaging {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 32vh;
+    width: 100%;
+  }
+  .chat-room-section .chat-room-holder .chat-bar {
+    border-radius: 5px;
+    height: 8vh;
+    width: 100%;
+    background-color: #333c47;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .input {
+    text-align: start;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 75%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    background-color: #141414;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send {
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #141414;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send p {
+    display: block;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 1248px) {
   .chat-room-section {
     height: -webkit-fit-content;
@@ -50,10 +418,12 @@
     color: white;
     display: block;
     margin-left: 40px;
+    margin-right: 40px;
   }
   .chat-room-section .chat-room-holder .question #title {
     font-size: 25px;
     opacity: 0.5;
+    margin-bottom: 10px;
   }
   .chat-room-section .chat-room-holder .question #question {
     font-size: 22px;
@@ -81,6 +451,7 @@
             align-items: center;
   }
   .chat-room-section .chat-room-holder .chat-bar .input {
+    text-align: start;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -106,6 +477,12 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send p {
+    display: block;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+    display: none;
   }
 }
 /*# sourceMappingURL=ChatRoom.css.map */

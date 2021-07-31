@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import BarLoader from "react-spinners/BarLoader";
 import { css } from "@emotion/react";
+import PublishIcon from '@material-ui/icons/Publish';
 
 function ChatRoom() {
     const { state } = useLocation();
@@ -46,7 +47,7 @@ function ChatRoom() {
                 </div>
                 <div className="chat-bar">
                     <input type="text" className="input" placeholder="Respond to question"></input>
-                    <div className="send"><p>Send</p></div>
+                    <div className="send"><p>Send</p><PublishIcon id="upload"/></div>
                 </div>
 
             </div>

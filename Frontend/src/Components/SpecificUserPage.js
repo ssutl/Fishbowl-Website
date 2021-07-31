@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import "../Styling/specificUserPage.css"
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 function SpecificUserPage() {
     const { state } = useLocation();
@@ -21,6 +22,10 @@ function SpecificUserPage() {
             setUsersRooms(res.data)
         })
     },[state])
+
+    const handleFollow = () =>{
+        
+    }
         
 
 
@@ -33,6 +38,12 @@ function SpecificUserPage() {
                     <div className="imageHolder">
                         <img src={state.user.image} alt=""/>
                     </div>
+                    <div className="follow-section">
+                        <div className="follow-BTN" onClick={handleFollow}>
+                            <PersonAddIcon id=""/>
+                            <p>Follow</p>
+                        </div>
+                    </div>
                     <div className="specificFeedHolder">
                         <div className="scrollUser">
                             {usersRooms === null? <h1>No Current Rooms</h1>: usersRooms.reverse().map((room, index)=>{
@@ -44,7 +55,11 @@ function SpecificUserPage() {
                                                         <p id="Question">{room.Question.substring(0,70)}</p>
                                                     </div>
                                                     <div className="lower">
-
+                                                        <div className="low-holder">
+                                                            {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag,index)=>{
+                                                                return <div className="roomTag">{tag}</div>
+                                                                })}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </Link>

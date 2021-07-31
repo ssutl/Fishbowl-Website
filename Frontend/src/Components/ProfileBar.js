@@ -1,18 +1,20 @@
-import React, { useContext} from "react";
+import React, { useContext, useState} from "react";
 import '../Styling/ProfileBar.css'
 import { GoogleLogout } from 'react-google-login';
 import { UserContext } from "../Context/CurrentUser";
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 function ProfileBar() {
-
+    const history = useHistory();
       const info = useContext(UserContext)
       const token = localStorage.getItem('session-token')
 
       
 
       const logout = () =>{
+        //   console.log("hello")
 
         axios({ //On logout changing users status to offline
             method:`PUT`,
@@ -21,6 +23,7 @@ function ProfileBar() {
             data: {"online":false}
         }).then((response)=>{
             console.log(response)
+            history.go(0)
         }).catch((error)=>{
             console.log("error", error)
         })
