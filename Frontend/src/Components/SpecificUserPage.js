@@ -24,7 +24,14 @@ function SpecificUserPage() {
     },[state])
 
     const handleFollow = () =>{
+
+        /*
+        Take in the username of the person that was clicked on 
+
+        make an api call (PUT) to the backend
+
         
+        */
     }
         
 
@@ -57,7 +64,7 @@ function SpecificUserPage() {
                                                     <div className="lower">
                                                         <div className="low-holder">
                                                             {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag,index)=>{
-                                                                return <div className="roomTag">{tag}</div>
+                                                                return <div className="roomTag" key={index}>{tag}</div>
                                                                 })}
                                                         </div>
                                                     </div>

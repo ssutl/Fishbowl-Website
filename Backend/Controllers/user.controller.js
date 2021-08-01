@@ -45,6 +45,21 @@ router.delete('/delete/:id',auth,(req, res) => {
 })
 
 router.put('/update/:id',auth, (req, res) => {
+    
+
+
+    /*
+    
+    Object.keys(req.body) //use this (or similar) to see which fields are being updated
+
+    then have a condition that checks for the "following" - push incoming username to array in the DB
+
+    else update the other fields like below
+    
+    
+    */
+
+    
     User.findByIdAndUpdate(req.params.id, req.body)
         .then(user => res.json('Success! User updated.'))
         .catch(err => res.status(400).json('Error! ' + err))
