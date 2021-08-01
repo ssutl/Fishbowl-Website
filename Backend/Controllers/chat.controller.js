@@ -43,6 +43,15 @@ router.get('/get/Title/:name',auth,(req,res)=>{
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
+//Update Chat Logs
+router.put('/update/:name',auth, (req, res) => {
+    console.log('router met: ', req.body.newMessage);
+    ChatRoom.updateOne({  Title: req.params.name}, { $addToSet: { Messages: req.body.newMessage }})
+        .then(res => res.json('Success! Message Added to array.'))
+        .catch(err => res.status(400).json('Error! ' + err))
+
+})
+
 function auth(req, res, next) {
     //want to check for the token that is being sent along with the front end req
     var token = req.header("x-auth-token");

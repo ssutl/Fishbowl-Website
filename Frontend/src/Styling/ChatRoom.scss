@@ -314,6 +314,7 @@
       //   justify-content: center;
       background-color: $secondary-background;
       border-radius: 5px;
+      // align-items: center;
       flex-direction: column;
 
       .question {
@@ -348,7 +349,26 @@
       .messaging {
         height: fit-content;
         min-height: 32vh;
+        max-height: 60vh;
         width: 100%;
+        overflow-y: auto;
+
+        .my-message {
+          margin-top: 20px;
+          height: 150px;
+          width: 100%;
+          // border-radius: 5px;
+          border-top: 1px solid $highlight;
+          border-bottom: 1px solid $highlight;
+          color: white;
+          // background-color: #141414;
+        }
+
+        .received-message {
+          height: 100px;
+          width: 80%;
+          background-color: pink;
+        }
         // background-color: aqua;
       }
 
@@ -383,6 +403,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
 
           p {
             display: block;

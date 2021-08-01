@@ -433,7 +433,22 @@
     height: -moz-fit-content;
     height: fit-content;
     min-height: 32vh;
+    max-height: 60vh;
     width: 100%;
+    overflow-y: auto;
+  }
+  .chat-room-section .chat-room-holder .messaging .my-message {
+    margin-top: 20px;
+    height: 150px;
+    width: 100%;
+    border-top: 1px solid #0096ff;
+    border-bottom: 1px solid #0096ff;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .messaging .received-message {
+    height: 100px;
+    width: 80%;
+    background-color: pink;
   }
   .chat-room-section .chat-room-holder .chat-bar {
     border-radius: 5px;
@@ -477,6 +492,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    cursor: pointer;
   }
   .chat-room-section .chat-room-holder .chat-bar .send p {
     display: block;
