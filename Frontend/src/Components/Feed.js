@@ -63,12 +63,11 @@ function Feed(input) {
                 <div className="bottom-section">
                     <div className="scroll">
                         {allRooms === null? <BarLoader color={"#FFFFFF"} css={override} size={300} />: allRooms.filter((chat)=>{
+                            
                             return(
-                                chat.Title.includes(input.search) ||
-                                chat.Question.includes(input.search)
-                                // Object.keys(chat.Tags).filter(x => chat.Tags[x]).map((tagy,index)=>{
-                                //         return tagy.includes(input.search)
-                                // })
+                                chat.Title.toUpperCase().includes(input.search.toUpperCase()) ||
+                                chat.Question.toUpperCase().includes(input.search.toUpperCase()) 
+
                             );
                         }).map((room, index)=>{
                                 return(
@@ -81,7 +80,7 @@ function Feed(input) {
                                             <div className="low-section">
                                                 <div className="low-holder">
                                                     {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag,index)=>{
-                                                        return <div className="roomTag">{tag}</div>
+                                                        return <div className="roomTag" key={index}>{tag}</div>
                                                         })}
                                                 </div>
                                             </div>        
