@@ -36,10 +36,25 @@ router.get('/get/:id',auth,(req,res)=>{
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
+router.get('/get/Title/:name',auth,(req,res)=>{
+    console.log('req: ', req);
+    ChatRoom.find({  Title: req.params.name})
+        .then(SpecificRoom => res.json(SpecificRoom))
+        .catch(err => res.status(400).json('Error! ' + err))
+})
+
+//Update Chat Logs
+router.put('/update/:name',auth, (req, res) => {
+    console.log('router met: ', req.body.newMessage);
+    ChatRoom.findOneAndUpdate({  Title: req.params.name}, { $addToSet: { Messages: req.body.data}})
+        .then(msg => res.json('Success! Message Added to array.'))
+        .catch(err => res.status(400).json('Error! ' + err))
+})
+
 function auth(req, res, next) {
     //want to check for the token that is being sent along with the front end req
     var token = req.header("x-auth-token");
-    console.log('token passed through middleware: ', token);
+    // console.log('token passed through middleware: ', token);
   
     //Check for token
     if (!token) {
@@ -58,17 +73,13 @@ function auth(req, res, next) {
 
         // base64 decode and parse JSON
         var header = Buffer.from(headerSeg, 'base64');
-        console.log('header: ', header);
 
 
         var payload =  JSON.parse(Buffer.from(payloadSeg, 'base64'));
-        console.log('payload: ', payload);
 
         if(payload.iss === 'accounts.google.com' || payload.aud === '39358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com'){
-            console.log('auth valid')
             next()
         }else{
-            console.log('auth invalid')
             res.status(401).json({ msg: "auth invalid" });
         }
     }

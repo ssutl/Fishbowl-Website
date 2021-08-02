@@ -15,7 +15,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #2b323b;
+  background-color: #28303b;
   border-radius: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -161,6 +161,7 @@
           align-items: center;
   font-family: "Red Hat Text", sans-serif;
   color: white;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -183,7 +184,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #2b323b;
+    background-color: #28303b;
     border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -319,6 +320,7 @@
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
     color: white;
+    cursor: pointer;
   }
 }
 
@@ -342,7 +344,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #2b323b;
+    background-color: #28303b;
     border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -478,6 +480,7 @@
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
     color: white;
+    cursor: pointer;
   }
 }
 
@@ -501,7 +504,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #2b323b;
+    background-color: #28303b;
     border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -634,6 +637,7 @@
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
     color: white;
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=CreateRoom.css.map */

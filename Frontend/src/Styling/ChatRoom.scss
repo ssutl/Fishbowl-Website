@@ -1,0 +1,929 @@
+@import "./Breakpoints.scss";
+@import "./Theme.scss";
+.chat-room-section {
+  height: fit-content;
+  padding-bottom: 40px;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  // background-color: aqua;
+
+  .chat-room-holder {
+    height: fit-content;
+    width: 83%;
+    display: flex;
+    //   justify-content: center;
+    background-color: $secondary-background;
+    border-radius: 5px;
+    flex-direction: column;
+
+    .question {
+      padding: 15px 0px 15px 0px;
+      height: fit-content;
+      min-height: 10vh;
+      width: 100%;
+      // background-color: yellow;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        color: white;
+        display: block;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      #title {
+        font-size: 22px;
+        opacity: 0.5;
+        margin-bottom: 10px;
+      }
+
+      #question {
+        font-size: 19px;
+        // opacity: 0.5;
+      }
+    }
+
+    .messaging {
+      height: fit-content;
+      min-height: 32vh;
+      width: 100%;
+      // background-color: aqua;
+
+      .my-message {
+        margin-top: 20px;
+        height: 170px;
+        width: 90%;
+        border-radius: 2px;
+        color: white;
+        margin-left: auto;
+        background-color: #141414;
+
+        .info {
+          width: 100%;
+          height: 40%;
+          // background-color: pink;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+
+          .circle {
+            border: 2px solid white;
+            height: 45px;
+            width: 45px;
+            border-radius: 100%;
+            overflow: hidden;
+          }
+
+          .date {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+            width: 50%;
+            font-size: 17px;
+            font-family: "Red Hat Text", sans-serif;
+            font-weight: 400;
+            // background-color: orange;
+          }
+
+          .time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+            width: 20%;
+            font-size: 17px;
+            font-weight: 400;
+
+            font-family: "Red Hat Text", sans-serif;
+            // background-color: orange;
+          }
+        }
+
+        .reply {
+          width: 100%;
+          height: 60%;
+          // background-color: aqua;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+          font-family: "Red Hat Text", sans-serif;
+        }
+      }
+
+      .received-message {
+        margin-top: 20px;
+        height: 170px;
+        width: 90%;
+        border-radius: 2px;
+        color: white;
+        // margin-left: auto;
+        background-color: $highlight;
+
+        .info {
+          width: 100%;
+          height: 40%;
+          // background-color: pink;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+
+          .circle {
+            border: 2px solid white;
+            height: 45px;
+            width: 45px;
+            border-radius: 100%;
+            overflow: hidden;
+          }
+
+          .date {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+            width: 50%;
+            font-size: 17px;
+            font-family: "Red Hat Text", sans-serif;
+            font-weight: 400;
+            // background-color: orange;
+          }
+
+          .time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+            width: 20%;
+            font-size: 17px;
+            font-weight: 400;
+
+            font-family: "Red Hat Text", sans-serif;
+            // background-color: orange;
+          }
+        }
+
+        .reply {
+          width: 100%;
+          height: 60%;
+          // background-color: aqua;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+          font-family: "Red Hat Text", sans-serif;
+        }
+      }
+    }
+
+    .chat-bar {
+      border-radius: 5px;
+      height: 8vh;
+      width: 100%;
+      background-color: #333c47;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .input {
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        width: 60%;
+        height: 40px;
+        text-align: center;
+        font-size: 15px;
+        background-color: #141414;
+        color: white;
+      }
+
+      .send {
+        height: 40px;
+        width: 20%;
+        border-radius: 5px;
+        background-color: #141414;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          display: none;
+        }
+
+        #upload {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet") {
+  .chat-room-section {
+    height: fit-content;
+    padding-bottom: 40px;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .chat-room-holder {
+      height: fit-content;
+      width: 82.5%;
+      display: flex;
+      //   justify-content: center;
+      background-color: $secondary-background;
+      border-radius: 5px;
+      flex-direction: column;
+
+      .question {
+        padding: 15px 0px 15px 0px;
+        height: fit-content;
+        min-height: 10vh;
+        width: 100%;
+        // background-color: yellow;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+          color: white;
+          display: block;
+          margin-left: 40px;
+          margin-right: 40px;
+        }
+        #title {
+          font-size: 25px;
+          opacity: 0.5;
+          margin-bottom: 10px;
+        }
+
+        #question {
+          font-size: 22px;
+          // opacity: 0.5;
+        }
+      }
+
+      .messaging {
+        height: fit-content;
+        min-height: 32vh;
+        width: 100%;
+        // background-color: aqua;
+
+        .my-message {
+          margin-top: 20px;
+          height: 170px;
+          width: 90%;
+          border-radius: 2px;
+          color: white;
+          margin-left: auto;
+          background-color: #141414;
+
+          .info {
+            width: 100%;
+            height: 40%;
+            // background-color: pink;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .circle {
+              border: 2px solid white;
+              height: 45px;
+              width: 45px;
+              border-radius: 100%;
+              overflow: hidden;
+            }
+
+            .date {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 50%;
+              font-size: 17px;
+              font-family: "Red Hat Text", sans-serif;
+              font-weight: 400;
+              // background-color: orange;
+            }
+
+            .time {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 20%;
+              font-size: 17px;
+              font-weight: 400;
+
+              font-family: "Red Hat Text", sans-serif;
+              // background-color: orange;
+            }
+          }
+
+          .reply {
+            width: 100%;
+            height: 60%;
+            // background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+          }
+        }
+
+        .received-message {
+          margin-top: 20px;
+          height: 170px;
+          width: 90%;
+          border-radius: 2px;
+          color: white;
+          // margin-left: auto;
+          background-color: $highlight;
+
+          .info {
+            width: 100%;
+            height: 40%;
+            // background-color: pink;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .circle {
+              border: 2px solid white;
+              height: 45px;
+              width: 45px;
+              border-radius: 100%;
+              overflow: hidden;
+            }
+
+            .date {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 50%;
+              font-size: 17px;
+              font-family: "Red Hat Text", sans-serif;
+              font-weight: 400;
+              // background-color: orange;
+            }
+
+            .time {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 20%;
+              font-size: 17px;
+              font-weight: 400;
+
+              font-family: "Red Hat Text", sans-serif;
+              // background-color: orange;
+            }
+          }
+
+          .reply {
+            width: 100%;
+            height: 60%;
+            // background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+          }
+        }
+      }
+
+      .chat-bar {
+        border-radius: 5px;
+        height: 8vh;
+        width: 100%;
+        background-color: #333c47;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .input {
+          text-align: start;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          width: 75%;
+          height: 40px;
+          padding-left: 20px;
+          font-size: 15px;
+          background-color: #141414;
+          color: white;
+        }
+
+        .send {
+          height: 40px;
+          width: 100px;
+          border-radius: 5px;
+          background-color: #141414;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          p {
+            display: block;
+          }
+
+          #upload {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  .chat-room-section {
+    height: fit-content;
+    padding-bottom: 40px;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .chat-room-holder {
+      height: fit-content;
+      width: 87%;
+      display: flex;
+      //   justify-content: center;
+      background-color: $secondary-background;
+      border-radius: 5px;
+      flex-direction: column;
+
+      .question {
+        padding: 15px 0px 15px 0px;
+        height: fit-content;
+        min-height: 10vh;
+        width: 100%;
+        // background-color: yellow;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+          color: white;
+          display: block;
+          margin-left: 40px;
+          margin-right: 40px;
+        }
+        #title {
+          font-size: 25px;
+          opacity: 0.5;
+          margin-bottom: 10px;
+        }
+
+        #question {
+          font-size: 22px;
+          // opacity: 0.5;
+        }
+      }
+
+      .messaging {
+        height: fit-content;
+        min-height: 32vh;
+        width: 100%;
+        // background-color: aqua;
+
+        .my-message {
+          margin-top: 20px;
+          height: 170px;
+          width: 90%;
+          border-radius: 2px;
+          color: white;
+          margin-left: auto;
+          background-color: #141414;
+
+          .info {
+            width: 100%;
+            height: 40%;
+            // background-color: pink;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .circle {
+              border: 2px solid white;
+              height: 45px;
+              width: 45px;
+              border-radius: 100%;
+              overflow: hidden;
+            }
+
+            .date {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 50%;
+              font-size: 17px;
+              font-family: "Red Hat Text", sans-serif;
+              font-weight: 400;
+              // background-color: orange;
+            }
+
+            .time {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 20%;
+              font-size: 17px;
+              font-weight: 400;
+
+              font-family: "Red Hat Text", sans-serif;
+              // background-color: orange;
+            }
+          }
+
+          .reply {
+            width: 100%;
+            height: 60%;
+            // background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+          }
+        }
+
+        .received-message {
+          margin-top: 20px;
+          height: 170px;
+          width: 90%;
+          border-radius: 2px;
+          color: white;
+          // margin-left: auto;
+          background-color: $highlight;
+
+          .info {
+            width: 100%;
+            height: 40%;
+            // background-color: pink;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .circle {
+              border: 2px solid white;
+              height: 45px;
+              width: 45px;
+              border-radius: 100%;
+              overflow: hidden;
+            }
+
+            .date {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 50%;
+              font-size: 17px;
+              font-family: "Red Hat Text", sans-serif;
+              font-weight: 400;
+              // background-color: orange;
+            }
+
+            .time {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 20%;
+              font-size: 17px;
+              font-weight: 400;
+
+              font-family: "Red Hat Text", sans-serif;
+              // background-color: orange;
+            }
+          }
+
+          .reply {
+            width: 100%;
+            height: 60%;
+            // background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+          }
+        }
+      }
+
+      .chat-bar {
+        border-radius: 5px;
+        height: 8vh;
+        width: 100%;
+        background-color: #333c47;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .input {
+          text-align: start;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          width: 75%;
+          height: 40px;
+          padding-left: 20px;
+          font-size: 15px;
+          background-color: #141414;
+          color: white;
+        }
+
+        .send {
+          height: 40px;
+          width: 100px;
+          border-radius: 5px;
+          background-color: #141414;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          p {
+            display: block;
+          }
+
+          #upload {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .chat-room-section {
+    height: fit-content;
+    padding-bottom: 40px;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .chat-room-holder {
+      height: fit-content;
+      width: 87%;
+      display: flex;
+      //   justify-content: center;
+      background-color: $secondary-background;
+      border-radius: 5px;
+      // align-items: center;
+      flex-direction: column;
+
+      .question {
+        padding: 15px 0px 15px 0px;
+        height: fit-content;
+        min-height: 10vh;
+        width: 100%;
+        // background-color: yellow;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+          color: white;
+          display: block;
+          margin-left: 40px;
+          margin-right: 40px;
+        }
+        #title {
+          font-size: 25px;
+          opacity: 0.5;
+          margin-bottom: 10px;
+        }
+
+        #question {
+          font-size: 22px;
+          // opacity: 0.5;
+        }
+      }
+
+      .messaging {
+        height: fit-content;
+        min-height: 32vh;
+        max-height: 60vh;
+        width: 100%;
+        overflow-y: auto;
+
+        .my-message {
+          margin-top: 20px;
+          height: 170px;
+          width: 90%;
+          border-radius: 2px;
+          color: white;
+          margin-left: auto;
+          background-color: #141414;
+
+          .info {
+            width: 100%;
+            height: 40%;
+            // background-color: pink;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .circle {
+              border: 2px solid white;
+              height: 45px;
+              width: 45px;
+              border-radius: 100%;
+              overflow: hidden;
+            }
+
+            .userName {
+              display: flex;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 15%;
+              // background-color: orange;
+            }
+
+            .date {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 35%;
+
+              // background-color: orange;
+            }
+
+            .time {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 20%;
+              font-size: 17px;
+              font-weight: 400;
+
+              font-family: "Red Hat Text", sans-serif;
+              // background-color: orange;
+            }
+          }
+
+          .reply {
+            width: 100%;
+            height: 60%;
+            // background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+          }
+        }
+
+        .received-message {
+          margin-top: 20px;
+          height: 170px;
+          width: 90%;
+          border-radius: 2px;
+          color: white;
+          // margin-left: auto;
+          background-color: $highlight;
+
+          .info {
+            width: 100%;
+            height: 40%;
+            // background-color: pink;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .circle {
+              border: 2px solid white;
+              height: 45px;
+              width: 45px;
+              border-radius: 100%;
+              overflow: hidden;
+            }
+
+            .userName {
+              display: flex;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              min-width: 15%;
+              max-width: 20%;
+              width: fit-content;
+              font-size: 17px;
+              font-family: "Red Hat Text", sans-serif;
+              font-weight: 400;
+              // background-color: orange;
+            }
+
+            .date {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 35%;
+              font-size: 17px;
+              font-family: "Red Hat Text", sans-serif;
+              font-weight: 400;
+              // background-color: orange;
+            }
+
+            .time {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 20%;
+              font-size: 17px;
+              font-weight: 400;
+
+              font-family: "Red Hat Text", sans-serif;
+              // background-color: orange;
+            }
+          }
+
+          .reply {
+            width: 100%;
+            height: 60%;
+            // background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+          }
+        }
+        // background-color: aqua;
+      }
+
+      .chat-bar {
+        border-radius: 5px;
+        height: 8vh;
+        width: 100%;
+        background-color: #333c47;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .input {
+          text-align: start;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          width: 75%;
+          height: 40px;
+          padding-left: 20px;
+          font-size: 15px;
+          background-color: #141414;
+          color: white;
+        }
+
+        .send {
+          height: 40px;
+          width: 100px;
+          border-radius: 5px;
+          background-color: #141414;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+          p {
+            display: block;
+          }
+
+          #upload {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

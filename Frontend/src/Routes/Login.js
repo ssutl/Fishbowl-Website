@@ -22,9 +22,9 @@ function Login() {
 
     const responseSuccessGoogle = (response) =>{
         console.log('response: ', response);
-        setUserName(response.Os.Ne) //Using Google Response to set current User
-        setEmail(response.Os.zt)
-        setImage(response.Os.KI)
+        setUserName(response.profileObj.name) //Using Google Response to set current User
+        setEmail(response.profileObj.email)
+        setImage(response.profileObj.imageUrl)
         setToken(response.tokenId)
         setOnline(true) //Marking that user is online
         setUserClicked(true)
