@@ -46,10 +46,9 @@ router.get('/get/Title/:name',auth,(req,res)=>{
 //Update Chat Logs
 router.put('/update/:name',auth, (req, res) => {
     console.log('router met: ', req.body.newMessage);
-    ChatRoom.updateOne({  Title: req.params.name}, { $addToSet: { Messages: req.body.newMessage }})
-        .then(res => res.json('Success! Message Added to array.'))
+    ChatRoom.findOneAndUpdate({  Title: req.params.name}, { $addToSet: { Messages: req.body.data}})
+        .then(msg => res.json('Success! Message Added to array.'))
         .catch(err => res.status(400).json('Error! ' + err))
-
 })
 
 function auth(req, res, next) {
