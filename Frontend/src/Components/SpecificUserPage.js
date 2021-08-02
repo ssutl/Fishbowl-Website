@@ -43,14 +43,26 @@ function SpecificUserPage() {
 
     const handleFollow = () =>{
 
-        axios({
-            method:'PUT',
-            url: `http://localhost:5000/users/update/${info.id}`,
-            headers: {"x-auth-token":`${token}`},
-            data: {following: state.user.username}
-        }).then((res)=>{
-            console.log(res)
-        })
+        // axios({
+        //     method:'PUT',
+        //     url: `http://localhost:5000/users/update/${info.id}`,
+        //     headers: {"x-auth-token":`${token}`},
+        //     data: {following: state.user.username}
+        // }).then((res)=>{
+        //     console.log(res)
+        // })
+
+        // axios({
+        //     method:'GET',
+        //     url: `http://localhost:5000/users/get/${info.name}`,
+        //     headers: {"x-auth-token":`${token}`}
+        // }).then((res)=>{
+        //     if(res.data[0].following.includes(state.user.username)){
+        //         setFollowing(true)
+        //     }else{
+        //         setFollowing(false)
+        //     }
+        // })
 
     }
         
