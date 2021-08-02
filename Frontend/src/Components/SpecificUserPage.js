@@ -1,5 +1,7 @@
 import React, { useContext, useState, useEffect} from "react";
 import { useLocation } from "react-router-dom";
+import { UserContext } from "../Context/CurrentUser";
+
 import "../Styling/specificUserPage.css"
 import { Link } from "react-router-dom";
 import axios from 'axios';
@@ -7,10 +9,13 @@ import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 function SpecificUserPage() {
     const { state } = useLocation();
+    const info = useContext(UserContext)
+    console.log('state: ', state);
     const token = localStorage.getItem('session-token')
 
 
     const[usersRooms,setUsersRooms] = useState(null)
+    const [following,setFollowing] = useState()
 
 
     useEffect(()=>{
@@ -21,17 +26,32 @@ function SpecificUserPage() {
         }).then((res)=>{
             setUsersRooms(res.data)
         })
+
+        axios({
+            method:'GET',
+            url: `http://localhost:5000/users/get/${info.name}`,
+            headers: {"x-auth-token":`${token}`}
+        }).then((res)=>{
+            if(res.data[0].following.includes(state.user.username)){
+                setFollowing(true)
+            }else{
+                setFollowing(false)
+            }
+        })
+
     },[state])
 
     const handleFollow = () =>{
 
-        /*
-        Take in the username of the person that was clicked on 
+        axios({
+            method:'PUT',
+            url: `http://localhost:5000/users/update/${info.id}`,
+            headers: {"x-auth-token":`${token}`},
+            data: {following: state.user.username}
+        }).then((res)=>{
+            console.log(res)
+        })
 
-        make an api call (PUT) to the backend
-
-        
-        */
     }
         
 
@@ -46,7 +66,7 @@ function SpecificUserPage() {
                         <img src={state.user.image} alt=""/>
                     </div>
                     <div className="follow-section">
-                        <div className="follow-BTN" onClick={handleFollow}>
+                        <div className={following?"following-BTN":"follow-BTN"} onClick={handleFollow}>
                             <PersonAddIcon id=""/>
                             <p>Follow</p>
                         </div>

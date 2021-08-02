@@ -110,6 +110,32 @@
     font-size: 18px;
     font-weight: 600;
   }
+  .section2 .holder .follow-section .following-BTN {
+    height: 38px;
+    width: 120px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    margin-left: 30px;
+    cursor: pointer;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+  }
+  .section2 .holder .follow-section .following-BTN p {
+    font-size: 18px;
+    font-weight: 600;
+  }
   .section2 .holder .follow-section .follow-BTN:hover {
     background-color: #0096ff;
   }

@@ -756,15 +756,23 @@
               overflow: hidden;
             }
 
+            .userName {
+              display: flex;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              width: 15%;
+              // background-color: orange;
+            }
+
             .date {
               display: flex;
               justify-content: center;
               align-items: center;
               height: 60%;
-              width: 50%;
-              font-size: 17px;
-              font-family: "Red Hat Text", sans-serif;
-              font-weight: 400;
+              width: 35%;
+
               // background-color: orange;
             }
 
@@ -819,12 +827,27 @@
               overflow: hidden;
             }
 
+            .userName {
+              display: flex;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 60%;
+              min-width: 15%;
+              max-width: 20%;
+              width: fit-content;
+              font-size: 17px;
+              font-family: "Red Hat Text", sans-serif;
+              font-weight: 400;
+              // background-color: orange;
+            }
+
             .date {
               display: flex;
               justify-content: center;
               align-items: center;
               height: 60%;
-              width: 50%;
+              width: 35%;
               font-size: 17px;
               font-family: "Red Hat Text", sans-serif;
               font-weight: 400;

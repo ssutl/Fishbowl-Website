@@ -92,12 +92,14 @@ function ChatRoom() {
                     <p id="question">{room.Question}</p>
                 </div>
                 <div className="messaging">
+                    
                     {room.Messages.map((msg)=>(
                         <div className={msg.sentBy === info.name? "my-message": "received-message"}>
                             <div className="info">
                                 <div className="circle">
                                     <img src={msg.image}/>
                                 </div>    
+                                <div className="userName"><p>{msg.sentBy}</p></div> 
                                 <div className="date"><p>Date: {msg.date}</p></div>
                                 <div className="time"><p>Time: {msg.time}</p></div>
                             </div>    
@@ -111,7 +113,7 @@ function ChatRoom() {
                             <div className="info">
                                 <div className="circle">
                                     <img src={info.image}/>
-                                </div>    
+                                </div>   
                                 <div className="date"><p>Date: {current.getDate() + "-" + (current.getMonth()+1) + "-" + current.getFullYear()} </p></div>
                                 <div className="time"><p>Time: {current.getHours() + ":" + current.getMinutes()}</p></div>
                             </div>    

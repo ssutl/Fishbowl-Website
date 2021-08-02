@@ -931,6 +931,20 @@
     border-radius: 100%;
     overflow: hidden;
   }
+  .chat-room-section .chat-room-holder .messaging .my-message .info .userName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 60%;
+    width: 15%;
+  }
   .chat-room-section .chat-room-holder .messaging .my-message .info .date {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -942,10 +956,7 @@
         -ms-flex-align: center;
             align-items: center;
     height: 60%;
-    width: 50%;
-    font-size: 17px;
-    font-family: "Red Hat Text", sans-serif;
-    font-weight: 400;
+    width: 35%;
   }
   .chat-room-section .chat-room-holder .messaging .my-message .info .time {
     display: -webkit-box;
@@ -1006,6 +1017,27 @@
     border-radius: 100%;
     overflow: hidden;
   }
+  .chat-room-section .chat-room-holder .messaging .received-message .info .userName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 60%;
+    min-width: 15%;
+    max-width: 20%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 17px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 400;
+  }
   .chat-room-section .chat-room-holder .messaging .received-message .info .date {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1017,7 +1049,7 @@
         -ms-flex-align: center;
             align-items: center;
     height: 60%;
-    width: 50%;
+    width: 35%;
     font-size: 17px;
     font-family: "Red Hat Text", sans-serif;
     font-weight: 400;
