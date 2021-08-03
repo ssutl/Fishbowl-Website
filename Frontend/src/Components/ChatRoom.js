@@ -1,16 +1,23 @@
 import React, {useState, useEffect, useContext} from 'react'
 import '../Styling/ChatRoom.css'
-import { useLocation } from 'react-router-dom';
+import { Redirect, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import BarLoader from "react-spinners/BarLoader";
 import { UserContext } from "../Context/CurrentUser";
 import { css } from "@emotion/react";
 import PublishIcon from '@material-ui/icons/Publish';
 import useChat from "../Components/useChat";
+import EditIcon from '@material-ui/icons/Edit';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import { useHistory } from 'react-router-dom';
 
 function ChatRoom() {
-    const { state } = useLocation();
+    const history = useHistory();
+
+
+
     const info = useContext(UserContext)
+    console.log('info: ', info);
     let current_page = useLocation().pathname.split("/").pop();
     console.log('current_page: ', current_page);
     const token = localStorage.getItem('session-token')
@@ -28,7 +35,10 @@ function ChatRoom() {
     const [newMessage, setNewMessage] = useState(""); // Message to be sent
     console.log('newMessage: ', newMessage);
 
-    
+    const [editing,setEditing] = useState(false)
+    const [editedQuestion, setEditedQuestion] = useState()
+    const [editedName, setEditedName] = useState()
+    const [answered, setAnswered] = useState()
 
 
     let current = new Date()
@@ -51,7 +61,7 @@ function ChatRoom() {
             method:`PUT`,
             url: `http://localhost:5000/chat/update/${current_page}`,
             headers: {"x-auth-token":`${token}`},
-            data: {data}
+            data: {message: data}
         }).then((res)=>{
             console.log(res)
         }).catch((error)=>{
@@ -73,7 +83,9 @@ function ChatRoom() {
             // setSavedMsg(res.data[0].Messages.reverse())
         })
 
-    },[state])
+    },[])
+
+
 
     
 
@@ -84,22 +96,71 @@ function ChatRoom() {
     left:45%;
   `;
 
-  document.getElementById('myInput').onkeypress = function(e){
-    if (!e) e = window.event;
-    var keyCode = e.code || e.key;
-    if (keyCode == 'Enter'){
-      handleSendMessage()
-      return false;
-    }
+//   document.getElementById('myInput').onkeypress = function(e){
+//     if (!e) e = window.event;
+//     var keyCode = e.code || e.key;
+//     if (keyCode == 'Enter'){
+//       handleSendMessage()
+//       return false;
+//     }
+//   }
+
+  const updateQuestion = () =>{
+    setEditing(false)
+    axios({
+        method:`PUT`,
+        url: `http://localhost:5000/chat/update/${current_page}`,
+        headers: {"x-auth-token":`${token}`},
+        data: {Question: editedQuestion, Title:editedName}
+    }).then((res)=>{
+        axios({
+            method:'GET',
+            url: `http://localhost:5000/chat/get/Title/${editedName}`,
+            headers: {"x-auth-token":`${token}`}
+        }).then((res)=>{
+            setRoom(res.data[0]);
+            history.push({
+                pathname: `/Chat/${editedName}`,
+                state: {room: res.data[0]}
+            })
+
+        })
+    }).catch((error)=>{
+        console.log("error", error)
+    })
+      
   }
+
+
   
 
     return (room !== null?
         <div className="chat-room-section">
             <div className="chat-room-holder">
                 <div className="question">
-                    <p id="title">{room.Title}</p>
-                    <p id="question">{room.Question}</p>
+                    {editing?(
+                        <>
+                            <input type="input" className="input_field" onChange={(event)=>setEditedName(event.target.value)} required id="name" placeholder="Room Name" />
+                            <input type="input"  className="input_field" id="Q" placeholder="Room Question" onChange={(event)=>setEditedQuestion(event.target.value)} required/>
+                            {room.CreatedById === info.id?(
+                                <>
+                                    <div className="edit" onClick={()=>setEditing(true)}><EditIcon/></div>
+                                    <div className="answered" onClick={updateQuestion}><PublishIcon/></div>
+                                </>
+                            ):null}
+                        </>
+                    ):(
+                        <>
+                            <p id="title">{room.Title}</p>
+                            <p id="question">{room.Question}</p>
+                            {room.CreatedById === info.id?(
+                                <>
+                                    <div className="edit" onClick={()=>setEditing(true)}><EditIcon/></div>
+                                    <div className="answered" onClick={()=>setAnswered(!answered)}><CheckCircleIcon/></div>
+                                </>
+                            ):null}
+                        </>
+                    )}
                 </div>
                 <div className="messaging">
                     

@@ -52,8 +52,7 @@ function CreateRoom() {
                     }else{
                         setRoomExists(false)
                         history.push({
-                            pathname: `/Chat/${roomName}`,
-                            state: {room: data}
+                            pathname: `/Chat/${roomName}`
                         })
                     }
                     

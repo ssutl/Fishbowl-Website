@@ -722,6 +722,70 @@
           font-size: 22px;
           // opacity: 0.5;
         }
+
+        .edit {
+          position: absolute;
+          left: 64%;
+          top: 11%;
+          height: 40px;
+          width: 40px;
+          border-radius: 100%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $highlight;
+          transition: background 0.2s ease-in;
+          cursor: pointer;
+        }
+
+        .answered {
+          position: absolute;
+          left: 64%;
+          top: 18%;
+          height: 40px;
+          width: 40px;
+          border-radius: 100%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $highlight;
+          transition: background 0.2s ease-in;
+          cursor: pointer;
+        }
+
+        .answered:hover {
+          color: black;
+          background-color: greenyellow;
+        }
+
+        .edit:hover {
+          background-color: $highlight;
+          color: white;
+        }
+
+        .input_field {
+          margin-left: 40px;
+          color: white;
+          font-size: 18px;
+          width: 350px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          border-bottom: 2px solid white;
+        }
+
+        .input_label {
+          width: 100px;
+          height: 40px;
+          background-color: aqua;
+        }
+
+        #Q {
+          margin-top: 25px;
+        }
       }
 
       .messaging {
@@ -754,6 +818,12 @@
               width: 45px;
               border-radius: 100%;
               overflow: hidden;
+
+              img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+              }
             }
 
             .userName {
