@@ -14,8 +14,11 @@ app.use(cors()) //Cors allows app to accept requests from outside sources
 
 
 //Implementing Socket io
-const server = require("http").createServer(app);
-const io = require("socket.io")(server, {
+const SocketIO = require('socket.io');
+
+const server = app.listen(PORT);
+
+const io = SocketIO(server, {
     cors: {
       origin: "*",
     },
@@ -64,13 +67,9 @@ connection.once('open', () => {
 })
 
 //Setting express app to serve data locally
-server.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
-});
 
-app.listen(PORT, ()=>{
-    console.log(`Successfully served on port: ${PORT}.`);
-})
+
+
 
 
 
