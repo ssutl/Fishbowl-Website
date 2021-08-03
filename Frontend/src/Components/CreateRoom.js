@@ -37,7 +37,8 @@ function CreateRoom() {
                         },
                         Deleted: false,
                         Title:roomName,
-                        Question: roomQuestion
+                        Question: roomQuestion,
+                        Answered: false
                 }
 
                 axios({
@@ -52,8 +53,7 @@ function CreateRoom() {
                     }else{
                         setRoomExists(false)
                         history.push({
-                            pathname: `/Chat/${roomName}`,
-                            state: {room: data}
+                            pathname: `/Chat/${roomName}`
                         })
                     }
                     

@@ -1,16 +1,24 @@
 import React, {useState, useEffect, useContext} from 'react'
 import '../Styling/ChatRoom.css'
-import { useLocation } from 'react-router-dom';
+import { Redirect, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import BarLoader from "react-spinners/BarLoader";
 import { UserContext } from "../Context/CurrentUser";
 import { css } from "@emotion/react";
 import PublishIcon from '@material-ui/icons/Publish';
 import useChat from "../Components/useChat";
+import EditIcon from '@material-ui/icons/Edit';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import { useHistory } from 'react-router-dom';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
 function ChatRoom() {
-    const { state } = useLocation();
+    const history = useHistory();
+
+
+
     const info = useContext(UserContext)
+    console.log('info: ', info);
     let current_page = useLocation().pathname.split("/").pop();
     console.log('current_page: ', current_page);
     const token = localStorage.getItem('session-token')
@@ -28,7 +36,10 @@ function ChatRoom() {
     const [newMessage, setNewMessage] = useState(""); // Message to be sent
     console.log('newMessage: ', newMessage);
 
-    
+    const [editing,setEditing] = useState(false)
+    const [editedQuestion, setEditedQuestion] = useState()
+    const [editedName, setEditedName] = useState()
+    const [answered, setAnswered] = useState()
 
 
     let current = new Date()
@@ -38,6 +49,7 @@ function ChatRoom() {
       };
     
       const handleSendMessage = () => {
+          console.log("passed to back name",info.name)
           
           const data = {
               sentBy: info.name,
@@ -51,7 +63,7 @@ function ChatRoom() {
             method:`PUT`,
             url: `http://localhost:5000/chat/update/${current_page}`,
             headers: {"x-auth-token":`${token}`},
-            data: {data}
+            data: {message: data}
         }).then((res)=>{
             console.log(res)
         }).catch((error)=>{
@@ -70,10 +82,17 @@ function ChatRoom() {
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setRoom(res.data[0]);
+            setAnswered(res.data[0].Answered)
             // setSavedMsg(res.data[0].Messages.reverse())
         })
 
-    },[state])
+    },[])
+
+    const updateRoom = () =>{
+        
+    }
+
+
 
     
 
@@ -84,12 +103,96 @@ function ChatRoom() {
     left:45%;
   `;
 
+//   document.getElementById('myInput').onkeypress = function(e){
+//     if (!e) e = window.event;
+//     var keyCode = e.code || e.key;
+//     if (keyCode == 'Enter'){
+//       handleSendMessage()
+//       return false;
+//     }
+//   }
+
+
+  const updateQuestion = () =>{
+    setEditing(false)
+    axios({
+        method:`PUT`,
+        url: `http://localhost:5000/chat/update/${current_page}`,
+        headers: {"x-auth-token":`${token}`},
+        data: {Question: editedQuestion, Title:editedName}
+    }).then((res)=>{
+        redirect()
+    }).catch((error)=>{
+        console.log("error", error)
+    })
+      
+  }
+
+  const redirect = () =>{
+    axios({
+        method:'GET',
+        url: `http://localhost:5000/chat/get/Title/${editedName}`,
+        headers: {"x-auth-token":`${token}`}
+    }).then((res)=>{
+        setRoom(res.data[0]);
+        history.push({
+            pathname: `/Chat/${editedName}`,
+            state: {room: res.data[0]}
+        })
+
+    })
+
+  }
+
+  useEffect(()=>{
+    axios({
+        method:'PUT',
+        url: `http://localhost:5000/chat/update/${current_page}`,
+        headers: {"x-auth-token":`${token}`},
+        data: {Answered: answered}
+    }).then((res)=>{
+        console.log('res: ', res);
+
+    })
+
+    },[answered])
+
+
+  
+
     return (room !== null?
         <div className="chat-room-section">
             <div className="chat-room-holder">
                 <div className="question">
-                    <p id="title">{room.Title}</p>
-                    <p id="question">{room.Question}</p>
+                    {editing?(
+                        <>
+                            <input type="input" className="input_field" onChange={(event)=>setEditedName(event.target.value)} required id="name" placeholder="Room Name" />
+                            <input type="input"  className="input_field" id="Q" placeholder="Room Question" onChange={(event)=>setEditedQuestion(event.target.value)} required/>
+                            {room.CreatedById === info.id?(
+                                <>
+                                    <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
+                                    <div className="secondBTN" onClick={updateQuestion}><PublishIcon/></div>
+                                </>
+                            ):null}
+                        </>
+                    ):(
+                        <>
+                            <p id="title">{room.Title}</p>
+                            <p id="question">{room.Question}</p>
+                            {answered?(
+                                <div className="Ans">
+                                    <CheckCircleIcon style={{ fontSize: 30 }} id="completeIcon"/>
+                                    <h3>Answered</h3>
+                                </div>
+                            ):null}
+                            {room.CreatedById === info.id?(
+                                <>
+                                    <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
+                                    <div className={answered?"secondBTN answered":"secondBTN"} onClick={()=>setAnswered(!answered)}><CheckCircleIcon/></div>
+                                </>
+                            ):null}
+                        </>
+                    )}
                 </div>
                 <div className="messaging">
                     
@@ -126,7 +229,7 @@ function ChatRoom() {
 
                 </div>
                 <div className="chat-bar">
-                    <input type="text" className="input" placeholder="Respond to question" onChange={handleNewMessageChange}></input>
+                    <input type="text" className="input" id="myInput" placeholder="Respond to question" onChange={handleNewMessageChange}></input>
                     <div className="send" onClick={handleSendMessage}><p>Send</p><PublishIcon id="upload"/></div>
                 </div>
 

@@ -45,30 +45,20 @@ router.delete('/delete/:id',auth,(req, res) => {
 })
 
 router.put('/update/:id',auth, (req, res) => {
+    console.log('req: ', req);
     if(Object.keys(req.body).includes("following")){
         User.findByIdAndUpdate({_id: req.params.id},{ $addToSet: { following: req.body.following}})
-        .then(user => res.json('array updated'))
+        .then(user => res.json('user followed'))
+        .catch(err => res.status(400).json('Error! ' + err))
+    }else if(Object.keys(req.body).includes("unfollowing")){
+        User.findByIdAndUpdate({_id: req.params.id},{ $pull: { following: req.body.unfollowing}})
+        .then(user => res.json('user unfollowed'))
         .catch(err => res.status(400).json('Error! ' + err))
     }else{
         User.findByIdAndUpdate(req.params.id, req.body)
         .then(user => res.json('Success! User updated.'))
         .catch(err => res.status(400).json('Error! ' + err))
     }
-
-
-    /*
-    
-     //use this (or similar) to see which fields are being updated
-
-    then have a condition that checks for the "following" - push incoming username to array in the DB
-
-    else update the other fields like below
-    
-    
-    */
-
-    
-
 })
 
 

@@ -24,7 +24,7 @@ function SpecificUserPage() {
             url: `http://localhost:5000/chat/get/${state.user._id}`,
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
-            setUsersRooms(res.data)
+            setUsersRooms(res.data.reverse())
         })
 
         axios({
@@ -41,30 +41,34 @@ function SpecificUserPage() {
 
     },[state])
 
-    const handleFollow = () =>{
 
-        // axios({
-        //     method:'PUT',
-        //     url: `http://localhost:5000/users/update/${info.id}`,
-        //     headers: {"x-auth-token":`${token}`},
-        //     data: {following: state.user.username}
-        // }).then((res)=>{
-        //     console.log(res)
-        // })
 
-        // axios({
-        //     method:'GET',
-        //     url: `http://localhost:5000/users/get/${info.name}`,
-        //     headers: {"x-auth-token":`${token}`}
-        // }).then((res)=>{
-        //     if(res.data[0].following.includes(state.user.username)){
-        //         setFollowing(true)
-        //     }else{
-        //         setFollowing(false)
-        //     }
-        // })
+    useEffect(()=>{
 
-    }
+        console.log("Following Status", following)
+        if(following){
+            axios({
+                method:'PUT',
+                url: `http://localhost:5000/users/update/${info.id}`,
+                headers: {"x-auth-token":`${token}`},
+                data: {following: state.user.username}
+            }).then((res)=>{
+                console.log(res)
+            })
+        }else{
+            axios({
+                method:'PUT',
+                url: `http://localhost:5000/users/update/${info.id}`,
+                headers: {"x-auth-token":`${token}`},
+                data: {unfollowing: state.user.username}
+            }).then((res)=>{
+                console.log(res)
+            })
+        }
+        
+
+    },[following])
+
         
 
 
@@ -78,14 +82,14 @@ function SpecificUserPage() {
                         <img src={state.user.image} alt=""/>
                     </div>
                     <div className="follow-section">
-                        <div className={following?"following-BTN":"follow-BTN"} onClick={handleFollow}>
+                        <div className={following?"following-BTN":"follow-BTN"} onClick={()=>setFollowing(!following)}>
                             <PersonAddIcon id=""/>
-                            <p>Follow</p>
+                            {following?<p>Following</p>:<p>Follow</p>}
                         </div>
                     </div>
                     <div className="specificFeedHolder">
                         <div className="scrollUser">
-                            {usersRooms === null? <h1>No Current Rooms</h1>: usersRooms.reverse().map((room, index)=>{
+                            {usersRooms === null? <h1>No Current Rooms</h1>: usersRooms.map((room, index)=>{
                                         return(
                                             <Link to={{pathname:`/Chat/${room.Title}`, state:{room}}} className="link1" key={index}>
                                                 <div className="usersRooms" key={index}>

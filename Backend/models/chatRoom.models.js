@@ -10,7 +10,8 @@ const chatSchema = new Schema({ //Creating model
     Deleted: {type:Boolean},
     Title: {type:String},
     Question:{type:String},
-    Messages:{type:Array}
+    Messages:{type:Array},
+    Answered:{type:Boolean}
 })
 
 const Chat = mongoose.model('Chat', chatSchema) //Exporting model for use elsewhere
