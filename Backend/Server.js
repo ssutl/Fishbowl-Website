@@ -13,6 +13,35 @@ app.use(express.json()) //Telling express app that it should expect to recieve d
 app.use(cors()) //Cors allows app to accept requests from outside sources
 
 
+//Implementing Socket io
+const server = require("http").createServer(app);
+const io = require("socket.io")(server, {
+    cors: {
+      origin: "*",
+    },
+  });
+
+
+  const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
+
+  io.on("connection", (socket) => {
+    
+    // Join a conversation
+    const { roomId } = socket.handshake.query;
+    socket.join(roomId);
+  
+    // Listen for new messages
+    socket.on(NEW_CHAT_MESSAGE_EVENT, (data) => {
+      io.in(roomId).emit(NEW_CHAT_MESSAGE_EVENT, data);
+    });
+  
+    // Leave the room if the user closes the socket
+    socket.on("disconnect", () => {
+      socket.leave(roomId);
+    });
+  });
+
+
 //Connecting DB with express app
 const source = process.env.ATLAS_CONNECTION //Using .env connection
 mongoose.connect(source, { //Mongoose.connect opens a connection between express app and mongo DB //URI is the our database to access
@@ -35,10 +64,16 @@ connection.once('open', () => {
 })
 
 //Setting express app to serve data locally
+server.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`);
+});
 
 app.listen(PORT, ()=>{
     console.log(`Successfully served on port: ${PORT}.`);
 })
+
+
+
 
 
 
