@@ -84,12 +84,15 @@ function ChatRoom() {
     left:45%;
   `;
 
-  const node = document.getElementsByClassName("input")[0];
-    node.addEventListener("keyup", function(event) {
-        if (event.key === "Enter") {
-            handleSendMessage()
-        }
-    });
+  document.getElementById('myInput').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.code || e.key;
+    if (keyCode == 'Enter'){
+      handleSendMessage()
+      return false;
+    }
+  }
+  
 
     return (room !== null?
         <div className="chat-room-section">
@@ -133,7 +136,7 @@ function ChatRoom() {
 
                 </div>
                 <div className="chat-bar">
-                    <input type="text" className="input" placeholder="Respond to question" onChange={handleNewMessageChange}></input>
+                    <input type="text" className="input" id="myInput" placeholder="Respond to question" onChange={handleNewMessageChange}></input>
                     <div className="send" onClick={handleSendMessage}><p>Send</p><PublishIcon id="upload"/></div>
                 </div>
 
