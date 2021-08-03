@@ -113,7 +113,8 @@ function ChatRoom() {
                             <div className="info">
                                 <div className="circle">
                                     <img src={info.image}/>
-                                </div>   
+                                </div>
+                                <div className="userName"><p>{info.name}</p></div> 
                                 <div className="date"><p>Date: {current.getDate() + "-" + (current.getMonth()+1) + "-" + current.getFullYear()} </p></div>
                                 <div className="time"><p>Time: {current.getHours() + ":" + current.getMinutes()}</p></div>
                             </div>    
