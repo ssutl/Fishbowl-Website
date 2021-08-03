@@ -84,6 +84,13 @@ function ChatRoom() {
     left:45%;
   `;
 
+  const node = document.getElementsByClassName("input")[0];
+    node.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            handleSendMessage()
+        }
+    });
+
     return (room !== null?
         <div className="chat-room-section">
             <div className="chat-room-holder">
