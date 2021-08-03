@@ -47,7 +47,7 @@ router.get('/get/Title/:name',auth,(req,res)=>{
 router.put('/update/:name',auth, (req, res) => {
     console.log('content sent: ', req.body);
     if(Object.keys(req.body).includes("message")){
-        ChatRoom.findOneAndUpdate({  Title: req.params.name}, { $addToSet: { Messages: req.body.data}})
+        ChatRoom.findOneAndUpdate({  Title: req.params.name}, { $addToSet: { Messages: req.body.message}})
         .then(msg => res.json('Success! Message Added to array.'))
         .catch(err => res.status(400).json('Error! ' + err))
     }else{

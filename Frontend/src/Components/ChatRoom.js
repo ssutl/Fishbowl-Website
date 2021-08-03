@@ -49,6 +49,7 @@ function ChatRoom() {
       };
     
       const handleSendMessage = () => {
+          console.log("passed to back name",info.name)
           
           const data = {
               sentBy: info.name,
