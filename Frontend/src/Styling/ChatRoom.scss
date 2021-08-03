@@ -307,11 +307,6 @@
           color: black;
         }
 
-        .secondBTN:hover {
-          color: black;
-          background-color: greenyellow;
-        }
-
         .edit:hover {
           background-color: $highlight;
           color: white;
@@ -602,11 +597,6 @@
           color: black;
         }
 
-        .secondBTN:hover {
-          color: black;
-          background-color: greenyellow;
-        }
-
         .edit:hover {
           background-color: $highlight;
           color: white;
@@ -861,6 +851,25 @@
           // opacity: 0.5;
         }
 
+        .Ans {
+          position: absolute;
+          left: 60%;
+          top: 20%;
+          width: 170px;
+          display: flex;
+          align-items: center;
+          height: 50px;
+          font-size: 18px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+
+          #completeIcon {
+            margin-right: 10px;
+            color: greenyellow;
+          }
+          // background-color: aqua;
+        }
+
         .edit {
           position: absolute;
           left: 64%;
@@ -879,8 +888,8 @@
 
         .secondBTN {
           position: absolute;
-          left: 64%;
-          top: 19%;
+          left: 60%;
+          top: 12%;
           height: 45px;
           width: 45px;
           border-radius: 100%;
@@ -896,11 +905,6 @@
         .answered {
           background-color: greenyellow;
           color: black;
-        }
-
-        .secondBTN:hover {
-          color: black;
-          background-color: greenyellow;
         }
 
         .edit:hover {

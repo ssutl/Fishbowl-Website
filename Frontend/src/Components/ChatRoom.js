@@ -10,6 +10,7 @@ import useChat from "../Components/useChat";
 import EditIcon from '@material-ui/icons/Edit';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import { useHistory } from 'react-router-dom';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
 function ChatRoom() {
     const history = useHistory();
@@ -168,7 +169,7 @@ function ChatRoom() {
                             <input type="input"  className="input_field" id="Q" placeholder="Room Question" onChange={(event)=>setEditedQuestion(event.target.value)} required/>
                             {room.CreatedById === info.id?(
                                 <>
-                                    <div className="edit" onClick={()=>setEditing(true)}><EditIcon/></div>
+                                    <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
                                     <div className="secondBTN" onClick={updateQuestion}><PublishIcon/></div>
                                 </>
                             ):null}
@@ -177,9 +178,15 @@ function ChatRoom() {
                         <>
                             <p id="title">{room.Title}</p>
                             <p id="question">{room.Question}</p>
+                            {answered?(
+                                <div className="Ans">
+                                    <CheckCircleIcon style={{ fontSize: 30 }} id="completeIcon"/>
+                                    <h3>Answered</h3>
+                                </div>
+                            ):null}
                             {room.CreatedById === info.id?(
                                 <>
-                                    <div className="edit" onClick={()=>setEditing(true)}><EditIcon/></div>
+                                    <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
                                     <div className={answered?"secondBTN answered":"secondBTN"} onClick={()=>setAnswered(!answered)}><CheckCircleIcon/></div>
                                 </>
                             ):null}

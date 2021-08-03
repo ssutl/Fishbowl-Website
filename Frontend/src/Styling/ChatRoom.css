@@ -399,10 +399,6 @@
     background-color: greenyellow;
     color: black;
   }
-  .chat-room-section .chat-room-holder .question .secondBTN:hover {
-    color: black;
-    background-color: greenyellow;
-  }
   .chat-room-section .chat-room-holder .question .edit:hover {
     background-color: #0096ff;
     color: white;
@@ -745,10 +741,6 @@
     background-color: greenyellow;
     color: black;
   }
-  .chat-room-section .chat-room-holder .question .secondBTN:hover {
-    color: black;
-    background-color: greenyellow;
-  }
   .chat-room-section .chat-room-holder .question .edit:hover {
     background-color: #0096ff;
     color: white;
@@ -1043,6 +1035,26 @@
   .chat-room-section .chat-room-holder .question #question {
     font-size: 22px;
   }
+  .chat-room-section .chat-room-holder .question .Ans {
+    position: absolute;
+    left: 60%;
+    top: 20%;
+    width: 170px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50px;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .question .Ans #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
   .chat-room-section .chat-room-holder .question .edit {
     position: absolute;
     left: 64%;
@@ -1067,8 +1079,8 @@
   }
   .chat-room-section .chat-room-holder .question .secondBTN {
     position: absolute;
-    left: 64%;
-    top: 19%;
+    left: 60%;
+    top: 12%;
     height: 45px;
     width: 45px;
     border-radius: 100%;
@@ -1090,10 +1102,6 @@
   .chat-room-section .chat-room-holder .question .answered {
     background-color: greenyellow;
     color: black;
-  }
-  .chat-room-section .chat-room-holder .question .secondBTN:hover {
-    color: black;
-    background-color: greenyellow;
   }
   .chat-room-section .chat-room-holder .question .edit:hover {
     background-color: #0096ff;
