@@ -37,7 +37,8 @@ function CreateRoom() {
                         },
                         Deleted: false,
                         Title:roomName,
-                        Question: roomQuestion
+                        Question: roomQuestion,
+                        Answered: false
                 }
 
                 axios({

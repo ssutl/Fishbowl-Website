@@ -80,10 +80,15 @@ function ChatRoom() {
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setRoom(res.data[0]);
+            setAnswered(res.data[0].Answered)
             // setSavedMsg(res.data[0].Messages.reverse())
         })
 
     },[])
+
+    const updateRoom = () =>{
+        
+    }
 
 
 
@@ -105,6 +110,7 @@ function ChatRoom() {
 //     }
 //   }
 
+
   const updateQuestion = () =>{
     setEditing(false)
     axios({
@@ -113,23 +119,41 @@ function ChatRoom() {
         headers: {"x-auth-token":`${token}`},
         data: {Question: editedQuestion, Title:editedName}
     }).then((res)=>{
-        axios({
-            method:'GET',
-            url: `http://localhost:5000/chat/get/Title/${editedName}`,
-            headers: {"x-auth-token":`${token}`}
-        }).then((res)=>{
-            setRoom(res.data[0]);
-            history.push({
-                pathname: `/Chat/${editedName}`,
-                state: {room: res.data[0]}
-            })
-
-        })
+        redirect()
     }).catch((error)=>{
         console.log("error", error)
     })
       
   }
+
+  const redirect = () =>{
+    axios({
+        method:'GET',
+        url: `http://localhost:5000/chat/get/Title/${editedName}`,
+        headers: {"x-auth-token":`${token}`}
+    }).then((res)=>{
+        setRoom(res.data[0]);
+        history.push({
+            pathname: `/Chat/${editedName}`,
+            state: {room: res.data[0]}
+        })
+
+    })
+
+  }
+
+  useEffect(()=>{
+    axios({
+        method:'PUT',
+        url: `http://localhost:5000/chat/update/${current_page}`,
+        headers: {"x-auth-token":`${token}`},
+        data: {Answered: answered}
+    }).then((res)=>{
+        console.log('res: ', res);
+
+    })
+
+    },[answered])
 
 
   
@@ -145,7 +169,7 @@ function ChatRoom() {
                             {room.CreatedById === info.id?(
                                 <>
                                     <div className="edit" onClick={()=>setEditing(true)}><EditIcon/></div>
-                                    <div className="answered" onClick={updateQuestion}><PublishIcon/></div>
+                                    <div className="secondBTN" onClick={updateQuestion}><PublishIcon/></div>
                                 </>
                             ):null}
                         </>
@@ -156,7 +180,7 @@ function ChatRoom() {
                             {room.CreatedById === info.id?(
                                 <>
                                     <div className="edit" onClick={()=>setEditing(true)}><EditIcon/></div>
-                                    <div className="answered" onClick={()=>setAnswered(!answered)}><CheckCircleIcon/></div>
+                                    <div className={answered?"secondBTN answered":"secondBTN"} onClick={()=>setAnswered(!answered)}><CheckCircleIcon/></div>
                                 </>
                             ):null}
                         </>
