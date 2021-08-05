@@ -21,7 +21,7 @@ function SpecificUserPage() {
     useEffect(()=>{
         axios({
             method:'GET',
-            url: `http://localhost:5000/chat/get/${state.user._id}`,
+            url: `https://chat-app-mongo-uk.herokuapp.com/chat/get/${state.user._id}`,
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setUsersRooms(res.data.reverse())
@@ -29,7 +29,7 @@ function SpecificUserPage() {
 
         axios({
             method:'GET',
-            url: `http://localhost:5000/users/get/${info.name}`,
+            url: `https://chat-app-mongo-uk.herokuapp.com/users/get/${info.name}`,
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             if(res.data[0].following.includes(state.user.username)){
@@ -49,7 +49,7 @@ function SpecificUserPage() {
         if(following){
             axios({
                 method:'PUT',
-                url: `http://localhost:5000/users/update/${info.id}`,
+                url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.id}`,
                 headers: {"x-auth-token":`${token}`},
                 data: {following: state.user.username}
             }).then((res)=>{
@@ -58,7 +58,7 @@ function SpecificUserPage() {
         }else{
             axios({
                 method:'PUT',
-                url: `http://localhost:5000/users/update/${info.id}`,
+                url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.id}`,
                 headers: {"x-auth-token":`${token}`},
                 data: {unfollowing: state.user.username}
             }).then((res)=>{

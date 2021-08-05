@@ -61,7 +61,7 @@ function ChatRoom() {
 
         axios({
             method:`PUT`,
-            url: `http://localhost:5000/chat/update/${current_page}`,
+            url: `https://chat-app-mongo-uk.herokuapp.com/chat/update/${current_page}`,
             headers: {"x-auth-token":`${token}`},
             data: {message: data}
         }).then((res)=>{
@@ -78,7 +78,7 @@ function ChatRoom() {
     useEffect(()=>{
         axios({
             method:'GET',
-            url: `http://localhost:5000/chat/get/Title/${current_page}`,
+            url: `https://chat-app-mongo-uk.herokuapp.com/chat/get/Title/${current_page}`,
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setRoom(res.data[0]);
@@ -117,7 +117,7 @@ function ChatRoom() {
     setEditing(false)
     axios({
         method:`PUT`,
-        url: `http://localhost:5000/chat/update/${current_page}`,
+        url: `https://chat-app-mongo-uk.herokuapp.com/chat/update/${current_page}`,
         headers: {"x-auth-token":`${token}`},
         data: {Question: editedQuestion, Title:editedName}
     }).then((res)=>{
@@ -131,7 +131,7 @@ function ChatRoom() {
   const redirect = () =>{
     axios({
         method:'GET',
-        url: `http://localhost:5000/chat/get/Title/${editedName}`,
+        url: `https://chat-app-mongo-uk.herokuapp.com/chat/get/Title/${editedName}`,
         headers: {"x-auth-token":`${token}`}
     }).then((res)=>{
         setRoom(res.data[0]);
@@ -147,7 +147,7 @@ function ChatRoom() {
   useEffect(()=>{
     axios({
         method:'PUT',
-        url: `http://localhost:5000/chat/update/${current_page}`,
+        url: `https://chat-app-mongo-uk.herokuapp.com/chat/update/${current_page}`,
         headers: {"x-auth-token":`${token}`},
         data: {Answered: answered}
     }).then((res)=>{

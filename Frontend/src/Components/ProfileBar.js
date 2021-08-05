@@ -18,7 +18,7 @@ function ProfileBar() {
 
         axios({ //On logout changing users status to offline
             method:`PUT`,
-            url: `http://localhost:5000/users/update/${info.id}`,
+            url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.id}`,
             headers: {"x-auth-token":`${token}`},
             data: {"online":false}
         }).then((response)=>{

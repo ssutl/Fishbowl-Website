@@ -36,7 +36,7 @@ function Login() {
         
         axios({ //Retrieving the user table to get the id of the current user
             method:"GET",
-            url: "http://localhost:5000/users/get",
+            url: "https://chat-app-mongo-uk.herokuapp.com/users/get",
             headers: {"x-auth-token":`${token}`}
         }).then((response)=>{
             // console.log('response from get request: ', response);
@@ -49,7 +49,7 @@ function Login() {
 
         axios({ //Creating users account & if user already has account it wont be created again
             method:"POST",
-            url: "http://localhost:5000/users/new",
+            url: "https://chat-app-mongo-uk.herokuapp.com/users/new",
             headers: {"x-auth-token":`${token}`},
             data: {username,email, image, online}
         }).then(()=>{
@@ -68,7 +68,7 @@ function Login() {
     if(logged){
         axios({ //Changin Status to online if user already existed
             method:`PUT`,
-            url: `http://localhost:5000/users/update/${id}`,
+            url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${id}`,
             headers: {"x-auth-token":`${token}`},
             data: {"online":true}
         }).then((response)=>{
