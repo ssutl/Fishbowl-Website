@@ -52,12 +52,15 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .chat-room-section .chat-room-holder .navbar .home #arrow {
-    font-weight: 800;
-  }
   .chat-room-section .chat-room-holder .navbar .home a {
     text-decoration: none;
     color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a #arrow {
+    font-weight: 800;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a h2 {
+    margin-bottom: 7px;
   }
   .chat-room-section .chat-room-holder .navbar .group {
     width: 45%;
@@ -207,12 +210,25 @@
     margin-right: 40px;
   }
   .chat-room-section .chat-room-holder .question #title {
-    font-size: 25px;
+    font-size: 22px;
     opacity: 0.5;
     margin-bottom: 10px;
   }
+  .chat-room-section .chat-room-holder .question #title span {
+    font-size: 18px;
+    margin-left: 10px;
+  }
   .chat-room-section .chat-room-holder .question #question {
-    font-size: 22px;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .chat-room-section .chat-room-holder .question #creation {
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.5;
+  }
+  .chat-room-section .chat-room-holder .question #creation:hover {
+    opacity: 1;
   }
   .chat-room-section .chat-room-holder .question .input_field {
     margin-left: 40px;

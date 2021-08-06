@@ -13,10 +13,10 @@ function Feed(input) {
     const info = useContext(UserContext)
     const token = localStorage.getItem('session-token')
     const [allRooms, setAllRooms] = useState(null)
-
     const [friendFeed,setFriendFeed] = useState(false)
-    
     const [feed,setFeed] = useState(true)
+
+    const [name,setName] = useState('')
 
     
 

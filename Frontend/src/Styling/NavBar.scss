@@ -19,7 +19,7 @@
     .logo {
       height: 10%;
       width: 100%;
-      background-color: orange;
+      // background-color: orange;
     }
 
     .people-holder {
@@ -111,7 +111,7 @@
     .logo {
       height: 10%;
       width: 100%;
-      background-color: orange;
+      // background-color: orange;
     }
 
     .people-holder {
@@ -201,8 +201,27 @@
 
     .logo {
       height: 10%;
-      width: 100%;
+      width: 70%;
       // background-color: orange;
+
+      a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        img {
+          height: 55px;
+          width: 55px;
+          // margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        h1 {
+          color: white;
+        }
+        // background-color: orange;
+      }
     }
 
     .people-holder {

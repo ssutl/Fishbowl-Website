@@ -38,13 +38,17 @@
           // background-color: purple;
           justify-content: space-between;
 
-          #arrow {
-            font-weight: 800;
-          }
-
           a {
             text-decoration: none;
             color: white;
+
+            #arrow {
+              font-weight: 800;
+            }
+
+            h2 {
+              margin-bottom: 7px;
+            }
           }
         }
 
@@ -163,14 +167,30 @@
           margin-right: 40px;
         }
         #title {
-          font-size: 25px;
+          font-size: 22px;
           opacity: 0.5;
           margin-bottom: 10px;
+
+          span {
+            font-size: 18px;
+            margin-left: 10px;
+          }
         }
 
         #question {
-          font-size: 22px;
+          font-size: 25px;
+          margin-bottom: 20px;
           // opacity: 0.5;
+        }
+
+        #creation {
+          cursor: pointer;
+          font-size: 15px;
+          opacity: 0.5;
+        }
+
+        #creation:hover {
+          opacity: 1;
         }
 
         .input_field {

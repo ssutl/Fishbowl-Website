@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react'
 import '../Styling/ChatRoom.css'
-import { Redirect, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import BarLoader from "react-spinners/BarLoader";
 import { UserContext } from "../Context/CurrentUser";
@@ -9,12 +9,15 @@ import PublishIcon from '@material-ui/icons/Publish';
 import EditIcon from '@material-ui/icons/Edit';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import { useHistory } from 'react-router-dom';
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+// import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import { Link } from "react-router-dom";
+import io from 'socket.io-client'
+
 
 
 function ChatRoom() {
+    let socket;
     const history = useHistory();
     const info = useContext(UserContext)
     let current_page = useLocation().pathname.split("/").pop();
@@ -24,6 +27,9 @@ function ChatRoom() {
     const [editedQuestion, setEditedQuestion] = useState()
     const [editedName, setEditedName] = useState()
     const [answered, setAnswered] = useState()
+    const [newMessage, setNewMessage] = useState()
+    
+    const ENDPOINT = 'https://chat-app-mongo-uk.herokuapp.com'
 
 
     
@@ -38,11 +44,29 @@ function ChatRoom() {
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setRoom(res.data[0]);
-            setAnswered(res.data[0].Answered)
-            // setSavedMsg(res.data[0].Messages.reverse())
+            setAnswered(res.data[0].Answered)   
         })
 
-    },[])
+        socket = io(ENDPOINT)
+        console.log(socket)
+    },[ENDPOINT, current_page])
+
+    const userPage = () =>{
+        axios({
+            method:"GET",
+            url: `https://chat-app-mongo-uk.herokuapp.com/users/get/${room.CreatedById}`,
+            headers: {"x-auth-token":`${token}`}
+        }).then((response)=>{
+            history.push({
+                pathname: `/People/${room.CreatedById}`,
+                state: {user: response.data[0]}
+            })
+        }).catch((error)=>{
+            console.log("error:", error)
+        })
+
+    }
+
 
     const updateQuestion = () =>{
         setEditing(false)
@@ -112,7 +136,7 @@ function ChatRoom() {
                         </Link>
                     </div>
                         
-                    <div className={room.CreatedById === info.id?"group":"group-without"}>
+                    <div className={room.CreatedById === info.name?"group":"group-without"}>
                         <div className="answered-block">
                                 {answered?(
                                     <>
@@ -123,7 +147,7 @@ function ChatRoom() {
                         </div> 
                         <div className="room-options">
                             {editing?(
-                                room.CreatedById === info.id?(
+                                room.CreatedById === info.name?(
                                         <>
                                             <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
                                             <div className="secondBTN" onClick={updateQuestion}><PublishIcon/></div>
@@ -131,7 +155,7 @@ function ChatRoom() {
                                 ):null
                             ):(
                                 <>
-                                    {room.CreatedById === info.id?(
+                                    {room.CreatedById === info.name?(
                                         <>
                                             <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
                                             <div className={answered?"secondBTN answered":"secondBTN"} onClick={()=>setAnswered(!answered)}><CheckCircleIcon/></div>
@@ -157,6 +181,7 @@ function ChatRoom() {
                         <>
                             <p id="title">{room.Title}</p>
                             <p id="question">{room.Question}</p>
+                            <p id="creation"onClick={userPage}>Created by <span>{room.CreatedById}</span></p>
                             
                         </>
                     )}
@@ -166,7 +191,7 @@ function ChatRoom() {
 
                 </div>
                 <div className="chat-bar">
-                    <input type="text" className="input" id="myInput" placeholder="Respond to question" onChange=""></input>
+                    <input type="text" className="input" id="myInput" placeholder="Respond to question" onChange={(event)=>setNewMessage(event.target.value)}></input>
                     <div className="send" onClick=""><p>Send</p><PublishIcon id="upload"/></div>
                 </div>
 

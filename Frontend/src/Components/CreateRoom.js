@@ -4,6 +4,8 @@ import '../Styling/CreateRoom.css'
 import { Link } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+
 
 function CreateRoom() {
     const history = useHistory();
@@ -16,10 +18,9 @@ function CreateRoom() {
         const handleSubmit = () => {
 
             if(roomName.trim().length){
-                console.log("name is valid")
 
                 const data = {
-                    CreatedById: info.id,
+                    CreatedById: info.name,
                         Tags:{
                             Math:Math,
                             English:English,
@@ -50,6 +51,7 @@ function CreateRoom() {
                 .then((res)=>{
                     if(res.data.msg === "Room name already exists"){
                         setRoomExists(true)
+                        document.querySelector('.input_field').value=""
                     }else{
                         setRoomExists(false)
                         history.push({
@@ -59,7 +61,8 @@ function CreateRoom() {
                     
                 })
                 .catch((error)=>{
-                    console.log("error", error)
+                    console.log('error: ', error);
+                    
                 })
 
             }else{
@@ -69,11 +72,8 @@ function CreateRoom() {
         }
 
     const [roomName, setRoomName] = useState("")
-    console.log('roomName: ', roomName);
     const [roomQuestion, setRoomQuestion] = useState("")
-    console.log('roomQuestion: ', roomQuestion);
     const [Math,setMath] = useState(false)
-    console.log('Math: ', Math);
     const [English,setEnglish] = useState(false)
     const [Geography,setGeography] = useState(false)
     const [FM,setFM] = useState(false)
@@ -91,10 +91,21 @@ function CreateRoom() {
         <div className="section">
             <div className="section-holder">
                 <div className="title">
-                    
+                    <div className="home">
+                        <Link to="/">
+                            <KeyboardBackspaceIcon id="arrow" style={{ fontSize: 40 }} />
+                        </Link>
+                        <Link to="/">
+                            <h2>Home</h2>
+                        </Link>
+                    </div>
                 </div>
                 <div className="inputs">
-                    <input type="input" className={roomExists?"input_field exists":"input_field"} onChange={(event)=>setRoomName(event.target.value)} required id="name" placeholder="Room Name" />
+                    
+                    <input type="input" className="input_field" onChange={(event)=>setRoomName(event.target.value)} required id="name" placeholder={roomExists?"Room Already Exists  - ( Max 30 )":"Room Name - ( Max 30 )"} maxlength="30"/>
+                    <div className="text-counter">
+                        {30-roomName.length}
+                    </div>
                     <input type="input"  className="input_field" id="question" placeholder="Room Question" onChange={(event)=> setRoomQuestion(event.target.value)} required/>
                 </div>
                 <div className="boxes">

@@ -21,7 +21,7 @@ function SpecificUserPage() {
     useEffect(()=>{
         axios({
             method:'GET',
-            url: `https://chat-app-mongo-uk.herokuapp.com/chat/get/${state.user._id}`,
+            url: `https://chat-app-mongo-uk.herokuapp.com/chat/get/${state.user.username}`,
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setUsersRooms(res.data.reverse())
@@ -45,11 +45,10 @@ function SpecificUserPage() {
 
     useEffect(()=>{
 
-        console.log("Following Status", following)
         if(following){
             axios({
                 method:'PUT',
-                url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.id}`,
+                url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.name}`,
                 headers: {"x-auth-token":`${token}`},
                 data: {following: state.user.username}
             }).then((res)=>{
@@ -58,11 +57,12 @@ function SpecificUserPage() {
         }else{
             axios({
                 method:'PUT',
-                url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.id}`,
+                url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.name}`,
                 headers: {"x-auth-token":`${token}`},
                 data: {unfollowing: state.user.username}
             }).then((res)=>{
-                console.log(res)
+                console.log('res: ', res);
+               
             })
         }
         

@@ -161,6 +161,8 @@
         -ms-flex-align: center;
             align-items: center;
     padding-left: 15px;
+    color: white;
+    opacity: 0.8;
   }
   .middle-holder .section1 .search-wrapper .searchBar {
     width: 100%;

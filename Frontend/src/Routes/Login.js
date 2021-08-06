@@ -17,11 +17,11 @@ function Login() {
     const [online, setOnline] = useState(false)
     const [logged, setLogged] = useState()
     const [id, setUserId] = useState()
+    // console.log('id: ', id);
     const [token, setToken] = useState()
 
 
     const responseSuccessGoogle = (response) =>{
-        console.log('response: ', response);
         setUserName(response.profileObj.name) //Using Google Response to set current User
         setEmail(response.profileObj.email)
         setImage(response.profileObj.imageUrl)
@@ -66,17 +66,6 @@ function Login() {
     }
 
     if(logged){
-        axios({ //Changin Status to online if user already existed
-            method:`PUT`,
-            url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${id}`,
-            headers: {"x-auth-token":`${token}`},
-            data: {"online":true}
-        }).then((response)=>{
-            console.log("online put request successful")
-        }).catch((error)=>{
-            console.log("error", error)
-        })
-
         return <App name={username} email={email} image={image} id={id}/>
     }else{
         return (

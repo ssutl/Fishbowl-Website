@@ -27,7 +27,6 @@
   .nav-holder .logo {
     height: 10%;
     width: 100%;
-    background-color: orange;
   }
   .nav-holder .people-holder {
     width: 80%;
@@ -132,7 +131,6 @@
   .nav-holder .logo {
     height: 10%;
     width: 100%;
-    background-color: orange;
   }
   .nav-holder .people-holder {
     width: 80%;
@@ -236,7 +234,25 @@
   }
   .nav-holder .logo {
     height: 10%;
-    width: 100%;
+    width: 70%;
+  }
+  .nav-holder .logo a {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+  }
+  .nav-holder .logo a img {
+    height: 55px;
+    width: 55px;
+    margin-right: 20px;
+  }
+  .nav-holder .logo a h1 {
+    color: white;
   }
   .nav-holder .people-holder {
     width: 80%;

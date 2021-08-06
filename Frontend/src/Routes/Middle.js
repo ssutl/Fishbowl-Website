@@ -13,6 +13,9 @@ import { useHistory } from 'react-router-dom';
 function Middle() {
     const history = useHistory();
     const [search,setSearch] = useState("")
+
+
+
     return (
 
             <div className="middle-holder">
@@ -20,6 +23,9 @@ function Middle() {
                     <div className="search-wrapper">
                         <SearchIcon/>
                         <input className="searchBar" type="text" placeholder="Search for rooms, users or subjects" onChange={(event)=>{setSearch(event.target.value); history.push('/'); }}></input>
+                    </div>
+                    <div className="dropdown">
+
                     </div>
                 </div>
                 <Switch>

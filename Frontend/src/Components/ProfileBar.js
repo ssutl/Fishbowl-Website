@@ -1,5 +1,6 @@
 import React, { useContext, useState} from "react";
 import '../Styling/ProfileBar.css'
+import { useLocation } from 'react-router-dom';
 import { GoogleLogout } from 'react-google-login';
 import { UserContext } from "../Context/CurrentUser";
 import axios from 'axios';
@@ -8,6 +9,8 @@ import { useHistory } from 'react-router-dom';
 
 function ProfileBar() {
     const history = useHistory();
+    let current_page = useLocation().pathname.split("/").pop();
+    let current = useLocation().pathname.split("/").slice(-2)[0];
       const info = useContext(UserContext)
       const token = localStorage.getItem('session-token')
 
@@ -22,10 +25,10 @@ function ProfileBar() {
             headers: {"x-auth-token":`${token}`},
             data: {"online":false}
         }).then((response)=>{
-            console.log(response)
             history.go(0)
         }).catch((error)=>{
-            console.log("error", error)
+            console.log('error: ', error);
+            
         })
       }
       
@@ -53,6 +56,13 @@ function ProfileBar() {
                     >
                     </GoogleLogout>
                 </div>
+            </div>
+            <div className="noti">
+                <div className="dashboard">
+                    <p>Dashboard Panel</p>
+                </div>
+                {current_page ===""?<h1>dashboard</h1>:current === "Chat"?<h1>Chat Room</h1>:null}
+
             </div>
         </div>
     )

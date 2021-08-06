@@ -50,7 +50,11 @@ const io = SocketIO(server, { //Telling sokcets to listen to server
   
 
   io.on("connection", (socket) => {
-    
+    console.log("We have a new connection!!!!")
+
+    socket.on('disconnect', () =>{
+      console.log('User has left')
+    })
   });
 
 

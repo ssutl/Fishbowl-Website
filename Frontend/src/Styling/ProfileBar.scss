@@ -21,16 +21,17 @@
     display: flex;
     width: 22%;
     height: 100vh;
-    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    // position: fixed;
+    flex-direction: column;
+    justify-content: space-between; // position: fixed;
 
     .profile {
       margin-top: 10vh;
       background-color: $secondary-background;
       border-radius: 5px;
-      width: 90%;
-      height: 250px;
+      width: 85%;
+      height: 25%;
       display: flex;
       flex-direction: column;
 
@@ -88,6 +89,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+    }
+    .noti {
+      background-color: $secondary-background;
+      border-radius: 5px;
+      width: 85%;
+      height: 55%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5vh;
+
+      .dashboard {
+        height: 60px;
+        // background-color: aqua;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+        font-family: "Red Hat Text", sans-serif;
+        font-size: 20px;
       }
     }
   }

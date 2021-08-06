@@ -19,7 +19,7 @@ function NavBar() {
         }).then((response)=>{
             setUsers(response.data)
         }).catch((error)=>{
-            console.log("error:", error)
+                error.status(404)
         })
     },[])
     
@@ -28,7 +28,13 @@ function NavBar() {
     return (
         <div className="nav-holder">
             <div className="logo">
-                {/* <h1>Season</h1> */}
+                <Link to="/">
+                    <img src="fish-bowl.png"/>
+                    <h1>Fishbowl</h1>
+                </Link>
+            </div>
+            <div className="home-btn">
+
             </div>
             <div className="people-holder">
                 <div className="upper">

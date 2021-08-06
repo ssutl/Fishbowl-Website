@@ -30,8 +30,8 @@ router.get('/get', auth, (req,res)=>{
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
-router.get('/get/:id',auth,(req,res)=>{
-    ChatRoom.find({  CreatedById: req.params.id})
+router.get('/get/:name',auth,(req,res)=>{
+    ChatRoom.find({  CreatedByName: req.params.name})
         .then(SpecificRoom => res.json(SpecificRoom))
         .catch(err => res.status(400).json('Error! ' + err))
 })

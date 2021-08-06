@@ -38,24 +38,24 @@ router.get('/get/:name',auth, (req,res)=>{
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
-router.delete('/delete/:id',auth,(req, res) => {
-    User.deleteOne({ _id: req.params.id })
+router.delete('/delete/:name',auth,(req, res) => {
+    User.deleteOne({ username: req.params.name })
         .then(success => res.json('Success! User deleted.'))
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
-router.put('/update/:id',auth, (req, res) => {
-    console.log('req: ', req);
+router.put('/update/:name',auth, (req, res) => {
+    console.log("LOOK AT ME BOI", req.params)
     if(Object.keys(req.body).includes("following")){
-        User.findByIdAndUpdate({_id: req.params.id},{ $addToSet: { following: req.body.following}})
+        User.findOneAndUpdate({username: req.params.name},{ $addToSet: { following: req.body.following}})
         .then(user => res.json('user followed'))
         .catch(err => res.status(400).json('Error! ' + err))
     }else if(Object.keys(req.body).includes("unfollowing")){
-        User.findByIdAndUpdate({_id: req.params.id},{ $pull: { following: req.body.unfollowing}})
+        User.findOneAndUpdate({username: req.params.name},{ $pull: { following: req.body.unfollowing}})
         .then(user => res.json('user unfollowed'))
         .catch(err => res.status(400).json('Error! ' + err))
     }else{
-        User.findByIdAndUpdate(req.params.id, req.body)
+        User.findOneAndUpdate({username: req.params.name}, req.body)
         .then(user => res.json('Success! User updated.'))
         .catch(err => res.status(400).json('Error! ' + err))
     }

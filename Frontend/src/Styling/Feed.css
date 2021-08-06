@@ -43,7 +43,7 @@
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
     font-family: "Red Hat Text", sans-serif;
   }
   .feed-section .top .holder .feed-BTN p:hover {
@@ -70,7 +70,7 @@
         -ms-flex-align: center;
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
   }
   .feed-section .bottom-section {
     height: 77vh;
