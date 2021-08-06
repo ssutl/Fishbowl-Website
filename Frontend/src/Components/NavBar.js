@@ -5,6 +5,8 @@ import { UserContext } from "../Context/CurrentUser";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+    
+
     const info = useContext(UserContext)
     const token = localStorage.getItem('session-token')
     const [users, setUsers] = useState("")
