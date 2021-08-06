@@ -11,6 +11,9 @@ import EditIcon from '@material-ui/icons/Edit';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import { useHistory } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+import { Link } from "react-router-dom";
+
 
 function ChatRoom() {
     const history = useHistory();
@@ -158,39 +161,68 @@ function ChatRoom() {
     },[answered])
 
 
+
   
 
     return (room !== null?
         <div className="chat-room-section">
             <div className="chat-room-holder">
+                <div className="navbar">
+                    <div className="home">
+                        <Link to="/">
+                            <KeyboardBackspaceIcon id="arrow" style={{ fontSize: 40 }} />
+                        </Link>
+                        <Link to="/">
+                            <h2>Home</h2>
+                        </Link>
+                    </div>
+                        
+                    <div className={room.CreatedById === info.id?"group":"group-without"}>
+                        <div className="answered-block">
+                                {answered?(
+                                    <>
+                                        <CheckCircleIcon style={{ fontSize: 30 }} id="completeIcon"/>
+                                        <h3>Answered</h3>
+                                    </>
+                                ):null}
+                        </div> 
+                        <div className="room-options">
+                            {editing?(
+                                room.CreatedById === info.id?(
+                                        <>
+                                            <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
+                                            <div className="secondBTN" onClick={updateQuestion}><PublishIcon/></div>
+                                        </>
+                                ):null
+                            ):(
+                                <>
+                                    {room.CreatedById === info.id?(
+                                        <>
+                                            <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
+                                            <div className={answered?"secondBTN answered":"secondBTN"} onClick={()=>setAnswered(!answered)}><CheckCircleIcon/></div>
+                                        </>
+                                    ):null}
+                                </>
+                            )}
+                        </div> 
+        
+                    </div>
+                            
+                    
+                    
+                </div>
+
                 <div className="question">
                     {editing?(
                         <>
-                            <input type="input" className="input_field" onChange={(event)=>setEditedName(event.target.value)} required id="name" placeholder="Room Name" />
-                            <input type="input"  className="input_field" id="Q" placeholder="Room Question" onChange={(event)=>setEditedQuestion(event.target.value)} required/>
-                            {room.CreatedById === info.id?(
-                                <>
-                                    <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
-                                    <div className="secondBTN" onClick={updateQuestion}><PublishIcon/></div>
-                                </>
-                            ):null}
+                            <input type="input" className="input_field" onChange={(event)=>setEditedName(event.target.value)} required id="name" placeholder={room.Title} />
+                            <input type="input"  className="input_field" id="Q" placeholder={room.Question} onChange={(event)=>setEditedQuestion(event.target.value)} required/>
                         </>
                     ):(
                         <>
                             <p id="title">{room.Title}</p>
                             <p id="question">{room.Question}</p>
-                            {answered?(
-                                <div className="Ans">
-                                    <CheckCircleIcon style={{ fontSize: 30 }} id="completeIcon"/>
-                                    <h3>Answered</h3>
-                                </div>
-                            ):null}
-                            {room.CreatedById === info.id?(
-                                <>
-                                    <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
-                                    <div className={answered?"secondBTN answered":"secondBTN"} onClick={()=>setAnswered(!answered)}><CheckCircleIcon/></div>
-                                </>
-                            ):null}
+                            
                         </>
                     )}
                 </div>

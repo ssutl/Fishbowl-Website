@@ -40,7 +40,7 @@ function Feed(input) {
 
     return (
         <div className="feed-section">
-                <div className="top-section">
+                <div className="top">
                     <div className="holder">
                         <div className="feed-BTN">
                             <p onClick={()=>{
