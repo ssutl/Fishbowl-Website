@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect} from "react";
 import { useLocation } from "react-router-dom";
 import { UserContext } from "../Context/CurrentUser";
+import { ReactComponent as YourSvg } from '../svg/Void.svg';
 
 import "../Styling/specificUserPage.css"
 import { Link } from "react-router-dom";
@@ -8,17 +9,22 @@ import axios from 'axios';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 function SpecificUserPage() {
-    const { state } = useLocation();
-    const info = useContext(UserContext)
+    const { state } = useLocation(); //Next users business
     console.log('state: ', state);
+    const info = useContext(UserContext) //Current Logged in users business
+    console.log('info: ', info);
+
+    
     const token = localStorage.getItem('session-token')
 
 
-    const[usersRooms,setUsersRooms] = useState(null)
+    const[usersRooms,setUsersRooms] = useState([])
+    console.log('usersRooms: ', usersRooms);
     const [following,setFollowing] = useState()
+    console.log('following: ', following);
 
 
-    useEffect(()=>{
+    useEffect(()=>{ //On page load get the rooms of the user clicked on
         axios({
             method:'GET',
             url: `https://chat-app-mongo-uk.herokuapp.com/chat/get/${state.user.username}`,
@@ -27,7 +33,7 @@ function SpecificUserPage() {
             setUsersRooms(res.data.reverse())
         })
 
-        axios({
+        axios({ //Checking if logged in user is following the user which has been clicked
             method:'GET',
             url: `https://chat-app-mongo-uk.herokuapp.com/users/get/${info.name}`,
             headers: {"x-auth-token":`${token}`}
@@ -41,11 +47,16 @@ function SpecificUserPage() {
 
     },[state])
 
+    
 
 
-    useEffect(()=>{
+    const handleInteract = () =>{
+        setFollowing(!following)
+        requests()
+    }
 
-        if(following){
+    const requests = () =>{
+        if(!following){
             axios({
                 method:'PUT',
                 url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.name}`,
@@ -54,7 +65,7 @@ function SpecificUserPage() {
             }).then((res)=>{
                 console.log(res)
             })
-        }else{
+        }else if(following){
             axios({
                 method:'PUT',
                 url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.name}`,
@@ -65,9 +76,14 @@ function SpecificUserPage() {
                
             })
         }
+    }
+
+    let mypage = state.user.username === info.name;
+    console.log('mypage: ', mypage);
+
+        
         
 
-    },[following])
 
         
 
@@ -81,15 +97,29 @@ function SpecificUserPage() {
                     <div className="imageHolder">
                         <img src={state.user.image} alt=""/>
                     </div>
-                    <div className="follow-section">
-                        <div className={following?"following-BTN":"follow-BTN"} onClick={()=>setFollowing(!following)}>
-                            <PersonAddIcon id=""/>
-                            {following?<p>Following</p>:<p>Follow</p>}
+                    {mypage?usersRooms.length === 0?(
+                        <div className="follow-my-section"></div>
+                    ):(
+                        <div className="follow-my-section">
+                            <p>My Rooms</p>
                         </div>
-                    </div>
+                    ):(
+                        <div className="follow-section">
+                            <div className={following?"following-BTN":"follow-BTN"} onClick={handleInteract}>
+                                <PersonAddIcon id=""/>
+                                {following?<p>Following</p>:<p>Follow</p>}
+                            </div>
+                            <p>{usersRooms.length === 0? null: `${state.user.username}'s Room's`}</p>
+                        </div>
+                    )}
                     <div className="specificFeedHolder">
-                        <div className="scrollUser">
-                            {usersRooms === null? <h1>No Current Rooms</h1>: usersRooms.map((room, index)=>{
+                        <div className={usersRooms.length === 0?"svg":"scrollUser"}>
+                                {usersRooms.length === 0? (
+                                    <>
+                                        <div className="titlo"><h1>{mypage?`YOU HAVE NO ROOMS`:`${state.user.username.toUpperCase()} HAS NO ROOMS`}</h1></div>
+                                        <div className="svg"><YourSvg id="svg"/></div>
+                                    </>
+                                ): usersRooms.map((room, index)=>{
                                         return(
                                             <Link to={{pathname:`/Chat/${room.Title}`, state:{room}}} className="link1" key={index}>
                                                 <div className="usersRooms" key={index}>
@@ -107,7 +137,7 @@ function SpecificUserPage() {
                                                 </div>
                                             </Link>
                                         )
-                                    })}
+                                })}
                         </div>
                     </div>
             </div>

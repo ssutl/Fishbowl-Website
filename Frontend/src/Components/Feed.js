@@ -9,7 +9,7 @@ import BarLoader from "react-spinners/BarLoader";
 import { css } from "@emotion/react";
 
 function Feed(input) {
-    console.log('search: ', input.search);
+    // console.log('search: ', input.search);
     const info = useContext(UserContext)
     const token = localStorage.getItem('session-token')
     const [allRooms, setAllRooms] = useState(null)
@@ -17,6 +17,8 @@ function Feed(input) {
     const [feed,setFeed] = useState(true)
 
     const [name,setName] = useState('')
+
+
 
     
 

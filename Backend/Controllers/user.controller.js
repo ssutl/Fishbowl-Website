@@ -45,7 +45,6 @@ router.delete('/delete/:name',auth,(req, res) => {
 })
 
 router.put('/update/:name',auth, (req, res) => {
-    console.log("LOOK AT ME BOI", req.params)
     if(Object.keys(req.body).includes("following")){
         User.findOneAndUpdate({username: req.params.name},{ $addToSet: { following: req.body.following}})
         .then(user => res.json('user followed'))

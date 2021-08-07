@@ -54,11 +54,11 @@ function ChatRoom() {
     const userPage = () =>{
         axios({
             method:"GET",
-            url: `https://chat-app-mongo-uk.herokuapp.com/users/get/${room.CreatedById}`,
+            url: `https://chat-app-mongo-uk.herokuapp.com/users/get/${room.CreatedByName}`,
             headers: {"x-auth-token":`${token}`}
         }).then((response)=>{
             history.push({
-                pathname: `/People/${room.CreatedById}`,
+                pathname: `/People/${room.CreatedByName}`,
                 state: {user: response.data[0]}
             })
         }).catch((error)=>{
@@ -99,18 +99,7 @@ function ChatRoom() {
     
       }
     
-      useEffect(()=>{
-        axios({
-            method:'PUT',
-            url: `https://chat-app-mongo-uk.herokuapp.com/chat/update/${current_page}`,
-            headers: {"x-auth-token":`${token}`},
-            data: {Answered: answered}
-        }).then((res)=>{
-            console.log('res: ', res);
-    
-        })
-    
-        },[answered])
+      
 
 
 
@@ -120,6 +109,19 @@ function ChatRoom() {
     top: 50%;
     left:45%;
   `;
+
+  useEffect(()=>{
+    axios({
+        method:'PUT',
+        url: `https://chat-app-mongo-uk.herokuapp.com/chat/update/${current_page}`,
+        headers: {"x-auth-token":`${token}`},
+        data: {Answered: answered}
+    }).then((res)=>{
+        console.log('res: ', res);
+
+    })
+
+    },[answered])
 
 
 
@@ -136,7 +138,7 @@ function ChatRoom() {
                         </Link>
                     </div>
                         
-                    <div className={room.CreatedById === info.name?"group":"group-without"}>
+                    <div className={room.CreatedByName === info.name?"group":"group-without"}>
                         <div className="answered-block">
                                 {answered?(
                                     <>
@@ -147,7 +149,7 @@ function ChatRoom() {
                         </div> 
                         <div className="room-options">
                             {editing?(
-                                room.CreatedById === info.name?(
+                                room.CreatedByName === info.name?(
                                         <>
                                             <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
                                             <div className="secondBTN" onClick={updateQuestion}><PublishIcon/></div>
@@ -155,7 +157,7 @@ function ChatRoom() {
                                 ):null
                             ):(
                                 <>
-                                    {room.CreatedById === info.name?(
+                                    {room.CreatedByName === info.name?(
                                         <>
                                             <div className="edit" onClick={()=>setEditing(!editing)}><EditIcon/></div>
                                             <div className={answered?"secondBTN answered":"secondBTN"} onClick={()=>setAnswered(!answered)}><CheckCircleIcon/></div>
@@ -181,7 +183,7 @@ function ChatRoom() {
                         <>
                             <p id="title">{room.Title}</p>
                             <p id="question">{room.Question}</p>
-                            <p id="creation"onClick={userPage}>Created by <span>{room.CreatedById}</span></p>
+                            <p id="creation"onClick={userPage}>Created by <span>{room.CreatedByName}</span></p>
                             
                         </>
                     )}

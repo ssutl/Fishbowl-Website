@@ -226,6 +226,9 @@
     cursor: pointer;
     font-size: 15px;
     opacity: 0.5;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .chat-room-section .chat-room-holder .question #creation:hover {
     opacity: 1;

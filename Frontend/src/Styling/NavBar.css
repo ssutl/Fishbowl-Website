@@ -247,8 +247,8 @@
     text-decoration: none;
   }
   .nav-holder .logo a img {
-    height: 55px;
-    width: 55px;
+    height: 65px;
+    width: 65px;
     margin-right: 20px;
   }
   .nav-holder .logo a h1 {
@@ -298,6 +298,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    color: white;
   }
   .nav-holder .people-holder .lower .user-holder {
     display: -webkit-box;

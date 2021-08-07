@@ -20,7 +20,7 @@ function CreateRoom() {
             if(roomName.trim().length){
 
                 const data = {
-                    CreatedById: info.name,
+                    CreatedByName: info.name,
                         Tags:{
                             Math:Math,
                             English:English,
