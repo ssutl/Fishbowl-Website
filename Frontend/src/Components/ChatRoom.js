@@ -12,12 +12,10 @@ import { useHistory } from 'react-router-dom';
 // import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import { Link } from "react-router-dom";
-import io from 'socket.io-client'
 
 
 
 function ChatRoom() {
-    let socket;
     const history = useHistory();
     const info = useContext(UserContext)
     let current_page = useLocation().pathname.split("/").pop();
@@ -29,7 +27,6 @@ function ChatRoom() {
     const [answered, setAnswered] = useState()
     const [newMessage, setNewMessage] = useState()
     
-    const ENDPOINT = 'https://chat-app-mongo-uk.herokuapp.com'
 
 
     
@@ -47,9 +44,7 @@ function ChatRoom() {
             setAnswered(res.data[0].Answered)   
         })
 
-        socket = io(ENDPOINT)
-        console.log(socket)
-    },[ENDPOINT, current_page])
+    },[])
 
     const userPage = () =>{
         axios({

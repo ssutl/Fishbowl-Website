@@ -16,7 +16,8 @@ function NavBar() {
     useEffect(()=>{
         axios({
         method:"GET",
-        url: `http://localhost:5000/users/get`,
+        url: `https://chat-app-mongo-uk.herokuapp.com
+/users/get`,
         headers: {"x-auth-token":`${token}`}
         }).then((response)=>{
             setUsers(response.data)
@@ -29,7 +30,8 @@ function NavBar() {
     const refreshUsers = () =>{
         axios({
             method:"GET",
-            url: `http://localhost:5000/users/get`,
+            url: `https://chat-app-mongo-uk.herokuapp.com
+/users/get`,
             headers: {"x-auth-token":`${token}`}
             }).then((response)=>{
                 setUsers(response.data)
@@ -39,7 +41,7 @@ function NavBar() {
             })
     }
 
-    // setTimeout(refreshUsers,1000)
+    setTimeout(refreshUsers,1000)
 
 
 

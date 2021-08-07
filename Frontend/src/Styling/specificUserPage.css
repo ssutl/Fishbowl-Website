@@ -104,8 +104,8 @@
     margin-left: 30px;
     margin-right: 80px;
     cursor: pointer;
-    -webkit-transition: background 0.2s ease-in;
-    transition: background 0.2s ease-in;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
   }
   .section2 .holder .follow-section .follow-BTN p {
     font-size: 18px;
@@ -131,8 +131,8 @@
     margin-left: 30px;
     margin-right: 80px;
     cursor: pointer;
-    -webkit-transition: background 0.2s ease-in;
-    transition: background 0.2s ease-in;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
   }
   .section2 .holder .follow-section .following-BTN p {
     font-size: 18px;

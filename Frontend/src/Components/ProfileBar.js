@@ -60,7 +60,7 @@ function ProfileBar({search}) {
         })
 
         
-    },[])
+    },[current_page])
 
     const getFollowing = () =>{
         axios({
@@ -163,8 +163,10 @@ function ProfileBar({search}) {
                             }).map((user,index)=>{
                                 return(
                                     <div className="user-holder">
-                                        <img src={user.image} alt=""/>
-                                        <h2>{user.username}</h2>
+                                        <Link to={{pathname: `/People/${user.name}`, state:{user: user}}}>
+                                            <img src={user.image} alt=""/>
+                                            <h2>{user.username}</h2>
+                                        </Link>
                                         <div className={following.includes(user.username)?"following-BTN":"follow-BTN"} onClick={()=>requests(user.username, !following.includes(user.username))}>
                                             <PersonAddIcon id=""/>
                                             {following.includes(user.username)?<p>Following</p>:<p>Follow</p>}
