@@ -11,13 +11,12 @@ function NavBar() {
     const info = useContext(UserContext)
     const token = localStorage.getItem('session-token')
     const [users, setUsers] = useState("")
-    const [following, setFollowing] = useState("")
 
 
     useEffect(()=>{
         axios({
         method:"GET",
-        url: `https://chat-app-mongo-uk.herokuapp.com/users/get`,
+        url: `http://localhost:5000/users/get`,
         headers: {"x-auth-token":`${token}`}
         }).then((response)=>{
             setUsers(response.data)
@@ -25,17 +24,24 @@ function NavBar() {
             console.log('error: ', error);
                 
         })
-
-        axios({
-        method:"GET",
-        url: `https://chat-app-mongo-uk.herokuapp.com/users/get/${info.name}`,
-        headers: {"x-auth-token":`${token}`}
-        }).then((response)=>{
-            setFollowing(response.data[0].following)
-        }).catch((error)=>{
-            console.log('error: ', error);
-        })
     },[])
+
+    const refreshUsers = () =>{
+        axios({
+            method:"GET",
+            url: `http://localhost:5000/users/get`,
+            headers: {"x-auth-token":`${token}`}
+            }).then((response)=>{
+                setUsers(response.data)
+            }).catch((error)=>{
+                console.log('error: ', error);
+                    
+            })
+    }
+
+    // setTimeout(refreshUsers,1000)
+
+
 
 
 
