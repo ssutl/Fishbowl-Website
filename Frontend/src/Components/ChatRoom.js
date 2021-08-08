@@ -29,7 +29,10 @@ function ChatRoom() {
     const [answered, setAnswered] = useState()
     const [empty, setEmpty] = useState()
     let current_date = new Date()
-    let current_time = current_date.getHours()
+    let current_year = current_date.getFullYear()
+    let current_month = current_date.getMonth()
+    let current_day = current_date.getDate()
+    let current_hour = current_date.getHours()
 
     //Socketss
     const { roomId } = current_page;
@@ -243,7 +246,7 @@ function ChatRoom() {
                                     <img src={liveMessage.sentByImage} alt=""/>
                                     <h2>{liveMessage.sentBy}</h2>
                                 </Link>
-                                <p>{`· ${current_time - liveMessage.date === 0?` < 1h`: current_time - liveMessage.date + `h`}`}</p>
+                                <p>{`· ${current_year === liveMessage.date.year?current_month === liveMessage.date.month?current_day === liveMessage.date.day?current_hour === liveMessage.date.hour?`<1h`:current_hour - liveMessage.date.hour + `h`:current_day - liveMessage.date.day + `d`:current_month - liveMessage.date.month +`m`:current_year - liveMessage.date.year +`y`}`}</p>
                             </div>
                             <div className="middle">
                                 <p>{liveMessage.text}</p>
@@ -258,7 +261,7 @@ function ChatRoom() {
                                     <img src={savedMessage.sentByImage} alt=""/>
                                     <h2>{savedMessage.sentBy}</h2>
                                 </Link>
-                                <p>{`· ${current_time - savedMessage.date === 0?` < 1h`: current_time - savedMessage.date + `h`}`}</p>
+                                <p>{`· ${current_year === savedMessage.date.year?current_month === savedMessage.date.month?current_day === savedMessage.date.day?current_hour === savedMessage.date.hour?`<1h`:current_hour - savedMessage.date.hour + `h`:current_day - savedMessage.date.day + `d`:current_month - savedMessage.date.month +`m`:current_year - savedMessage.date.year +`y`}`}</p>
                             </div>
                             <div className="middle">
                                 <p>{savedMessage.text}</p>

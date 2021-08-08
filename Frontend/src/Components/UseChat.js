@@ -44,7 +44,7 @@ const useChat = (roomId) => {
       senderId: socketRef.current.id,
       sentBy: info.name,
       sentByImage: info.image,
-      date: currentdate.getHours(),
+      date: {year:currentdate.getFullYear(), month:currentdate.getMonth(), day:currentdate.getDate(), hour:currentdate.getHours()},
       likes: []
     });
   };
