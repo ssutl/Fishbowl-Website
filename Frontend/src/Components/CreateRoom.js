@@ -13,6 +13,21 @@ function CreateRoom() {
     const token = localStorage.getItem('session-token')
 
     const [roomExists, setRoomExists] = useState(false)
+    const [roomName, setRoomName] = useState("")
+    const [roomQuestion, setRoomQuestion] = useState("")
+    const [Math,setMath] = useState(false)
+    const [English,setEnglish] = useState(false)
+    const [Geography,setGeography] = useState(false)
+    const [FM,setFM] = useState(false)
+    const [CS,setCS] = useState(false)
+    const [Economics,setEconomics] = useState(false)
+    const [History,setHistory] = useState(false)
+    const [Biology,setBiology] = useState(false)
+    const [Psychology,setPsychology] = useState(false)
+    const [Physics,setPhysics] = useState(false)
+    const [Polotics,setPolotics] = useState(false)
+    const [Music,setMusic] = useState(false)
+    const [RE,setRE] = useState(false)
 
 
         const handleSubmit = () => {
@@ -44,8 +59,7 @@ function CreateRoom() {
 
                 axios({
                     method:`POST`,
-                    url: `http://localhost:5000
-/chat/new`,
+                    url: `https://fishbowl-heroku.herokuapp.com/chat/new`,
                     headers: {"x-auth-token":`${token}`},
                     data: data
                 })
@@ -72,21 +86,7 @@ function CreateRoom() {
 
         }
 
-    const [roomName, setRoomName] = useState("")
-    const [roomQuestion, setRoomQuestion] = useState("")
-    const [Math,setMath] = useState(false)
-    const [English,setEnglish] = useState(false)
-    const [Geography,setGeography] = useState(false)
-    const [FM,setFM] = useState(false)
-    const [CS,setCS] = useState(false)
-    const [Economics,setEconomics] = useState(false)
-    const [History,setHistory] = useState(false)
-    const [Biology,setBiology] = useState(false)
-    const [Psychology,setPsychology] = useState(false)
-    const [Physics,setPhysics] = useState(false)
-    const [Polotics,setPolotics] = useState(false)
-    const [Music,setMusic] = useState(false)
-    const [RE,setRE] = useState(false)
+    
 
     return (
         <div className="section">

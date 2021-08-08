@@ -25,8 +25,7 @@ function Feed(input) {
     useEffect(()=>{
         axios({
             method:'GET',
-            url: `http://localhost:5000
-/chat/get`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get`,
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setAllRooms(res.data.reverse())

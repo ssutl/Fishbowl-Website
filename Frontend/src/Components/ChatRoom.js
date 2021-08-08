@@ -46,7 +46,7 @@ function ChatRoom() {
     useEffect(()=>{ //When a new message is recieved update the database with new msg
         axios({
             method:`PUT`,
-            url: `http://localhost:5000/chat/update/${current_page}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
             headers: {"x-auth-token":`${token}`},
             data: {message: messages}
         }).then((res)=>{
@@ -59,7 +59,7 @@ function ChatRoom() {
     useEffect(()=>{ //Setting Room messages whenever page refreshes
                 axios({
             method:`GET`,
-            url: `http://localhost:5000/chat/get/Title/${current_page}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${current_page}`,
             headers: {"x-auth-token":`${token}`},
         }).then((res)=>{
             setRoomSavedMsgs(res.data[0].Messages.reverse());
@@ -92,7 +92,7 @@ function ChatRoom() {
     useEffect(()=>{
         axios({
             method:'GET',
-            url: `http://localhost:5000/chat/get/Title/${current_page}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${current_page}`,
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setRoom(res.data[0]);
@@ -104,7 +104,7 @@ function ChatRoom() {
     const userPage = () =>{
         axios({
             method:"GET",
-            url: `http://localhost:5000/users/get/${room.CreatedByName}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${room.CreatedByName}`,
             headers: {"x-auth-token":`${token}`}
         }).then((response)=>{
             history.push({
@@ -122,7 +122,7 @@ function ChatRoom() {
         setEditing(false)
         axios({
             method:`PUT`,
-            url: `http://localhost:5000/chat/update/${current_page}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
             headers: {"x-auth-token":`${token}`},
             data: {Question: editedQuestion, Title:editedName}
         }).then((res)=>{
@@ -136,7 +136,7 @@ function ChatRoom() {
       const redirect = () =>{
         axios({
             method:'GET',
-            url: `http://localhost:5000/chat/get/Title/${editedName}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${editedName}`,
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setRoom(res.data[0]);
@@ -163,7 +163,8 @@ function ChatRoom() {
   useEffect(()=>{
     axios({
         method:'PUT',
-        url: `http://localhost:5000/chat/update/${current_page}`,
+        url: `https://fishbowl-heroku.herokuapp.com
+/chat/update/${current_page}`,
         headers: {"x-auth-token":`${token}`},
         data: {Answered: answered}
     }).then((res)=>{

@@ -16,9 +16,7 @@ function NavBar() {
     useEffect(()=>{
         axios({
         method:"GET",
-        url: `http://localhost:5000
-
-/users/get`,
+        url: `https://fishbowl-heroku.herokuapp.com/users/get`,
         headers: {"x-auth-token":`${token}`}
         }).then((response)=>{
             setUsers(response.data)
@@ -31,9 +29,7 @@ function NavBar() {
     const refreshUsers = () =>{
         axios({
             method:"GET",
-            url: `http://localhost:5000
-
-/users/get`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get`,
             headers: {"x-auth-token":`${token}`}
             }).then((response)=>{
                 setUsers(response.data)
