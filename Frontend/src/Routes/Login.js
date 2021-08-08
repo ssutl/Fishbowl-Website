@@ -66,6 +66,16 @@ function Login() {
     }
 
     if(logged){
+
+        axios({ //Creating users account & if user already has account it wont be created again
+            method:"PUT",
+            url: `https://fishbowl-heroku.herokuapp.com/users/update/${username}`,
+            headers: {"x-auth-token":`${token}`},
+            data: {online:true}
+        }).then(()=>{
+        })
+
+
         return <App name={username} email={email} image={image} id={id}/>
     }else{
         return (

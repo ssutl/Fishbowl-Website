@@ -43,18 +43,6 @@ function ChatRoom() {
     const [roomSavedMsgs, setRoomSavedMsgs] = useState()
 
 
-    useEffect(()=>{ //When a new message is recieved update the database with new msg
-        axios({
-            method:`PUT`,
-            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
-            headers: {"x-auth-token":`${token}`},
-            data: {message: messages}
-        }).then((res)=>{
-            // redirect()
-        }).catch((error)=>{
-            console.log("error", error)
-        })
-    },[messages])
 
     useEffect(()=>{ //Setting Room messages whenever page refreshes
                 axios({
@@ -62,7 +50,7 @@ function ChatRoom() {
             url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${current_page}`,
             headers: {"x-auth-token":`${token}`},
         }).then((res)=>{
-            setRoomSavedMsgs(res.data[0].Messages.reverse());
+            setRoomSavedMsgs(res.data[0].Messages);
             
         }).catch((error)=>{
             console.log("error", error)
@@ -76,6 +64,26 @@ function ChatRoom() {
         if(newMessage.length !== 0){
             sendMessage(newMessage);
             setNewMessage("");
+
+            const data = {
+                text: newMessage,
+                sentBy: info.name,
+                sentByImage: info.image,
+                date:{year:current_date.getFullYear(), month:current_date.getMonth(), day:current_date.getDate(), hour:current_date.getHours()},
+                likes: []
+            }
+
+            axios({
+                method:`PUT`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
+                headers: {"x-auth-token":`${token}`},
+                data: {message: data}
+            }).then((res)=>{
+                console.log('res: ', res);
+                
+            }).catch((error)=>{
+                console.log("error", error)
+            })
             document.querySelector('.input').value = ''
         }else{
             setEmpty(true)
@@ -240,7 +248,8 @@ function ChatRoom() {
                     )}
                 </div>
                 <div className="messaging">
-                    {messages.map((liveMessage, index)=>(
+        
+                    {messages === undefined?(<BarLoader color={"#FFFFFF"} css={override} size={300} />):messages.slice(0).reverse().map((liveMessage, index)=>(
                         <div className="msg" key={index}>
                             <div className="top">
                                 <Link>
@@ -255,7 +264,7 @@ function ChatRoom() {
                             <div className="bottom"></div>
                         </div>
                     ))}
-                    {roomSavedMsgs.map((savedMessage, index)=>(
+                    {roomSavedMsgs === undefined?(<BarLoader color={"#FFFFFF"} css={override} size={300} />):roomSavedMsgs.slice(0).reverse().map((savedMessage, index)=>(
                         <div className="msg" key={index}>
                             <div className="top">
                                 <Link>

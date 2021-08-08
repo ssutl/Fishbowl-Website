@@ -25,7 +25,7 @@ const useChat = (roomId) => {
         ...message,
         ownedByCurrentUser: message.senderId === socketRef.current.id,
       };
-      setMessages((messages) => [...messages, incomingMessage].reverse());
+      setMessages((messages) => [...messages, incomingMessage]);
     });
     
     // Destroys the socket reference

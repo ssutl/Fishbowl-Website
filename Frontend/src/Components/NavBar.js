@@ -26,20 +26,20 @@ function NavBar() {
         })
     },[])
 
-    const refreshUsers = () =>{
-        axios({
-            method:"GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get`,
-            headers: {"x-auth-token":`${token}`}
-            }).then((response)=>{
-                setUsers(response.data)
-            }).catch((error)=>{
-                console.log('error: ', error);
+    // const refreshUsers = () =>{
+    //     axios({
+    //         method:"GET",
+    //         url: `https://fishbowl-heroku.herokuapp.com/users/get`,
+    //         headers: {"x-auth-token":`${token}`}
+    //         }).then((response)=>{
+    //             setUsers(response.data)
+    //         }).catch((error)=>{
+    //             console.log('error: ', error);
                     
-            })
-    }
+    //         })
+    // }
 
-    setTimeout(refreshUsers,1000)
+    // setTimeout(refreshUsers,1000)
 
 
 
