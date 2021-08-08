@@ -25,7 +25,8 @@ function Feed(input) {
     useEffect(()=>{
         axios({
             method:'GET',
-            url: `https://chat-app-mongo-uk.herokuapp.com/chat/get`,
+            url: `http://localhost:5000
+/chat/get`,
             headers: {"x-auth-token":`${token}`}
         }).then((res)=>{
             setAllRooms(res.data.reverse())
