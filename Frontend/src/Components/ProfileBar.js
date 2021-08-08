@@ -46,7 +46,8 @@ function ProfileBar({search}) {
         }).then((response)=>{
             setUsers(response.data)
         }).catch((error)=>{
-                error.status(404)
+            console.log('error: ', error);
+                
         })
 
         axios({
@@ -57,7 +58,8 @@ function ProfileBar({search}) {
         }).then((response)=>{
             setFollowing(response.data[0].following)
         }).catch((error)=>{
-                error.status(404)
+            console.log('error: ', error);
+                
         })
 
         
@@ -71,7 +73,8 @@ function ProfileBar({search}) {
             }).then((response)=>{
                 setFollowing(response.data[0].following)
             }).catch((error)=>{
-                    error.status(404)
+                console.log('error: ', error);
+                    
             })
     }
 
