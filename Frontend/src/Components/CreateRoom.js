@@ -44,7 +44,8 @@ function CreateRoom() {
 
                 axios({
                     method:`POST`,
-                    url: `https://chat-app-mongo-uk.herokuapp.com/chat/new`,
+                    url: `http://localhost:5000
+/chat/new`,
                     headers: {"x-auth-token":`${token}`},
                     data: data
                 })

@@ -41,22 +41,25 @@ function ProfileBar({search}) {
     useEffect(()=>{ //Recieving users for the dashboard
         axios({
         method:"GET",
-        url: "https://chat-app-mongo-uk.herokuapp.com/users/get",
+        url: "http://localhost:5000/users/get",
         headers: {"x-auth-token":`${token}`}
         }).then((response)=>{
             setUsers(response.data)
         }).catch((error)=>{
-                error.status(404)
+            console.log('error: ', error);
+                
         })
 
         axios({
         method:"GET",
-        url: `https://chat-app-mongo-uk.herokuapp.com/users/get/${info.name}`,
+        url: `http://localhost:5000
+/users/get/${info.name}`,
         headers: {"x-auth-token":`${token}`}
         }).then((response)=>{
             setFollowing(response.data[0].following)
         }).catch((error)=>{
-                error.status(404)
+            console.log('error: ', error);
+                
         })
 
         
@@ -65,12 +68,13 @@ function ProfileBar({search}) {
     const getFollowing = () =>{
         axios({
             method:"GET",
-            url: `https://chat-app-mongo-uk.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.name}`,
             headers: {"x-auth-token":`${token}`}
             }).then((response)=>{
                 setFollowing(response.data[0].following)
             }).catch((error)=>{
-                    error.status(404)
+                console.log('error: ', error);
+                    
             })
     }
 
@@ -80,7 +84,7 @@ function ProfileBar({search}) {
         if(value){
             axios({
                 method:'PUT',
-                url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.name}`,
+                url: `http://localhost:5000/users/update/${info.name}`,
                 headers: {"x-auth-token":`${token}`},
                 data: {following: userID}
             }).then((res)=>{
@@ -89,7 +93,7 @@ function ProfileBar({search}) {
         }else if(!value){
             axios({
                 method:'PUT',
-                url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.name}`,
+                url: `http://localhost:5000/users/update/${info.name}`,
                 headers: {"x-auth-token":`${token}`},
                 data: {unfollowing: userID}
             }).then((res)=>{
@@ -106,7 +110,7 @@ function ProfileBar({search}) {
 
         axios({ //On logout changing users status to offline
             method:`PUT`,
-            url: `https://chat-app-mongo-uk.herokuapp.com/users/update/${info.name}`,
+            url: `http://localhost:5000/users/update/${info.name}`,
             headers: {"x-auth-token":`${token}`},
             data: {"online":false}
         }).then((response)=>{
