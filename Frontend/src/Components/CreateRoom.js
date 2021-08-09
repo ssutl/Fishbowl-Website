@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { UserContext } from "../Context/CurrentUser";
 import '../Styling/CreateRoom.css'
 import { Link } from "react-router-dom";
@@ -7,7 +7,15 @@ import axios from 'axios';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
 
-function CreateRoom() {
+function CreateRoom({createRoomToParent}) {
+
+    const [createFlag, setCreateFlag] = useState(false)
+
+
+    useEffect(()=>{
+        createRoomToParent(createFlag)
+    },[createFlag])
+
     const history = useHistory();
     const info = useContext(UserContext)
     const token = localStorage.getItem('session-token')
@@ -69,6 +77,7 @@ function CreateRoom() {
                         document.querySelector('.input_field').value=""
                     }else{
                         setRoomExists(false)
+                        setCreateFlag(!createFlag)
                         history.push({
                             pathname: `/Chat/${roomName}`
                         })

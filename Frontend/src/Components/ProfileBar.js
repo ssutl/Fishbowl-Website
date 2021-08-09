@@ -31,6 +31,18 @@ function ProfileBar({profileToParent, search}) {
     const userSearch = current_page === "" && searching
     const [users, setUsers] = useState('')
     const [following,setFollowing] = useState()
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    console.log('screenWidth: ', screenWidth);
+    const breakpoint = 1248;
+
+    const resize = () => {
+        setScreenWidth(window.innerWidth);
+        // console.log("window.innerWidth: ", window.innerWidth);
+      };
+
+  window.addEventListener("resize", resize);
+
+
     // console.log('following: ', following);
 
     // console.log('users: ', users);
@@ -135,62 +147,69 @@ function ProfileBar({profileToParent, search}) {
         image: info.image,
         username:info.name
     }
+
+    if (screenWidth > breakpoint) {
       
-    return (
-        <div className="profile-holder">
-            <div className="profile">
-                <div className="upper-profile">
-                    <div className="left">
-                        <Link to={{pathname: `/People/${info.name}`, state:{user: user}}}>
-                            <div className="image-holder">
-                                <img src={info.image} className="image" alt=""></img>
-                            </div>
-                        </Link>
-                    </div>
-                    <div className="right">
-                        <p className="name">{info.name}</p>
-                        <p className="email">@{info.email}</p>
-                    </div>
-                </div>
-                <div className="lower-profile">
-                    <GoogleLogout
-                    clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
-                    buttonText="Logout"
-                    onLogoutSuccess={logout}
-                    >
-                    </GoogleLogout>
-                </div>
-            </div>
-            <div className="noti">
-                <div className="dashboard">
-                    <p>Dashboard Panel</p>
-                </div>
-                {dashboard?<h1>dashboard</h1>:userSearch?(
-                    <div className="users">
-                        <div className="holder">
-                            {users.length === 0? <h1>Empty</h1> : users.filter((eachUser)=>{
-                                return eachUser.username !== info.name && eachUser.username.toUpperCase().includes(profileSearch.toUpperCase())
-                            }).map((user,index)=>{
-                                return(
-                                    <div className="user-holder">
-                                        <Link to={{pathname: `/People/${user.name}`, state:{user: user}}}>
-                                            <img src={user.image} alt=""/>
-                                            <h2>{user.username}</h2>
-                                        </Link>
-                                        <div className={following.includes(user.username)?"following-BTN":"follow-BTN"} onClick={()=>requests(user.username, !following.includes(user.username))}>
-                                            <PersonAddIcon id=""/>
-                                            {following.includes(user.username)?<p>Following</p>:<p>Follow</p>}
-                                        </div>
-                                    </div>
-                                )
-                            })}
+        return (
+            <div className="profile-holder">
+                <div className="profile">
+                    <div className="upper-profile">
+                        <div className="left">
+                            <Link to={{pathname: `/People/${info.name}`, state:{user: user}}}>
+                                <div className="image-holder">
+                                    <img src={info.image} className="image" alt=""></img>
+                                </div>
+                            </Link>
+                        </div>
+                        <div className="right">
+                            <p className="name">{info.name}</p>
+                            <p className="email">@{info.email}</p>
                         </div>
                     </div>
-                ):chatroom?<h1>Chat Room</h1>:null}
+                    <div className="lower-profile">
+                        <GoogleLogout
+                        clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
+                        buttonText="Logout"
+                        onLogoutSuccess={logout}
+                        >
+                        </GoogleLogout>
+                    </div>
+                </div>
+                <div className="noti">
+                    <div className="dashboard">
+                        <p>Dashboard Panel</p>
+                    </div>
+                    {dashboard?<h1>dashboard</h1>:userSearch?(
+                        <div className="users">
+                            <div className="holder">
+                                {users.length === 0? <h1>Empty</h1> : users.filter((eachUser)=>{
+                                    return eachUser.username !== info.name && eachUser.username.toUpperCase().includes(profileSearch.toUpperCase())
+                                }).map((user,index)=>{
+                                    return(
+                                        <div className="user-holder">
+                                            <Link to={{pathname: `/People/${user.name}`, state:{user: user}}}>
+                                                <img src={user.image} alt=""/>
+                                                <h2>{user.username}</h2>
+                                            </Link>
+                                            <div className={following.includes(user.username)?"following-BTN":"follow-BTN"} onClick={()=>requests(user.username, !following.includes(user.username))}>
+                                                <PersonAddIcon id=""/>
+                                                {following.includes(user.username)?<p>Following</p>:<p>Follow</p>}
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    ):chatroom?<h1>Chat Room</h1>:null}
 
+                </div>
             </div>
-        </div>
-    )
+        )
+    }else if (screenWidth < breakpoint) {
+        return(
+           null
+        )
+    }
 }
 
 export default ProfileBar

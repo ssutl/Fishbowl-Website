@@ -4,6 +4,9 @@ import axios from 'axios';
 import { UserContext } from "../Context/CurrentUser";
 import { Link } from "react-router-dom";
 import mainLogo from'../svg/fish-bowl.png';
+import BarLoader from "react-spinners/BarLoader";
+import { css } from "@emotion/react";
+
 
 function NavBar({profileData, followReq}) {
     const info = useContext(UserContext)
@@ -13,6 +16,18 @@ function NavBar({profileData, followReq}) {
     const [following, setFollowing] = useState()
     let list = []
     const [loading, setLoading] = useState()
+    const breakpoint = 480;
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    const resize = () => {
+        setScreenWidth(window.innerWidth);
+        // console.log("window.innerWidth: ", window.innerWidth);
+      };
+
+  window.addEventListener("resize", resize);
+
+
+
 
     
 
@@ -45,7 +60,7 @@ function NavBar({profileData, followReq}) {
         })
     },[profileData, followReq])
 
-    if(!loading){
+    if(loading === false){
             users.map((user)=>{
                 if(following.includes(user.username)){
                     list.push(user)   
@@ -60,56 +75,66 @@ function NavBar({profileData, followReq}) {
     
 
 
+    const override = css`
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left:10%;
+  `;
 
 
-
-    
-
-
-    return (
-        <div className="nav-holder">
-            <div className="logo">
-                <Link to="/">
-                    <img src={mainLogo}/>
-                    <h1>Fishbowl</h1>
-                </Link>
-            </div>
-            <div className="home-btn">
-
-            </div>
-            <div className="people-holder">
-                <div className="upper">
-                    <h1>People</h1>
-                    <h2>Friends</h2>
+    if (screenWidth > breakpoint) {
+        return (
+            <div className="nav-holder">
+                <div className="logo">
+                    <Link to="/">
+                        <img src={mainLogo}/>
+                        <h1>Fishbowl</h1>
+                    </Link>
                 </div>
-                <div className={list.length === 0?"lower-set":"lower"}>
-                    {list.length === 0? (
-                        <>
-                            <p>Connect With Friends</p>
-                            <p id="small">Start by searching for a friends name in the searchbar</p>
-                        </>
-                    ) : 
-                    list.filter((newUser)=>{
-                        return newUser.username !== info.name
-                    }).map((user,index)=>{
-                        return(
-                                <div className="user-holder" key={index}>
-                                   <Link to={{pathname: `/People/${user.username}`, state:{user: user}}} key={index}>
-                                        <div className="circle">
-                                            <img src={user.image} alt=""></img>
-                                        </div>  
-                                        <div className={user.online?"online-circle":"offline-circle"}>
-                                        </div>  
-                                        <p>{user.username}</p>  
-                                    </Link>
-                                </div>  
-                        )
-                    })}
+                <div className="home-btn">
 
                 </div>
+                <div className="people-holder">
+                    <div className="upper">
+                        <h1>People</h1>
+                        <h2>Friends</h2>
+                    </div>
+                    <div className={list.length === 0 || list == null?"lower-set":"lower"}>
+                        {list.length === 0 || list == null && following.length === 0? (
+                            <>
+                                <p>Connect With Friends</p>
+                                <p id="small">Start by searching for a friends name in the searchbar</p>
+                            </>
+                        ) : list.length === 0 && following.length !== 0?(
+                            <BarLoader color={"#FFFFFF"}  size={300} css={override}/>
+                        ):
+                        list.filter((newUser)=>{
+                            return newUser.username !== info.name
+                        }).map((user,index)=>{
+                            return(
+                                    <div className="user-holder" key={index}>
+                                    <Link to={{pathname: `/People/${user.username}`, state:{user: user}}} key={index}>
+                                            <div className="circle">
+                                                <img src={user.image} alt=""></img>
+                                            </div>  
+                                            <div className={user.online?"online-circle":"offline-circle"}>
+                                            </div>  
+                                            <p>{screenWidth < 1024?user.username.substring(0,5) + ' ..':user.username}</p>  
+                                        </Link>
+                                    </div>  
+                            )
+                        })}
+
+                    </div>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }else if (screenWidth < breakpoint) {
+        return(
+            null
+        )
+    }
 }
 
 export default NavBar

@@ -9,10 +9,11 @@ import ChatRoom from '../Components/ChatRoom';
 import { useHistory } from 'react-router-dom';
 // import Feed from '../Components/Feed';
 
-function Middle({childToParent}) {
+function Middle({childToParent, dashboard}) {
     const history = useHistory();
     const [search,setSearch] = useState("")
     const [followReq,setFollowReq] = useState("")
+    const [roomCreated,setRoomCreated] = useState("")
 
     useEffect(()=>{
         const data = {search, followReq}
@@ -21,6 +22,11 @@ function Middle({childToParent}) {
 
     const specificUserToParent = (specificUser) => {
         setFollowReq(specificUser)
+    }
+
+
+    const createRoomToParent = (createRoom) => {
+        setRoomCreated(createRoom)
     }
 
 
@@ -41,12 +47,14 @@ function Middle({childToParent}) {
                     
                     {/* <Route exact path="/" component={withRouter(Feed)} value={search}/> */}
                     <Route exact path="/" render={(props)=>(
-                        <Feed search={search}/>
+                        <Feed input={search} followR={followReq} dashboard={dashboard} roomCreated={roomCreated}/>
                     )}/>
                     <Route exact path="/People/:name" render={()=>(
                         <SpecificUserPage specificUserToParent={specificUserToParent}/>
                     )}/>
-                    <Route exact path="/Create/:name" component={withRouter(CreateRoom)}/>
+                    <Route exact path="/Create/:name" render={()=>(
+                        <CreateRoom createRoomToParent={createRoomToParent}/>
+                    )}/>
                     <Route exact path="/Chat/:roomId" component={withRouter(ChatRoom)}/>
                 </Switch>
         </div>
