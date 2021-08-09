@@ -1,5 +1,5 @@
 .feed-section {
-  height: 88vh;
+  height: 79vh;
   width: 100%;
 }
 
@@ -42,12 +42,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 190px;
+  width: 165px;
 }
 
 .feed-section .top .holder .feed-BTN .normal {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 17px;
   color: white;
   font-family: "Red Hat Text", sans-serif;
   -webkit-transition: all 0.2s ease-in;
@@ -57,7 +57,7 @@
 
 .feed-section .top .holder .feed-BTN .active {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Red Hat Text", sans-serif;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
@@ -75,8 +75,8 @@
 
 .feed-section .top .holder a .create-BTN {
   margin-bottom: 25px;
-  height: 45px;
-  width: 160px;
+  height: 35px;
+  width: 85px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,7 +90,10 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: "Red Hat Text", sans-serif;
-  font-size: 18px;
+}
+
+.feed-section .top .holder a .create-BTN p {
+  display: none;
 }
 
 .feed-section .bottom-section {
@@ -297,7 +300,7 @@
 
 @media only screen and (min-width: 768px) {
   .feed-section {
-    height: 88vh;
+    height: 78vh;
     width: 100%;
   }
   .feed-section .top {
@@ -381,6 +384,9 @@
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
     font-size: 18px;
+  }
+  .feed-section .top .holder a .create-BTN p {
+    display: block;
   }
   .feed-section .bottom-section {
     height: 77vh;
@@ -569,7 +575,7 @@
 
 @media only screen and (min-width: 1024px) {
   .feed-section {
-    height: 88vh;
+    height: 78vh;
     width: 100%;
   }
   .feed-section .top {
@@ -653,6 +659,9 @@
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
     font-size: 18px;
+  }
+  .feed-section .top .holder a .create-BTN p {
+    display: block;
   }
   .feed-section .bottom-section {
     height: 77vh;
@@ -925,6 +934,9 @@
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
     font-size: 18px;
+  }
+  .feed-section .top .holder a .create-BTN p {
+    display: block;
   }
   .feed-section .bottom-section {
     height: 77vh;

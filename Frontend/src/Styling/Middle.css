@@ -1,13 +1,6 @@
 .middle-holder {
   width: 100%;
-  height: 100vh;
-}
-
-.middle-holder .middle-container {
-  height: 95vh;
-  width: 100%;
-  border-radius: 5px;
-  background-color: #28303b;
+  height: 91vh;
 }
 
 .middle-holder .section1 {
@@ -53,13 +46,7 @@
 @media only screen and (min-width: 768px) {
   .middle-holder {
     width: 77%;
-    height: 100vh;
-  }
-  .middle-holder .middle-container {
-    height: 95vh;
-    width: 100%;
-    border-radius: 5px;
-    background-color: #28303b;
+    height: 90vh;
   }
   .middle-holder .section1 {
     height: 12vh;
@@ -103,13 +90,7 @@
 @media only screen and (min-width: 1024px) {
   .middle-holder {
     width: 77%;
-    height: 100vh;
-  }
-  .middle-holder .middle-container {
-    height: 95vh;
-    width: 100%;
-    border-radius: 5px;
-    background-color: #28303b;
+    height: 90vh;
   }
   .middle-holder .section1 {
     height: 12vh;

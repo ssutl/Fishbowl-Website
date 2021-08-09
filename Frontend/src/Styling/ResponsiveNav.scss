@@ -1,0 +1,72 @@
+@import "./Breakpoints.scss";
+@import "./Theme.scss";
+
+.nav{
+    position: absolute;
+    bottom: 0;
+    height: 9vh;
+    width: 100%;
+    background-color: $highlight;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+        p{
+            font-size: 18px;
+            color: white;
+        font-family: "Red Hat Text", sans-serif;
+
+        }
+    }
+}
+
+@include breakpoint-mixin("tablet") {
+    .nav{
+        position: absolute;
+        bottom: 0;
+        height: 10vh;
+        width: 100%;
+        background-color: $highlight;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            p{
+                font-size: 25px;
+                color: white;
+            font-family: "Red Hat Text", sans-serif;
+
+            }
+        }
+    }
+        
+    
+}
+
+@include breakpoint-mixin("tablet-wide") {
+    .nav{
+        position: absolute;
+        bottom: 0;
+        height: 10vh;
+        width: 100%;
+        background-color: $highlight;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            p{
+                font-size: 25px;
+                color: white;
+            font-family: "Red Hat Text", sans-serif;
+
+            }
+        }
+    }
+    
+}

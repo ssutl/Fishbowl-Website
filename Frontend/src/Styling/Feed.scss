@@ -2,7 +2,7 @@
 @import "./Theme.scss";
 
 .feed-section {
-  height: 88vh;
+  height: 79vh;
   width: 100%;
   // background-color: orange;
 
@@ -29,12 +29,12 @@
 
         display: flex;
         justify-content: space-between;
-        width: 190px;
+        width: 165px;
         // background-color: aqua;
 
         .normal {
           font-weight: 600;
-          font-size: 20px;
+          font-size: 17px;
           color: white;
           font-family: "Red Hat Text", sans-serif;
           transition: all 0.2s ease-in;
@@ -43,7 +43,7 @@
 
         .active {
           font-weight: 600;
-          font-size: 20px;
+          font-size: 17px;
           font-family: "Red Hat Text", sans-serif;
           transition: all 0.2s ease-in;
           // color: $highlight;
@@ -61,9 +61,8 @@
 
         .create-BTN {
           margin-bottom: 25px;
-
-          height: 45px;
-          width: 160px;
+          height: 35px;
+          width: 85px;
           display: flex;
           background-color: $highlight;
           border-radius: 5px;
@@ -71,7 +70,9 @@
           display: flex;
           align-items: center;
           font-family: "Red Hat Text", sans-serif;
-          font-size: 18px;
+          p{
+            display: none;
+          }
         }
       }
     }
@@ -236,9 +237,10 @@
   }
 }
 
+
 @include breakpoint-mixin("tablet") {
   .feed-section {
-    height: 88vh;
+    height: 78vh;
     width: 100%;
     // background-color: orange;
 
@@ -308,6 +310,10 @@
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             font-size: 18px;
+
+            p{
+              display: block;
+            }
           }
         }
       }
@@ -471,11 +477,12 @@
       }
     }
   }
+
 }
 
 @include breakpoint-mixin("tablet-wide") {
   .feed-section {
-    height: 88vh;
+    height: 78vh;
     width: 100%;
     // background-color: orange;
 
@@ -545,6 +552,10 @@
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             font-size: 18px;
+
+            p{
+              display: block;
+            }
           }
         }
       }
@@ -779,6 +790,10 @@
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             font-size: 18px;
+
+            p{
+              display: block;
+            }
           }
         }
       }
