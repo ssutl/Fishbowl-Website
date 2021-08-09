@@ -9,7 +9,13 @@ import { useHistory } from 'react-router-dom';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 
-function ProfileBar({search}) {
+function ProfileBar({profileToParent, search}) {
+    const [flag,setFlag] = useState(false) //Whenever user follows another user flag is set and state is passed to navbar so it knows when to refresh data
+
+
+    useEffect(()=>{
+        profileToParent(flag)
+    },[flag])
 
     let profileSearch = search
     let current_page = useLocation().pathname.split("/").pop();
@@ -23,7 +29,7 @@ function ProfileBar({search}) {
     const chatroom = current === "Chat";
     const dashboard = current_page ==="" && !searching;
     const userSearch = current_page === "" && searching
-    const [users, setUsers] = useState()
+    const [users, setUsers] = useState('')
     const [following,setFollowing] = useState()
     // console.log('following: ', following);
 
@@ -88,6 +94,7 @@ function ProfileBar({search}) {
                 data: {following: userID}
             }).then((res)=>{
                 getFollowing()
+                setFlag(!flag)
             })
         }else if(!value){
             axios({
@@ -97,7 +104,7 @@ function ProfileBar({search}) {
                 data: {unfollowing: userID}
             }).then((res)=>{
                 getFollowing()
-               
+                setFlag(!flag)
             })
         }
     }

@@ -8,20 +8,25 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
-function SpecificUserPage() {
+function SpecificUserPage({specificUserToParent}) {
+    const [following,setFollowing] = useState()
+
+
+    useEffect(()=>{
+        specificUserToParent(following)
+    },[following])
+
+
+
     const { state } = useLocation(); //Next users business
-    console.log('state: ', state);
     const info = useContext(UserContext) //Current Logged in users business
-    console.log('info: ', info);
 
     
     const token = localStorage.getItem('session-token')
 
 
     const[usersRooms,setUsersRooms] = useState([])
-    console.log('usersRooms: ', usersRooms);
-    const [following,setFollowing] = useState()
-    console.log('following: ', following);
+
 
 
     useEffect(()=>{ //On page load get the rooms of the user clicked on
@@ -63,7 +68,7 @@ function SpecificUserPage() {
                 headers: {"x-auth-token":`${token}`},
                 data: {following: state.user.username}
             }).then((res)=>{
-                console.log(res)
+                // console.log(res)
             })
         }else if(following){
             axios({
@@ -72,14 +77,13 @@ function SpecificUserPage() {
                 headers: {"x-auth-token":`${token}`},
                 data: {unfollowing: state.user.username}
             }).then((res)=>{
-                console.log('res: ', res);
+                // console.log('res: ', res);
                
             })
         }
     }
 
     let mypage = state.user.username === info.name;
-    console.log('mypage: ', mypage);
 
         
         

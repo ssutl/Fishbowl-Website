@@ -12,10 +12,16 @@ import { useHistory } from 'react-router-dom';
 function Middle({childToParent}) {
     const history = useHistory();
     const [search,setSearch] = useState("")
+    const [followReq,setFollowReq] = useState("")
 
     useEffect(()=>{
-        childToParent(search)
-    },[search])
+        const data = {search, followReq}
+        childToParent(data)
+    },[search, followReq])
+
+    const specificUserToParent = (specificUser) => {
+        setFollowReq(specificUser)
+    }
 
 
 
@@ -37,7 +43,9 @@ function Middle({childToParent}) {
                     <Route exact path="/" render={(props)=>(
                         <Feed search={search}/>
                     )}/>
-                    <Route exact path="/People/:name" component={withRouter(SpecificUserPage)}/>
+                    <Route exact path="/People/:name" render={()=>(
+                        <SpecificUserPage specificUserToParent={specificUserToParent}/>
+                    )}/>
                     <Route exact path="/Create/:name" component={withRouter(CreateRoom)}/>
                     <Route exact path="/Chat/:roomId" component={withRouter(ChatRoom)}/>
                 </Switch>

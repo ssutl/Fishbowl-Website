@@ -5,16 +5,22 @@ import { UserContext } from "../Context/CurrentUser";
 import { Link } from "react-router-dom";
 import mainLogo from'../svg/fish-bowl.png';
 
-function NavBar() {
-    
-
+function NavBar({profileData, followReq}) {
     const info = useContext(UserContext)
     const token = localStorage.getItem('session-token')
-    const [users, setUsers] = useState("")
+    const [users, setUsers] = useState([])
+    console.log('users: ', users);
+    const [following, setFollowing] = useState()
+    let list = []
+    const [loading, setLoading] = useState()
+
+    
+
 
 
     useEffect(()=>{
-        axios({
+        setLoading(true)
+        axios({ //Getting all users on the site
         method:"GET",
         url: `https://fishbowl-heroku.herokuapp.com/users/get`,
         headers: {"x-auth-token":`${token}`}
@@ -24,22 +30,34 @@ function NavBar() {
             console.log('error: ', error);
                 
         })
-    },[])
 
-    // const refreshUsers = () =>{
-    //     axios({
-    //         method:"GET",
-    //         url: `https://fishbowl-heroku.herokuapp.com/users/get`,
-    //         headers: {"x-auth-token":`${token}`}
-    //         }).then((response)=>{
-    //             setUsers(response.data)
-    //         }).catch((error)=>{
-    //             console.log('error: ', error);
-                    
-    //         })
-    // }
 
-    // setTimeout(refreshUsers,1000)
+        axios({
+        method:"GET", //Getting the users the current user follows
+        url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+        headers: {"x-auth-token":`${token}`}
+        }).then((response)=>{
+            setFollowing(response.data[0].following)
+            setLoading(false)
+        }).catch((error)=>{
+            console.log('error: ', error);
+                
+        })
+    },[profileData, followReq])
+
+    if(!loading){
+            users.map((user)=>{
+                if(following.includes(user.username)){
+                    list.push(user)   
+                }
+            })
+
+    }
+
+        
+    
+
+    
 
 
 
@@ -62,16 +80,16 @@ function NavBar() {
             <div className="people-holder">
                 <div className="upper">
                     <h1>People</h1>
-                    <h2>Online</h2>
+                    <h2>Friends</h2>
                 </div>
-                <div className={users.length === 0?"lower-set":"lower"}>
-                    {users.length === 0? (
+                <div className={list.length === 0?"lower-set":"lower"}>
+                    {list.length === 0? (
                         <>
                             <p>Connect With Friends</p>
                             <p id="small">Start by searching for a friends name in the searchbar</p>
                         </>
                     ) : 
-                    users.filter((newUser)=>{
+                    list.filter((newUser)=>{
                         return newUser.username !== info.name
                     }).map((user,index)=>{
                         return(
