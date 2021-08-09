@@ -44,7 +44,6 @@ function Middle({childToParent, dashboard}) {
                     </div>
                 </div>
                 <Switch>
-                    
                     {/* <Route exact path="/" component={withRouter(Feed)} value={search}/> */}
                     <Route exact path="/" render={(props)=>(
                         <Feed input={search} followR={followReq} dashboard={dashboard} roomCreated={roomCreated}/>
