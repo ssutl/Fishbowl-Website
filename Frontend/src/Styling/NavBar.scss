@@ -1,132 +1,77 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
 
-.nav-holder {
-  display: none;
-}
 @include breakpoint-mixin("tablet") {
   .nav-holder {
     display: flex;
-    width: 10%;
+    width: 27%;
     height: 100vh;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
+    justify-content: center;
     flex-direction: column;
-    justify-content: space-evenly;
     // background-color: aqua;
 
     .logo {
       height: 10%;
-      width: 100%;
+      width: 70%;
       // background-color: orange;
+      display: flex;
+      justify-content: center;
+
+      a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        img {
+          height: 65px;
+          width: 65px;
+          // margin-left: 20px;
+          // margin-right: 20px;
+        }
+
+        h1 {
+          color: white;
+          display: none;
+        }
+        // background-color: orange;
+      }
     }
 
     .people-holder {
       // background-color: rebeccapurple;
       width: 80%;
-      height: 85vh;
+      height: 88vh;
       overflow-y: auto;
-
       .upper {
-        display: none;
-      }
-      .lower {
-        height: 85%;
+        height: 15%;
         width: 100%;
         display: flex;
         flex-direction: column;
-
-        .user-holder {
-          display: flex;
-          height: 60px;
-          width: 100%;
-          margin-bottom: 20px;
-          align-items: center;
-          // justify-content: center;
-
-          a {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            // justify-content: center;
-
-            .circle {
-              margin-left: 8px;
-              border-radius: 100%;
-              height: 45px;
-              width: 45px;
-              background-color: $secondary-background;
-              overflow: hidden;
-
-              img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-              }
-            }
-
-            .online-circle {
-              position: relative;
-              top: 18px;
-              right: 15px;
-              height: 14px;
-              width: 14px;
-              border-radius: 100%;
-              background-color: $highlight;
-              box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-            }
-            .offline-circle {
-              position: relative;
-              top: 18px;
-              right: 15px;
-              height: 14px;
-              width: 14px;
-              border-radius: 100%;
-              background-color: $highlight;
-              box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
-              background-color: $negativeBTN;
-            }
-
-            p {
-              display: none;
-            }
-          }
+        justify-content: center;
+        h1,
+        h2 {
+          margin-left: 25px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+        }
+        h1 {
+          font-size: 25px;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+        h2 {
+          font-size: 16px;
+          opacity: 0.7;
         }
       }
-    }
-  }
-}
-
-@include breakpoint-mixin("tablet-wide") {
-  .nav-holder {
-    display: flex;
-    width: 10%;
-    height: 100vh;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    background-color: transparent;
-
-    .logo {
-      height: 10%;
-      width: 100%;
-      // background-color: orange;
-    }
-
-    .people-holder {
-      // background-color: rebeccapurple;
-      width: 80%;
-      height: 85vh;
-      overflow-y: auto;
-      .upper {
-        display: none;
-      }
       .lower {
         height: 85%;
         width: 100%;
         display: flex;
         flex-direction: column;
+        color: white;
 
         .user-holder {
           display: flex;
@@ -179,9 +124,192 @@
             }
 
             p {
-              display: none;
+              margin-left: 5px;
+              display: block;
+              font-weight: 500;
+              font-size: 20px;
+              font-family: "Red Hat Text", sans-serif;
+              color: white;
             }
           }
+        }
+      }
+      .lower-set {
+        width: 100%;
+        height: 10%;
+        // background-color: yellow;
+
+        p {
+          margin-left: 25px;
+          font-weight: 500;
+          font-size: 25px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+        }
+
+        #small {
+          font-weight: 500;
+          font-size: 20px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  .nav-holder {
+    display: flex;
+    width: 27%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // background-color: aqua;
+
+    .logo {
+      height: 10%;
+      width: 70%;
+      display: block;
+      // background-color: orange;
+
+      a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        img {
+          height: 65px;
+          width: 65px;
+          // margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        h1 {
+          color: white;
+          display: block;
+        }
+        // background-color: orange;
+      }
+    }
+
+    .people-holder {
+      // background-color: rebeccapurple;
+      width: 80%;
+      height: 88vh;
+      overflow-y: auto;
+      .upper {
+        height: 15%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1,
+        h2 {
+          margin-left: 25px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+        }
+        h1 {
+          font-size: 25px;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+        h2 {
+          font-size: 16px;
+          opacity: 0.7;
+        }
+      }
+      .lower {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        .user-holder {
+          display: flex;
+          height: 60px;
+          width: 100%;
+          margin-bottom: 20px;
+          align-items: center;
+
+          a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            // justify-content: flex-start;
+
+            .circle {
+              margin-left: 20px;
+              border-radius: 100%;
+              height: 45px;
+              width: 45px;
+              background-color: $secondary-background;
+              overflow: hidden;
+
+              img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+
+            .online-circle {
+              position: relative;
+              top: 18px;
+              right: 15px;
+              height: 14px;
+              width: 14px;
+              border-radius: 100%;
+              background-color: $highlight;
+              box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+            }
+            .offline-circle {
+              position: relative;
+              top: 18px;
+              right: 15px;
+              height: 14px;
+              width: 14px;
+              border-radius: 100%;
+              background-color: $highlight;
+              box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+              background-color: $negativeBTN;
+            }
+
+            p {
+              margin-left: 5px;
+              display: block;
+              font-weight: 500;
+              font-size: 20px;
+              font-family: "Red Hat Text", sans-serif;
+              color: white;
+            }
+          }
+        }
+      }
+      .lower-set {
+        width: 100%;
+        height: 10%;
+        // background-color: yellow;
+
+        p {
+          margin-left: 25px;
+          font-weight: 500;
+          font-size: 25px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+        }
+
+        #small {
+          font-weight: 500;
+          font-size: 20px;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          margin-top: 10px;
         }
       }
     }
@@ -202,6 +330,8 @@
     .logo {
       height: 10%;
       width: 70%;
+      display: block;
+
       // background-color: orange;
 
       a {
@@ -219,6 +349,7 @@
 
         h1 {
           color: white;
+          display: block;
         }
         // background-color: orange;
       }

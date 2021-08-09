@@ -1,21 +1,6 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
 
-.profile-holder {
-  display: none;
-}
-@include breakpoint-mixin("tablet") {
-  .profile-holder {
-    display: none;
-  }
-}
-
-@include breakpoint-mixin("tablet-wide") {
-  .profile-holder {
-    display: none;
-  }
-}
-
 @include breakpoint-mixin("desktop") {
   .profile-holder {
     display: flex;

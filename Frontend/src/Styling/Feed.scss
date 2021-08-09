@@ -1,6 +1,714 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
 
+.feed-section {
+  height: 88vh;
+  width: 100%;
+  // background-color: orange;
+
+  .top {
+    margin-left: auto;
+    margin-right: auto;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+
+    .holder {
+      // background-color: pink;
+      width: 81%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .feed-BTN {
+        margin-bottom: 25px;
+
+        display: flex;
+        justify-content: space-between;
+        width: 190px;
+        // background-color: aqua;
+
+        .normal {
+          font-weight: 600;
+          font-size: 20px;
+          color: white;
+          font-family: "Red Hat Text", sans-serif;
+          transition: all 0.2s ease-in;
+          opacity: 0.3;
+        }
+
+        .active {
+          font-weight: 600;
+          font-size: 20px;
+          font-family: "Red Hat Text", sans-serif;
+          transition: all 0.2s ease-in;
+          // color: $highlight;
+        }
+
+        p:hover {
+          cursor: pointer;
+          opacity: 0.6;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        .create-BTN {
+          margin-bottom: 25px;
+
+          height: 45px;
+          width: 160px;
+          display: flex;
+          background-color: $highlight;
+          border-radius: 5px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .bottom-section {
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .scroll {
+      height: 100%;
+      width: 80%;
+      overflow: auto;
+      scroll-behavior: smooth;
+
+      .link {
+        text-decoration: none;
+
+        .room-holder {
+          margin-top: 25px;
+          height: fit-content;
+          width: 100%;
+          background-color: $secondary-background;
+          word-break: break-all;
+          border-radius: 5px;
+          padding: 15px 0px 10px 0px;
+
+          .top-section {
+            color: white;
+
+            height: 57%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+              margin-left: 60px;
+              margin-right: 60px;
+              font-family: "Red Hat Text", sans-serif;
+            }
+
+            #Title {
+              font-size: 22px;
+              font-weight: 600;
+              margin-bottom: 10px;
+            }
+
+            #Question {
+              font-size: 17px;
+            }
+          }
+
+          .low-section {
+            margin-top: 15px;
+            height: 43%;
+            width: 100%;
+            // background-color: orange;
+            display: flex;
+            justify-content: center;
+
+            .low-holder {
+              height: 100%;
+              width: 85%;
+              display: flex;
+              flex-wrap: wrap;
+
+              .roomTag {
+                // background-color: aqua;
+                // cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                width: fit-content;
+                font-family: "Red Hat Text", sans-serif;
+                color: white;
+                border-radius: 50px;
+                font-size: 15px;
+                padding: 0px 15px 0px 15px;
+                background-color: $buttons;
+                margin: 5px 20px 4px 0px;
+                // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+              }
+            }
+          }
+        }
+        .room-holder-friend {
+          margin-top: 25px;
+          height: fit-content;
+          width: 100%;
+          background-color: #586f7c;
+          word-break: break-all;
+          border-radius: 5px;
+          padding: 15px 0px 10px 0px;
+
+          .top-section {
+            color: white;
+
+            height: 57%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+              margin-left: 60px;
+              margin-right: 60px;
+              font-family: "Red Hat Text", sans-serif;
+            }
+
+            #Title {
+              font-size: 22px;
+              font-weight: 600;
+              margin-bottom: 10px;
+            }
+
+            #Question {
+              font-size: 17px;
+            }
+          }
+
+          .low-section {
+            margin-top: 15px;
+            height: 43%;
+            width: 100%;
+            // background-color: orange;
+            display: flex;
+            justify-content: center;
+
+            .low-holder {
+              height: 100%;
+              width: 85%;
+              display: flex;
+              flex-wrap: wrap;
+
+              .roomTag {
+                // background-color: aqua;
+                // cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                width: fit-content;
+                font-family: "Red Hat Text", sans-serif;
+                color: white;
+                border-radius: 50px;
+                font-size: 15px;
+                padding: 0px 15px 0px 15px;
+                background-color: $buttons;
+                margin: 5px 20px 4px 0px;
+                // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet") {
+  .feed-section {
+    height: 88vh;
+    width: 100%;
+    // background-color: orange;
+
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        // background-color: pink;
+        width: 81%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          margin-bottom: 25px;
+
+          display: flex;
+          justify-content: space-between;
+          width: 190px;
+          // background-color: aqua;
+
+          .normal {
+            font-weight: 600;
+            font-size: 20px;
+            color: white;
+            font-family: "Red Hat Text", sans-serif;
+            transition: all 0.2s ease-in;
+            opacity: 0.3;
+          }
+
+          .active {
+            font-weight: 600;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+            transition: all 0.2s ease-in;
+            // color: $highlight;
+          }
+
+          p:hover {
+            cursor: pointer;
+            opacity: 0.6;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            margin-bottom: 25px;
+
+            height: 45px;
+            width: 160px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-section {
+      height: 77vh;
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .scroll {
+        height: 100%;
+        width: 80%;
+        overflow: auto;
+        scroll-behavior: smooth;
+
+        .link {
+          text-decoration: none;
+
+          .room-holder {
+            margin-top: 25px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 25px;
+            height: fit-content;
+            width: 100%;
+            background-color: #586f7c;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  .feed-section {
+    height: 88vh;
+    width: 100%;
+    // background-color: orange;
+
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        // background-color: pink;
+        width: 81%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          margin-bottom: 25px;
+
+          display: flex;
+          justify-content: space-between;
+          width: 190px;
+          // background-color: aqua;
+
+          .normal {
+            font-weight: 600;
+            font-size: 20px;
+            color: white;
+            font-family: "Red Hat Text", sans-serif;
+            transition: all 0.2s ease-in;
+            opacity: 0.3;
+          }
+
+          .active {
+            font-weight: 600;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+            transition: all 0.2s ease-in;
+            // color: $highlight;
+          }
+
+          p:hover {
+            cursor: pointer;
+            opacity: 0.6;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            margin-bottom: 25px;
+
+            height: 45px;
+            width: 160px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-section {
+      height: 77vh;
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .scroll {
+        height: 100%;
+        width: 80%;
+        overflow: auto;
+        scroll-behavior: smooth;
+
+        .link {
+          text-decoration: none;
+
+          .room-holder {
+            margin-top: 25px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 25px;
+            height: fit-content;
+            width: 100%;
+            background-color: #586f7c;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @include breakpoint-mixin("desktop") {
   .feed-section {
     height: 90vh;
@@ -27,13 +735,26 @@
         .feed-BTN {
           display: flex;
           justify-content: space-between;
-          width: 165px;
+          margin-bottom: 0px;
+
+          width: 190px;
           // background-color: aqua;
 
-          p {
+          .normal {
+            font-weight: 600;
+            font-size: 20px;
+            color: white;
+            font-family: "Red Hat Text", sans-serif;
+            transition: all 0.2s ease-in;
+            opacity: 0.3;
+          }
+
+          .active {
             font-weight: 600;
             font-size: 20px;
             font-family: "Red Hat Text", sans-serif;
+            transition: all 0.2s ease-in;
+            // color: $highlight;
           }
 
           p:hover {
@@ -47,6 +768,7 @@
           color: white;
 
           .create-BTN {
+            margin-bottom: 0px;
             height: 45px;
             width: 160px;
             display: flex;
@@ -83,6 +805,75 @@
             height: fit-content;
             width: 100%;
             background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: #586f7c;
             word-break: break-all;
             border-radius: 5px;
             padding: 15px 0px 10px 0px;

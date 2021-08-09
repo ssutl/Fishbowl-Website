@@ -1,4 +1,5 @@
 @import "./Theme.scss";
+@import "./Breakpoints.scss";
 
 * {
   padding: 0;
@@ -7,5 +8,41 @@
 
 .App {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
+}
+
+@include breakpoint-mixin("tablet") {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .App {
+    display: flex;
+    // justify-content: center;
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .App {
+    display: flex;
+    // justify-content: center;
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .App {
+    display: flex;
+    justify-content: center;
+  }
 }
