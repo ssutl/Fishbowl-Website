@@ -1,6 +1,158 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
 
+.section {
+  height: 79vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  // background-color: aqua;
+
+  .section-holder {
+    height: fit-content;
+    width: 87%;
+    display: flex;
+    justify-content: center;
+    background-color: $secondary-background;
+    // background-color: yellow;
+    border-radius: 5px;
+    flex-direction: column;
+
+    .title {
+      height: 8vh;
+      width: 100%;
+      display: flex;
+      // background-color: red;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+
+      .home {
+        height: 100%;
+        width: 17%;
+        display: flex;
+        align-items: center;
+        color: white;
+        margin-left: 20px;
+        // background-color: purple;
+        justify-content: space-between;
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          #arrow {
+            font-weight: 800;
+          }
+
+          h2 {
+            margin-bottom: 7px;
+            display: none;
+          }
+        }
+      }
+    }
+
+    .inputs {
+      height: 25vh;
+      width: 100%;
+      // background-color: yellow;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+
+      .input_field {
+        // background-color: orange;
+        color: white;
+        font-size: 18px;
+        width: 65%;
+        height: 30px;
+        outline: 0;
+        border: 0;
+        background-color: transparent;
+        border-bottom: 2px solid white;
+        margin-left: 40px;
+      }
+
+      .text-counter {
+        position: relative;
+        left: 265px;
+        bottom: 40px;
+        height: 40px;
+        width: 40px;
+        background-color: $highlight;
+        border-radius: 3px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #question {
+        margin-top: 0px;
+      }
+    }
+    .boxes {
+      height: 30vh;
+      width: 100%;
+      // background-color: aqua;
+      display: flex;
+      justify-content: center;
+
+      .box-holder {
+        // background-color: orange;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        // justify-content: center;
+        flex-wrap: wrap;
+        // margin-left: 50px;
+
+        .tag {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+          width: fit-content;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          border-radius: 50px;
+          font-size: 15px;
+          padding: 0px 15px 0px 15px;
+          background-color: $buttons;
+          margin: 5px 10px 5px 10px;
+        }
+
+        .selected {
+          background-color: orange;
+        }
+      }
+    }
+    .submit {
+      height: 13vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      // background-color: green;
+
+      .BTN {
+        margin-right: 30px;
+        height: 40px;
+        width: 95px;
+        border-radius: 5px;
+        background-color: $highlight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Red Hat Text", sans-serif;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 @include breakpoint-mixin("tablet") {
   .section {
     height: 78vh;
@@ -46,6 +198,8 @@
 
             h2 {
               margin-bottom: 7px;
+            display: block;
+
             }
           }
         }
@@ -70,6 +224,8 @@
           border: 0;
           background-color: transparent;
           border-bottom: 2px solid white;
+          margin-left: 0px;
+
         }
 
         .text-counter {
@@ -200,6 +356,8 @@
 
             h2 {
               margin-bottom: 7px;
+            display: block;
+
             }
           }
         }
@@ -224,6 +382,8 @@
           border: 0;
           background-color: transparent;
           border-bottom: 2px solid white;
+          margin-left: 0px;
+
         }
 
         .text-counter {
@@ -350,6 +510,8 @@
 
             h2 {
               margin-bottom: 7px;
+            display: block;
+
             }
           }
         }
@@ -374,6 +536,8 @@
           border: 0;
           background-color: transparent;
           border-bottom: 2px solid white;
+          margin-left: 0px;
+
         }
 
         .text-counter {

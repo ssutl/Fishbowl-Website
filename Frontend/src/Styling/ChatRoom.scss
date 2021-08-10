@@ -224,6 +224,7 @@
       max-height: 38vh;
       width: 100%;
       overflow-y: auto;
+      scroll-behavior: smooth;
 
       .msg {
         // margin-top: 20px;
@@ -567,6 +568,7 @@
         max-height: 40vh;
         width: 100%;
         overflow-y: auto;
+        scroll-behavior: smooth;
 
         .msg {
           // margin-top: 20px;
@@ -911,6 +913,7 @@
         max-height: 45vh;
         width: 100%;
         overflow-y: auto;
+        scroll-behavior: smooth;
 
         .msg {
           // margin-top: 20px;
@@ -1256,6 +1259,7 @@
         max-height: 50vh;
         width: 100%;
         overflow-y: auto;
+        scroll-behavior: smooth;
 
         .msg {
           // margin-top: 20px;

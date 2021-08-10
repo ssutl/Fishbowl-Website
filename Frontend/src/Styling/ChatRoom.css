@@ -286,6 +286,7 @@
   max-height: 38vh;
   width: 100%;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 .chat-room-section .chat-room-holder .messaging .msg {
@@ -689,6 +690,7 @@
     max-height: 40vh;
     width: 100%;
     overflow-y: auto;
+    scroll-behavior: smooth;
   }
   .chat-room-section .chat-room-holder .messaging .msg {
     height: -webkit-fit-content;
@@ -1081,6 +1083,7 @@
     max-height: 45vh;
     width: 100%;
     overflow-y: auto;
+    scroll-behavior: smooth;
   }
   .chat-room-section .chat-room-holder .messaging .msg {
     height: -webkit-fit-content;
@@ -1474,6 +1477,7 @@
     max-height: 50vh;
     width: 100%;
     overflow-y: auto;
+    scroll-behavior: smooth;
   }
   .chat-room-section .chat-room-holder .messaging .msg {
     height: -webkit-fit-content;

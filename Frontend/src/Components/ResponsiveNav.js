@@ -19,6 +19,7 @@ function ResponsiveNav() {
 
 
 
+
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
@@ -43,6 +44,12 @@ function ResponsiveNav() {
         })
     }
 
+    let user = { //Creating object for when user clicks their own profile
+        email: info.email,
+        id: info.id,
+        image: info.image,
+        username: info.name
+    }
 
     if (screenWidth < breakpoint) {
         return (
@@ -50,7 +57,7 @@ function ResponsiveNav() {
                 <Link to="/">
                     <p>Home</p>
                 </Link>
-                <Link>
+                <Link to={{ pathname: `/People/${user.name}`, state: { user: user } }}>
                     <p>My Page</p>
                 </Link>
                 <GoogleLogout
