@@ -3,12 +3,12 @@ import '../Styling/NavBar.css'
 import axios from 'axios';
 import { UserContext } from "../Context/CurrentUser";
 import { Link } from "react-router-dom";
-import mainLogo from'../svg/fish-bowl.png';
+import mainLogo from '../svg/fish-bowl.png';
 import BarLoader from "react-spinners/BarLoader";
 import { css } from "@emotion/react";
 
 
-function NavBar({profileData, followReq}) {
+function NavBar({ profileData, followReq }) {
     const info = useContext(UserContext)
     const token = localStorage.getItem('session-token')
     const [users, setUsers] = useState([])
@@ -22,57 +22,57 @@ function NavBar({profileData, followReq}) {
     const resize = () => {
         setScreenWidth(window.innerWidth);
         // console.log("window.innerWidth: ", window.innerWidth);
-      };
+    };
 
-  window.addEventListener("resize", resize);
-
-
-
-
-    
+    window.addEventListener("resize", resize);
 
 
 
-    useEffect(()=>{
+
+
+
+
+
+    useEffect(() => {
         setLoading(true)
         axios({ //Getting all users on the site
-        method:"GET",
-        url: `https://fishbowl-heroku.herokuapp.com/users/get`,
-        headers: {"x-auth-token":`${token}`}
-        }).then((response)=>{
+            method: "GET",
+            url: `http://localhost:5000/users/get`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((response) => {
             setUsers(response.data)
-        }).catch((error)=>{
+        }).catch((error) => {
             console.log('error: ', error);
-                
+
         })
 
 
         axios({
-        method:"GET", //Getting the users the current user follows
-        url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
-        headers: {"x-auth-token":`${token}`}
-        }).then((response)=>{
+            method: "GET", //Getting the users the current user follows
+            url: `http://localhost:5000/users/get/${info.name}`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((response) => {
             setFollowing(response.data[0].following)
             setLoading(false)
-        }).catch((error)=>{
+        }).catch((error) => {
             console.log('error: ', error);
-                
-        })
-    },[profileData, followReq])
 
-    if(loading === false){
-            users.map((user)=>{
-                if(following.includes(user.username)){
-                    list.push(user)   
-                }
-            })
+        })
+    }, [profileData, followReq])
+
+    if (loading === false) {
+        users.map((user) => {
+            if (following.includes(user.username)) {
+                list.push(user)
+            }
+        })
 
     }
 
-        
-    
 
-    
+
+
+
 
 
     const override = css`
@@ -88,7 +88,7 @@ function NavBar({profileData, followReq}) {
             <div className="nav-holder">
                 <div className="logo">
                     <Link to="/">
-                        <img src={mainLogo}/>
+                        <img src={mainLogo} />
                         <h1>Fishbowl</h1>
                     </Link>
                 </div>
@@ -100,38 +100,38 @@ function NavBar({profileData, followReq}) {
                         <h1>People</h1>
                         <h2>Friends</h2>
                     </div>
-                    <div className={list.length === 0 || list == null?"lower-set":"lower"}>
-                        {list.length === 0 || list == null && following.length === 0? (
+                    <div className={list.length === 0 || list == null ? "lower-set" : "lower"}>
+                        {list.length === 0 || list == null && following.length === 0 ? (
                             <>
                                 <p>Connect With Friends</p>
                                 <p id="small">Start by searching for a friends name in the searchbar</p>
                             </>
-                        ) : list.length === 0 && following.length !== 0?(
-                            <BarLoader color={"#FFFFFF"}  size={300} css={override}/>
-                        ):
-                        list.filter((newUser)=>{
-                            return newUser.username !== info.name
-                        }).map((user,index)=>{
-                            return(
+                        ) : list.length === 0 && following.length !== 0 ? (
+                            <BarLoader color={"#FFFFFF"} size={300} css={override} />
+                        ) :
+                            list.filter((newUser) => {
+                                return newUser.username !== info.name
+                            }).map((user, index) => {
+                                return (
                                     <div className="user-holder" key={index}>
-                                    <Link to={{pathname: `/People/${user.username}`, state:{user: user}}} key={index}>
+                                        <Link to={{ pathname: `/People/${user.username}`, state: { user: user } }} key={index}>
                                             <div className="circle">
                                                 <img src={user.image} alt=""></img>
-                                            </div>  
-                                            <div className={user.online?"online-circle":"offline-circle"}>
-                                            </div>  
-                                            <p>{screenWidth < 1024?user.username.substring(0,5) + ' ..':user.username}</p>  
+                                            </div>
+                                            <div className={user.online ? "online-circle" : "offline-circle"}>
+                                            </div>
+                                            <p>{screenWidth < 1024 ? user.username.substring(0, 5) + ' ..' : user.username}</p>
                                         </Link>
-                                    </div>  
-                            )
-                        })}
+                                    </div>
+                                )
+                            })}
 
                     </div>
                 </div>
             </div>
         )
-    }else if (screenWidth < breakpoint) {
-        return(
+    } else if (screenWidth < breakpoint) {
+        return (
             null
         )
     }

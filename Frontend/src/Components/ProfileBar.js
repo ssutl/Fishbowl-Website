@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect} from "react";
+import React, { useContext, useState, useEffect } from "react";
 import '../Styling/ProfileBar.css'
 import { useLocation } from 'react-router-dom';
 import { GoogleLogout } from 'react-google-login';
@@ -9,28 +9,28 @@ import { useHistory } from 'react-router-dom';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 
-function ProfileBar({profileToParent, search}) {
-    const [flag,setFlag] = useState(false) //Whenever user follows another user flag is set and state is passed to navbar so it knows when to refresh data
+function ProfileBar({ profileToParent, search }) {
+    const [flag, setFlag] = useState(false) //Whenever user follows another user flag is set and state is passed to navbar so it knows when to refresh data
 
 
-    useEffect(()=>{
+    useEffect(() => {
         profileToParent(flag)
-    },[flag])
+    }, [flag])
 
     let profileSearch = search
     let current_page = useLocation().pathname.split("/").pop();
     let current = useLocation().pathname.split("/").slice(-2)[0];
 
     const info = useContext(UserContext)
-    
+
     const history = useHistory();
     const token = localStorage.getItem('session-token')
-    const [searching,setSearching] = useState(false)
+    const [searching, setSearching] = useState(false)
     const chatroom = current === "Chat";
-    const dashboard = current_page ==="" && !searching;
+    const dashboard = current_page === "" && !searching;
     const userSearch = current_page === "" && searching
     const [users, setUsers] = useState('')
-    const [following,setFollowing] = useState()
+    const [following, setFollowing] = useState()
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     console.log('screenWidth: ', screenWidth);
     const breakpoint = 1248;
@@ -38,9 +38,9 @@ function ProfileBar({profileToParent, search}) {
     const resize = () => {
         setScreenWidth(window.innerWidth);
         // console.log("window.innerWidth: ", window.innerWidth);
-      };
+    };
 
-  window.addEventListener("resize", resize);
+    window.addEventListener("resize", resize);
 
 
     // console.log('following: ', following);
@@ -48,73 +48,73 @@ function ProfileBar({profileToParent, search}) {
     // console.log('users: ', users);
 
 
-      
-
-      
-    useEffect(()=>{ //Setting searching state whenever search value is larger than 0
-          setSearching(profileSearch.length > 0)
-    },[profileSearch])
 
 
-    useEffect(()=>{ //Recieving users for the dashboard
+
+    useEffect(() => { //Setting searching state whenever search value is larger than 0
+        setSearching(profileSearch.length > 0)
+    }, [profileSearch])
+
+
+    useEffect(() => { //Recieving users for the dashboard
         axios({
-        method:"GET",
-        url: "https://fishbowl-heroku.herokuapp.com/users/get",
-        headers: {"x-auth-token":`${token}`}
-        }).then((response)=>{
+            method: "GET",
+            url: "http://localhost:5000/users/get",
+            headers: { "x-auth-token": `${token}` }
+        }).then((response) => {
             setUsers(response.data)
-        }).catch((error)=>{
+        }).catch((error) => {
             console.log('error: ', error);
-                
+
         })
 
         axios({
-        method:"GET",
-        url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
-        headers: {"x-auth-token":`${token}`}
-        }).then((response)=>{
+            method: "GET",
+            url: `http://localhost:5000/users/get/${info.name}`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((response) => {
             setFollowing(response.data[0].following)
-        }).catch((error)=>{
+        }).catch((error) => {
             console.log('error: ', error);
-                
+
         })
 
-        
-    },[current_page])
 
-    const getFollowing = () =>{
+    }, [current_page])
+
+    const getFollowing = () => {
         axios({
-            method:"GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
-            headers: {"x-auth-token":`${token}`}
-            }).then((response)=>{
-                setFollowing(response.data[0].following)
-            }).catch((error)=>{
-                console.log('error: ', error);
-                    
-            })
+            method: "GET",
+            url: `http://localhost:5000/users/get/${info.name}`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((response) => {
+            setFollowing(response.data[0].following)
+        }).catch((error) => {
+            console.log('error: ', error);
+
+        })
     }
 
 
-    const requests = (userID, value) =>{
+    const requests = (userID, value) => {
         console.log('user: ', user);
-        if(value){
+        if (value) {
             axios({
-                method:'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
-                headers: {"x-auth-token":`${token}`},
-                data: {following: userID}
-            }).then((res)=>{
+                method: 'PUT',
+                url: `http://localhost:5000/users/update/${info.name}`,
+                headers: { "x-auth-token": `${token}` },
+                data: { following: userID }
+            }).then((res) => {
                 getFollowing()
                 setFlag(!flag)
             })
-        }else if(!value){
+        } else if (!value) {
             axios({
-                method:'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
-                headers: {"x-auth-token":`${token}`},
-                data: {unfollowing: userID}
-            }).then((res)=>{
+                method: 'PUT',
+                url: `http://localhost:5000/users/update/${info.name}`,
+                headers: { "x-auth-token": `${token}` },
+                data: { unfollowing: userID }
+            }).then((res) => {
                 getFollowing()
                 setFlag(!flag)
             })
@@ -122,40 +122,40 @@ function ProfileBar({profileToParent, search}) {
     }
 
 
-      
 
-      const logout = () =>{
+
+    const logout = () => {
 
         axios({ //On logout changing users status to offline
-            method:`PUT`,
-            url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
-            headers: {"x-auth-token":`${token}`},
-            data: {"online":false}
-        }).then((response)=>{
+            method: `PUT`,
+            url: `http://localhost:5000/users/update/${info.name}`,
+            headers: { "x-auth-token": `${token}` },
+            data: { "online": false }
+        }).then((response) => {
             history.go(0)
-        }).catch((error)=>{
+        }).catch((error) => {
             console.log('error: ', error);
-            
+
         })
-      }
+    }
 
-      
 
-      let user = { //Creating object for when user clicks their own profile
+
+    let user = { //Creating object for when user clicks their own profile
         email: info.email,
         id: info.id,
         image: info.image,
-        username:info.name
+        username: info.name
     }
 
     if (screenWidth > breakpoint) {
-      
+
         return (
             <div className="profile-holder">
                 <div className="profile">
                     <div className="upper-profile">
                         <div className="left">
-                            <Link to={{pathname: `/People/${info.name}`, state:{user: user}}}>
+                            <Link to={{ pathname: `/People/${info.name}`, state: { user: user } }}>
                                 <div className="image-holder">
                                     <img src={info.image} className="image" alt=""></img>
                                 </div>
@@ -168,9 +168,9 @@ function ProfileBar({profileToParent, search}) {
                     </div>
                     <div className="lower-profile">
                         <GoogleLogout
-                        clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
-                        buttonText="Logout"
-                        onLogoutSuccess={logout}
+                            clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
+                            buttonText="Logout"
+                            onLogoutSuccess={logout}
                         >
                         </GoogleLogout>
                     </div>
@@ -179,35 +179,35 @@ function ProfileBar({profileToParent, search}) {
                     <div className="dashboard">
                         <p>Dashboard Panel</p>
                     </div>
-                    {dashboard?<h1>dashboard</h1>:userSearch?(
+                    {dashboard ? <h1>dashboard</h1> : userSearch ? (
                         <div className="users">
                             <div className="holder">
-                                {users.length === 0? <h1>Empty</h1> : users.filter((eachUser)=>{
+                                {users.length === 0 ? <h1>Empty</h1> : users.filter((eachUser) => {
                                     return eachUser.username !== info.name && eachUser.username.toUpperCase().includes(profileSearch.toUpperCase())
-                                }).map((user,index)=>{
-                                    return(
+                                }).map((user, index) => {
+                                    return (
                                         <div className="user-holder">
-                                            <Link to={{pathname: `/People/${user.name}`, state:{user: user}}}>
-                                                <img src={user.image} alt=""/>
+                                            <Link to={{ pathname: `/People/${user.name}`, state: { user: user } }}>
+                                                <img src={user.image} alt="" />
                                                 <h2>{user.username}</h2>
                                             </Link>
-                                            <div className={following.includes(user.username)?"following-BTN":"follow-BTN"} onClick={()=>requests(user.username, !following.includes(user.username))}>
-                                                <PersonAddIcon id=""/>
-                                                {following.includes(user.username)?<p>Following</p>:<p>Follow</p>}
+                                            <div className={following.includes(user.username) ? "following-BTN" : "follow-BTN"} onClick={() => requests(user.username, !following.includes(user.username))}>
+                                                <PersonAddIcon id="" />
+                                                {following.includes(user.username) ? <p>Following</p> : <p>Follow</p>}
                                             </div>
                                         </div>
                                     )
                                 })}
                             </div>
                         </div>
-                    ):chatroom?<h1>Chat Room</h1>:null}
+                    ) : chatroom ? <h1>Chat Room</h1> : null}
 
                 </div>
             </div>
         )
-    }else if (screenWidth < breakpoint) {
-        return(
-           null
+    } else if (screenWidth < breakpoint) {
+        return (
+            null
         )
     }
 }

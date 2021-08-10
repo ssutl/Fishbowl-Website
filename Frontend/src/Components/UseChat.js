@@ -4,7 +4,7 @@ import { UserContext } from "../Context/CurrentUser";
 
 
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage"; // Name of the event
-const SOCKET_SERVER_URL = "https://fishbowl-heroku.herokuapp.com";
+const SOCKET_SERVER_URL = "http://localhost:5000";
 
 const useChat = (roomId) => {
   const [messages, setMessages] = useState([]); // Sent and received messages
@@ -13,12 +13,12 @@ const useChat = (roomId) => {
 
 
   useEffect(() => {
-    
+
     // Creates a WebSocket connection
     socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
       query: { roomId },
     });
-    
+
     // Listens for incoming messages
     socketRef.current.on(NEW_CHAT_MESSAGE_EVENT, (message) => {
       const incomingMessage = {
@@ -27,7 +27,7 @@ const useChat = (roomId) => {
       };
       setMessages((messages) => [...messages, incomingMessage]);
     });
-    
+
     // Destroys the socket reference
     // when the connection is closed
     return () => {
@@ -44,7 +44,7 @@ const useChat = (roomId) => {
       senderId: socketRef.current.id,
       sentBy: info.name,
       sentByImage: info.image,
-      date: {year:currentdate.getFullYear(), month:currentdate.getMonth(), day:currentdate.getDate(), hour:currentdate.getHours()},
+      date: { year: currentdate.getFullYear(), month: currentdate.getMonth(), day: currentdate.getDate(), hour: currentdate.getHours() },
       likes: []
     });
   };

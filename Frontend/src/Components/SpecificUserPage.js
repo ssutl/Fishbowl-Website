@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect} from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { UserContext } from "../Context/CurrentUser";
 import { ReactComponent as YourSvg } from '../svg/Void.svg';
@@ -8,144 +8,156 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
-function SpecificUserPage({specificUserToParent}) {
-    const [following,setFollowing] = useState()
+function SpecificUserPage({ specificUserToParent }) {
+    const [following, setFollowing] = useState()
+    const breakpoint = 768;
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    const resize = () => {
+        setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", resize);
 
 
-    useEffect(()=>{
+    useEffect(() => {
         specificUserToParent(following)
-    },[following])
+    }, [following])
 
 
 
     const { state } = useLocation(); //Next users business
     const info = useContext(UserContext) //Current Logged in users business
 
-    
+
     const token = localStorage.getItem('session-token')
 
 
-    const[usersRooms,setUsersRooms] = useState([])
+    const [usersRooms, setUsersRooms] = useState([])
 
 
 
-    useEffect(()=>{ //On page load get the rooms of the user clicked on
+    useEffect(() => { //On page load get the rooms of the user clicked on
         axios({
-            method:'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get/${state.user.username}`,
-            headers: {"x-auth-token":`${token}`}
-        }).then((res)=>{
+            method: 'GET',
+            url: `http://localhost:5000/chat/get/${state.user.username}`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((res) => {
             setUsersRooms(res.data.reverse())
         })
 
         axios({ //Checking if logged in user is following the user which has been clicked
-            method:'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
-            headers: {"x-auth-token":`${token}`}
-        }).then((res)=>{
-            if(res.data[0].following.includes(state.user.username)){
+            method: 'GET',
+            url: `http://localhost:5000/users/get/${info.name}`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((res) => {
+            if (res.data[0].following.includes(state.user.username)) {
                 setFollowing(true)
-            }else{
+            } else {
                 setFollowing(false)
             }
         })
 
-    },[state])
-
-    
+    }, [state])
 
 
-    const handleInteract = () =>{
+
+
+    const handleInteract = () => {
         setFollowing(!following)
         requests()
     }
 
-    const requests = () =>{
-        if(!following){
+    const requests = () => {
+        if (!following) {
             axios({
-                method:'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
-                headers: {"x-auth-token":`${token}`},
-                data: {following: state.user.username}
-            }).then((res)=>{
+                method: 'PUT',
+                url: `http://localhost:5000/users/update/${info.name}`,
+                headers: { "x-auth-token": `${token}` },
+                data: { following: state.user.username }
+            }).then((res) => {
                 // console.log(res)
             })
-        }else if(following){
+        } else if (following) {
             axios({
-                method:'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
-                headers: {"x-auth-token":`${token}`},
-                data: {unfollowing: state.user.username}
-            }).then((res)=>{
+                method: 'PUT',
+                url: `http://localhost:5000/users/update/${info.name}`,
+                headers: { "x-auth-token": `${token}` },
+                data: { unfollowing: state.user.username }
+            }).then((res) => {
                 // console.log('res: ', res);
-               
+
             })
         }
     }
 
     let mypage = state.user.username === info.name;
 
-        
-        
 
 
-        
+
+
+
 
 
     return (
-        
+
         <div className="section2">
             <div className="holder">
-                    <div className="banner">
+                <div className="banner">
+                </div>
+                <div className="imageHolder">
+                    <img src={state.user.image} alt="" />
+                </div>
+                {mypage ? usersRooms.length === 0 ? (
+                    <div className="follow-my-section"></div>
+                ) : screenWidth < breakpoint ? (<div className="follow-my-section" />) : (
+
+                    <div className="follow-my-section">
+                        <p>My Rooms</p>
                     </div>
-                    <div className="imageHolder">
-                        <img src={state.user.image} alt=""/>
+
+                ) : (
+                    <div className="follow-section">
+                        <div className={following ? "following-BTN" : "follow-BTN"} onClick={handleInteract}>
+                            <PersonAddIcon id="" />
+                            {following ? <p>Following</p> : <p>Follow</p>}
+                        </div>
+                        {screenWidth < breakpoint ? null : (
+                            <p>{usersRooms.length === 0 ? null : `${state.user.username}'s Room's`}</p>
+                        )}
                     </div>
-                    {mypage?usersRooms.length === 0?(
-                        <div className="follow-my-section"></div>
-                    ):(
-                        <div className="follow-my-section">
-                            <p>My Rooms</p>
-                        </div>
-                    ):(
-                        <div className="follow-section">
-                            <div className={following?"following-BTN":"follow-BTN"} onClick={handleInteract}>
-                                <PersonAddIcon id=""/>
-                                {following?<p>Following</p>:<p>Follow</p>}
-                            </div>
-                            <p>{usersRooms.length === 0? null: `${state.user.username}'s Room's`}</p>
-                        </div>
-                    )}
-                    <div className="specificFeedHolder">
-                        <div className={usersRooms.length === 0?"svg":"scrollUser"}>
-                                {usersRooms.length === 0? (
-                                    <>
-                                        <div className="titlo"><h1>{mypage?`YOU HAVE NO ROOMS`:`${state.user.username.toUpperCase()} HAS NO ROOMS`}</h1></div>
-                                        <div className="svg"><YourSvg id="svg"/></div>
-                                    </>
-                                ): usersRooms.map((room, index)=>{
-                                        return(
-                                            <Link to={{pathname:`/Chat/${room.Title}`, state:{room}}} className="link1" key={index}>
-                                                <div className="usersRooms" key={index}>
-                                                    <div className="upper">
-                                                        <p id="Title">{room.Title}</p>
-                                                        <p id="Question">{room.Question.substring(0,70)}</p>
-                                                    </div>
-                                                    <div className="lower">
-                                                        <div className="low-holder">
-                                                            {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag,index)=>{
-                                                                return <div className="roomTag" key={index}>{tag}</div>
-                                                                })}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </Link>
-                                        )
-                                })}
-                        </div>
+                )}
+                <div className="specificFeedHolder">
+                    <div className={usersRooms.length === 0 ? "svg" : "scrollUser"}>
+                        {usersRooms.length === 0 ? (
+                            <>
+                                <div className="titlo"><h1>{mypage ? `YOU HAVE NO ROOMS` : `${state.user.username.toUpperCase()} HAS NO ROOMS`}</h1></div>
+                                <div className="svg"><YourSvg id="svg" /></div>
+                            </>
+                        ) : usersRooms.map((room, index) => {
+                            return (
+                                <Link to={{ pathname: `/Chat/${room.Title}`, state: { room } }} className="link1" key={index}>
+                                    <div className="usersRooms" key={index}>
+                                        <div className="upper">
+                                            <p id="Title">{room.Title}</p>
+                                            <p id="Question">{room.Question.substring(0, 70)}</p>
+                                        </div>
+                                        <div className="lower">
+                                            <div className="low-holder">
+                                                {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag, index) => {
+                                                    return <div className="roomTag" key={index}>{tag}</div>
+                                                })}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            )
+                        })}
                     </div>
+                </div>
             </div>
-            
+
         </div>
     )
 }

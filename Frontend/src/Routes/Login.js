@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import App from '../App'
 import { GoogleLogin } from 'react-google-login';
 import '../Styling/Login.css'
@@ -10,9 +10,9 @@ function Login() {
                 Current User Info
     ============================
     */
-    const [username,setUserName] = useState("")
+    const [username, setUserName] = useState("")
     const [userClicked, setUserClicked] = useState()
-    const [image,setImage] = useState("")
+    const [image, setImage] = useState("")
     const [email, setEmail] = useState("")
     const [online, setOnline] = useState(false)
     const [logged, setLogged] = useState()
@@ -21,63 +21,64 @@ function Login() {
     const [token, setToken] = useState()
 
 
-    const responseSuccessGoogle = (response) =>{
+    const responseSuccessGoogle = (response) => {
         setUserName(response.profileObj.name) //Using Google Response to set current User
         setEmail(response.profileObj.email)
         setImage(response.profileObj.imageUrl)
         setToken(response.tokenId)
         setOnline(true) //Marking that user is online
         setUserClicked(true)
-        
+
     }
-    
-    if(userClicked){
-        localStorage.setItem('session-token',token)
-        
+
+    if (userClicked) {
+        localStorage.setItem('session-token', token)
+
         axios({ //Retrieving the user table to get the id of the current user
-            method:"GET",
-            url: "https://fishbowl-heroku.herokuapp.com/users/get",
-            headers: {"x-auth-token":`${token}`}
-        }).then((response)=>{
+            method: "GET",
+            url: "http://localhost:5000/users/get",
+            headers: { "x-auth-token": `${token}` }
+        }).then((response) => {
             // console.log('response from get request: ', response);
-            response.data.forEach((student)=>{
-                if(student.username === username){
+            response.data.forEach((student) => {
+                if (student.username === username) {
                     setUserId(student._id)
                 }
             })
         })
 
         axios({ //Creating users account & if user already has account it wont be created again
-            method:"POST",
-            url: "https://fishbowl-heroku.herokuapp.com/users/new",
-            headers: {"x-auth-token":`${token}`},
-            data: {username,email, image, online}
-        }).then(()=>{
+            method: "POST",
+            url: "http://localhost:5000/users/new",
+            headers: { "x-auth-token": `${token}` },
+            data: { username, email, image, online }
+        }).then(() => {
             setLogged(true)
+            // setUserClicked(false)
         })
 
-        
-    }
-        
-    
-    
-    const responseErrorGoogle = (response) =>{
 
     }
 
-    if(logged){
+
+
+    const responseErrorGoogle = (response) => {
+
+    }
+
+    if (logged) {
 
         axios({ //Creating users account & if user already has account it wont be created again
-            method:"PUT",
-            url: `https://fishbowl-heroku.herokuapp.com/users/update/${username}`,
-            headers: {"x-auth-token":`${token}`},
-            data: {online:true}
-        }).then(()=>{
+            method: "PUT",
+            url: `http://localhost:5000/users/update/${username}`,
+            headers: { "x-auth-token": `${token}` },
+            data: { online: true }
+        }).then(() => {
         })
 
 
-        return <App name={username} email={email} image={image} id={id}/>
-    }else{
+        return <App name={username} email={email} image={image} id={id} />
+    } else {
         return (
             <div className="login-page">
                 <div className="login-holder">
@@ -87,12 +88,12 @@ function Login() {
                     </div>
                     <div className="lower">
                         <GoogleLogin
-                        className="login-button"
-                                clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
-                                onSuccess={responseSuccessGoogle}
-                                onFailure={responseErrorGoogle}
-                                cookiePolicy={'single_host_origin'}
-                                isSignedIn={true}
+                            className="login-button"
+                            clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
+                            onSuccess={responseSuccessGoogle}
+                            onFailure={responseErrorGoogle}
+                            cookiePolicy={'single_host_origin'}
+                            isSignedIn={true}
                         >Login With Google</GoogleLogin>
                     </div>
                 </div>
