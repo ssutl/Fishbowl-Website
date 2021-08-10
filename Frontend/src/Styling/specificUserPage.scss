@@ -53,8 +53,8 @@
     }
 
     .imageHolder {
-      height: 100px;
-      width: 100px;
+      height: 90px;
+      width: 90px;
       border-radius: 100%;
       background-color: pink;
       position: absolute;
@@ -168,6 +168,7 @@
           display: flex;
           align-items: center;
           font-family: "Red Hat Text", sans-serif;
+          font-size: 10px;
           justify-content: center;
           color: white;
         }

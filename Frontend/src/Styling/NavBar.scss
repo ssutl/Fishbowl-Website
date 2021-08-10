@@ -1,11 +1,13 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
 
+
+
 @include breakpoint-mixin("tablet") {
   .nav-holder {
     display: flex;
     width: 27%;
-    height: 100vh;
+    height: 90vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -17,6 +19,8 @@
       // background-color: orange;
       display: flex;
       justify-content: center;
+      margin-top: 25px;
+
 
       a {
         height: 100%;
@@ -41,7 +45,7 @@
 
     .people-holder {
       // background-color: rebeccapurple;
-      width: 80%;
+      width: 90%;
       height: 88vh;
       overflow-y: auto;
       .upper {
@@ -163,7 +167,7 @@
   .nav-holder {
     display: flex;
     width: 27%;
-    height: 100vh;
+    height: 90vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -173,6 +177,8 @@
       height: 10%;
       width: 70%;
       display: block;
+      margin-top: 35px;
+
       // background-color: orange;
 
       a {
@@ -325,12 +331,14 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: transparent;
+    // background-color: aqua;
 
     .logo {
       height: 10%;
       width: 70%;
       display: block;
+      margin-top: 0px;
+
 
       // background-color: orange;
 

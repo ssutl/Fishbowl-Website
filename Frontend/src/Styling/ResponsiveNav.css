@@ -25,6 +25,33 @@
   font-family: "Red Hat Text", sans-serif;
 }
 
+@media only screen and (min-width: 560px) {
+  .nav {
+    position: absolute;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: #0096ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav a {
+    text-decoration: none;
+  }
+  .nav a p {
+    font-size: 25px;
+    color: white;
+    font-family: "Red Hat Text", sans-serif;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .nav {
     position: absolute;

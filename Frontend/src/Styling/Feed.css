@@ -149,8 +149,8 @@
 }
 
 .feed-section .bottom-section .scroll .link .room-holder .top-section p {
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 15px;
+  margin-right: 15px;
   font-family: "Red Hat Text", sans-serif;
 }
 
@@ -296,6 +296,281 @@
   padding: 0px 15px 0px 15px;
   background-color: #384357;
   margin: 5px 20px 4px 0px;
+}
+
+@media only screen and (min-width: 560px) {
+  .feed-section {
+    height: 78vh;
+    width: 100%;
+  }
+  .feed-section .top {
+    margin-left: auto;
+    margin-right: auto;
+    height: 10vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .feed-section .top .holder {
+    width: 81%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .feed-section .top .holder .feed-BTN {
+    margin-bottom: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 190px;
+  }
+  .feed-section .top .holder .feed-BTN .normal {
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    font-family: "Red Hat Text", sans-serif;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    opacity: 0.3;
+  }
+  .feed-section .top .holder .feed-BTN .active {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  .feed-section .top .holder .feed-BTN p:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  .feed-section .top .holder a {
+    text-decoration: none;
+    color: white;
+  }
+  .feed-section .top .holder a .create-BTN {
+    margin-bottom: 25px;
+    height: 45px;
+    width: 160px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #0096ff;
+    border-radius: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 18px;
+  }
+  .feed-section .top .holder a .create-BTN p {
+    display: block;
+  }
+  .feed-section .bottom-section {
+    height: 77vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .feed-section .bottom-section .scroll {
+    height: 100%;
+    width: 80%;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  .feed-section .bottom-section .scroll .link {
+    text-decoration: none;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder {
+    margin-top: 25px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-color: #28303b;
+    word-break: break-all;
+    border-radius: 5px;
+    padding: 15px 0px 10px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .top-section {
+    color: white;
+    height: 57%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .top-section p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .top-section #Title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .top-section #Question {
+    font-size: 17px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .low-section {
+    margin-top: 15px;
+    height: 43%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .low-section .low-holder {
+    height: 100%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .low-section .low-holder .roomTag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 20px 4px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend {
+    margin-top: 25px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-color: #586f7c;
+    word-break: break-all;
+    border-radius: 5px;
+    padding: 15px 0px 10px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section {
+    color: white;
+    height: 57%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Question {
+    font-size: 17px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section {
+    margin-top: 15px;
+    height: 43%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section .low-holder {
+    height: 100%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section .low-holder .roomTag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 20px 4px 0px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -955,6 +1230,42 @@
     width: 80%;
     overflow: auto;
     scroll-behavior: smooth;
+  }
+  .feed-section .bottom-section .scroll .svg-holder {
+    height: 100%;
+    width: 100%;
+  }
+  .feed-section .bottom-section .scroll .svg-holder .svg-title {
+    height: 10%;
+    width: 100%;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .feed-section .bottom-section .scroll .svg-holder .main-svg {
+    height: 90%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .feed-section .bottom-section .scroll .svg-holder .main-svg img {
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
   }
   .feed-section .bottom-section .scroll .link {
     text-decoration: none;

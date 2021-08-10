@@ -4,7 +4,7 @@
     display: -ms-flexbox;
     display: flex;
     width: 27%;
-    height: 100vh;
+    height: 90vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -25,6 +25,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 25px;
   }
   .nav-holder .logo a {
     height: 100%;
@@ -45,7 +46,7 @@
     display: none;
   }
   .nav-holder .people-holder {
-    width: 80%;
+    width: 90%;
     height: 88vh;
     overflow-y: auto;
   }
@@ -181,7 +182,7 @@
     display: -ms-flexbox;
     display: flex;
     width: 27%;
-    height: 100vh;
+    height: 90vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -197,6 +198,7 @@
     height: 10%;
     width: 70%;
     display: block;
+    margin-top: 35px;
   }
   .nav-holder .logo a {
     height: 100%;
@@ -365,12 +367,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: transparent;
   }
   .nav-holder .logo {
     height: 10%;
     width: 70%;
     display: block;
+    margin-top: 0px;
   }
   .nav-holder .logo a {
     height: 100%;

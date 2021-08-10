@@ -64,8 +64,8 @@
 }
 
 .section2 .holder .imageHolder {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   border-radius: 100%;
   background-color: pink;
   position: absolute;
@@ -206,6 +206,7 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: "Red Hat Text", sans-serif;
+  font-size: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
