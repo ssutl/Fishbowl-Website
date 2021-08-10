@@ -81,11 +81,11 @@ function Feed({ input, followR, dashboard, roomCreated }) {
             <div className="top">
                 <div className="holder">
                     <div className="feed-BTN">
-                        <p className={feed ? "active" : "normal"} onClick={() => {
+                        <p className={feed ? "normal" : "active"} onClick={() => {
                             setFeed(true);
                             setFriendFeed(false)
                         }}>Global Feed</p>
-                        <p className={friendFeed ? "active" : "normal"} onClick={() => {
+                        <p className={friendFeed ? "normal" : "active"} onClick={() => {
                             setFeed(false);
                             setFriendFeed(true)
 

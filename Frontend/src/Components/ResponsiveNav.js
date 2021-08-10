@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../Context/CurrentUser";
 import { GoogleLogout } from 'react-google-login';
 import { useHistory } from 'react-router-dom';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 import axios from 'axios';
 
@@ -96,12 +97,6 @@ function ResponsiveNav({ profileData, followReq }) {
         return (
             <div className="main">
                 <div className="nav-scroll">
-                    <Link to="/" className="buttons" id="home">
-                        <p>Home</p>
-                    </Link>
-                    <Link to={{ pathname: `/People/${user.name}`, state: { user: user } }} className="buttons">
-                        <p>Something</p>
-                    </Link>
                     <Link to={{ pathname: `/People/${info.name}`, state: { user: user } }} >
                         <div className="circle">
                             <img src={info.image} alt=""></img>
@@ -109,26 +104,34 @@ function ResponsiveNav({ profileData, followReq }) {
                         <div className={info.online ? "online-circle" : "offline-circle"}>
                         </div>
                     </Link>
-                    <p className="friend-text">Friends</p>
+                    <Link to="/" className="home" id="home">
+                        <p>Home</p>
+                    </Link>
+                    <div className="friend">
+                        <p className="friend-text">Friends <ArrowRightAltIcon style={{ fontSize: 35 }} /></p>
+                        <div className="friend-holder">
+                            {list.filter((newUser) => {
+                                return newUser.username !== info.name
+                            }).map((user, index) => {
+                                return (
+                                    <div className="user-holder" key={index}>
+                                        <Link to={{ pathname: `/People/${user.username}`, state: { user: user } }} key={index}>
+                                            <div className="circle">
+                                                <img src={user.image} alt=""></img>
+                                            </div>
+                                            <div className={user.online ? "online-circle" : "offline-circle"}>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                )
+                            })}
+                        </div>
 
-
-                    <div className="friend-holder">
-                        {list.filter((newUser) => {
-                            return newUser.username !== info.name
-                        }).map((user, index) => {
-                            return (
-                                <div className="user-holder" key={index}>
-                                    <Link to={{ pathname: `/People/${user.username}`, state: { user: user } }} key={index}>
-                                        <div className="circle">
-                                            <img src={user.image} alt=""></img>
-                                        </div>
-                                        <div className={user.online ? "online-circle" : "offline-circle"}>
-                                        </div>
-                                    </Link>
-                                </div>
-                            )
-                        })}
                     </div>
+
+
+
+
                     <div className="logout">
                         <GoogleLogout
                             clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"

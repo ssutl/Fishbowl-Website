@@ -18,27 +18,11 @@
     display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
-    gap: 50px;
+    gap: 30px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     overflow-x: scroll;
-  }
-  .main .nav-scroll #home {
-    margin-left: 15px;
-  }
-  .main .nav-scroll .buttons {
-    width: 80px;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    font-family: "Red Hat Text", sans-serif;
-  }
-  .main .nav-scroll .friend-text {
-    font-size: 20px;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
   }
   .main .nav-scroll a {
     text-decoration: none;
@@ -48,6 +32,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-left: 15px;
   }
   .main .nav-scroll a .circle {
     border-radius: 100%;
@@ -85,7 +70,42 @@
             box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
     background-color: #fd4d4d;
   }
-  .main .nav-scroll .friend-holder {
+  .main .nav-scroll .home {
+    width: 80px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .main .nav-scroll .friend {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main .nav-scroll .friend .friend-text {
+    width: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .main .nav-scroll .friend .friend-holder {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -98,7 +118,7 @@
             align-items: center;
     overflow-x: scroll;
   }
-  .main .nav-scroll .friend-holder .user-holder {
+  .main .nav-scroll .friend .friend-holder .user-holder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -109,7 +129,7 @@
             align-items: center;
     margin-right: 25px;
   }
-  .main .nav-scroll .friend-holder .user-holder a {
+  .main .nav-scroll .friend .friend-holder .user-holder a {
     text-decoration: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -118,20 +138,20 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .main .nav-scroll .friend-holder .user-holder a .circle {
+  .main .nav-scroll .friend .friend-holder .user-holder a .circle {
     border-radius: 100%;
     height: 50px;
     width: 50px;
     background-color: #28303b;
     overflow: hidden;
   }
-  .main .nav-scroll .friend-holder .user-holder a .circle img {
+  .main .nav-scroll .friend .friend-holder .user-holder a .circle img {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .main .nav-scroll .friend-holder .user-holder a .online-circle {
+  .main .nav-scroll .friend .friend-holder .user-holder a .online-circle {
     position: relative;
     top: 18px;
     right: 15px;
@@ -142,7 +162,7 @@
     -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
             box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
   }
-  .main .nav-scroll .friend-holder .user-holder a .offline-circle {
+  .main .nav-scroll .friend .friend-holder .user-holder a .offline-circle {
     position: relative;
     top: 18px;
     right: 15px;

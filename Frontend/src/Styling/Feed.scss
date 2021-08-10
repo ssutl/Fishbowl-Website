@@ -41,6 +41,10 @@
             cursor: pointer;
             opacity: 0.6;
           }
+
+          .active{
+            opacity: 0.6;
+          }
         }
 
         a {
@@ -252,7 +256,7 @@
         .feed-BTN {
           display: flex;
           justify-content: space-between;
-          width: 165px;
+          width: 195px;
           // background-color: aqua;
 
           p {
@@ -263,6 +267,10 @@
 
           p:hover {
             cursor: pointer;
+            opacity: 0.6;
+          }
+
+          .active{
             opacity: 0.6;
           }
         }

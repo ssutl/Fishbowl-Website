@@ -50,6 +50,9 @@
     cursor: pointer;
     opacity: 0.6;
   }
+  .feed-section .top .holder .feed-BTN .active {
+    opacity: 0.6;
+  }
   .feed-section .top .holder a {
     text-decoration: none;
     color: white;
@@ -299,7 +302,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 165px;
+    width: 195px;
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;
@@ -308,6 +311,9 @@
   }
   .feed-section .top .holder .feed-BTN p:hover {
     cursor: pointer;
+    opacity: 0.6;
+  }
+  .feed-section .top .holder .feed-BTN .active {
     opacity: 0.6;
   }
   .feed-section .top .holder a {
