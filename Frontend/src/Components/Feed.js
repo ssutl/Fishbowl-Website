@@ -101,7 +101,16 @@ function Feed({ input, followR, dashboard, roomCreated }) {
             </div>
             <div className="bottom-section">
                 <div className="scroll">
-                    {allRooms == null || friends_rooms == null ? <BarLoader color={"#FFFFFF"} css={override} size={300} /> : feed ? allRooms.length === 0 ? <h1>No Global Rooms</h1>
+                    {allRooms == null || friends_rooms == null ? <BarLoader color={"#FFFFFF"} css={override} size={300} /> : feed ? allRooms.length === 0 ? (
+                        <div className="noGlobalorFriends">
+                            <div className="write">
+                                <h2>NO GLOBAL ROOMS</h2>
+                            </div>
+                            <div className="svgImage">
+                                <img src="swirl.svg" />
+                            </div>
+                        </div>
+                    )
                         : (allRooms.filter((chat) => {
 
                             return (
@@ -127,35 +136,45 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                                     </div>
                                 </Link>
                             )
-                        })) : friends_rooms.length === 0 ? <h1>Cureently have np friends</h1> : (
-                            friends_rooms.filter((chat) => {
+                        })) : friends_rooms.length === 0 ? (
+                            <div className="noGlobalorFriends">
+                                <div className="write">
+                                    <h2>NO FRIEND ROOMS</h2>
+                                </div>
+                                <div className="svgImage">
+                                    <img src="friends.svg" />
+                                </div>
 
-                                return (
-                                    chat.Title.toUpperCase().includes(input.toUpperCase()) ||
-                                    chat.Question.toUpperCase().includes(input.toUpperCase())
+                            </div>
+                        ) : (
+                        friends_rooms.filter((chat) => {
 
-                                );
-                            }).map((room, index) => {
-                                return (
-                                    <Link to={{ pathname: `/Chat/${room.Title}`, state: { room } }} className="link" key={index}>
-                                        <div className="room-holder-friend" key={index}>
-                                            <div className="top-section">
-                                                <p id="Title">{room.Title}</p>
-                                                <p id="Question">{room.Question.substring(0, 70)} ....</p>
-                                            </div>
-                                            <div className="low-section">
-                                                <div className="low-holder">
-                                                    {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag, index) => {
-                                                        return <div className="roomTag" key={index}>{tag}</div>
-                                                    })}
-                                                </div>
+                            return (
+                                chat.Title.toUpperCase().includes(input.toUpperCase()) ||
+                                chat.Question.toUpperCase().includes(input.toUpperCase())
+
+                            );
+                        }).map((room, index) => {
+                            return (
+                                <Link to={{ pathname: `/Chat/${room.Title}`, state: { room } }} className="link" key={index}>
+                                    <div className="room-holder-friend" key={index}>
+                                        <div className="top-section">
+                                            <p id="Title">{room.Title}</p>
+                                            <p id="Question">{room.Question.substring(0, 70)} ....</p>
+                                        </div>
+                                        <div className="low-section">
+                                            <div className="low-holder">
+                                                {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag, index) => {
+                                                    return <div className="roomTag" key={index}>{tag}</div>
+                                                })}
                                             </div>
                                         </div>
-                                    </Link>
-                                )
-                            })
+                                    </div>
+                                </Link>
+                            )
+                        })
 
-                        )}
+                    )}
                 </div>
             </div>
 
