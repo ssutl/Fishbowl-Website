@@ -21,6 +21,7 @@ function ResponsiveNav({ profileData, followReq }) {
     const [loading, setLoading] = useState()
     const [following, setFollowing] = useState()
     const breakpoint = 1248;
+    const tablet_breakpoint = 768;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
@@ -37,7 +38,7 @@ function ResponsiveNav({ profileData, followReq }) {
         setLoading(true)
         axios({ //Getting all users on the site
             method: "GET",
-            url: `http://localhost:5000/users/get`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data)
@@ -49,7 +50,7 @@ function ResponsiveNav({ profileData, followReq }) {
 
         axios({
             method: "GET", //Getting the users the current user follows
-            url: `http://localhost:5000/users/get/${info.name}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -82,7 +83,7 @@ function ResponsiveNav({ profileData, followReq }) {
 
         axios({ //On logout changing users status to offline
             method: `PUT`,
-            url: `http://localhost:5000/users/update/${info.name}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
             headers: { "x-auth-token": `${token}` },
             data: { "online": false }
         }).then((response) => {
@@ -105,10 +106,10 @@ function ResponsiveNav({ profileData, followReq }) {
                         </div>
                     </Link>
                     <Link to="/" className="home" id="home">
-                        <p>Home</p>
+                        <p>Feed</p>
                     </Link>
                     <div className="friend">
-                        <p className="friend-text">Friends <ArrowRightAltIcon style={{ fontSize: 35 }} /></p>
+                        <p className="friend-text">Friends <ArrowRightAltIcon style={screenWidth < tablet_breakpoint ? { fontSize: 35 } : { fontSize: 40 }} /></p>
                         <div className="friend-holder">
                             {list.filter((newUser) => {
                                 return newUser.username !== info.name

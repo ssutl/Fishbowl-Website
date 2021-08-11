@@ -10,7 +10,7 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 72vh;
+      height: 75vh;
       width: 90%;
       display: flex;
       // justify-content: center;
@@ -52,16 +52,16 @@
       }
 
       .inputs {
-        height: 20vh;
+        height: 23vh;
         width: 100%;
         // background-color: yellow;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-content: center;
         flex-direction: column;
 
         .input_field {
-          // background-color: orange;
+          margin-left: 30px;
           color: white;
           font-size: 18px;
           width: 230px;
@@ -74,7 +74,7 @@
 
         .text-counter {
           position: relative;
-          left: 210px;
+          left: 280px;
           bottom: 40px;
           height: 40px;
           width: 40px;
@@ -87,12 +87,9 @@
         }
 
         #name{
-          margin-top: 20px;
+          margin-top: 40px;
         }
 
-        #question {
-          // margin-top: 1px;
-        }
       }
       .boxes {
         height: 35vh;
@@ -142,6 +139,766 @@
           margin-right: 30px;
           height: 50px;
           width: 120px;
+          border-radius: 5px;
+          background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("phone") {
+  .section {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .section-holder {
+      height: 75vh;
+      width: 90%;
+      display: flex;
+      // justify-content: center;
+      background-color: $secondary-background;
+      // background-color: brown;
+      border-radius: 5px;
+      flex-direction: column;
+
+      .title {
+        height: 7vh;
+        // background-color: yellow;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+
+        .home {
+          height: 100%;
+          width: 17%;
+          display: flex;
+          align-items: center;
+          color: white;
+          margin-left: 20px;
+          // background-color: purple;
+          justify-content: space-between;
+
+          a {
+            text-decoration: none;
+            color: white;
+
+            #arrow {
+              font-weight: 800;
+            }
+
+            h2 {
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+
+      .inputs {
+        height: 23vh;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+
+        .input_field {
+          margin-left: 30px;
+          color: white;
+          font-size: 18px;
+          width: 230px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          border-bottom: 2px solid white;
+        }
+
+        .text-counter {
+          position: relative;
+          left: 280px;
+          bottom: 30px;
+          height: 40px;
+          width: 40px;
+          background-color: $highlight;
+          border-radius: 3px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #name{
+          margin-top: 40px;
+        }
+
+      }
+      .boxes {
+        height: 35vh;
+        width: 100%;
+        // background-color: orange;
+        display: flex;
+        justify-content: flex-end;
+
+        .box-holder {
+          // background-color: blue;
+          width: 95%;
+          height: 100%;
+          display: flex;
+          // justify-content: center;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
+          height: 40px;
+          width: 100px;
+          border-radius: 5px;
+          background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("phone-wide") {
+  .section {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .section-holder {
+      height: 70vh;
+      width: 90%;
+      display: flex;
+      // justify-content: center;
+      background-color: $secondary-background;
+      // background-color: brown;
+      border-radius: 5px;
+      flex-direction: column;
+
+      .title {
+        height: 7vh;
+        // background-color: yellow;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+
+        .home {
+          height: 100%;
+          width: 17%;
+          display: flex;
+          align-items: center;
+          color: white;
+          margin-left: 20px;
+          // background-color: purple;
+          justify-content: space-between;
+
+          a {
+            text-decoration: none;
+            color: white;
+
+            #arrow {
+              font-weight: 800;
+            }
+
+            h2 {
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+
+      .inputs {
+        height: 23vh;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+
+        .input_field {
+          margin-left: 70px;
+          color: white;
+          font-size: 18px;
+          width: 230px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          border-bottom: 2px solid white;
+        }
+
+        .text-counter {
+          position: relative;
+          left: 320px;
+          bottom: 30px;
+          height: 40px;
+          width: 40px;
+          background-color: $highlight;
+          border-radius: 3px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #name{
+          margin-top: 40px;
+        }
+
+      }
+      .boxes {
+        height: 30vh;
+        width: 100%;
+        // background-color: orange;
+        display: flex;
+        justify-content: flex-end;
+
+        .box-holder {
+          // background-color: blue;
+          width: 95%;
+          height: 100%;
+          display: flex;
+          // justify-content: center;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
+          height: 40px;
+          width: 100px;
+          border-radius: 5px;
+          background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("phablet") {
+  .section {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .section-holder {
+      height: 70vh;
+      width: 90%;
+      display: flex;
+      // justify-content: center;
+      background-color: $secondary-background;
+      // background-color: brown;
+      border-radius: 5px;
+      flex-direction: column;
+
+      .title {
+        height: 7vh;
+        // background-color: yellow;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+
+        .home {
+          height: 100%;
+          width: 17%;
+          display: flex;
+          align-items: center;
+          color: white;
+          margin-left: 20px;
+          // background-color: purple;
+          justify-content: space-between;
+
+          a {
+            text-decoration: none;
+            color: white;
+
+            #arrow {
+              font-weight: 800;
+            }
+
+            h2 {
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+
+      .inputs {
+        height: 23vh;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+
+        .input_field {
+          margin-left: 70px;
+          color: white;
+          font-size: 18px;
+          width: 300px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          border-bottom: 2px solid white;
+        }
+
+        .text-counter {
+          position: relative;
+          left: 380px;
+          bottom: 35px;
+          height: 40px;
+          width: 40px;
+          background-color: $highlight;
+          border-radius: 3px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #name{
+          margin-top: 40px;
+        }
+
+      }
+      .boxes {
+        height: 30vh;
+        width: 100%;
+        // background-color: orange;
+        display: flex;
+        justify-content: flex-end;
+
+        .box-holder {
+          // background-color: blue;
+          width: 95%;
+          height: 100%;
+          display: flex;
+          // justify-content: center;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
+          height: 40px;
+          width: 100px;
+          border-radius: 5px;
+          background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet") {
+  .section {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .section-holder {
+      height: 50vh;
+      width: 87%;
+      display: flex;
+      // justify-content: center;
+      background-color: $secondary-background;
+      // background-color: brown;
+      border-radius: 5px;
+      flex-direction: column;
+
+      .title {
+        height: 7vh;
+        // background-color: yellow;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+
+        .home {
+          height: 100%;
+          width: 17%;
+          display: flex;
+          align-items: center;
+          color: white;
+          margin-left: 20px;
+          // background-color: purple;
+          justify-content: space-between;
+
+          a {
+            text-decoration: none;
+            color: white;
+
+            #arrow {
+              font-weight: 800;
+            }
+
+            h2 {
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+
+      .inputs {
+        height: 18vh;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+
+        .input_field {
+          margin-left: 100px;
+          color: white;
+          font-size: 18px;
+          width: 400px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          border-bottom: 2px solid white;
+        }
+
+        .text-counter {
+          position: relative;
+          left: 520px;
+          bottom: 35px;
+          height: 40px;
+          width: 40px;
+          background-color: $highlight;
+          border-radius: 3px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #name{
+          margin-top: 40px;
+        }
+
+      }
+      .boxes {
+        height: 16vh;
+        width: 100%;
+        // background-color: orange;
+        display: flex;
+        justify-content: flex-end;
+
+        .box-holder {
+          // background-color: blue;
+          width: 95%;
+          height: 100%;
+          display: flex;
+          // justify-content: center;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 9vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
+          height: 40px;
+          width: 100px;
+          border-radius: 5px;
+          background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  .section {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .section-holder {
+      height: 36vh;
+      width: 87%;
+      display: flex;
+      // justify-content: center;
+      background-color: $secondary-background;
+      // background-color: brown;
+      border-radius: 5px;
+      flex-direction: column;
+
+      .title {
+        height: 7vh;
+        // background-color: yellow;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+
+        .home {
+          height: 100%;
+          width: 17%;
+          display: flex;
+          align-items: center;
+          color: white;
+          margin-left: 20px;
+          // background-color: purple;
+          justify-content: space-between;
+
+          a {
+            text-decoration: none;
+            color: white;
+
+            #arrow {
+              font-weight: 800;
+            }
+
+            h2 {
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+
+      .inputs {
+        height: 15vh;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+
+        .input_field {
+          margin-left: 150px;
+          color: white;
+          font-size: 18px;
+          width: 450px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          border-bottom: 2px solid white;
+        }
+
+        .text-counter {
+          position: relative;
+          left: 620px;
+          bottom: 35px;
+          height: 40px;
+          width: 40px;
+          background-color: $highlight;
+          border-radius: 3px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #name{
+          margin-top: 40px;
+        }
+
+      }
+      .boxes {
+        height: 8vh;
+        width: 100%;
+        // background-color: orange;
+        display: flex;
+        justify-content: flex-end;
+
+        .box-holder {
+          // background-color: blue;
+          width: 95%;
+          height: 100%;
+          display: flex;
+          // justify-content: center;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 6vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
+          height: 40px;
+          width: 100px;
           border-radius: 5px;
           background-color: $highlight;
           display: flex;

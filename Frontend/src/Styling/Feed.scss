@@ -1,5 +1,7 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
+
+
 @include breakpoint-mixin("skinny") {
   .feed-section {
     height: 80vh;
@@ -37,10 +39,231 @@
             // background-color: yellow;
           }
 
-          p:hover {
-            cursor: pointer;
+          .active{
             opacity: 0.6;
           }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            height: 40px;
+            width: 75px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-section {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .scroll {
+        height: 100%;
+        width: 95%;
+        overflow: auto;
+        scroll-behavior: smooth;
+        // margin-bottom: 20px;
+        // background-color: yellow;
+
+        .link {
+          text-decoration: none;
+
+          .room-holder {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 30px;
+                margin-right: 20px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: #68C5DB;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("phone") {
+  .feed-section {
+    height: 80vh;
+    width: 100%;
+    // background-color: aqua;
+
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        // background-color: pink;
+        width: 85%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          display: flex;
+          justify-content: space-between;
+          width: 180px;
+          // background-color: aqua;
+
+          p {
+            font-weight: 600;
+            font-size: 18px;
+            font-family: "Red Hat Text", sans-serif;
+            // background-color: yellow;
+          }
+
 
           .active{
             opacity: 0.6;
@@ -54,6 +277,912 @@
           .create-BTN {
             height: 40px;
             width: 75px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-section {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .scroll {
+        height: 100%;
+        width: 95%;
+        overflow: auto;
+        scroll-behavior: smooth;
+        // margin-bottom: 20px;
+        // background-color: yellow;
+
+        .link {
+          text-decoration: none;
+
+          .room-holder {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 30px;
+                margin-right: 20px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: #68C5DB;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("phone-wide") {
+  .feed-section {
+    height: 80vh;
+    width: 100%;
+    // background-color: aqua;
+
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        // background-color: pink;
+        width: 85%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          display: flex;
+          justify-content: space-between;
+          width: 180px;
+          // background-color: aqua;
+
+          p {
+            font-weight: 600;
+            font-size: 18px;
+            font-family: "Red Hat Text", sans-serif;
+            // background-color: yellow;
+          }
+
+
+          .active{
+            opacity: 0.6;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            height: 40px;
+            width: 75px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-section {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .scroll {
+        height: 100%;
+        width: 95%;
+        overflow: auto;
+        scroll-behavior: smooth;
+        // margin-bottom: 20px;
+        // background-color: yellow;
+
+        .link {
+          text-decoration: none;
+
+          .room-holder {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 30px;
+                margin-right: 20px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: #68C5DB;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("phablet") {
+  .feed-section {
+    height: 80vh;
+    width: 100%;
+    // background-color: aqua;
+
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        // background-color: pink;
+        width: 85%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          display: flex;
+          justify-content: space-between;
+          width: 180px;
+          // background-color: aqua;
+
+          p {
+            font-weight: 600;
+            font-size: 18px;
+            font-family: "Red Hat Text", sans-serif;
+            // background-color: yellow;
+          }
+
+
+          .active{
+            opacity: 0.6;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            height: 40px;
+            width: 75px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-section {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .scroll {
+        height: 100%;
+        width: 95%;
+        overflow: auto;
+        scroll-behavior: smooth;
+        // margin-bottom: 20px;
+        // background-color: yellow;
+
+        .link {
+          text-decoration: none;
+
+          .room-holder {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 30px;
+                margin-right: 20px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: #68C5DB;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet") {
+  .feed-section {
+    height: 80vh;
+    width: 100%;
+    // background-color: aqua;
+
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        // background-color: pink;
+        width: 85%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          display: flex;
+          justify-content: space-between;
+          width: 210px;
+          // background-color: aqua;
+
+          p {
+            font-weight: 600;
+            font-size: 22px;
+            font-family: "Red Hat Text", sans-serif;
+            // background-color: yellow;
+          }
+
+
+
+          .active{
+            opacity: 0.6;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            height: 50px;
+            width: 145px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-section {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .scroll {
+        height: 100%;
+        width: 95%;
+        overflow: auto;
+        scroll-behavior: smooth;
+        // margin-bottom: 20px;
+        // background-color: yellow;
+
+        .link {
+          text-decoration: none;
+
+          .room-holder {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 30px;
+                margin-right: 20px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: #68C5DB;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("tablet-wide") {
+  .feed-section {
+    height: 80vh;
+    width: 100%;
+    // background-color: aqua;
+
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        // background-color: pink;
+        width: 85%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          display: flex;
+          justify-content: space-between;
+          width: 250px;
+          // background-color: aqua;
+
+          p {
+            font-weight: 600;
+            font-size: 25px;
+            font-family: "Red Hat Text", sans-serif;
+            // background-color: yellow;
+          }
+
+
+
+          .active{
+            opacity: 0.6;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            height: 50px;
+            width: 145px;
             display: flex;
             background-color: $highlight;
             border-radius: 5px;

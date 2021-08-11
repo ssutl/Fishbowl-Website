@@ -16,7 +16,7 @@ function NavBar({ profileData, followReq }) {
     const [following, setFollowing] = useState()
     let list = []
     const [loading, setLoading] = useState()
-    const breakpoint = 480;
+    const breakpoint = 1248;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
@@ -37,7 +37,7 @@ function NavBar({ profileData, followReq }) {
         setLoading(true)
         axios({ //Getting all users on the site
             method: "GET",
-            url: `http://localhost:5000/users/get`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data)
@@ -49,7 +49,7 @@ function NavBar({ profileData, followReq }) {
 
         axios({
             method: "GET", //Getting the users the current user follows
-            url: `http://localhost:5000/users/get/${info.name}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -75,6 +75,8 @@ function NavBar({ profileData, followReq }) {
 
 
 
+
+
     const override = css`
     position: absolute;
     width: 200px;
@@ -83,7 +85,7 @@ function NavBar({ profileData, followReq }) {
   `;
 
 
-    if (screenWidth > breakpoint) {
+    if (screenWidth >= breakpoint) {
         return (
             <div className="nav-holder">
                 <div className="logo">

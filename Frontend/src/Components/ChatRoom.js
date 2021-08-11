@@ -34,6 +34,7 @@ function ChatRoom() {
     let current_day = current_date.getDate()
     let current_hour = current_date.getHours()
     const breakpoint = 768;
+    const desktop_breakpoint = 1248;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
@@ -55,7 +56,7 @@ function ChatRoom() {
     useEffect(() => { //Setting Room messages whenever page refreshes
         axios({
             method: `GET`,
-            url: `http://localhost:5000/chat/get/Title/${current_page}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${current_page}`,
             headers: { "x-auth-token": `${token}` },
         }).then((res) => {
             setRoomSavedMsgs(res.data[0].Messages);
@@ -83,7 +84,7 @@ function ChatRoom() {
 
             axios({
                 method: `PUT`,
-                url: `http://localhost:5000/chat/update/${current_page}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { message: data }
             }).then((res) => {
@@ -108,7 +109,7 @@ function ChatRoom() {
     useEffect(() => {
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get/Title/${current_page}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${current_page}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             setRoom(res.data[0]);
@@ -120,7 +121,7 @@ function ChatRoom() {
     const userPage = () => {
         axios({
             method: "GET",
-            url: `http://localhost:5000/users/get/${room.CreatedByName}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${room.CreatedByName}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             history.push({
@@ -138,7 +139,7 @@ function ChatRoom() {
         setEditing(false)
         axios({
             method: `PUT`,
-            url: `http://localhost:5000/chat/update/${current_page}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
             headers: { "x-auth-token": `${token}` },
             data: { Question: editedQuestion, Title: editedName }
         }).then((res) => {
@@ -152,7 +153,7 @@ function ChatRoom() {
     const redirect = () => {
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get/Title/${editedName}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${editedName}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             setRoom(res.data[0]);
@@ -175,11 +176,17 @@ function ChatRoom() {
     top: 50%;
     left:45%;
   `;
+    const response = css`
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left:30%;
+  `;
 
     useEffect(() => {
         axios({
             method: 'PUT',
-            url: `http://localhost:5000
+            url: `https://fishbowl-heroku.herokuapp.com
 /chat/update/${current_page}`,
             headers: { "x-auth-token": `${token}` },
             data: { Answered: answered }
@@ -301,7 +308,7 @@ function ChatRoom() {
 
             </div>
         </div> :
-        <BarLoader color={"#FFFFFF"} css={override} size={300} />
+        <BarLoader color={"#FFFFFF"} css={screenWidth < desktop_breakpoint ? response : override} size={300} />
     )
 }
 

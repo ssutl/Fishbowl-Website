@@ -40,7 +40,7 @@ function SpecificUserPage({ specificUserToParent }) {
     useEffect(() => { //On page load get the rooms of the user clicked on
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get/${state.user.username}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/${state.user.username}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             setUsersRooms(res.data.reverse())
@@ -48,7 +48,7 @@ function SpecificUserPage({ specificUserToParent }) {
 
         axios({ //Checking if logged in user is following the user which has been clicked
             method: 'GET',
-            url: `http://localhost:5000/users/get/${info.name}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             if (res.data[0].following.includes(state.user.username)) {
@@ -72,7 +72,7 @@ function SpecificUserPage({ specificUserToParent }) {
         if (!following) {
             axios({
                 method: 'PUT',
-                url: `http://localhost:5000/users/update/${info.name}`,
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { following: state.user.username }
             }).then((res) => {
@@ -81,7 +81,7 @@ function SpecificUserPage({ specificUserToParent }) {
         } else if (following) {
             axios({
                 method: 'PUT',
-                url: `http://localhost:5000/users/update/${info.name}`,
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { unfollowing: state.user.username }
             }).then((res) => {
@@ -105,14 +105,14 @@ function SpecificUserPage({ specificUserToParent }) {
         <div className="section2">
             <div className="holder">
                 <div className="banner">
+                    <h1>{state.user.username}</h1>
                 </div>
                 <div className="imageHolder">
                     <img src={state.user.image} alt="" />
                 </div>
                 {mypage ? usersRooms.length === 0 ? (
                     <div className="follow-my-section"></div>
-                ) : screenWidth < breakpoint ? (<div className="follow-my-section" />) : (
-
+                ) : (
                     <div className="follow-my-section">
                         <p>My Rooms</p>
                     </div>
@@ -123,16 +123,14 @@ function SpecificUserPage({ specificUserToParent }) {
                             <PersonAddIcon id="" />
                             {following ? <p>Following</p> : <p>Follow</p>}
                         </div>
-                        {screenWidth < breakpoint ? null : (
-                            <p>{usersRooms.length === 0 ? null : `${state.user.username}'s Room's`}</p>
-                        )}
+                        <h2>{usersRooms.length === 0 ? null : `${state.user.username.toUpperCase()}'s Room's`}</h2>
                     </div>
                 )}
                 <div className="specificFeedHolder">
                     <div className={usersRooms.length === 0 ? "svg" : "scrollUser"}>
                         {usersRooms.length === 0 ? (
                             <>
-                                <div className="titlo"><h1>{mypage ? `YOU HAVE NO ROOMS` : `${state.user.username.toUpperCase()} HAS NO ROOMS`}</h1></div>
+                                <div className="titlo"><h1>{mypage ? `YOU HAVE NO ROOMS` : screenWidth > breakpoint ? `${state.user.username.toUpperCase()} HAS NO ROOMS` : `FRIEND HAS NO ROOMS`}</h1></div>
                                 <div className="svg"><YourSvg id="svg" /></div>
                             </>
                         ) : usersRooms.map((room, index) => {

@@ -59,7 +59,7 @@ function ProfileBar({ profileToParent, search }) {
     useEffect(() => { //Recieving users for the dashboard
         axios({
             method: "GET",
-            url: "http://localhost:5000/users/get",
+            url: "https://fishbowl-heroku.herokuapp.com/users/get",
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data)
@@ -70,7 +70,7 @@ function ProfileBar({ profileToParent, search }) {
 
         axios({
             method: "GET",
-            url: `http://localhost:5000/users/get/${info.name}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -85,7 +85,7 @@ function ProfileBar({ profileToParent, search }) {
     const getFollowing = () => {
         axios({
             method: "GET",
-            url: `http://localhost:5000/users/get/${info.name}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -101,7 +101,7 @@ function ProfileBar({ profileToParent, search }) {
         if (value) {
             axios({
                 method: 'PUT',
-                url: `http://localhost:5000/users/update/${info.name}`,
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { following: userID }
             }).then((res) => {
@@ -111,7 +111,7 @@ function ProfileBar({ profileToParent, search }) {
         } else if (!value) {
             axios({
                 method: 'PUT',
-                url: `http://localhost:5000/users/update/${info.name}`,
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { unfollowing: userID }
             }).then((res) => {
@@ -128,7 +128,7 @@ function ProfileBar({ profileToParent, search }) {
 
         axios({ //On logout changing users status to offline
             method: `PUT`,
-            url: `http://localhost:5000/users/update/${info.name}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
             headers: { "x-auth-token": `${token}` },
             data: { "online": false }
         }).then((response) => {

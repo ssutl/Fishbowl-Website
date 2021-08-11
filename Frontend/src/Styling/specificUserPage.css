@@ -25,62 +25,32 @@
     overflow: hidden;
   }
   .section2 .holder .banner {
-    height: 20%;
+    height: 18%;
     width: 100%;
     background-color: #0096ff;
-  }
-  .section2 .holder .banner #incomingBanner {
-    display: none;
-  }
-  .section2 .holder .banner .edit {
-    position: absolute;
-    left: 34%;
-    top: 21%;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    background-color: white;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    color: #0096ff;
-    -webkit-transition: background 0.2s ease-in;
-    transition: background 0.2s ease-in;
-    cursor: pointer;
-  }
-  .section2 .holder .banner .edit:hover {
-    background-color: #0096ff;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: white;
   }
   .section2 .holder .imageHolder {
-    height: 110px;
-    width: 110px;
-    border-radius: 100%;
-    background-color: pink;
-    position: absolute;
-    top: 145px;
-    right: 10%;
-    overflow: hidden;
-    border: 3px solid white;
-  }
-  .section2 .holder .imageHolder img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    display: none;
   }
   .section2 .holder .follow-section {
-    height: 10%;
+    height: 12%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -102,7 +72,283 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin-left: 20px;
-    margin-right: 80px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .follow-BTN p {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+  .section2 .holder .follow-section .following-BTN {
+    height: 38px;
+    width: 90px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    margin-left: 20px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .following-BTN p {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+  .section2 .holder .follow-section h2 {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+    margin-right: 20px;
+  }
+  .section2 .holder .follow-my-section {
+    height: 8%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .follow-my-section p {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder {
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg {
+    height: 100%;
+    width: 97%;
+  }
+  .section2 .holder .specificFeedHolder .svg .titlo {
+    width: 100%;
+    height: 10%;
+    font-size: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg {
+    width: 100%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg #svg {
+    height: 80%;
+    width: 80%;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser {
+    height: 100%;
+    width: 85%;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser h1 {
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser a {
+    text-decoration: none;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms {
+    margin-top: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-color: #28303b;
+    word-break: break-all;
+    border-radius: 5px;
+    padding: 20px 0px 10px 0px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper {
+    height: 60%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Question {
+    font-size: 17px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower {
+    margin-top: 15px;
+    height: 40%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder {
+    height: 100%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 22px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder .roomTag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 20px 4px 0px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .section2 {
+    height: 80vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder {
+    width: 90%;
+    height: 100%;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    overflow: hidden;
+  }
+  .section2 .holder .banner {
+    height: 18%;
+    width: 100%;
+    background-color: #0096ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .imageHolder {
+    display: none;
+  }
+  .section2 .holder .follow-section {
+    height: 12%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section2 .holder .follow-section .follow-BTN {
+    height: 38px;
+    width: 90px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: 20px;
     cursor: pointer;
     -webkit-transition: background 0.1s ease-in;
     transition: background 0.1s ease-in;
@@ -130,7 +376,6 @@
             justify-content: space-evenly;
     background-color: #0096ff;
     margin-left: 20px;
-    margin-right: 80px;
     cursor: pointer;
     -webkit-transition: background 0.1s ease-in;
     transition: background 0.1s ease-in;
@@ -140,11 +385,1115 @@
     font-size: 16px;
     font-weight: 600;
   }
-  .section2 .holder .follow-section .follow-BTN:hover {
-    background-color: #0096ff;
-  }
-  .section2 .holder .follow-section p {
+  .section2 .holder .follow-section h2 {
     font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+    margin-right: 20px;
+  }
+  .section2 .holder .follow-my-section {
+    height: 8%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .follow-my-section p {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder {
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg {
+    height: 100%;
+    width: 95%;
+  }
+  .section2 .holder .specificFeedHolder .svg .titlo {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg {
+    width: 100%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg #svg {
+    height: 80%;
+    width: 80%;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser {
+    height: 100%;
+    width: 85%;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser h1 {
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser a {
+    text-decoration: none;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms {
+    margin-top: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-color: #28303b;
+    word-break: break-all;
+    border-radius: 5px;
+    padding: 20px 0px 10px 0px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper {
+    height: 60%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Question {
+    font-size: 17px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower {
+    margin-top: 15px;
+    height: 40%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder {
+    height: 100%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 22px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder .roomTag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 20px 4px 0px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .section2 {
+    height: 80vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder {
+    width: 90%;
+    height: 100%;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    overflow: hidden;
+  }
+  .section2 .holder .banner {
+    height: 18%;
+    width: 100%;
+    background-color: #0096ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .imageHolder {
+    display: none;
+  }
+  .section2 .holder .follow-section {
+    height: 12%;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section2 .holder .follow-section .follow-BTN {
+    height: 38px;
+    width: 90px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: 20px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .follow-BTN p {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .section2 .holder .follow-section .following-BTN {
+    height: 38px;
+    width: 90px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    margin-left: 20px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .following-BTN p {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .section2 .holder .follow-section h2 {
+    font-size: 20px;
+    margin-right: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .section2 .holder .follow-my-section {
+    height: 8%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .follow-my-section p {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder {
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg {
+    height: 100%;
+    width: 90%;
+  }
+  .section2 .holder .specificFeedHolder .svg .titlo {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg {
+    width: 100%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg #svg {
+    height: 80%;
+    width: 80%;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser {
+    height: 100%;
+    width: 85%;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser h1 {
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser a {
+    text-decoration: none;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms {
+    margin-top: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-color: #28303b;
+    word-break: break-all;
+    border-radius: 5px;
+    padding: 20px 0px 10px 0px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper {
+    height: 60%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Question {
+    font-size: 17px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower {
+    margin-top: 15px;
+    height: 40%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder {
+    height: 100%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 22px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder .roomTag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 20px 4px 0px;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .section2 {
+    height: 80vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder {
+    width: 90%;
+    height: 100%;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    overflow: hidden;
+  }
+  .section2 .holder .banner {
+    height: 18%;
+    width: 100%;
+    background-color: #0096ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .imageHolder {
+    display: none;
+  }
+  .section2 .holder .follow-section {
+    height: 12%;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section2 .holder .follow-section .follow-BTN {
+    height: 38px;
+    width: 90px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: 20px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .follow-BTN p {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .section2 .holder .follow-section .following-BTN {
+    height: 38px;
+    width: 90px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    margin-left: 20px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .following-BTN p {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .section2 .holder .follow-section h2 {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+    margin-right: 20px;
+  }
+  .section2 .holder .follow-my-section {
+    height: 8%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .follow-my-section p {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder {
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg {
+    height: 100%;
+    width: 90%;
+  }
+  .section2 .holder .specificFeedHolder .svg .titlo {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg {
+    width: 100%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg #svg {
+    height: 80%;
+    width: 80%;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser {
+    height: 100%;
+    width: 85%;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser h1 {
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser a {
+    text-decoration: none;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms {
+    margin-top: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-color: #28303b;
+    word-break: break-all;
+    border-radius: 5px;
+    padding: 20px 0px 10px 0px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper {
+    height: 60%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Question {
+    font-size: 17px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower {
+    margin-top: 15px;
+    height: 40%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder {
+    height: 100%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 22px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder .roomTag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 20px 4px 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section2 {
+    height: 80vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder {
+    width: 90%;
+    height: 100%;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    overflow: hidden;
+  }
+  .section2 .holder .banner {
+    height: 18%;
+    width: 100%;
+    background-color: #0096ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .banner h1 {
+    font-size: 45px;
+  }
+  .section2 .holder .imageHolder {
+    display: none;
+  }
+  .section2 .holder .follow-section {
+    height: 12%;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section2 .holder .follow-section .follow-BTN {
+    height: 40px;
+    width: 120px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: 40px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .follow-BTN p {
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .section2 .holder .follow-section .following-BTN {
+    height: 40px;
+    width: 120px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    margin-left: 40px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .following-BTN p {
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .section2 .holder .follow-section h2 {
+    margin-right: 40px;
+    font-size: 22px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .section2 .holder .follow-my-section {
+    height: 8%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .follow-my-section p {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder {
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg {
+    height: 100%;
+    width: 90%;
+  }
+  .section2 .holder .specificFeedHolder .svg .titlo {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg {
+    width: 100%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .svg .svg #svg {
+    height: 80%;
+    width: 80%;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser {
+    height: 100%;
+    width: 85%;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser h1 {
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser a {
+    text-decoration: none;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms {
+    margin-top: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-color: #28303b;
+    word-break: break-all;
+    border-radius: 5px;
+    padding: 20px 0px 10px 0px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper {
+    height: 60%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .upper #Question {
+    font-size: 17px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower {
+    margin-top: 15px;
+    height: 40%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder {
+    height: 100%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 22px;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder .roomTag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 20px 4px 0px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section2 {
+    height: 80vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section2 .holder {
+    width: 90%;
+    height: 100%;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    overflow: hidden;
+  }
+  .section2 .holder .banner {
+    height: 18%;
+    width: 100%;
+    background-color: #0096ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .section2 .holder .banner h1 {
+    font-size: 65px;
+  }
+  .section2 .holder .imageHolder {
+    display: none;
+  }
+  .section2 .holder .follow-section {
+    height: 12%;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section2 .holder .follow-section .follow-BTN {
+    height: 50px;
+    width: 145px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: 55px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .follow-BTN p {
+    margin-left: 5px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .section2 .holder .follow-section .following-BTN {
+    height: 50px;
+    width: 145px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    margin-left: 55px;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .section2 .holder .follow-section .following-BTN p {
+    margin-left: 5px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .section2 .holder .follow-section h2 {
+    margin-right: 55px;
+    font-size: 25px;
     font-family: "Red Hat Text", sans-serif;
     font-weight: 500;
     color: white;
@@ -341,35 +1690,6 @@
     width: 100%;
     background-color: #0096ff;
   }
-  .section2 .holder .banner #incomingBanner {
-    display: none;
-  }
-  .section2 .holder .banner .edit {
-    position: absolute;
-    left: 34%;
-    top: 21%;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    background-color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: #0096ff;
-    -webkit-transition: background 0.2s ease-in;
-    transition: background 0.2s ease-in;
-    cursor: pointer;
-  }
-  .section2 .holder .banner .edit:hover {
-    background-color: #0096ff;
-    color: white;
-  }
   .section2 .holder .imageHolder {
     height: 160px;
     width: 160px;
@@ -379,7 +1699,8 @@
     top: 175px;
     right: 32%;
     overflow: hidden;
-    border: 3px solid black;
+    border: 3px solid white;
+    display: block;
   }
   .section2 .holder .imageHolder img {
     height: 100%;
@@ -453,11 +1774,8 @@
   .section2 .holder .follow-section .follow-BTN:hover {
     background-color: #0096ff;
   }
-  .section2 .holder .follow-section p {
-    font-size: 20px;
-    font-family: "Red Hat Text", sans-serif;
-    font-weight: 500;
-    color: white;
+  .section2 .holder .follow-section h2 {
+    display: none;
   }
   .section2 .holder .follow-my-section {
     height: 10%;

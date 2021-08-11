@@ -391,6 +391,1971 @@
   }
 }
 
+@media only screen and (min-width: 400px) {
+  .chat-room-section {
+    height: 80vh;
+    width: 100%;
+  }
+  .chat-room-section .chat-room-holder {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #28303b;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chat-room-section .chat-room-holder .navbar {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home {
+    height: 100%;
+    width: 17%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    margin-left: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a {
+    text-decoration: none;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a #arrow {
+    font-weight: 800;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a h2 {
+    margin-bottom: 7px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group {
+    width: 72%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .secondBTN {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .answered {
+    background-color: greenyellow;
+    color: black;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit:hover {
+    background-color: #0096ff;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without {
+    width: 25%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .scrollable {
+    overflow-y: auto;
+    height: 64vh;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question {
+    padding: 15px 0px 25px 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 8vh;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.295);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question p {
+    color: white;
+    display: block;
+    margin-left: 25px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #title {
+    font-size: 18px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #question {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation {
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.5;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
+    opacity: 1;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_field {
+    margin-left: 40px;
+    color: white;
+    font-size: 18px;
+    width: 260px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+    position: relative;
+    left: 310px;
+    bottom: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: #0096ff;
+    border-radius: 3px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+    width: 100px;
+    height: 40px;
+    background-color: aqua;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #Q {
+    margin-bottom: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #name {
+    margin-top: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg {
+    margin-top: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 16vh;
+    border-bottom: 1px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+    height: 55px;
+    width: 55px;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
+    margin-bottom: 15px;
+    margin-left: 50%;
+    font-size: 25px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle {
+    min-height: 8vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 5px 10px 25px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar {
+    height: 8vh;
+    width: 100%;
+    background-color: #333c47;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .input {
+    text-align: start;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 65%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    background-color: #141414;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send {
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #141414;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send p {
+    display: block;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .chat-room-section {
+    height: 80vh;
+    width: 100%;
+  }
+  .chat-room-section .chat-room-holder {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #28303b;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chat-room-section .chat-room-holder .navbar {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home {
+    height: 100%;
+    width: 17%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    margin-left: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a {
+    text-decoration: none;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a #arrow {
+    font-weight: 800;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a h2 {
+    margin-bottom: 7px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group {
+    width: 72%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .secondBTN {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .answered {
+    background-color: greenyellow;
+    color: black;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit:hover {
+    background-color: #0096ff;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without {
+    width: 25%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .scrollable {
+    overflow-y: auto;
+    height: 64vh;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question {
+    padding: 15px 0px 25px 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 8vh;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.295);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question p {
+    color: white;
+    display: block;
+    margin-left: 25px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #title {
+    font-size: 18px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #question {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation {
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.5;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
+    opacity: 1;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_field {
+    margin-left: 40px;
+    color: white;
+    font-size: 18px;
+    width: 260px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+    position: relative;
+    left: 310px;
+    bottom: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: #0096ff;
+    border-radius: 3px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+    width: 100px;
+    height: 40px;
+    background-color: aqua;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #Q {
+    margin-bottom: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #name {
+    margin-top: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg {
+    margin-top: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 16vh;
+    border-bottom: 1px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+    height: 55px;
+    width: 55px;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
+    margin-bottom: 15px;
+    margin-left: 50%;
+    font-size: 25px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle {
+    min-height: 8vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 5px 10px 25px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar {
+    height: 8vh;
+    width: 100%;
+    background-color: #333c47;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .input {
+    text-align: start;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 65%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    background-color: #141414;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send {
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #141414;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send p {
+    display: block;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .chat-room-section {
+    height: 80vh;
+    width: 100%;
+  }
+  .chat-room-section .chat-room-holder {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #28303b;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chat-room-section .chat-room-holder .navbar {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home {
+    height: 100%;
+    width: 17%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    margin-left: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a {
+    text-decoration: none;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a #arrow {
+    font-weight: 800;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a h2 {
+    margin-bottom: 7px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group {
+    width: 72%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .secondBTN {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .answered {
+    background-color: greenyellow;
+    color: black;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit:hover {
+    background-color: #0096ff;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without {
+    width: 25%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .scrollable {
+    overflow-y: auto;
+    height: 64vh;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question {
+    padding: 15px 0px 25px 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 8vh;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.295);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question p {
+    color: white;
+    display: block;
+    margin-left: 25px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #title {
+    font-size: 18px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #question {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation {
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.5;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
+    opacity: 1;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_field {
+    margin-left: 40px;
+    color: white;
+    font-size: 18px;
+    width: 260px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+    position: relative;
+    left: 310px;
+    bottom: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: #0096ff;
+    border-radius: 3px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+    width: 100px;
+    height: 40px;
+    background-color: aqua;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #Q {
+    margin-bottom: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #name {
+    margin-top: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg {
+    margin-top: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 16vh;
+    border-bottom: 1px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+    height: 55px;
+    width: 55px;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
+    margin-bottom: 15px;
+    margin-left: 50%;
+    font-size: 25px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle {
+    min-height: 8vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 5px 10px 25px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar {
+    height: 8vh;
+    width: 100%;
+    background-color: #333c47;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .input {
+    text-align: start;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 65%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    background-color: #141414;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send {
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #141414;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send p {
+    display: block;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .chat-room-section {
+    height: 80vh;
+    width: 100%;
+  }
+  .chat-room-section .chat-room-holder {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #28303b;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chat-room-section .chat-room-holder .navbar {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home {
+    height: 100%;
+    width: 17%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    margin-left: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a {
+    text-decoration: none;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a #arrow {
+    font-weight: 800;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a h2 {
+    margin-bottom: 7px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group {
+    width: 72%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .secondBTN {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .answered {
+    background-color: greenyellow;
+    color: black;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit:hover {
+    background-color: #0096ff;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without {
+    width: 25%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .scrollable {
+    overflow-y: auto;
+    height: 64vh;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question {
+    padding: 15px 0px 25px 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 8vh;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.295);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question p {
+    color: white;
+    display: block;
+    margin-left: 25px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #title {
+    font-size: 18px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #question {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation {
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.5;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
+    opacity: 1;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_field {
+    margin-left: 40px;
+    color: white;
+    font-size: 18px;
+    width: 260px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+    position: relative;
+    left: 310px;
+    bottom: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: #0096ff;
+    border-radius: 3px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+    width: 100px;
+    height: 40px;
+    background-color: aqua;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #Q {
+    margin-bottom: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #name {
+    margin-top: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg {
+    margin-top: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 16vh;
+    border-bottom: 1px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+    height: 55px;
+    width: 55px;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
+    margin-bottom: 15px;
+    margin-left: 50%;
+    font-size: 25px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle {
+    min-height: 8vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 5px 10px 25px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar {
+    height: 8vh;
+    width: 100%;
+    background-color: #333c47;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .input {
+    text-align: start;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 75%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 15px;
+    background-color: #141414;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send {
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #141414;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send p {
+    display: block;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .chat-room-section {
+    height: 80vh;
+    width: 100%;
+  }
+  .chat-room-section .chat-room-holder {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #28303b;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chat-room-section .chat-room-holder .navbar {
+    height: 6vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home {
+    height: 100%;
+    width: 17%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    margin-left: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a {
+    text-decoration: none;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a #arrow {
+    font-weight: 800;
+  }
+  .chat-room-section .chat-room-holder .navbar .home a h2 {
+    margin-bottom: 7px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group {
+    width: 72%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .secondBTN {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #0096ff;
+    -webkit-transition: background 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .answered {
+    background-color: greenyellow;
+    color: black;
+  }
+  .chat-room-section .chat-room-holder .navbar .group .room-options .edit:hover {
+    background-color: #0096ff;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without {
+    width: 25%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .group-without .answered-block #completeIcon {
+    margin-right: 10px;
+    color: greenyellow;
+  }
+  .chat-room-section .chat-room-holder .scrollable {
+    overflow-y: auto;
+    height: 66vh;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question {
+    padding: 15px 0px 25px 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 10vh;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.295);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question p {
+    color: white;
+    display: block;
+    margin-left: 25px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #title {
+    font-size: 22px;
+    opacity: 0.5;
+    margin-bottom: 10px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #question {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation {
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.5;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
+    opacity: 1;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_field {
+    margin-left: 40px;
+    color: white;
+    font-size: 18px;
+    width: 260px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+    position: relative;
+    left: 310px;
+    bottom: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: #0096ff;
+    border-radius: 3px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+    width: 100px;
+    height: 40px;
+    background-color: aqua;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #Q {
+    margin-bottom: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question #name {
+    margin-top: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg {
+    margin-top: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 16vh;
+    border-bottom: 1px solid white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+    height: 55px;
+    width: 55px;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
+    margin-bottom: 15px;
+    margin-left: 50%;
+    font-size: 25px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle {
+    min-height: 8vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 5px 10px 25px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar {
+    height: 8vh;
+    width: 100%;
+    background-color: #333c47;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .input {
+    text-align: start;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 75%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 15px;
+    background-color: #141414;
+    color: white;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send {
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #141414;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send p {
+    display: block;
+  }
+  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 1248px) {
   .chat-room-section {
     height: -webkit-fit-content;
