@@ -24,7 +24,7 @@ function ChatRoom() {
     const token = localStorage.getItem('session-token')
     const [room, setRoom] = useState(null)
     const [editing, setEditing] = useState(false)
-    const [editedQuestion, setEditedQuestion] = useState()
+    const [editedQuestion, setEditedQuestion] = useState("")
     const [editedName, setEditedName] = useState("")
     const [answered, setAnswered] = useState()
     const [empty, setEmpty] = useState()
@@ -137,17 +137,18 @@ function ChatRoom() {
 
     const updateQuestion = () => {
         setEditing(false)
-        axios({
-            method: `PUT`,
-            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
-            headers: { "x-auth-token": `${token}` },
-            data: { Question: editedQuestion, Title: editedName }
-        }).then((res) => {
-            redirect()
-        }).catch((error) => {
-            console.log("error", error)
-        })
-
+        if (editedQuestion.length && editedName.length > 0) {
+            axios({
+                method: `PUT`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
+                headers: { "x-auth-token": `${token}` },
+                data: { Question: editedQuestion, Title: editedName }
+            }).then((res) => {
+                redirect()
+            }).catch((error) => {
+                console.log("error", error)
+            })
+        }
     }
 
     const redirect = () => {
@@ -255,9 +256,12 @@ function ChatRoom() {
                             <>
                                 <input type="input" className="input_field" onChange={(event) => setEditedName(event.target.value)} required id="name" placeholder={`${room.Title} - (Max 30)`} maxLength="30" />
                                 <div className="text-counter">
-                                    {150 - editedName.length}
+                                    {30 - editedName.length}
                                 </div>
-                                <input type="input" className="input_field" id="Q" placeholder={room.Question} onChange={(event) => setEditedQuestion(event.target.value)} required />
+                                <input type="input" className="input_field" id="Q" placeholder={`${room.Question} - (Max 150)`} onChange={(event) => setEditedQuestion(event.target.value)} required />
+                                <div className="text-counter">
+                                    {150 - editedQuestion.length}
+                                </div>
                             </>
                         ) : (
                             <>
