@@ -49,6 +49,7 @@ function ChatRoom() {
 
 
     const [newMessage, setNewMessage] = useState()
+
     const [roomSavedMsgs, setRoomSavedMsgs] = useState()
 
 
@@ -198,6 +199,31 @@ function ChatRoom() {
 
     }, [answered])
 
+    const redirectToUser = (props) => {
+
+        axios({
+            method: "GET",
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${props}`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((response) => {
+            history.push({
+                pathname: `/People/${props}`,
+                state: { user: response.data[0] }
+            })
+        }).catch((error) => {
+            console.log("error:", error)
+        })
+
+
+    }
+
+    const input = document.querySelector('.input')
+
+
+
+
+
+
 
 
     return (room !== null ?
@@ -275,14 +301,16 @@ function ChatRoom() {
                     {messages === undefined ? (<BarLoader color={"#FFFFFF"} css={override} size={300} />) : messages.slice(0).reverse().map((liveMessage, index) => (
                         <div className="msg" key={index}>
                             <div className="top">
-                                <Link>
+                                <div className="userToClick" onClick={() => redirectToUser(liveMessage.sentBy)}>
                                     <img src={liveMessage.sentByImage} alt="" />
                                     <h2>{liveMessage.sentBy}</h2>
-                                </Link>
+                                </div>
                                 <p>{`· ${current_year === liveMessage.date.year ? current_month === liveMessage.date.month ? current_day === liveMessage.date.day ? current_hour === liveMessage.date.hour ? `<1h` : current_hour - liveMessage.date.hour + `h` : current_day - liveMessage.date.day + `d` : current_month - liveMessage.date.month + `m` : current_year - liveMessage.date.year + `y`}`}</p>
                             </div>
                             <div className="middle">
-                                <p>{liveMessage.text}</p>
+                                <div className="message-container">
+                                    <p>{liveMessage.text}</p>
+                                </div>
                             </div>
                             <div className="bottom"></div>
                         </div>
@@ -290,14 +318,16 @@ function ChatRoom() {
                     {roomSavedMsgs === undefined ? (<BarLoader color={"#FFFFFF"} css={override} size={300} />) : roomSavedMsgs.slice(0).reverse().map((savedMessage, index) => (
                         <div className="msg" key={index}>
                             <div className="top">
-                                <Link>
+                                <div className="userToClick" onClick={() => redirectToUser(savedMessage.sentBy)}>
                                     <img src={savedMessage.sentByImage} alt="" />
                                     <h2>{savedMessage.sentBy}</h2>
-                                </Link>
+                                </div>
                                 <p>{`· ${current_year === savedMessage.date.year ? current_month === savedMessage.date.month ? current_day === savedMessage.date.day ? current_hour === savedMessage.date.hour ? `<1h` : current_hour - savedMessage.date.hour + `h` : current_day - savedMessage.date.day + `d` : current_month - savedMessage.date.month + `m` : current_year - savedMessage.date.year + `y`}`}</p>
                             </div>
                             <div className="middle">
-                                <p>{savedMessage.text}</p>
+                                <div className="message-container">
+                                    <p>{savedMessage.text}</p>
+                                </div>
                             </div>
                             <div className="bottom"></div>
                         </div>
@@ -306,8 +336,11 @@ function ChatRoom() {
 
 
                 <div className="chat-bar">
-                    <input type="text" className="input" id="myInput" placeholder={empty ? "Enter Something" : "Respond to question"} onChange={(event) => setNewMessage(event.target.value)} required></input>
-                    <div className="send" onClick={handleSendMessage}><p>Send</p><PublishIcon id="upload" /></div>
+                    <form onSubmit={(event) => { event.preventDefault(); handleSendMessage() }}>
+                        <input type="text" className="input" id="myInput" placeholder={empty ? "Enter Something" : "Respond to question"} onChange={(event) => setNewMessage(event.target.value)} required></input>
+                        <div className="send" onClick={handleSendMessage}><p>Send</p><PublishIcon id="upload" /></div>
+                    </form>
+
                 </div>
 
             </div>

@@ -280,8 +280,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a {
-    text-decoration: none;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -289,15 +288,16 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick img {
     height: 55px;
     width: 55px;
     border-radius: 100%;
     margin-left: 20px;
     margin-right: 15px;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick h2 {
     font-family: "Red Hat Text", sans-serif;
     font-size: 21px;
     margin-bottom: 15px;
@@ -321,17 +321,27 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px 5px 10px 25px;
+    padding: 10px 0px 10px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle .message-container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle p {
     font-family: "Red Hat Text", sans-serif;
@@ -344,6 +354,8 @@
     height: 8vh;
     width: 100%;
     background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -353,8 +365,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .chat-room-section .chat-room-holder .chat-bar .input {
+  .chat-room-section .chat-room-holder .chat-bar form .input {
     text-align: start;
     border: none;
     outline: none;
@@ -366,7 +380,7 @@
     background-color: #141414;
     color: white;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send {
+  .chat-room-section .chat-room-holder .chat-bar form .send {
     height: 40px;
     width: 80px;
     border-radius: 5px;
@@ -383,10 +397,10 @@
             align-items: center;
     cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send p {
+  .chat-room-section .chat-room-holder .chat-bar form .send p {
     display: block;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+  .chat-room-section .chat-room-holder .chat-bar form .send #upload {
     display: none;
   }
 }
@@ -673,8 +687,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a {
-    text-decoration: none;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -682,15 +695,16 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick img {
     height: 55px;
     width: 55px;
     border-radius: 100%;
     margin-left: 20px;
     margin-right: 15px;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick h2 {
     font-family: "Red Hat Text", sans-serif;
     font-size: 21px;
     margin-bottom: 15px;
@@ -714,17 +728,27 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px 5px 10px 25px;
+    padding: 10px 0px 10px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle .message-container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle p {
     font-family: "Red Hat Text", sans-serif;
@@ -737,6 +761,8 @@
     height: 8vh;
     width: 100%;
     background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -746,8 +772,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .chat-room-section .chat-room-holder .chat-bar .input {
+  .chat-room-section .chat-room-holder .chat-bar form .input {
     text-align: start;
     border: none;
     outline: none;
@@ -759,7 +787,7 @@
     background-color: #141414;
     color: white;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send {
+  .chat-room-section .chat-room-holder .chat-bar form .send {
     height: 40px;
     width: 80px;
     border-radius: 5px;
@@ -776,10 +804,10 @@
             align-items: center;
     cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send p {
+  .chat-room-section .chat-room-holder .chat-bar form .send p {
     display: block;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+  .chat-room-section .chat-room-holder .chat-bar form .send #upload {
     display: none;
   }
 }
@@ -1066,8 +1094,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a {
-    text-decoration: none;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1075,15 +1102,16 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick img {
     height: 55px;
     width: 55px;
     border-radius: 100%;
     margin-left: 20px;
     margin-right: 15px;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick h2 {
     font-family: "Red Hat Text", sans-serif;
     font-size: 21px;
     margin-bottom: 15px;
@@ -1107,17 +1135,27 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px 5px 10px 25px;
+    padding: 10px 0px 10px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle .message-container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle p {
     font-family: "Red Hat Text", sans-serif;
@@ -1130,6 +1168,8 @@
     height: 8vh;
     width: 100%;
     background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1139,8 +1179,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .chat-room-section .chat-room-holder .chat-bar .input {
+  .chat-room-section .chat-room-holder .chat-bar form .input {
     text-align: start;
     border: none;
     outline: none;
@@ -1152,7 +1194,7 @@
     background-color: #141414;
     color: white;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send {
+  .chat-room-section .chat-room-holder .chat-bar form .send {
     height: 40px;
     width: 80px;
     border-radius: 5px;
@@ -1169,10 +1211,10 @@
             align-items: center;
     cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send p {
+  .chat-room-section .chat-room-holder .chat-bar form .send p {
     display: block;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+  .chat-room-section .chat-room-holder .chat-bar form .send #upload {
     display: none;
   }
 }
@@ -1459,8 +1501,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a {
-    text-decoration: none;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1468,20 +1509,29 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick img {
     height: 55px;
     width: 55px;
     border-radius: 100%;
     margin-left: 20px;
     margin-right: 15px;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick img:hover {
+    opacity: 0.6;
+    -webkit-filter: brightness(200%);
+            filter: brightness(200%);
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick h2 {
     font-family: "Red Hat Text", sans-serif;
     font-size: 21px;
     margin-bottom: 15px;
     margin-right: 15px;
     color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick h2:hover {
+    opacity: 0.6;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top p {
     font-family: "Red Hat Text", sans-serif;
@@ -1500,17 +1550,27 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px 5px 10px 25px;
+    padding: 10px 0px 10px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle .message-container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle p {
     font-family: "Red Hat Text", sans-serif;
@@ -1523,6 +1583,8 @@
     height: 8vh;
     width: 100%;
     background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1532,8 +1594,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .chat-room-section .chat-room-holder .chat-bar .input {
+  .chat-room-section .chat-room-holder .chat-bar form .input {
     text-align: start;
     border: none;
     outline: none;
@@ -1545,7 +1609,7 @@
     background-color: #141414;
     color: white;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send {
+  .chat-room-section .chat-room-holder .chat-bar form .send {
     height: 40px;
     width: 80px;
     border-radius: 5px;
@@ -1562,10 +1626,10 @@
             align-items: center;
     cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send p {
+  .chat-room-section .chat-room-holder .chat-bar form .send p {
     display: block;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+  .chat-room-section .chat-room-holder .chat-bar form .send #upload {
     display: none;
   }
 }
@@ -1852,8 +1916,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a {
-    text-decoration: none;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1861,15 +1924,16 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick img {
     height: 55px;
     width: 55px;
     border-radius: 100%;
     margin-left: 20px;
     margin-right: 15px;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick h2 {
     font-family: "Red Hat Text", sans-serif;
     font-size: 21px;
     margin-bottom: 15px;
@@ -1893,17 +1957,27 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px 5px 10px 25px;
+    padding: 10px 0px 10px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle .message-container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle p {
     font-family: "Red Hat Text", sans-serif;
@@ -1916,6 +1990,8 @@
     height: 8vh;
     width: 100%;
     background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1925,22 +2001,24 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .chat-room-section .chat-room-holder .chat-bar .input {
+  .chat-room-section .chat-room-holder .chat-bar form .input {
     text-align: start;
     border: none;
     outline: none;
     border-radius: 5px;
-    width: 75%;
-    height: 50px;
+    width: 65%;
+    height: 40px;
     padding-left: 20px;
     font-size: 15px;
     background-color: #141414;
     color: white;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send {
-    height: 50px;
-    width: 100px;
+  .chat-room-section .chat-room-holder .chat-bar form .send {
+    height: 40px;
+    width: 80px;
     border-radius: 5px;
     background-color: #141414;
     color: white;
@@ -1955,10 +2033,10 @@
             align-items: center;
     cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send p {
+  .chat-room-section .chat-room-holder .chat-bar form .send p {
     display: block;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+  .chat-room-section .chat-room-holder .chat-bar form .send #upload {
     display: none;
   }
 }
@@ -2245,8 +2323,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a {
-    text-decoration: none;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2254,15 +2331,16 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a img {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick img {
     height: 55px;
     width: 55px;
     border-radius: 100%;
     margin-left: 20px;
     margin-right: 15px;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top a h2 {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick h2 {
     font-family: "Red Hat Text", sans-serif;
     font-size: 21px;
     margin-bottom: 15px;
@@ -2286,17 +2364,27 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px 5px 10px 25px;
+    padding: 10px 0px 10px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle .message-container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle p {
     font-family: "Red Hat Text", sans-serif;
@@ -2309,6 +2397,8 @@
     height: 8vh;
     width: 100%;
     background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2318,22 +2408,24 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .chat-room-section .chat-room-holder .chat-bar .input {
+  .chat-room-section .chat-room-holder .chat-bar form .input {
     text-align: start;
     border: none;
     outline: none;
     border-radius: 5px;
-    width: 75%;
-    height: 50px;
+    width: 65%;
+    height: 40px;
     padding-left: 20px;
     font-size: 15px;
     background-color: #141414;
     color: white;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send {
-    height: 50px;
-    width: 100px;
+  .chat-room-section .chat-room-holder .chat-bar form .send {
+    height: 40px;
+    width: 80px;
     border-radius: 5px;
     background-color: #141414;
     color: white;
@@ -2348,10 +2440,10 @@
             align-items: center;
     cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send p {
+  .chat-room-section .chat-room-holder .chat-bar form .send p {
     display: block;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+  .chat-room-section .chat-room-holder .chat-bar form .send #upload {
     display: none;
   }
 }
@@ -2691,17 +2783,27 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px 5px 10px 25px;
+    padding: 10px 0px 10px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .middle .message-container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle p {
     font-family: "Red Hat Text", sans-serif;
@@ -2715,6 +2817,8 @@
     height: 8vh;
     width: 100%;
     background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2724,22 +2828,24 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .chat-room-section .chat-room-holder .chat-bar .input {
+  .chat-room-section .chat-room-holder .chat-bar form .input {
     text-align: start;
     border: none;
     outline: none;
     border-radius: 5px;
-    width: 75%;
+    width: 70%;
     height: 40px;
     padding-left: 20px;
     font-size: 15px;
     background-color: #141414;
     color: white;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send {
+  .chat-room-section .chat-room-holder .chat-bar form .send {
     height: 40px;
-    width: 100px;
+    width: 95px;
     border-radius: 5px;
     background-color: #141414;
     color: white;
@@ -2754,10 +2860,10 @@
             align-items: center;
     cursor: pointer;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send p {
+  .chat-room-section .chat-room-holder .chat-bar form .send p {
     display: block;
   }
-  .chat-room-section .chat-room-holder .chat-bar .send #upload {
+  .chat-room-section .chat-room-holder .chat-bar form .send #upload {
     display: none;
   }
 }

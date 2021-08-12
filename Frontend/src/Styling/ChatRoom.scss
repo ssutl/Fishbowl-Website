@@ -251,12 +251,12 @@
               display: flex;
               align-items: center;
   
-              a {
-                // background-color: yellow;
-                text-decoration: none;
+              .userToClick {
                 display: flex;
                 height: 100%;
                 align-items: center;
+                cursor: pointer;
+
                 img {
                   height: 55px;
                   width: 55px;
@@ -264,6 +264,9 @@
                   margin-left: 20px;
                   margin-right: 15px;
                 }
+
+                
+
   
                 h2 {
                   font-family: "Red Hat Text", sans-serif;
@@ -293,12 +296,19 @@
             .middle {
               min-height: 8vh;
               height: fit-content;
-              padding: 10px 5px 10px 25px;
+              padding: 10px 0px 10px 0px;
               width: 100%;
               // background-color: aqua;
               display: flex;
-              align-items: center;
               justify-content: center;
+  
+              .message-container{
+                width: 95%;
+                display: flex;
+                justify-content: center;
+                height: fit-content;
+                word-wrap: break-word
+              }
   
               p {
                 font-family: "Red Hat Text", sans-serif;
@@ -319,9 +329,15 @@
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        display: flex;
+
+        form{
+          display: flex;
         justify-content: space-evenly;
         align-items: center;
+        height: 100%;
+        width: 100%;
+
+
 
         .input {
           text-align: start;
@@ -354,6 +370,8 @@
           #upload {
             display: none;
           }
+        }
+
         }
       }
     }
@@ -610,12 +628,11 @@
               display: flex;
               align-items: center;
   
-              a {
-                // background-color: yellow;
-                text-decoration: none;
+              .userToClick {
                 display: flex;
                 height: 100%;
                 align-items: center;
+                cursor: pointer;
                 img {
                   height: 55px;
                   width: 55px;
@@ -652,12 +669,19 @@
             .middle {
               min-height: 8vh;
               height: fit-content;
-              padding: 10px 5px 10px 25px;
+              padding: 10px 0px 10px 0px;
               width: 100%;
               // background-color: aqua;
               display: flex;
-              align-items: center;
               justify-content: center;
+  
+              .message-container{
+                width: 95%;
+                display: flex;
+                justify-content: center;
+                height: fit-content;
+                word-wrap: break-word
+              }
   
               p {
                 font-family: "Red Hat Text", sans-serif;
@@ -678,9 +702,15 @@
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        display: flex;
+
+        form{
+          display: flex;
         justify-content: space-evenly;
         align-items: center;
+        height: 100%;
+        width: 100%;
+
+
 
         .input {
           text-align: start;
@@ -713,6 +743,8 @@
           #upload {
             display: none;
           }
+        }
+
         }
       }
     }
@@ -969,12 +1001,12 @@
               display: flex;
               align-items: center;
   
-              a {
-                // background-color: yellow;
-                text-decoration: none;
+              .userToClick {
                 display: flex;
                 height: 100%;
                 align-items: center;
+                cursor: pointer;
+
                 img {
                   height: 55px;
                   width: 55px;
@@ -982,6 +1014,8 @@
                   margin-left: 20px;
                   margin-right: 15px;
                 }
+
+                
   
                 h2 {
                   font-family: "Red Hat Text", sans-serif;
@@ -1011,12 +1045,19 @@
             .middle {
               min-height: 8vh;
               height: fit-content;
-              padding: 10px 5px 10px 25px;
+              padding: 10px 0px 10px 0px;
               width: 100%;
               // background-color: aqua;
               display: flex;
-              align-items: center;
               justify-content: center;
+  
+              .message-container{
+                width: 95%;
+                display: flex;
+                justify-content: center;
+                height: fit-content;
+                word-wrap: break-word
+              }
   
               p {
                 font-family: "Red Hat Text", sans-serif;
@@ -1037,9 +1078,15 @@
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        display: flex;
+        
+        form{
+          display: flex;
         justify-content: space-evenly;
         align-items: center;
+        height: 100%;
+        width: 100%;
+
+
 
         .input {
           text-align: start;
@@ -1072,6 +1119,8 @@
           #upload {
             display: none;
           }
+        }
+
         }
       }
     }
@@ -1328,12 +1377,12 @@
               display: flex;
               align-items: center;
   
-              a {
-                // background-color: yellow;
-                text-decoration: none;
+              .userToClick {
                 display: flex;
                 height: 100%;
                 align-items: center;
+                cursor: pointer;
+
                 img {
                   height: 55px;
                   width: 55px;
@@ -1341,13 +1390,22 @@
                   margin-left: 20px;
                   margin-right: 15px;
                 }
-  
+
+                img:hover{
+                  opacity: 0.6;
+                  filter: brightness(200%);
+                }
+
                 h2 {
                   font-family: "Red Hat Text", sans-serif;
                   font-size: 21px;
                   margin-bottom: 15px;
                   margin-right: 15px;
                   color: white;
+                }
+
+                h2:hover{
+                  opacity: 0.6;
                 }
               }
   
@@ -1370,12 +1428,19 @@
             .middle {
               min-height: 8vh;
               height: fit-content;
-              padding: 10px 5px 10px 25px;
+              padding: 10px 0px 10px 0px;
               width: 100%;
               // background-color: aqua;
               display: flex;
-              align-items: center;
               justify-content: center;
+  
+              .message-container{
+                width: 95%;
+                display: flex;
+                justify-content: center;
+                height: fit-content;
+                word-wrap: break-word
+              }
   
               p {
                 font-family: "Red Hat Text", sans-serif;
@@ -1396,9 +1461,16 @@
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        display: flex;
+
+
+        form{
+          display: flex;
         justify-content: space-evenly;
         align-items: center;
+        height: 100%;
+        width: 100%;
+
+
 
         .input {
           text-align: start;
@@ -1432,6 +1504,9 @@
             display: none;
           }
         }
+
+        }
+        
       }
     }
   }
@@ -1687,12 +1762,12 @@
               display: flex;
               align-items: center;
   
-              a {
-                // background-color: yellow;
-                text-decoration: none;
+              .userToClick {
                 display: flex;
                 height: 100%;
                 align-items: center;
+                cursor: pointer;
+
                 img {
                   height: 55px;
                   width: 55px;
@@ -1700,6 +1775,8 @@
                   margin-left: 20px;
                   margin-right: 15px;
                 }
+
+                
   
                 h2 {
                   font-family: "Red Hat Text", sans-serif;
@@ -1729,12 +1806,19 @@
             .middle {
               min-height: 8vh;
               height: fit-content;
-              padding: 10px 5px 10px 25px;
+              padding: 10px 0px 10px 0px;
               width: 100%;
               // background-color: aqua;
               display: flex;
-              align-items: center;
               justify-content: center;
+  
+              .message-container{
+                width: 95%;
+                display: flex;
+                justify-content: center;
+                height: fit-content;
+                word-wrap: break-word
+              }
   
               p {
                 font-family: "Red Hat Text", sans-serif;
@@ -1755,17 +1839,23 @@
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        display: flex;
+        
+        form{
+          display: flex;
         justify-content: space-evenly;
         align-items: center;
+        height: 100%;
+        width: 100%;
+
+
 
         .input {
           text-align: start;
           border: none;
           outline: none;
           border-radius: 5px;
-          width: 75%;
-          height: 50px;
+          width: 65%;
+          height: 40px;
           padding-left: 20px;
           font-size: 15px;
           background-color: #141414;
@@ -1773,8 +1863,8 @@
         }
 
         .send {
-          height: 50px;
-          width: 100px;
+          height: 40px;
+          width: 80px;
           border-radius: 5px;
           background-color: #141414;
           color: white;
@@ -1790,6 +1880,8 @@
           #upload {
             display: none;
           }
+        }
+
         }
       }
     }
@@ -2046,12 +2138,12 @@
               display: flex;
               align-items: center;
   
-              a {
-                // background-color: yellow;
-                text-decoration: none;
+              .userToClick {
                 display: flex;
                 height: 100%;
                 align-items: center;
+                cursor: pointer;
+
                 img {
                   height: 55px;
                   width: 55px;
@@ -2059,6 +2151,8 @@
                   margin-left: 20px;
                   margin-right: 15px;
                 }
+
+                
   
                 h2 {
                   font-family: "Red Hat Text", sans-serif;
@@ -2088,12 +2182,19 @@
             .middle {
               min-height: 8vh;
               height: fit-content;
-              padding: 10px 5px 10px 25px;
+              padding: 10px 0px 10px 0px;
               width: 100%;
               // background-color: aqua;
               display: flex;
-              align-items: center;
               justify-content: center;
+  
+              .message-container{
+                width: 95%;
+                display: flex;
+                justify-content: center;
+                height: fit-content;
+                word-wrap: break-word
+              }
   
               p {
                 font-family: "Red Hat Text", sans-serif;
@@ -2114,17 +2215,23 @@
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        display: flex;
+        
+        form{
+          display: flex;
         justify-content: space-evenly;
         align-items: center;
+        height: 100%;
+        width: 100%;
+
+
 
         .input {
           text-align: start;
           border: none;
           outline: none;
           border-radius: 5px;
-          width: 75%;
-          height: 50px;
+          width: 65%;
+          height: 40px;
           padding-left: 20px;
           font-size: 15px;
           background-color: #141414;
@@ -2132,8 +2239,8 @@
         }
 
         .send {
-          height: 50px;
-          width: 100px;
+          height: 40px;
+          width: 80px;
           border-radius: 5px;
           background-color: #141414;
           color: white;
@@ -2149,6 +2256,8 @@
           #upload {
             display: none;
           }
+        }
+
         }
       }
     }
@@ -2446,12 +2555,19 @@
           .middle {
             min-height: 8vh;
             height: fit-content;
-            padding: 10px 5px 10px 25px;
+            padding: 10px 0px 10px 0px;
             width: 100%;
             // background-color: aqua;
             display: flex;
-            align-items: center;
             justify-content: center;
+
+            .message-container{
+              width: 95%;
+              display: flex;
+              justify-content: center;
+              height: fit-content;
+              word-wrap: break-word
+            }
 
             p {
               font-family: "Red Hat Text", sans-serif;
@@ -2476,16 +2592,22 @@
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        display: flex;
+        
+        form{
+          display: flex;
         justify-content: space-evenly;
         align-items: center;
+        height: 100%;
+        width: 100%;
+
+
 
         .input {
           text-align: start;
           border: none;
           outline: none;
           border-radius: 5px;
-          width: 75%;
+          width: 70%;
           height: 40px;
           padding-left: 20px;
           font-size: 15px;
@@ -2495,7 +2617,7 @@
 
         .send {
           height: 40px;
-          width: 100px;
+          width: 95px;
           border-radius: 5px;
           background-color: #141414;
           color: white;
@@ -2511,6 +2633,8 @@
           #upload {
             display: none;
           }
+        }
+
         }
       }
     }

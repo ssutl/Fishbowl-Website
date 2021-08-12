@@ -89,7 +89,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                             setFeed(false);
                             setFriendFeed(true)
 
-                        }}>Friends</p>
+                        }}>Friend's Feed</p>
                     </div>
                     <Link to={{ pathname: `/Create/${info.name}` }}>
                         <div className="create-BTN">

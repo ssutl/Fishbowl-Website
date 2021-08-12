@@ -244,6 +244,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      // background-color: red;
+
 
       .search-wrapper {
         border-radius: 5px;
@@ -251,6 +253,8 @@
         height: 45px;
         width: 85%;
         background-color: $buttons;
+        // background-color: yellow;
+        margin-top: 12px;
         align-items: center;
         padding-left: 15px;
         color: white;

@@ -1805,7 +1805,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 195px;
+    width: 250px;
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;

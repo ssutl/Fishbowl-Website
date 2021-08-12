@@ -33,7 +33,7 @@ function CreateRoom({ createRoomToParent }) {
     const [Biology, setBiology] = useState(false)
     const [Psychology, setPsychology] = useState(false)
     const [Physics, setPhysics] = useState(false)
-    const [Polotics, setPolotics] = useState(false)
+    const [Politics, setPolitics] = useState(false)
     const [Music, setMusic] = useState(false)
     const [RE, setRE] = useState(false)
 
@@ -64,7 +64,7 @@ function CreateRoom({ createRoomToParent }) {
                     Biology: Biology,
                     Psychology: Psychology,
                     Physics: Physics,
-                    Polotics: Polotics,
+                    Politics: Politics,
                     Music: Music,
                     RE: RE
                 },
@@ -144,7 +144,7 @@ function CreateRoom({ createRoomToParent }) {
                         <div className={Biology ? "tag selected" : "tag"} onClick={() => setBiology(!Biology)}>#Biology</div>
                         <div className={Psychology ? "tag selected" : "tag"} onClick={() => setPsychology(!Psychology)}>#Psychology</div>
                         <div className={Physics ? "tag selected" : "tag"} onClick={() => setPhysics(!Physics)}>#Physics</div>
-                        <div className={Polotics ? "tag selected" : "tag"} onClick={() => setPolotics(!Polotics)}>#Polotics</div>
+                        <div className={Politics ? "tag selected" : "tag"} onClick={() => setPolitics(!Politics)}>#Politics</div>
                         <div className={Music ? "tag selected" : "tag"} onClick={() => setMusic(!Music)}>#Music</div>
                         <div className={RE ? "tag selected" : "tag"} onClick={() => setRE(!RE)}>#RE</div>
                     </div>
