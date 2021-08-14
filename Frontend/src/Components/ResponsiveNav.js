@@ -38,7 +38,7 @@ function ResponsiveNav({ profileData, followReq }) {
         setLoading(true)
         axios({ //Getting all users on the site
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get`,
+            url: `http://localhost:5000/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data)
@@ -50,7 +50,7 @@ function ResponsiveNav({ profileData, followReq }) {
 
         axios({
             method: "GET", //Getting the users the current user follows
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -83,7 +83,7 @@ function ResponsiveNav({ profileData, followReq }) {
 
         axios({ //On logout changing users status to offline
             method: `PUT`,
-            url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+            url: `http://localhost:5000/users/update/${info.name}`,
             headers: { "x-auth-token": `${token}` },
             data: { "online": false }
         }).then((response) => {

@@ -14,10 +14,9 @@ function Login() {
     const [userClicked, setUserClicked] = useState()
     const [image, setImage] = useState("")
     const [email, setEmail] = useState("")
-    const [online, setOnline] = useState(false)
     const [logged, setLogged] = useState()
     const [id, setUserId] = useState()
-    // console.log('id: ', id);
+    const [status, setStatus] = useState("")
     const [token, setToken] = useState()
 
 
@@ -26,7 +25,6 @@ function Login() {
         setEmail(response.profileObj.email)
         setImage(response.profileObj.imageUrl)
         setToken(response.tokenId)
-        setOnline(true) //Marking that user is online
         setUserClicked(true)
 
     }
@@ -36,10 +34,9 @@ function Login() {
 
         axios({ //Retrieving the user table to get the id of the current user
             method: "GET",
-            url: "https://fishbowl-heroku.herokuapp.com/users/get",
+            url: "http://localhost:5000/users/get",
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            // console.log('response from get request: ', response);
             response.data.forEach((student) => {
                 if (student.username === username) {
                     setUserId(student._id)
@@ -49,9 +46,9 @@ function Login() {
 
         axios({ //Creating users account & if user already has account it wont be created again
             method: "POST",
-            url: "https://fishbowl-heroku.herokuapp.com/users/new",
+            url: "http://localhost:5000/users/new",
             headers: { "x-auth-token": `${token}` },
-            data: { username, email, image, online }
+            data: { username, email, image, status }
         }).then(() => {
             setLogged(true)
             // setUserClicked(false)
@@ -67,16 +64,6 @@ function Login() {
     }
 
     if (logged) {
-
-        axios({ //Creating users account & if user already has account it wont be created again
-            method: "PUT",
-            url: `https://fishbowl-heroku.herokuapp.com/users/update/${username}`,
-            headers: { "x-auth-token": `${token}` },
-            data: { online: true }
-        }).then(() => {
-        })
-
-
         return <App name={username} email={email} image={image} id={id} />
     } else {
         return (

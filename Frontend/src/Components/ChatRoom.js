@@ -57,7 +57,7 @@ function ChatRoom() {
     useEffect(() => { //Setting Room messages whenever page refreshes
         axios({
             method: `GET`,
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${current_page}`,
+            url: `http://localhost:5000/chat/get/Title/${current_page}`,
             headers: { "x-auth-token": `${token}` },
         }).then((res) => {
             setRoomSavedMsgs(res.data[0].Messages);
@@ -85,7 +85,7 @@ function ChatRoom() {
 
             axios({
                 method: `PUT`,
-                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
+                url: `http://localhost:5000/chat/update/${current_page}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { message: data }
             }).then((res) => {
@@ -110,7 +110,7 @@ function ChatRoom() {
     useEffect(() => {
         axios({
             method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${current_page}`,
+            url: `http://localhost:5000/chat/get/Title/${current_page}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             setRoom(res.data[0]);
@@ -122,7 +122,7 @@ function ChatRoom() {
     const userPage = () => {
         axios({
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${room.CreatedByName}`,
+            url: `http://localhost:5000/users/get/${room.CreatedByName}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             history.push({
@@ -141,7 +141,7 @@ function ChatRoom() {
         if (editedQuestion.length && editedName.length > 0) {
             axios({
                 method: `PUT`,
-                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page}`,
+                url: `http://localhost:5000/chat/update/${current_page}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { Question: editedQuestion, Title: editedName }
             }).then((res) => {
@@ -155,7 +155,7 @@ function ChatRoom() {
     const redirect = () => {
         axios({
             method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get/Title/${editedName}`,
+            url: `http://localhost:5000/chat/get/Title/${editedName}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             setRoom(res.data[0]);
@@ -188,12 +188,11 @@ function ChatRoom() {
     useEffect(() => {
         axios({
             method: 'PUT',
-            url: `https://fishbowl-heroku.herokuapp.com
+            url: `http://localhost:5000
 /chat/update/${current_page}`,
             headers: { "x-auth-token": `${token}` },
             data: { Answered: answered }
         }).then((res) => {
-            console.log('res: ', res);
 
         })
 
@@ -203,7 +202,7 @@ function ChatRoom() {
 
         axios({
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${props}`,
+            url: `http://localhost:5000/users/get/${props}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             history.push({
@@ -280,11 +279,11 @@ function ChatRoom() {
                     <div className="question">
                         {editing ? (
                             <>
-                                <input type="input" className="input_field" onChange={(event) => setEditedName(event.target.value)} required id="name" placeholder={`${room.Title} - (Max 30)`} maxLength="30" />
+                                <input type="input"  autoComplete="off" className="input_field" onChange={(event) => setEditedName(event.target.value)} required id="name" placeholder={`${room.Title} - (Max 30)`} maxLength="30" />
                                 <div className="text-counter">
                                     {30 - editedName.length}
                                 </div>
-                                <input type="input" className="input_field" id="Q" placeholder={`${room.Question} - (Max 150)`} onChange={(event) => setEditedQuestion(event.target.value)} required />
+                                <input type="input" className="input_field" autoComplete="off" id="Q" placeholder={`${room.Question} - (Max 150)`} onChange={(event) => setEditedQuestion(event.target.value)} required />
                                 <div className="text-counter">
                                     {150 - editedQuestion.length}
                                 </div>
@@ -337,7 +336,7 @@ function ChatRoom() {
 
                 <div className="chat-bar">
                     <form onSubmit={(event) => { event.preventDefault(); handleSendMessage() }}>
-                        <input type="text" className="input" id="myInput" placeholder={empty ? "Enter Something" : "Respond to question"} onChange={(event) => setNewMessage(event.target.value)} required></input>
+                        <input type="text"  autoComplete="off" className="input" id="myInput" placeholder={empty ? "Enter Something" : "Respond to question"} onChange={(event) => setNewMessage(event.target.value)} required></input>
                         <div className="send" onClick={handleSendMessage}><p>Send</p><PublishIcon id="upload" /></div>
                     </form>
 

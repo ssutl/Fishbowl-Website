@@ -31,21 +31,18 @@ function ProfileBar({ profileToParent, search }) {
     const userSearch = current_page === "" && searching
     const [users, setUsers] = useState('')
     const [following, setFollowing] = useState()
+    const [status, setStatus] = useState('')
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    console.log('screenWidth: ', screenWidth);
     const breakpoint = 1248;
 
     const resize = () => {
         setScreenWidth(window.innerWidth);
-        // console.log("window.innerWidth: ", window.innerWidth);
     };
 
     window.addEventListener("resize", resize);
 
 
-    // console.log('following: ', following);
 
-    // console.log('users: ', users);
 
 
 
@@ -55,11 +52,28 @@ function ProfileBar({ profileToParent, search }) {
         setSearching(profileSearch.length > 0)
     }, [profileSearch])
 
+    const updateStatus = (recievedStatus) => {
+        axios({
+            method: 'PUT',
+            url: `http://localhost:5000/users/update/${info.name}`,
+            headers: { "x-auth-token": `${token}` },
+            data: { status: recievedStatus }
+        }).then((res) => {
+            setStatus(recievedStatus)
+        }).catch((error) => {
+            console.log('error: ', error);
+        })
+    }
+
+
+
+
+
 
     useEffect(() => { //Recieving users for the dashboard
         axios({
             method: "GET",
-            url: "https://fishbowl-heroku.herokuapp.com/users/get",
+            url: "http://localhost:5000/users/get",
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data)
@@ -70,10 +84,11 @@ function ProfileBar({ profileToParent, search }) {
 
         axios({
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
+            setStatus(response.data[0].status)
         }).catch((error) => {
             console.log('error: ', error);
 
@@ -85,7 +100,7 @@ function ProfileBar({ profileToParent, search }) {
     const getFollowing = () => {
         axios({
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -97,26 +112,31 @@ function ProfileBar({ profileToParent, search }) {
 
 
     const requests = (userID, value) => {
-        console.log('user: ', user);
         if (value) {
             axios({
                 method: 'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+                url: `http://localhost:5000/users/update/${info.name}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { following: userID }
             }).then((res) => {
                 getFollowing()
                 setFlag(!flag)
+            }).catch((error) => {
+                console.log('error: ', error);
+
             })
         } else if (!value) {
             axios({
                 method: 'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+                url: `http://localhost:5000/users/update/${info.name}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { unfollowing: userID }
             }).then((res) => {
                 getFollowing()
                 setFlag(!flag)
+            }).catch((error) => {
+                console.log('error: ', error);
+
             })
         }
     }
@@ -128,9 +148,9 @@ function ProfileBar({ profileToParent, search }) {
 
         axios({ //On logout changing users status to offline
             method: `PUT`,
-            url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+            url: `http://localhost:5000/users/update/${info.name}`,
             headers: { "x-auth-token": `${token}` },
-            data: { "online": false }
+            data: { status: status }
         }).then((response) => {
             history.go(0)
         }).catch((error) => {
@@ -173,6 +193,19 @@ function ProfileBar({ profileToParent, search }) {
                             onLogoutSuccess={logout}
                         >
                         </GoogleLogout>
+
+                        <div className="status-select-btn">
+                            <span>{status.length === 0 ? `choose status` : status}</span>
+
+                            <div className="status-dropdown-content">
+                                <p onClick={() => updateStatus("Online")}>
+                                    Online
+                                </p>
+                                <p onClick={() => updateStatus("Offline")}>Offline</p>
+                                <p onClick={() => updateStatus("Idle")}>Idle</p>
+                                <p onClick={() => updateStatus("Busy")}>Busy</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="noti">

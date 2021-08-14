@@ -41,7 +41,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
         setLoading(true)
         axios({
             method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get`,
+            url: `http://localhost:5000/chat/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             setAllRooms(res.data.reverse())
@@ -49,7 +49,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
 
         axios({
             method: "GET", //Getting the users the current user follows
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -84,10 +84,13 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                         <p className={feed ? "normal" : "active"} onClick={() => {
                             setFeed(true);
                             setFriendFeed(false)
+                            document.querySelector('.scroll').scrollTo(0, 0)
                         }}>Global Feed</p>
                         <p className={friendFeed ? "normal" : "active"} onClick={() => {
                             setFeed(false);
                             setFriendFeed(true)
+                            document.querySelector('.scroll').scrollTo(0, 0)
+
 
                         }}>Friend's Feed</p>
                     </div>

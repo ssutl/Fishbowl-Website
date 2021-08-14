@@ -4,7 +4,7 @@ import { UserContext } from "../Context/CurrentUser";
 
 
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage"; // Name of the event
-const SOCKET_SERVER_URL = "https://fishbowl-heroku.herokuapp.com";
+const SOCKET_SERVER_URL = "http://localhost:5000";
 
 const useChat = (roomId) => {
   const [messages, setMessages] = useState([]); // Sent and received messages

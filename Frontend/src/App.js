@@ -9,7 +9,6 @@ import ResponsiveNav from './Components/ResponsiveNav';
 
 function App(props) {
   const [data, setData] = useState('');
-  console.log('data: ', data);
   const [profileData, setProfileData] = useState('');
 
   const childToParent = (childdata) => {

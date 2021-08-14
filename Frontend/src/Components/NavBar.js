@@ -12,7 +12,6 @@ function NavBar({ profileData, followReq }) {
     const info = useContext(UserContext)
     const token = localStorage.getItem('session-token')
     const [users, setUsers] = useState([])
-    console.log('users: ', users);
     const [following, setFollowing] = useState()
     let list = []
     const [loading, setLoading] = useState()
@@ -21,7 +20,6 @@ function NavBar({ profileData, followReq }) {
 
     const resize = () => {
         setScreenWidth(window.innerWidth);
-        // console.log("window.innerWidth: ", window.innerWidth);
     };
 
     window.addEventListener("resize", resize);
@@ -35,9 +33,26 @@ function NavBar({ profileData, followReq }) {
 
     useEffect(() => {
         setLoading(true)
+        getFollowing()
+
+        setInterval(() => {
+            getFollowing()
+        }, 6000)
+    }, [profileData, followReq])
+
+    if (loading === false) {
+        users.map((user) => {
+            if (following.includes(user.username)) {
+                list.push(user)
+            }
+        })
+
+    }
+
+    const getFollowing = () => {
         axios({ //Getting all users on the site
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get`,
+            url: `http://localhost:5000/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data)
@@ -49,7 +64,7 @@ function NavBar({ profileData, followReq }) {
 
         axios({
             method: "GET", //Getting the users the current user follows
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -58,15 +73,6 @@ function NavBar({ profileData, followReq }) {
             console.log('error: ', error);
 
         })
-    }, [profileData, followReq])
-
-    if (loading === false) {
-        users.map((user) => {
-            if (following.includes(user.username)) {
-                list.push(user)
-            }
-        })
-
     }
 
 
@@ -120,7 +126,9 @@ function NavBar({ profileData, followReq }) {
                                             <div className="circle">
                                                 <img src={user.image} alt=""></img>
                                             </div>
-                                            <div className={user.online ? "online-circle" : "offline-circle"}>
+                                            <div className={user.status === "Online" ? "online-circle" : user.status === "Offline" ? "offline-circle" : user.status === "Busy" ? "busy-circle" : user.status === "Idle" ? "idle-circle" : null}>
+
+                                                <div className="pop-up">{user.status}</div>
                                             </div>
                                             <p>{screenWidth < 1024 ? user.username.substring(0, 5) + ' ..' : user.username}</p>
                                         </Link>
@@ -130,7 +138,7 @@ function NavBar({ profileData, followReq }) {
 
                     </div>
                 </div>
-            </div>
+            </div >
         )
     } else if (screenWidth < breakpoint) {
         return (

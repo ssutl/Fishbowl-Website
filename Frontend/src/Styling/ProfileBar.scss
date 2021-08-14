@@ -1,20 +1,7 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
 
-.profile-holder {
-  display: none;
-}
-@include breakpoint-mixin("tablet") {
-  .profile-holder {
-    display: none;
-  }
-}
 
-@include breakpoint-mixin("tablet-wide") {
-  .profile-holder {
-    display: none;
-  }
-}
 
 @include breakpoint-mixin("desktop") {
   .profile-holder {
@@ -22,7 +9,7 @@
     width: 22%;
     height: 100vh;
     align-items: center;
-    overflow: hidden;
+    // overflow: hidden;
     flex-direction: column;
     justify-content: space-between; // position: fixed;
 
@@ -34,7 +21,7 @@
       height: 20%;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
+      // overflow: hidden;
 
       .upper-profile {
         height: 65%;
@@ -92,8 +79,48 @@
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         // background-color:$highlight;
+
+        .status-select-btn {
+          width: 30%;
+          height: 48px;
+          border-radius: 2px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          background-color: #181818;
+          color: white;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+
+          .status-dropdown-content {
+            text-align: center;
+            display: none;
+            position: absolute;
+            top: 40px;
+            background-color: #181818;
+            min-width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+            p{
+              cursor: pointer;
+            }
+
+            p:hover {
+              color: orange;
+            }
+          }
+        }
+
+        .status-select-btn:hover .status-dropdown-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 160px;
+        }
       }
     }
     .noti {

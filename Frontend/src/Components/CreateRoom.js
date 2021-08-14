@@ -76,7 +76,7 @@ function CreateRoom({ createRoomToParent }) {
 
             axios({
                 method: `POST`,
-                url: `https://fishbowl-heroku.herokuapp.com/chat/new`,
+                url: `http://localhost:5000/chat/new`,
                 headers: { "x-auth-token": `${token}` },
                 data: data
             })
@@ -123,11 +123,11 @@ function CreateRoom({ createRoomToParent }) {
                 </div>
                 <div className="inputs">
 
-                    <input type="input" className="input_field" onChange={(event) => setRoomName(event.target.value)} required id="name" placeholder={roomExists ? "Room Already Exists  - ( Max 30 )" : "Room Name - ( Max 30 )"} maxlength="30" />
+                    <input type="input" className="input_field" onChange={(event) => setRoomName(event.target.value)} required id="name" placeholder={roomExists ? "Room Already Exists  - ( Max 30 )" : "Room Name - ( Max 30 )"} maxlength="30" autoComplete="off"/>
                     <div className="text-counter">
                         {30 - roomName.length}
                     </div>
-                    <input type="input" className="input_field" id="question" placeholder="Room Question" onChange={(event) => setRoomQuestion(event.target.value)} placeholder="Room Question - (Max 150)" maxlength="150" required />
+                    <input type="input" className="input_field" autoComplete="off" id="question" placeholder="Room Question" onChange={(event) => setRoomQuestion(event.target.value)} placeholder="Room Question - (Max 150)" maxlength="150" required />
                     <div className="text-counter">
                         {150 - roomQuestion.length}
                     </div>
