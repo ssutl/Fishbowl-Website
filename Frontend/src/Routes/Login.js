@@ -34,7 +34,7 @@ function Login() {
 
         axios({ //Retrieving the user table to get the id of the current user
             method: "GET",
-            url: "http://localhost:5000/users/get",
+            url: "https://fishbowl-heroku.herokuapp.com/users/get",
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             response.data.forEach((student) => {
@@ -46,7 +46,7 @@ function Login() {
 
         axios({ //Creating users account & if user already has account it wont be created again
             method: "POST",
-            url: "http://localhost:5000/users/new",
+            url: "https://fishbowl-heroku.herokuapp.com/users/new",
             headers: { "x-auth-token": `${token}` },
             data: { username, email, image, status }
         }).then(() => {

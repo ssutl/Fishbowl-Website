@@ -57,7 +57,7 @@ function ChatRoom() {
         useEffect(() => {
             axios({
                 method: 'GET',
-                url: `http://localhost:5000/chat/get/id/${current_page_id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` }
             }).then((res) => {
                 setRoom(res.data[0]);
@@ -84,7 +84,7 @@ function ChatRoom() {
 
             axios({
                 method: `PUT`,
-                url: `http://localhost:5000/chat/update/${current_page_id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { message: data }
             }).then((res) => {
@@ -106,7 +106,7 @@ function ChatRoom() {
         if (editedQuestion.length && editedName.length > 0) {
             axios({
                 method: `PUT`,
-                url: `http://localhost:5000/chat/update/${current_page_id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { Question: editedQuestion, Title: editedName }
             }).then((res) => {
@@ -119,7 +119,7 @@ function ChatRoom() {
     const userPage = () => {
         axios({
             method: "GET",
-            url: `http://localhost:5000/users/get/${room.CreatedByName}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${room.CreatedByName}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             history.push({
@@ -152,7 +152,7 @@ function ChatRoom() {
     useEffect(() => {
         axios({
             method: 'PUT',
-            url: `http://localhost:5000/chat/update/${current_page_id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
             headers: { "x-auth-token": `${token}` },
             data: { Answered: answered }
         }).then((res) => {
@@ -165,7 +165,7 @@ function ChatRoom() {
 
         axios({
             method: "GET",
-            url: `http://localhost:5000/users/get/${props}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${props}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             history.push({

@@ -5,6 +5,7 @@ import { UserContext } from "../Context/CurrentUser";
 import { Link } from "react-router-dom";
 import mainLogo from '../svg/fish-bowl.png';
 import BarLoader from "react-spinners/BarLoader";
+import FadeLoader from "react-spinners/FadeLoader";
 import { css } from "@emotion/react";
 
 
@@ -52,7 +53,7 @@ function NavBar({ profileData, followReq }) {
     const getFollowing = () => {
         axios({ //Getting all users on the site
             method: "GET",
-            url: `http://localhost:5000/users/get`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data)
@@ -64,7 +65,7 @@ function NavBar({ profileData, followReq }) {
 
         axios({
             method: "GET", //Getting the users the current user follows
-            url: `http://localhost:5000/users/get/${info.name}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -89,6 +90,12 @@ function NavBar({ profileData, followReq }) {
     top: 50%;
     left:10%;
   `;
+    const underride = css`
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left:15%;
+  `;
 
 
     if (screenWidth >= breakpoint) {
@@ -109,7 +116,10 @@ function NavBar({ profileData, followReq }) {
                         <h2>Friends</h2>
                     </div>
                     <div className={list.length === 0 || list == null ? "lower-set" : "lower"}>
-                        {list.length === 0 || list == null && following.length === 0 ? (
+                        {loading?(
+                            <FadeLoader color={"#FFFFFF"} size={50} css={underride} />
+                        ):
+                        list.length === 0 || list == null && following.length === 0 ? (
                             <>
                                 <p>Connect With Friends</p>
                                 <p id="small">Start by searching for a friends name in the searchbar</p>

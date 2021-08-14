@@ -170,6 +170,8 @@
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 10vh;
+    color: rgba(255, 255, 255, 0.534);
+    text-align: center;
   }
   .profile-holder .noti .dashboard {
     height: 12%;
@@ -187,11 +189,6 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.295);
     font-family: "Red Hat Text", sans-serif;
     font-size: 20px;
-  }
-  .profile-holder .noti .dashboard-home {
-    height: 88%;
-    width: 100%;
-    background-color: orange;
   }
   .profile-holder .noti .users {
     height: 88%;

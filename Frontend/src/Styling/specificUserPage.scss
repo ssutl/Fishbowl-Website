@@ -29,7 +29,6 @@
         justify-content: center;
         align-items: center;
         color: white;
-
       }
 
       .imageHolder {
@@ -64,7 +63,6 @@
             font-size: 16px;
             font-weight: 600;
             color: white;
-
           }
         }
 
@@ -89,7 +87,6 @@
             font-size: 16px;
             font-weight: 600;
             color: white;
-            
           }
         }
 
@@ -276,7 +273,6 @@
         display: flex;
         justify-content: center;
         color: white;
-
       }
 
       .imageHolder {
@@ -334,7 +330,6 @@
             font-weight: 600;
           }
         }
-
 
         h2 {
           font-size: 20px;
@@ -519,7 +514,6 @@
         display: flex;
         justify-content: center;
         color: white;
-
       }
 
       .imageHolder {
@@ -761,7 +755,6 @@
         display: flex;
         justify-content: center;
         color: white;
-
       }
 
       .imageHolder {
@@ -1004,10 +997,9 @@
         justify-content: center;
         color: white;
 
-        h1{
+        h1 {
           font-size: 45px;
         }
-
       }
 
       .imageHolder {
@@ -1250,10 +1242,9 @@
         justify-content: center;
         color: white;
 
-        h1{
+        h1 {
           font-size: 65px;
         }
-
       }
 
       .imageHolder {
@@ -1468,8 +1459,6 @@
   }
 }
 
-
-
 @include breakpoint-mixin("desktop") {
   .section2 {
     height: 88vh;
@@ -1494,7 +1483,6 @@
         width: 100%;
         background-color: $highlight;
         // margin-bottom: auto;
-
       }
 
       .imageHolder {

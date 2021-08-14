@@ -15,7 +15,6 @@
       // background-color: yellow;
       flex-direction: column;
 
-
       .navbar {
         height: 8vh;
         width: 100%;
@@ -143,7 +142,7 @@
         }
       }
 
-      .scrollable{
+      .scrollable {
         overflow-y: auto;
         // background-color: yellow;
         height: 64vh;
@@ -161,7 +160,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-  
+
           p {
             // background-color: red;
             color: white;
@@ -171,30 +170,36 @@
           }
           #title {
             // background-color: teal;
+            font-family: "Red Hat Text", sans-serif;
+
             font-size: 18px;
             opacity: 0.5;
             margin-bottom: 5px;
           }
-  
+
           #question {
+            font-family: "Red Hat Text", sans-serif;
+
             font-size: 20px;
             margin-bottom: 10px;
             // background-color: yellow;
             // opacity: 0.5;
           }
-  
+
           #creation {
+            font-family: "Red Hat Text", sans-serif;
+
             cursor: pointer;
             font-size: 15px;
             opacity: 0.5;
             width: fit-content;
             // background-color: aqua;
           }
-  
+
           #creation:hover {
             opacity: 1;
           }
-  
+
           .input_field {
             margin-left: 40px;
             color: white;
@@ -220,97 +225,51 @@
             align-items: center;
             justify-content: center;
           }
-  
+
           .input_label {
             width: 100px;
             height: 40px;
             background-color: aqua;
           }
-  
+
           #Q {
             margin-bottom: 15px;
           }
 
-          #name{
+          #name {
             margin-top: 15px;
           }
         }
-  
-  
-          .msg {
-            margin-top: 10px;
-            height: fit-content;
-            min-height: 16vh;
-            border-bottom: 1px solid white;
-            // border-top: 1px solid white;
-  
-            .top {
-              height: 8vh;
-              width: 100%;
-              // background-color: pink;
+
+        .msg {
+          margin-top: 10px;
+          height: fit-content;
+          min-height: 16vh;
+          border-bottom: 1px solid white;
+          // border-top: 1px solid white;
+
+          .top {
+            height: 8vh;
+            width: 100%;
+            // background-color: pink;
+            display: flex;
+            align-items: center;
+
+            .userToClick {
               display: flex;
+              height: 100%;
               align-items: center;
-  
-              .userToClick {
-                display: flex;
-                height: 100%;
-                align-items: center;
-                cursor: pointer;
+              cursor: pointer;
 
-                img {
-                  height: 55px;
-                  width: 55px;
-                  border-radius: 100%;
-                  margin-left: 20px;
-                  margin-right: 15px;
-                }
+              img {
+                height: 55px;
+                width: 55px;
+                border-radius: 100%;
+                margin-left: 20px;
+                margin-right: 15px;
+              }
 
-                
-
-  
-                h2 {
-                  font-family: "Red Hat Text", sans-serif;
-                  font-size: 21px;
-                  margin-bottom: 15px;
-                  margin-right: 15px;
-                  color: white;
-                }
-              }
-  
-              p {
-                font-family: "Red Hat Text", sans-serif;
-                font-size: 17px;
-                margin-bottom: 15px;
-                color: white;
-              }
-  
-              #heart {
-                // background-color: yellow;
-                margin-bottom: 15px;
-                margin-left: 50%;
-                font-size: 25px;
-                color: white;
-              }
-            }
-  
-            .middle {
-              min-height: 8vh;
-              height: fit-content;
-              padding: 10px 0px 10px 0px;
-              width: 100%;
-              // background-color: aqua;
-              display: flex;
-              justify-content: center;
-  
-              .message-container{
-                width: 95%;
-                display: flex;
-                justify-content: center;
-                height: fit-content;
-                word-wrap: break-word
-              }
-  
-              p {
+              h2 {
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 21px;
                 margin-bottom: 15px;
@@ -318,11 +277,50 @@
                 color: white;
               }
             }
-          }
-      }
 
-      
-      
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 17px;
+              margin-bottom: 15px;
+              color: white;
+            }
+
+            #heart {
+              // background-color: yellow;
+              margin-bottom: 15px;
+              margin-left: 50%;
+              font-size: 25px;
+              color: white;
+            }
+          }
+
+          .middle {
+            min-height: 8vh;
+            height: fit-content;
+            padding: 10px 0px 10px 0px;
+            width: 100%;
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+
+            .message-container {
+              width: 95%;
+              display: flex;
+              justify-content: center;
+              height: fit-content;
+              word-wrap: break-word;
+            }
+
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 21px;
+              margin-bottom: 15px;
+              margin-right: 15px;
+              color: white;
+            }
+          }
+        }
+      }
 
       .chat-bar {
         // border-radius: 5px;
@@ -330,48 +328,45 @@
         width: 100%;
         background-color: #333c47;
 
-        form{
+        form {
           display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-
-
-
-        .input {
-          text-align: start;
-          border: none;
-          outline: none;
-          border-radius: 5px;
-          width: 65%;
-          height: 40px;
-          padding-left: 20px;
-          font-size: 15px;
-          background-color: #141414;
-          color: white;
-        }
-
-        .send {
-          height: 40px;
-          width: 80px;
-          border-radius: 5px;
-          background-color: #141414;
-          color: white;
-          display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           align-items: center;
-          cursor: pointer;
+          height: 100%;
+          width: 100%;
 
-          p {
-            display: block;
+          .input {
+            text-align: start;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            width: 65%;
+            height: 40px;
+            padding-left: 20px;
+            font-size: 15px;
+            background-color: #141414;
+            color: white;
           }
 
-          #upload {
-            display: none;
-          }
-        }
+          .send {
+            height: 40px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
 
+            p {
+              display: block;
+            }
+
+            #upload {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -392,7 +387,6 @@
       // background-color: yellow;
       flex-direction: column;
 
-
       .navbar {
         height: 8vh;
         width: 100%;
@@ -457,8 +451,8 @@
             // background-color: purple;
             margin-right: 15px;
             .edit {
-              height: 45px;
-              width: 45px;
+              height: 40px;
+              width: 40px;
               border-radius: 100%;
               background-color: white;
               display: flex;
@@ -470,8 +464,8 @@
             }
 
             .secondBTN {
-              height: 45px;
-              width: 45px;
+              height: 40px;
+              width: 40px;
               border-radius: 100%;
               background-color: white;
               display: flex;
@@ -520,7 +514,7 @@
         }
       }
 
-      .scrollable{
+      .scrollable {
         overflow-y: auto;
         // background-color: yellow;
         height: 64vh;
@@ -538,7 +532,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-  
+
           p {
             // background-color: red;
             color: white;
@@ -552,14 +546,14 @@
             opacity: 0.5;
             margin-bottom: 5px;
           }
-  
+
           #question {
             font-size: 20px;
             margin-bottom: 10px;
             // background-color: yellow;
             // opacity: 0.5;
           }
-  
+
           #creation {
             cursor: pointer;
             font-size: 15px;
@@ -567,11 +561,11 @@
             width: fit-content;
             // background-color: aqua;
           }
-  
+
           #creation:hover {
             opacity: 1;
           }
-  
+
           .input_field {
             margin-left: 40px;
             color: white;
@@ -597,93 +591,50 @@
             align-items: center;
             justify-content: center;
           }
-  
+
           .input_label {
             width: 100px;
             height: 40px;
             background-color: aqua;
           }
-  
+
           #Q {
             margin-bottom: 15px;
           }
 
-          #name{
+          #name {
             margin-top: 15px;
           }
         }
-  
-  
-          .msg {
-            margin-top: 10px;
-            height: fit-content;
-            min-height: 16vh;
-            border-bottom: 1px solid white;
-            // border-top: 1px solid white;
-  
-            .top {
-              height: 8vh;
-              width: 100%;
-              // background-color: pink;
+
+        .msg {
+          margin-top: 10px;
+          height: fit-content;
+          min-height: 16vh;
+          border-bottom: 1px solid white;
+          // border-top: 1px solid white;
+
+          .top {
+            height: 8vh;
+            width: 100%;
+            // background-color: pink;
+            display: flex;
+            align-items: center;
+
+            .userToClick {
               display: flex;
+              height: 100%;
               align-items: center;
-  
-              .userToClick {
-                display: flex;
-                height: 100%;
-                align-items: center;
-                cursor: pointer;
-                img {
-                  height: 55px;
-                  width: 55px;
-                  border-radius: 100%;
-                  margin-left: 20px;
-                  margin-right: 15px;
-                }
-  
-                h2 {
-                  font-family: "Red Hat Text", sans-serif;
-                  font-size: 21px;
-                  margin-bottom: 15px;
-                  margin-right: 15px;
-                  color: white;
-                }
+              cursor: pointer;
+              img {
+                height: 55px;
+                width: 55px;
+                border-radius: 100%;
+                margin-left: 20px;
+                margin-right: 15px;
               }
-  
-              p {
-                font-family: "Red Hat Text", sans-serif;
-                font-size: 17px;
-                margin-bottom: 15px;
-                color: white;
-              }
-  
-              #heart {
-                // background-color: yellow;
-                margin-bottom: 15px;
-                margin-left: 50%;
-                font-size: 25px;
-                color: white;
-              }
-            }
-  
-            .middle {
-              min-height: 8vh;
-              height: fit-content;
-              padding: 10px 0px 10px 0px;
-              width: 100%;
-              // background-color: aqua;
-              display: flex;
-              justify-content: center;
-  
-              .message-container{
-                width: 95%;
-                display: flex;
-                justify-content: center;
-                height: fit-content;
-                word-wrap: break-word
-              }
-  
-              p {
+
+              h2 {
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 21px;
                 margin-bottom: 15px;
@@ -691,11 +642,50 @@
                 color: white;
               }
             }
-          }
-      }
 
-      
-      
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 17px;
+              margin-bottom: 15px;
+              color: white;
+            }
+
+            #heart {
+              // background-color: yellow;
+              margin-bottom: 15px;
+              margin-left: 50%;
+              font-size: 25px;
+              color: white;
+            }
+          }
+
+          .middle {
+            min-height: 8vh;
+            height: fit-content;
+            padding: 10px 0px 10px 0px;
+            width: 100%;
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+
+            .message-container {
+              width: 95%;
+              display: flex;
+              justify-content: center;
+              height: fit-content;
+              word-wrap: break-word;
+            }
+
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 21px;
+              margin-bottom: 15px;
+              margin-right: 15px;
+              color: white;
+            }
+          }
+        }
+      }
 
       .chat-bar {
         // border-radius: 5px;
@@ -703,48 +693,45 @@
         width: 100%;
         background-color: #333c47;
 
-        form{
+        form {
           display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-
-
-
-        .input {
-          text-align: start;
-          border: none;
-          outline: none;
-          border-radius: 5px;
-          width: 65%;
-          height: 40px;
-          padding-left: 20px;
-          font-size: 15px;
-          background-color: #141414;
-          color: white;
-        }
-
-        .send {
-          height: 40px;
-          width: 80px;
-          border-radius: 5px;
-          background-color: #141414;
-          color: white;
-          display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           align-items: center;
-          cursor: pointer;
+          height: 100%;
+          width: 100%;
 
-          p {
-            display: block;
+          .input {
+            text-align: start;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            width: 65%;
+            height: 40px;
+            padding-left: 20px;
+            font-size: 15px;
+            background-color: #141414;
+            color: white;
           }
 
-          #upload {
-            display: none;
-          }
-        }
+          .send {
+            height: 40px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
 
+            p {
+              display: block;
+            }
+
+            #upload {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -765,7 +752,6 @@
       // background-color: yellow;
       flex-direction: column;
 
-
       .navbar {
         height: 8vh;
         width: 100%;
@@ -798,7 +784,7 @@
         }
 
         .group {
-          width: 72%;
+          width: 55%;
           // background-color: yellow;
           height: 100%;
           display: flex;
@@ -830,8 +816,8 @@
             // background-color: purple;
             margin-right: 15px;
             .edit {
-              height: 45px;
-              width: 45px;
+              height: 40px;
+              width: 40px;
               border-radius: 100%;
               background-color: white;
               display: flex;
@@ -843,8 +829,8 @@
             }
 
             .secondBTN {
-              height: 45px;
-              width: 45px;
+              height: 40px;
+              width: 40px;
               border-radius: 100%;
               background-color: white;
               display: flex;
@@ -893,7 +879,7 @@
         }
       }
 
-      .scrollable{
+      .scrollable {
         overflow-y: auto;
         // background-color: yellow;
         height: 64vh;
@@ -911,7 +897,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-  
+
           p {
             // background-color: red;
             color: white;
@@ -925,14 +911,14 @@
             opacity: 0.5;
             margin-bottom: 5px;
           }
-  
+
           #question {
             font-size: 20px;
             margin-bottom: 10px;
             // background-color: yellow;
             // opacity: 0.5;
           }
-  
+
           #creation {
             cursor: pointer;
             font-size: 15px;
@@ -940,11 +926,11 @@
             width: fit-content;
             // background-color: aqua;
           }
-  
+
           #creation:hover {
             opacity: 1;
           }
-  
+
           .input_field {
             margin-left: 40px;
             color: white;
@@ -970,96 +956,51 @@
             align-items: center;
             justify-content: center;
           }
-  
+
           .input_label {
             width: 100px;
             height: 40px;
             background-color: aqua;
           }
-  
+
           #Q {
             margin-bottom: 15px;
           }
 
-          #name{
+          #name {
             margin-top: 15px;
           }
         }
-  
-  
-          .msg {
-            margin-top: 10px;
-            height: fit-content;
-            min-height: 16vh;
-            border-bottom: 1px solid white;
-            // border-top: 1px solid white;
-  
-            .top {
-              height: 8vh;
-              width: 100%;
-              // background-color: pink;
+
+        .msg {
+          margin-top: 10px;
+          height: fit-content;
+          min-height: 16vh;
+          border-bottom: 1px solid white;
+          // border-top: 1px solid white;
+
+          .top {
+            height: 8vh;
+            width: 100%;
+            // background-color: pink;
+            display: flex;
+            align-items: center;
+
+            .userToClick {
               display: flex;
+              height: 100%;
               align-items: center;
-  
-              .userToClick {
-                display: flex;
-                height: 100%;
-                align-items: center;
-                cursor: pointer;
+              cursor: pointer;
 
-                img {
-                  height: 55px;
-                  width: 55px;
-                  border-radius: 100%;
-                  margin-left: 20px;
-                  margin-right: 15px;
-                }
+              img {
+                height: 55px;
+                width: 55px;
+                border-radius: 100%;
+                margin-left: 20px;
+                margin-right: 15px;
+              }
 
-                
-  
-                h2 {
-                  font-family: "Red Hat Text", sans-serif;
-                  font-size: 21px;
-                  margin-bottom: 15px;
-                  margin-right: 15px;
-                  color: white;
-                }
-              }
-  
-              p {
-                font-family: "Red Hat Text", sans-serif;
-                font-size: 17px;
-                margin-bottom: 15px;
-                color: white;
-              }
-  
-              #heart {
-                // background-color: yellow;
-                margin-bottom: 15px;
-                margin-left: 50%;
-                font-size: 25px;
-                color: white;
-              }
-            }
-  
-            .middle {
-              min-height: 8vh;
-              height: fit-content;
-              padding: 10px 0px 10px 0px;
-              width: 100%;
-              // background-color: aqua;
-              display: flex;
-              justify-content: center;
-  
-              .message-container{
-                width: 95%;
-                display: flex;
-                justify-content: center;
-                height: fit-content;
-                word-wrap: break-word
-              }
-  
-              p {
+              h2 {
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 21px;
                 margin-bottom: 15px;
@@ -1067,60 +1008,96 @@
                 color: white;
               }
             }
-          }
-      }
 
-      
-      
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 17px;
+              margin-bottom: 15px;
+              color: white;
+            }
+
+            #heart {
+              // background-color: yellow;
+              margin-bottom: 15px;
+              margin-left: 50%;
+              font-size: 25px;
+              color: white;
+            }
+          }
+
+          .middle {
+            min-height: 8vh;
+            height: fit-content;
+            padding: 10px 0px 10px 0px;
+            width: 100%;
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+
+            .message-container {
+              width: 95%;
+              display: flex;
+              justify-content: center;
+              height: fit-content;
+              word-wrap: break-word;
+            }
+
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 21px;
+              margin-bottom: 15px;
+              margin-right: 15px;
+              color: white;
+            }
+          }
+        }
+      }
 
       .chat-bar {
         // border-radius: 5px;
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        
-        form{
+
+        form {
           display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-
-
-
-        .input {
-          text-align: start;
-          border: none;
-          outline: none;
-          border-radius: 5px;
-          width: 65%;
-          height: 40px;
-          padding-left: 20px;
-          font-size: 15px;
-          background-color: #141414;
-          color: white;
-        }
-
-        .send {
-          height: 40px;
-          width: 80px;
-          border-radius: 5px;
-          background-color: #141414;
-          color: white;
-          display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           align-items: center;
-          cursor: pointer;
+          height: 100%;
+          width: 100%;
 
-          p {
-            display: block;
+          .input {
+            text-align: start;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            width: 65%;
+            height: 40px;
+            padding-left: 20px;
+            font-size: 15px;
+            background-color: #141414;
+            color: white;
           }
 
-          #upload {
-            display: none;
-          }
-        }
+          .send {
+            height: 40px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
 
+            p {
+              display: block;
+            }
+
+            #upload {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -1141,7 +1118,6 @@
       // background-color: yellow;
       flex-direction: column;
 
-
       .navbar {
         height: 8vh;
         width: 100%;
@@ -1174,7 +1150,7 @@
         }
 
         .group {
-          width: 72%;
+          width: 55%;
           // background-color: yellow;
           height: 100%;
           display: flex;
@@ -1269,7 +1245,7 @@
         }
       }
 
-      .scrollable{
+      .scrollable {
         overflow-y: auto;
         // background-color: yellow;
         height: 64vh;
@@ -1287,7 +1263,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-  
+
           p {
             // background-color: red;
             color: white;
@@ -1301,14 +1277,14 @@
             opacity: 0.5;
             margin-bottom: 5px;
           }
-  
+
           #question {
             font-size: 20px;
             margin-bottom: 10px;
             // background-color: yellow;
             // opacity: 0.5;
           }
-  
+
           #creation {
             cursor: pointer;
             font-size: 15px;
@@ -1316,11 +1292,11 @@
             width: fit-content;
             // background-color: aqua;
           }
-  
+
           #creation:hover {
             opacity: 1;
           }
-  
+
           .input_field {
             margin-left: 40px;
             color: white;
@@ -1346,115 +1322,111 @@
             align-items: center;
             justify-content: center;
           }
-  
+
           .input_label {
             width: 100px;
             height: 40px;
             background-color: aqua;
           }
-  
+
           #Q {
             margin-bottom: 15px;
           }
 
-          #name{
+          #name {
             margin-top: 15px;
           }
         }
-  
-  
-          .msg {
-            margin-top: 10px;
-            height: fit-content;
-            min-height: 16vh;
-            border-bottom: 1px solid white;
-            // border-top: 1px solid white;
-  
-            .top {
-              height: 8vh;
-              width: 100%;
-              // background-color: pink;
+
+        .msg {
+          margin-top: 10px;
+          height: fit-content;
+          min-height: 16vh;
+          border-bottom: 1px solid white;
+          // border-top: 1px solid white;
+
+          .top {
+            height: 8vh;
+            width: 100%;
+            // background-color: pink;
+            display: flex;
+            align-items: center;
+
+            .userToClick {
               display: flex;
+              height: 100%;
               align-items: center;
-  
-              .userToClick {
-                display: flex;
-                height: 100%;
-                align-items: center;
-                cursor: pointer;
+              cursor: pointer;
 
-                img {
-                  height: 55px;
-                  width: 55px;
-                  border-radius: 100%;
-                  margin-left: 20px;
-                  margin-right: 15px;
-                }
+              img {
+                height: 55px;
+                width: 55px;
+                border-radius: 100%;
+                margin-left: 20px;
+                margin-right: 15px;
+              }
 
-                img:hover{
-                  opacity: 0.6;
-                  filter: brightness(200%);
-                }
+              img:hover {
+                opacity: 0.6;
+                filter: brightness(200%);
+              }
 
-                h2 {
-                  font-family: "Red Hat Text", sans-serif;
-                  font-size: 21px;
-                  margin-bottom: 15px;
-                  margin-right: 15px;
-                  color: white;
-                }
-
-                h2:hover{
-                  opacity: 0.6;
-                }
-              }
-  
-              p {
-                font-family: "Red Hat Text", sans-serif;
-                font-size: 17px;
-                margin-bottom: 15px;
-                color: white;
-              }
-  
-              #heart {
-                // background-color: yellow;
-                margin-bottom: 15px;
-                margin-left: 50%;
-                font-size: 25px;
-                color: white;
-              }
-            }
-  
-            .middle {
-              min-height: 8vh;
-              height: fit-content;
-              padding: 10px 0px 10px 0px;
-              width: 100%;
-              // background-color: aqua;
-              display: flex;
-              justify-content: center;
-  
-              .message-container{
-                width: 95%;
-                display: flex;
-                justify-content: center;
-                height: fit-content;
-                word-wrap: break-word
-              }
-  
-              p {
+              h2 {
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 21px;
                 margin-bottom: 15px;
                 margin-right: 15px;
                 color: white;
               }
+
+              h2:hover {
+                opacity: 0.6;
+              }
+            }
+
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 17px;
+              margin-bottom: 15px;
+              color: white;
+            }
+
+            #heart {
+              // background-color: yellow;
+              margin-bottom: 15px;
+              margin-left: 50%;
+              font-size: 25px;
+              color: white;
             }
           }
-      }
 
-      
-      
+          .middle {
+            min-height: 8vh;
+            height: fit-content;
+            padding: 10px 0px 10px 0px;
+            width: 100%;
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+
+            .message-container {
+              width: 95%;
+              display: flex;
+              justify-content: center;
+              height: fit-content;
+              word-wrap: break-word;
+            }
+
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 21px;
+              margin-bottom: 15px;
+              margin-right: 15px;
+              color: white;
+            }
+          }
+        }
+      }
 
       .chat-bar {
         // border-radius: 5px;
@@ -1462,51 +1434,46 @@
         width: 100%;
         background-color: #333c47;
 
-
-        form{
+        form {
           display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-
-
-
-        .input {
-          text-align: start;
-          border: none;
-          outline: none;
-          border-radius: 5px;
-          width: 65%;
-          height: 40px;
-          padding-left: 20px;
-          font-size: 15px;
-          background-color: #141414;
-          color: white;
-        }
-
-        .send {
-          height: 40px;
-          width: 80px;
-          border-radius: 5px;
-          background-color: #141414;
-          color: white;
-          display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           align-items: center;
-          cursor: pointer;
+          height: 100%;
+          width: 100%;
 
-          p {
-            display: block;
+          .input {
+            text-align: start;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            width: 65%;
+            height: 40px;
+            padding-left: 20px;
+            font-size: 15px;
+            background-color: #141414;
+            color: white;
           }
 
-          #upload {
-            display: none;
+          .send {
+            height: 40px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            p {
+              display: block;
+            }
+
+            #upload {
+              display: none;
+            }
           }
         }
-
-        }
-        
       }
     }
   }
@@ -1526,7 +1493,6 @@
       // background-color: yellow;
       flex-direction: column;
 
-
       .navbar {
         height: 8vh;
         width: 100%;
@@ -1559,7 +1525,7 @@
         }
 
         .group {
-          width: 72%;
+          width: 43%;
           // background-color: yellow;
           height: 100%;
           display: flex;
@@ -1654,7 +1620,7 @@
         }
       }
 
-      .scrollable{
+      .scrollable {
         overflow-y: auto;
         // background-color: yellow;
         height: 64vh;
@@ -1672,7 +1638,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-  
+
           p {
             // background-color: red;
             color: white;
@@ -1686,14 +1652,14 @@
             opacity: 0.5;
             margin-bottom: 5px;
           }
-  
+
           #question {
             font-size: 20px;
             margin-bottom: 10px;
             // background-color: yellow;
             // opacity: 0.5;
           }
-  
+
           #creation {
             cursor: pointer;
             font-size: 15px;
@@ -1701,11 +1667,11 @@
             width: fit-content;
             // background-color: aqua;
           }
-  
+
           #creation:hover {
             opacity: 1;
           }
-  
+
           .input_field {
             margin-left: 40px;
             color: white;
@@ -1731,96 +1697,51 @@
             align-items: center;
             justify-content: center;
           }
-  
+
           .input_label {
             width: 100px;
             height: 40px;
             background-color: aqua;
           }
-  
+
           #Q {
             margin-bottom: 15px;
           }
 
-          #name{
+          #name {
             margin-top: 15px;
           }
         }
-  
-  
-          .msg {
-            margin-top: 10px;
-            height: fit-content;
-            min-height: 16vh;
-            border-bottom: 1px solid white;
-            // border-top: 1px solid white;
-  
-            .top {
-              height: 8vh;
-              width: 100%;
-              // background-color: pink;
+
+        .msg {
+          margin-top: 10px;
+          height: fit-content;
+          min-height: 16vh;
+          border-bottom: 1px solid white;
+          // border-top: 1px solid white;
+
+          .top {
+            height: 8vh;
+            width: 100%;
+            // background-color: pink;
+            display: flex;
+            align-items: center;
+
+            .userToClick {
               display: flex;
+              height: 100%;
               align-items: center;
-  
-              .userToClick {
-                display: flex;
-                height: 100%;
-                align-items: center;
-                cursor: pointer;
+              cursor: pointer;
 
-                img {
-                  height: 55px;
-                  width: 55px;
-                  border-radius: 100%;
-                  margin-left: 20px;
-                  margin-right: 15px;
-                }
+              img {
+                height: 55px;
+                width: 55px;
+                border-radius: 100%;
+                margin-left: 20px;
+                margin-right: 15px;
+              }
 
-                
-  
-                h2 {
-                  font-family: "Red Hat Text", sans-serif;
-                  font-size: 21px;
-                  margin-bottom: 15px;
-                  margin-right: 15px;
-                  color: white;
-                }
-              }
-  
-              p {
-                font-family: "Red Hat Text", sans-serif;
-                font-size: 17px;
-                margin-bottom: 15px;
-                color: white;
-              }
-  
-              #heart {
-                // background-color: yellow;
-                margin-bottom: 15px;
-                margin-left: 50%;
-                font-size: 25px;
-                color: white;
-              }
-            }
-  
-            .middle {
-              min-height: 8vh;
-              height: fit-content;
-              padding: 10px 0px 10px 0px;
-              width: 100%;
-              // background-color: aqua;
-              display: flex;
-              justify-content: center;
-  
-              .message-container{
-                width: 95%;
-                display: flex;
-                justify-content: center;
-                height: fit-content;
-                word-wrap: break-word
-              }
-  
-              p {
+              h2 {
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 21px;
                 margin-bottom: 15px;
@@ -1828,60 +1749,96 @@
                 color: white;
               }
             }
-          }
-      }
 
-      
-      
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 17px;
+              margin-bottom: 15px;
+              color: white;
+            }
+
+            #heart {
+              // background-color: yellow;
+              margin-bottom: 15px;
+              margin-left: 50%;
+              font-size: 25px;
+              color: white;
+            }
+          }
+
+          .middle {
+            min-height: 8vh;
+            height: fit-content;
+            padding: 10px 0px 10px 0px;
+            width: 100%;
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+
+            .message-container {
+              width: 95%;
+              display: flex;
+              justify-content: center;
+              height: fit-content;
+              word-wrap: break-word;
+            }
+
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 21px;
+              margin-bottom: 15px;
+              margin-right: 15px;
+              color: white;
+            }
+          }
+        }
+      }
 
       .chat-bar {
         // border-radius: 5px;
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        
-        form{
+
+        form {
           display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-
-
-
-        .input {
-          text-align: start;
-          border: none;
-          outline: none;
-          border-radius: 5px;
-          width: 65%;
-          height: 40px;
-          padding-left: 20px;
-          font-size: 15px;
-          background-color: #141414;
-          color: white;
-        }
-
-        .send {
-          height: 40px;
-          width: 80px;
-          border-radius: 5px;
-          background-color: #141414;
-          color: white;
-          display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           align-items: center;
-          cursor: pointer;
+          height: 100%;
+          width: 100%;
 
-          p {
-            display: block;
+          .input {
+            text-align: start;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            width: 65%;
+            height: 40px;
+            padding-left: 20px;
+            font-size: 15px;
+            background-color: #141414;
+            color: white;
           }
 
-          #upload {
-            display: none;
-          }
-        }
+          .send {
+            height: 40px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
 
+            p {
+              display: block;
+            }
+
+            #upload {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -1901,7 +1858,6 @@
       background-color: $secondary-background;
       // background-color: yellow;
       flex-direction: column;
-
 
       .navbar {
         height: 6vh;
@@ -1935,7 +1891,7 @@
         }
 
         .group {
-          width: 72%;
+          width: 30%;
           // background-color: yellow;
           height: 100%;
           display: flex;
@@ -2030,7 +1986,7 @@
         }
       }
 
-      .scrollable{
+      .scrollable {
         overflow-y: auto;
         // background-color: yellow;
         height: 66vh;
@@ -2048,7 +2004,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-  
+
           p {
             // background-color: red;
             color: white;
@@ -2062,14 +2018,14 @@
             opacity: 0.5;
             margin-bottom: 10px;
           }
-  
+
           #question {
             font-size: 25px;
             margin-bottom: 15px;
             // background-color: yellow;
             // opacity: 0.5;
           }
-  
+
           #creation {
             cursor: pointer;
             font-size: 15px;
@@ -2077,11 +2033,11 @@
             width: fit-content;
             // background-color: aqua;
           }
-  
+
           #creation:hover {
             opacity: 1;
           }
-  
+
           .input_field {
             margin-left: 40px;
             color: white;
@@ -2107,96 +2063,51 @@
             align-items: center;
             justify-content: center;
           }
-  
+
           .input_label {
             width: 100px;
             height: 40px;
             background-color: aqua;
           }
-  
+
           #Q {
             margin-bottom: 15px;
           }
 
-          #name{
+          #name {
             margin-top: 15px;
           }
         }
-  
-  
-          .msg {
-            margin-top: 10px;
-            height: fit-content;
-            min-height: 16vh;
-            border-bottom: 1px solid white;
-            // border-top: 1px solid white;
-  
-            .top {
-              height: 8vh;
-              width: 100%;
-              // background-color: pink;
+
+        .msg {
+          margin-top: 10px;
+          height: fit-content;
+          min-height: 16vh;
+          border-bottom: 1px solid white;
+          // border-top: 1px solid white;
+
+          .top {
+            height: 8vh;
+            width: 100%;
+            // background-color: pink;
+            display: flex;
+            align-items: center;
+
+            .userToClick {
               display: flex;
+              height: 100%;
               align-items: center;
-  
-              .userToClick {
-                display: flex;
-                height: 100%;
-                align-items: center;
-                cursor: pointer;
+              cursor: pointer;
 
-                img {
-                  height: 55px;
-                  width: 55px;
-                  border-radius: 100%;
-                  margin-left: 20px;
-                  margin-right: 15px;
-                }
+              img {
+                height: 55px;
+                width: 55px;
+                border-radius: 100%;
+                margin-left: 20px;
+                margin-right: 15px;
+              }
 
-                
-  
-                h2 {
-                  font-family: "Red Hat Text", sans-serif;
-                  font-size: 21px;
-                  margin-bottom: 15px;
-                  margin-right: 15px;
-                  color: white;
-                }
-              }
-  
-              p {
-                font-family: "Red Hat Text", sans-serif;
-                font-size: 17px;
-                margin-bottom: 15px;
-                color: white;
-              }
-  
-              #heart {
-                // background-color: yellow;
-                margin-bottom: 15px;
-                margin-left: 50%;
-                font-size: 25px;
-                color: white;
-              }
-            }
-  
-            .middle {
-              min-height: 8vh;
-              height: fit-content;
-              padding: 10px 0px 10px 0px;
-              width: 100%;
-              // background-color: aqua;
-              display: flex;
-              justify-content: center;
-  
-              .message-container{
-                width: 95%;
-                display: flex;
-                justify-content: center;
-                height: fit-content;
-                word-wrap: break-word
-              }
-  
-              p {
+              h2 {
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 21px;
                 margin-bottom: 15px;
@@ -2204,60 +2115,96 @@
                 color: white;
               }
             }
-          }
-      }
 
-      
-      
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 17px;
+              margin-bottom: 15px;
+              color: white;
+            }
+
+            #heart {
+              // background-color: yellow;
+              margin-bottom: 15px;
+              margin-left: 50%;
+              font-size: 25px;
+              color: white;
+            }
+          }
+
+          .middle {
+            min-height: 8vh;
+            height: fit-content;
+            padding: 10px 0px 10px 0px;
+            width: 100%;
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+
+            .message-container {
+              width: 95%;
+              display: flex;
+              justify-content: center;
+              height: fit-content;
+              word-wrap: break-word;
+            }
+
+            p {
+              font-family: "Red Hat Text", sans-serif;
+              font-size: 21px;
+              margin-bottom: 15px;
+              margin-right: 15px;
+              color: white;
+            }
+          }
+        }
+      }
 
       .chat-bar {
         // border-radius: 5px;
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        
-        form{
+
+        form {
           display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-
-
-
-        .input {
-          text-align: start;
-          border: none;
-          outline: none;
-          border-radius: 5px;
-          width: 65%;
-          height: 40px;
-          padding-left: 20px;
-          font-size: 15px;
-          background-color: #141414;
-          color: white;
-        }
-
-        .send {
-          height: 40px;
-          width: 80px;
-          border-radius: 5px;
-          background-color: #141414;
-          color: white;
-          display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           align-items: center;
-          cursor: pointer;
+          height: 100%;
+          width: 100%;
 
-          p {
-            display: block;
+          .input {
+            text-align: start;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            width: 80%;
+            height: 50px;
+            padding-left: 20px;
+            font-size: 15px;
+            background-color: #141414;
+            color: white;
           }
 
-          #upload {
-            display: none;
-          }
-        }
+          .send {
+            height: 50px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
 
+            p {
+              display: block;
+            }
+
+            #upload {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -2411,7 +2358,7 @@
         }
       }
 
-      .scrollable{
+      .scrollable {
         overflow-y: auto;
         max-height: 70vh;
 
@@ -2426,7 +2373,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-  
+
           p {
             color: white;
             display: block;
@@ -2436,20 +2383,20 @@
           #title {
             font-size: 22px;
             opacity: 0.5;
-            margin-bottom: 10px;
-  
+            margin-bottom: 7px;
+
             span {
               font-size: 18px;
               margin-left: 10px;
             }
           }
-  
+
           #question {
             font-size: 25px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             // opacity: 0.5;
           }
-  
+
           #creation {
             cursor: pointer;
             font-size: 15px;
@@ -2457,11 +2404,11 @@
             width: fit-content;
             // background-color: aqua;
           }
-  
+
           #creation:hover {
             opacity: 1;
           }
-  
+
           .input_field {
             margin-left: 60px;
             color: white;
@@ -2487,13 +2434,13 @@
             align-items: center;
             justify-content: center;
           }
-  
+
           .input_label {
             width: 100px;
             height: 40px;
             background-color: aqua;
           }
-  
+
           #Q {
             margin-top: 25px;
           }
@@ -2561,12 +2508,12 @@
             display: flex;
             justify-content: center;
 
-            .message-container{
+            .message-container {
               width: 95%;
               display: flex;
               justify-content: center;
               height: fit-content;
-              word-wrap: break-word
+              word-wrap: break-word;
             }
 
             p {
@@ -2578,63 +2525,53 @@
             }
           }
         }
-  
       }
-
-      
-
-
-        
-      
 
       .chat-bar {
         border-radius: 5px;
         height: 8vh;
         width: 100%;
         background-color: #333c47;
-        
-        form{
+
+        form {
           display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-
-
-
-        .input {
-          text-align: start;
-          border: none;
-          outline: none;
-          border-radius: 5px;
-          width: 70%;
-          height: 40px;
-          padding-left: 20px;
-          font-size: 15px;
-          background-color: #141414;
-          color: white;
-        }
-
-        .send {
-          height: 40px;
-          width: 95px;
-          border-radius: 5px;
-          background-color: #141414;
-          color: white;
-          display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           align-items: center;
-          cursor: pointer;
+          height: 100%;
+          width: 100%;
 
-          p {
-            display: block;
+          .input {
+            text-align: start;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            width: 75%;
+            height: 45px;
+            padding-left: 20px;
+            font-size: 15px;
+            background-color: #141414;
+            color: white;
           }
 
-          #upload {
-            display: none;
-          }
-        }
+          .send {
+            height: 45px;
+            width: 95px;
+            border-radius: 5px;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
 
+            p {
+              display: block;
+            }
+
+            #upload {
+              display: none;
+            }
+          }
         }
       }
     }
