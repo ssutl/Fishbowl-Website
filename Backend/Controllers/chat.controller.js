@@ -16,7 +16,7 @@ router.post('/new',auth, (req, res)=>{ //Req is the data that the front end is s
             const newChatRoom = new ChatRoom(req.body);
 
             newChatRoom.save()
-            .then(room=> res.json("Created Chat Room"))
+            .then(room=> res.json(room))
             .catch(err => res.status(400).json("Error! " + err))
 
         }
@@ -43,15 +43,22 @@ router.get('/get/Title/:name',auth,(req,res)=>{
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
+router.get('/get/id/:id',auth,(req,res)=>{
+    console.log('req: ', req);
+    ChatRoom.find({  _id: req.params.id})
+        .then(SpecificRoom => res.json(SpecificRoom))
+        .catch(err => res.status(400).json('Error! ' + err))
+})
+
 //Update Chat Logs
-router.put('/update/:name',auth, (req, res) => {
+router.put('/update/:id',auth, (req, res) => {
     console.log('content sent: ', req.body);
     if(Object.keys(req.body).includes("message")){
-        ChatRoom.findOneAndUpdate({  Title: req.params.name}, { $addToSet: { Messages: req.body.message}})
+        ChatRoom.findOneAndUpdate({  _id: req.params.id}, { $addToSet: { Messages: req.body.message}})
         .then(msg => res.json('Success! Message Added to array.'))
         .catch(err => res.status(400).json('Error! ' + err))
     }else{
-        ChatRoom.findOneAndUpdate({  Title: req.params.name}, req.body)
+        ChatRoom.findOneAndUpdate({  _id: req.params.id}, req.body)
         .then(chat => res.json('Success! Field updated'))
         .catch(err => res.status(400).json('Error! ' + err))
 

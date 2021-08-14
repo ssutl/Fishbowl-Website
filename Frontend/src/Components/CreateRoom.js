@@ -81,6 +81,7 @@ function CreateRoom({ createRoomToParent }) {
                 data: data
             })
                 .then((res) => {
+                    console.log('res: ', res);
                     if (res.data.msg === "Room name already exists") {
                         setRoomExists(true)
                         document.querySelector('.input_field').value = ""
@@ -88,8 +89,8 @@ function CreateRoom({ createRoomToParent }) {
                         setRoomExists(false)
                         setCreateFlag(!createFlag)
                         history.push({
-                            pathname: `/Chat/${roomName}`
-                        })
+                            pathname: `/Chat/${res.data._id}`
+                         })
                     }
 
                 })

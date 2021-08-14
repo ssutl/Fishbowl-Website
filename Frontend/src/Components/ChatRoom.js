@@ -20,7 +20,7 @@ import useChat from './UseChat'
 function ChatRoom() {
     const history = useHistory();
     const info = useContext(UserContext)
-    let current_page = useLocation().pathname.split("/").pop();
+    let current_page_id = useLocation().pathname.split("/").pop();
     const token = localStorage.getItem('session-token')
     const [room, setRoom] = useState(null)
     const [editing, setEditing] = useState(false)
@@ -44,7 +44,7 @@ function ChatRoom() {
     window.addEventListener("resize", resize);
 
     //Socketss
-    const { roomId } = current_page;
+    const { roomId } = current_page_id;
     const { messages, sendMessage } = useChat(roomId);
 
 
@@ -53,22 +53,21 @@ function ChatRoom() {
     const [roomSavedMsgs, setRoomSavedMsgs] = useState()
 
 
+        //Initial Room Data Grab
+        useEffect(() => {
+            axios({
+                method: 'GET',
+                url: `http://localhost:5000/chat/get/id/${current_page_id}`,
+                headers: { "x-auth-token": `${token}` }
+            }).then((res) => {
+                setRoom(res.data[0]);
+                setAnswered(res.data[0].Answered)
+                setRoomSavedMsgs(res.data[0].Messages);
 
-    useEffect(() => { //Setting Room messages whenever page refreshes
-        axios({
-            method: `GET`,
-            url: `http://localhost:5000/chat/get/Title/${current_page}`,
-            headers: { "x-auth-token": `${token}` },
-        }).then((res) => {
-            setRoomSavedMsgs(res.data[0].Messages);
-
-        }).catch((error) => {
-            console.log("error", error)
-        })
-    }, [current_page])
-
-
-
+            })
+    
+        }, [current_page_id])
+    
 
     const handleSendMessage = () => {
         if (newMessage.length !== 0) {
@@ -85,7 +84,7 @@ function ChatRoom() {
 
             axios({
                 method: `PUT`,
-                url: `http://localhost:5000/chat/update/${current_page}`,
+                url: `http://localhost:5000/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { message: data }
             }).then((res) => {
@@ -102,22 +101,20 @@ function ChatRoom() {
 
 
 
-
-
-
-
-    //Initial Room Data Grab
-    useEffect(() => {
-        axios({
-            method: 'GET',
-            url: `http://localhost:5000/chat/get/Title/${current_page}`,
-            headers: { "x-auth-token": `${token}` }
-        }).then((res) => {
-            setRoom(res.data[0]);
-            setAnswered(res.data[0].Answered)
-        })
-
-    }, [])
+    const updateQuestion = () => {
+        setEditing(false)
+        if (editedQuestion.length && editedName.length > 0) {
+            axios({
+                method: `PUT`,
+                url: `http://localhost:5000/chat/update/${current_page_id}`,
+                headers: { "x-auth-token": `${token}` },
+                data: { Question: editedQuestion, Title: editedName }
+            }).then((res) => {
+            }).catch((error) => {
+                console.log("error", error)
+            })
+        }
+    }
 
     const userPage = () => {
         axios({
@@ -131,39 +128,6 @@ function ChatRoom() {
             })
         }).catch((error) => {
             console.log("error:", error)
-        })
-
-    }
-
-
-    const updateQuestion = () => {
-        setEditing(false)
-        if (editedQuestion.length && editedName.length > 0) {
-            axios({
-                method: `PUT`,
-                url: `http://localhost:5000/chat/update/${current_page}`,
-                headers: { "x-auth-token": `${token}` },
-                data: { Question: editedQuestion, Title: editedName }
-            }).then((res) => {
-                redirect()
-            }).catch((error) => {
-                console.log("error", error)
-            })
-        }
-    }
-
-    const redirect = () => {
-        axios({
-            method: 'GET',
-            url: `http://localhost:5000/chat/get/Title/${editedName}`,
-            headers: { "x-auth-token": `${token}` }
-        }).then((res) => {
-            setRoom(res.data[0]);
-            history.push({
-                pathname: `/Chat/${editedName}`,
-                state: { room: res.data[0] }
-            })
-
         })
 
     }
@@ -188,8 +152,7 @@ function ChatRoom() {
     useEffect(() => {
         axios({
             method: 'PUT',
-            url: `http://localhost:5000
-/chat/update/${current_page}`,
+            url: `http://localhost:5000/chat/update/${current_page_id}`,
             headers: { "x-auth-token": `${token}` },
             data: { Answered: answered }
         }).then((res) => {
