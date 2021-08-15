@@ -110,7 +110,7 @@
   .profile-holder .profile .lower-profile .status-select-btn {
     width: 30%;
     height: 48px;
-    border-radius: 2px;
+    border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -121,7 +121,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     position: relative;
-    background-color: #181818;
+    background-color: #393e41;
     color: white;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -132,10 +132,9 @@
     display: none;
     position: absolute;
     top: 40px;
-    background-color: #181818;
+    background-color: #393e41;
     min-width: 100%;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 5px 5px;
     z-index: 1;
   }
   .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p {

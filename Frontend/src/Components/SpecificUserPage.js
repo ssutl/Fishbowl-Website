@@ -121,14 +121,13 @@ function SpecificUserPage({ specificUserToParent }) {
                             <PersonAddIcon id="" />
                             {following ? <p>Following</p> : <p>Follow</p>}
                         </div>
-                        <h2>{usersRooms.length === 0 ? null : `${state.user.username.toUpperCase()}'s Room's`}</h2>
                     </div>
                 )}
                 <div className="specificFeedHolder">
                     <div className={usersRooms.length === 0 ? "svg" : "scrollUser"}>
                         {usersRooms.length === 0 ? (
                             <>
-                                <div className="titlo"><h1>{mypage ? `YOU HAVE NO ROOMS` : screenWidth > breakpoint ? `${state.user.username.toUpperCase()} HAS NO ROOMS` : `FRIEND HAS NO ROOMS`}</h1></div>
+                                <div className="titlo"><h1>{mypage ? `YOU HAVE NO ROOMS` : screenWidth > breakpoint ? null : `FRIEND HAS NO ROOMS`}</h1></div>
                                 <div className="svg"><YourSvg id="svg" /></div>
                             </>
                         ) : usersRooms.map((room, index) => {
@@ -137,7 +136,7 @@ function SpecificUserPage({ specificUserToParent }) {
                                     <div className="usersRooms" key={index}>
                                         <div className="upper">
                                             <p id="Title">{room.Title}</p>
-                                            <p id="Question">{room.Question.substring(0, 70)}</p>
+                                            <p id="Question">{room.Question.substring(0, 70)}...</p>
                                         </div>
                                         <div className="lower">
                                             <div className="low-holder">
