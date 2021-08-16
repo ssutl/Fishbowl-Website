@@ -86,6 +86,26 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .feed-section .bottom-section .indicator {
+    cursor: pointer;
+    margin-top: 20px;
+    position: absolute;
+    left: 32%;
+    height: 32px;
+    width: 150px;
+    background-color: #f54977;
+    border-radius: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .feed-section .bottom-section .indicator p {
+    font-size: 20px;
+  }
   .feed-section .bottom-section .scroll {
     height: 100%;
     width: 95%;
@@ -382,6 +402,26 @@
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .feed-section .bottom-section .indicator {
+    cursor: pointer;
+    margin-top: 20px;
+    position: absolute;
+    left: 32%;
+    height: 32px;
+    width: 150px;
+    background-color: #f54977;
+    border-radius: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .feed-section .bottom-section .indicator p {
+    font-size: 20px;
   }
   .feed-section .bottom-section .scroll {
     height: 100%;
@@ -680,6 +720,26 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .feed-section .bottom-section .indicator {
+    cursor: pointer;
+    margin-top: 20px;
+    position: absolute;
+    left: 35%;
+    height: 32px;
+    width: 150px;
+    background-color: #f54977;
+    border-radius: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .feed-section .bottom-section .indicator p {
+    font-size: 20px;
+  }
   .feed-section .bottom-section .scroll {
     height: 100%;
     width: 95%;
@@ -976,6 +1036,26 @@
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .feed-section .bottom-section .indicator {
+    cursor: pointer;
+    margin-top: 20px;
+    position: absolute;
+    left: 38%;
+    height: 32px;
+    width: 150px;
+    background-color: #f54977;
+    border-radius: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .feed-section .bottom-section .indicator p {
+    font-size: 20px;
   }
   .feed-section .bottom-section .scroll {
     height: 100%;
@@ -1274,6 +1354,26 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .feed-section .bottom-section .indicator {
+    cursor: pointer;
+    margin-top: 20px;
+    position: absolute;
+    left: 41%;
+    height: 32px;
+    width: 150px;
+    background-color: #f54977;
+    border-radius: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .feed-section .bottom-section .indicator p {
+    font-size: 20px;
+  }
   .feed-section .bottom-section .scroll {
     height: 100%;
     width: 95%;
@@ -1571,6 +1671,26 @@
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .feed-section .bottom-section .indicator {
+    cursor: pointer;
+    margin-top: 20px;
+    position: absolute;
+    left: 43%;
+    height: 32px;
+    width: 150px;
+    background-color: #f54977;
+    border-radius: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .feed-section .bottom-section .indicator p {
+    font-size: 20px;
   }
   .feed-section .bottom-section .scroll {
     height: 100%;
