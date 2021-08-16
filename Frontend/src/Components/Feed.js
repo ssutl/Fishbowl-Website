@@ -247,7 +247,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                                     <div className={following.includes(room.CreatedByName) ? "room-holder-friend" : "room-holder"} key={index}>
                                         <div className="top-section">
                                             <p id="Title">{room.Title}</p>
-                                            <p id="Question">{room.Question.substring(0, 70)} ....</p>
+                                            <p id="Question">{room.Question.substring(0, 105)} ....</p>
                                         </div>
                                         <div className="low-section">
                                             <div className="low-holder">
