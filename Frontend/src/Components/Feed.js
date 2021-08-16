@@ -52,13 +52,17 @@ function Feed({ input, followR, dashboard, roomCreated }) {
      */
 
     useEffect(() => {
+        let isMounted = true;
+
         setLoading(true)
         axios({
             method: 'GET',
             url: `https://fishbowl-heroku.herokuapp.com/chat/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
+            if(isMounted){
             setAllRooms(res.data.reverse()) //Reversing order of rooms before we set variable, so that newest is at the top
+            }
         })
 
         axios({
@@ -66,12 +70,16 @@ function Feed({ input, followR, dashboard, roomCreated }) {
             url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            setFollowing(response.data[0].following)
-            setLoading(false)
+            if(isMounted){
+                setFollowing(response.data[0].following)
+                setLoading(false)
+            }
         }).catch((error) => {
             console.log('error: ', error);
 
         })
+
+        return () => { isMounted = false };
     }, [followR, dashboard, roomCreated]) //This gets called whenever these states change
 
     if (loading === false) { //Setting friends rooms
@@ -122,7 +130,6 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                 }
 
             }else{
-                console.log("no new rooms")
             }  
         }).catch((err)=>{
             console.log('err: ', err);
@@ -130,15 +137,20 @@ function Feed({ input, followR, dashboard, roomCreated }) {
     }
 
     useEffect(()=>{
+        let isMounted = true;
+
         setCycledFinished(false)
 
-        console.log("Interval starting again")
         if(newRoomsAvailable === false){
-            const interval = setInterval(()=>{
-                checkRooms()
-            },10000)
-            return () => clearInterval(interval);
+            if(isMounted){
+                const interval = setInterval(()=>{
+                    checkRooms()
+                },10000)
+                return () => clearInterval(interval);
+            } 
         }
+
+        return () => { isMounted = false };
     },[cycledFinished])
 
     const updateCurrentRooms = () =>{

@@ -71,12 +71,16 @@ function ProfileBar({ profileToParent, search }) {
 
 
     useEffect(() => { //Recieving users for the dashboard
+        let isMounted = true;
+
         axios({
             method: "GET",
             url: "https://fishbowl-heroku.herokuapp.com/users/get",
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            setUsers(response.data)
+            if(isMounted){
+                setUsers(response.data)
+            }
         }).catch((error) => {
             console.log('error: ', error);
 
@@ -87,8 +91,10 @@ function ProfileBar({ profileToParent, search }) {
             url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            setFollowing(response.data[0].following)
-            setStatus(response.data[0].status)
+            if(isMounted){
+                setFollowing(response.data[0].following)
+                setStatus(response.data[0].status)
+            }
         }).catch((error) => {
             console.log('error: ', error);
 

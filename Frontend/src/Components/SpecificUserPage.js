@@ -38,12 +38,16 @@ function SpecificUserPage({ specificUserToParent }) {
 
 
     useEffect(() => { //On page load get the rooms of the user clicked on
+        let isMounted = true;
+
         axios({
             method: 'GET',
             url: `https://fishbowl-heroku.herokuapp.com/chat/get/${state.user.username}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
-            setUsersRooms(res.data.reverse())
+            if(isMounted){
+                setUsersRooms(res.data.reverse())
+            }
         })
 
         axios({ //Checking if logged in user is following the user which has been clicked
@@ -51,12 +55,15 @@ function SpecificUserPage({ specificUserToParent }) {
             url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
-            if (res.data[0].following.includes(state.user.username)) {
-                setFollowing(true)
-            } else {
-                setFollowing(false)
+            if(isMounted){
+                if (res.data[0].following.includes(state.user.username)) {
+                    setFollowing(true)
+                } else {
+                    setFollowing(false)
+                }
             }
         })
+        return () => { isMounted = false };
 
     }, [state])
 
@@ -127,7 +134,7 @@ function SpecificUserPage({ specificUserToParent }) {
                     <div className={usersRooms.length === 0 ? "svg" : "scrollUser"}>
                         {usersRooms.length === 0 ? (
                             <>
-                                <div className="titlo"><h1>{mypage ? `YOU HAVE NO ROOMS` : screenWidth > breakpoint ? null : `FRIEND HAS NO ROOMS`}</h1></div>
+                                <div className="titlo"><h1>{mypage ? `YOU HAVE NO ROOMS` : `FRIEND HAS NO ROOMS`}</h1></div>
                                 <div className="svg"><YourSvg id="svg" /></div>
                             </>
                         ) : usersRooms.map((room, index) => {

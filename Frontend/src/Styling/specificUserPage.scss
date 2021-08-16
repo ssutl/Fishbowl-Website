@@ -16,8 +16,8 @@
       color: black;
       display: flex;
       flex-direction: column;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+      border-left: 1px solid rgba(255, 255, 255, 0.705);
+      border-right: 1px solid rgba(255, 255, 255, 0.705);
       // border-radius: 5px;
       overflow: hidden;
 
@@ -129,13 +129,15 @@
           .titlo {
             width: 100%;
             height: 10%;
-            // background-color: green;
-            font-size: 10px;
             display: flex;
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             justify-content: center;
             color: white;
+
+            h1 {
+              font-size: 20px;
+            }
           }
           .svg {
             width: 100%;
@@ -263,8 +265,8 @@
       color: black;
       display: flex;
       flex-direction: column;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+      border-left: 1px solid rgba(255, 255, 255, 0.705);
+      border-right: 1px solid rgba(255, 255, 255, 0.705);
       // border-radius: 5px;
       overflow: hidden;
 
@@ -373,12 +375,15 @@
             width: 100%;
             height: 10%;
             // background-color: green;
-            font-size: 12px;
             display: flex;
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             justify-content: center;
             color: white;
+
+            h1 {
+              font-size: 20px;
+            }
           }
           .svg {
             width: 100%;
@@ -504,8 +509,8 @@
       color: black;
       display: flex;
       flex-direction: column;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+      border-left: 1px solid rgba(255, 255, 255, 0.705);
+      border-right: 1px solid rgba(255, 255, 255, 0.705);
       // border-radius: 5px;
       overflow: hidden;
 
@@ -614,12 +619,15 @@
             width: 100%;
             height: 10%;
             // background-color: green;
-            font-size: 12px;
             display: flex;
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             justify-content: center;
             color: white;
+
+            h1 {
+              font-size: 20px;
+            }
           }
           .svg {
             width: 100%;
@@ -745,8 +753,8 @@
       color: black;
       display: flex;
       flex-direction: column;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+      border-left: 1px solid rgba(255, 255, 255, 0.705);
+      border-right: 1px solid rgba(255, 255, 255, 0.705);
       // border-radius: 5px;
       overflow: hidden;
 
@@ -855,12 +863,15 @@
             width: 100%;
             height: 10%;
             // background-color: green;
-            font-size: 12px;
             display: flex;
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             justify-content: center;
             color: white;
+
+            h1 {
+              font-size: 22px;
+            }
           }
           .svg {
             width: 100%;
@@ -986,8 +997,8 @@
       color: black;
       display: flex;
       flex-direction: column;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+      border-left: 1px solid rgba(255, 255, 255, 0.705);
+      border-right: 1px solid rgba(255, 255, 255, 0.705);
       // border-radius: 5px;
       overflow: hidden;
 
@@ -1100,12 +1111,15 @@
             width: 100%;
             height: 10%;
             // background-color: green;
-            font-size: 12px;
             display: flex;
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             justify-content: center;
             color: white;
+
+            h1 {
+              font-size: 25px;
+            }
           }
           .svg {
             width: 100%;
@@ -1231,8 +1245,8 @@
       color: black;
       display: flex;
       flex-direction: column;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+      border-left: 1px solid rgba(255, 255, 255, 0.705);
+      border-right: 1px solid rgba(255, 255, 255, 0.705);
       // border-radius: 5px;
       overflow: hidden;
 
@@ -1345,12 +1359,15 @@
             width: 100%;
             height: 10%;
             // background-color: green;
-            font-size: 12px;
             display: flex;
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             justify-content: center;
             color: white;
+
+            h1 {
+              font-size: 37px;
+            }
           }
           .svg {
             width: 100%;
@@ -1597,12 +1614,15 @@
             width: 100%;
             height: 10%;
             // background-color: aqua;
-            // font-size: 20px;
             display: flex;
             align-items: center;
             font-family: "Red Hat Text", sans-serif;
             justify-content: center;
             color: white;
+
+            h1 {
+              font-size: 25px;
+            }
           }
           .svg {
             width: 100%;

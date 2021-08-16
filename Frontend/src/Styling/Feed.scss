@@ -1696,11 +1696,7 @@
             font-weight: 600;
             font-size: 20px;
             font-family: "Red Hat Text", sans-serif;
-          }
-
-          p:hover {
             cursor: pointer;
-            opacity: 0.6;
           }
 
           .active {
@@ -1800,7 +1796,6 @@
           .room-holder {
             margin-top: 30px;
             height: fit-content;
-            // min-height: 10vh;
             width: 100%;
             background-color: $secondary-background;
             word-break: break-all;

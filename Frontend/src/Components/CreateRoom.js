@@ -36,6 +36,13 @@ function CreateRoom({ createRoomToParent }) {
     const [Politics, setPolitics] = useState(false)
     const [Music, setMusic] = useState(false)
     const [RE, setRE] = useState(false)
+    const [chatting, setChatting] = useState(false)
+    const [university, setUniversity] = useState(false)
+    const [alevel, setALevel] = useState(false)
+    const [gcse, setGCSE] = useState(false)
+    const [football, setFootball] = useState(false)
+    const [thoughts, setThoughts] = useState(false)
+    const [sixth, setSixth] = useState(false)
 
     const breakpoint = 768;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -66,7 +73,14 @@ function CreateRoom({ createRoomToParent }) {
                     Physics: Physics,
                     Politics: Politics,
                     Music: Music,
-                    RE: RE
+                    RE: RE,
+                    Chatting:chatting,
+                    University: university,
+                    "A-Level": alevel,
+                    GCSE: gcse,
+                    Football: football,
+                    "Thoughts?": thoughts,
+                    "Sixth Form": sixth
                 },
                 Deleted: false,
                 Title: roomName,
@@ -81,7 +95,6 @@ function CreateRoom({ createRoomToParent }) {
                 data: data
             })
                 .then((res) => {
-                    console.log('res: ', res);
                     if (res.data.msg === "Room name already exists") {
                         setRoomExists(true)
                         document.querySelector('.input_field').value = ""
@@ -100,7 +113,6 @@ function CreateRoom({ createRoomToParent }) {
                 })
 
         } else {
-            console.log("name is invalid")
         }
 
     }
@@ -148,6 +160,13 @@ function CreateRoom({ createRoomToParent }) {
                         <div className={Politics ? "tag selected" : "tag"} onClick={() => setPolitics(!Politics)}>#Politics</div>
                         <div className={Music ? "tag selected" : "tag"} onClick={() => setMusic(!Music)}>#Music</div>
                         <div className={RE ? "tag selected" : "tag"} onClick={() => setRE(!RE)}>#RE</div>
+                        <div className={chatting ? "tag selected" : "tag"} onClick={() => setChatting(!chatting)}>#Chatting</div>
+                        <div className={university ? "tag selected" : "tag"} onClick={() => setUniversity(!university)}>#University</div>
+                        <div className={alevel ? "tag selected" : "tag"} onClick={() => setALevel(!alevel)}>#A-Level</div>
+                        <div className={gcse ? "tag selected" : "tag"} onClick={() => setGCSE(!gcse)}>#GCSE</div>
+                        <div className={football ? "tag selected" : "tag"} onClick={() => setFootball(!football)}>#Football</div>
+                        <div className={thoughts ? "tag selected" : "tag"} onClick={() => setThoughts(!thoughts)}>#Thoughts?</div>
+                        <div className={sixth ? "tag selected" : "tag"} onClick={() => setSixth(!sixth)}>#Sixth_Form</div>
                     </div>
                 </div>
                 <div className="submit">

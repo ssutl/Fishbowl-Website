@@ -10,7 +10,7 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 75vh;
+      height: 78vh;
       width: 90%;
       display: flex;
       // justify-content: center;
@@ -52,7 +52,7 @@
       }
 
       .inputs {
-        height: 23vh;
+        height: 22vh;
         width: 100%;
         // background-color: yellow;
         display: flex;
@@ -86,21 +86,20 @@
           justify-content: center;
         }
 
-        #name{
+        #name {
           margin-top: 40px;
         }
-
       }
       .boxes {
-        height: 35vh;
+        height: 39vh;
         width: 100%;
         // background-color: orange;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
 
         .box-holder {
           // background-color: blue;
-          width: 95%;
+          width: 98%;
           height: 100%;
           display: flex;
           // justify-content: center;
@@ -137,7 +136,7 @@
 
         .BTN {
           margin-right: 30px;
-          height: 50px;
+          height: 45px;
           width: 120px;
           border-radius: 5px;
           background-color: $highlight;
@@ -162,7 +161,7 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 75vh;
+      height: 78vh;
       width: 90%;
       display: flex;
       // justify-content: center;
@@ -204,7 +203,7 @@
       }
 
       .inputs {
-        height: 23vh;
+        height: 21vh;
         width: 100%;
         // background-color: yellow;
         display: flex;
@@ -238,24 +237,23 @@
           justify-content: center;
         }
 
-        #name{
+        #name {
           margin-top: 40px;
         }
-
       }
       .boxes {
-        height: 35vh;
+        height: 40vh;
         width: 100%;
         // background-color: orange;
         display: flex;
-        justify-content: flex-end;
+        // justify-content: flex-end;
 
         .box-holder {
           // background-color: blue;
-          width: 95%;
+          width: 99%;
           height: 100%;
           display: flex;
-          // justify-content: center;
+          justify-content: flex-start;
           flex-wrap: wrap;
 
           .tag {
@@ -314,7 +312,7 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 70vh;
+      height: 75vh;
       width: 90%;
       display: flex;
       // justify-content: center;
@@ -390,13 +388,12 @@
           justify-content: center;
         }
 
-        #name{
+        #name {
           margin-top: 40px;
         }
-
       }
       .boxes {
-        height: 30vh;
+        height: 35vh;
         width: 100%;
         // background-color: orange;
         display: flex;
@@ -542,10 +539,9 @@
           justify-content: center;
         }
 
-        #name{
+        #name {
           margin-top: 40px;
         }
-
       }
       .boxes {
         height: 30vh;
@@ -694,10 +690,9 @@
           justify-content: center;
         }
 
-        #name{
+        #name {
           margin-top: 40px;
         }
-
       }
       .boxes {
         height: 16vh;
@@ -770,7 +765,7 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 36vh;
+      height: 38vh;
       width: 87%;
       display: flex;
       // justify-content: center;
@@ -846,13 +841,12 @@
           justify-content: center;
         }
 
-        #name{
+        #name {
           margin-top: 40px;
         }
-
       }
       .boxes {
-        height: 8vh;
+        height: 10vh;
         width: 100%;
         // background-color: orange;
         display: flex;
@@ -922,7 +916,7 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 60vh;
+      height: 62vh;
       width: 87%;
       display: flex;
       justify-content: center;
@@ -1002,7 +996,7 @@
         }
       }
       .boxes {
-        height: 15vh;
+        height: 17vh;
         width: 100%;
         // background-color: aqua;
         display: flex;

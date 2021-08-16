@@ -55,16 +55,23 @@ function ChatRoom() {
 
         //Initial Room Data Grab
         useEffect(() => {
+            let isMounted = true;
+
             axios({
                 method: 'GET',
                 url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` }
             }).then((res) => {
-                setRoom(res.data[0]);
-                setAnswered(res.data[0].Answered)
-                setRoomSavedMsgs(res.data[0].Messages);
+                if(isMounted){
+                    setRoom(res.data[0]);
+                    setAnswered(res.data[0].Answered)
+                    setRoomSavedMsgs(res.data[0].Messages);
+
+                }
 
             })
+
+            return () => { isMounted = false };
     
         }, [current_page_id])
     
@@ -88,7 +95,6 @@ function ChatRoom() {
                 headers: { "x-auth-token": `${token}` },
                 data: { message: data }
             }).then((res) => {
-                console.log('res: ', res);
 
             }).catch((error) => {
                 console.log("error", error)

@@ -10,7 +10,7 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 75vh;
+    height: 78vh;
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -56,7 +56,7 @@
     margin-bottom: 7px;
   }
   .section .section-holder .inputs {
-    height: 23vh;
+    height: 22vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -100,17 +100,17 @@
     margin-top: 40px;
   }
   .section .section-holder .boxes {
-    height: 35vh;
+    height: 39vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .section .section-holder .boxes .box-holder {
-    width: 95%;
+    width: 98%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -159,7 +159,7 @@
   }
   .section .section-holder .submit .BTN {
     margin-right: 30px;
-    height: 50px;
+    height: 45px;
     width: 120px;
     border-radius: 5px;
     background-color: #0096ff;
@@ -190,7 +190,7 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 75vh;
+    height: 78vh;
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -236,7 +236,7 @@
     margin-bottom: 7px;
   }
   .section .section-holder .inputs {
-    height: 23vh;
+    height: 21vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -280,21 +280,21 @@
     margin-top: 40px;
   }
   .section .section-holder .boxes {
-    height: 35vh;
+    height: 40vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
   }
   .section .section-holder .boxes .box-holder {
-    width: 95%;
+    width: 99%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -370,7 +370,7 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 70vh;
+    height: 75vh;
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -460,7 +460,7 @@
     margin-top: 40px;
   }
   .section .section-holder .boxes {
-    height: 30vh;
+    height: 35vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -910,7 +910,7 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 36vh;
+    height: 38vh;
     width: 87%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1000,7 +1000,7 @@
     margin-top: 40px;
   }
   .section .section-holder .boxes {
-    height: 8vh;
+    height: 10vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1090,7 +1090,7 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 60vh;
+    height: 62vh;
     width: 87%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1189,7 +1189,7 @@
     margin-top: 25px;
   }
   .section .section-holder .boxes {
-    height: 15vh;
+    height: 17vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;

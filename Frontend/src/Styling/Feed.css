@@ -1949,10 +1949,7 @@
     font-weight: 600;
     font-size: 20px;
     font-family: "Red Hat Text", sans-serif;
-  }
-  .feed-section .top .holder .feed-BTN p:hover {
     cursor: pointer;
-    opacity: 0.6;
   }
   .feed-section .top .holder .feed-BTN .active {
     opacity: 0.6;

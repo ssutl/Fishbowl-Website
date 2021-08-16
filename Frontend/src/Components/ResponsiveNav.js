@@ -35,13 +35,17 @@ function ResponsiveNav({ profileData, followReq }) {
 
 
     useEffect(() => {
+        let isMounted = true;
+
         setLoading(true)
         axios({ //Getting all users on the site
             method: "GET",
             url: `https://fishbowl-heroku.herokuapp.com/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            setUsers(response.data)
+            if(isMounted){
+                setUsers(response.data)
+            }
         }).catch((error) => {
             console.log('error: ', error);
 
@@ -53,12 +57,16 @@ function ResponsiveNav({ profileData, followReq }) {
             url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            setFollowing(response.data[0].following)
-            setLoading(false)
+            if(isMounted){
+                setFollowing(response.data[0].following)
+                setLoading(false)
+            }
         }).catch((error) => {
             console.log('error: ', error);
 
         })
+
+        return () => { isMounted = false };
     }, [profileData, followReq])
 
     if (loading === false) {
