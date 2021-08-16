@@ -37,7 +37,7 @@ function Middle({ childToParent, dashboard }) {
             <div className="section1">
                 <div className="search-wrapper">
                     {/* <SearchIcon/> */}
-                    <input className="searchBar" type="text" placeholder="Search for rooms, users or subjects" onChange={(event) => { setSearch(event.target.value); history.push('/'); }}></input>
+                    <input className="searchBar" type="text" placeholder="Search for rooms or friends" onChange={(event) => { setSearch(event.target.value); history.push('/'); }}></input>
                 </div>
             </div>
             <Switch>
