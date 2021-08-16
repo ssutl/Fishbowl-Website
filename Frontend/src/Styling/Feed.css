@@ -39,22 +39,25 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 180px;
+    width: 210px;
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 17px;
     font-family: "Red Hat Text", sans-serif;
   }
-  .feed-section .top .holder .feed-BTN .active {
+  .feed-section .top .holder .feed-BTN .NotActive {
     opacity: 0.6;
+  }
+  .feed-section .top .holder .feed-BTN .pink {
+    color: #f54977;
   }
   .feed-section .top .holder a {
     text-decoration: none;
     color: white;
   }
   .feed-section .top .holder a .create-BTN {
-    height: 40px;
+    height: 35px;
     width: 75px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -215,7 +218,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #68C5DB;
+    background-color: #68c5db;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -333,22 +336,25 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 180px;
+    width: 220px;
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;
     font-size: 18px;
     font-family: "Red Hat Text", sans-serif;
   }
-  .feed-section .top .holder .feed-BTN .active {
+  .feed-section .top .holder .feed-BTN .NotActive {
     opacity: 0.6;
+  }
+  .feed-section .top .holder .feed-BTN .pink {
+    color: #f54977;
   }
   .feed-section .top .holder a {
     text-decoration: none;
     color: white;
   }
   .feed-section .top .holder a .create-BTN {
-    height: 40px;
+    height: 38px;
     width: 75px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -509,7 +515,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #68C5DB;
+    background-color: #68c5db;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -627,15 +633,18 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 180px;
+    width: 235px;
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 19px;
     font-family: "Red Hat Text", sans-serif;
   }
-  .feed-section .top .holder .feed-BTN .active {
+  .feed-section .top .holder .feed-BTN .NotActive {
     opacity: 0.6;
+  }
+  .feed-section .top .holder .feed-BTN .pink {
+    color: #f54977;
   }
   .feed-section .top .holder a {
     text-decoration: none;
@@ -803,7 +812,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #68C5DB;
+    background-color: #68c5db;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -921,15 +930,18 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 180px;
+    width: 245px;
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
     font-family: "Red Hat Text", sans-serif;
   }
-  .feed-section .top .holder .feed-BTN .active {
+  .feed-section .top .holder .feed-BTN .NotActive {
     opacity: 0.6;
+  }
+  .feed-section .top .holder .feed-BTN .pink {
+    color: #f54977;
   }
   .feed-section .top .holder a {
     text-decoration: none;
@@ -1097,7 +1109,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #68C5DB;
+    background-color: #68c5db;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -1215,15 +1227,18 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 210px;
+    width: 275px;
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;
     font-size: 22px;
     font-family: "Red Hat Text", sans-serif;
   }
-  .feed-section .top .holder .feed-BTN .active {
+  .feed-section .top .holder .feed-BTN .NotActive {
     opacity: 0.6;
+  }
+  .feed-section .top .holder .feed-BTN .pink {
+    color: #f54977;
   }
   .feed-section .top .holder a {
     text-decoration: none;
@@ -1392,7 +1407,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #68C5DB;
+    background-color: #68c5db;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -1510,15 +1525,18 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 250px;
+    width: 310px;
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;
     font-size: 25px;
     font-family: "Red Hat Text", sans-serif;
   }
-  .feed-section .top .holder .feed-BTN .active {
+  .feed-section .top .holder .feed-BTN .NotActive {
     opacity: 0.6;
+  }
+  .feed-section .top .holder .feed-BTN .pink {
+    color: #f54977;
   }
   .feed-section .top .holder a {
     text-decoration: none;
@@ -1687,7 +1705,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #68C5DB;
+    background-color: #68c5db;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -1819,6 +1837,9 @@
   .feed-section .top .holder .feed-BTN .active {
     opacity: 0.6;
   }
+  .feed-section .top .holder .feed-BTN .pink {
+    color: #f54977;
+  }
   .feed-section .top .holder a {
     text-decoration: none;
     color: white;
@@ -1852,6 +1873,26 @@
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .feed-section .bottom-section .indicator {
+    cursor: pointer;
+    margin-top: 20px;
+    position: absolute;
+    left: 45%;
+    height: 32px;
+    width: 150px;
+    background-color: #f54977;
+    border-radius: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .feed-section .bottom-section .indicator p {
+    font-size: 20px;
   }
   .feed-section .bottom-section .scroll {
     height: 100%;

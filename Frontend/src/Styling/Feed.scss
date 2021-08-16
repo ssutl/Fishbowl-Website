@@ -1,7 +1,6 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
 
-
 @include breakpoint-mixin("skinny") {
   .feed-section {
     height: 80vh;
@@ -29,18 +28,21 @@
         .feed-BTN {
           display: flex;
           justify-content: space-between;
-          width: 180px;
+          width: 210px;
           // background-color: aqua;
 
           p {
             font-weight: 600;
-            font-size: 18px;
+            font-size: 17px;
             font-family: "Red Hat Text", sans-serif;
             // background-color: yellow;
           }
 
-          .active{
+          .NotActive {
             opacity: 0.6;
+          }
+          .pink {
+            color: #f54977;
           }
         }
 
@@ -49,7 +51,7 @@
           color: white;
 
           .create-BTN {
-            height: 40px;
+            height: 35px;
             width: 75px;
             display: flex;
             background-color: $highlight;
@@ -79,11 +81,11 @@
         // margin-bottom: 20px;
         // background-color: yellow;
 
-        .noGlobalorFriends{
+        .noGlobalorFriends {
           height: 90%;
           width: 100%;
 
-          .write{
+          .write {
             height: 10%;
             width: 100%;
             // background-color: green;
@@ -93,7 +95,7 @@
             align-items: center;
           }
 
-          .svgImage{
+          .svgImage {
             height: 90%;
             width: 100%;
             // background-color: aqua;
@@ -101,14 +103,12 @@
             justify-content: center;
             align-items: center;
 
-            img{
+            img {
               width: 90%;
               height: 90%;
             }
           }
           // background-color: orange;
-
-          
         }
 
         .link {
@@ -131,7 +131,6 @@
               display: flex;
               flex-direction: column;
               align-items: flex-start;
-              
 
               p {
                 margin-left: 30px;
@@ -188,7 +187,7 @@
             margin-top: 30px;
             height: fit-content;
             width: 100%;
-            background-color: #68C5DB;
+            background-color: #68c5db;
             word-break: break-all;
             border-radius: 5px;
             padding: 15px 0px 10px 0px;
@@ -286,7 +285,7 @@
         .feed-BTN {
           display: flex;
           justify-content: space-between;
-          width: 180px;
+          width: 220px;
           // background-color: aqua;
 
           p {
@@ -296,9 +295,12 @@
             // background-color: yellow;
           }
 
-
-          .active{
+          .NotActive {
             opacity: 0.6;
+          }
+
+          .pink {
+            color: #f54977;
           }
         }
 
@@ -307,7 +309,7 @@
           color: white;
 
           .create-BTN {
-            height: 40px;
+            height: 38px;
             width: 75px;
             display: flex;
             background-color: $highlight;
@@ -337,11 +339,11 @@
         // margin-bottom: 20px;
         // background-color: yellow;
 
-        .noGlobalorFriends{
+        .noGlobalorFriends {
           height: 90%;
           width: 100%;
 
-          .write{
+          .write {
             height: 10%;
             width: 100%;
             // background-color: green;
@@ -351,7 +353,7 @@
             align-items: center;
           }
 
-          .svgImage{
+          .svgImage {
             height: 90%;
             width: 100%;
             // background-color: aqua;
@@ -359,14 +361,12 @@
             justify-content: center;
             align-items: center;
 
-            img{
+            img {
               width: 90%;
               height: 90%;
             }
           }
           // background-color: orange;
-
-          
         }
 
         .link {
@@ -446,7 +446,7 @@
             margin-top: 30px;
             height: fit-content;
             width: 100%;
-            background-color: #68C5DB;
+            background-color: #68c5db;
             word-break: break-all;
             border-radius: 5px;
             padding: 15px 0px 10px 0px;
@@ -544,19 +544,22 @@
         .feed-BTN {
           display: flex;
           justify-content: space-between;
-          width: 180px;
+          width: 235px;
           // background-color: aqua;
 
           p {
             font-weight: 600;
-            font-size: 18px;
+            font-size: 19px;
             font-family: "Red Hat Text", sans-serif;
             // background-color: yellow;
           }
 
-
-          .active{
+          .NotActive {
             opacity: 0.6;
+          }
+
+          .pink {
+            color: #f54977;
           }
         }
 
@@ -595,11 +598,11 @@
         // margin-bottom: 20px;
         // background-color: yellow;
 
-        .noGlobalorFriends{
+        .noGlobalorFriends {
           height: 90%;
           width: 100%;
 
-          .write{
+          .write {
             height: 10%;
             width: 100%;
             // background-color: green;
@@ -609,7 +612,7 @@
             align-items: center;
           }
 
-          .svgImage{
+          .svgImage {
             height: 90%;
             width: 100%;
             // background-color: aqua;
@@ -617,14 +620,12 @@
             justify-content: center;
             align-items: center;
 
-            img{
+            img {
               width: 90%;
               height: 90%;
             }
           }
           // background-color: orange;
-
-          
         }
 
         .link {
@@ -704,7 +705,7 @@
             margin-top: 30px;
             height: fit-content;
             width: 100%;
-            background-color: #68C5DB;
+            background-color: #68c5db;
             word-break: break-all;
             border-radius: 5px;
             padding: 15px 0px 10px 0px;
@@ -802,19 +803,22 @@
         .feed-BTN {
           display: flex;
           justify-content: space-between;
-          width: 180px;
+          width: 245px;
           // background-color: aqua;
 
           p {
             font-weight: 600;
-            font-size: 18px;
+            font-size: 20px;
             font-family: "Red Hat Text", sans-serif;
             // background-color: yellow;
           }
 
-
-          .active{
+          .NotActive {
             opacity: 0.6;
+          }
+
+          .pink {
+            color: #f54977;
           }
         }
 
@@ -853,11 +857,11 @@
         // margin-bottom: 20px;
         // background-color: yellow;
 
-        .noGlobalorFriends{
+        .noGlobalorFriends {
           height: 90%;
           width: 100%;
 
-          .write{
+          .write {
             height: 10%;
             width: 100%;
             // background-color: green;
@@ -867,7 +871,7 @@
             align-items: center;
           }
 
-          .svgImage{
+          .svgImage {
             height: 90%;
             width: 100%;
             // background-color: aqua;
@@ -875,14 +879,12 @@
             justify-content: center;
             align-items: center;
 
-            img{
+            img {
               width: 90%;
               height: 90%;
             }
           }
           // background-color: orange;
-
-          
         }
 
         .link {
@@ -962,7 +964,7 @@
             margin-top: 30px;
             height: fit-content;
             width: 100%;
-            background-color: #68C5DB;
+            background-color: #68c5db;
             word-break: break-all;
             border-radius: 5px;
             padding: 15px 0px 10px 0px;
@@ -1060,7 +1062,7 @@
         .feed-BTN {
           display: flex;
           justify-content: space-between;
-          width: 210px;
+          width: 275px;
           // background-color: aqua;
 
           p {
@@ -1070,10 +1072,12 @@
             // background-color: yellow;
           }
 
-
-
-          .active{
+          .NotActive {
             opacity: 0.6;
+          }
+
+          .pink {
+            color: #f54977;
           }
         }
 
@@ -1112,11 +1116,11 @@
         // margin-bottom: 20px;
         // background-color: yellow;
 
-        .noGlobalorFriends{
+        .noGlobalorFriends {
           height: 90%;
           width: 100%;
 
-          .write{
+          .write {
             height: 10%;
             width: 100%;
             // background-color: green;
@@ -1127,7 +1131,7 @@
             font-size: 22px;
           }
 
-          .svgImage{
+          .svgImage {
             height: 90%;
             width: 100%;
             // background-color: aqua;
@@ -1135,14 +1139,12 @@
             justify-content: center;
             align-items: center;
 
-            img{
+            img {
               width: 90%;
               height: 90%;
             }
           }
           // background-color: orange;
-
-          
         }
 
         .link {
@@ -1222,7 +1224,7 @@
             margin-top: 30px;
             height: fit-content;
             width: 100%;
-            background-color: #68C5DB;
+            background-color: #68c5db;
             word-break: break-all;
             border-radius: 5px;
             padding: 15px 0px 10px 0px;
@@ -1320,7 +1322,7 @@
         .feed-BTN {
           display: flex;
           justify-content: space-between;
-          width: 250px;
+          width: 310px;
           // background-color: aqua;
 
           p {
@@ -1330,10 +1332,12 @@
             // background-color: yellow;
           }
 
-
-
-          .active{
+          .NotActive {
             opacity: 0.6;
+          }
+
+          .pink {
+            color: #f54977;
           }
         }
 
@@ -1372,11 +1376,11 @@
         // margin-bottom: 20px;
         // background-color: yellow;
 
-        .noGlobalorFriends{
+        .noGlobalorFriends {
           height: 90%;
           width: 100%;
 
-          .write{
+          .write {
             height: 10%;
             width: 100%;
             // background-color: green;
@@ -1387,7 +1391,7 @@
             font-size: 32px;
           }
 
-          .svgImage{
+          .svgImage {
             height: 90%;
             width: 100%;
             // background-color: aqua;
@@ -1395,14 +1399,12 @@
             justify-content: center;
             align-items: center;
 
-            img{
+            img {
               width: 90%;
               height: 90%;
             }
           }
           // background-color: orange;
-
-          
         }
 
         .link {
@@ -1482,7 +1484,7 @@
             margin-top: 30px;
             height: fit-content;
             width: 100%;
-            background-color: #68C5DB;
+            background-color: #68c5db;
             word-break: break-all;
             border-radius: 5px;
             padding: 15px 0px 10px 0px;
@@ -1593,8 +1595,12 @@
             opacity: 0.6;
           }
 
-          .active{
+          .active {
             opacity: 0.6;
+          }
+
+          .pink {
+            color: #f54977;
           }
         }
 
@@ -1625,17 +1631,35 @@
       margin-left: auto;
       margin-right: auto;
 
+      .indicator {
+        cursor: pointer;
+        margin-top: 20px;
+        position: absolute;
+        left: 45%;
+        height: 32px;
+        width: 150px;
+        background-color: #f54977;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        color: white;
+
+        p {
+          font-size: 20px;
+        }
+      }
+
       .scroll {
         height: 100%;
         width: 80%;
         overflow: auto;
         scroll-behavior: smooth;
 
-        .noGlobalorFriends{
+        .noGlobalorFriends {
           height: 90%;
           width: 100%;
 
-          .write{
+          .write {
             height: 10%;
             width: 100%;
             // background-color: green;
@@ -1646,7 +1670,7 @@
             font-size: 22px;
           }
 
-          .svgImage{
+          .svgImage {
             height: 90%;
             width: 100%;
             // background-color: aqua;
@@ -1654,14 +1678,12 @@
             justify-content: center;
             align-items: center;
 
-            img{
+            img {
               width: 90%;
               height: 90%;
             }
           }
           // background-color: orange;
-
-          
         }
 
         .link {

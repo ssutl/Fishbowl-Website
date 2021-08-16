@@ -219,7 +219,7 @@ function ProfileBar({ profileToParent, search }) {
                                     return eachUser.username !== info.name && eachUser.username.toUpperCase().includes(profileSearch.toUpperCase())
                                 }).map((user, index) => {
                                     return (
-                                        <div className="user-holder">
+                                        <div className="user-holder" key={index}>
                                             <Link to={{ pathname: `/People/${user.name}`, state: { user: user } }}>
                                                 <img src={user.image} alt="" />
                                                 <h2>{user.username}</h2>
