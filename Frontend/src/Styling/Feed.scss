@@ -1662,6 +1662,210 @@
     }
   }
 }
+@include breakpoint-mixin("laptop") {
+  .feed-section {
+    height: 90vh;
+    width: 100%;
+
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        // background-color: pink;
+        width: 81%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          display: flex;
+          justify-content: space-between;
+          width: 250px;
+          // background-color: aqua;
+
+          p {
+            font-weight: 600;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+            cursor: pointer;
+          }
+
+          .active {
+            opacity: 0.6;
+          }
+
+          .pink {
+            color: #f54977;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            height: 45px;
+            width: 160px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-section {
+      height: 77vh;
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .indicator {
+        cursor: pointer;
+        margin-top: 20px;
+        position: absolute;
+        left: 45%;
+        height: 32px;
+        width: 150px;
+        background-color: #f54977;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        color: white;
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .scroll {
+        height: 100%;
+        width: 80%;
+        overflow: auto;
+        scroll-behavior: smooth;
+
+        .noGlobalorFriends {
+          height: 90%;
+          width: 100%;
+
+          .write {
+            height: 10%;
+            width: 100%;
+            // background-color: green;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+          }
+
+          .svgImage {
+            height: 90%;
+            width: 100%;
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 90%;
+              height: 90%;
+            }
+          }
+          // background-color: orange;
+        }
+
+        .link {
+          text-decoration: none;
+
+          .room-holder {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @include breakpoint-mixin("desktop") {
   .feed-section {

@@ -66,7 +66,7 @@
   }
 }
 
-@media only screen and (min-width: 1248px) {
+@media only screen and (min-width: 1920px) {
   .login-page .login-holder {
     width: 20%;
     height: 45%;

@@ -1078,7 +1078,7 @@
   }
 }
 
-@media only screen and (min-width: 1248px) {
+@media only screen and (min-width: 1200px) {
   .section {
     height: 85vh;
     width: 100%;
@@ -1090,8 +1090,8 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 62vh;
-    width: 87%;
+    height: 63vh;
+    width: 92%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1106,7 +1106,7 @@
             flex-direction: column;
   }
   .section .section-holder .title {
-    height: 8vh;
+    height: 6vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1115,7 +1115,7 @@
   }
   .section .section-holder .title .home {
     height: 100%;
-    width: 17%;
+    width: 21%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1139,7 +1139,7 @@
     margin-bottom: 7px;
   }
   .section .section-holder .inputs {
-    height: 27vh;
+    height: 24vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1189,7 +1189,7 @@
     margin-top: 25px;
   }
   .section .section-holder .boxes {
-    height: 17vh;
+    height: 25vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1234,7 +1234,385 @@
     background-color: orange;
   }
   .section .section-holder .submit {
-    height: 10vh;
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .section .section-holder .submit .BTN {
+    margin-right: 30px;
+    height: 45px;
+    width: 110px;
+    border-radius: 5px;
+    background-color: #0096ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .section {
+    height: 85vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder {
+    height: 56vh;
+    width: 92%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #28303b;
+    border-radius: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section .section-holder .title {
+    height: 6vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+  }
+  .section .section-holder .title .home {
+    height: 100%;
+    width: 17%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    margin-left: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section .section-holder .title .home a {
+    text-decoration: none;
+    color: white;
+  }
+  .section .section-holder .title .home a #arrow {
+    font-weight: 800;
+  }
+  .section .section-holder .title .home a h2 {
+    margin-bottom: 7px;
+  }
+  .section .section-holder .inputs {
+    height: 22vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section .section-holder .inputs .input_field {
+    color: white;
+    font-size: 18px;
+    width: 350px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    margin-left: 00px;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .section .section-holder .inputs .text-counter {
+    position: relative;
+    left: 210px;
+    bottom: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: #0096ff;
+    border-radius: 3px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .inputs #question {
+    margin-top: 25px;
+  }
+  .section .section-holder .boxes {
+    height: 20vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .boxes .box-holder {
+    width: 90%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section .section-holder .boxes .box-holder .tag {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 10px 5px 10px;
+  }
+  .section .section-holder .boxes .box-holder .selected {
+    background-color: orange;
+  }
+  .section .section-holder .submit {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .section .section-holder .submit .BTN {
+    margin-right: 30px;
+    height: 45px;
+    width: 110px;
+    border-radius: 5px;
+    background-color: #0096ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .section {
+    height: 85vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder {
+    height: 58vh;
+    width: 87%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #28303b;
+    border-radius: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section .section-holder .title {
+    height: 8vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+  }
+  .section .section-holder .title .home {
+    height: 100%;
+    width: 17%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    margin-left: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section .section-holder .title .home a {
+    text-decoration: none;
+    color: white;
+  }
+  .section .section-holder .title .home a #arrow {
+    font-weight: 800;
+  }
+  .section .section-holder .title .home a h2 {
+    margin-bottom: 7px;
+  }
+  .section .section-holder .inputs {
+    height: 23vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section .section-holder .inputs .input_field {
+    color: white;
+    font-size: 18px;
+    width: 350px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    margin-left: 00px;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+  }
+  .section .section-holder .inputs .text-counter {
+    position: relative;
+    left: 210px;
+    bottom: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: #0096ff;
+    border-radius: 3px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .inputs #question {
+    margin-top: 25px;
+  }
+  .section .section-holder .boxes {
+    height: 19vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section .section-holder .boxes .box-holder {
+    width: 90%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section .section-holder .boxes .box-holder .tag {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #384357;
+    margin: 5px 10px 5px 10px;
+  }
+  .section .section-holder .boxes .box-holder .selected {
+    background-color: orange;
+  }
+  .section .section-holder .submit {
+    height: 8vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;

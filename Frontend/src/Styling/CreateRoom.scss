@@ -907,7 +907,7 @@
   }
 }
 
-@include breakpoint-mixin("desktop") {
+@include breakpoint-mixin("laptop") {
   .section {
     height: 85vh;
     width: 100%;
@@ -916,8 +916,8 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 62vh;
-      width: 87%;
+      height: 63vh;
+      width: 92%;
       display: flex;
       justify-content: center;
       background-color: $secondary-background;
@@ -925,14 +925,15 @@
       flex-direction: column;
 
       .title {
-        height: 8vh;
+        height: 6vh;
+        // background-color: teal;
         width: 100%;
         display: flex;
         border-bottom: 1px solid rgba(255, 255, 255, 0.267);
 
         .home {
           height: 100%;
-          width: 17%;
+          width: 21%;
           display: flex;
           align-items: center;
           color: white;
@@ -956,7 +957,7 @@
       }
 
       .inputs {
-        height: 27vh;
+        height: 24vh;
         width: 100%;
         // background-color: yellow;
         display: flex;
@@ -996,7 +997,7 @@
         }
       }
       .boxes {
-        height: 17vh;
+        height: 25vh;
         width: 100%;
         // background-color: aqua;
         display: flex;
@@ -1032,7 +1033,308 @@
         }
       }
       .submit {
-        height: 10vh;
+        height: 8vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
+          height: 45px;
+          width: 110px;
+          border-radius: 5px;
+          background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("laptop-wide") {
+  .section {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .section-holder {
+      height: 56vh;
+      width: 92%;
+      display: flex;
+      justify-content: center;
+      background-color: $secondary-background;
+      border-radius: 5px;
+      flex-direction: column;
+
+      .title {
+        height: 6vh;
+        // background-color: teal;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+
+        .home {
+          height: 100%;
+          width: 17%;
+          display: flex;
+          align-items: center;
+          color: white;
+          margin-left: 20px;
+          // background-color: purple;
+          justify-content: space-between;
+
+          a {
+            text-decoration: none;
+            color: white;
+
+            #arrow {
+              font-weight: 800;
+            }
+
+            h2 {
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+
+      .inputs {
+        height: 22vh;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .input_field {
+          // background-color: orange;
+          color: white;
+          font-size: 18px;
+          width: 350px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          margin-left: 00px;
+          background-color: transparent;
+          border-bottom: 2px solid white;
+        }
+
+        .text-counter {
+          position: relative;
+          left: 210px;
+          bottom: 40px;
+          height: 40px;
+          width: 40px;
+          background-color: $highlight;
+          border-radius: 3px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #question {
+          margin-top: 25px;
+        }
+      }
+      .boxes {
+        height: 20vh;
+        width: 100%;
+        // background-color: aqua;
+        display: flex;
+        justify-content: center;
+
+        .box-holder {
+          // background-color: orange;
+          width: 90%;
+          height: 100%;
+          display: flex;
+          // justify-content: center;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 8vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: green;
+
+        .BTN {
+          margin-right: 30px;
+          height: 45px;
+          width: 110px;
+          border-radius: 5px;
+          background-color: $highlight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Red Hat Text", sans-serif;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .section {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: aqua;
+
+    .section-holder {
+      height: 58vh;
+      width: 87%;
+      display: flex;
+      justify-content: center;
+      background-color: $secondary-background;
+      border-radius: 5px;
+      flex-direction: column;
+
+      .title {
+        height: 8vh;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.267);
+
+        .home {
+          height: 100%;
+          width: 17%;
+          display: flex;
+          align-items: center;
+          color: white;
+          margin-left: 20px;
+          // background-color: purple;
+          justify-content: space-between;
+
+          a {
+            text-decoration: none;
+            color: white;
+
+            #arrow {
+              font-weight: 800;
+            }
+
+            h2 {
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+
+      .inputs {
+        height: 23vh;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .input_field {
+          // background-color: orange;
+          color: white;
+          font-size: 18px;
+          width: 350px;
+          height: 30px;
+          outline: 0;
+          border: 0;
+          margin-left: 00px;
+          background-color: transparent;
+          border-bottom: 2px solid white;
+        }
+
+        .text-counter {
+          position: relative;
+          left: 210px;
+          bottom: 40px;
+          height: 40px;
+          width: 40px;
+          background-color: $highlight;
+          border-radius: 3px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #question {
+          margin-top: 25px;
+        }
+      }
+      .boxes {
+        height: 19vh;
+        width: 100%;
+        // background-color: aqua;
+        display: flex;
+        justify-content: center;
+
+        .box-holder {
+          // background-color: orange;
+          width: 90%;
+          height: 100%;
+          display: flex;
+          // justify-content: center;
+          flex-wrap: wrap;
+
+          .tag {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+            border-radius: 50px;
+            font-size: 15px;
+            padding: 0px 15px 0px 15px;
+            background-color: $buttons;
+            margin: 5px 10px 5px 10px;
+          }
+
+          .selected {
+            background-color: orange;
+          }
+        }
+      }
+      .submit {
+        height: 8vh;
         width: 100%;
         display: flex;
         align-items: center;

@@ -20,7 +20,7 @@ function ResponsiveNav({ profileData, followReq }) {
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState()
     const [following, setFollowing] = useState()
-    const breakpoint = 1248;
+    const breakpoint = 1200;
     const tablet_breakpoint = 768;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 

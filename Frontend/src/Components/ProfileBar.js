@@ -7,6 +7,7 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import DoneAllIcon from '@material-ui/icons/DoneAll';
 
 
 function ProfileBar({ profileToParent, search }) {
@@ -33,7 +34,8 @@ function ProfileBar({ profileToParent, search }) {
     const [following, setFollowing] = useState()
     const [status, setStatus] = useState('')
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const breakpoint = 1248;
+    const breakpoint = 1200;
+    const upper_breakpoint_laptop = 1800;
 
     const resize = () => {
         setScreenWidth(window.innerWidth);
@@ -174,7 +176,17 @@ function ProfileBar({ profileToParent, search }) {
         username: info.name
     }
 
-    if (screenWidth > breakpoint) {
+    const redirectToUser = (data) =>{
+        history.push({
+            pathname: `/People/${data[0]}`,
+            state: { user: data[1] }
+        })
+    }
+
+    
+
+
+    if (screenWidth >= breakpoint) {
 
         return (
             <div className="profile-holder">
@@ -226,12 +238,12 @@ function ProfileBar({ profileToParent, search }) {
                                 }).map((user, index) => {
                                     return (
                                         <div className="user-holder" key={index}>
-                                            <Link to={{ pathname: `/People/${user.name}`, state: { user: user } }}>
-                                                <img src={user.image} alt="" />
+                                            <img src={user.image} alt="" onClick={()=> redirectToUser([user.name, user])}/>
+                                            <div className="name-holder" onClick={()=> redirectToUser([user.name, user])}>
                                                 <h2>{user.username}</h2>
-                                            </Link>
+                                            </div>
                                             <div className={following.includes(user.username) ? "following-BTN" : "follow-BTN"} onClick={() => requests(user.username, !following.includes(user.username))}>
-                                                <PersonAddIcon id="" />
+                                                {screenWidth < upper_breakpoint_laptop? following.includes(user.username) ? <DoneAllIcon/> :<PersonAddIcon id="" />  : following.includes(user.username) ? null : <PersonAddIcon id="" />}
                                                 {following.includes(user.username) ? <p>Following</p> : <p>Follow</p>}
                                             </div>
                                         </div>
@@ -244,7 +256,7 @@ function ProfileBar({ profileToParent, search }) {
                 </div>
             </div>
         )
-    } else if (screenWidth < breakpoint) {
+    } else{
         return (
             null
         )

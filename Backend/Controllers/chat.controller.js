@@ -50,6 +50,13 @@ router.get('/get/id/:id',auth,(req,res)=>{
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
+router.delete('/delete/id/:id',auth,(req,res)=>{
+    console.log('req: ', req);
+    ChatRoom.findOneAndDelete({  _id: req.params.id})
+        .then(SpecificRoom => res.json('Room deleted'))
+        .catch(err => res.status(400).json('Error! ' + err))
+})
+
 //Update Chat Logs
 router.put('/update/:id',auth, (req, res) => {
     console.log('content sent: ', req.body);

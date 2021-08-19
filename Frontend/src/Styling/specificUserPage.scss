@@ -208,7 +208,7 @@
               }
             }
             .lower {
-              margin-top: 15px;
+              margin-top: 10px;
               height: 40%;
               width: 100%;
               // background-color: orange;
@@ -216,13 +216,13 @@
               justify-content: center;
 
               .low-holder {
-                height: 100%;
-                width: 85%;
+                // height: 100%;
+                width: 90%;
                 display: flex;
                 // justify-content: center;
                 flex-wrap: wrap;
                 // background-color: aqua;
-                margin-left: 22px;
+                // margin-left: 18px;
 
                 .roomTag {
                   // background-color: aqua;
@@ -241,6 +241,35 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .delete {
+              margin-top: 15px;
+              height: 100%;
+              width: 100%;
+              display: flex;
+
+              // background-color: yellow;
+
+              .delete-icon-holder {
+                cursor: pointer;
+                margin-left: 15px;
+                height: 40px;
+                width: 40px;
+                border-radius: 5px;
+                background-color: $highlight;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease-in;
+
+                #icon {
+                  font-size: 25px;
+                }
+              }
+
+              .delete-icon-holder:hover {
+                background-color: $negativeBTN;
               }
             }
           }
@@ -452,7 +481,7 @@
               }
             }
             .lower {
-              margin-top: 15px;
+              margin-top: 10px;
               height: 40%;
               width: 100%;
               // background-color: orange;
@@ -461,12 +490,12 @@
 
               .low-holder {
                 height: 100%;
-                width: 85%;
+                width: 90%;
                 display: flex;
                 // justify-content: center;
                 flex-wrap: wrap;
                 // background-color: aqua;
-                margin-left: 22px;
+                // margin-left: 22px;
 
                 .roomTag {
                   // background-color: aqua;
@@ -485,6 +514,35 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .delete {
+              margin-top: 15px;
+              height: 100%;
+              width: 100%;
+              display: flex;
+
+              // background-color: yellow;
+
+              .delete-icon-holder {
+                cursor: pointer;
+                margin-left: 20px;
+                height: 40px;
+                width: 40px;
+                border-radius: 5px;
+                background-color: $highlight;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease-in;
+
+                #icon {
+                  font-size: 25px;
+                }
+              }
+
+              .delete-icon-holder:hover {
+                background-color: $negativeBTN;
               }
             }
           }
@@ -696,7 +754,7 @@
               }
             }
             .lower {
-              margin-top: 15px;
+              margin-top: 10px;
               height: 40%;
               width: 100%;
               // background-color: orange;
@@ -705,12 +763,11 @@
 
               .low-holder {
                 height: 100%;
-                width: 85%;
+                width: 92%;
                 display: flex;
                 // justify-content: center;
                 flex-wrap: wrap;
                 // background-color: aqua;
-                margin-left: 22px;
 
                 .roomTag {
                   // background-color: aqua;
@@ -726,9 +783,38 @@
                   font-size: 15px;
                   padding: 0px 15px 0px 15px;
                   background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
+                  margin: 5px 20px 7px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .delete {
+              margin-top: 15px;
+              height: 100%;
+              width: 100%;
+              display: flex;
+
+              // background-color: yellow;
+
+              .delete-icon-holder {
+                cursor: pointer;
+                margin-left: 20px;
+                height: 40px;
+                width: 40px;
+                border-radius: 5px;
+                background-color: $highlight;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease-in;
+
+                #icon {
+                  font-size: 25px;
+                }
+              }
+
+              .delete-icon-holder:hover {
+                background-color: $negativeBTN;
               }
             }
           }
@@ -940,7 +1026,7 @@
               }
             }
             .lower {
-              margin-top: 15px;
+              margin-top: 10px;
               height: 40%;
               width: 100%;
               // background-color: orange;
@@ -949,12 +1035,12 @@
 
               .low-holder {
                 height: 100%;
-                width: 85%;
+                width: 88%;
                 display: flex;
                 // justify-content: center;
                 flex-wrap: wrap;
                 // background-color: aqua;
-                margin-left: 22px;
+                // margin-left: 22px;
 
                 .roomTag {
                   // background-color: aqua;
@@ -970,9 +1056,38 @@
                   font-size: 15px;
                   padding: 0px 15px 0px 15px;
                   background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
+                  margin: 5px 20px 7px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .delete {
+              margin-top: 15px;
+              height: 100%;
+              width: 100%;
+              display: flex;
+
+              // background-color: yellow;
+
+              .delete-icon-holder {
+                cursor: pointer;
+                margin-left: 30px;
+                height: 42px;
+                width: 42px;
+                border-radius: 5px;
+                background-color: $highlight;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease-in;
+
+                #icon {
+                  font-size: 25px;
+                }
+              }
+
+              .delete-icon-holder:hover {
+                background-color: $negativeBTN;
               }
             }
           }
@@ -1159,7 +1274,7 @@
             background-color: $secondary-background;
             word-break: break-all;
             border-radius: 5px;
-            padding: 20px 0px 10px 0px;
+            padding: 20px 0px 12px 0px;
 
             .upper {
               height: 60%;
@@ -1188,7 +1303,7 @@
               }
             }
             .lower {
-              margin-top: 15px;
+              margin-top: 10px;
               height: 40%;
               width: 100%;
               // background-color: orange;
@@ -1197,12 +1312,12 @@
 
               .low-holder {
                 height: 100%;
-                width: 85%;
+                width: 88%;
                 display: flex;
                 // justify-content: center;
                 flex-wrap: wrap;
                 // background-color: aqua;
-                margin-left: 22px;
+                // margin-left: 22px;
 
                 .roomTag {
                   // background-color: aqua;
@@ -1218,9 +1333,38 @@
                   font-size: 15px;
                   padding: 0px 15px 0px 15px;
                   background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
+                  margin: 5px 20px 7px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .delete {
+              margin-top: 15px;
+              height: 100%;
+              width: 100%;
+              display: flex;
+
+              // background-color: yellow;
+
+              .delete-icon-holder {
+                cursor: pointer;
+                margin-left: 40px;
+                height: 45px;
+                width: 45px;
+                border-radius: 5px;
+                background-color: $highlight;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease-in;
+
+                #icon {
+                  font-size: 25px;
+                }
+              }
+
+              .delete-icon-holder:hover {
+                background-color: $negativeBTN;
               }
             }
           }
@@ -1337,7 +1481,7 @@
         justify-content: center;
 
         p {
-          font-size: 20px;
+          font-size: 30px;
           font-family: "Red Hat Text", sans-serif;
           font-weight: 500;
           color: white;
@@ -1407,7 +1551,7 @@
             background-color: $secondary-background;
             word-break: break-all;
             border-radius: 5px;
-            padding: 20px 0px 10px 0px;
+            padding: 20px 0px 15px 0px;
 
             .upper {
               height: 60%;
@@ -1436,7 +1580,7 @@
               }
             }
             .lower {
-              margin-top: 15px;
+              margin-top: 10px;
               height: 40%;
               width: 100%;
               // background-color: orange;
@@ -1445,12 +1589,12 @@
 
               .low-holder {
                 height: 100%;
-                width: 85%;
+                width: 91%;
                 display: flex;
                 // justify-content: center;
                 flex-wrap: wrap;
                 // background-color: aqua;
-                margin-left: 22px;
+                // margin-left: 22px;
 
                 .roomTag {
                   // background-color: aqua;
@@ -1466,9 +1610,38 @@
                   font-size: 15px;
                   padding: 0px 15px 0px 15px;
                   background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
+                  margin: 5px 20px 7px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .delete {
+              margin-top: 15px;
+              height: 100%;
+              width: 100%;
+              display: flex;
+
+              // background-color: yellow;
+
+              .delete-icon-holder {
+                cursor: pointer;
+                margin-left: 40px;
+                height: 45px;
+                width: 45px;
+                border-radius: 5px;
+                background-color: $highlight;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease-in;
+
+                #icon {
+                  font-size: 25px;
+                }
+              }
+
+              .delete-icon-holder:hover {
+                background-color: $negativeBTN;
               }
             }
           }
@@ -1477,8 +1650,7 @@
     }
   }
 }
-
-@include breakpoint-mixin("desktop") {
+@include breakpoint-mixin("laptop") {
   .section2 {
     height: 88vh;
     width: 100%;
@@ -1486,7 +1658,7 @@
     justify-content: center;
 
     .holder {
-      width: 86.4%;
+      width: 92%;
       height: 100%;
       // background-color: $secondary-background;
       color: black;
@@ -1505,13 +1677,13 @@
       }
 
       .imageHolder {
-        height: 160px;
-        width: 160px;
+        height: 135px;
+        width: 135px;
         border-radius: 100%;
         background-color: pink;
         position: absolute;
-        top: 175px;
-        right: 32%;
+        top: 185px;
+        right: 30%;
         overflow: hidden;
         border: 3px solid white;
         display: block;
@@ -1662,6 +1834,290 @@
             background-color: $secondary-background;
             word-break: break-all;
             border-radius: 5px;
+            padding: 20px 0px 12px 0px;
+
+            .upper {
+              height: 60%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              // justify-content: center;
+
+              p {
+                margin-left: 40px;
+                margin-right: 40px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+
+                // margin-top: 30px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+            .lower {
+              margin-top: 10px;
+              height: 40%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 84%;
+                display: flex;
+                // justify-content: center;
+                flex-wrap: wrap;
+                // background-color: aqua;
+                // margin-left: 22px;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+            .delete {
+              margin-top: 15px;
+              height: 100%;
+              width: 100%;
+              display: flex;
+
+              // background-color: yellow;
+
+              .delete-icon-holder {
+                cursor: pointer;
+                margin-left: 40px;
+                height: 42px;
+                width: 42px;
+                border-radius: 5px;
+                background-color: $highlight;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease-in;
+
+                #icon {
+                  font-size: 25px;
+                }
+              }
+
+              .delete-icon-holder:hover {
+                background-color: $negativeBTN;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("laptop-wide") {
+  .section2 {
+    height: 88vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .holder {
+      width: 92%;
+      height: 100%;
+      // background-color: $secondary-background;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid rgba(255, 255, 255, 0.705);
+      border-right: 1px solid rgba(255, 255, 255, 0.705);
+      // border-radius: 5px;
+      overflow: hidden;
+
+      .banner {
+        height: 20%;
+        width: 100%;
+        background-color: $highlight;
+        // margin-bottom: auto;
+      }
+
+      .imageHolder {
+        height: 145px;
+        width: 145px;
+        border-radius: 100%;
+        background-color: pink;
+        position: absolute;
+        top: 180px;
+        right: 28%;
+        overflow: hidden;
+        border: 3px solid white;
+        display: block;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .follow-section {
+        height: 10%;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        align-items: center;
+
+        .follow-BTN {
+          height: 42px;
+          width: 120px;
+          border: 1px solid white;
+          border-radius: 5px;
+          color: white;
+          display: flex;
+          align-items: center;
+          padding: 0px 10px 0px 10px;
+          justify-content: space-evenly;
+          // background-color: $highlight;
+          margin-left: 30px;
+          margin-right: 80px;
+          cursor: pointer;
+          transition: background 0.1s ease-in;
+
+          p {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        .following-BTN {
+          height: 42px;
+          width: 120px;
+          border: 1px solid white;
+          border-radius: 5px;
+          color: white;
+          display: flex;
+          align-items: center;
+          padding: 0px 10px 0px 10px;
+          justify-content: space-evenly;
+          background-color: $highlight;
+          margin-left: 30px;
+          margin-right: 80px;
+
+          cursor: pointer;
+          transition: background 0.1s ease-in;
+
+          p {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        .follow-BTN:hover {
+          background-color: $highlight;
+        }
+
+        h2 {
+          display: none;
+        }
+      }
+
+      .follow-my-section {
+        height: 10%;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-size: 20px;
+          font-family: "Red Hat Text", sans-serif;
+          font-weight: 500;
+          color: white;
+        }
+      }
+
+      .specificFeedHolder {
+        height: 70%;
+        display: flex;
+        justify-content: center;
+
+        .svg {
+          height: 100%;
+          width: 90%;
+          // background-color: yellow;
+
+          .titlo {
+            width: 100%;
+            height: 10%;
+            // background-color: aqua;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            justify-content: center;
+            color: white;
+
+            h1 {
+              font-size: 25px;
+            }
+          }
+          .svg {
+            width: 100%;
+            height: 90%;
+            // background-color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #svg {
+              height: 80%;
+              width: 80%;
+            }
+          }
+        }
+
+        .scrollUser {
+          height: 100%;
+          width: 80%;
+          overflow: auto;
+          // background-color: yellow;
+          scroll-behavior: smooth;
+
+          h1 {
+            color: white;
+          }
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+
+          .usersRooms {
+            margin-top: 40px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
             padding: 20px 0px 10px 0px;
 
             .upper {
@@ -1691,7 +2147,7 @@
               }
             }
             .lower {
-              margin-top: 15px;
+              margin-top: 10px;
               height: 40%;
               width: 100%;
               // background-color: orange;
@@ -1700,12 +2156,12 @@
 
               .low-holder {
                 height: 100%;
-                width: 85%;
+                width: 88%;
                 display: flex;
                 // justify-content: center;
                 flex-wrap: wrap;
                 // background-color: aqua;
-                margin-left: 22px;
+                // margin-left: 22px;
 
                 .roomTag {
                   // background-color: aqua;
@@ -1724,6 +2180,317 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .delete {
+              margin-top: 15px;
+              height: 100%;
+              width: 100%;
+              display: flex;
+
+              // background-color: yellow;
+
+              .delete-icon-holder {
+                cursor: pointer;
+                margin-left: 40px;
+                height: 42px;
+                width: 42px;
+                border-radius: 5px;
+                background-color: $highlight;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease-in;
+
+                #icon {
+                  font-size: 25px;
+                }
+              }
+
+              .delete-icon-holder:hover {
+                background-color: $negativeBTN;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .section2 {
+    height: 88vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .holder {
+      width: 86.4%;
+      height: 100%;
+      // background-color: $secondary-background;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid rgba(255, 255, 255, 0.705);
+      border-right: 1px solid rgba(255, 255, 255, 0.705);
+      // border-radius: 5px;
+      overflow: hidden;
+
+      .banner {
+        height: 20%;
+        width: 100%;
+        background-color: $highlight;
+        // margin-bottom: auto;
+      }
+
+      .imageHolder {
+        height: 160px;
+        width: 160px;
+        border-radius: 100%;
+        background-color: pink;
+        position: absolute;
+        top: 175px;
+        right: 32%;
+        overflow: hidden;
+        border: 3px solid white;
+        display: block;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .follow-section {
+        height: 10%;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        align-items: center;
+
+        .follow-BTN {
+          height: 38px;
+          width: 120px;
+          border: 1px solid white;
+          border-radius: 5px;
+          color: white;
+          display: flex;
+          align-items: center;
+          padding: 0px 10px 0px 10px;
+          justify-content: space-evenly;
+          // background-color: $highlight;
+          margin-left: 30px;
+          margin-right: 80px;
+          cursor: pointer;
+          transition: background 0.1s ease-in;
+
+          p {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        .following-BTN {
+          height: 38px;
+          width: 120px;
+          border: 1px solid white;
+          border-radius: 5px;
+          color: white;
+          display: flex;
+          align-items: center;
+          padding: 0px 10px 0px 10px;
+          justify-content: space-evenly;
+          background-color: $highlight;
+          margin-left: 30px;
+          margin-right: 80px;
+
+          cursor: pointer;
+          transition: background 0.1s ease-in;
+
+          p {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        .follow-BTN:hover {
+          background-color: $highlight;
+        }
+
+        h2 {
+          display: none;
+        }
+      }
+
+      .follow-my-section {
+        height: 10%;
+        width: 100%;
+        // background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-size: 25px;
+          font-family: "Red Hat Text", sans-serif;
+          font-weight: 500;
+          color: white;
+        }
+      }
+
+      .specificFeedHolder {
+        height: 70%;
+        display: flex;
+        justify-content: center;
+
+        .svg {
+          height: 100%;
+          width: 90%;
+          // background-color: yellow;
+
+          .titlo {
+            width: 100%;
+            height: 10%;
+            // background-color: aqua;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            justify-content: center;
+            color: white;
+
+            h1 {
+              font-size: 25px;
+            }
+          }
+          .svg {
+            width: 100%;
+            height: 90%;
+            // background-color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #svg {
+              height: 80%;
+              width: 80%;
+            }
+          }
+        }
+
+        .scrollUser {
+          height: 100%;
+          width: 80%;
+          overflow: auto;
+          // background-color: yellow;
+          scroll-behavior: smooth;
+
+          h1 {
+            color: white;
+          }
+
+          .usersRooms {
+            color: white;
+            margin-top: 40px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 20px 0px 10px 0px;
+
+            .upper {
+              height: 60%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              // background-color: pink;
+              // justify-content: center;
+
+              p {
+                margin-left: 40px;
+                margin-right: 40px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+
+                // margin-top: 30px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+            .lower {
+              margin-top: 10px;
+              height: 40%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                // justify-content: center;
+                flex-wrap: wrap;
+                // background-color: aqua;
+                margin-left: 36px;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+            .delete {
+              margin-top: 15px;
+              height: 100%;
+              width: 100%;
+              display: flex;
+
+              // background-color: yellow;
+
+              .delete-icon-holder {
+                cursor: pointer;
+                margin-left: 40px;
+                height: 45px;
+                width: 45px;
+                border-radius: 5px;
+                background-color: $highlight;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease-in;
+
+                #icon {
+                  font-size: 25px;
+                }
+              }
+
+              .delete-icon-holder:hover {
+                background-color: $negativeBTN;
               }
             }
           }

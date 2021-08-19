@@ -2,7 +2,6 @@
 @import "./Theme.scss";
 @import "./Breakpoints.scss";
 
-
 @include breakpoint-mixin("skinny") {
   .middle-holder {
     width: 100%;
@@ -232,11 +231,11 @@
     }
   }
 }
-
-@include breakpoint-mixin("desktop") {
+@include breakpoint-mixin("laptop") {
   .middle-holder {
-    width: 45%;
+    width: 50%;
     height: 100vh;
+    // background-color: yellowgreen;
 
     .section1 {
       height: 10vh;
@@ -246,6 +245,89 @@
       align-items: center;
       // background-color: red;
 
+      .search-wrapper {
+        border-radius: 5px;
+        display: flex;
+        height: 45px;
+        width: 90%;
+        background-color: $buttons;
+        // background-color: yellow;
+        margin-top: 12px;
+        align-items: center;
+        padding-left: 15px;
+        color: white;
+        opacity: 0.8;
+
+        .searchBar {
+          width: 100%;
+          height: 45px;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          color: white;
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("laptop-wide") {
+  .middle-holder {
+    width: 52%;
+    height: 100vh;
+    // background-color: yellowgreen;
+
+    .section1 {
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // background-color: red;
+
+      .search-wrapper {
+        border-radius: 5px;
+        display: flex;
+        height: 45px;
+        width: 90%;
+        background-color: $buttons;
+        // background-color: yellow;
+        margin-top: 12px;
+        align-items: center;
+        padding-left: 15px;
+        color: white;
+        opacity: 0.8;
+
+        .searchBar {
+          width: 100%;
+          height: 45px;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          color: white;
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .middle-holder {
+    width: 45%;
+    height: 100vh;
+    // background-color: yellowgreen;
+
+    .section1 {
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // background-color: red;
 
       .search-wrapper {
         border-radius: 5px;
@@ -274,4 +356,3 @@
     }
   }
 }
-

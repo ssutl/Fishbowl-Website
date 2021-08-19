@@ -1,4 +1,624 @@
-@media only screen and (min-width: 1248px) {
+@media only screen and (min-width: 1200px) {
+  .profile-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 27%;
+    height: 100vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .profile-holder .profile {
+    margin-top: 12.5vh;
+    background-color: #28303b;
+    border-radius: 5px;
+    width: 90%;
+    height: 21%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile-holder .profile .upper-profile {
+    height: 55%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  .profile-holder .profile .upper-profile .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 35%;
+  }
+  .profile-holder .profile .upper-profile .left .image-holder {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .profile-holder .profile .upper-profile .left .image-holder .image {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .profile-holder .profile .upper-profile .right {
+    color: white;
+    word-wrap: break-word;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    width: 62%;
+  }
+  .profile-holder .profile .upper-profile .right .name {
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .profile-holder .profile .upper-profile .right .email {
+    display: block;
+    opacity: 0.7;
+    font-size: 14px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .profile-holder .profile .lower-profile {
+    height: 45%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn {
+    width: 37%;
+    height: 45px;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    background-color: #393e41;
+    color: white;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #393e41;
+    min-width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    z-index: 1;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p {
+    cursor: pointer;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p:hover {
+    color: orange;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn:hover .status-dropdown-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 160px;
+  }
+  .profile-holder .noti {
+    background-color: #28303b;
+    border-radius: 5px;
+    width: 90%;
+    height: 55%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 8vh;
+    color: rgba(255, 255, 255, 0.534);
+    text-align: center;
+  }
+  .profile-holder .noti .dashboard {
+    height: 12%;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 20px;
+  }
+  .profile-holder .noti .users {
+    height: 88%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .profile-holder .noti .users .holder {
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile-holder .noti .users .holder .user-holder {
+    margin-top: 30px;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .profile-holder .noti .users .holder .user-holder img {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+  .profile-holder .noti .users .holder .user-holder .name-holder {
+    cursor: pointer;
+    width: 40%;
+  }
+  .profile-holder .noti .users .holder .user-holder .name-holder h2 {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 18px;
+    color: white;
+  }
+  .profile-holder .noti .users .holder .user-holder .follow-BTN {
+    margin-left: 5px;
+    height: 38px;
+    width: 45px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .profile-holder .noti .users .holder .user-holder .follow-BTN p {
+    display: none;
+  }
+  .profile-holder .noti .users .holder .user-holder .following-BTN {
+    margin-left: 5px;
+    height: 38px;
+    width: 45px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .profile-holder .noti .users .holder .user-holder .following-BTN p {
+    display: none;
+  }
+  .profile-holder .noti .users .holder .user-holder .follow-BTN:hover {
+    background-color: #0096ff;
+  }
+  .profile-holder .noti .users .holder .user-holder p {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .profile-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 25%;
+    height: 100vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .profile-holder .profile {
+    margin-top: 12.5vh;
+    background-color: #28303b;
+    border-radius: 5px;
+    width: 85%;
+    height: 21%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile-holder .profile .upper-profile {
+    height: 55%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  .profile-holder .profile .upper-profile .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 35%;
+  }
+  .profile-holder .profile .upper-profile .left .image-holder {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .profile-holder .profile .upper-profile .left .image-holder .image {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .profile-holder .profile .upper-profile .right {
+    color: white;
+    word-wrap: break-word;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    width: 62%;
+  }
+  .profile-holder .profile .upper-profile .right .name {
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .profile-holder .profile .upper-profile .right .email {
+    display: block;
+    opacity: 0.7;
+    font-size: 14px;
+    font-family: "Red Hat Text", sans-serif;
+  }
+  .profile-holder .profile .lower-profile {
+    height: 45%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn {
+    width: 37%;
+    height: 45px;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    background-color: #393e41;
+    color: white;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #393e41;
+    min-width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    z-index: 1;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p {
+    cursor: pointer;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p:hover {
+    color: orange;
+  }
+  .profile-holder .profile .lower-profile .status-select-btn:hover .status-dropdown-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 160px;
+  }
+  .profile-holder .noti {
+    background-color: #28303b;
+    border-radius: 5px;
+    width: 85%;
+    height: 55%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 8vh;
+    color: rgba(255, 255, 255, 0.534);
+    text-align: center;
+  }
+  .profile-holder .noti .dashboard {
+    height: 12%;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 20px;
+  }
+  .profile-holder .noti .users {
+    height: 88%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .profile-holder .noti .users .holder {
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile-holder .noti .users .holder .user-holder {
+    margin-top: 30px;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .profile-holder .noti .users .holder .user-holder a {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+  .profile-holder .noti .users .holder .user-holder a img {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+  }
+  .profile-holder .noti .users .holder .user-holder h2 {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 18px;
+    color: white;
+  }
+  .profile-holder .noti .users .holder .user-holder .follow-BTN {
+    margin-left: 5px;
+    height: 38px;
+    width: 60px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .profile-holder .noti .users .holder .user-holder .follow-BTN p {
+    display: none;
+  }
+  .profile-holder .noti .users .holder .user-holder .following-BTN {
+    margin-left: 5px;
+    height: 38px;
+    width: 60px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .profile-holder .noti .users .holder .user-holder .following-BTN p {
+    display: none;
+  }
+  .profile-holder .noti .users .holder .user-holder .follow-BTN:hover {
+    background-color: #0096ff;
+  }
+  .profile-holder .noti .users .holder .user-holder p {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
   .profile-holder {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -221,6 +841,9 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .profile-holder .noti .users .holder .user-holder a {
     width: -webkit-fit-content;
@@ -236,20 +859,22 @@
   }
   .profile-holder .noti .users .holder .user-holder a img {
     border-radius: 100%;
-    height: 60px;
-    width: 60px;
-    margin-right: 15px;
+    height: 65px;
+    width: 65px;
+    margin-right: 0px;
     border: 2px solid white;
   }
-  .profile-holder .noti .users .holder .user-holder a h2 {
+  .profile-holder .noti .users .holder .user-holder .name-holder {
+    width: 35%;
+  }
+  .profile-holder .noti .users .holder .user-holder .name-holder h2 {
     font-family: "Red Hat Text", sans-serif;
     font-size: 18px;
     color: white;
   }
   .profile-holder .noti .users .holder .user-holder .follow-BTN {
-    margin-left: auto;
     height: 38px;
-    width: 100px;
+    width: 90px;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
@@ -268,13 +893,13 @@
     transition: background 0.1s ease-in;
   }
   .profile-holder .noti .users .holder .user-holder .follow-BTN p {
+    display: block;
     font-size: 18px;
     font-weight: 600;
   }
   .profile-holder .noti .users .holder .user-holder .following-BTN {
-    margin-left: auto;
     height: 38px;
-    width: 100px;
+    width: 90px;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
@@ -294,6 +919,7 @@
     transition: background 0.1s ease-in;
   }
   .profile-holder .noti .users .holder .user-holder .following-BTN p {
+    display: block;
     font-size: 18px;
     font-weight: 600;
   }

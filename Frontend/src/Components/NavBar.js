@@ -16,7 +16,7 @@ function NavBar({ profileData, followReq }) {
     const [following, setFollowing] = useState()
     let list = []
     const [loading, setLoading] = useState()
-    const breakpoint = 1248;
+    const breakpoint = 1200;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
@@ -150,7 +150,7 @@ function NavBar({ profileData, followReq }) {
                 </div>
             </div >
         )
-    } else if (screenWidth < breakpoint) {
+    } else{
         return (
             null
         )

@@ -6,6 +6,7 @@ import { ReactComponent as YourSvg } from '../svg/Void.svg';
 import "../Styling/specificUserPage.css"
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import DeleteIcon from "@material-ui/icons/Delete";
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 function SpecificUserPage({ specificUserToParent }) {
@@ -83,6 +84,8 @@ function SpecificUserPage({ specificUserToParent }) {
                 headers: { "x-auth-token": `${token}` },
                 data: { following: state.user.username }
             }).then((res) => {
+            }).catch((err)=>{
+                console.log('err: ', err);
             })
         } else if (following) {
             axios({
@@ -92,6 +95,8 @@ function SpecificUserPage({ specificUserToParent }) {
                 data: { unfollowing: state.user.username }
             }).then((res) => {
 
+            }).catch((err)=>{
+                console.log('err: ', err);
             })
         }
     }
@@ -99,7 +104,31 @@ function SpecificUserPage({ specificUserToParent }) {
     let mypage = state.user.username === info.name;
 
 
+    const deleteRoom = (data) =>{
+        data[0].preventDefault()
 
+        axios({
+            method: 'DELETE',
+            url: `https://fishbowl-heroku.herokuapp.com/chat/delete/id/${data[1]}`,
+            headers: { "x-auth-token": `${token}` },
+        }).then((res) => {
+            refreshRooms()
+        }).catch((err)=>{
+            console.log('err: ', err);
+        })
+
+
+    }
+
+    const refreshRooms = () =>{
+        axios({
+            method: 'GET',
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/${state.user.username}`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((res) => {
+                setUsersRooms(res.data.reverse())
+        })
+    }
 
 
 
@@ -152,6 +181,14 @@ function SpecificUserPage({ specificUserToParent }) {
                                                 })}
                                             </div>
                                         </div>
+                                        {mypage?(
+                                                <div className="delete" onClick={(event)=>deleteRoom([event, room._id])}>
+                                                    <div className="delete-icon-holder">
+                                                    <DeleteIcon/>
+
+                                                    </div>
+                                                </div>
+                                            ):null}
                                     </div>
                                 </Link>
                             )
