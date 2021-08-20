@@ -224,21 +224,34 @@
   .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
     opacity: 1;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_field {
-    margin-left: 40px;
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs {
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
+    margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 260px;
+    width: 270px;
     height: 30px;
     outline: 0;
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 310px;
-    bottom: 40px;
+    left: 0px;
+    bottom: 0px;
     height: 40px;
     width: 40px;
     background-color: #0096ff;
@@ -254,16 +267,25 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_label {
     width: 100px;
     height: 40px;
     background-color: aqua;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #Q {
-    margin-bottom: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments {
+    height: 5vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #name {
-    margin-top: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments p {
+    font-size: 22px;
+    margin-left: 30px;
+    color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg {
     margin-top: 10px;
@@ -631,21 +653,34 @@
   .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
     opacity: 1;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_field {
-    margin-left: 40px;
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs {
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
+    margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 260px;
+    width: 270px;
     height: 30px;
     outline: 0;
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 310px;
-    bottom: 40px;
+    left: 0px;
+    bottom: 0px;
     height: 40px;
     width: 40px;
     background-color: #0096ff;
@@ -661,16 +696,25 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_label {
     width: 100px;
     height: 40px;
     background-color: aqua;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #Q {
-    margin-bottom: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments {
+    height: 5vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #name {
-    margin-top: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments p {
+    font-size: 22px;
+    margin-left: 30px;
+    color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg {
     margin-top: 10px;
@@ -1038,21 +1082,34 @@
   .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
     opacity: 1;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_field {
-    margin-left: 40px;
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs {
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
+    margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 260px;
+    width: 270px;
     height: 30px;
     outline: 0;
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 310px;
-    bottom: 40px;
+    left: 0px;
+    bottom: 0px;
     height: 40px;
     width: 40px;
     background-color: #0096ff;
@@ -1068,16 +1125,25 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_label {
     width: 100px;
     height: 40px;
     background-color: aqua;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #Q {
-    margin-bottom: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments {
+    height: 5vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #name {
-    margin-top: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments p {
+    font-size: 22px;
+    margin-left: 30px;
+    color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg {
     margin-top: 10px;
@@ -1445,21 +1511,34 @@
   .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
     opacity: 1;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_field {
-    margin-left: 40px;
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs {
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
+    margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 260px;
+    width: 270px;
     height: 30px;
     outline: 0;
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 310px;
-    bottom: 40px;
+    left: 0px;
+    bottom: 0px;
     height: 40px;
     width: 40px;
     background-color: #0096ff;
@@ -1475,16 +1554,25 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_label {
     width: 100px;
     height: 40px;
     background-color: aqua;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #Q {
-    margin-bottom: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments {
+    height: 5vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #name {
-    margin-top: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments p {
+    font-size: 22px;
+    margin-left: 30px;
+    color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg {
     margin-top: 10px;
@@ -1860,21 +1948,34 @@
   .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
     opacity: 1;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_field {
-    margin-left: 40px;
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs {
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
+    margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 260px;
+    width: 270px;
     height: 30px;
     outline: 0;
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 310px;
-    bottom: 40px;
+    left: 0px;
+    bottom: 0px;
     height: 40px;
     width: 40px;
     background-color: #0096ff;
@@ -1890,16 +1991,25 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_label {
     width: 100px;
     height: 40px;
     background-color: aqua;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #Q {
-    margin-bottom: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments {
+    height: 5vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #name {
-    margin-top: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments p {
+    font-size: 22px;
+    margin-left: 30px;
+    color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg {
     margin-top: 10px;
@@ -2267,21 +2377,34 @@
   .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
     opacity: 1;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_field {
-    margin-left: 40px;
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs {
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
+    margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 260px;
+    width: 270px;
     height: 30px;
     outline: 0;
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 310px;
-    bottom: 40px;
+    left: 0px;
+    bottom: 0px;
     height: 40px;
     width: 40px;
     background-color: #0096ff;
@@ -2297,16 +2420,25 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_label {
     width: 100px;
     height: 40px;
     background-color: aqua;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #Q {
-    margin-bottom: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments {
+    height: 5vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #name {
-    margin-top: 15px;
+  .chat-room-section .chat-room-holder .scrollable .comments p {
+    font-size: 22px;
+    margin-left: 30px;
+    color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg {
     margin-top: 10px;
@@ -2690,21 +2822,34 @@
   .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
     opacity: 1;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_field {
-    margin-left: 60px;
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs {
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
+    margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 350px;
+    width: 270px;
     height: 30px;
     outline: 0;
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 430px;
-    bottom: 45px;
+    left: 0px;
+    bottom: 0px;
     height: 40px;
     width: 40px;
     background-color: #0096ff;
@@ -2720,13 +2865,25 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_label {
     width: 100px;
     height: 40px;
     background-color: aqua;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #Q {
-    margin-top: 25px;
+  .chat-room-section .chat-room-holder .scrollable .comments {
+    height: 5vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .comments p {
+    font-size: 22px;
+    margin-left: 30px;
+    color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg {
     height: -webkit-fit-content;
@@ -3068,7 +3225,7 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    min-height: 12vh;
+    height: 12vh;
     width: 100%;
     border-bottom: 1px solid white;
     border-top: 1px solid rgba(255, 255, 255, 0.295);
@@ -3113,21 +3270,34 @@
   .chat-room-section .chat-room-holder .scrollable .question #creation:hover {
     opacity: 1;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_field {
-    margin-left: 60px;
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs {
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
+    margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 350px;
+    width: 270px;
     height: 30px;
     outline: 0;
     border: 0;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .text-counter {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 430px;
-    bottom: 45px;
+    left: 0px;
+    bottom: 0px;
     height: 40px;
     width: 40px;
     background-color: #0096ff;
@@ -3143,13 +3313,25 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .chat-room-section .chat-room-holder .scrollable .question .input_label {
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_label {
     width: 100px;
     height: 40px;
     background-color: aqua;
   }
-  .chat-room-section .chat-room-holder .scrollable .question #Q {
-    margin-top: 25px;
+  .chat-room-section .chat-room-holder .scrollable .comments {
+    height: 5vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .comments p {
+    font-size: 22px;
+    margin-left: 30px;
+    color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg {
     height: -webkit-fit-content;
@@ -3199,11 +3381,15 @@
     color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder {
+    height: 20px;
     width: 5%;
     margin: 0 20px 50px auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -3242,6 +3428,15 @@
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered p {
     margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle:hover {
+    color: #aaf11a;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
     height: 50%;

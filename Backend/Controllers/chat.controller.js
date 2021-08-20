@@ -64,6 +64,10 @@ router.put('/update/:id',auth, (req, res) => {
         ChatRoom.findOneAndUpdate({  _id: req.params.id}, { $addToSet: { Messages: req.body.message}})
         .then(msg => res.json('Success! Message Added to array.'))
         .catch(err => res.status(400).json('Error! ' + err))
+    }else if(Object.keys(req.body).includes("messageID")){
+        ChatRoom.findOneAndUpdate({_id: req.params.id}, {$pull: {Messages: {messageID: req.body.messageID}}})
+        .then(chat => res.json('Success! Field updated'))
+        .catch(err => res.status(400).json('Error! ' + err))
     }else{
         ChatRoom.findOneAndUpdate({  _id: req.params.id}, req.body)
         .then(chat => res.json('Success! Field updated'))

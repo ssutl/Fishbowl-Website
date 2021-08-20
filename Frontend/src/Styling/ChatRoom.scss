@@ -200,44 +200,59 @@
             opacity: 1;
           }
 
-          .input_field {
-            margin-left: 40px;
-            color: white;
-            font-size: 18px;
-            width: 260px;
-            height: 30px;
-            outline: 0;
-            border: 0;
-            background-color: transparent;
-            border-bottom: 2px solid white;
-          }
-
-          .text-counter {
-            position: relative;
-            left: 310px;
-            bottom: 40px;
-            height: 40px;
-            width: 40px;
-            background-color: $highlight;
-            border-radius: 3px;
-            color: white;
-            display: flex;
+          .room_inputs {
+            height: 100%;
+            width: 100%;
+            // background-color: teal;
             align-items: center;
-            justify-content: center;
-          }
+            display: flex;
+            justify-content: space-evenly;
 
-          .input_label {
-            width: 100px;
-            height: 40px;
-            background-color: aqua;
-          }
+            .input_field {
+              margin-left: 0px;
+              color: white;
+              font-size: 18px;
+              width: 270px;
+              height: 30px;
+              outline: 0;
+              border: 0;
+              background-color: transparent;
+              border-bottom: 2px solid white;
+            }
 
-          #Q {
-            margin-bottom: 15px;
-          }
+            .text-counter {
+              position: relative;
+              left: 0px;
+              bottom: 0px;
+              height: 40px;
+              width: 40px;
+              background-color: $highlight;
+              border-radius: 3px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
 
-          #name {
-            margin-top: 15px;
+            .input_label {
+              width: 100px;
+              height: 40px;
+              background-color: aqua;
+            }
+          }
+        }
+
+        .comments {
+          height: 5vh;
+          width: 100%;
+          // background-color: yellow;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 22px;
+            margin-left: 30px;
+            color: white;
           }
         }
 
@@ -566,44 +581,59 @@
             opacity: 1;
           }
 
-          .input_field {
-            margin-left: 40px;
-            color: white;
-            font-size: 18px;
-            width: 260px;
-            height: 30px;
-            outline: 0;
-            border: 0;
-            background-color: transparent;
-            border-bottom: 2px solid white;
-          }
-
-          .text-counter {
-            position: relative;
-            left: 310px;
-            bottom: 40px;
-            height: 40px;
-            width: 40px;
-            background-color: $highlight;
-            border-radius: 3px;
-            color: white;
-            display: flex;
+          .room_inputs {
+            height: 100%;
+            width: 100%;
+            // background-color: teal;
             align-items: center;
-            justify-content: center;
-          }
+            display: flex;
+            justify-content: space-evenly;
 
-          .input_label {
-            width: 100px;
-            height: 40px;
-            background-color: aqua;
-          }
+            .input_field {
+              margin-left: 0px;
+              color: white;
+              font-size: 18px;
+              width: 270px;
+              height: 30px;
+              outline: 0;
+              border: 0;
+              background-color: transparent;
+              border-bottom: 2px solid white;
+            }
 
-          #Q {
-            margin-bottom: 15px;
-          }
+            .text-counter {
+              position: relative;
+              left: 0px;
+              bottom: 0px;
+              height: 40px;
+              width: 40px;
+              background-color: $highlight;
+              border-radius: 3px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
 
-          #name {
-            margin-top: 15px;
+            .input_label {
+              width: 100px;
+              height: 40px;
+              background-color: aqua;
+            }
+          }
+        }
+
+        .comments {
+          height: 5vh;
+          width: 100%;
+          // background-color: yellow;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 22px;
+            margin-left: 30px;
+            color: white;
           }
         }
 
@@ -931,44 +961,59 @@
             opacity: 1;
           }
 
-          .input_field {
-            margin-left: 40px;
-            color: white;
-            font-size: 18px;
-            width: 260px;
-            height: 30px;
-            outline: 0;
-            border: 0;
-            background-color: transparent;
-            border-bottom: 2px solid white;
-          }
-
-          .text-counter {
-            position: relative;
-            left: 310px;
-            bottom: 40px;
-            height: 40px;
-            width: 40px;
-            background-color: $highlight;
-            border-radius: 3px;
-            color: white;
-            display: flex;
+          .room_inputs {
+            height: 100%;
+            width: 100%;
+            // background-color: teal;
             align-items: center;
-            justify-content: center;
-          }
+            display: flex;
+            justify-content: space-evenly;
 
-          .input_label {
-            width: 100px;
-            height: 40px;
-            background-color: aqua;
-          }
+            .input_field {
+              margin-left: 0px;
+              color: white;
+              font-size: 18px;
+              width: 270px;
+              height: 30px;
+              outline: 0;
+              border: 0;
+              background-color: transparent;
+              border-bottom: 2px solid white;
+            }
 
-          #Q {
-            margin-bottom: 15px;
-          }
+            .text-counter {
+              position: relative;
+              left: 0px;
+              bottom: 0px;
+              height: 40px;
+              width: 40px;
+              background-color: $highlight;
+              border-radius: 3px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
 
-          #name {
-            margin-top: 15px;
+            .input_label {
+              width: 100px;
+              height: 40px;
+              background-color: aqua;
+            }
+          }
+        }
+
+        .comments {
+          height: 5vh;
+          width: 100%;
+          // background-color: yellow;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 22px;
+            margin-left: 30px;
+            color: white;
           }
         }
 
@@ -1297,44 +1342,59 @@
             opacity: 1;
           }
 
-          .input_field {
-            margin-left: 40px;
-            color: white;
-            font-size: 18px;
-            width: 260px;
-            height: 30px;
-            outline: 0;
-            border: 0;
-            background-color: transparent;
-            border-bottom: 2px solid white;
-          }
-
-          .text-counter {
-            position: relative;
-            left: 310px;
-            bottom: 40px;
-            height: 40px;
-            width: 40px;
-            background-color: $highlight;
-            border-radius: 3px;
-            color: white;
-            display: flex;
+          .room_inputs {
+            height: 100%;
+            width: 100%;
+            // background-color: teal;
             align-items: center;
-            justify-content: center;
-          }
+            display: flex;
+            justify-content: space-evenly;
 
-          .input_label {
-            width: 100px;
-            height: 40px;
-            background-color: aqua;
-          }
+            .input_field {
+              margin-left: 0px;
+              color: white;
+              font-size: 18px;
+              width: 270px;
+              height: 30px;
+              outline: 0;
+              border: 0;
+              background-color: transparent;
+              border-bottom: 2px solid white;
+            }
 
-          #Q {
-            margin-bottom: 15px;
-          }
+            .text-counter {
+              position: relative;
+              left: 0px;
+              bottom: 0px;
+              height: 40px;
+              width: 40px;
+              background-color: $highlight;
+              border-radius: 3px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
 
-          #name {
-            margin-top: 15px;
+            .input_label {
+              width: 100px;
+              height: 40px;
+              background-color: aqua;
+            }
+          }
+        }
+
+        .comments {
+          height: 5vh;
+          width: 100%;
+          // background-color: yellow;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 22px;
+            margin-left: 30px;
+            color: white;
           }
         }
 
@@ -1672,44 +1732,59 @@
             opacity: 1;
           }
 
-          .input_field {
-            margin-left: 40px;
-            color: white;
-            font-size: 18px;
-            width: 260px;
-            height: 30px;
-            outline: 0;
-            border: 0;
-            background-color: transparent;
-            border-bottom: 2px solid white;
-          }
-
-          .text-counter {
-            position: relative;
-            left: 310px;
-            bottom: 40px;
-            height: 40px;
-            width: 40px;
-            background-color: $highlight;
-            border-radius: 3px;
-            color: white;
-            display: flex;
+          .room_inputs {
+            height: 100%;
+            width: 100%;
+            // background-color: teal;
             align-items: center;
-            justify-content: center;
-          }
+            display: flex;
+            justify-content: space-evenly;
 
-          .input_label {
-            width: 100px;
-            height: 40px;
-            background-color: aqua;
-          }
+            .input_field {
+              margin-left: 0px;
+              color: white;
+              font-size: 18px;
+              width: 270px;
+              height: 30px;
+              outline: 0;
+              border: 0;
+              background-color: transparent;
+              border-bottom: 2px solid white;
+            }
 
-          #Q {
-            margin-bottom: 15px;
-          }
+            .text-counter {
+              position: relative;
+              left: 0px;
+              bottom: 0px;
+              height: 40px;
+              width: 40px;
+              background-color: $highlight;
+              border-radius: 3px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
 
-          #name {
-            margin-top: 15px;
+            .input_label {
+              width: 100px;
+              height: 40px;
+              background-color: aqua;
+            }
+          }
+        }
+
+        .comments {
+          height: 5vh;
+          width: 100%;
+          // background-color: yellow;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 22px;
+            margin-left: 30px;
+            color: white;
           }
         }
 
@@ -2038,44 +2113,59 @@
             opacity: 1;
           }
 
-          .input_field {
-            margin-left: 40px;
-            color: white;
-            font-size: 18px;
-            width: 260px;
-            height: 30px;
-            outline: 0;
-            border: 0;
-            background-color: transparent;
-            border-bottom: 2px solid white;
-          }
-
-          .text-counter {
-            position: relative;
-            left: 310px;
-            bottom: 40px;
-            height: 40px;
-            width: 40px;
-            background-color: $highlight;
-            border-radius: 3px;
-            color: white;
-            display: flex;
+          .room_inputs {
+            height: 100%;
+            width: 100%;
+            // background-color: teal;
             align-items: center;
-            justify-content: center;
-          }
+            display: flex;
+            justify-content: space-evenly;
 
-          .input_label {
-            width: 100px;
-            height: 40px;
-            background-color: aqua;
-          }
+            .input_field {
+              margin-left: 0px;
+              color: white;
+              font-size: 18px;
+              width: 270px;
+              height: 30px;
+              outline: 0;
+              border: 0;
+              background-color: transparent;
+              border-bottom: 2px solid white;
+            }
 
-          #Q {
-            margin-bottom: 15px;
-          }
+            .text-counter {
+              position: relative;
+              left: 0px;
+              bottom: 0px;
+              height: 40px;
+              width: 40px;
+              background-color: $highlight;
+              border-radius: 3px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
 
-          #name {
-            margin-top: 15px;
+            .input_label {
+              width: 100px;
+              height: 40px;
+              background-color: aqua;
+            }
+          }
+        }
+
+        .comments {
+          height: 5vh;
+          width: 100%;
+          // background-color: yellow;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 22px;
+            margin-left: 30px;
+            color: white;
           }
         }
 
@@ -2409,40 +2499,59 @@
             opacity: 1;
           }
 
-          .input_field {
-            margin-left: 60px;
-            color: white;
-            font-size: 18px;
-            width: 350px;
-            height: 30px;
-            outline: 0;
-            border: 0;
-            background-color: transparent;
-            border-bottom: 2px solid white;
-          }
-
-          .text-counter {
-            position: relative;
-            left: 430px;
-            bottom: 45px;
-            height: 40px;
-            width: 40px;
-            background-color: $highlight;
-            border-radius: 3px;
-            color: white;
-            display: flex;
+          .room_inputs {
+            height: 100%;
+            width: 100%;
+            // background-color: teal;
             align-items: center;
-            justify-content: center;
-          }
+            display: flex;
+            justify-content: space-evenly;
 
-          .input_label {
-            width: 100px;
-            height: 40px;
-            background-color: aqua;
-          }
+            .input_field {
+              margin-left: 0px;
+              color: white;
+              font-size: 18px;
+              width: 270px;
+              height: 30px;
+              outline: 0;
+              border: 0;
+              background-color: transparent;
+              border-bottom: 2px solid white;
+            }
 
-          #Q {
-            margin-top: 25px;
+            .text-counter {
+              position: relative;
+              left: 0px;
+              bottom: 0px;
+              height: 40px;
+              width: 40px;
+              background-color: $highlight;
+              border-radius: 3px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .input_label {
+              width: 100px;
+              height: 40px;
+              background-color: aqua;
+            }
+          }
+        }
+
+        .comments {
+          height: 5vh;
+          width: 100%;
+          // background-color: yellow;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 22px;
+            margin-left: 30px;
+            color: white;
           }
         }
 
@@ -2733,7 +2842,7 @@
         .question {
           padding: 15px 0px 15px 0px;
           height: fit-content;
-          min-height: 12vh;
+          height: 12vh;
           width: 100%;
           // background-color: yellow;
           border-bottom: 1px solid white;
@@ -2777,40 +2886,59 @@
             opacity: 1;
           }
 
-          .input_field {
-            margin-left: 60px;
-            color: white;
-            font-size: 18px;
-            width: 350px;
-            height: 30px;
-            outline: 0;
-            border: 0;
-            background-color: transparent;
-            border-bottom: 2px solid white;
-          }
-
-          .text-counter {
-            position: relative;
-            left: 430px;
-            bottom: 45px;
-            height: 40px;
-            width: 40px;
-            background-color: $highlight;
-            border-radius: 3px;
-            color: white;
-            display: flex;
+          .room_inputs {
+            height: 100%;
+            width: 100%;
+            // background-color: teal;
             align-items: center;
-            justify-content: center;
-          }
+            display: flex;
+            justify-content: space-evenly;
 
-          .input_label {
-            width: 100px;
-            height: 40px;
-            background-color: aqua;
-          }
+            .input_field {
+              margin-left: 0px;
+              color: white;
+              font-size: 18px;
+              width: 270px;
+              height: 30px;
+              outline: 0;
+              border: 0;
+              background-color: transparent;
+              border-bottom: 2px solid white;
+            }
 
-          #Q {
-            margin-top: 25px;
+            .text-counter {
+              position: relative;
+              left: 0px;
+              bottom: 0px;
+              height: 40px;
+              width: 40px;
+              background-color: $highlight;
+              border-radius: 3px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .input_label {
+              width: 100px;
+              height: 40px;
+              background-color: aqua;
+            }
+          }
+        }
+
+        .comments {
+          height: 5vh;
+          width: 100%;
+          // background-color: yellow;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 22px;
+            margin-left: 30px;
+            color: white;
           }
         }
 
@@ -2860,9 +2988,11 @@
 
             .option-holder {
               // background-color: yellow;
+              height: 20px;
               width: 5%;
               margin: 0 20px 50px auto;
               display: flex;
+              align-items: center;
               justify-content: space-between;
               cursor: pointer;
 
@@ -2894,6 +3024,16 @@
 
                     p {
                       margin-bottom: 0px;
+                    }
+
+                    #circle {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
+                    }
+
+                    #circle:hover {
+                      color: rgb(170, 241, 26);
                     }
                   }
 

@@ -12,7 +12,9 @@ const useChat = (roomId) => {
   const info = useContext(UserContext)
 
 
+
   useEffect(() => {
+
 
     // Creates a WebSocket connection
     socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
@@ -25,7 +27,12 @@ const useChat = (roomId) => {
         ...message,
         ownedByCurrentUser: message.senderId === socketRef.current.id,
       };
-      setMessages((messages) => [...messages, incomingMessage]);
+
+      if(incomingMessage.text[0] === "delete"){
+        setMessages(messages.filter(item => item !== incomingMessage.text[1]))
+      }else{
+        setMessages((messages) => [...messages, incomingMessage]);
+      }
     });
 
     // Destroys the socket reference
