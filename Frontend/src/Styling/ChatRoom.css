@@ -3210,10 +3210,63 @@
     cursor: pointer;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot {
+    position: relative;
     height: 7px;
     width: 7px;
     border-radius: 100%;
     background-color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing {
+    cursor: auto;
+    position: absolute;
+    color: white;
+    top: 15px;
+    right: -30px;
+    width: 250px;
+    height: 14vh;
+    border-radius: 7px;
+    background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin:hover {
+    color: #fd4d4d;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle {
     min-height: 8vh;

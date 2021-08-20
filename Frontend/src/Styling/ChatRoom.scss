@@ -2867,10 +2867,60 @@
               cursor: pointer;
 
               .dot {
+                position: relative;
                 height: 7px;
                 width: 7px;
                 border-radius: 100%;
                 background-color: white;
+
+                .editing {
+                  cursor: auto;
+                  position: absolute;
+                  color: white;
+                  top: 15px;
+                  right: -30px;
+                  width: 250px;
+                  height: 14vh;
+                  border-radius: 7px;
+                  background-color: #333c47;
+
+                  .markAsAnswered {
+                    height: 50%;
+                    width: 100%;
+                    // background-color: pink;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    p {
+                      margin-bottom: 0px;
+                    }
+                  }
+
+                  .deleteComment {
+                    height: 50%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    p {
+                      margin-bottom: 0px;
+                      // margin-right: 10px;
+                    }
+                    // background-color: teal;
+
+                    #bin {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
+                    }
+
+                    #bin:hover {
+                      color: $negativeBTN;
+                    }
+                  }
+                }
               }
             }
           }
