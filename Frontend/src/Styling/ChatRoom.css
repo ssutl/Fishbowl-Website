@@ -230,6 +230,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -237,11 +241,15 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs #name {
+    margin-top: 20px;
+  }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
     margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 270px;
+    width: 210px;
+    margin-right: 40px;
     height: 30px;
     outline: 0;
     border: 0;
@@ -250,10 +258,10 @@
   }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 0px;
-    bottom: 0px;
-    height: 40px;
-    width: 40px;
+    left: 120px;
+    bottom: 35px;
+    height: 35px;
+    width: 35px;
     background-color: #0096ff;
     border-radius: 3px;
     color: white;
@@ -335,11 +343,82 @@
     margin-bottom: 15px;
     color: white;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
-    margin-bottom: 15px;
-    margin-left: 50%;
-    font-size: 25px;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder {
+    height: 20px;
+    width: 10%;
+    margin: 0 20px 15px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot {
+    position: relative;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing {
+    cursor: auto;
+    position: absolute;
     color: white;
+    top: 15px;
+    right: -25px;
+    width: 250px;
+    height: 12vh;
+    border-radius: 7px;
+    background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle {
     min-height: 8vh;
@@ -521,7 +600,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 40%;
+    width: 35%;
     height: 100%;
     margin-right: 15px;
   }
@@ -659,6 +738,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -666,11 +749,15 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs #name {
+    margin-top: 20px;
+  }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
     margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 270px;
+    width: 220px;
+    margin-right: 50px;
     height: 30px;
     outline: 0;
     border: 0;
@@ -679,10 +766,10 @@
   }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 0px;
-    bottom: 0px;
-    height: 40px;
-    width: 40px;
+    left: 120px;
+    bottom: 35px;
+    height: 35px;
+    width: 35px;
     background-color: #0096ff;
     border-radius: 3px;
     color: white;
@@ -764,11 +851,82 @@
     margin-bottom: 15px;
     color: white;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
-    margin-bottom: 15px;
-    margin-left: 50%;
-    font-size: 25px;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder {
+    height: 20px;
+    width: 10%;
+    margin: 0 20px 20px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot {
+    position: relative;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing {
+    cursor: auto;
+    position: absolute;
     color: white;
+    top: 15px;
+    right: -25px;
+    width: 260px;
+    height: 13vh;
+    border-radius: 7px;
+    background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle {
     min-height: 8vh;
@@ -1088,6 +1246,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1095,11 +1257,15 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs #name {
+    margin-top: 20px;
+  }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
     margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 270px;
+    width: 250px;
+    margin-right: 60px;
     height: 30px;
     outline: 0;
     border: 0;
@@ -1108,10 +1274,10 @@
   }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 0px;
-    bottom: 0px;
-    height: 40px;
-    width: 40px;
+    left: 130px;
+    bottom: 35px;
+    height: 35px;
+    width: 35px;
     background-color: #0096ff;
     border-radius: 3px;
     color: white;
@@ -1193,11 +1359,82 @@
     margin-bottom: 15px;
     color: white;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
-    margin-bottom: 15px;
-    margin-left: 50%;
-    font-size: 25px;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder {
+    height: 20px;
+    width: 8%;
+    margin: 0 20px 20px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot {
+    position: relative;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing {
+    cursor: auto;
+    position: absolute;
     color: white;
+    top: 15px;
+    right: -25px;
+    width: 270px;
+    height: 13vh;
+    border-radius: 7px;
+    background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle {
     min-height: 8vh;
@@ -1379,9 +1616,9 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 40%;
+    width: 37%;
     height: 100%;
-    margin-right: 15px;
+    margin-right: 25px;
   }
   .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
     height: 45px;
@@ -1517,6 +1754,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1524,11 +1765,15 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs #name {
+    margin-top: 20px;
+  }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
     margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 270px;
+    width: 280px;
+    margin-right: 50px;
     height: 30px;
     outline: 0;
     border: 0;
@@ -1537,10 +1782,10 @@
   }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 0px;
-    bottom: 0px;
-    height: 40px;
-    width: 40px;
+    left: 150px;
+    bottom: 35px;
+    height: 35px;
+    width: 35px;
     background-color: #0096ff;
     border-radius: 3px;
     color: white;
@@ -1630,11 +1875,88 @@
     margin-bottom: 15px;
     color: white;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
-    margin-bottom: 15px;
-    margin-left: 50%;
-    font-size: 25px;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder {
+    height: 20px;
+    width: 5%;
+    margin: 0 20px 50px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot {
+    position: relative;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing {
+    cursor: auto;
+    position: absolute;
     color: white;
+    top: 15px;
+    right: -20px;
+    width: 270px;
+    height: 14vh;
+    border-radius: 7px;
+    background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle:hover {
+    color: #aaf11a;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment p {
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin:hover {
+    color: #fd4d4d;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle {
     min-height: 8vh;
@@ -1816,9 +2138,9 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 40%;
+    width: 35%;
     height: 100%;
-    margin-right: 15px;
+    margin-right: 25px;
   }
   .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
     height: 45px;
@@ -1954,6 +2276,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1961,11 +2287,15 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs #name {
+    margin-top: 20px;
+  }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
     margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 270px;
+    width: 320px;
+    margin-right: 70px;
     height: 30px;
     outline: 0;
     border: 0;
@@ -1974,10 +2304,10 @@
   }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 0px;
-    bottom: 0px;
-    height: 40px;
-    width: 40px;
+    left: 160px;
+    bottom: 35px;
+    height: 35px;
+    width: 35px;
     background-color: #0096ff;
     border-radius: 3px;
     color: white;
@@ -2059,11 +2389,84 @@
     margin-bottom: 15px;
     color: white;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
-    margin-bottom: 15px;
-    margin-left: 50%;
-    font-size: 25px;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder {
+    height: 20px;
+    width: 5%;
+    margin: 0 20px 50px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot {
+    position: relative;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing {
+    cursor: auto;
+    position: absolute;
     color: white;
+    top: 15px;
+    right: -25px;
+    width: 270px;
+    height: 14vh;
+    border-radius: 7px;
+    background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered p {
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment p {
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle {
     min-height: 8vh;
@@ -2245,9 +2648,9 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 40%;
+    width: 38%;
     height: 100%;
-    margin-right: 15px;
+    margin-right: 50px;
   }
   .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
     height: 45px;
@@ -2383,6 +2786,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2390,11 +2797,15 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs #name {
+    margin-top: 20px;
+  }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
     margin-left: 0px;
     color: white;
-    font-size: 18px;
-    width: 270px;
+    font-size: 20px;
+    width: 340px;
+    margin-right: 70px;
     height: 30px;
     outline: 0;
     border: 0;
@@ -2403,8 +2814,8 @@
   }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 0px;
-    bottom: 0px;
+    left: 170px;
+    bottom: 35px;
     height: 40px;
     width: 40px;
     background-color: #0096ff;
@@ -2488,11 +2899,84 @@
     margin-bottom: 15px;
     color: white;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
-    margin-bottom: 15px;
-    margin-left: 50%;
-    font-size: 25px;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder {
+    height: 20px;
+    width: 5%;
+    margin: 0 20px 50px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot {
+    position: relative;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing {
+    cursor: auto;
+    position: absolute;
     color: white;
+    top: 15px;
+    right: -30px;
+    width: 280px;
+    height: 10vh;
+    border-radius: 7px;
+    background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered p {
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment p {
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle {
     min-height: 8vh;
@@ -2686,13 +3170,13 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 37%;
+    width: 43%;
     height: 100%;
-    margin-right: 15px;
+    margin-right: 30px;
   }
   .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     background-color: white;
     display: -webkit-box;
@@ -2710,8 +3194,8 @@
     cursor: pointer;
   }
   .chat-room-section .chat-room-holder .navbar .group .room-options .secondBTN {
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     background-color: white;
     display: -webkit-box;
@@ -2828,6 +3312,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2835,11 +3323,15 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs #name {
+    margin-top: 20px;
+  }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
     margin-left: 0px;
     color: white;
     font-size: 18px;
-    width: 270px;
+    width: 320px;
+    margin-right: 70px;
     height: 30px;
     outline: 0;
     border: 0;
@@ -2848,10 +3340,10 @@
   }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .text-counter {
     position: relative;
-    left: 0px;
-    bottom: 0px;
-    height: 40px;
-    width: 40px;
+    left: 160px;
+    bottom: 35px;
+    height: 35px;
+    width: 35px;
     background-color: #0096ff;
     border-radius: 3px;
     color: white;
@@ -2932,11 +3424,90 @@
     margin-bottom: 15px;
     color: white;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
-    margin-bottom: 15px;
-    margin-left: 50%;
-    font-size: 25px;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder {
+    height: 20px;
+    width: 5%;
+    margin: 0 20px 50px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot {
+    position: relative;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing {
+    cursor: auto;
+    position: absolute;
     color: white;
+    top: 15px;
+    right: -20px;
+    width: 250px;
+    height: 13vh;
+    border-radius: 7px;
+    background-color: #333c47;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered p {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle:hover {
+    color: #aaf11a;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment p {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment #bin:hover {
+    color: #fd4d4d;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle {
     min-height: 8vh;
@@ -3273,6 +3844,10 @@
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs {
     height: 100%;
     width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -3283,8 +3858,12 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .chat-room-section .chat-room-holder .scrollable .question .room_inputs #name {
+    margin-top: 0px;
+  }
   .chat-room-section .chat-room-holder .scrollable .question .room_inputs .input_field {
     margin-left: 0px;
+    margin-right: 0px;
     color: white;
     font-size: 18px;
     width: 270px;
@@ -3407,7 +3986,7 @@
     position: absolute;
     color: white;
     top: 15px;
-    right: -30px;
+    right: -20px;
     width: 250px;
     height: 14vh;
     border-radius: 7px;

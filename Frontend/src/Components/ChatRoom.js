@@ -98,7 +98,10 @@ function ChatRoom() {
         if(Array.isArray(props)){
             if(props[0] === "delete"){
                 sendMessage(props)
-            } 
+            }else if(props[0] === "clear"){
+                // console.log("set to clear")
+                sendMessage("clear")
+            }
         }else{
             if (newMessage.length !== 0) {
                 sendMessage(newMessage);
@@ -283,7 +286,7 @@ function ChatRoom() {
                             {editing ? (
                                 room.CreatedByName === info.name ? (
                                     <>
-                                        <div className="edit" onClick={() => {setEditing(!editing); refreshChatRoom()}}><EditIcon /></div>
+                                        <div className="edit" onClick={() => {setEditing(!editing); refreshChatRoom(); handleSendMessage(["clear","empty"])}}><EditIcon /></div>
                                         <div className="secondBTN" onClick={updateQuestion}><PublishIcon /></div>
                                     </>
                                 ) : null

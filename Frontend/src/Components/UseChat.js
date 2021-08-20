@@ -28,9 +28,14 @@ const useChat = (roomId) => {
         ownedByCurrentUser: message.senderId === socketRef.current.id,
       };
 
+      console.log(incomingMessage)
+
       if(incomingMessage.text[0] === "delete"){
         setMessages(messages.filter(item => item !== incomingMessage.text[1]))
-      }else{
+      }else if(incomingMessage.text === "clear"){
+        setMessages([]);
+      }
+      else{
         setMessages((messages) => [...messages, incomingMessage]);
       }
     });
