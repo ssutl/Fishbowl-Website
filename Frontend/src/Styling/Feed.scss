@@ -200,6 +200,42 @@
                 }
               }
             }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 80px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+              }
+            }
           }
           .room-holder-friend {
             margin-top: 30px;
@@ -267,6 +303,42 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
               }
             }
           }
@@ -477,6 +549,42 @@
                 }
               }
             }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 85px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+              }
+            }
           }
           .room-holder-friend {
             margin-top: 30px;
@@ -544,6 +652,42 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
               }
             }
           }
@@ -754,6 +898,42 @@
                 }
               }
             }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+              }
+            }
           }
           .room-holder-friend {
             margin-top: 30px;
@@ -821,6 +1001,42 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
               }
             }
           }
@@ -1031,6 +1247,42 @@
                 }
               }
             }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+              }
+            }
           }
           .room-holder-friend {
             margin-top: 30px;
@@ -1098,6 +1350,42 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
               }
             }
           }
@@ -1309,6 +1597,42 @@
                 }
               }
             }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+              }
+            }
           }
           .room-holder-friend {
             margin-top: 30px;
@@ -1376,6 +1700,42 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
               }
             }
           }
@@ -1587,6 +1947,42 @@
                 }
               }
             }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+              }
+            }
           }
           .room-holder-friend {
             margin-top: 30px;
@@ -1654,6 +2050,42 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
               }
             }
           }
@@ -1860,6 +2292,42 @@
                 }
               }
             }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+              }
+            }
           }
         }
       }
@@ -2036,7 +2504,7 @@
               margin-top: 15px;
               height: 43%;
               width: 100%;
-              // background-color: orange;
+              background-color: orange;
               display: flex;
               justify-content: center;
 
@@ -2063,6 +2531,42 @@
                   margin: 5px 20px 4px 0px;
                   // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
+              }
+            }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 22px;
+                width: 90px;
+                border-radius: 10px;
+                background-color: #95e06c;
+
+                .pop-up {
+                  position: relative;
+                  background-color: #2c2f33;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                  color: white;
+                  border-radius: 2px;
+                  display: none;
+                  min-width: 90px;
+                  bottom: 40px;
+                }
+              }
+
+              .dot:hover .pop-up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
               }
             }
           }

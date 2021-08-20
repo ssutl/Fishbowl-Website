@@ -2858,12 +2858,20 @@
               color: white;
             }
 
-            #heart {
+            .option-holder {
               // background-color: yellow;
-              margin-bottom: 15px;
-              margin-left: 50%;
-              font-size: 25px;
-              color: white;
+              width: 5%;
+              margin: 0 20px 50px auto;
+              display: flex;
+              justify-content: space-between;
+              cursor: pointer;
+
+              .dot {
+                height: 7px;
+                width: 7px;
+                border-radius: 100%;
+                background-color: white;
+              }
             }
           }
 

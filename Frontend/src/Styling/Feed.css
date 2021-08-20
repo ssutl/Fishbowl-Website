@@ -232,6 +232,54 @@
     background-color: #384357;
     margin: 5px 20px 4px 0px;
   }
+  .feed-section .bottom-section .scroll .link .room-holder .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
   .feed-section .bottom-section .scroll .link .room-holder-friend {
     margin-top: 30px;
     height: -webkit-fit-content;
@@ -312,6 +360,54 @@
     padding: 0px 15px 0px 15px;
     background-color: #384357;
     margin: 5px 20px 4px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
   }
 }
 
@@ -549,6 +645,54 @@
     background-color: #384357;
     margin: 5px 20px 4px 0px;
   }
+  .feed-section .bottom-section .scroll .link .room-holder .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 85px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
   .feed-section .bottom-section .scroll .link .room-holder-friend {
     margin-top: 30px;
     height: -webkit-fit-content;
@@ -629,6 +773,54 @@
     padding: 0px 15px 0px 15px;
     background-color: #384357;
     margin: 5px 20px 4px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
   }
 }
 
@@ -866,6 +1058,54 @@
     background-color: #384357;
     margin: 5px 20px 4px 0px;
   }
+  .feed-section .bottom-section .scroll .link .room-holder .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
   .feed-section .bottom-section .scroll .link .room-holder-friend {
     margin-top: 30px;
     height: -webkit-fit-content;
@@ -946,6 +1186,54 @@
     padding: 0px 15px 0px 15px;
     background-color: #384357;
     margin: 5px 20px 4px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
   }
 }
 
@@ -1183,6 +1471,54 @@
     background-color: #384357;
     margin: 5px 20px 4px 0px;
   }
+  .feed-section .bottom-section .scroll .link .room-holder .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
   .feed-section .bottom-section .scroll .link .room-holder-friend {
     margin-top: 30px;
     height: -webkit-fit-content;
@@ -1263,6 +1599,54 @@
     padding: 0px 15px 0px 15px;
     background-color: #384357;
     margin: 5px 20px 4px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
   }
 }
 
@@ -1501,6 +1885,54 @@
     background-color: #384357;
     margin: 5px 20px 4px 0px;
   }
+  .feed-section .bottom-section .scroll .link .room-holder .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
   .feed-section .bottom-section .scroll .link .room-holder-friend {
     margin-top: 30px;
     height: -webkit-fit-content;
@@ -1581,6 +2013,54 @@
     padding: 0px 15px 0px 15px;
     background-color: #384357;
     margin: 5px 20px 4px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
   }
 }
 
@@ -1819,6 +2299,54 @@
     background-color: #384357;
     margin: 5px 20px 4px 0px;
   }
+  .feed-section .bottom-section .scroll .link .room-holder .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
   .feed-section .bottom-section .scroll .link .room-holder-friend {
     margin-top: 30px;
     height: -webkit-fit-content;
@@ -1899,6 +2427,54 @@
     padding: 0px 15px 0px 15px;
     background-color: #384357;
     margin: 5px 20px 4px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
   }
 }
 
@@ -2137,6 +2713,54 @@
     background-color: #384357;
     margin: 5px 20px 4px 0px;
   }
+  .feed-section .bottom-section .scroll .link .room-holder .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -2336,6 +2960,7 @@
     margin-top: 15px;
     height: 43%;
     width: 100%;
+    background-color: orange;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2373,6 +2998,54 @@
     padding: 0px 15px 0px 15px;
     background-color: #384357;
     margin: 5px 20px 4px 0px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 22px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #95e06c;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot .pop-up {
+    position: relative;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 90px;
+    bottom: 40px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .answered .dot:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
   }
 }
 /*# sourceMappingURL=Feed.css.map */

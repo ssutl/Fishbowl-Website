@@ -256,6 +256,17 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                                                 })}
                                             </div>
                                         </div>
+                                        {room.Answered? (
+                                            <div className="answered">
+                                                <div className="dot">
+                                                    {/* <p>Answered</p> */}
+                                                    <div className="pop-up">
+                                                        <p>Answered</p>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        ):null}
                                     </div>
                                 </Link>
                             )

@@ -306,9 +306,6 @@
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder #icon {
     font-size: 25px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
-    background-color: #fd4d4d;
-  }
 }
 
 @media only screen and (min-width: 400px) {
@@ -614,9 +611,6 @@
   }
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder #icon {
     font-size: 25px;
-  }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
-    background-color: #fd4d4d;
   }
 }
 
@@ -924,9 +918,6 @@
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder #icon {
     font-size: 25px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
-    background-color: #fd4d4d;
-  }
 }
 
 @media only screen and (min-width: 560px) {
@@ -1232,9 +1223,6 @@
   }
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder #icon {
     font-size: 25px;
-  }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
-    background-color: #fd4d4d;
   }
 }
 
@@ -1545,9 +1533,6 @@
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder #icon {
     font-size: 25px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
-    background-color: #fd4d4d;
-  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1856,9 +1841,6 @@
   }
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder #icon {
     font-size: 25px;
-  }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
-    background-color: #fd4d4d;
   }
 }
 

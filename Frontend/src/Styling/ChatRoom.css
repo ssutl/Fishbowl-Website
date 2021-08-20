@@ -3198,11 +3198,22 @@
     margin-bottom: 15px;
     color: white;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top #heart {
-    margin-bottom: 15px;
-    margin-left: 50%;
-    font-size: 25px;
-    color: white;
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder {
+    width: 5%;
+    margin: 0 20px 50px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot {
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .middle {
     min-height: 8vh;
