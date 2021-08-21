@@ -398,6 +398,13 @@
     transition: 0.2s ease-in;
     font-size: 26px;
   }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #green-circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+    color: #aaf11a;
+  }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
     height: 50%;
     width: 100%;
@@ -906,6 +913,13 @@
     transition: 0.2s ease-in;
     font-size: 26px;
   }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #green-circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+    color: #aaf11a;
+  }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
     height: 50%;
     width: 100%;
@@ -1413,6 +1427,13 @@
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
     font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #green-circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+    color: #aaf11a;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
     height: 50%;
@@ -1930,7 +1951,11 @@
     transition: 0.2s ease-in;
     font-size: 26px;
   }
-  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle:hover {
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #green-circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
     color: #aaf11a;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
@@ -2445,6 +2470,13 @@
     transition: 0.2s ease-in;
     font-size: 26px;
   }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #green-circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+    color: #aaf11a;
+  }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
     height: 50%;
     width: 100%;
@@ -2954,6 +2986,13 @@
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
     font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #green-circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+    color: #aaf11a;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .deleteComment {
     height: 50%;
@@ -3479,6 +3518,13 @@
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
     font-size: 26px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #green-circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+    color: #aaf11a;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle:hover {
     color: #aaf11a;
@@ -4014,6 +4060,13 @@
     transition: 0.2s ease-in;
     font-size: 26px;
   }
+  .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #green-circle {
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 26px;
+    color: #aaf11a;
+  }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered #circle:hover {
     color: #aaf11a;
   }
@@ -4075,6 +4128,35 @@
     margin-bottom: 15px;
     margin-right: 15px;
     color: white;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .bottom {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  .chat-room-section .chat-room-holder .scrollable .msg .bottom .i-helped {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 26px;
+    width: 110px;
+    border-radius: 10px;
+    background-color: #95e06c;
+    font-size: 17px;
+    color: black;
   }
   .chat-room-section .chat-room-holder .chat-bar {
     border-radius: 5px;

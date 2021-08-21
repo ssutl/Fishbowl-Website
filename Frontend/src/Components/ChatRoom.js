@@ -378,7 +378,7 @@ function ChatRoom() {
                                             <div className="editing">
                                                 <div className="markAsAnswered">
                                                     <p>Mark As Helped</p>
-                                                    <CheckCircleIcon id="circle" onClick={()=>{
+                                                    <CheckCircleIcon id={savedMessage.helped?"green-circle":"circle"} onClick={(event)=>{
                                                         markComment([savedMessage.messageID,!savedMessage.helped])
                                                         handleSendMessage(["helped",savedMessage])
                                                     }}/>
@@ -443,7 +443,9 @@ function ChatRoom() {
                                     </div>
                                 </div>
                                 <div className="bottom">
-                                    {savedMessage.helped? <h1>I helped</h1>:null}
+                                    {savedMessage.helped?<div className="i-helped">
+                                        <p>I helped</p>
+                                    </div>:null}
                                 </div>
                             </div>
                         ))}

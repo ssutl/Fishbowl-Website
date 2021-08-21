@@ -351,6 +351,12 @@
                       transition: 0.2s ease-in;
                       font-size: 26px;
                     }
+                    #green-circle {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
+                      color: rgb(170, 241, 26);
+                    }
                   }
 
                   .deleteComment {
@@ -798,6 +804,12 @@
                       cursor: pointer;
                       transition: 0.2s ease-in;
                       font-size: 26px;
+                    }
+                    #green-circle {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
+                      color: rgb(170, 241, 26);
                     }
                   }
 
@@ -1247,6 +1259,12 @@
                       cursor: pointer;
                       transition: 0.2s ease-in;
                       font-size: 26px;
+                    }
+                    #green-circle {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
+                      color: rgb(170, 241, 26);
                     }
                   }
 
@@ -1706,8 +1724,10 @@
                       transition: 0.2s ease-in;
                       font-size: 26px;
                     }
-
-                    #circle:hover {
+                    #green-circle {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
                       color: rgb(170, 241, 26);
                     }
                   }
@@ -2166,6 +2186,12 @@
                       transition: 0.2s ease-in;
                       font-size: 26px;
                     }
+                    #green-circle {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
+                      color: rgb(170, 241, 26);
+                    }
                   }
 
                   .deleteComment {
@@ -2617,6 +2643,12 @@
                       cursor: pointer;
                       transition: 0.2s ease-in;
                       font-size: 26px;
+                    }
+                    #green-circle {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
+                      color: rgb(170, 241, 26);
                     }
                   }
 
@@ -3074,6 +3106,12 @@
                       cursor: pointer;
                       transition: 0.2s ease-in;
                       font-size: 26px;
+                    }
+                    #green-circle {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
+                      color: rgb(170, 241, 26);
                     }
 
                     #circle:hover {
@@ -3540,6 +3578,12 @@
                       transition: 0.2s ease-in;
                       font-size: 26px;
                     }
+                    #green-circle {
+                      cursor: pointer;
+                      transition: 0.2s ease-in;
+                      font-size: 26px;
+                      color: rgb(170, 241, 26);
+                    }
 
                     #circle:hover {
                       color: rgb(170, 241, 26);
@@ -3597,6 +3641,27 @@
               margin-bottom: 15px;
               margin-right: 15px;
               color: white;
+            }
+          }
+          .bottom {
+            // background-color: yellow;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+
+            .i-helped {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              margin-right: 20px;
+              height: 26px;
+              width: 110px;
+              border-radius: 10px;
+              background-color: #95e06c;
+              font-size: 17px;
+              color: black;
             }
           }
         }
