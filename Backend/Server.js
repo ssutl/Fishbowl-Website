@@ -2,6 +2,7 @@ const express = require('express')
 require('dotenv').config()  //Environmental vaiables in order to hide key
 const cors = require('cors')
 const mongoose = require('mongoose') //Mongoose carries data from express app to mongo DB
+
 const userRoutes = require('./Controllers/user.controller.js') //Requiring controller so that the backend knows how to repond to requests
 const chatRoutes = require('./Controllers/chat.controller.js') //Requiring controller so that the backend knows how to repond to requests
 
@@ -19,6 +20,7 @@ const source = process.env.ATLAS_CONNECTION //Using .env connection
 mongoose.connect(source, { //Mongoose.connect opens a connection between express app and mongo DB //URI is the our database to access
   useNewUrlParser: true, //configuring how mongoose should communicate with the database
   useCreateIndex: true,
+  useFindAndModify: false,
   useUnifiedTopology: true
 })
 
@@ -45,6 +47,8 @@ const io = SocketIO(server, { //Telling sokcets to listen to server
       origin: "*",
     },
   });
+
+
 
 
   

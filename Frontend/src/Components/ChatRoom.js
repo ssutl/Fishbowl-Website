@@ -98,7 +98,7 @@ function ChatRoom() {
         if(Array.isArray(props)){
             if(props[0] === "delete"){
                 sendMessage(props)
-            }else if(props[0] === "clear"){
+            }else if(props[0] === "clear" || props[0] == "helped"){
                 // console.log("set to clear")
                 sendMessage("clear")
             }
@@ -116,8 +116,8 @@ function ChatRoom() {
                     sentByImage: info.image,
                     date: { year: current_date.getFullYear(), month: current_date.getMonth(), day: current_date.getDate(), hour: current_date.getHours() },
                     likes: [],
-                    messageID: uuidv4()
-    
+                    messageID: uuidv4(),
+                    helped: false
                 }
     
                 axios({
@@ -260,6 +260,20 @@ function ChatRoom() {
 
     }
 
+    const markComment = (props) =>{
+        axios({
+            method: 'PUT',
+            url: `http://localhost:5000/chat/update/${current_page_id}`,
+            headers: { "x-auth-token": `${token}` },
+            data: { helped: props }
+        }).then((res) => {
+            refreshComments()
+        }).catch((error) => {
+            console.log("error:", error)
+        })
+
+    }
+
 
 
 
@@ -365,6 +379,7 @@ function ChatRoom() {
                                                 <div className="markAsAnswered">
                                                     <p>Mark As Helped</p>
                                                     <CheckCircleIcon id="circle" onClick={()=>{
+                                                        markComment([savedMessage.messageID,!savedMessage.helped])
                                                         handleSendMessage(["helped",savedMessage])
                                                     }}/>
                                                 </div>
@@ -428,6 +443,7 @@ function ChatRoom() {
                                     </div>
                                 </div>
                                 <div className="bottom">
+                                    {savedMessage.helped? <h1>I helped</h1>:null}
                                 </div>
                             </div>
                         ))}

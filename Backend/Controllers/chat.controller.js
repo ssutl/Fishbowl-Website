@@ -59,13 +59,18 @@ router.delete('/delete/id/:id',auth,(req,res)=>{
 
 //Update Chat Logs
 router.put('/update/:id',auth, (req, res) => {
-    console.log('content sent: ', req.body);
+    // console.log('content sent: ', req.body);
     if(Object.keys(req.body).includes("message")){
         ChatRoom.findOneAndUpdate({  _id: req.params.id}, { $addToSet: { Messages: req.body.message}})
         .then(msg => res.json('Success! Message Added to array.'))
         .catch(err => res.status(400).json('Error! ' + err))
     }else if(Object.keys(req.body).includes("messageID")){
         ChatRoom.findOneAndUpdate({_id: req.params.id}, {$pull: {Messages: {messageID: req.body.messageID}}})
+        .then(chat => res.json('Success! Field updated'))
+        .catch(err => res.status(400).json('Error! ' + err))
+    }else if(Object.keys(req.body).includes("helped")){
+        console.log(req.body.helped[1])
+        ChatRoom.findOneAndUpdate({'Messages.messageID': req.body.helped[0]}, {$set: {'Messages.$.helped': req.body.helped[1]}})
         .then(chat => res.json('Success! Field updated'))
         .catch(err => res.status(400).json('Error! ' + err))
     }else{

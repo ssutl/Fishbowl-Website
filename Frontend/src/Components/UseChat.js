@@ -35,6 +35,9 @@ const useChat = (roomId) => {
       }else if(incomingMessage.text === "clear"){
         setMessages("refresh");
         setMessages([])
+      }else if(incomingMessage.text[0] === "helped"){
+        setMessages("refresh");
+        setMessages([])
       }
       else{
         setMessages((messages) => [...messages, incomingMessage]);
