@@ -33,7 +33,8 @@ const useChat = (roomId) => {
       if(incomingMessage.text[0] === "delete"){
         setMessages(messages.filter(item => item !== incomingMessage.text[1]))
       }else if(incomingMessage.text === "clear"){
-        setMessages([]);
+        setMessages("refresh");
+        setMessages([])
       }
       else{
         setMessages((messages) => [...messages, incomingMessage]);

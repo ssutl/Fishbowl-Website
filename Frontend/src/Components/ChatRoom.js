@@ -138,6 +138,8 @@ function ChatRoom() {
        
     }
 
+    
+
 
 
     const updateQuestion = () => {
@@ -156,6 +158,9 @@ function ChatRoom() {
         }
     }
 
+    
+
+
     const refreshChatRoom = () =>{
         axios({
             method: 'GET',
@@ -168,6 +173,10 @@ function ChatRoom() {
                 setRoomSavedMsgs(res.data[0].Messages);
 
         })
+    }
+
+    if(messages === "refresh"){
+        refreshChatRoom()
     }
 
     const userPage = () => {
@@ -383,7 +392,7 @@ function ChatRoom() {
                         </>
                     ):
                     <>
-                        {messages === undefined ? (<BarLoader color={"#FFFFFF"} css={override} size={300} />) : messages.slice(0).reverse().map((liveMessage, index) => (
+                        {messages === undefined || messages ==="refresh" ? (<BarLoader color={"#FFFFFF"} css={override} size={300} />) : messages.slice(0).reverse().map((liveMessage, index) => (
                             <div className="msg" key={index}>
                                 <div className="top">
                                     <div className="userToClick" onClick={() => redirectToUser(liveMessage.sentBy)}>
