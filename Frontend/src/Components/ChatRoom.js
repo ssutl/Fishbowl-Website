@@ -277,17 +277,24 @@ function ChatRoom() {
                 <div className="chat-room-holder">
                     <div className="navbar">
                         <div className="home">
-                            <Link to="/">
-                                <KeyboardBackspaceIcon id="arrow" style={{ fontSize: 40 }} />
-                            </Link>
-                                <Link to="/">
-                                    <h2>Home</h2>
-                                </Link>
+                            {editing?(
+                                <h2 className="editRoom">Editing Room</h2>
+                            ):(
+                                <>
+                                    <Link to="/">
+                                        <KeyboardBackspaceIcon id="arrow" style={{ fontSize: 40 }} />
+                                    </Link>
+                                    <Link to="/">
+                                            <h2>Home</h2>
+                                    </Link>
+                                </>
+                            )}
+                            
                         </div>
     
                         <div className={room.CreatedByName === info.name ? "group" : "group-without"}>
                             <div className="answered-block">
-                                {answered ? (
+                                {answered && !editing ? (
                                     <>
                                         <CheckCircleIcon style={{ fontSize: 30 }} id="completeIcon" />
                                         <h3>Answered</h3>
@@ -299,15 +306,15 @@ function ChatRoom() {
                                     room.CreatedByName === info.name ? (
                                         <>
                                             <div className="edit" onClick={() => {setEditing(!editing); refreshChatRoom(); handleSendMessage(["clear","empty"])}}><EditIcon /></div>
-                                            <div className="secondBTN" onClick={updateQuestion}><PublishIcon /></div>
                                         </>
                                     ) : null
                                 ) : (
                                     <>
                                         {room.CreatedByName === info.name ? (
                                             <>
-                                                <div className="edit" onClick={() => {setEditing(!editing);  refreshComments()}}><EditIcon /></div>
                                                 <div className={answered ? "secondBTN answered" : "secondBTN"} onClick={() => setAnswered(!answered)}><CheckCircleIcon /></div>
+                                                <div className="edit" onClick={() => {setEditing(!editing);  refreshComments()}}><EditIcon /></div>
+
                                             </>
                                         ) : null}
                                     </>
@@ -324,14 +331,16 @@ function ChatRoom() {
                         <div className="question">
                             {editing ? (
                                 <div className="room_inputs">
-                                    <input type="input"  autoComplete="off" className="input_field" onChange={(event) => setEditedName(event.target.value)} required id="name" placeholder={`${room.Title} - (Max 30)`} maxLength="30" />
+                                    <input type="input"  autoComplete="off" className="input_field" onChange={(event) => setEditedName(event.target.value)} required id="name" placeholder={`Name: "${room.Title}" - (Max 30)`} maxLength="30" />
                                     <div className="text-counter">
                                         {30 - editedName.length}
                                     </div>
-                                    <input type="input" className="input_field" autoComplete="off" id="Q" placeholder={`${room.Question} - (Max 150)`} onChange={(event) => setEditedQuestion(event.target.value)} required />
+                                    <input type="input" className="input_field" autoComplete="off" id="Q" placeholder={`Q: "${room.Question}" - (Max 150)`} onChange={(event) => setEditedQuestion(event.target.value)} required />
                                     <div className="text-counter">
                                         {150 - editedQuestion.length}
                                     </div>
+                                    <div className="secondBTN" onClick={updateQuestion}><PublishIcon /></div>
+
                                 </div>
                             ) : (
                                 <>
