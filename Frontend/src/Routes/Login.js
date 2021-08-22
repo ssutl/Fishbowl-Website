@@ -19,6 +19,15 @@ function Login() {
     const [status, setStatus] = useState("")
     const [token, setToken] = useState()
 
+    const breakpoint = 1200;
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    const resize = () => {
+        setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", resize);
+
 
     const responseSuccessGoogle = (response) => {
         setUserName(response.profileObj.name) //Using Google Response to set current User
@@ -63,30 +72,72 @@ function Login() {
 
     }
 
-    if (logged) {
-        return <App name={username} email={email} image={image} id={id} />
-    } else {
-        return (
-            <div className="login-page">
-                <div className="login-holder">
-                    <div className="upper">
-                        <p className="title">Welcome</p>
-                        <p>Join and socialize on a network for students</p>
+
+    if(screenWidth >= breakpoint){
+        if (logged) {
+            return <App name={username} email={email} image={image} id={id} />
+        } else {
+            return (
+                <div className="login-page">
+                    <div className="left">
+                        <div className="text-holder">
+                            <div className="chunkz">
+                                <h1 className="large">JOIN</h1>
+                                <h1 className="large">CREATE</h1>
+                                <h1 className="large">COMMUNICATE</h1>
+                                <h1 className="small">CHAT</h1>
+                                <h1 className="small">ROOMS</h1>
+                            </div>
+                            <div className="website-desc">
+                                <p><span>{`Create & Join Chat Rooms`} 💬🌎</span> We are making this the easiest way to recieve informed and live responses to any of your questions 📚</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="lower">
-                        <GoogleLogin
-                            className="login-button"
-                            clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
-                            onSuccess={responseSuccessGoogle}
-                            onFailure={responseErrorGoogle}
-                            cookiePolicy={'single_host_origin'}
-                            isSignedIn={true}
-                        >Login With Google</GoogleLogin>
+                    <div className="right">
+                        <div className="login-holder">
+                            <div className="upper">
+                                <p className="title" id="welcomeback">Welcome</p>
+                                <p id="logintoyouraccount">Login In To Your Account</p>
+                            </div>
+                            <div className="lower">
+                                <GoogleLogin
+                                    className="login-button"
+                                    clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
+                                    // render={renderProps => (
+                                    //     <button onClick={renderProps.onClick} style={{
+                                    //             backgroundColor: "#0096ff",
+                                    //             height: "50px",
+                                    //             width: "60%",
+                                    //             borderRadius: "5px",
+                                    //             outline:"none",
+                                    //             border: "none",
+                                    //             cursor:"pointer",
+                                    //             color:"white"
+                                    //     }}>Login With Google</button>
+                                    //   )}
+                                    onSuccess={responseSuccessGoogle}
+                                    onFailure={responseErrorGoogle}
+                                    cookiePolicy={'single_host_origin'}
+                                    isSignedIn={true}
+                                >Login With Google</GoogleLogin>
+                            </div>
+                        </div>
+    
                     </div>
+                    
                 </div>
+            )
+        }
+
+    }else{
+        return(
+            <div className="GoToDesktop">
+                <h1>Mobile Site Pending - Please Visit Desktop Site</h1>
             </div>
         )
     }
+
+    
 }
 
 export default Login

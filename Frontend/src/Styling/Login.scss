@@ -1,69 +1,402 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
-
-.login-page {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $background;
-
-  .login-holder {
-    width: 80%;
-    height: 70vh;
-    border-radius: 10px;
-    background-color: $secondary-background;
+@include breakpoint-mixin("skinny") {
+  .GoToDesktop {
+    height: 100vh;
+    width: 100%;
+    // background-color: aqua;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    .upper {
-      margin-top: 30px;
-      font-family: "Red Hat Text", sans-serif;
+    h1 {
       color: white;
-      height: 35%;
-      width: 85%;
-      .title {
-        font-size: 40px;
-        margin-bottom: 10px;
+      text-align: center;
+      max-width: 80%;
+    }
+  }
+}
+
+@include breakpoint-mixin("laptop") {
+  .login-page {
+    width: 100%;
+    height: 100vh;
+    // background-color: aqua;
+    display: flex;
+
+    .left {
+      height: 100vh;
+      width: 50%;
+      // background-color: yellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .text-holder {
+        height: 70vh;
+        width: 80%;
+        // background-color: yellowgreen;
+
+        .chunkz {
+          height: 54%;
+          width: 100%;
+          // background-color: #0096ff;
+
+          .large {
+            color: #f2f2f2;
+            background: $highlight;
+            font-size: 60px;
+            float: left;
+            font-weight: 700;
+            padding: 10px;
+            width: fit-content;
+            margin: 0 10px 24px;
+          }
+
+          .small {
+            color: #f2f2f2;
+            background: $highlight;
+            font-size: 30px;
+            float: left;
+            font-weight: 700;
+            padding: 10px;
+            width: fit-content;
+            margin: 0 10px 24px;
+          }
+
+          #speak {
+            margin-right: 400px;
+          }
+        }
+
+        .website-desc {
+          display: flex;
+          align-items: flex-end;
+          height: 46%;
+          width: 100%;
+          color: white;
+          // background-color: #0096ff;
+
+          p {
+            font-size: 20px;
+          }
+
+          span {
+            font-size: 25px;
+            font-weight: 600;
+          }
+        }
       }
     }
+    .right {
+      height: 100vh;
+      width: 50%;
+      // background-color: orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    .lower {
-      height: 65%;
-      width: 85%;
+      .login-holder {
+        height: 20vh;
+        width: 60%;
+        // justify-content: center;
+        border-radius: 5px;
+        background-color: #3d3d3d;
+        border: 1px solid rgba(255, 255, 255, 0.164);
 
-      .login-button {
-        width: 100%;
-        height: 60px;
+        .upper {
+          height: 12vh;
+          width: 100%;
+          // background-color: green;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: white;
+          font-family: "Red Hat Text", sans-serif;
+
+          #welcomeback {
+            margin-top: 25px;
+            font-size: 20px;
+            opacity: 0.7;
+          }
+
+          #logintoyouraccount {
+            font-size: 28px;
+            font-weight: 650;
+          }
+        }
+        .lower {
+          height: 8vh;
+          // background-color: yellow;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .login-button {
+            width: 60%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+          }
+        }
       }
     }
   }
 }
 
-@include breakpoint-mixin("tablet") {
+@include breakpoint-mixin("laptop-wide") {
   .login-page {
-    .login-holder {
-      width: 70%;
-    }
-  }
-}
+    width: 100%;
+    height: 100vh;
+    // background-color: aqua;
+    display: flex;
 
-@include breakpoint-mixin("tablet-wide") {
-  .login-page {
-    .login-holder {
-      width: 45%;
-      height: 40%;
+    .left {
+      height: 100vh;
+      width: 50%;
+      // background-color: yellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .text-holder {
+        height: 70vh;
+        width: 80%;
+        // background-color: yellowgreen;
+
+        .chunkz {
+          height: 54%;
+          width: 100%;
+          // background-color: #0096ff;
+
+          .large {
+            color: #f2f2f2;
+            background: $highlight;
+            font-size: 75px;
+            float: left;
+            font-weight: 700;
+            padding: 10px;
+            width: fit-content;
+            margin: 0 10px 24px;
+          }
+
+          .small {
+            color: #f2f2f2;
+            background: $highlight;
+            font-size: 25px;
+            float: left;
+            font-weight: 700;
+            padding: 10px;
+            width: fit-content;
+            margin: 0 10px 24px;
+          }
+
+          #speak {
+            margin-right: 400px;
+          }
+        }
+
+        .website-desc {
+          display: flex;
+          align-items: flex-end;
+          height: 46%;
+          width: 100%;
+          color: white;
+          // background-color: #0096ff;
+
+          p {
+            font-size: 20px;
+          }
+
+          span {
+            font-size: 25px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .right {
+      height: 100vh;
+      width: 50%;
+      // background-color: orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .login-holder {
+        height: 20vh;
+        width: 50%;
+        // justify-content: center;
+        border-radius: 5px;
+        background-color: #3d3d3d;
+        border: 1px solid rgba(255, 255, 255, 0.164);
+
+        .upper {
+          height: 12vh;
+          width: 100%;
+          // background-color: green;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: white;
+          font-family: "Red Hat Text", sans-serif;
+
+          #welcomeback {
+            margin-top: 25px;
+            font-size: 20px;
+            opacity: 0.7;
+          }
+
+          #logintoyouraccount {
+            font-size: 28px;
+            font-weight: 650;
+          }
+        }
+        .lower {
+          height: 8vh;
+          // background-color: yellow;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .login-button {
+            width: 60%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
     }
   }
 }
 
 @include breakpoint-mixin("desktop") {
   .login-page {
-    .login-holder {
-      width: 20%;
-      height: 45%;
+    width: 100%;
+    height: 100vh;
+    // background-color: aqua;
+    display: flex;
+
+    .left {
+      height: 100vh;
+      width: 50%;
+      // background-color: yellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .text-holder {
+        height: 70vh;
+        width: 80%;
+        // background-color: yellowgreen;
+
+        .chunkz {
+          height: 54%;
+          width: 100%;
+          // background-color: #0096ff;
+
+          .large {
+            color: #f2f2f2;
+            background: $highlight;
+            font-size: 75px;
+            float: left;
+            font-weight: 700;
+            padding: 10px;
+            width: fit-content;
+            margin: 0 10px 24px;
+          }
+
+          .small {
+            color: #f2f2f2;
+            background: $highlight;
+            font-size: 30px;
+            float: left;
+            font-weight: 700;
+            padding: 10px;
+            width: fit-content;
+            margin: 0 10px 24px;
+          }
+
+          #speak {
+            margin-right: 400px;
+          }
+        }
+
+        .website-desc {
+          display: flex;
+          align-items: flex-end;
+          height: 46%;
+          width: 100%;
+          color: white;
+          // background-color: #0096ff;
+
+          p {
+            font-size: 20px;
+          }
+
+          span {
+            font-size: 25px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .right {
+      height: 100vh;
+      width: 50%;
+      // background-color: orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .login-holder {
+        height: 20vh;
+        width: 50%;
+        // justify-content: center;
+        border-radius: 5px;
+        background-color: #3d3d3d;
+        border: 1px solid rgba(255, 255, 255, 0.164);
+
+        .upper {
+          height: 12vh;
+          width: 100%;
+          // background-color: green;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: white;
+          font-family: "Red Hat Text", sans-serif;
+
+          #welcomeback {
+            margin-top: 25px;
+            font-size: 20px;
+            opacity: 0.7;
+          }
+
+          #logintoyouraccount {
+            font-size: 28px;
+            font-weight: 650;
+          }
+        }
+        .lower {
+          height: 8vh;
+          // background-color: yellow;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .login-button {
+            width: 55%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
     }
   }
 }

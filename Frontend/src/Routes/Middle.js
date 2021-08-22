@@ -14,6 +14,14 @@ function Middle({ childToParent, dashboard }) {
     const [search, setSearch] = useState("")
     const [followReq, setFollowReq] = useState("")
     const [roomCreated, setRoomCreated] = useState("")
+    const breakpoint = 1200;
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    const resize = () => {
+        setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", resize);
 
     useEffect(() => {
         const data = { search, followReq }
@@ -29,34 +37,40 @@ function Middle({ childToParent, dashboard }) {
         setRoomCreated(createRoom)
     }
 
+    if(screenWidth >= breakpoint){
+        return (
 
-
-    return (
-
-        <div className="middle-holder">
-            <div className="section1">
-                <div className="search-wrapper">
-                    {/* <SearchIcon/> */}
-                    <input className="searchBar" type="text" placeholder="Search for rooms or friends" onChange={(event) => { setSearch(event.target.value); history.push('/'); }}></input>
+            <div className="middle-holder">
+                <div className="section1">
+                    <div className="search-wrapper">
+                        {/* <SearchIcon/> */}
+                        <input className="searchBar" type="text" placeholder="Search for rooms or friends" onChange={(event) => { setSearch(event.target.value); history.push('/'); }}></input>
+                    </div>
                 </div>
+                <Switch>
+    
+                    {/* <Route exact path="/" component={withRouter(Feed)} value={search}/> */}
+                    <Route exact path="/" render={(props) => (
+                        <Feed input={search} followR={followReq} dashboard={dashboard} roomCreated={roomCreated} />
+                    )} />
+                    <Route exact path="/People/:name" render={() => (
+                        <SpecificUserPage specificUserToParent={specificUserToParent} />
+                    )} />
+                    <Route exact path="/Create/:name" render={() => (
+                        <CreateRoom createRoomToParent={createRoomToParent} />
+                    )} />
+                    <Route exact path="/Chat/:roomId" component={withRouter(ChatRoom)} />
+                </Switch>
             </div>
-            <Switch>
+    
+        )
+    }else{
+        return(
+            null
+        )
+    }
 
-                {/* <Route exact path="/" component={withRouter(Feed)} value={search}/> */}
-                <Route exact path="/" render={(props) => (
-                    <Feed input={search} followR={followReq} dashboard={dashboard} roomCreated={roomCreated} />
-                )} />
-                <Route exact path="/People/:name" render={() => (
-                    <SpecificUserPage specificUserToParent={specificUserToParent} />
-                )} />
-                <Route exact path="/Create/:name" render={() => (
-                    <CreateRoom createRoomToParent={createRoomToParent} />
-                )} />
-                <Route exact path="/Chat/:roomId" component={withRouter(ChatRoom)} />
-            </Switch>
-        </div>
-
-    )
+    
 }
 
 export default Middle

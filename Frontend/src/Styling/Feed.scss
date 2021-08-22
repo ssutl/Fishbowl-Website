@@ -1,2099 +1,6 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
 
-@include breakpoint-mixin("skinny") {
-  .feed-section {
-    height: 80vh;
-    width: 100%;
-    // background-color: aqua;
-
-    .top {
-      margin-left: auto;
-      margin-right: auto;
-      height: 10vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      color: white;
-      justify-content: center;
-
-      .holder {
-        // background-color: pink;
-        width: 85%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .feed-BTN {
-          display: flex;
-          justify-content: space-between;
-          width: 210px;
-          // background-color: aqua;
-
-          p {
-            font-weight: 600;
-            font-size: 17px;
-            font-family: "Red Hat Text", sans-serif;
-            // background-color: yellow;
-          }
-
-          .NotActive {
-            opacity: 0.6;
-          }
-          .pink {
-            color: #f54977;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-
-          .create-BTN {
-            height: 35px;
-            width: 75px;
-            display: flex;
-            background-color: $highlight;
-            border-radius: 5px;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            font-family: "Red Hat Text", sans-serif;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    .bottom-section {
-      height: 70vh;
-      display: flex;
-      justify-content: center;
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-
-      .indicator {
-        cursor: pointer;
-        margin-top: 20px;
-        position: absolute;
-        left: 32%;
-        height: 32px;
-        width: 150px;
-        background-color: #f54977;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        color: white;
-
-        p {
-          font-size: 20px;
-        }
-      }
-
-      .scroll {
-        height: 100%;
-        width: 95%;
-        overflow: auto;
-        scroll-behavior: smooth;
-        // margin-bottom: 20px;
-        // background-color: yellow;
-
-        .noGlobalorFriends {
-          height: 90%;
-          width: 100%;
-
-          .write {
-            height: 10%;
-            width: 100%;
-            // background-color: green;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .svgImage {
-            height: 90%;
-            width: 100%;
-            // background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-              width: 90%;
-              height: 90%;
-            }
-          }
-          // background-color: orange;
-        }
-
-        .link {
-          text-decoration: none;
-
-          .room-holder {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: $secondary-background;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 30px;
-                margin-right: 20px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 80px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-          .room-holder-friend {
-            margin-top: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: #68c5db;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@include breakpoint-mixin("phone") {
-  .feed-section {
-    height: 80vh;
-    width: 100%;
-    // background-color: aqua;
-
-    .top {
-      margin-left: auto;
-      margin-right: auto;
-      height: 10vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      color: white;
-      justify-content: center;
-
-      .holder {
-        // background-color: pink;
-        width: 85%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .feed-BTN {
-          display: flex;
-          justify-content: space-between;
-          width: 220px;
-          // background-color: aqua;
-
-          p {
-            font-weight: 600;
-            font-size: 18px;
-            font-family: "Red Hat Text", sans-serif;
-            // background-color: yellow;
-          }
-
-          .NotActive {
-            opacity: 0.6;
-          }
-
-          .pink {
-            color: #f54977;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-
-          .create-BTN {
-            height: 38px;
-            width: 75px;
-            display: flex;
-            background-color: $highlight;
-            border-radius: 5px;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            font-family: "Red Hat Text", sans-serif;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    .bottom-section {
-      height: 70vh;
-      display: flex;
-      justify-content: center;
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-
-      .indicator {
-        cursor: pointer;
-        margin-top: 20px;
-        position: absolute;
-        left: 32%;
-        height: 32px;
-        width: 150px;
-        background-color: #f54977;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        color: white;
-
-        p {
-          font-size: 20px;
-        }
-      }
-
-      .scroll {
-        height: 100%;
-        width: 95%;
-        overflow: auto;
-        scroll-behavior: smooth;
-        // margin-bottom: 20px;
-        // background-color: yellow;
-
-        .noGlobalorFriends {
-          height: 90%;
-          width: 100%;
-
-          .write {
-            height: 10%;
-            width: 100%;
-            // background-color: green;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .svgImage {
-            height: 90%;
-            width: 100%;
-            // background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-              width: 90%;
-              height: 90%;
-            }
-          }
-          // background-color: orange;
-        }
-
-        .link {
-          text-decoration: none;
-
-          .room-holder {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: $secondary-background;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 30px;
-                margin-right: 20px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 85px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-          .room-holder-friend {
-            margin-top: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: #68c5db;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@include breakpoint-mixin("phone-wide") {
-  .feed-section {
-    height: 80vh;
-    width: 100%;
-    // background-color: aqua;
-
-    .top {
-      margin-left: auto;
-      margin-right: auto;
-      height: 10vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      color: white;
-      justify-content: center;
-
-      .holder {
-        // background-color: pink;
-        width: 85%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .feed-BTN {
-          display: flex;
-          justify-content: space-between;
-          width: 235px;
-          // background-color: aqua;
-
-          p {
-            font-weight: 600;
-            font-size: 19px;
-            font-family: "Red Hat Text", sans-serif;
-            // background-color: yellow;
-          }
-
-          .NotActive {
-            opacity: 0.6;
-          }
-
-          .pink {
-            color: #f54977;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-
-          .create-BTN {
-            height: 40px;
-            width: 75px;
-            display: flex;
-            background-color: $highlight;
-            border-radius: 5px;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            font-family: "Red Hat Text", sans-serif;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    .bottom-section {
-      height: 70vh;
-      display: flex;
-      justify-content: center;
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-
-      .indicator {
-        cursor: pointer;
-        margin-top: 20px;
-        position: absolute;
-        left: 35%;
-        height: 32px;
-        width: 150px;
-        background-color: #f54977;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        color: white;
-
-        p {
-          font-size: 20px;
-        }
-      }
-
-      .scroll {
-        height: 100%;
-        width: 95%;
-        overflow: auto;
-        scroll-behavior: smooth;
-        // margin-bottom: 20px;
-        // background-color: yellow;
-
-        .noGlobalorFriends {
-          height: 90%;
-          width: 100%;
-
-          .write {
-            height: 10%;
-            width: 100%;
-            // background-color: green;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .svgImage {
-            height: 90%;
-            width: 100%;
-            // background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-              width: 90%;
-              height: 90%;
-            }
-          }
-          // background-color: orange;
-        }
-
-        .link {
-          text-decoration: none;
-
-          .room-holder {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: $secondary-background;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 30px;
-                margin-right: 20px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-          .room-holder-friend {
-            margin-top: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: #68c5db;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@include breakpoint-mixin("phablet") {
-  .feed-section {
-    height: 80vh;
-    width: 100%;
-    // background-color: aqua;
-
-    .top {
-      margin-left: auto;
-      margin-right: auto;
-      height: 10vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      color: white;
-      justify-content: center;
-
-      .holder {
-        // background-color: pink;
-        width: 85%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .feed-BTN {
-          display: flex;
-          justify-content: space-between;
-          width: 245px;
-          // background-color: aqua;
-
-          p {
-            font-weight: 600;
-            font-size: 20px;
-            font-family: "Red Hat Text", sans-serif;
-            // background-color: yellow;
-          }
-
-          .NotActive {
-            opacity: 0.6;
-          }
-
-          .pink {
-            color: #f54977;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-
-          .create-BTN {
-            height: 40px;
-            width: 75px;
-            display: flex;
-            background-color: $highlight;
-            border-radius: 5px;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            font-family: "Red Hat Text", sans-serif;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    .bottom-section {
-      height: 70vh;
-      display: flex;
-      justify-content: center;
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-
-      .indicator {
-        cursor: pointer;
-        margin-top: 20px;
-        position: absolute;
-        left: 38%;
-        height: 32px;
-        width: 150px;
-        background-color: #f54977;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        color: white;
-
-        p {
-          font-size: 20px;
-        }
-      }
-
-      .scroll {
-        height: 100%;
-        width: 95%;
-        overflow: auto;
-        scroll-behavior: smooth;
-        // margin-bottom: 20px;
-        // background-color: yellow;
-
-        .noGlobalorFriends {
-          height: 90%;
-          width: 100%;
-
-          .write {
-            height: 10%;
-            width: 100%;
-            // background-color: green;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .svgImage {
-            height: 90%;
-            width: 100%;
-            // background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-              width: 90%;
-              height: 90%;
-            }
-          }
-          // background-color: orange;
-        }
-
-        .link {
-          text-decoration: none;
-
-          .room-holder {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: $secondary-background;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 30px;
-                margin-right: 20px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-          .room-holder-friend {
-            margin-top: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: #68c5db;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@include breakpoint-mixin("tablet") {
-  .feed-section {
-    height: 80vh;
-    width: 100%;
-    // background-color: aqua;
-
-    .top {
-      margin-left: auto;
-      margin-right: auto;
-      height: 10vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      color: white;
-      justify-content: center;
-
-      .holder {
-        // background-color: pink;
-        width: 85%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .feed-BTN {
-          display: flex;
-          justify-content: space-between;
-          width: 275px;
-          // background-color: aqua;
-
-          p {
-            font-weight: 600;
-            font-size: 22px;
-            font-family: "Red Hat Text", sans-serif;
-            // background-color: yellow;
-          }
-
-          .NotActive {
-            opacity: 0.6;
-          }
-
-          .pink {
-            color: #f54977;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-
-          .create-BTN {
-            height: 50px;
-            width: 145px;
-            display: flex;
-            background-color: $highlight;
-            border-radius: 5px;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            font-family: "Red Hat Text", sans-serif;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    .bottom-section {
-      height: 70vh;
-      display: flex;
-      justify-content: center;
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-
-      .indicator {
-        cursor: pointer;
-        margin-top: 20px;
-        position: absolute;
-        left: 41%;
-        height: 32px;
-        width: 150px;
-        background-color: #f54977;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        color: white;
-
-        p {
-          font-size: 20px;
-        }
-      }
-
-      .scroll {
-        height: 100%;
-        width: 95%;
-        overflow: auto;
-        scroll-behavior: smooth;
-        // margin-bottom: 20px;
-        // background-color: yellow;
-
-        .noGlobalorFriends {
-          height: 90%;
-          width: 100%;
-
-          .write {
-            height: 10%;
-            width: 100%;
-            // background-color: green;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 22px;
-          }
-
-          .svgImage {
-            height: 90%;
-            width: 100%;
-            // background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-              width: 90%;
-              height: 90%;
-            }
-          }
-          // background-color: orange;
-        }
-
-        .link {
-          text-decoration: none;
-
-          .room-holder {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: $secondary-background;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 30px;
-                margin-right: 20px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-          .room-holder-friend {
-            margin-top: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: #68c5db;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@include breakpoint-mixin("tablet-wide") {
-  .feed-section {
-    height: 80vh;
-    width: 100%;
-    // background-color: aqua;
-
-    .top {
-      margin-left: auto;
-      margin-right: auto;
-      height: 10vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      color: white;
-      justify-content: center;
-
-      .holder {
-        // background-color: pink;
-        width: 85%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .feed-BTN {
-          display: flex;
-          justify-content: space-between;
-          width: 310px;
-          // background-color: aqua;
-
-          p {
-            font-weight: 600;
-            font-size: 25px;
-            font-family: "Red Hat Text", sans-serif;
-            // background-color: yellow;
-          }
-
-          .NotActive {
-            opacity: 0.6;
-          }
-
-          .pink {
-            color: #f54977;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-
-          .create-BTN {
-            height: 50px;
-            width: 145px;
-            display: flex;
-            background-color: $highlight;
-            border-radius: 5px;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            font-family: "Red Hat Text", sans-serif;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    .bottom-section {
-      height: 70vh;
-      display: flex;
-      justify-content: center;
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-
-      .indicator {
-        cursor: pointer;
-        margin-top: 20px;
-        position: absolute;
-        left: 43%;
-        height: 32px;
-        width: 150px;
-        background-color: #f54977;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        color: white;
-
-        p {
-          font-size: 20px;
-        }
-      }
-
-      .scroll {
-        height: 100%;
-        width: 95%;
-        overflow: auto;
-        scroll-behavior: smooth;
-        // margin-bottom: 20px;
-        // background-color: yellow;
-
-        .noGlobalorFriends {
-          height: 90%;
-          width: 100%;
-
-          .write {
-            height: 10%;
-            width: 100%;
-            // background-color: green;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 32px;
-          }
-
-          .svgImage {
-            height: 90%;
-            width: 100%;
-            // background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-              width: 90%;
-              height: 90%;
-            }
-          }
-          // background-color: orange;
-        }
-
-        .link {
-          text-decoration: none;
-
-          .room-holder {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: $secondary-background;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 30px;
-                margin-right: 20px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-          .room-holder-friend {
-            margin-top: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: #68c5db;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 4px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
-                width: 90px;
-                border-radius: 10px;
-                background-color: #95e06c;
-
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                  color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
-                }
-              }
-
-              .dot:hover .pop-up {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 @include breakpoint-mixin("laptop") {
   .feed-section {
     height: 90vh;
@@ -2293,6 +200,116 @@
               }
             }
             .answered {
+              margin-top: 15px;
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 24px;
+                width: 90px;
+                font-size: 15px;
+                border-radius: 10px;
+                background-color: $highlight;
+
+                // .pop-up {
+                //   position: relative;
+                //   background-color: #2c2f33;
+                //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                //   color: white;
+                //   border-radius: 2px;
+                //   display: none;
+                //   min-width: 90px;
+                //   bottom: 50px;
+                // }
+              }
+
+              // .dot:hover {
+              // }
+
+              // .dot:hover .pop-up {
+              //   position: relative;
+              //   display: flex;
+              //   justify-content: center;
+              //   align-items: center;
+              //   height: 35px;
+              // }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+            .answered {
               // background-color: yellow;
               display: flex;
               justify-content: flex-end;
@@ -2305,28 +322,388 @@
                 margin-right: 20px;
                 height: 22px;
                 width: 90px;
+                font-size: 15px;
                 border-radius: 10px;
-                background-color: #95e06c;
+                background-color: $highlight;
 
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                // .pop-up {
+                //   position: relative;
+                //   background-color: #2c2f33;
+                //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                //   color: white;
+                //   border-radius: 2px;
+                //   display: none;
+                //   min-width: 90px;
+                //   bottom: 50px;
+                // }
+              }
 
+              // .dot:hover {
+              // }
+
+              // .dot:hover .pop-up {
+              //   position: relative;
+              //   display: flex;
+              //   justify-content: center;
+              //   align-items: center;
+              //   height: 35px;
+              // }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("laptop-wide") {
+  .feed-section {
+    height: 90vh;
+    width: 100%;
+
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: center;
+
+      .holder {
+        // background-color: pink;
+        width: 81%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feed-BTN {
+          display: flex;
+          justify-content: space-between;
+          width: 250px;
+          // background-color: aqua;
+
+          p {
+            font-weight: 600;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+            cursor: pointer;
+          }
+
+          .active {
+            opacity: 0.6;
+          }
+
+          .pink {
+            color: #f54977;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          .create-BTN {
+            height: 45px;
+            width: 160px;
+            display: flex;
+            background-color: $highlight;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-family: "Red Hat Text", sans-serif;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-section {
+      height: 77vh;
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .indicator {
+        cursor: pointer;
+        margin-top: 20px;
+        position: absolute;
+        left: 45%;
+        height: 32px;
+        width: 150px;
+        background-color: #f54977;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        color: white;
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .scroll {
+        height: 100%;
+        width: 80%;
+        overflow: auto;
+        scroll-behavior: smooth;
+
+        .noGlobalorFriends {
+          height: 90%;
+          width: 100%;
+
+          .write {
+            height: 10%;
+            width: 100%;
+            // background-color: green;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+          }
+
+          .svgImage {
+            height: 90%;
+            width: 100%;
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 90%;
+              height: 90%;
+            }
+          }
+          // background-color: orange;
+        }
+
+        .link {
+          text-decoration: none;
+
+          .room-holder {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
                   color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
               }
+            }
+            .answered {
+              margin-top: 10px;
 
-              .dot:hover .pop-up {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                height: 35px;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 25px;
+                width: 100px;
+                font-size: 15px;
+                border-radius: 10px;
+                background-color: $highlight;
+
+                // .pop-up {
+                //   position: relative;
+                //   background-color: #2c2f33;
+                //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                //   color: white;
+                //   border-radius: 2px;
+                //   display: none;
+                //   min-width: 90px;
+                //   bottom: 50px;
+                // }
               }
+
+              // .dot:hover {
+              // }
+
+              // .dot:hover .pop-up {
+              //   position: relative;
+              //   display: flex;
+              //   justify-content: center;
+              //   align-items: center;
+              //   height: 35px;
+              // }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+                }
+              }
+            }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
+
+              .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 25px;
+                width: 100px;
+                font-size: 15px;
+                border-radius: 10px;
+                background-color: $highlight;
+
+                // .pop-up {
+                //   position: relative;
+                //   background-color: #2c2f33;
+                //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                //   color: white;
+                //   border-radius: 2px;
+                //   display: none;
+                //   min-width: 90px;
+                //   bottom: 50px;
+                // }
+              }
+
+              // .dot:hover {
+              // }
+
+              // .dot:hover .pop-up {
+              //   position: relative;
+              //   display: flex;
+              //   justify-content: center;
+              //   align-items: center;
+              //   height: 35px;
+              // }
             }
           }
         }
@@ -2544,30 +921,135 @@
                 justify-content: center;
                 color: white;
                 margin-right: 20px;
-                height: 22px;
-                width: 90px;
+                height: 25px;
+                width: 110px;
                 border-radius: 10px;
-                background-color: #95e06c;
+                background-color: $highlight;
 
-                .pop-up {
-                  position: relative;
-                  background-color: #2c2f33;
-                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                // .pop-up {
+                //   position: relative;
+                //   background-color: #2c2f33;
+                //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
+                //   color: white;
+                //   border-radius: 2px;
+                //   display: none;
+                //   min-width: 90px;
+                //   bottom: 40px;
+                // }
+              }
+
+              // .dot:hover .pop-up {
+              //   display: flex;
+              //   justify-content: center;
+              //   align-items: center;
+              //   height: 35px;
+              // }
+            }
+          }
+          .room-holder-friend {
+            margin-top: 30px;
+            height: fit-content;
+            width: 100%;
+            background-color: $secondary-background;
+            word-break: break-all;
+            border-radius: 5px;
+            padding: 15px 0px 10px 0px;
+
+            .top-section {
+              color: white;
+
+              height: 57%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              p {
+                margin-left: 60px;
+                margin-right: 60px;
+                font-family: "Red Hat Text", sans-serif;
+              }
+
+              #Title {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 10px;
+              }
+
+              #Question {
+                font-size: 17px;
+              }
+            }
+
+            .low-section {
+              margin-top: 15px;
+              height: 43%;
+              width: 100%;
+              // background-color: orange;
+              display: flex;
+              justify-content: center;
+
+              .low-holder {
+                height: 100%;
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .roomTag {
+                  // background-color: aqua;
+                  // cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  width: fit-content;
+                  font-family: "Red Hat Text", sans-serif;
                   color: white;
-                  border-radius: 2px;
-                  display: none;
-                  min-width: 90px;
-                  bottom: 40px;
+                  border-radius: 50px;
+                  font-size: 15px;
+                  padding: 0px 15px 0px 15px;
+                  background-color: $buttons;
+                  margin: 5px 20px 4px 0px;
+                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
                 }
               }
+            }
+            .answered {
+              // background-color: yellow;
+              display: flex;
+              justify-content: flex-end;
 
-              .dot:hover .pop-up {
+              .dot {
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                height: 35px;
+                justify-content: center;
+                color: white;
+                margin-right: 20px;
+                height: 25px;
+                width: 110px;
+                border-radius: 10px;
+                background-color: $highlight;
+
+                // .pop-up {
+                //   position: relative;
+                //   background-color: #2c2f33;
+                //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+                //   color: white;
+                //   border-radius: 2px;
+                //   display: none;
+                //   min-width: 90px;
+                //   bottom: 40px;
+                // }
               }
+
+              // .dot:hover .pop-up {
+              //   display: flex;
+              //   justify-content: center;
+              //   align-items: center;
+              //   height: 35px;
+              // }
             }
           }
         }

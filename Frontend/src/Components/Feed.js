@@ -19,7 +19,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
     const [feed, setFeed] = useState(true) //Boolean variable to switch between feeds
     const [following, setFollowing] = useState([]) //Array of the users the current user is following
     const [loading, setLoading] = useState() //Flag to indicate when API call is finished
-    const breakpoint = 768; //Tablet breakpoint
+    const breakpoint = 1200; //Tablet breakpoint
     const [screenWidth, setScreenWidth] = useState(window.innerWidth); //Settting screenwidth to current viewport size
     const [newRoomsAvailable, setNewRoomAvailable] = useState(false)
     const [cycledFinished, setCycledFinished] = useState(false)
@@ -187,7 +187,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
     right:45%;
   `;
 
-
+  if(screenWidth >= breakpoint){
     return (
         <div className="feed-section">
             <div className="top">
@@ -259,12 +259,8 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                                         {room.Answered? (
                                             <div className="answered">
                                                 <div className="dot">
-                                                    {/* <p>Answered</p> */}
-                                                    <div className="pop-up">
-                                                        <p>Answered</p>
-                                                    </div>
-                                                </div>
-                                                
+                                                    <p>Answered</p>
+                                                </div>  
                                             </div>
                                         ):null}
                                     </div>
@@ -314,6 +310,13 @@ function Feed({ input, followR, dashboard, roomCreated }) {
 
         </div>
     )
+  }else{
+      return(
+          null
+      )
+  }
+
+    
 }
 
 export default Feed;

@@ -109,7 +109,7 @@
             }
 
             p:hover {
-              color: orange;
+              color: $highlight;
             }
           }
         }
@@ -156,7 +156,7 @@
         .holder {
           width: 90%;
           height: 90%;
-          // background-color: orange;
+          // background-color: $highlight;
           overflow: auto;
           display: flex;
           flex-direction: column;
@@ -358,7 +358,7 @@
             }
 
             p:hover {
-              color: orange;
+              color: $highlight;
             }
           }
         }
@@ -405,7 +405,7 @@
         .holder {
           width: 90%;
           height: 90%;
-          // background-color: orange;
+          // background-color: $highlight;
           overflow: auto;
           display: flex;
           flex-direction: column;
@@ -609,7 +609,7 @@
             }
 
             p:hover {
-              color: orange;
+              color: $highlight;
             }
           }
         }
@@ -656,7 +656,7 @@
         .holder {
           width: 85%;
           height: 90%;
-          // background-color: orange;
+          // background-color: $highlight;
           overflow: auto;
           display: flex;
           flex-direction: column;

@@ -142,7 +142,7 @@
     cursor: pointer;
   }
   .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p:hover {
-    color: orange;
+    color: #0096ff;
   }
   .profile-holder .profile .lower-profile .status-select-btn:hover .status-dropdown-content {
     display: -webkit-box;
@@ -448,7 +448,7 @@
     cursor: pointer;
   }
   .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p:hover {
-    color: orange;
+    color: #0096ff;
   }
   .profile-holder .profile .lower-profile .status-select-btn:hover .status-dropdown-content {
     display: -webkit-box;
@@ -761,7 +761,7 @@
     cursor: pointer;
   }
   .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p:hover {
-    color: orange;
+    color: #0096ff;
   }
   .profile-holder .profile .lower-profile .status-select-btn:hover .status-dropdown-content {
     display: -webkit-box;

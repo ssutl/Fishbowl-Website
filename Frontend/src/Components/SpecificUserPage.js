@@ -11,7 +11,7 @@ import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 function SpecificUserPage({ specificUserToParent }) {
     const [following, setFollowing] = useState()
-    const breakpoint = 768;
+    const breakpoint = 1200;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
@@ -132,73 +132,79 @@ function SpecificUserPage({ specificUserToParent }) {
 
 
 
+    if(screenWidth >= breakpoint){
+        return (
 
-
-    return (
-
-        <div className="section2">
-            <div className="holder">
-                <div className="banner">
-                    <h1>{state.user.username}</h1>
-                </div>
-                <div className="imageHolder">
-                    <img src={state.user.image} alt="" />
-                </div>
-                {mypage ? usersRooms.length === 0 ? (
-                    <div className="follow-my-section"></div>
-                ) : (
-                    <div className="follow-my-section">
-                        <p>My Rooms</p>
+            <div className="section2">
+                <div className="holder">
+                    <div className="banner">
+                        <h1>{state.user.username}</h1>
                     </div>
-
-                ) : (
-                    <div className="follow-section">
-                        <div className={following ? "following-BTN" : "follow-BTN"} onClick={handleInteract}>
-                            <PersonAddIcon id="" />
-                            {following ? <p>Following</p> : <p>Follow</p>}
+                    <div className="imageHolder">
+                        <img src={state.user.image} alt="" />
+                    </div>
+                    {mypage ? usersRooms.length === 0 ? (
+                        <div className="follow-my-section"></div>
+                    ) : (
+                        <div className="follow-my-section">
+                            <p>My Rooms</p>
+                        </div>
+    
+                    ) : (
+                        <div className="follow-section">
+                            <div className={following ? "following-BTN" : "follow-BTN"} onClick={handleInteract}>
+                                <PersonAddIcon id="" />
+                                {following ? <p>Following</p> : <p>Follow</p>}
+                            </div>
+                        </div>
+                    )}
+                    <div className="specificFeedHolder">
+                        <div className={usersRooms.length === 0 ? "svg" : "scrollUser"}>
+                            {usersRooms.length === 0 ? (
+                                <>
+                                    <div className="titlo"><h1>{mypage ? `YOU HAVE NO ROOMS` : `FRIEND HAS NO ROOMS`}</h1></div>
+                                    <div className="svg"><YourSvg id="svg" /></div>
+                                </>
+                            ) : usersRooms.map((room, index) => {
+                                return (
+                                    <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link1" key={index}>
+                                        <div className="usersRooms" key={index}>
+                                            <div className="upper">
+                                                <p id="Title">{room.Title}</p>
+                                                <p id="Question">{room.Question.substring(0, 70)}...</p>
+                                            </div>
+                                            <div className="lower">
+                                                <div className="low-holder">
+                                                    {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag, index) => {
+                                                        return <div className="roomTag" key={index}>{tag}</div>
+                                                    })}
+                                                </div>
+                                            </div>
+                                            {mypage?(
+                                                    <div className="delete" onClick={(event)=>deleteRoom([event, room._id])}>
+                                                        <div className="delete-icon-holder">
+                                                        <DeleteIcon/>
+    
+                                                        </div>
+                                                    </div>
+                                                ):null}
+                                        </div>
+                                    </Link>
+                                )
+                            })}
                         </div>
                     </div>
-                )}
-                <div className="specificFeedHolder">
-                    <div className={usersRooms.length === 0 ? "svg" : "scrollUser"}>
-                        {usersRooms.length === 0 ? (
-                            <>
-                                <div className="titlo"><h1>{mypage ? `YOU HAVE NO ROOMS` : `FRIEND HAS NO ROOMS`}</h1></div>
-                                <div className="svg"><YourSvg id="svg" /></div>
-                            </>
-                        ) : usersRooms.map((room, index) => {
-                            return (
-                                <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link1" key={index}>
-                                    <div className="usersRooms" key={index}>
-                                        <div className="upper">
-                                            <p id="Title">{room.Title}</p>
-                                            <p id="Question">{room.Question.substring(0, 70)}...</p>
-                                        </div>
-                                        <div className="lower">
-                                            <div className="low-holder">
-                                                {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag, index) => {
-                                                    return <div className="roomTag" key={index}>{tag}</div>
-                                                })}
-                                            </div>
-                                        </div>
-                                        {mypage?(
-                                                <div className="delete" onClick={(event)=>deleteRoom([event, room._id])}>
-                                                    <div className="delete-icon-holder">
-                                                    <DeleteIcon/>
-
-                                                    </div>
-                                                </div>
-                                            ):null}
-                                    </div>
-                                </Link>
-                            )
-                        })}
-                    </div>
                 </div>
+    
             </div>
+        )
+    }else{
+        return(
+            null
+        )
+    }
 
-        </div>
-    )
+    
 }
 
 export default SpecificUserPage

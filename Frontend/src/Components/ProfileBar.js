@@ -258,7 +258,7 @@ function ProfileBar({ profileToParent, search }) {
         )
     } else{
         return (
-            null
+           null
         )
     }
 }

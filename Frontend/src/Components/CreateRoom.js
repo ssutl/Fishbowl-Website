@@ -44,7 +44,7 @@ function CreateRoom({ createRoomToParent }) {
     const [thoughts, setThoughts] = useState(false)
     const [sixth, setSixth] = useState(false)
 
-    const breakpoint = 768;
+    const breakpoint = 1200;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
@@ -117,67 +117,71 @@ function CreateRoom({ createRoomToParent }) {
 
     }
 
-
-
-    return (
-        <div className="section">
-            <div className="section-holder">
-                <div className="title">
-                    <div className="home">
-                        <Link to="/">
-                            <KeyboardBackspaceIcon id="arrow" style={{ fontSize: 40 }} />
-                        </Link>
-                        {screenWidth < breakpoint ? null : (
+    if(screenWidth >=breakpoint){
+        return (
+            <div className="section">
+                <div className="section-holder">
+                    <div className="title">
+                        <div className="home">
                             <Link to="/">
-                                <h2>Home</h2>
+                                <KeyboardBackspaceIcon id="arrow" style={{ fontSize: 40 }} />
                             </Link>
-                        )}
+                                <Link to="/">
+                                    <h2>Home</h2>
+                                </Link>
+                        </div>
                     </div>
+                    <div className="inputs">
+    
+                        <input type="input" className="input_field" onChange={(event) => setRoomName(event.target.value)} required id="name" placeholder={roomExists ? "Room Already Exists  - ( Max 30 )" : "Room Name - ( Max 30 )"} maxlength="30" autoComplete="off"/>
+                        <div className="text-counter">
+                            {30 - roomName.length}
+                        </div>
+                        <input type="input" className="input_field" autoComplete="off" id="question" placeholder="Room Question" onChange={(event) => setRoomQuestion(event.target.value)} placeholder="Room Question - (Max 150)" maxlength="150" required />
+                        <div className="text-counter">
+                            {150 - roomQuestion.length}
+                        </div>
+                    </div>
+                    <div className="boxes">
+                        <div className="box-holder">
+                            <div className={Math ? "tag selected" : "tag"} onClick={() => setMath(!Math)}>#Math</div>
+                            <div className={English ? "tag selected" : "tag"} onClick={() => setEnglish(!English)}>#English</div>
+                            <div className={Geography ? "tag selected" : "tag"} onClick={() => setGeography(!Geography)}>#Geography</div>
+                            <div className={FM ? "tag selected" : "tag"} onClick={() => setFM(!FM)}>#FM</div>
+                            <div className={CS ? "tag selected" : "tag"} onClick={() => setCS(!CS)}>#CS</div>
+                            <div className={Economics ? "tag selected" : "tag"} onClick={() => setEconomics(!Economics)}>#Economics</div>
+                            <div className={History ? "tag selected" : "tag"} onClick={() => setHistory(!History)}>#History</div>
+                            <div className={Biology ? "tag selected" : "tag"} onClick={() => setBiology(!Biology)}>#Biology</div>
+                            <div className={Psychology ? "tag selected" : "tag"} onClick={() => setPsychology(!Psychology)}>#Psychology</div>
+                            <div className={Physics ? "tag selected" : "tag"} onClick={() => setPhysics(!Physics)}>#Physics</div>
+                            <div className={Politics ? "tag selected" : "tag"} onClick={() => setPolitics(!Politics)}>#Politics</div>
+                            <div className={Music ? "tag selected" : "tag"} onClick={() => setMusic(!Music)}>#Music</div>
+                            <div className={RE ? "tag selected" : "tag"} onClick={() => setRE(!RE)}>#RE</div>
+                            <div className={chatting ? "tag selected" : "tag"} onClick={() => setChatting(!chatting)}>#Chatting</div>
+                            <div className={university ? "tag selected" : "tag"} onClick={() => setUniversity(!university)}>#University</div>
+                            <div className={alevel ? "tag selected" : "tag"} onClick={() => setALevel(!alevel)}>#A-Level</div>
+                            <div className={gcse ? "tag selected" : "tag"} onClick={() => setGCSE(!gcse)}>#GCSE</div>
+                            <div className={football ? "tag selected" : "tag"} onClick={() => setFootball(!football)}>#Football</div>
+                            <div className={thoughts ? "tag selected" : "tag"} onClick={() => setThoughts(!thoughts)}>#Thoughts?</div>
+                            <div className={sixth ? "tag selected" : "tag"} onClick={() => setSixth(!sixth)}>#Sixth_Form</div>
+                        </div>
+                    </div>
+                    <div className="submit">
+                        <div className="BTN" onClick={() => handleSubmit()}>
+                            <h3>Create</h3>
+                        </div>
+                    </div>
+    
                 </div>
-                <div className="inputs">
-
-                    <input type="input" className="input_field" onChange={(event) => setRoomName(event.target.value)} required id="name" placeholder={roomExists ? "Room Already Exists  - ( Max 30 )" : "Room Name - ( Max 30 )"} maxlength="30" autoComplete="off"/>
-                    <div className="text-counter">
-                        {30 - roomName.length}
-                    </div>
-                    <input type="input" className="input_field" autoComplete="off" id="question" placeholder="Room Question" onChange={(event) => setRoomQuestion(event.target.value)} placeholder="Room Question - (Max 150)" maxlength="150" required />
-                    <div className="text-counter">
-                        {150 - roomQuestion.length}
-                    </div>
-                </div>
-                <div className="boxes">
-                    <div className="box-holder">
-                        <div className={Math ? "tag selected" : "tag"} onClick={() => setMath(!Math)}>#Math</div>
-                        <div className={English ? "tag selected" : "tag"} onClick={() => setEnglish(!English)}>#English</div>
-                        <div className={Geography ? "tag selected" : "tag"} onClick={() => setGeography(!Geography)}>#Geography</div>
-                        <div className={FM ? "tag selected" : "tag"} onClick={() => setFM(!FM)}>#FM</div>
-                        <div className={CS ? "tag selected" : "tag"} onClick={() => setCS(!CS)}>#CS</div>
-                        <div className={Economics ? "tag selected" : "tag"} onClick={() => setEconomics(!Economics)}>#Economics</div>
-                        <div className={History ? "tag selected" : "tag"} onClick={() => setHistory(!History)}>#History</div>
-                        <div className={Biology ? "tag selected" : "tag"} onClick={() => setBiology(!Biology)}>#Biology</div>
-                        <div className={Psychology ? "tag selected" : "tag"} onClick={() => setPsychology(!Psychology)}>#Psychology</div>
-                        <div className={Physics ? "tag selected" : "tag"} onClick={() => setPhysics(!Physics)}>#Physics</div>
-                        <div className={Politics ? "tag selected" : "tag"} onClick={() => setPolitics(!Politics)}>#Politics</div>
-                        <div className={Music ? "tag selected" : "tag"} onClick={() => setMusic(!Music)}>#Music</div>
-                        <div className={RE ? "tag selected" : "tag"} onClick={() => setRE(!RE)}>#RE</div>
-                        <div className={chatting ? "tag selected" : "tag"} onClick={() => setChatting(!chatting)}>#Chatting</div>
-                        <div className={university ? "tag selected" : "tag"} onClick={() => setUniversity(!university)}>#University</div>
-                        <div className={alevel ? "tag selected" : "tag"} onClick={() => setALevel(!alevel)}>#A-Level</div>
-                        <div className={gcse ? "tag selected" : "tag"} onClick={() => setGCSE(!gcse)}>#GCSE</div>
-                        <div className={football ? "tag selected" : "tag"} onClick={() => setFootball(!football)}>#Football</div>
-                        <div className={thoughts ? "tag selected" : "tag"} onClick={() => setThoughts(!thoughts)}>#Thoughts?</div>
-                        <div className={sixth ? "tag selected" : "tag"} onClick={() => setSixth(!sixth)}>#Sixth_Form</div>
-                    </div>
-                </div>
-                <div className="submit">
-                    <div className="BTN" onClick={() => handleSubmit()}>
-                        <h3>Create</h3>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    )
+        )
+    }else{
+        return(
+            null
+        )
+    }
+
+    
 }
 
 export default CreateRoom
