@@ -97,7 +97,7 @@ function Login() {
                         <div className="login-holder">
                             <div className="upper">
                                 <p className="title" id="welcomeback">Welcome</p>
-                                <p id="logintoyouraccount">Login In To Your Account</p>
+                                <p id="logintoyouraccount">Log Into Your Account</p>
                             </div>
                             <div className="lower">
                                 <GoogleLogin
