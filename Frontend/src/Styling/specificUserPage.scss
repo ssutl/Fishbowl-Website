@@ -24,6 +24,14 @@
         height: 20%;
         width: 100%;
         background-color: $highlight;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          color: white;
+          font-size: 65px;
+        }
         // margin-bottom: auto;
       }
 
@@ -596,12 +604,12 @@
       }
 
       .imageHolder {
-        height: 160px;
-        width: 160px;
+        height: 155px;
+        width: 155px;
         border-radius: 100%;
         background-color: pink;
         position: absolute;
-        top: 175px;
+        top: 180px;
         right: 32%;
         overflow: hidden;
         border: 3px solid white;
