@@ -335,9 +335,9 @@ function ChatRoom() {
                                     <div className="text-counter">
                                         {30 - editedName.length}
                                     </div>
-                                    <input type="input" className="input_field" autoComplete="off" id="Q" placeholder={`Q: "${room.Question}" - (Max 150)`} onChange={(event) => setEditedQuestion(event.target.value)} required />
+                                    <input type="input" className="input_field" autoComplete="off" id="Q" placeholder={`Q: "${room.Question}" - (Max 250)`} maxLength="250" onChange={(event) => setEditedQuestion(event.target.value)} required />
                                     <div className="text-counter">
-                                        {150 - editedQuestion.length}
+                                        {250 - editedQuestion.length}
                                     </div>
                                     <div className="secondBTN" onClick={updateQuestion}><PublishIcon /></div>
 

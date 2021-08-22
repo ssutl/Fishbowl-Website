@@ -189,11 +189,11 @@
     height: 66vh;
   }
   .chat-room-section .chat-room-holder .scrollable .question {
-    padding: 15px 0px 15px 0px;
+    padding: 20px 0px 20px 0px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    height: 12vh;
+    min-height: 12vh;
     width: 100%;
     border-bottom: 1px solid white;
     border-top: 1px solid rgba(255, 255, 255, 0.295);
@@ -207,6 +207,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    word-wrap: break-word;
   }
   .chat-room-section .chat-room-holder .scrollable .question p {
     color: white;
@@ -775,11 +776,11 @@
     max-height: 70vh;
   }
   .chat-room-section .chat-room-holder .scrollable .question {
-    padding: 15px 0px 15px 0px;
+    padding: 25px 0px 25px 0px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    height: 12vh;
+    min-height: 12vh;
     width: 100%;
     border-bottom: 1px solid white;
     border-top: 1px solid rgba(255, 255, 255, 0.295);
@@ -1361,11 +1362,11 @@
     max-height: 70vh;
   }
   .chat-room-section .chat-room-holder .scrollable .question {
-    padding: 15px 0px 15px 0px;
+    padding: 25px 0px 25px 0px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    height: 12vh;
+    min-height: 12vh;
     width: 100%;
     border-bottom: 1px solid white;
     border-top: 1px solid rgba(255, 255, 255, 0.295);

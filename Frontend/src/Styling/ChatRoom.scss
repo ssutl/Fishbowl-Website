@@ -155,9 +155,9 @@
         height: 66vh;
 
         .question {
-          padding: 15px 0px 15px 0px;
+          padding: 20px 0px 20px 0px;
           height: fit-content;
-          height: 12vh;
+          min-height: 12vh;
           width: 100%;
           // background-color: yellow;
           border-bottom: 1px solid white;
@@ -165,6 +165,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
+          word-wrap: break-word;
 
           p {
             color: white;
@@ -659,9 +660,9 @@
         max-height: 70vh;
 
         .question {
-          padding: 15px 0px 15px 0px;
+          padding: 25px 0px 25px 0px;
           height: fit-content;
-          height: 12vh;
+          min-height: 12vh;
           width: 100%;
           // background-color: yellow;
           border-bottom: 1px solid white;
@@ -1164,9 +1165,9 @@
         max-height: 70vh;
 
         .question {
-          padding: 15px 0px 15px 0px;
+          padding: 25px 0px 25px 0px;
           height: fit-content;
-          height: 12vh;
+          min-height: 12vh;
           width: 100%;
           // background-color: yellow;
           border-bottom: 1px solid white;
