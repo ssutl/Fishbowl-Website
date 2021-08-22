@@ -37,7 +37,7 @@
             cursor: pointer;
           }
 
-          .active {
+          .NotActive {
             opacity: 0.6;
           }
 
@@ -392,7 +392,7 @@
             cursor: pointer;
           }
 
-          .active {
+          .NotActive {
             opacity: 0.6;
           }
 
@@ -601,7 +601,7 @@
             margin-top: 30px;
             height: fit-content;
             width: 100%;
-            background-color: $secondary-background;
+            background-color: #68c5db;
             word-break: break-all;
             border-radius: 5px;
             padding: 15px 0px 10px 0px;
@@ -748,7 +748,7 @@
             cursor: pointer;
           }
 
-          .active {
+          .NotActive {
             opacity: 0.6;
           }
 
@@ -951,7 +951,7 @@
             margin-top: 30px;
             height: fit-content;
             width: 100%;
-            background-color: $secondary-background;
+            background-color: #68c5db;
             word-break: break-all;
             border-radius: 5px;
             padding: 15px 0px 10px 0px;
