@@ -286,7 +286,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                             );
                         }).map((room, index) => {
                             return (
-                                <Link to={{ pathname: `/Chat/${room.Title}`, state: { room } }} className="link" key={index}>
+                                <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link" key={index}>
                                     <div className="room-holder-friend" key={index}>
                                         <div className="top-section">
                                             <p id="Title">{room.Title}</p>

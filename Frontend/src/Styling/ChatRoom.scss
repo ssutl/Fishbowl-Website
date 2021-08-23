@@ -298,6 +298,8 @@
               height: 100%;
               align-items: center;
               img {
+                cursor: pointer;
+
                 height: 55px;
                 width: 55px;
                 border-radius: 100%;
@@ -306,6 +308,8 @@
               }
 
               h2 {
+                cursor: pointer;
+
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 21px;
                 margin-bottom: 15px;
@@ -795,13 +799,15 @@
             display: flex;
             align-items: center;
 
-            a {
+            .userToClick {
               // background-color: yellow;
               text-decoration: none;
               display: flex;
               height: 100%;
               align-items: center;
               img {
+                cursor: pointer;
+
                 height: 55px;
                 width: 55px;
                 border-radius: 100%;
@@ -810,6 +816,8 @@
               }
 
               h2 {
+                cursor: pointer;
+
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 21px;
                 margin-bottom: 15px;
@@ -1300,13 +1308,14 @@
             display: flex;
             align-items: center;
 
-            a {
+            .userToClick {
               // background-color: yellow;
               text-decoration: none;
               display: flex;
               height: 100%;
               align-items: center;
               img {
+                cursor: pointer;
                 height: 55px;
                 width: 55px;
                 border-radius: 100%;
@@ -1315,6 +1324,7 @@
               }
 
               h2 {
+                cursor: pointer;
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 21px;
                 margin-bottom: 15px;
