@@ -71,7 +71,6 @@ function ChatRoom() {
                     setRoom(res.data[0]);
                     setAnswered(res.data[0].Answered)
                     setRoomSavedMsgs(res.data[0].Messages);
-
                 }
 
             })
@@ -92,7 +91,7 @@ function ChatRoom() {
     
 
     const handleSendMessage = (props) => {
-        console.log('props: ', Array.isArray(props));
+        // console.log('props: ', Array.isArray(props));
 
         if(Array.isArray(props)){
             if(props[0] === "delete"){
@@ -174,9 +173,23 @@ function ChatRoom() {
         })
     }
 
-    if(messages === "refresh"){
-        refreshChatRoom()
-    }
+    useEffect(()=>{
+        let isMounted = true;
+        if(messages === "refresh" && isMounted){
+            refreshChatRoom()
+
+        }
+
+        return () => { isMounted = false };
+    },[messages])
+
+    /**
+     * ========================================================
+     * If site crashes try removing useEffect above
+     * ========================================================
+     */
+
+    
 
     const userPage = () => {
         axios({
@@ -206,6 +219,7 @@ function ChatRoom() {
   `;
 
     useEffect(() => {
+        let isMounted = true;
         axios({
             method: 'PUT',
             url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
@@ -217,6 +231,7 @@ function ChatRoom() {
             console.log("error:", error)
         })
 
+        return () => { isMounted = false };
     }, [answered])
 
     const redirectToUser = (props) => {
