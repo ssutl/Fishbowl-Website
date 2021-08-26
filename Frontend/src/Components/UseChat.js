@@ -15,39 +15,44 @@ const useChat = (roomId) => {
 
   useEffect(() => {
 
+    let isMounted = true;
 
+    if(isMounted){
+      socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
+        query: { roomId },
+      });
+  
+      // Listens for incoming messages
+      socketRef.current.on(NEW_CHAT_MESSAGE_EVENT, (message) => {
+        const incomingMessage = {
+          ...message,
+          ownedByCurrentUser: message.senderId === socketRef.current.id,
+        };
+  
+        // console.log(incomingMessage)
+  
+        if(incomingMessage.text[0] === "delete"){
+          setMessages(messages.filter(item => item !== incomingMessage.text[1]))
+        }else if(incomingMessage.text === "clear"){
+          setMessages("refresh");
+          setMessages([])
+        }else if(incomingMessage.text[0] === "helped"){
+          setMessages("refresh");
+          setMessages([])
+        }
+        else{
+          setMessages((messages) => [...messages, incomingMessage]);
+        }
+      });
+    }
     // Creates a WebSocket connection
-    socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
-      query: { roomId },
-    });
-
-    // Listens for incoming messages
-    socketRef.current.on(NEW_CHAT_MESSAGE_EVENT, (message) => {
-      const incomingMessage = {
-        ...message,
-        ownedByCurrentUser: message.senderId === socketRef.current.id,
-      };
-
-      console.log(incomingMessage)
-
-      if(incomingMessage.text[0] === "delete"){
-        setMessages(messages.filter(item => item !== incomingMessage.text[1]))
-      }else if(incomingMessage.text === "clear"){
-        setMessages("refresh");
-        setMessages([])
-      }else if(incomingMessage.text[0] === "helped"){
-        setMessages("refresh");
-        setMessages([])
-      }
-      else{
-        setMessages((messages) => [...messages, incomingMessage]);
-      }
-    });
+    
 
     // Destroys the socket reference
     // when the connection is closed
     return () => {
       socketRef.current.disconnect();
+      isMounted = false
     };
   }, [roomId]);
 

@@ -22,7 +22,13 @@ function SpecificUserPage({ specificUserToParent }) {
 
 
     useEffect(() => {
-        specificUserToParent(following)
+        let isMounted = true;
+
+        if(isMounted){
+            specificUserToParent(following)
+        }
+
+        return () => { isMounted = false };
     }, [following])
 
 

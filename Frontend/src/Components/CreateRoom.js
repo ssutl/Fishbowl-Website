@@ -13,7 +13,11 @@ function CreateRoom({ createRoomToParent }) {
 
 
     useEffect(() => {
-        createRoomToParent(createFlag)
+        let isMounted = true;
+        if(isMounted){
+            createRoomToParent(createFlag)
+        }
+        return () => { isMounted = false };
     }, [createFlag])
 
     const history = useHistory();

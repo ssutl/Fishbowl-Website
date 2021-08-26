@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import App from '../App'
 import { GoogleLogin } from 'react-google-login';
 import '../Styling/Login.css'
@@ -11,7 +11,7 @@ function Login() {
     ============================
     */
     const [username, setUserName] = useState("")
-    const [userClicked, setUserClicked] = useState()
+    const [userLogged, setUserLogged] = useState()
     const [image, setImage] = useState("")
     const [email, setEmail] = useState("")
     const [logged, setLogged] = useState()
@@ -34,43 +34,48 @@ function Login() {
         setEmail(response.profileObj.email)
         setImage(response.profileObj.imageUrl)
         setToken(response.tokenId)
-        setUserClicked(true)
-
+        setUserLogged(true)
     }
 
-    if (userClicked) {
-        localStorage.setItem('session-token', token)
+    
+    useEffect(()=>{
 
-        axios({ //Retrieving the user table to get the id of the current user
-            method: "GET",
-            url: "https://fishbowl-heroku.herokuapp.com/users/get",
-            headers: { "x-auth-token": `${token}` }
-        }).then((response) => {
-            response.data.forEach((student) => {
-                if (student.username === username) {
-                    setUserId(student._id)
-                }
+        let isMounted = true;
+
+        if (userLogged && isMounted) {
+            localStorage.setItem('session-token', token)
+    
+            axios({ //Retrieving the user table to get the id of the current user
+                method: "GET",
+                url: "https://fishbowl-heroku.herokuapp.com/users/get",
+                headers: { "x-auth-token": `${token}` }
+            }).then((response) => {
+                response.data.forEach((student) => {
+                    if (student.username === username) {
+                        setUserId(student._id)
+                    }
+                })
             })
-        })
+    
+            axios({ //Creating users account & if user already has account it wont be created again
+                method: "POST",
+                url: "https://fishbowl-heroku.herokuapp.com/users/new",
+                headers: { "x-auth-token": `${token}` },
+                data: { username, email, image, status }
+            }).then(() => {
+                setLogged(true)
+                // setUserLogged(false)
+            })
+    
+    
+        }
 
-        axios({ //Creating users account & if user already has account it wont be created again
-            method: "POST",
-            url: "https://fishbowl-heroku.herokuapp.com/users/new",
-            headers: { "x-auth-token": `${token}` },
-            data: { username, email, image, status }
-        }).then(() => {
-            setLogged(true)
-            // setUserClicked(false)
-        })
+        return () => { isMounted = false };
 
 
-    }
+    },[userLogged])
+    
 
-
-
-    const responseErrorGoogle = (response) => {
-
-    }
 
 
     if(screenWidth >= breakpoint){
@@ -116,7 +121,7 @@ function Login() {
                                     //     }}>Login With Google</button>
                                     //   )}
                                     onSuccess={responseSuccessGoogle}
-                                    onFailure={responseErrorGoogle}
+                                    // onFailure={}
                                     cookiePolicy={'single_host_origin'}
                                     isSignedIn={true}
                                 >Login With Google</GoogleLogin>

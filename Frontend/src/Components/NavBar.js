@@ -33,22 +33,34 @@ function NavBar({ profileData, followReq }) {
 
 
     useEffect(() => {
+        let isMounted = true;
         setLoading(true)
         getFollowing()
 
-        setInterval(() => {
-            getFollowing()
-        }, 6000)
+        if(isMounted){
+            setInterval(() => {
+                getFollowing()
+            }, 6000)
+        }
+
+        return () => { isMounted = false };
     }, [profileData, followReq])
 
-    if (loading === false) {
-        users.map((user) => {
-            if (following.includes(user.username)) {
-                list.push(user)
-            }
-        })
+    useEffect(()=>{
+        let isMounted = true;
 
-    }
+        if (loading === false && isMounted) {
+            users.map((user) => {
+                if (following.includes(user.username)) {
+                    list.push(user)
+                }
+            })
+        }
+
+        return () => { isMounted = false };
+    },[loading])
+
+    
 
     const getFollowing = () => {
         axios({ //Getting all users on the site

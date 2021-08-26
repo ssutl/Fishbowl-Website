@@ -15,7 +15,13 @@ function ProfileBar({ profileToParent, search }) {
 
 
     useEffect(() => {
-        profileToParent(flag)
+        let isMounted = true;
+
+        if(isMounted){
+            profileToParent(flag)
+        }
+
+        return () => { isMounted = false };
     }, [flag])
 
     let profileSearch = search
@@ -51,7 +57,13 @@ function ProfileBar({ profileToParent, search }) {
 
 
     useEffect(() => { //Setting searching state whenever search value is larger than 0
-        setSearching(profileSearch.length > 0)
+        let isMounted = true;
+
+        if(isMounted){
+            setSearching(profileSearch.length > 0)
+        }
+
+        return () => { isMounted = false };
     }, [profileSearch])
 
     const updateStatus = (recievedStatus) => {

@@ -24,8 +24,13 @@ function Middle({ childToParent, dashboard }) {
     window.addEventListener("resize", resize);
 
     useEffect(() => {
-        const data = { search, followReq }
-        childToParent(data)
+        let isMounted = true;
+        if(isMounted){
+            const data = { search, followReq }
+            childToParent(data)
+        }
+
+        return () => { isMounted = false };
     }, [search, followReq])
 
     const specificUserToParent = (specificUser) => {
