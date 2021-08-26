@@ -33,32 +33,30 @@ function NavBar({ profileData, followReq }) {
 
 
     useEffect(() => {
-        let isMounted = true;
         setLoading(true)
+        let isMounted = true;
         getFollowing()
 
-        if(isMounted){
-            setInterval(() => {
+        if(isMounted){  
+            const interval = setInterval(() => {
                 getFollowing()
             }, 6000)
+            return () => clearInterval(interval);
         }
 
         return () => { isMounted = false };
+
+
     }, [profileData, followReq])
 
-    useEffect(()=>{
-        let isMounted = true;
-
-        if (loading === false && isMounted) {
+    if (loading === false) {
             users.map((user) => {
                 if (following.includes(user.username)) {
                     list.push(user)
                 }
             })
-        }
+    }
 
-        return () => { isMounted = false };
-    },[loading])
 
     
 

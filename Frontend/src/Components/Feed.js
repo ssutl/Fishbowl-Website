@@ -82,20 +82,15 @@ function Feed({ input, followR, dashboard, roomCreated }) {
         return () => { isMounted = false };
     }, [followR, dashboard, roomCreated]) //This gets called whenever these states change
 
-    useEffect(()=>{
-        let isMounted = true;
-        if (loading === false && isMounted) { //Setting friends rooms
+
+    if (loading === false) { //Setting friends rooms
             allRooms.map((room) => {
                 if (following.includes(room.CreatedByName)) {
-                    friends_rooms.push(room)
+                        friends_rooms.push(room)
                 }
             })
         }
-
-        return () => { isMounted = false };
-
-    },[loading])
-
+    
     
 
     /**

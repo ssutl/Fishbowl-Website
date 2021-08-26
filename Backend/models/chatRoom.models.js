@@ -6,7 +6,7 @@ const Schema = mongoose.Schema
 const chatSchema = new Schema({ //Creating model
     CreatedByName:{type:String},
     CreationDate:{ type: Date, default: Date.now },
-    Tags: {type:Object},
+    Tags: {type:Array},
     Deleted: {type:Boolean},
     Title: {type:String},
     Question:{type:String},

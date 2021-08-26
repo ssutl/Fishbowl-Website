@@ -57,35 +57,41 @@ function CreateRoom({ createRoomToParent }) {
 
     window.addEventListener("resize", resize);
 
+    
+
 
     const handleSubmit = () => {
 
         if (roomName.trim().length) {
 
+            let tags = {
+                Math: Math,
+                English: English,
+                Geography: Geography,
+                FM: FM,
+                CS: CS,
+                Economics: Economics,
+                History: History,
+                Biology: Biology,
+                Psychology: Psychology,
+                Physics: Physics,
+                Politics: Politics,
+                Music: Music,
+                RE: RE,
+                Chatting:chatting,
+                University: university,
+                "A-Level": alevel,
+                GCSE: gcse,
+                Football: football,
+                "Thoughts?": thoughts,
+                "Sixth Form": sixth
+            }
+
+            let chosenArray = Object.keys(tags).filter((e)=>tags[e])
+
             const data = {
                 CreatedByName: info.name,
-                Tags: {
-                    Math: Math,
-                    English: English,
-                    Geography: Geography,
-                    FM: FM,
-                    CS: CS,
-                    Economics: Economics,
-                    History: History,
-                    Biology: Biology,
-                    Psychology: Psychology,
-                    Physics: Physics,
-                    Politics: Politics,
-                    Music: Music,
-                    RE: RE,
-                    Chatting:chatting,
-                    University: university,
-                    "A-Level": alevel,
-                    GCSE: gcse,
-                    Football: football,
-                    "Thoughts?": thoughts,
-                    "Sixth Form": sixth
-                },
+                tags: chosenArray,
                 Deleted: false,
                 Title: roomName,
                 Question: roomQuestion,
