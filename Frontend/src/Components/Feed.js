@@ -8,7 +8,7 @@ import axios from 'axios';
 import BarLoader from "react-spinners/BarLoader";
 import { css } from "@emotion/react";
 
-function Feed({ input, followR, dashboard, roomCreated }) {
+function Feed({ input, followR, dashboard}) {
 
 
 
@@ -25,21 +25,12 @@ function Feed({ input, followR, dashboard, roomCreated }) {
     const [cycledFinished, setCycledFinished] = useState(false)
     const [newFriendRooms, setNewFriendRooms] = useState(false)
     let friends_rooms = [] //Array for friends rooms
-
-
-    /**
-     * Screen Resizing
-     */
-
     const resize = () => {
         setScreenWidth(window.innerWidth);
     };
-
     window.addEventListener("resize", resize);
 
-    /**
-     * Screen Resizing
-     */
+
 
 
 
@@ -80,7 +71,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
         })
 
         return () => { isMounted = false };
-    }, [followR, dashboard, roomCreated]) //This gets called whenever these states change
+    }, [followR, dashboard]) //This gets called whenever these states change
 
 
     if (loading === false) { //Setting friends rooms
@@ -99,52 +90,24 @@ function Feed({ input, followR, dashboard, roomCreated }) {
      * ===========================================================
      */
 
+    
+
+    
+
+    
+
     /**
      * ===========================================
      * Setting an interval to check for new rooms
      * ===========================================
      */
 
-    
-
-    const checkRooms = () =>{
-        axios({
-            method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get`,
-            headers: { "x-auth-token": `${token}` }
-        }).then((res) => {
-            
-            if(res.data.length > allRooms.length){
-                if(allRooms.length < 5){
-                    updateCurrentRooms()
-                }else{
-                    setNewRoomAvailable(true)
-
-                    // const list = res.data.filter((newRoom)=>{
-                    //     return following.includes(newRoom.CreatedByName)
-                    // })
-
-                    // if(list.length > friends_rooms.length){
-                    //     setNewFriendRooms(true)
-                    // }else{
-                    //     setNewFriendRooms(false)
-                    // }
-
-                }
-
-            }else{
-            }  
-        }).catch((err)=>{
-            console.log('err: ', err);
-        })
-    }
-
     useEffect(()=>{
         let isMounted = true;
 
-        setCycledFinished(false)
+        setCycledFinished(false) 
 
-        if(newRoomsAvailable === false){
+        if(newRoomsAvailable === false){ //If no new rooms set a repeating interval to check for new rooms
             if(isMounted){
                 const interval = setInterval(()=>{
                     checkRooms()
@@ -156,13 +119,31 @@ function Feed({ input, followR, dashboard, roomCreated }) {
         return () => { isMounted = false };
     },[cycledFinished])
 
-    const updateCurrentRooms = () =>{
+    const checkRooms = () =>{ //Getting rooms and checking if there are any more than whats already displayed
         axios({
             method: 'GET',
             url: `https://fishbowl-heroku.herokuapp.com/chat/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
-            
+            if(res.data.length > allRooms.length){ //If recieved rooms array is larger than whats displayed give option to update
+                if(allRooms.length < 5){ //If there is less than 5 automatically update
+                    updateCurrentRooms()
+                }else{
+                    setNewRoomAvailable(true) //else provide an option to update
+                }
+            }
+        }).catch((err)=>{
+            console.log('err: ', err);
+        })
+    }
+
+
+    const updateCurrentRooms = () =>{ //Updating ooms
+        axios({
+            method: 'GET',
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((res) => {
             setAllRooms(res.data.reverse()) //Reversing order of rooms before we set variable, so that newest is at the top
             setNewRoomAvailable(false)
             // setNewFriendRooms(false)
@@ -172,11 +153,15 @@ function Feed({ input, followR, dashboard, roomCreated }) {
         })
     }
 
+    
     /**
      * ===========================================
      * Setting an interval to check for new rooms
      * ===========================================
      */
+
+    
+
 
 
 

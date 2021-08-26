@@ -23,7 +23,7 @@ function Middle({ childToParent, dashboard }) {
 
     window.addEventListener("resize", resize);
 
-    useEffect(() => {
+    useEffect(() => { //Passing whenever a search or follow request is made to App.js for the navbar and search bar
         let isMounted = true;
         if(isMounted){
             const data = { search, followReq }
@@ -34,13 +34,11 @@ function Middle({ childToParent, dashboard }) {
     }, [search, followReq])
 
     const specificUserToParent = (specificUser) => {
-        setFollowReq(specificUser)
+        setFollowReq(specificUser) //Recieving follow req from specific user page and passing it to App.js
     }
 
 
-    const createRoomToParent = (createRoom) => {
-        setRoomCreated(createRoom)
-    }
+    
 
     if(screenWidth >= breakpoint){
         return (
@@ -53,16 +51,14 @@ function Middle({ childToParent, dashboard }) {
                     </div>
                 </div>
                 <Switch>
-    
-                    {/* <Route exact path="/" component={withRouter(Feed)} value={search}/> */}
                     <Route exact path="/" render={(props) => (
-                        <Feed input={search} followR={followReq} dashboard={dashboard} roomCreated={roomCreated} />
+                        <Feed input={search} followR={followReq} dashboard={dashboard} />
                     )} />
                     <Route exact path="/People/:name" render={() => (
                         <SpecificUserPage specificUserToParent={specificUserToParent} />
                     )} />
                     <Route exact path="/Create/:name" render={() => (
-                        <CreateRoom createRoomToParent={createRoomToParent} />
+                        <CreateRoom/>
                     )} />
                     <Route exact path="/Chat/:roomId" component={withRouter(ChatRoom)} />
                 </Switch>

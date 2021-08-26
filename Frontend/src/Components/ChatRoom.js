@@ -48,18 +48,31 @@ function ChatRoom() {
 
     window.addEventListener("resize", resize);
 
-    //Socketss
-    const { roomId } = current_page_id;
-    const { messages, sendMessage } = useChat(roomId);
+    /**
+     * =======
+     * Sockets 
+     * =======
+     */
+    const { roomId } = current_page_id; //Current page id will always be unique and the socket id will match that
+    const { messages, sendMessage } = useChat(roomId); //Passing in the room ID into my useChat function which is within another component
+    const [newMessage, setNewMessage] = useState() //This stores a message that has currently been typed by a user and submitted
+    const [roomSavedMsgs, setRoomSavedMsgs] = useState() //State to store non-live messages from database
+    /**
+     * =======
+     * Sockets 
+     * =======
+     */
 
 
-    const [newMessage, setNewMessage] = useState()
-
-    const [roomSavedMsgs, setRoomSavedMsgs] = useState()
 
 
-        //Initial Room Data Grab
-        useEffect(() => {
+
+    /**
+     * =================================================================
+     * Getting room data, Room Answered Status and Room Saved Messages
+     * =================================================================
+     */
+    useEffect(() => {
             let isMounted = true;
 
             axios({
@@ -72,14 +85,18 @@ function ChatRoom() {
                     setAnswered(res.data[0].Answered)
                     setRoomSavedMsgs(res.data[0].Messages);
                 }
-
             })
-
             return () => { isMounted = false };
-    
-        }, [current_page_id])
+    }, [current_page_id])
+    /**
+     * =================================================================
+     * Getting room data, Room Answered Status and Room Saved Messages
+     * =================================================================
+     */
 
-    const refreshComments = () =>{
+
+
+    const refreshComments = () =>{ //This updates the stored messages for when user goes into editing mode, does not update live feed
         axios({
             method: 'GET',
             url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page_id}`,
@@ -90,25 +107,20 @@ function ChatRoom() {
     }
     
 
-    const handleSendMessage = (props) => {
-        // console.log('props: ', Array.isArray(props));
+    const handleSendMessage = (props) => { //Function checks what user says
 
-        if(Array.isArray(props)){
+        if(Array.isArray(props)){ //If the message is either delete or helped then they have a seperate meaning
             if(props[0] === "delete"){
                 sendMessage(props)
             }else if(props[0] === "clear" || props[0] == "helped"){
-                // console.log("set to clear")
                 sendMessage("clear")
             }
         }else{
-            if (newMessage.length !== 0) {
-                sendMessage(newMessage);
-                setNewMessage("");
-    
-    
-                
-    
-                const data = {
+            if (newMessage.length !== 0) { //Validating that new message is not empty
+                sendMessage(newMessage); //Passing message into seperate function from other component
+                setNewMessage(""); //Clearing new message because it has already been sent
+
+                const data = { //Creating an object for the current message sent
                     text: newMessage,
                     sentBy: info.name,
                     sentByImage: info.image,
@@ -118,7 +130,7 @@ function ChatRoom() {
                     helped: false
                 }
     
-                axios({
+                axios({ //Uploading the message to the current rooms message array
                     method: `PUT`,
                     url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
                     headers: { "x-auth-token": `${token}` },
@@ -128,7 +140,7 @@ function ChatRoom() {
                 }).catch((error) => {
                     console.log("error", error)
                 })
-                document.querySelector('.input').value = ''
+                document.querySelector('.input').value = '' //Clearing the input field
             } else {
                 setEmpty(true)
             }
@@ -137,7 +149,11 @@ function ChatRoom() {
     }
 
     
-
+    /**
+     * ========================
+     * Edit Room Name or Title
+     * ========================
+     */
 
 
     const updateQuestion = () => {
@@ -147,7 +163,29 @@ function ChatRoom() {
                 method: `PUT`,
                 url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
-                data: { Question: editedQuestion, Title: editedName }
+                data: {Question: editedQuestion, Title: editedName }
+            }).then((res) => {
+                refreshChatRoom()
+            }).catch((error) => {
+                console.log("error", error)
+            })
+        }else if(editedName.length > 0 && !editedQuestion.length > 0){
+            axios({
+                method: `PUT`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
+                headers: { "x-auth-token": `${token}` },
+                data: {Title: editedName }
+            }).then((res) => {
+                refreshChatRoom()
+            }).catch((error) => {
+                console.log("error", error)
+            })
+        }else if(!editedName.length > 0 && editedQuestion.length > 0){
+            axios({
+                method: `PUT`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
+                headers: { "x-auth-token": `${token}` },
+                data: {Question: editedQuestion}
             }).then((res) => {
                 refreshChatRoom()
             }).catch((error) => {
@@ -156,47 +194,47 @@ function ChatRoom() {
         }
     }
 
+    /**
+     * ========================
+     * Edit Room Name or Title
+     * ========================
+     */
+
     
 
 
-    const refreshChatRoom = () =>{
+    const refreshChatRoom = () =>{ //Refresh entire room and display saved messages
         axios({
             method: 'GET',
             url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page_id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
-
                 setRoom(res.data[0]);
                 setAnswered(res.data[0].Answered)
                 setRoomSavedMsgs(res.data[0].Messages);
-
         })
     }
 
-    useEffect(()=>{
+    useEffect(()=>{ //Checking whether a client on the server sends a message which says refresh
         let isMounted = true;
         if(messages === "refresh" && isMounted){
             refreshChatRoom()
-
         }
-
         return () => { isMounted = false };
     },[messages])
 
+   
     /**
-     * ========================================================
-     * If site crashes try removing useEffect above
-     * ========================================================
+     * ======================================
+     * Redirect to the user who created page
+     * ======================================
      */
-
-    
-
     const userPage = () => {
         axios({
             method: "GET",
             url: `https://fishbowl-heroku.herokuapp.com/users/get/${room.CreatedByName}`,
             headers: { "x-auth-token": `${token}` }
-        }).then((response) => {
+        }).then((response) => { //Have to retrieve the data of the user clicked
             history.push({
                 pathname: `/People/${room.CreatedByName}`,
                 state: { user: response.data[0] }
@@ -204,8 +242,13 @@ function ChatRoom() {
         }).catch((error) => {
             console.log("error:", error)
         })
-
     }
+
+    /**
+     * =======================================
+     * RRedirect to the user who created page
+     * =======================================
+     */
 
 
 
@@ -217,6 +260,12 @@ function ChatRoom() {
     top: 50%;
     left:45%;
   `;
+
+  /**
+   * ===================================================
+   * Setting the room to answered whenever owner changes
+   * ===================================================
+   */
 
     useEffect(() => {
         let isMounted = true;
@@ -234,8 +283,20 @@ function ChatRoom() {
         return () => { isMounted = false };
     }, [answered])
 
-    const redirectToUser = (props) => {
+    /**
+   * ===================================================
+   * Setting the room to answered whenever owner changes
+   * ===================================================
+   */
 
+
+    /**
+     * ========================================
+     * Redirect to user through comment section
+     * ========================================
+     */
+
+    const redirectToUser = (props) => {
         axios({
             method: "GET",
             url: `https://fishbowl-heroku.herokuapp.com/users/get/${props}`,
@@ -248,13 +309,17 @@ function ChatRoom() {
         }).catch((error) => {
             console.log("error:", error)
         })
-
-
     }
 
-    const input = document.querySelector('.input')
+    /**
+     * ========================================
+     * Redirect to user through comment section
+     * ========================================
+     */
 
-    const deleteComment = (id) =>{
+
+
+    const deleteComment = (id) =>{ //Delete the comment whenever clicked
         axios({
             method: 'PUT',
             url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
@@ -268,7 +333,7 @@ function ChatRoom() {
 
     }
 
-    const markComment = (props) =>{
+    const markComment = (props) =>{ //Marked the comment as helped
         axios({
             method: 'PUT',
             url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,

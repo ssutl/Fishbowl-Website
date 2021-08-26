@@ -88,8 +88,10 @@ function auth(req, res, next) {
 
         var payload = JSON.parse(Buffer.from(payloadSeg, 'base64'));
         console.log('payload: ', payload);
+        console.log('payload iss: ', payload.iss);
 
-        if (payload.iss === 'accounts.google.com' || payload.aud === '39358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com') {
+        if (payload.iss === 'accounts.google.com' || payload.aud === '39358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com' || '939358098643-d75dllgksvgu2bvlovnij8tk6e9e0emj.apps.googleusercontent.com' || 
+        `939358098643-0dl6npufal6oarnupl0ugjakeftrk205.apps.googleusercontent.com`) {
             console.log('auth valid')
             next()
         } else {

@@ -14,7 +14,7 @@ function ProfileBar({ profileToParent, search }) {
     const [flag, setFlag] = useState(false) //Whenever user follows another user flag is set and state is passed to navbar so it knows when to refresh data
 
 
-    useEffect(() => {
+    useEffect(() => { //Passing Flag to parent to indicate when a user follows or unfollows a user
         let isMounted = true;
 
         if(isMounted){
@@ -22,11 +22,11 @@ function ProfileBar({ profileToParent, search }) {
         }
 
         return () => { isMounted = false };
-    }, [flag])
+    }, [flag]) //Runs whenever flag is altered
 
     let profileSearch = search
-    let current_page = useLocation().pathname.split("/").pop();
-    let current = useLocation().pathname.split("/").slice(-2)[0];
+    let current_page = useLocation().pathname.split("/").pop(); //Collecting current page
+    let current = useLocation().pathname.split("/").slice(-2)[0]; //Collecting current page
 
     const info = useContext(UserContext)
 
@@ -34,8 +34,8 @@ function ProfileBar({ profileToParent, search }) {
     const token = localStorage.getItem('session-token')
     const [searching, setSearching] = useState(false)
     const chatroom = current === "Chat";
-    const dashboard = current_page === "" && !searching;
-    const userSearch = current_page === "" && searching
+    const dashboard = current_page === "" && !searching; //Dashboard display is true if user is not searching and on home page
+    const userSearch = current_page === "" && searching //Search display is true if user is on home page and searching
     const [users, setUsers] = useState('')
     const [following, setFollowing] = useState()
     const [status, setStatus] = useState('')
@@ -54,17 +54,31 @@ function ProfileBar({ profileToParent, search }) {
 
 
 
+    /**
+     * ==============================================
+     * Setting searching to tru whenever user types
+     * ============================================
+     */
 
-
-    useEffect(() => { //Setting searching state whenever search value is larger than 0
+    useEffect(() => {
         let isMounted = true;
-
         if(isMounted){
             setSearching(profileSearch.length > 0)
         }
-
         return () => { isMounted = false };
     }, [profileSearch])
+
+    /**
+     * ==============================================
+     * Setting searching to tru whenever user types
+     * ============================================
+     */
+
+
+
+
+
+    /**Changing the users status */
 
     const updateStatus = (recievedStatus) => {
         axios({
@@ -78,6 +92,8 @@ function ProfileBar({ profileToParent, search }) {
             console.log('error: ', error);
         })
     }
+
+    /**Changing the users status */
 
 
 
@@ -93,7 +109,7 @@ function ProfileBar({ profileToParent, search }) {
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             if(isMounted){
-                setUsers(response.data)
+                setUsers(response.data) //Storung array in state
             }
         }).catch((error) => {
             console.log('error: ', error);
@@ -106,18 +122,46 @@ function ProfileBar({ profileToParent, search }) {
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             if(isMounted){
-                setFollowing(response.data[0].following)
-                setStatus(response.data[0].status)
+                setFollowing(response.data[0].following) //Storing list of the users the current follows
+                setStatus(response.data[0].status) //Recieving their status information
             }
         }).catch((error) => {
             console.log('error: ', error);
-
         })
+    }, [current_page]) //Only calls on page load
 
 
-    }, [current_page])
+    const requests = (userID, value) => { //Handling following and unfollowing
+        if (value) {
+            axios({
+                method: 'PUT',
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+                headers: { "x-auth-token": `${token}` },
+                data: { following: userID }
+            }).then((res) => {
+                getFollowing() //Once a user makes a request update their display
+                setFlag(!flag) //Change flag to indicate that a user has made request
+            }).catch((error) => {
+                console.log('error: ', error);
 
-    const getFollowing = () => {
+            })
+        } else if (!value) {
+            axios({
+                method: 'PUT',
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+                headers: { "x-auth-token": `${token}` },
+                data: { unfollowing: userID }
+            }).then((res) => {
+                getFollowing() //Once a user makes a request update their display
+                setFlag(!flag) //Change flag to indicate that a user has made request
+            }).catch((error) => {
+                console.log('error: ', error);
+
+            })
+        }
+    }
+
+    const getFollowing = () => { //Get following array
         axios({
             method: "GET",
             url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
@@ -131,56 +175,6 @@ function ProfileBar({ profileToParent, search }) {
     }
 
 
-    const requests = (userID, value) => {
-        if (value) {
-            axios({
-                method: 'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
-                headers: { "x-auth-token": `${token}` },
-                data: { following: userID }
-            }).then((res) => {
-                getFollowing()
-                setFlag(!flag)
-            }).catch((error) => {
-                console.log('error: ', error);
-
-            })
-        } else if (!value) {
-            axios({
-                method: 'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
-                headers: { "x-auth-token": `${token}` },
-                data: { unfollowing: userID }
-            }).then((res) => {
-                getFollowing()
-                setFlag(!flag)
-            }).catch((error) => {
-                console.log('error: ', error);
-
-            })
-        }
-    }
-
-
-
-
-    const logout = () => {
-
-        axios({ //On logout changing users status to offline
-            method: `PUT`,
-            url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
-            headers: { "x-auth-token": `${token}` },
-            data: { status: status }
-        }).then((response) => {
-            history.go(0)
-        }).catch((error) => {
-            console.log('error: ', error);
-
-        })
-    }
-
-
-
     let user = { //Creating object for when user clicks their own profile
         email: info.email,
         id: info.id,
@@ -188,7 +182,7 @@ function ProfileBar({ profileToParent, search }) {
         username: info.name
     }
 
-    const redirectToUser = (data) =>{
+    const redirectToUser = (data) =>{  //Link for when a user clicks another user
         history.push({
             pathname: `/People/${data[0]}`,
             state: { user: data[1] }
@@ -220,7 +214,7 @@ function ProfileBar({ profileToParent, search }) {
                         <GoogleLogout
                             clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
                             buttonText="Logout"
-                            onLogoutSuccess={logout}
+                            onLogoutSuccess={()=> history.go(0)}
                         >
                         </GoogleLogout>
 

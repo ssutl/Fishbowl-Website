@@ -18,35 +18,31 @@ function NavBar({ profileData, followReq }) {
     const [loading, setLoading] = useState()
     const breakpoint = 1200;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
     const resize = () => {
         setScreenWidth(window.innerWidth);
     };
-
     window.addEventListener("resize", resize);
 
-
-
-
-
-
+    /**
+     * ==============================================
+     * Interval to update status of users in navbar
+     * ==============================================
+     */
 
 
     useEffect(() => {
-        setLoading(true)
         let isMounted = true;
-        getFollowing()
 
-        if(isMounted){  
-            const interval = setInterval(() => {
-                getFollowing()
+        if(isMounted){
+            setLoading(true)
+            getFollowing()
+
+            const interval = setInterval(() => { //Set interval will allow user to to see status updates
+                    getFollowing()
             }, 6000)
             return () => clearInterval(interval);
         }
-
         return () => { isMounted = false };
-
-
     }, [profileData, followReq])
 
     if (loading === false) {
@@ -58,33 +54,35 @@ function NavBar({ profileData, followReq }) {
     }
 
 
-    
-
     const getFollowing = () => {
         axios({ //Getting all users on the site
             method: "GET",
             url: `https://fishbowl-heroku.herokuapp.com/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            setUsers(response.data)
+            setUsers(response.data) //Setting state with current info
         }).catch((error) => {
             console.log('error: ', error);
 
         })
 
-
         axios({
-            method: "GET", //Getting the users the current user follows
+            method: "GET", //Getting the users the current user follows to filter 
             url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            setFollowing(response.data[0].following)
+            setFollowing(response.data[0].following)  //Setting state with current info
             setLoading(false)
         }).catch((error) => {
             console.log('error: ', error);
-
         })
     }
+
+    /**
+     * ==============================================
+     * Interval to update status of users in navbar
+     * ==============================================
+     */
 
 
 

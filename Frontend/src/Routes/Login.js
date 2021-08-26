@@ -18,19 +18,16 @@ function Login() {
     const [id, setUserId] = useState()
     const [status, setStatus] = useState("")
     const [token, setToken] = useState()
-
     const breakpoint = 1200;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
     const resize = () => {
         setScreenWidth(window.innerWidth);
     };
-
     window.addEventListener("resize", resize);
 
 
     const responseSuccessGoogle = (response) => {
-        setUserName(response.profileObj.name) //Using Google Response to set current User
+        setUserName(response.profileObj.name) //Using Google Response to stores current Users infos in state
         setEmail(response.profileObj.email)
         setImage(response.profileObj.imageUrl)
         setToken(response.tokenId)
@@ -38,48 +35,41 @@ function Login() {
     }
 
     
-    useEffect(()=>{
-
+    useEffect(()=>{ //Once the user is logged into the account we save their data to the database and retrieve their uniques id from the database
         let isMounted = true;
 
         if (userLogged && isMounted) {
-            localStorage.setItem('session-token', token)
-    
-            axios({ //Retrieving the user table to get the id of the current user
-                method: "GET",
-                url: "https://fishbowl-heroku.herokuapp.com/users/get",
-                headers: { "x-auth-token": `${token}` }
-            }).then((response) => {
-                response.data.forEach((student) => {
-                    if (student.username === username) {
-                        setUserId(student._id)
-                    }
-                })
-            })
-    
+            localStorage.setItem('session-token', token) //Storing token from google into local storage for access later
+
             axios({ //Creating users account & if user already has account it wont be created again
                 method: "POST",
                 url: "https://fishbowl-heroku.herokuapp.com/users/new",
                 headers: { "x-auth-token": `${token}` },
                 data: { username, email, image, status }
             }).then(() => {
-                setLogged(true)
-                // setUserLogged(false)
+                axios({ //Retrieving the users ID from the database
+                    method: "GET",
+                    url: "https://fishbowl-heroku.herokuapp.com/users/get",
+                    headers: { "x-auth-token": `${token}` }
+                }).then((response) => {
+                    response.data.forEach((student) => {
+                        if (student.username === username) {
+                            setUserId(student._id); //Stroing user id in state
+                            setLogged(true) //Finally setting logged to true so that the main app can be conditionally rendered
+                        }
+                    })
+                })
             })
-    
-    
         }
 
         return () => { isMounted = false };
-
-
     },[userLogged])
     
 
 
 
     if(screenWidth >= breakpoint){
-        if (logged) {
+        if (logged) { //Conditionally rendering main app
             return <App name={username} email={email} image={image} id={id} />
         } else {
             return (
@@ -108,20 +98,7 @@ function Login() {
                                 <GoogleLogin
                                     className="login-button"
                                     clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
-                                    // render={renderProps => (
-                                    //     <button onClick={renderProps.onClick} style={{
-                                    //             backgroundColor: "#0096ff",
-                                    //             height: "50px",
-                                    //             width: "60%",
-                                    //             borderRadius: "5px",
-                                    //             outline:"none",
-                                    //             border: "none",
-                                    //             cursor:"pointer",
-                                    //             color:"white"
-                                    //     }}>Login With Google</button>
-                                    //   )}
                                     onSuccess={responseSuccessGoogle}
-                                    // onFailure={}
                                     cookiePolicy={'single_host_origin'}
                                     isSignedIn={true}
                                 >Login With Google</GoogleLogin>

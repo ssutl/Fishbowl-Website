@@ -13,38 +13,25 @@ function SpecificUserPage({ specificUserToParent }) {
     const [following, setFollowing] = useState()
     const breakpoint = 1200;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const { state } = useLocation(); //Next users business
+    const info = useContext(UserContext) //Current Logged in users business
+    const token = localStorage.getItem('session-token')
+    const [usersRooms, setUsersRooms] = useState([])
+    let mypage = state.user.username === info.name;
 
     const resize = () => {
         setScreenWidth(window.innerWidth);
     };
-
     window.addEventListener("resize", resize);
 
 
+    
+    /**
+     * ============================================================================================
+     * On page load we gather the information of current users page: Their rooms, name, image etc
+     * ============================================================================================
+     */
     useEffect(() => {
-        let isMounted = true;
-
-        if(isMounted){
-            specificUserToParent(following)
-        }
-
-        return () => { isMounted = false };
-    }, [following])
-
-
-
-    const { state } = useLocation(); //Next users business
-    const info = useContext(UserContext) //Current Logged in users business
-
-
-    const token = localStorage.getItem('session-token')
-
-
-    const [usersRooms, setUsersRooms] = useState([])
-
-
-
-    useEffect(() => { //On page load get the rooms of the user clicked on
         let isMounted = true;
 
         axios({
@@ -74,16 +61,43 @@ function SpecificUserPage({ specificUserToParent }) {
 
     }, [state])
 
+    /**
+     * ============================================================================================
+     * On page load we gather the information of current users page: Their rooms, name, image etc
+     * ============================================================================================
+     */
 
 
+    /**
+     * =========================
+     * Handling user interaction
+     * =========================
+     */
+
+
+     useEffect(() => { //Passing a flage to middle.js to indicate the user has made a new interaction
+        let isMounted = true;
+
+        if(isMounted){
+            specificUserToParent(following)
+        }
+
+        return () => { isMounted = false };
+    }, [following]) 
 
     const handleInteract = () => {
-        setFollowing(!following)
+        setFollowing(!following) //Interaction flag changes whenever a user follows or unfollows
         requests()
     }
 
+    
+    /**
+     * =====================================
+     * Interaction API request - Un/Follow
+     * =====================================
+     */
     const requests = () => {
-        if (!following) {
+        if (!following) { //If not following make them follow
             axios({
                 method: 'PUT',
                 url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
@@ -93,40 +107,48 @@ function SpecificUserPage({ specificUserToParent }) {
             }).catch((err)=>{
                 console.log('err: ', err);
             })
-        } else if (following) {
+        } else if (following) { //If following make the unfollow
             axios({
                 method: 'PUT',
                 url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { unfollowing: state.user.username }
             }).then((res) => {
-
             }).catch((err)=>{
                 console.log('err: ', err);
             })
         }
     }
 
-    let mypage = state.user.username === info.name;
+    /**
+     * =====================================
+     * Interaction API request - Un/Follow
+     * =====================================
+     */
+
+    /**
+     * =========================
+     * Handling user interaction
+     * =========================
+     */
+
 
 
     const deleteRoom = (data) =>{
-        data[0].preventDefault()
+        data[0].preventDefault() //Preventing it from redirecting to room
 
         axios({
             method: 'DELETE',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/delete/id/${data[1]}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/delete/id/${data[1]}`, //Deleting room clicked on
             headers: { "x-auth-token": `${token}` },
         }).then((res) => {
-            refreshRooms()
+            refreshRooms() //Refreshing feed
         }).catch((err)=>{
             console.log('err: ', err);
         })
-
-
     }
 
-    const refreshRooms = () =>{
+    const refreshRooms = () =>{ //Function to update users room feed
         axios({
             method: 'GET',
             url: `https://fishbowl-heroku.herokuapp.com/chat/get/${state.user.username}`,
@@ -181,9 +203,9 @@ function SpecificUserPage({ specificUserToParent }) {
                                             </div>
                                             <div className="lower">
                                                 <div className="low-holder">
-                                                    {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag, index) => {
-                                                        return <div className="roomTag" key={index}>{tag}</div>
-                                                    })}
+                                                {room.Tags.map((tag, index) => {
+                                                    return <div className="roomTag" key={index}>{tag}</div>
+                                                })}
                                                 </div>
                                             </div>
                                             {mypage?(

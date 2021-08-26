@@ -9,16 +9,10 @@ import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
 function CreateRoom({ createRoomToParent }) {
 
-    const [createFlag, setCreateFlag] = useState(false)
+    
 
 
-    useEffect(() => {
-        let isMounted = true;
-        if(isMounted){
-            createRoomToParent(createFlag)
-        }
-        return () => { isMounted = false };
-    }, [createFlag])
+    
 
     const history = useHistory();
     const info = useContext(UserContext)
@@ -62,9 +56,9 @@ function CreateRoom({ createRoomToParent }) {
 
     const handleSubmit = () => {
 
-        if (roomName.trim().length) {
+        if (roomName.trim().length) { //Checking if room name is not empty
 
-            let tags = {
+            let tags = { //Temporary object to store current option by user
                 Math: Math,
                 English: English,
                 Geography: Geography,
@@ -87,50 +81,38 @@ function CreateRoom({ createRoomToParent }) {
                 "Sixth Form": sixth
             }
 
-            let chosenArray = Object.keys(tags).filter((e)=>tags[e])
-            console.log('chosenArray: ', chosenArray);
+            let chosenArray = Object.keys(tags).filter((e)=>tags[e]) //Filtering array to only show tags which are true
 
-            if(chosenArray.length > 0){
-                const data = {
-                    CreatedByName: info.name,
-                    Tags: chosenArray,
-                    Deleted: false,
-                    Title: roomName,
-                    Question: roomQuestion,
-                    Answered: false
-                }
-    
-                axios({
-                    method: `POST`,
-                    url: `http://localhost:5000/chat/new`,
-                    headers: { "x-auth-token": `${token}` },
-                    data: data
-                })
-                    .then((res) => {
-                        if (res.data.msg === "Room name already exists") {
-                            setRoomExists(true)
-                            document.querySelector('.input_field').value = ""
-                        } else {
-                            setRoomExists(false)
-                            setCreateFlag(!createFlag)
-                            history.push({
-                                pathname: `/Chat/${res.data._id}`
-                             })
-                        }
-    
-                    })
-                    .catch((error) => {
-                        console.log('error: ', error);
-    
-                    })
-    
-
+            const data = { //Creating an object to send to db
+                CreatedByName: info.name,
+                Tags: chosenArray,
+                Deleted: false,
+                Title: roomName,
+                Question: roomQuestion,
+                Answered: false
             }
-
-            
-        } else {
-        }
-
+    
+            axios({ //Uploadinf room options to the database
+                method: `POST`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/new`,
+                headers: { "x-auth-token": `${token}` },
+                data: data
+            })
+            .then((res) => {
+                if (res.data.msg === "Room name already exists") {
+                    setRoomExists(true)
+                    document.querySelector('.input_field').value = "" //Clearing input
+                } else {
+                    setRoomExists(false)
+                    history.push({ //Redirecting user to the page of the room created
+                        pathname: `/Chat/${res.data._id}`
+                    })
+                }
+            })
+            .catch((error) => {
+                console.log('error: ', error);
+            })
+        } 
     }
 
     if(screenWidth >=breakpoint){
@@ -149,11 +131,11 @@ function CreateRoom({ createRoomToParent }) {
                     </div>
                     <div className="inputs">
     
-                        <input type="input" className="input_field" onChange={(event) => setRoomName(event.target.value)} required id="name" placeholder={roomExists ? "Room Already Exists  - ( Max 30 )" : "Room Name - ( Max 30 )"} maxlength="30" autoComplete="off"/>
+                        <input type="input" className="input_field" onChange={(event) => setRoomName(event.target.value)} required id="name" placeholder={roomExists ? "Room Already Exists  - ( Max 30 )" : "Room Name - ( Max 30 )"} maxLength="30" autoComplete="off"/>
                         <div className="text-counter">
                             {30 - roomName.length}
                         </div>
-                        <input type="input" className="input_field" autoComplete="off" id="question" placeholder="Room Question" onChange={(event) => setRoomQuestion(event.target.value)} placeholder="Room Question - (Max 150)" maxlength="150" required />
+                        <input type="input" className="input_field" autoComplete="off" id="question" placeholder="Room Question" onChange={(event) => setRoomQuestion(event.target.value)} placeholder="Room Question - (Max 150)" maxLength="150" required />
                         <div className="text-counter">
                             {150 - roomQuestion.length}
                         </div>

@@ -5,31 +5,32 @@ import { UserContext } from "../Context/CurrentUser";
 
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage"; // Name of the event
 const SOCKET_SERVER_URL = "https://fishbowl-heroku.herokuapp.com";
-
 const useChat = (roomId) => {
-  const [messages, setMessages] = useState([]); // Sent and received messages
-  const socketRef = useRef();
-  const info = useContext(UserContext)
+const [messages, setMessages] = useState([]); // Sent and received messages
+const socketRef = useRef();
+const info = useContext(UserContext)
 
 
 
-  useEffect(() => {
+  useEffect(() => { //A new connection is made whenever room ID changes
 
     let isMounted = true;
 
     if(isMounted){
       socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
         query: { roomId },
-      });
+      }); //setting socketRef.current to current socket
   
       // Listens for incoming messages
-      socketRef.current.on(NEW_CHAT_MESSAGE_EVENT, (message) => {
+      socketRef.current.on(NEW_CHAT_MESSAGE_EVENT, (message) => { //Socket starts to listen for a new message event, it takes this message as a prop and sets it as incoming message
         const incomingMessage = {
           ...message,
           ownedByCurrentUser: message.senderId === socketRef.current.id,
         };
   
         // console.log(incomingMessage)
+
+        //Conditionally, deleting, clearing or marking as helped current messages.
   
         if(incomingMessage.text[0] === "delete"){
           setMessages(messages.filter(item => item !== incomingMessage.text[1]))
@@ -43,24 +44,22 @@ const useChat = (roomId) => {
         else{
           setMessages((messages) => [...messages, incomingMessage]);
         }
+
+        //Conditionally, deleting, clearing or marking as helped current messages.
       });
     }
-    // Creates a WebSocket connection
-    
-
+  
     // Destroys the socket reference
-    // when the connection is closed
     return () => {
       socketRef.current.disconnect();
       isMounted = false
     };
   }, [roomId]);
 
-  // Sends a message to the server that
-  // forwards it to all users in the same room
-  const sendMessage = (messageBody) => {
+  
+  const sendMessage = (messageBody) => { //Message is sent to server then it is passed to all the users in the same room
     var currentdate = new Date();
-    socketRef.current.emit(NEW_CHAT_MESSAGE_EVENT, {
+    socketRef.current.emit(NEW_CHAT_MESSAGE_EVENT, { //Emitting to the server
       text: messageBody,
       senderId: socketRef.current.id,
       sentBy: info.name,
