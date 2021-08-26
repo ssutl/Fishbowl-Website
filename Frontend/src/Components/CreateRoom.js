@@ -88,40 +88,46 @@ function CreateRoom({ createRoomToParent }) {
             }
 
             let chosenArray = Object.keys(tags).filter((e)=>tags[e])
+            console.log('chosenArray: ', chosenArray);
 
-            const data = {
-                CreatedByName: info.name,
-                tags: chosenArray,
-                Deleted: false,
-                Title: roomName,
-                Question: roomQuestion,
-                Answered: false
+            if(chosenArray.length > 0){
+                const data = {
+                    CreatedByName: info.name,
+                    Tags: chosenArray,
+                    Deleted: false,
+                    Title: roomName,
+                    Question: roomQuestion,
+                    Answered: false
+                }
+    
+                axios({
+                    method: `POST`,
+                    url: `http://localhost:5000/chat/new`,
+                    headers: { "x-auth-token": `${token}` },
+                    data: data
+                })
+                    .then((res) => {
+                        if (res.data.msg === "Room name already exists") {
+                            setRoomExists(true)
+                            document.querySelector('.input_field').value = ""
+                        } else {
+                            setRoomExists(false)
+                            setCreateFlag(!createFlag)
+                            history.push({
+                                pathname: `/Chat/${res.data._id}`
+                             })
+                        }
+    
+                    })
+                    .catch((error) => {
+                        console.log('error: ', error);
+    
+                    })
+    
+
             }
 
-            axios({
-                method: `POST`,
-                url: `https://fishbowl-heroku.herokuapp.com/chat/new`,
-                headers: { "x-auth-token": `${token}` },
-                data: data
-            })
-                .then((res) => {
-                    if (res.data.msg === "Room name already exists") {
-                        setRoomExists(true)
-                        document.querySelector('.input_field').value = ""
-                    } else {
-                        setRoomExists(false)
-                        setCreateFlag(!createFlag)
-                        history.push({
-                            pathname: `/Chat/${res.data._id}`
-                         })
-                    }
-
-                })
-                .catch((error) => {
-                    console.log('error: ', error);
-
-                })
-
+            
         } else {
         }
 

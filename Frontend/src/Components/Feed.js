@@ -226,6 +226,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                     </div>
                 ): null
                 }
+                
                 <div className="scroll">
                     {allRooms == null || friends_rooms == null ? <BarLoader color={"#FFFFFF"} css={override} size={300} /> : feed ? allRooms.length === 0 ? (
                         <div className="noGlobalorFriends">
@@ -238,11 +239,17 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                         </div>
                     )
                         : (allRooms.filter((chat) => {
+                            
+
+                            
 
                             return (
                                 chat.Title.toUpperCase().includes(input.toUpperCase()) ||
                                 chat.Question.toUpperCase().includes(input.toUpperCase())
-
+                                //  chat.Tags.map((tag)=>{
+                                //     return tag.toUpperCase().includes(input.toUpperCase())
+                                // })
+                                
                             );
                         }).map((room, index) => {
                             return (
@@ -254,7 +261,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                                         </div>
                                         <div className="low-section">
                                             <div className="low-holder">
-                                                {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag, index) => {
+                                                {room.Tags.map((tag, index) => {
                                                     return <div className="roomTag" key={index}>{tag}</div>
                                                 })}
                                             </div>
@@ -297,7 +304,7 @@ function Feed({ input, followR, dashboard, roomCreated }) {
                                         </div>
                                         <div className="low-section">
                                             <div className="low-holder">
-                                                {Object.keys(room.Tags).filter(k => room.Tags[k]).map((tag, index) => {
+                                            {room.Tags.map((tag, index) => {
                                                     return <div className="roomTag" key={index}>{tag}</div>
                                                 })}
                                             </div>

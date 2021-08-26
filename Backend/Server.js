@@ -7,6 +7,8 @@ const userRoutes = require('./Controllers/user.controller.js') //Requiring contr
 const chatRoutes = require('./Controllers/chat.controller.js') //Requiring controller so that the backend knows how to repond to requests
 
 
+// git subtree push --prefix Backend/ heroku master
+
 
 
 
