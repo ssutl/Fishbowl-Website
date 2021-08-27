@@ -60,7 +60,7 @@ function NavBar({ profileData, followReq }) {
             url: `https://fishbowl-heroku.herokuapp.com/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            setUsers(response.data) //Setting state with current info
+            setUsers(response.data.reverse()) //Setting state with current info
         }).catch((error) => {
             console.log('error: ', error);
 

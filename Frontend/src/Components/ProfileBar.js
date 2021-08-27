@@ -103,14 +103,28 @@ function ProfileBar({ profileToParent, search }) {
     useEffect(() => { //Recieving users for the dashboard
         let isMounted = true;
 
+        if(isMounted){
+            getUsers()
+
+            const interval = setInterval(() => { //Set interval will allow user to to see status updates
+                    getUsers()
+            }, 6000)
+            return () => clearInterval(interval);
+        }
+        return () => { isMounted = false };
+
+        
+    }, [current_page]) //Only calls on page load
+
+
+    const getUsers = () =>{
+        console.log("getting users")
         axios({
             method: "GET",
             url: "https://fishbowl-heroku.herokuapp.com/users/get",
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            if(isMounted){
-                setUsers(response.data) //Storung array in state
-            }
+                setUsers(response.data.reverse()) //Storing array in state
         }).catch((error) => {
             console.log('error: ', error);
 
@@ -121,14 +135,12 @@ function ProfileBar({ profileToParent, search }) {
             url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
-            if(isMounted){
                 setFollowing(response.data[0].following) //Storing list of the users the current follows
                 setStatus(response.data[0].status) //Recieving their status information
-            }
         }).catch((error) => {
             console.log('error: ', error);
         })
-    }, [current_page]) //Only calls on page load
+    }
 
 
     const requests = (userID, value) => { //Handling following and unfollowing
