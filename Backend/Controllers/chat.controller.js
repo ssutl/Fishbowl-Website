@@ -4,9 +4,9 @@ const router = require('express').Router() //Express
 
 
 router.post('/new',auth, (req, res)=>{ //Req is the data that the front end is sending to the backend 
-    console.log('req from login: ', req);
     const {Title} = req.body;
-    console.log('Title: ', Title);
+    console.log('req.body: ', req.body);
+
 
     ChatRoom.findOne({Title})
     .then((room)=>{
@@ -84,17 +84,17 @@ router.put('/update/:id',auth, (req, res) => {
 function auth(req, res, next) {
     //want to check for the token that is being sent along with the front end req
     var token = req.header("x-auth-token");
-    // console.log('token passed through middleware: ', token);
-  
+    console.log('token passed through middleware: ', token);
+
     //Check for token
     if (!token) {
-      res.status(401).json({ msg: "no token, auth denied" });
-    }else{
-        
+        res.status(401).json({ msg: "no token, auth denied" });
+    } else {
+
         var segments = token.split('.');
 
         if (segments.length !== 3) {
-        throw new Error('Not enough or too many segments');
+            throw new Error('Not enough or too many segments');
         }
 
         // All segment should be base64
@@ -103,13 +103,19 @@ function auth(req, res, next) {
 
         // base64 decode and parse JSON
         var header = Buffer.from(headerSeg, 'base64');
+        console.log('header: ', header);
 
 
-        var payload =  JSON.parse(Buffer.from(payloadSeg, 'base64'));
+        var payload = JSON.parse(Buffer.from(payloadSeg, 'base64'));
+        console.log('payload: ', payload);
+        console.log('payload iss: ', payload.iss);
 
-        if(payload.iss === 'accounts.google.com' || payload.aud === '39358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com'){
+        if (payload.iss === 'accounts.google.com' || payload.aud === '39358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com' || '939358098643-d75dllgksvgu2bvlovnij8tk6e9e0emj.apps.googleusercontent.com' || 
+        `939358098643-0dl6npufal6oarnupl0ugjakeftrk205.apps.googleusercontent.com`) {
+            console.log('auth valid')
             next()
-        }else{
+        } else {
+            console.log('auth invalid')
             res.status(401).json({ msg: "auth invalid" });
         }
     }

@@ -85,6 +85,7 @@ function CreateRoom({ createRoomToParent }) {
 
             const data = { //Creating an object to send to db
                 CreatedByName: info.name,
+                CreatedByImage: info.image,
                 Tags: chosenArray,
                 Deleted: false,
                 Title: roomName,
