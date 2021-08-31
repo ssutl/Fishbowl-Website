@@ -131,7 +131,9 @@ function Feed({ input, followR, dashboard}) {
                 }else{
                     setNewRoomAvailable(true) //else provide an option to update
                 }
-            }
+            }else if(res.data.length < allRooms.length){
+                updateCurrentRooms()
+              }
         }).catch((err)=>{
             console.log('err: ', err);
         })
@@ -202,7 +204,7 @@ function Feed({ input, followR, dashboard}) {
                 </div>
             </div>
             <div className="bottom-section">
-                {newRoomsAvailable? (
+                {/* {newRoomsAvailable? (
                     <div className="indicator" onClick={()=>{
                         updateCurrentRooms();
                         document.querySelector('.scroll').scrollTo(0, 0)
@@ -210,7 +212,7 @@ function Feed({ input, followR, dashboard}) {
                         <p>New Rooms</p>
                     </div>
                 ): null
-                }
+                } */}
                 
                 <div className="scroll">
                     {allRooms == null || friends_rooms == null ? <BarLoader color={"#FFFFFF"} css={override} size={300} /> : feed ? allRooms.length === 0 ? (

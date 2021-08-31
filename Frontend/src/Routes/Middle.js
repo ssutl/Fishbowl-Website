@@ -7,6 +7,7 @@ import SpecificUserPage from '../Components/SpecificUserPage';
 import CreateRoom from '../Components/CreateRoom';
 import ChatRoom from '../Components/ChatRoom';
 import { useHistory } from 'react-router-dom';
+
 // import Feed from '../Components/Feed';
 
 function Middle({ childToParent, dashboard }) {
@@ -46,7 +47,7 @@ function Middle({ childToParent, dashboard }) {
             <div className="middle-holder">
                 <div className="section1">
                     <div className="search-wrapper">
-                        {/* <SearchIcon/> */}
+                        <SearchIcon/>
                         <input className="searchBar" type="text" placeholder="Search for rooms or friends" onChange={(event) => { setSearch(event.target.value); history.push('/'); }}></input>
                     </div>
                 </div>
