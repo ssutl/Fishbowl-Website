@@ -20,6 +20,7 @@
       border-radius: 5px;
       // align-items: center;
       flex-direction: column;
+      overflow: hidden;
 
       .navbar {
         height: 8vh;
@@ -459,8 +460,12 @@
         }
       }
 
+      .scrollable::-webkit-scrollbar {
+        width: 0; /* Remove scrollbar space */
+        background: transparent; /* Optional: just make scrollbar invisible */
+      }
+
       .chat-bar {
-        border-radius: 5px;
         height: 8vh;
         width: 100%;
         background-color: #333c47;
@@ -527,6 +532,7 @@
       //   justify-content: center;
       background-color: $secondary-background;
       border-radius: 5px;
+      overflow: hidden;
       // align-items: center;
       flex-direction: column;
 
@@ -968,7 +974,6 @@
       }
 
       .chat-bar {
-        border-radius: 5px;
         height: 8vh;
         width: 100%;
         background-color: #333c47;
@@ -1475,7 +1480,6 @@
       }
 
       .chat-bar {
-        border-radius: 5px;
         height: 8vh;
         width: 100%;
         background-color: #333c47;
