@@ -213,7 +213,7 @@ function ProfileBar({ profileToParent, search }) {
                         <div className="left">
                             <Link to={{ pathname: `/People/${info.name}`, state: { user: user } }}>
                                 <div className="image-holder">
-                                    <img src={info.image} className="image" alt=""></img>
+                                    <img src={info.image} className="image" referrerpolicy="no-referrer" alt=""></img>
                                 </div>
                             </Link>
                         </div>

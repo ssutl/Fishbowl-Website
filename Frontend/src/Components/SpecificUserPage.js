@@ -169,7 +169,7 @@ function SpecificUserPage({ specificUserToParent }) {
                         <h1>{state.user.username}</h1>
                     </div>
                     <div className="imageHolder">
-                        <img src={state.user.image} alt="" />
+                        <img referrerpolicy="no-referrer" src={state.user.image} alt="" />
                     </div>
                     {mypage ? usersRooms.length === 0 ? (
                         <div className="follow-my-section"></div>

@@ -322,6 +322,12 @@
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
     background-color: #fd4d4d;
   }
+  .section2 .holder .specificFeedHolder .scrollUser::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
 }
 
 @media only screen and (min-width: 1500px) {

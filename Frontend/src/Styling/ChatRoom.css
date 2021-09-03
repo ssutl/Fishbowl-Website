@@ -26,6 +26,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    overflow: hidden;
   }
   .chat-room-section .chat-room-holder .navbar {
     height: 8vh;
@@ -531,8 +532,13 @@
     font-size: 17px;
     color: white;
   }
+  .chat-room-section .chat-room-holder .scrollable::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
   .chat-room-section .chat-room-holder .chat-bar {
-    border-radius: 5px;
     height: 8vh;
     width: 100%;
     background-color: #333c47;
@@ -611,6 +617,7 @@
     display: flex;
     background-color: #28303b;
     border-radius: 5px;
+    overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1120,7 +1127,6 @@
     color: white;
   }
   .chat-room-section .chat-room-holder .chat-bar {
-    border-radius: 5px;
     height: 8vh;
     width: 100%;
     background-color: #333c47;
@@ -1708,7 +1714,6 @@
     color: white;
   }
   .chat-room-section .chat-room-holder .chat-bar {
-    border-radius: 5px;
     height: 8vh;
     width: 100%;
     background-color: #333c47;

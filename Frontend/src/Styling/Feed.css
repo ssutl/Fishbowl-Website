@@ -367,6 +367,12 @@
     border-radius: 10px;
     background-color: #0096ff;
   }
+  .feed-section .bottom-section .scroll::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
 }
 
 @media only screen and (min-width: 1500px) {

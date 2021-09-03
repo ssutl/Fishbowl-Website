@@ -144,7 +144,7 @@ function NavBar({ profileData, followReq }) {
                                             <div className="circle">
                                                 <img src={user.image} alt=""></img>
                                             </div>
-                                            <div className={user.status === "Online" ? "online-circle" : user.status === "Offline" ? "offline-circle" : user.status === "Busy" ? "busy-circle" : user.status === "Idle" ? "idle-circle" : null}>
+                                            <div className={user.status === "Online" ? "online-circle" : user.status === "Offline" ? "offline-circle" : user.status === "Busy" ? "busy-circle" : user.status === "Idle" ? "idle-circle" : "empty"}>
 
                                                 <div className="pop-up">{user.status}</div>
                                             </div>

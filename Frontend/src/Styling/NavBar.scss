@@ -40,7 +40,6 @@
       // background-color: rebeccapurple;
       width: 90%;
       height: 89%;
-      overflow-y: auto;
       .upper {
         height: 15%;
         width: 100%;
@@ -64,11 +63,14 @@
         }
       }
       .lower {
-        height: 85%;
+        height: 70%;
         width: 100%;
         display: flex;
         flex-direction: column;
         color: white;
+        overflow-y: scroll;
+
+        // background-color: aqua;
 
         .user-holder {
           display: flex;
@@ -234,9 +236,30 @@
               font-family: "Red Hat Text", sans-serif;
               color: white;
             }
+
+            .empty {
+              position: relative;
+              top: 16px;
+              right: 16px;
+              height: 15px;
+              width: 15px;
+              border-radius: 100%;
+            }
           }
         }
       }
+
+      .lower::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+      .lower::-webkit-scrollbar {
+        width: 10px;
+      }
+      .lower::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgb(117, 117, 117);
+      }
+
       .lower-set {
         width: 100%;
         height: 10%;
@@ -302,7 +325,6 @@
       // background-color: rebeccapurple;
       width: 90%;
       height: 89%;
-      overflow-y: auto;
       .upper {
         height: 15%;
         width: 100%;
@@ -326,10 +348,11 @@
         }
       }
       .lower {
-        height: 85%;
+        height: 75%;
         width: 100%;
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
         color: white;
 
         .user-holder {
@@ -561,10 +584,8 @@
     }
 
     .people-holder {
-      // background-color: rebeccapurple;
       width: 80%;
       height: 89%;
-      overflow-y: auto;
       .upper {
         height: 15%;
         width: 100%;
@@ -588,11 +609,13 @@
         }
       }
       .lower {
-        height: 85%;
+        height: 75%;
         width: 100%;
         display: flex;
         flex-direction: column;
         color: white;
+        overflow-y: scroll;
+        // background-color: aqua;
 
         .user-holder {
           display: flex;
