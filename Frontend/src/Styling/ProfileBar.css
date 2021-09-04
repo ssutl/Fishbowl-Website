@@ -14,7 +14,7 @@
   }
   .whole-holder .profile {
     height: 80%;
-    width: 75%;
+    width: 80%;
     border-radius: 15px;
     background-color: #212224ff;
     display: -webkit-box;
@@ -401,6 +401,153 @@
     font-size: 16px;
     color: white;
     font-weight: 500;
+  }
+  .whole-holder .profile .users {
+    height: 45%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .whole-holder .profile .users .holder {
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .whole-holder .profile .users .holder .user-holder {
+    margin-top: 30px;
+    width: 100%;
+    height: 65px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .whole-holder .profile .users .holder .user-holder img {
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+    margin-right: 0px;
+    border: 2px solid white;
+  }
+  .whole-holder .profile .users .holder .user-holder .name-holder {
+    width: 35%;
+  }
+  .whole-holder .profile .users .holder .user-holder .name-holder h2 {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 16px;
+    color: white;
+  }
+  .whole-holder .profile .users .holder .user-holder .follow-BTN {
+    height: 38px;
+    width: 45px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .whole-holder .profile .users .holder .user-holder .follow-BTN p {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .whole-holder .profile .users .holder .user-holder .following-BTN {
+    height: 38px;
+    width: 45px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .whole-holder .profile .users .holder .user-holder .following-BTN p {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .whole-holder .profile .users .holder .user-holder .follow-BTN:hover {
+    background-color: #0096ff;
+  }
+  .whole-holder .profile .users .holder .user-holder p {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .whole-holder .profile .users .holder::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+  .whole-holder .profile .chat-prof {
+    height: 45%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whole-holder .profile .chat-prof .title {
+    height: 10%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .whole-holder .profile .chat-prof .title p {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 14px;
+    margin-left: 10px;
   }
 }
 
@@ -1328,6 +1475,124 @@
     font-size: 16px;
     color: white;
     font-weight: 500;
+  }
+  .whole-holder .profile .users {
+    height: 45%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .whole-holder .profile .users .holder {
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .whole-holder .profile .users .holder .user-holder {
+    margin-top: 30px;
+    width: 100%;
+    height: 65px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .whole-holder .profile .users .holder .user-holder img {
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+    margin-right: 0px;
+    border: 2px solid white;
+  }
+  .whole-holder .profile .users .holder .user-holder .name-holder {
+    width: 35%;
+  }
+  .whole-holder .profile .users .holder .user-holder .name-holder h2 {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 18px;
+    color: white;
+  }
+  .whole-holder .profile .users .holder .user-holder .follow-BTN {
+    height: 38px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .whole-holder .profile .users .holder .user-holder .follow-BTN p {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .whole-holder .profile .users .holder .user-holder .following-BTN {
+    height: 38px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px 0px 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0096ff;
+    cursor: pointer;
+    -webkit-transition: background 0.1s ease-in;
+    transition: background 0.1s ease-in;
+  }
+  .whole-holder .profile .users .holder .user-holder .following-BTN p {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .whole-holder .profile .users .holder .user-holder .follow-BTN:hover {
+    background-color: #0096ff;
+  }
+  .whole-holder .profile .users .holder .user-holder p {
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .whole-holder .profile .users .holder::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
   }
 }
 /*# sourceMappingURL=ProfileBar.css.map */

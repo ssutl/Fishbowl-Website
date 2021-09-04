@@ -48,6 +48,7 @@ function ProfileBar({ profileToParent, search }) {
     const [left, setLeft] = useState()
     const [right, setRight] = useState()
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [chatRoomInfo, setChatRoomInfo] = useState()
     const breakpoint = 1200;
     const upper_breakpoint_laptop = 1800;
 
@@ -56,6 +57,20 @@ function ProfileBar({ profileToParent, search }) {
     };
 
     window.addEventListener("resize", resize);
+
+    useEffect(()=>{
+        let isMounted = true;
+
+        axios({
+            method: 'GET',
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page}`,
+            headers: { "x-auth-token": `${token}` }
+        }).then((res) => {
+            if(isMounted){
+                setChatRoomInfo(res.data[0]) //Reversing order of rooms before we set variable, so that newest is at the top
+            }
+        })
+    },[current_page])
 
 
 
@@ -314,7 +329,14 @@ function ProfileBar({ profileToParent, search }) {
                                         })}
                                     </div>
                                 </div>
-                            ): chatroom? <h1>Chatting</h1>: null}
+                            ): chatroom? (
+                                <div className="chat-prof">
+                                    <div className="title">
+                                        <p>ROOM STATS</p>
+                                    </div>
+                                </div>
+                            )
+                            : null}
                 </div>
             </div>
         )
