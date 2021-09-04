@@ -20,7 +20,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #28303b;
+    background-color: #212224ff;
     border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -410,7 +410,7 @@
     width: 250px;
     height: 14vh;
     border-radius: 7px;
-    background-color: #333c47;
+    background-color: #333333ff;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
     height: 50%;
@@ -541,7 +541,7 @@
   .chat-room-section .chat-room-holder .chat-bar {
     height: 8vh;
     width: 100%;
-    background-color: #333c47;
+    background-color: #333333ff;
   }
   .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;
@@ -615,7 +615,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #28303b;
+    background-color: #212224ff;
     border-radius: 5px;
     overflow: hidden;
     -webkit-box-orient: vertical;
@@ -1004,7 +1004,7 @@
     width: 250px;
     height: 14vh;
     border-radius: 7px;
-    background-color: #333c47;
+    background-color: #333333ff;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
     height: 50%;
@@ -1129,7 +1129,7 @@
   .chat-room-section .chat-room-holder .chat-bar {
     height: 8vh;
     width: 100%;
-    background-color: #333c47;
+    background-color: #333333ff;
   }
   .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;
@@ -1203,7 +1203,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #28303b;
+    background-color: #212224ff;
     border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1591,7 +1591,7 @@
     width: 250px;
     height: 14vh;
     border-radius: 7px;
-    background-color: #333c47;
+    background-color: #333333ff;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .option-holder .dot .editing .markAsAnswered {
     height: 50%;
@@ -1716,7 +1716,7 @@
   .chat-room-section .chat-room-holder .chat-bar {
     height: 8vh;
     width: 100%;
-    background-color: #333c47;
+    background-color: #333333ff;
   }
   .chat-room-section .chat-room-holder .chat-bar form {
     display: -webkit-box;

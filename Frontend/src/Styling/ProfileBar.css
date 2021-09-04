@@ -1,47 +1,7 @@
 @media only screen and (min-width: 1200px) {
-  .profile-holder {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 27%;
+  .whole-holder {
     height: 100vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .profile-holder .profile {
-    margin-top: 10vh;
-    background-color: #28303b;
-    border-radius: 5px;
-    width: 90%;
-    height: 21%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .profile-holder .profile .upper-profile {
-    height: 55%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow: hidden;
-  }
-  .profile-holder .profile .upper-profile .left {
+    width: 27%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -51,52 +11,106 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100%;
-    width: 35%;
   }
-  .profile-holder .profile .upper-profile .left .image-holder {
-    height: 60px;
-    width: 60px;
-    border-radius: 100%;
-    overflow: hidden;
+  .whole-holder .profile {
+    height: 80%;
+    width: 75%;
+    border-radius: 15px;
+    background-color: #212224ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.123);
   }
-  .profile-holder .profile .upper-profile .left .image-holder .image {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .profile-holder .profile .upper-profile .right {
+  .whole-holder .profile .dashboardTitle {
+    height: 15%;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: white;
-    word-wrap: break-word;
+    border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+  }
+  .whole-holder .profile .dashboardTitle p {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .whole-holder .profile .menu {
+    border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+    height: 35%;
+    width: 85%;
+  }
+  .whole-holder .profile .menu .title {
+    height: 12%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100%;
-    width: 62%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 15px;
   }
-  .profile-holder .profile .upper-profile .right .name {
-    font-family: "Red Hat Text", sans-serif;
-    font-weight: 900;
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  .profile-holder .profile .upper-profile .right .email {
-    display: block;
-    opacity: 0.7;
+  .whole-holder .profile .menu .title p {
+    color: rgba(255, 255, 255, 0.644);
     font-size: 14px;
-    font-family: "Red Hat Text", sans-serif;
+    margin-left: 10px;
   }
-  .profile-holder .profile .lower-profile {
-    height: 45%;
+  .whole-holder .profile .menu .menu-item {
+    height: 50px;
     width: 100%;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    position: relative;
+  }
+  .whole-holder .profile .menu img {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
+            filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu #logoutLogo {
+    margin-left: 20px;
+  }
+  .whole-holder .profile .menu p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .whole-holder .profile .menu .options {
+    display: none;
+  }
+  .whole-holder .profile .menu-item:hover {
+    background-color: #1d1c1c;
+  }
+  .whole-holder .profile .menu-item:hover #statusPara {
+    display: none;
+  }
+  .whole-holder .profile .menu-item:hover .options {
+    width: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -107,75 +121,42 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .profile-holder .profile .lower-profile .status-select-btn {
-    width: 37%;
-    height: 45px;
-    border-radius: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
-    background-color: #393e41;
-    color: white;
+  .whole-holder .profile .menu-item:hover .options .online-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: #0096ff;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+  }
+  .whole-holder .profile .menu-item:hover .options .online-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    font-size: 15px;
-    cursor: pointer;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content {
-    text-align: center;
-    display: none;
-    position: absolute;
-    top: 40px;
-    background-color: #393e41;
-    min-width: 100%;
-    border-radius: 0px 0px 5px 5px;
-    z-index: 1;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p {
-    cursor: pointer;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p:hover {
-    color: #0096ff;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn:hover .status-dropdown-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    height: 160px;
-  }
-  .profile-holder .noti {
-    background-color: #28303b;
-    border-radius: 5px;
-    width: 90%;
-    height: 57%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 8vh;
-    color: rgba(255, 255, 255, 0.534);
-    text-align: center;
-  }
-  .profile-holder .noti .dashboard {
-    height: 12%;
     color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 70px;
+    bottom: 40px;
+    right: 135px;
+  }
+  .whole-holder .profile .menu-item:hover .options .online-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options .offline-circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -185,25 +166,120 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
-    font-family: "Red Hat Text", sans-serif;
-    font-size: 20px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    border: 4px solid #6e7985;
+    background-color: #111213ff;
   }
-  .profile-holder .noti .users {
-    height: 88%;
-    width: 100%;
+  .whole-holder .profile .menu-item:hover .options .offline-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 70px;
+    bottom: 40px;
+    right: 95px;
+  }
+  .whole-holder .profile .menu-item:hover .options .offline-circle:hover .pop-up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
   }
-  .profile-holder .noti .users .holder {
-    width: 90%;
-    height: 90%;
-    overflow: auto;
+  .whole-holder .profile .menu-item:hover .options .busy-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    background-color: #fd4d4d;
+  }
+  .whole-holder .profile .menu-item:hover .options .busy-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 55px;
+    color: white;
+    border-radius: 2px;
+    display: none;
+    bottom: 40px;
+    right: 60px;
+  }
+  .whole-holder .profile .menu-item:hover .options .busy-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options .idle-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    background-color: #faa81a;
+  }
+  .whole-holder .profile .menu-item:hover .options .idle-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 70px;
+    bottom: 40px;
+    right: 15px;
+  }
+  .whole-holder .profile .menu-item:hover .options .idle-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options p {
+    margin-left: 5px;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .whole-holder .profile .menu-item:hover .options img {
+    height: 22px;
+    width: 22px;
+    -webkit-filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(110%) contrast(103%);
+            filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(110%) contrast(103%);
+  }
+  .whole-holder .profile .menu-item:hover .options p {
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .whole-holder .profile .my-rooms {
+    height: 40%;
+    width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -211,13 +287,13 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .profile-holder .noti .users .holder .user-holder {
-    margin-top: 30px;
+  .whole-holder .profile .my-rooms .room-nav {
+    height: 14%;
     width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -227,90 +303,129 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-bottom: 30px;
   }
-  .profile-holder .noti .users .holder .user-holder img {
-    border-radius: 100%;
+  .whole-holder .profile .my-rooms .room-nav p {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .whole-holder .profile .my-rooms .room-nav .nav {
+    height: 100%;
+    width: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: rgba(255, 255, 255, 0.582);
+    margin-right: 10px;
+  }
+  .whole-holder .profile .my-rooms .room-nav .nav .active {
+    color: white;
+  }
+  .whole-holder .profile .my-rooms .room-nav .nav #arrow {
+    cursor: pointer;
+  }
+  .whole-holder .profile .my-rooms .scrollable {
+    width: 210px;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    overflow-x: scroll;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    will-change: transform;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+  }
+  .whole-holder .profile .my-rooms .scrollable .room {
+    height: 200px;
+    width: 210px;
+    border-radius: 5px;
+    background-color: #1b1b1b;
+    color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whole-holder .profile .my-rooms .scrollable .room .Title {
+    font-size: 20px;
+  }
+  .whole-holder .profile .my-rooms .scrollable.active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  .whole-holder .profile .my-rooms .scrollable::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+  .whole-holder .profile .user-in {
+    height: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whole-holder .profile .user-in img {
     height: 50px;
     width: 50px;
-    border: 2px solid white;
-    cursor: pointer;
+    border-radius: 100%;
+    margin-right: 20px;
   }
-  .profile-holder .noti .users .holder .user-holder .name-holder {
-    cursor: pointer;
-    width: 40%;
-  }
-  .profile-holder .noti .users .holder .user-holder .name-holder h2 {
-    font-family: "Red Hat Text", sans-serif;
-    font-size: 18px;
+  .whole-holder .profile .user-in p {
+    font-size: 16px;
     color: white;
-  }
-  .profile-holder .noti .users .holder .user-holder .follow-BTN {
-    margin-left: 5px;
-    height: 38px;
-    width: 45px;
-    border: 1px solid white;
-    border-radius: 5px;
-    color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0px 10px 0px 10px;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    cursor: pointer;
-    -webkit-transition: background 0.1s ease-in;
-    transition: background 0.1s ease-in;
-  }
-  .profile-holder .noti .users .holder .user-holder .follow-BTN p {
-    display: none;
-  }
-  .profile-holder .noti .users .holder .user-holder .following-BTN {
-    margin-left: 5px;
-    height: 38px;
-    width: 45px;
-    border: 1px solid white;
-    border-radius: 5px;
-    color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0px 10px 0px 10px;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    background-color: #0096ff;
-    cursor: pointer;
-    -webkit-transition: background 0.1s ease-in;
-    transition: background 0.1s ease-in;
-  }
-  .profile-holder .noti .users .holder .user-holder .following-BTN p {
-    display: none;
-  }
-  .profile-holder .noti .users .holder .user-holder .follow-BTN:hover {
-    background-color: #0096ff;
-  }
-  .profile-holder .noti .users .holder .user-holder p {
-    font-size: 20px;
-    font-family: "Red Hat Text", sans-serif;
     font-weight: 500;
-    color: white;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .profile-holder {
+  .whole-holder {
+    height: 100vh;
+    width: 25%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 25%;
-    height: 100vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .whole-holder .profile {
+    height: 80%;
+    width: 75%;
+    border-radius: 15px;
+    background-color: #212224ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -318,195 +433,388 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.123);
+  }
+  .whole-holder .profile .dashboardTitle {
+    height: 15%;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+  }
+  .whole-holder .profile .dashboardTitle p {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .whole-holder .profile .menu {
+    border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+    height: 35%;
+    width: 85%;
+  }
+  .whole-holder .profile .menu .title {
+    height: 12%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 15px;
+  }
+  .whole-holder .profile .menu .title p {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .whole-holder .profile .menu .menu-item {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    position: relative;
+  }
+  .whole-holder .profile .menu img {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
+            filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu #logoutLogo {
+    margin-left: 20px;
+  }
+  .whole-holder .profile .menu p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .whole-holder .profile .menu .options {
+    display: none;
+  }
+  .whole-holder .profile .menu-item:hover {
+    background-color: #1d1c1c;
+  }
+  .whole-holder .profile .menu-item:hover #statusPara {
+    display: none;
+  }
+  .whole-holder .profile .menu-item:hover .options {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .whole-holder .profile .menu-item:hover .options .online-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: #0096ff;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+  }
+  .whole-holder .profile .menu-item:hover .options .online-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 70px;
+    bottom: 40px;
+    right: 135px;
+  }
+  .whole-holder .profile .menu-item:hover .options .online-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options .offline-circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    border: 4px solid #6e7985;
+    background-color: #111213ff;
+  }
+  .whole-holder .profile .menu-item:hover .options .offline-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 70px;
+    bottom: 40px;
+    right: 95px;
+  }
+  .whole-holder .profile .menu-item:hover .options .offline-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options .busy-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    background-color: #fd4d4d;
+  }
+  .whole-holder .profile .menu-item:hover .options .busy-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 55px;
+    color: white;
+    border-radius: 2px;
+    display: none;
+    bottom: 40px;
+    right: 60px;
+  }
+  .whole-holder .profile .menu-item:hover .options .busy-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options .idle-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    background-color: #faa81a;
+  }
+  .whole-holder .profile .menu-item:hover .options .idle-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 70px;
+    bottom: 40px;
+    right: 15px;
+  }
+  .whole-holder .profile .menu-item:hover .options .idle-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options p {
+    margin-left: 5px;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .whole-holder .profile .menu-item:hover .options img {
+    height: 22px;
+    width: 22px;
+    -webkit-filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(110%) contrast(103%);
+            filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(110%) contrast(103%);
+  }
+  .whole-holder .profile .menu-item:hover .options p {
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .whole-holder .profile .my-rooms {
+    height: 40%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whole-holder .profile .my-rooms .room-nav {
+    height: 14%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-bottom: 30px;
   }
-  .profile-holder .profile {
-    margin-top: 10vh;
-    background-color: #28303b;
-    border-radius: 5px;
-    width: 85%;
-    height: 21%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .profile-holder .profile .upper-profile {
-    height: 55%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow: hidden;
-  }
-  .profile-holder .profile .upper-profile .left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
-    width: 35%;
-  }
-  .profile-holder .profile .upper-profile .left .image-holder {
-    height: 60px;
-    width: 60px;
-    border-radius: 100%;
-    overflow: hidden;
-  }
-  .profile-holder .profile .upper-profile .left .image-holder .image {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .profile-holder .profile .upper-profile .right {
-    color: white;
-    word-wrap: break-word;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100%;
-    width: 62%;
-  }
-  .profile-holder .profile .upper-profile .right .name {
-    font-family: "Red Hat Text", sans-serif;
-    font-weight: 900;
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  .profile-holder .profile .upper-profile .right .email {
-    display: block;
-    opacity: 0.7;
+  .whole-holder .profile .my-rooms .room-nav p {
+    color: rgba(255, 255, 255, 0.644);
     font-size: 14px;
-    font-family: "Red Hat Text", sans-serif;
+    margin-left: 10px;
   }
-  .profile-holder .profile .lower-profile {
+  .whole-holder .profile .my-rooms .room-nav .nav {
+    height: 100%;
+    width: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: rgba(255, 255, 255, 0.582);
+    margin-right: 10px;
+  }
+  .whole-holder .profile .my-rooms .room-nav .nav .active {
+    color: white;
+  }
+  .whole-holder .profile .my-rooms .room-nav .nav #arrow {
+    cursor: pointer;
+  }
+  .whole-holder .profile .my-rooms .scrollable {
+    width: 240px;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    overflow-x: scroll;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    will-change: transform;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+  }
+  .whole-holder .profile .my-rooms .scrollable .room {
+    height: 200px;
+    width: 240px;
+    border-radius: 5px;
+    background-color: #1b1b1b;
+    color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whole-holder .profile .my-rooms .scrollable .room .Title {
+    font-size: 20px;
+  }
+  .whole-holder .profile .my-rooms .scrollable::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+  .whole-holder .profile .user-in {
+    height: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whole-holder .profile .user-in img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .user-in p {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+  }
+  .whole-holder .profile .users {
     height: 45%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn {
-    width: 37%;
-    height: 45px;
-    border-radius: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
-    background-color: #393e41;
-    color: white;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    font-size: 15px;
-    cursor: pointer;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content {
-    text-align: center;
-    display: none;
-    position: absolute;
-    top: 40px;
-    background-color: #393e41;
-    min-width: 100%;
-    border-radius: 0px 0px 5px 5px;
-    z-index: 1;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p {
-    cursor: pointer;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p:hover {
-    color: #0096ff;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn:hover .status-dropdown-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    height: 160px;
-  }
-  .profile-holder .noti {
-    background-color: #28303b;
-    border-radius: 5px;
-    width: 85%;
-    height: 57%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 8vh;
-    color: rgba(255, 255, 255, 0.534);
-    text-align: center;
-  }
-  .profile-holder .noti .dashboard {
-    height: 12%;
-    color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
-    font-family: "Red Hat Text", sans-serif;
-    font-size: 20px;
-  }
-  .profile-holder .noti .users {
-    height: 88%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .profile-holder .noti .users .holder {
+  .whole-holder .profile .users .holder {
     width: 90%;
     height: 90%;
     overflow: auto;
@@ -518,12 +826,10 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .profile-holder .noti .users .holder .user-holder {
+  .whole-holder .profile .users .holder .user-holder {
     margin-top: 30px;
     width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 65px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -534,34 +840,24 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .profile-holder .noti .users .holder .user-holder a {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-decoration: none;
-    margin-right: 5px;
-  }
-  .profile-holder .noti .users .holder .user-holder a img {
+  .whole-holder .profile .users .holder .user-holder img {
     border-radius: 100%;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
+    margin-right: 0px;
     border: 2px solid white;
   }
-  .profile-holder .noti .users .holder .user-holder h2 {
+  .whole-holder .profile .users .holder .user-holder .name-holder {
+    width: 35%;
+  }
+  .whole-holder .profile .users .holder .user-holder .name-holder h2 {
     font-family: "Red Hat Text", sans-serif;
     font-size: 18px;
     color: white;
   }
-  .profile-holder .noti .users .holder .user-holder .follow-BTN {
-    margin-left: 5px;
+  .whole-holder .profile .users .holder .user-holder .follow-BTN {
     height: 38px;
-    width: 60px;
+    width: 50px;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
@@ -579,13 +875,14 @@
     -webkit-transition: background 0.1s ease-in;
     transition: background 0.1s ease-in;
   }
-  .profile-holder .noti .users .holder .user-holder .follow-BTN p {
-    display: none;
+  .whole-holder .profile .users .holder .user-holder .follow-BTN p {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
   }
-  .profile-holder .noti .users .holder .user-holder .following-BTN {
-    margin-left: 5px;
+  .whole-holder .profile .users .holder .user-holder .following-BTN {
     height: 38px;
-    width: 60px;
+    width: 50px;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
@@ -604,64 +901,33 @@
     -webkit-transition: background 0.1s ease-in;
     transition: background 0.1s ease-in;
   }
-  .profile-holder .noti .users .holder .user-holder .following-BTN p {
-    display: none;
+  .whole-holder .profile .users .holder .user-holder .following-BTN p {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
   }
-  .profile-holder .noti .users .holder .user-holder .follow-BTN:hover {
+  .whole-holder .profile .users .holder .user-holder .follow-BTN:hover {
     background-color: #0096ff;
   }
-  .profile-holder .noti .users .holder .user-holder p {
+  .whole-holder .profile .users .holder .user-holder p {
     font-size: 20px;
     font-family: "Red Hat Text", sans-serif;
     font-weight: 500;
     color: white;
+  }
+  .whole-holder .profile .users .holder::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .profile-holder {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 22%;
+  .whole-holder {
     height: 100vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .profile-holder .profile {
-    margin-top: 10vh;
-    background-color: #28303b;
-    border-radius: 5px;
-    width: 85%;
-    height: 20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .profile-holder .profile .upper-profile {
-    height: 65%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow: hidden;
-  }
-  .profile-holder .profile .upper-profile .left {
+    width: 22%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -671,52 +937,107 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100%;
-    width: 35%;
   }
-  .profile-holder .profile .upper-profile .left .image-holder {
-    height: 80px;
-    width: 80px;
-    border-radius: 100%;
-    overflow: hidden;
+  .whole-holder .profile {
+    height: 80%;
+    width: 72%;
+    margin-top: 50px;
+    border-radius: 15px;
+    background-color: #212224ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.123);
   }
-  .profile-holder .profile .upper-profile .left .image-holder .image {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .profile-holder .profile .upper-profile .right {
+  .whole-holder .profile .dashboardTitle {
+    height: 15%;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: white;
-    word-wrap: break-word;
+    border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+  }
+  .whole-holder .profile .dashboardTitle p {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .whole-holder .profile .menu {
+    border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+    height: 35%;
+    width: 85%;
+  }
+  .whole-holder .profile .menu .title {
+    height: 12%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100%;
-    width: 62%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 15px;
   }
-  .profile-holder .profile .upper-profile .right .name {
-    font-family: "Red Hat Text", sans-serif;
-    font-weight: 900;
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  .profile-holder .profile .upper-profile .right .email {
-    display: block;
-    opacity: 0.7;
+  .whole-holder .profile .menu .title p {
+    color: rgba(255, 255, 255, 0.644);
     font-size: 14px;
-    font-family: "Red Hat Text", sans-serif;
+    margin-left: 10px;
   }
-  .profile-holder .profile .lower-profile {
-    height: 35%;
+  .whole-holder .profile .menu .menu-item {
+    height: 50px;
     width: 100%;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    position: relative;
+  }
+  .whole-holder .profile .menu img {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
+            filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu #logoutLogo {
+    margin-left: 20px;
+  }
+  .whole-holder .profile .menu p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .whole-holder .profile .menu .options {
+    display: none;
+  }
+  .whole-holder .profile .menu-item:hover {
+    background-color: #1d1c1c;
+  }
+  .whole-holder .profile .menu-item:hover #statusPara {
+    display: none;
+  }
+  .whole-holder .profile .menu-item:hover .options {
+    width: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -727,74 +1048,42 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .profile-holder .profile .lower-profile .status-select-btn {
-    width: 30%;
-    height: 48px;
-    border-radius: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
-    background-color: #393e41;
-    color: white;
+  .whole-holder .profile .menu-item:hover .options .online-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: #0096ff;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+  }
+  .whole-holder .profile .menu-item:hover .options .online-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content {
-    text-align: center;
-    display: none;
-    position: absolute;
-    top: 40px;
-    background-color: #393e41;
-    min-width: 100%;
-    border-radius: 0px 0px 5px 5px;
-    z-index: 1;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p {
-    cursor: pointer;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn .status-dropdown-content p:hover {
-    color: #0096ff;
-  }
-  .profile-holder .profile .lower-profile .status-select-btn:hover .status-dropdown-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    height: 160px;
-  }
-  .profile-holder .noti {
-    background-color: #28303b;
-    border-radius: 5px;
-    width: 85%;
-    height: 58%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 8vh;
-    color: rgba(255, 255, 255, 0.534);
-    text-align: center;
-  }
-  .profile-holder .noti .dashboard {
-    height: 12%;
     color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 70px;
+    bottom: 40px;
+    right: 135px;
+  }
+  .whole-holder .profile .menu-item:hover .options .online-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options .offline-circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -804,25 +1093,120 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
-    font-family: "Red Hat Text", sans-serif;
-    font-size: 20px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    border: 4px solid #6e7985;
+    background-color: #111213ff;
   }
-  .profile-holder .noti .users {
-    height: 88%;
-    width: 100%;
+  .whole-holder .profile .menu-item:hover .options .offline-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 70px;
+    bottom: 40px;
+    right: 95px;
+  }
+  .whole-holder .profile .menu-item:hover .options .offline-circle:hover .pop-up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
   }
-  .profile-holder .noti .users .holder {
+  .whole-holder .profile .menu-item:hover .options .busy-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    background-color: #fd4d4d;
+  }
+  .whole-holder .profile .menu-item:hover .options .busy-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 55px;
+    color: white;
+    border-radius: 2px;
+    display: none;
+    bottom: 40px;
+    right: 60px;
+  }
+  .whole-holder .profile .menu-item:hover .options .busy-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options .idle-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+    background-color: #faa81a;
+  }
+  .whole-holder .profile .menu-item:hover .options .idle-circle .pop-up {
+    position: absolute;
+    background-color: #2c2f33;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 2px;
+    display: none;
+    min-width: 70px;
+    bottom: 40px;
+    right: 15px;
+  }
+  .whole-holder .profile .menu-item:hover .options .idle-circle:hover .pop-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 35px;
+  }
+  .whole-holder .profile .menu-item:hover .options p {
+    margin-left: 5px;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+  }
+  .whole-holder .profile .menu-item:hover .options img {
+    height: 22px;
+    width: 22px;
+    -webkit-filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(110%) contrast(103%);
+            filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(110%) contrast(103%);
+  }
+  .whole-holder .profile .menu-item:hover .options p {
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .whole-holder .profile .my-rooms {
+    height: 40%;
     width: 85%;
-    height: 90%;
-    overflow: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -830,11 +1214,13 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .profile-holder .noti .users .holder .user-holder {
-    margin-top: 30px;
+  .whole-holder .profile .my-rooms .room-nav {
+    height: 14%;
     width: 100%;
-    height: 65px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -844,93 +1230,104 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-bottom: 30px;
   }
-  .profile-holder .noti .users .holder .user-holder a {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+  .whole-holder .profile .my-rooms .room-nav p {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .whole-holder .profile .my-rooms .room-nav .nav {
+    height: 100%;
+    width: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-decoration: none;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: rgba(255, 255, 255, 0.582);
+    margin-right: 10px;
   }
-  .profile-holder .noti .users .holder .user-holder a img {
-    border-radius: 100%;
-    height: 65px;
-    width: 65px;
-    margin-right: 0px;
-    border: 2px solid white;
-  }
-  .profile-holder .noti .users .holder .user-holder .name-holder {
-    width: 35%;
-  }
-  .profile-holder .noti .users .holder .user-holder .name-holder h2 {
-    font-family: "Red Hat Text", sans-serif;
-    font-size: 18px;
+  .whole-holder .profile .my-rooms .room-nav .nav .active {
     color: white;
   }
-  .profile-holder .noti .users .holder .user-holder .follow-BTN {
-    height: 38px;
-    width: 90px;
-    border: 1px solid white;
-    border-radius: 5px;
-    color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0px 10px 0px 10px;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+  .whole-holder .profile .my-rooms .room-nav .nav #arrow {
     cursor: pointer;
-    -webkit-transition: background 0.1s ease-in;
-    transition: background 0.1s ease-in;
   }
-  .profile-holder .noti .users .holder .user-holder .follow-BTN p {
-    display: block;
-    font-size: 18px;
-    font-weight: 600;
+  .whole-holder .profile .my-rooms .scrollable {
+    width: 240px;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    overflow-x: scroll;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    will-change: transform;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
   }
-  .profile-holder .noti .users .holder .user-holder .following-BTN {
-    height: 38px;
-    width: 90px;
-    border: 1px solid white;
+  .whole-holder .profile .my-rooms .scrollable .room {
+    height: 200px;
+    width: 240px;
     border-radius: 5px;
+    background-color: #1b1b1b;
     color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0px 10px 0px 10px;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    background-color: #0096ff;
-    cursor: pointer;
-    -webkit-transition: background 0.1s ease-in;
-    transition: background 0.1s ease-in;
   }
-  .profile-holder .noti .users .holder .user-holder .following-BTN p {
-    display: block;
-    font-size: 18px;
-    font-weight: 600;
-  }
-  .profile-holder .noti .users .holder .user-holder .follow-BTN:hover {
-    background-color: #0096ff;
-  }
-  .profile-holder .noti .users .holder .user-holder p {
+  .whole-holder .profile .my-rooms .scrollable .room .Title {
     font-size: 20px;
-    font-family: "Red Hat Text", sans-serif;
-    font-weight: 500;
+  }
+  .whole-holder .profile .my-rooms .scrollable.active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  .whole-holder .profile .my-rooms .scrollable::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+  .whole-holder .profile .user-in {
+    height: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whole-holder .profile .user-in img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .user-in p {
+    font-size: 16px;
     color: white;
+    font-weight: 500;
   }
 }
 /*# sourceMappingURL=ProfileBar.css.map */

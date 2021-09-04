@@ -158,7 +158,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #28303b;
+    background-color: #212224ff;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -230,7 +230,7 @@
     border-radius: 50px;
     font-size: 15px;
     padding: 0px 15px 0px 15px;
-    background-color: #384357;
+    background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
   .feed-section .bottom-section .scroll .link .room-holder .answered {
@@ -257,7 +257,7 @@
     height: 24px;
     width: 90px;
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #0096ff;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend {
@@ -266,7 +266,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #28303b;
+    background-color: white;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -290,6 +290,7 @@
     margin-left: 60px;
     margin-right: 60px;
     font-family: "Red Hat Text", sans-serif;
+    color: black;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Title {
     font-size: 22px;
@@ -338,7 +339,7 @@
     border-radius: 50px;
     font-size: 15px;
     padding: 0px 15px 0px 15px;
-    background-color: #384357;
+    background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
@@ -364,7 +365,7 @@
     height: 22px;
     width: 90px;
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #0096ff;
   }
   .feed-section .bottom-section .scroll::-webkit-scrollbar {
@@ -535,7 +536,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #28303b;
+    background-color: #212224ff;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -607,7 +608,7 @@
     border-radius: 50px;
     font-size: 15px;
     padding: 0px 15px 0px 15px;
-    background-color: #384357;
+    background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
   .feed-section .bottom-section .scroll .link .room-holder .answered {
@@ -634,7 +635,7 @@
     height: 25px;
     width: 100px;
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #0096ff;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend {
@@ -643,7 +644,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #68c5db;
+    background-color: white;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -667,6 +668,7 @@
     margin-left: 60px;
     margin-right: 60px;
     font-family: "Red Hat Text", sans-serif;
+    color: black;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Title {
     font-size: 22px;
@@ -715,7 +717,7 @@
     border-radius: 50px;
     font-size: 15px;
     padding: 0px 15px 0px 15px;
-    background-color: #384357;
+    background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
@@ -741,7 +743,7 @@
     height: 25px;
     width: 100px;
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #0096ff;
   }
 }
@@ -906,7 +908,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #28303b;
+    background-color: #212224ff;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -978,7 +980,7 @@
     border-radius: 50px;
     font-size: 15px;
     padding: 0px 15px 0px 15px;
-    background-color: #384357;
+    background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
   .feed-section .bottom-section .scroll .link .room-holder .answered {
@@ -1003,7 +1005,7 @@
     margin-right: 20px;
     height: 25px;
     width: 110px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #0096ff;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend {
@@ -1012,7 +1014,7 @@
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    background-color: #68c5db;
+    background-color: white;
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
@@ -1036,6 +1038,7 @@
     margin-left: 60px;
     margin-right: 60px;
     font-family: "Red Hat Text", sans-serif;
+    color: black;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Title {
     font-size: 22px;
@@ -1084,7 +1087,7 @@
     border-radius: 50px;
     font-size: 15px;
     padding: 0px 15px 0px 15px;
-    background-color: #384357;
+    background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
@@ -1109,7 +1112,7 @@
     margin-right: 20px;
     height: 25px;
     width: 110px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #0096ff;
   }
 }

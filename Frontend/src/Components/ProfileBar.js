@@ -8,7 +8,11 @@ import { Link } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import DoneAllIcon from '@material-ui/icons/DoneAll';
-
+import statusLogo from '../svg/status.png'
+import homeLogo from '../svg/home.png'
+import logoutLogo from '../svg/logout.png'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 function ProfileBar({ profileToParent, search }) {
     const [flag, setFlag] = useState(false) //Whenever user follows another user flag is set and state is passed to navbar so it knows when to refresh data
@@ -38,7 +42,11 @@ function ProfileBar({ profileToParent, search }) {
     const userSearch = current_page === "" && searching //Search display is true if user is on home page and searching
     const [users, setUsers] = useState('')
     const [following, setFollowing] = useState()
+    const[allRooms,setAllRooms] = useState([])
+    const [displayStatus, setDisplayStaus] = useState(false)
     const [status, setStatus] = useState('')
+    const [left, setLeft] = useState()
+    const [right, setRight] = useState()
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const breakpoint = 1200;
     const upper_breakpoint_laptop = 1800;
@@ -105,6 +113,16 @@ function ProfileBar({ profileToParent, search }) {
 
         if(isMounted){
             getUsers()
+
+            axios({
+                method: 'GET',
+                url: `https://fishbowl-heroku.herokuapp.com/chat/get/${info.name}`,
+                headers: { "x-auth-token": `${token}` }
+            }).then((res) => {
+                if(isMounted){
+                    setAllRooms(res.data.reverse()) //Reversing order of rooms before we set variable, so that newest is at the top
+                }
+            })
 
             const interval = setInterval(() => { //Set interval will allow user to to see status updates
                     getUsers()
@@ -201,84 +219,108 @@ function ProfileBar({ profileToParent, search }) {
         })
     }
 
-    
 
 
     if (screenWidth >= breakpoint) {
-
-        return (
-            <div className="profile-holder">
+        return(
+            <div className="whole-holder">
                 <div className="profile">
-                    <div className="upper-profile">
-                        <div className="left">
-                            <Link to={{ pathname: `/People/${info.name}`, state: { user: user } }}>
-                                <div className="image-holder">
-                                    <img src={info.image} className="image" referrerpolicy="no-referrer" alt=""></img>
-                                </div>
-                            </Link>
-                        </div>
-                        <div className="right">
-                            <p className="name">{info.name}</p>
-                            <p className="email">@{info.email}</p>
-                        </div>
+                    <div className="dashboardTitle">
+                        <p>Fishbowl.Dashboard</p>
                     </div>
-                    <div className="lower-profile">
-                        <GoogleLogout
-                            clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
-                            buttonText="Logout"
-                            onLogoutSuccess={()=> history.go(0)}
-                        >
-                        </GoogleLogout>
-
-                        <div className="status-select-btn">
-                            <span>{status.length === 0 ? `choose status` : status}</span>
-
-                            <div className="status-dropdown-content">
-                                <p onClick={() => updateStatus("Online")}>
-                                    Online
-                                </p>
-                                <p onClick={() => updateStatus("Offline")}>Offline</p>
-                                <p onClick={() => updateStatus("Idle")}>Idle</p>
-                                <p onClick={() => updateStatus("Busy")}>Busy</p>
+                            <div className="menu">
+                               <div className="title">
+                                   <p>MENU</p>
+                               </div>
+                               <div className="menu-item" onClick={()=>history.push("/")}>
+                                <img src={homeLogo} id="profile-img" alt=""/>
+                                <p>Home</p>
+                               </div>
+                               <div className="menu-item" onClick={()=>setDisplayStaus(!displayStatus)}>
+                                   <img src={statusLogo} alt=""/>
+                                   <p id="statusPara">{status.length === 0 ? `choose status` : status}</p>
+                                   <div className="options">
+                                       <div className="online-circle" onClick={() => updateStatus("Online")}>
+                                            <div className="pop-up">online</div>
+                                       </div>
+                                       <div className="offline-circle" onClick={() => updateStatus("Offline")}>
+                                            <div className="pop-up">offline</div>
+                                       </div>
+                                       <div className="busy-circle" onClick={() => updateStatus("Busy")}>
+                                            <div className="pop-up">busy</div>
+                                       </div>
+                                       <div className="idle-circle" onClick={() => updateStatus("Idle")}>
+                                            <div className="pop-up">idle</div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <GoogleLogout
+                                    clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
+                                    buttonText="Logout"
+                                    render={renderProps => (
+                                        <div onClick={renderProps.onClick} className="menu-item">
+                                            <img src={logoutLogo} id="logoutLogo"/>
+                                            <p>Logout</p>
+                                        </div>
+                                      )}
+                                    onLogoutSuccess={()=> history.go(0)}
+                                >
+                                </GoogleLogout>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="noti">
-                    <div className="dashboard">
-                        <p>Dashboard Panel</p>
-                    </div>
-                    {dashboard ? <h1>Search for friends and this changes</h1> : userSearch ? (
-                        <div className="users">
-                            <div className="holder">
-                                {users.length === 0 ? <h1>Empty</h1> : users.filter((eachUser) => {
-                                    return eachUser.username !== info.name && eachUser.username.toUpperCase().includes(profileSearch.toUpperCase())
-                                }).map((user, index) => {
-                                    return (
-                                        <div className="user-holder" key={index}>
-                                            <img src={user.image} alt="" onClick={()=> redirectToUser([user.name, user])}/>
-                                            <div className="name-holder" onClick={()=> redirectToUser([user.name, user])}>
-                                                <h2>{user.username}</h2>
-                                            </div>
-                                            <div className={following.includes(user.username) ? "following-BTN" : "follow-BTN"} onClick={() => requests(user.username, !following.includes(user.username))}>
-                                                {screenWidth < upper_breakpoint_laptop? following.includes(user.username) ? <DoneAllIcon/> :<PersonAddIcon id="" />  : following.includes(user.username) ? null : <PersonAddIcon id="" />}
-                                                {following.includes(user.username) ? <p>Following</p> : <p>Follow</p>}
+                            {dashboard ? (
+                                <>
+                                    <div className="my-rooms">
+                                        <div className="room-nav">
+                                            <p>MY ROOMS</p>
+                                            <div className="nav">
+                                                <ChevronLeftIcon style={{ fontSize: 21 }} id="arrow" className={left? "active" : null} />
+                                                <ChevronRightIcon style={{ fontSize: 21 }}  id="arrow" className={right? "active" : null} />
                                             </div>
                                         </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    ) : chatroom ? <h1>Chat Room</h1> : null}
-
+                                        <div className="scrollable">
+                                            {allRooms.map((room)=>(
+                                                <div className="room" onClick={()=> history.push({ pathname: `/Chat/${room._id}`, state: { room } })}>
+                                                    <p className="Title">{room.Title}</p>
+                                                    <p className="Question">{room.Question}</p>
+                                                    <p>{room.CreationDate}</p>
+                                                    <p>{room.Messages.length}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>  
+                                    <div className="user-in">
+                                        <img src={info.image}/>
+                                        <p>{info.name}</p>
+                                    </div>
+                                </>
+                            ): userSearch? (
+                                <div className="users">
+                                    <div className="holder">
+                                        {users.length === 0 ? <h1>Empty</h1> : users.filter((eachUser) => {
+                                            return eachUser.username !== info.name && eachUser.username.toUpperCase().includes(profileSearch.toUpperCase())
+                                        }).map((user, index) => {
+                                            return (
+                                                <div className="user-holder" key={index}>
+                                                    <img src={user.image} alt="" onClick={()=> redirectToUser([user.name, user])}/>
+                                                    <div className="name-holder" onClick={()=> redirectToUser([user.name, user])}>
+                                                        <h2>{user.username}</h2>
+                                                    </div>
+                                                    <div className={following.includes(user.username) ? "following-BTN" : "follow-BTN"} onClick={() => requests(user.username, !following.includes(user.username))}>
+                                                        {following.includes(user.username) ? <DoneAllIcon/> : null}
+                                                        {following.includes(user.username) ? null: <p>Follow</p>}
+                                                    </div>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            ): chatroom? <h1>Chatting</h1>: null}
                 </div>
             </div>
         )
-    } else{
-        return (
-           null
-        )
     }
+
+    
 }
 
 export default ProfileBar

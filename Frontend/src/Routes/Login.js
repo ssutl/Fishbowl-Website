@@ -100,6 +100,18 @@ function Login() {
                                     clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
                                     onSuccess={responseSuccessGoogle}
                                     cookiePolicy={'single_host_origin'}
+                                    render={renderProps => (
+                                        <button onClick={renderProps.onClick} style={{
+                                                backgroundColor: "#1F1F1F",
+                                                height: "50px",
+                                                width: "60%",
+                                                borderRadius: "5px",
+                                                outline:"none",
+                                                border: "none",
+                                                cursor:"pointer",
+                                                color:"white"
+                                        }}>Login With Google</button>
+                                      )}
                                     isSignedIn={true}
                                 >Login With Google</GoogleLogin>
                             </div>

@@ -1,248 +1,345 @@
 @import "./Breakpoints.scss";
 @import "./Theme.scss";
 @include breakpoint-mixin("laptop") {
-  .profile-holder {
-    display: flex;
-    width: 27%;
+  .whole-holder {
     height: 100vh;
+    width: 27%;
+    display: flex;
     align-items: center;
-    // overflow: hidden;
-    flex-direction: column;
-    justify-content: space-between; // position: fixed;
-    // background-color: aqua;
+    justify-content: center;
 
     .profile {
-      margin-top: 10vh;
+      height: 80%;
+      width: 75%;
+      border-radius: 15px;
       background-color: $secondary-background;
-      border-radius: 5px;
-      width: 90%;
-      height: 21%;
       display: flex;
+      align-items: center;
       flex-direction: column;
-      // overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.123);
 
-      .upper-profile {
-        height: 55%;
-        width: 100%;
+      .dashboardTitle {
+        height: 15%;
+        width: 80%;
         display: flex;
-        align-items: center;
-        overflow: hidden;
-        // background-color: teal;
-        .left {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-          width: 35%;
-          // background-color: yellow;
-
-          .image-holder {
-            height: 60px;
-            width: 60px;
-            border-radius: 100%;
-            overflow: hidden;
-
-            .image {
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
-            }
-          }
-        }
-        .right {
-          // background-color: rebeccapurple;
-          color: white;
-          word-wrap: break-word;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          height: 100%;
-          width: 62%;
-          .name {
-            font-family: "Red Hat Text", sans-serif;
-            font-weight: 900;
-            font-size: 20px;
-            margin-bottom: 5px;
-          }
-          .email {
-            display: block;
-            opacity: 0.7;
-            font-size: 14px;
-            font-family: "Red Hat Text", sans-serif;
-          }
-        }
-      }
-      .lower-profile {
-        height: 45%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        // background-color: $highlight;
-
-        .status-select-btn {
-          width: 37%;
-          height: 45px;
-          border-radius: 5px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          background-color: #393e41;
-          color: white;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          font-size: 15px;
-          cursor: pointer;
-
-          .status-dropdown-content {
-            text-align: center;
-            display: none;
-            position: absolute;
-            top: 40px;
-            background-color: #393e41;
-            min-width: 100%;
-            border-radius: 0px 0px 5px 5px;
-            z-index: 1;
-
-            p {
-              cursor: pointer;
-            }
-
-            p:hover {
-              color: $highlight;
-            }
-          }
-        }
-
-        .status-select-btn:hover .status-dropdown-content {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          height: 160px;
-        }
-      }
-    }
-    .noti {
-      background-color: $secondary-background;
-      border-radius: 5px;
-      width: 90%;
-      height: 57%;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 8vh;
-      color: rgba(255, 255, 255, 0.534);
-      text-align: center;
-
-      .dashboard {
-        height: 12%;
-        // background-color: aqua;
+        align-items: flex-end;
+        justify-content: center;
         color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.295);
-        font-family: "Red Hat Text", sans-serif;
-        font-size: 20px;
+        border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+        // background-color: orange;
+
+        p {
+          font-size: 22px;
+          margin-bottom: 20px;
+        }
       }
 
-      .users {
-        height: 88%;
-        width: 100%;
-        // background-color: aqua;
-        display: flex;
-        justify-content: center;
+      .menu {
+        border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+        height: 35%;
+        width: 85%;
+        // background-color: teal;
 
-        .holder {
-          width: 90%;
-          height: 90%;
-          // background-color: $highlight;
-          overflow: auto;
+        .title {
+          height: 12%;
+          // background-color: saddlebrown;
+          width: 100%;
           display: flex;
-          flex-direction: column;
+          align-items: flex-end;
+          margin-bottom: 15px;
 
-          .user-holder {
-            margin-top: 30px;
-            width: 100%;
-            height: fit-content;
-            // background-color: green;
+          p {
+            color: rgba(255, 255, 255, 0.644);
+            font-size: 14px;
+            margin-left: 10px;
+          }
+        }
+
+        .menu-item {
+          height: 50px;
+          width: 100%;
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+          color: white;
+          transition: 0.3s ease-in;
+          cursor: pointer;
+          position: relative;
+        }
+
+        img {
+          height: 20px;
+          width: 20px;
+          filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg)
+            brightness(105%) contrast(103%);
+          margin-left: 15px;
+          margin-right: 20px;
+          // opacity: 0.4;
+        }
+
+        #logoutLogo {
+          margin-left: 20px;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .options {
+          display: none;
+        }
+      }
+
+      .menu-item:hover {
+        background-color: #1d1c1c;
+
+        #statusPara {
+          display: none;
+        }
+
+        .options {
+          // background-color: red;
+          width: 70%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .online-circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            background-color: $highlight;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              color: white;
+              border-radius: 2px;
+              display: none;
+              min-width: 70px;
+              bottom: 40px;
+              right: 135px;
+            }
+          }
+
+          .online-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          .offline-circle {
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            border: 4px solid #6e7985;
+            background-color: $background;
 
-            img {
-              border-radius: 100%;
-              height: 50px;
-              width: 50px;
-              border: 2px solid white;
-              cursor: pointer;
-            }
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
-            .name-holder {
-              // background-color: royalblue;
-              cursor: pointer;
-              width: 40%;
-              h2 {
-                font-family: "Red Hat Text", sans-serif;
-                font-size: 18px;
-                color: white;
-              }
-            }
-
-            .follow-BTN {
-              margin-left: 5px;
-              height: 38px;
-              width: 45px;
-              border: 1px solid white;
-              border-radius: 5px;
               color: white;
-              display: flex;
-              align-items: center;
-              padding: 0px 10px 0px 10px;
-              justify-content: space-evenly;
-              // background-color: $highlight;
-              cursor: pointer;
-              transition: background 0.1s ease-in;
-
-              p {
-                display: none;
-              }
-            }
-
-            .following-BTN {
-              margin-left: 5px;
-
-              // margin-left: auto;
-              height: 38px;
-              width: 45px;
-              border: 1px solid white;
-              border-radius: 5px;
-              color: white;
-              display: flex;
-              align-items: center;
-              padding: 0px 10px 0px 10px;
-              justify-content: space-evenly;
-              background-color: $highlight;
-
-              cursor: pointer;
-              transition: background 0.1s ease-in;
-
-              p {
-                display: none;
-              }
-            }
-
-            .follow-BTN:hover {
-              background-color: $highlight;
-            }
-
-            p {
-              font-size: 20px;
-              font-family: "Red Hat Text", sans-serif;
-              font-weight: 500;
-              color: white;
+              border-radius: 2px;
+              display: none;
+              min-width: 70px;
+              bottom: 40px;
+              right: 95px;
             }
           }
+
+          .offline-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          .busy-circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            background-color: $negativeBTN;
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              width: 55px;
+              color: white;
+              border-radius: 2px;
+              display: none;
+              bottom: 40px;
+              right: 60px;
+            }
+          }
+
+          .busy-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          .idle-circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            background-color: #faa81a;
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+              color: white;
+              border-radius: 2px;
+              display: none;
+              min-width: 70px;
+              bottom: 40px;
+              right: 15px;
+            }
+          }
+
+          .idle-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          p {
+            margin-left: 5px;
+            display: block;
+            font-weight: 500;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+          }
+
+          img {
+            height: 22px;
+            width: 22px;
+            filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg)
+              brightness(110%) contrast(103%);
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .my-rooms {
+        height: 40%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .room-nav {
+          height: 14%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+
+          p {
+            color: rgba(255, 255, 255, 0.644);
+            font-size: 14px;
+            margin-left: 10px;
+          }
+
+          .nav {
+            height: 100%;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            // background-color: yellowgreen;
+            color: rgba(255, 255, 255, 0.582);
+            margin-right: 10px;
+
+            .active {
+              color: white;
+            }
+
+            #arrow {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .scrollable {
+          // background-color: teal;
+          width: 210px;
+          display: grid;
+          grid-auto-flow: column;
+          gap: 10px;
+          overflow-x: scroll;
+          transition: all 0.2s;
+          transform: scale(0.98);
+          will-change: transform;
+          user-select: none;
+          cursor: pointer;
+
+          .room {
+            height: 200px;
+            width: 210px;
+            border-radius: 5px;
+            background-color: #1b1b1b;
+            color: white;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .Title {
+              font-size: 20px;
+            }
+          }
+        }
+
+        .scrollable.active {
+          cursor: grabbing;
+        }
+
+        .scrollable::-webkit-scrollbar {
+          width: 0;
+          height: 0; /* Remove scrollbar space */
+          background: transparent; /* Optional: just make scrollbar invisible */
+        }
+      }
+
+      .user-in {
+        height: 10%;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 100%;
+          margin-right: 20px;
+        }
+
+        p {
+          font-size: 16px;
+          color: white;
+          font-weight: 500;
         }
       }
     }
@@ -250,412 +347,353 @@
 }
 
 @include breakpoint-mixin("laptop-wide") {
-  .profile-holder {
-    display: flex;
-    width: 25%;
+  .whole-holder {
     height: 100vh;
+    width: 25%;
+    display: flex;
     align-items: center;
-    // overflow: hidden;
-    flex-direction: column;
-    justify-content: space-between; // position: fixed;
-    // background-color: aqua;
+    justify-content: center;
 
     .profile {
-      margin-top: 10vh;
+      height: 80%;
+      width: 75%;
+      border-radius: 15px;
       background-color: $secondary-background;
-      border-radius: 5px;
-      width: 85%;
-      height: 21%;
       display: flex;
+      align-items: center;
       flex-direction: column;
-      // overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.123);
 
-      .upper-profile {
-        height: 55%;
-        width: 100%;
+      .dashboardTitle {
+        height: 15%;
+        width: 80%;
         display: flex;
-        align-items: center;
-        overflow: hidden;
+        align-items: flex-end;
+        justify-content: center;
+        color: white;
+        border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+
+        // background-color: orange;
+
+        p {
+          font-size: 25px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .menu {
+        border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+        height: 35%;
+        width: 85%;
         // background-color: teal;
-        .left {
+
+        .title {
+          height: 12%;
+          // background-color: saddlebrown;
+          width: 100%;
           display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-          width: 35%;
-          // background-color: yellow;
+          align-items: flex-end;
+          margin-bottom: 15px;
 
-          .image-holder {
-            height: 60px;
-            width: 60px;
-            border-radius: 100%;
-            overflow: hidden;
-
-            .image {
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
-            }
+          p {
+            color: rgba(255, 255, 255, 0.644);
+            font-size: 14px;
+            margin-left: 10px;
           }
         }
-        .right {
-          // background-color: rebeccapurple;
-          color: white;
-          word-wrap: break-word;
+
+        .menu-item {
+          height: 50px;
+          width: 100%;
+          margin-bottom: 15px;
           display: flex;
-          justify-content: center;
-          flex-direction: column;
-          height: 100%;
-          width: 62%;
-          .name {
-            font-family: "Red Hat Text", sans-serif;
-            font-weight: 900;
-            font-size: 20px;
-            margin-bottom: 5px;
+          align-items: center;
+          color: white;
+          transition: 0.3s ease-in;
+          cursor: pointer;
+          position: relative;
+        }
+
+        img {
+          height: 20px;
+          width: 20px;
+          filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg)
+            brightness(105%) contrast(103%);
+          margin-left: 15px;
+          margin-right: 20px;
+          // opacity: 0.4;
+        }
+
+        #logoutLogo {
+          margin-left: 20px;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .options {
+          display: none;
+        }
+      }
+
+      .menu-item:hover {
+        background-color: #1d1c1c;
+
+        #statusPara {
+          display: none;
+        }
+
+        .options {
+          // background-color: red;
+          width: 70%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .online-circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            background-color: $highlight;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              color: white;
+              border-radius: 2px;
+              display: none;
+              min-width: 70px;
+              bottom: 40px;
+              right: 135px;
+            }
           }
-          .email {
+
+          .online-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          .offline-circle {
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            border: 4px solid #6e7985;
+            background-color: $background;
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+              color: white;
+              border-radius: 2px;
+              display: none;
+              min-width: 70px;
+              bottom: 40px;
+              right: 95px;
+            }
+          }
+
+          .offline-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          .busy-circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            background-color: $negativeBTN;
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              width: 55px;
+              color: white;
+              border-radius: 2px;
+              display: none;
+              bottom: 40px;
+              right: 60px;
+            }
+          }
+
+          .busy-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          .idle-circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            background-color: #faa81a;
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+              color: white;
+              border-radius: 2px;
+              display: none;
+              min-width: 70px;
+              bottom: 40px;
+              right: 15px;
+            }
+          }
+
+          .idle-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          p {
+            margin-left: 5px;
             display: block;
-            opacity: 0.7;
-            font-size: 14px;
+            font-weight: 500;
+            font-size: 20px;
             font-family: "Red Hat Text", sans-serif;
+            color: white;
+          }
+
+          img {
+            height: 22px;
+            width: 22px;
+            filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg)
+              brightness(110%) contrast(103%);
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 18px;
           }
         }
       }
-      .lower-profile {
-        height: 45%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        // background-color: $highlight;
 
-        .status-select-btn {
-          width: 37%;
-          height: 45px;
-          border-radius: 5px;
+      .my-rooms {
+        height: 40%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .room-nav {
+          height: 14%;
+          width: 100%;
           display: flex;
           align-items: center;
-          justify-content: center;
-          position: relative;
-          background-color: #393e41;
-          color: white;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          font-size: 15px;
-          cursor: pointer;
+          justify-content: space-between;
+          margin-bottom: 30px;
 
-          .status-dropdown-content {
-            text-align: center;
-            display: none;
-            position: absolute;
-            top: 40px;
-            background-color: #393e41;
-            min-width: 100%;
-            border-radius: 0px 0px 5px 5px;
-            z-index: 1;
+          p {
+            color: rgba(255, 255, 255, 0.644);
+            font-size: 14px;
+            margin-left: 10px;
+          }
 
-            p {
+          .nav {
+            height: 100%;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            // background-color: yellowgreen;
+            color: rgba(255, 255, 255, 0.582);
+            margin-right: 10px;
+
+            .active {
+              color: white;
+            }
+
+            #arrow {
               cursor: pointer;
             }
+          }
+        }
 
-            p:hover {
-              color: $highlight;
+        .scrollable {
+          // background-color: teal;
+          width: 240px;
+          display: grid;
+          grid-auto-flow: column;
+          gap: 10px;
+          overflow-x: scroll;
+          transition: all 0.2s;
+          transform: scale(0.98);
+          will-change: transform;
+          user-select: none;
+          cursor: pointer;
+
+          .room {
+            height: 200px;
+            width: 240px;
+            border-radius: 5px;
+            background-color: #1b1b1b;
+            color: white;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .Title {
+              font-size: 20px;
             }
           }
         }
 
-        .status-select-btn:hover .status-dropdown-content {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          height: 160px;
+        .scrollable::-webkit-scrollbar {
+          width: 0;
+          height: 0; /* Remove scrollbar space */
+          background: transparent; /* Optional: just make scrollbar invisible */
         }
       }
-    }
-    .noti {
-      background-color: $secondary-background;
-      border-radius: 5px;
-      width: 85%;
-      height: 57%;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 8vh;
-      color: rgba(255, 255, 255, 0.534);
-      text-align: center;
 
-      .dashboard {
-        height: 12%;
-        // background-color: aqua;
-        color: white;
+      .user-in {
+        height: 10%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.295);
-        font-family: "Red Hat Text", sans-serif;
-        font-size: 20px;
+
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 100%;
+          margin-right: 20px;
+        }
+
+        p {
+          font-size: 16px;
+          color: white;
+          font-weight: 500;
+        }
       }
 
       .users {
-        height: 88%;
+        height: 45%;
         width: 100%;
-        // background-color: aqua;
         display: flex;
         justify-content: center;
 
         .holder {
           width: 90%;
-          height: 90%;
-          // background-color: $highlight;
-          overflow: auto;
-          display: flex;
-          flex-direction: column;
-
-          .user-holder {
-            margin-top: 30px;
-            width: 100%;
-            height: fit-content;
-            // background-color: green;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            a {
-              // background-color: yellow;
-              width: fit-content;
-              display: flex;
-              align-items: center;
-              text-decoration: none;
-              margin-right: 5px;
-              // background-color: yellow;
-              img {
-                border-radius: 100%;
-                height: 50px;
-                width: 50px;
-                border: 2px solid white;
-              }
-            }
-
-            h2 {
-              font-family: "Red Hat Text", sans-serif;
-              font-size: 18px;
-              color: white;
-            }
-
-            .follow-BTN {
-              margin-left: 5px;
-              height: 38px;
-              width: 60px;
-              border: 1px solid white;
-              border-radius: 5px;
-              color: white;
-              display: flex;
-              align-items: center;
-              padding: 0px 10px 0px 10px;
-              justify-content: space-evenly;
-              // background-color: $highlight;
-              cursor: pointer;
-              transition: background 0.1s ease-in;
-
-              p {
-                display: none;
-              }
-            }
-
-            .following-BTN {
-              margin-left: 5px;
-
-              // margin-left: auto;
-              height: 38px;
-              width: 60px;
-              border: 1px solid white;
-              border-radius: 5px;
-              color: white;
-              display: flex;
-              align-items: center;
-              padding: 0px 10px 0px 10px;
-              justify-content: space-evenly;
-              background-color: $highlight;
-
-              cursor: pointer;
-              transition: background 0.1s ease-in;
-
-              p {
-                display: none;
-              }
-            }
-
-            .follow-BTN:hover {
-              background-color: $highlight;
-            }
-
-            p {
-              font-size: 20px;
-              font-family: "Red Hat Text", sans-serif;
-              font-weight: 500;
-              color: white;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@include breakpoint-mixin("desktop") {
-  .profile-holder {
-    display: flex;
-    width: 22%;
-    height: 100vh;
-    align-items: center;
-    // overflow: hidden;
-    flex-direction: column;
-    justify-content: space-between; // position: fixed;
-    // background-color: aqua;
-
-    .profile {
-      margin-top: 10vh;
-      background-color: $secondary-background;
-      border-radius: 5px;
-      width: 85%;
-      height: 20%;
-      display: flex;
-      flex-direction: column;
-      // overflow: hidden;
-
-      .upper-profile {
-        height: 65%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-
-        .left {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-          width: 35%;
-          // background-color: yellow;
-
-          .image-holder {
-            height: 80px;
-            width: 80px;
-            border-radius: 100%;
-            overflow: hidden;
-
-            .image {
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
-            }
-          }
-        }
-        .right {
-          // background-color: rebeccapurple;
-          color: white;
-          word-wrap: break-word;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          height: 100%;
-          width: 62%;
-          .name {
-            font-family: "Red Hat Text", sans-serif;
-            font-weight: 900;
-            font-size: 20px;
-            margin-bottom: 5px;
-          }
-          .email {
-            display: block;
-            opacity: 0.7;
-            font-size: 14px;
-            font-family: "Red Hat Text", sans-serif;
-          }
-        }
-      }
-      .lower-profile {
-        height: 35%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        // background-color:$highlight;
-
-        .status-select-btn {
-          width: 30%;
-          height: 48px;
-          border-radius: 5px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          background-color: #393e41;
-          color: white;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          cursor: pointer;
-
-          .status-dropdown-content {
-            text-align: center;
-            display: none;
-            position: absolute;
-            top: 40px;
-            background-color: #393e41;
-            min-width: 100%;
-            border-radius: 0px 0px 5px 5px;
-            z-index: 1;
-
-            p {
-              cursor: pointer;
-            }
-
-            p:hover {
-              color: $highlight;
-            }
-          }
-        }
-
-        .status-select-btn:hover .status-dropdown-content {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          height: 160px;
-        }
-      }
-    }
-    .noti {
-      background-color: $secondary-background;
-      // background-color: palegreen;
-      border-radius: 5px;
-      width: 85%;
-      height: 58%;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 8vh;
-      color: rgba(255, 255, 255, 0.534);
-      text-align: center;
-
-      .dashboard {
-        height: 12%;
-        // background-color: aqua;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.295);
-        font-family: "Red Hat Text", sans-serif;
-        font-size: 20px;
-      }
-
-      .users {
-        height: 88%;
-        width: 100%;
-        // background-color: aqua;
-        display: flex;
-        justify-content: center;
-
-        .holder {
-          width: 85%;
           height: 90%;
           // background-color: $highlight;
           overflow: auto;
@@ -671,20 +709,12 @@
             align-items: center;
             justify-content: space-between;
 
-            a {
-              // background-color: yellow;
-              width: fit-content;
-              display: flex;
-              align-items: center;
-              text-decoration: none;
-              // background-color: yellow;
-              img {
-                border-radius: 100%;
-                height: 65px;
-                width: 65px;
-                margin-right: 0px;
-                border: 2px solid white;
-              }
+            img {
+              border-radius: 100%;
+              height: 45px;
+              width: 45px;
+              margin-right: 0px;
+              border: 2px solid white;
             }
 
             .name-holder {
@@ -700,7 +730,7 @@
             .follow-BTN {
               // margin-left: auto;
               height: 38px;
-              width: 90px;
+              width: 50px;
               border: 1px solid white;
               border-radius: 5px;
               color: white;
@@ -722,7 +752,7 @@
             .following-BTN {
               // margin-left: auto;
               height: 38px;
-              width: 90px;
+              width: 50px;
               border: 1px solid white;
               border-radius: 5px;
               color: white;
@@ -753,6 +783,360 @@
               color: white;
             }
           }
+        }
+
+        .holder::-webkit-scrollbar {
+          width: 0;
+          height: 0; /* Remove scrollbar space */
+          background: transparent; /* Optional: just make scrollbar invisible */
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-mixin("desktop") {
+  .whole-holder {
+    height: 100vh;
+    width: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .profile {
+      height: 80%;
+      width: 72%;
+      margin-top: 50px;
+      border-radius: 15px;
+      background-color: $secondary-background;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border: 1px solid rgba(255, 255, 255, 0.123);
+
+      .dashboardTitle {
+        height: 15%;
+        width: 80%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        color: white;
+        border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+
+        // background-color: orange;
+
+        p {
+          font-size: 25px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .menu {
+        border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+        height: 35%;
+        width: 85%;
+        // background-color: teal;
+
+        .title {
+          height: 12%;
+          // background-color: saddlebrown;
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+          margin-bottom: 15px;
+
+          p {
+            color: rgba(255, 255, 255, 0.644);
+            font-size: 14px;
+            margin-left: 10px;
+          }
+        }
+
+        .menu-item {
+          height: 50px;
+          width: 100%;
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+          color: white;
+          transition: 0.3s ease-in;
+          cursor: pointer;
+          position: relative;
+        }
+
+        img {
+          height: 20px;
+          width: 20px;
+          filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg)
+            brightness(105%) contrast(103%);
+          margin-left: 15px;
+          margin-right: 20px;
+          // opacity: 0.4;
+        }
+
+        #logoutLogo {
+          margin-left: 20px;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .options {
+          display: none;
+        }
+      }
+
+      .menu-item:hover {
+        background-color: #1d1c1c;
+
+        #statusPara {
+          display: none;
+        }
+
+        .options {
+          // background-color: red;
+          width: 70%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .online-circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            background-color: $highlight;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              color: white;
+              border-radius: 2px;
+              display: none;
+              min-width: 70px;
+              bottom: 40px;
+              right: 135px;
+            }
+          }
+
+          .online-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          .offline-circle {
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            border: 4px solid #6e7985;
+            background-color: $background;
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+              color: white;
+              border-radius: 2px;
+              display: none;
+              min-width: 70px;
+              bottom: 40px;
+              right: 95px;
+            }
+          }
+
+          .offline-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          .busy-circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            background-color: $negativeBTN;
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              width: 55px;
+              color: white;
+              border-radius: 2px;
+              display: none;
+              bottom: 40px;
+              right: 60px;
+            }
+          }
+
+          .busy-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          .idle-circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.2);
+            background-color: #faa81a;
+
+            .pop-up {
+              position: absolute;
+              background-color: #2c2f33;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+              color: white;
+              border-radius: 2px;
+              display: none;
+              min-width: 70px;
+              bottom: 40px;
+              right: 15px;
+            }
+          }
+
+          .idle-circle:hover .pop-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+          }
+
+          p {
+            margin-left: 5px;
+            display: block;
+            font-weight: 500;
+            font-size: 20px;
+            font-family: "Red Hat Text", sans-serif;
+            color: white;
+          }
+
+          img {
+            height: 22px;
+            width: 22px;
+            filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg)
+              brightness(110%) contrast(103%);
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .my-rooms {
+        height: 40%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .room-nav {
+          height: 14%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+
+          p {
+            color: rgba(255, 255, 255, 0.644);
+            font-size: 14px;
+            margin-left: 10px;
+          }
+
+          .nav {
+            height: 100%;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            // background-color: yellowgreen;
+            color: rgba(255, 255, 255, 0.582);
+            margin-right: 10px;
+
+            .active {
+              color: white;
+            }
+
+            #arrow {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .scrollable {
+          // background-color: teal;
+          width: 240px;
+          display: grid;
+          grid-auto-flow: column;
+          gap: 10px;
+          overflow-x: scroll;
+          transition: all 0.2s;
+          transform: scale(0.98);
+          will-change: transform;
+          user-select: none;
+          cursor: pointer;
+
+          .room {
+            height: 200px;
+            width: 240px;
+            border-radius: 5px;
+            background-color: #1b1b1b;
+            color: white;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .Title {
+              font-size: 20px;
+            }
+          }
+        }
+
+        .scrollable.active {
+          cursor: grabbing;
+        }
+
+        .scrollable::-webkit-scrollbar {
+          width: 0;
+          height: 0; /* Remove scrollbar space */
+          background: transparent; /* Optional: just make scrollbar invisible */
+        }
+      }
+
+      .user-in {
+        height: 10%;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 100%;
+          margin-right: 20px;
+        }
+
+        p {
+          font-size: 16px;
+          color: white;
+          font-weight: 500;
         }
       }
     }

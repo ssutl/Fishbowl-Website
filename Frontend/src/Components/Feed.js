@@ -242,10 +242,6 @@ function Feed({ input, followR, dashboard}) {
                             return (
                                 <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link" key={index}>
                                     <div className={following.includes(room.CreatedByName) ? "room-holder-friend" : "room-holder"} key={index}>
-                                        {/* <div className="profile">
-                                            <img src={room.CreatedByImage}/>
-                                            <h2>Salmann</h2>
-                                        </div> */}
                                         <div className="top-section">
                                             <p id="Title">{room.Title}</p>
                                             <p id="Question">{room.Question.substring(0, 105)} ....</p>

@@ -207,6 +207,13 @@ function SpecificUserPage({ specificUserToParent }) {
                                                     return <div className="roomTag" key={index}>{tag}</div>
                                                 })}
                                                 </div>
+                                                {room.Answered? (
+                                                    <div className="answered">
+                                                        <div className="dot">
+                                                            <p>Answered</p>
+                                                        </div>  
+                                                    </div>
+                                                ):null}
                                             </div>
                                             {mypage?(
                                                     <div className="delete" onClick={(event)=>deleteRoom([event, room._id])}>

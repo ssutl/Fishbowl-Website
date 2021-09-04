@@ -100,9 +100,7 @@
         height: 20vh;
         width: 60%;
         // justify-content: center;
-        border-radius: 5px;
-        background-color: #3d3d3d;
-        border: 1px solid rgba(255, 255, 255, 0.164);
+        background-color: $secondary-background;
 
         .upper {
           height: 12vh;
@@ -228,9 +226,7 @@
         height: 20vh;
         width: 50%;
         // justify-content: center;
-        border-radius: 5px;
-        background-color: #3d3d3d;
-        border: 1px solid rgba(255, 255, 255, 0.164);
+        background-color: $secondary-background;
 
         .upper {
           height: 12vh;
@@ -353,12 +349,10 @@
       justify-content: center;
 
       .login-holder {
-        height: 20vh;
-        width: 50%;
+        height: 40vh;
+        width: 35%;
         // justify-content: center;
-        border-radius: 5px;
-        background-color: #3d3d3d;
-        border: 1px solid rgba(255, 255, 255, 0.164);
+        background-color: $secondary-background;
 
         .upper {
           height: 12vh;

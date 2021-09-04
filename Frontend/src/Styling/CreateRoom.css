@@ -10,7 +10,7 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 63vh;
+    height: 52vh;
     width: 92%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -18,7 +18,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #28303b;
+    background-color: #212224ff;
     border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -59,7 +59,7 @@
     margin-bottom: 7px;
   }
   .section .section-holder .inputs {
-    height: 24vh;
+    height: 18vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -67,34 +67,30 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .section .section-holder .inputs .input_field {
     color: white;
     font-size: 18px;
-    width: 350px;
+    width: 160px;
     height: 30px;
     outline: 0;
     border: 0;
-    margin-left: 00px;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
   .section .section-holder .inputs .text-counter {
-    position: relative;
-    left: 210px;
-    bottom: 40px;
     height: 40px;
     width: 40px;
-    background-color: #0096ff;
+    background-color: white;
     border-radius: 3px;
-    color: white;
+    color: black;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -105,11 +101,8 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .section .section-holder .inputs #question {
-    margin-top: 25px;
-  }
   .section .section-holder .boxes {
-    height: 25vh;
+    height: 20vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -147,7 +140,7 @@
     border-radius: 50px;
     font-size: 15px;
     padding: 0px 15px 0px 15px;
-    background-color: #384357;
+    background-color: #333333ff;
     margin: 5px 10px 5px 10px;
   }
   .section .section-holder .boxes .box-holder .selected {
@@ -199,7 +192,7 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 56vh;
+    height: 50vh;
     width: 92%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -207,7 +200,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #28303b;
+    background-color: #212224ff;
     border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -248,7 +241,7 @@
     margin-bottom: 7px;
   }
   .section .section-holder .inputs {
-    height: 22vh;
+    height: 18vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -256,18 +249,18 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .section .section-holder .inputs .input_field {
     color: white;
     font-size: 18px;
-    width: 350px;
+    width: 240px;
     height: 30px;
     outline: 0;
     border: 0;
@@ -276,14 +269,11 @@
     border-bottom: 2px solid white;
   }
   .section .section-holder .inputs .text-counter {
-    position: relative;
-    left: 210px;
-    bottom: 40px;
     height: 40px;
     width: 40px;
-    background-color: #0096ff;
+    background-color: white;
     border-radius: 3px;
-    color: white;
+    color: black;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -293,9 +283,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .section .section-holder .inputs #question {
-    margin-top: 25px;
   }
   .section .section-holder .boxes {
     height: 20vh;
@@ -336,7 +323,7 @@
     border-radius: 50px;
     font-size: 15px;
     padding: 0px 15px 0px 15px;
-    background-color: #384357;
+    background-color: #333333ff;
     margin: 5px 10px 5px 10px;
   }
   .section .section-holder .boxes .box-holder .selected {
@@ -388,7 +375,7 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 58vh;
+    height: 53vh;
     width: 87%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -396,7 +383,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #28303b;
+    background-color: #212224ff;
     border-radius: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -437,7 +424,7 @@
     margin-bottom: 7px;
   }
   .section .section-holder .inputs {
-    height: 23vh;
+    height: 18vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -445,34 +432,30 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .section .section-holder .inputs .input_field {
     color: white;
     font-size: 18px;
-    width: 350px;
+    width: 260px;
     height: 30px;
     outline: 0;
     border: 0;
-    margin-left: 00px;
     background-color: transparent;
     border-bottom: 2px solid white;
   }
   .section .section-holder .inputs .text-counter {
-    position: relative;
-    left: 210px;
-    bottom: 40px;
     height: 40px;
     width: 40px;
-    background-color: #0096ff;
+    background-color: white;
     border-radius: 3px;
-    color: white;
+    color: black;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -482,9 +465,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .section .section-holder .inputs #question {
-    margin-top: 25px;
   }
   .section .section-holder .boxes {
     height: 19vh;
@@ -525,7 +505,7 @@
     border-radius: 50px;
     font-size: 15px;
     padding: 0px 15px 0px 15px;
-    background-color: #384357;
+    background-color: #333333ff;
     margin: 5px 10px 5px 10px;
   }
   .section .section-holder .boxes .box-holder .selected {

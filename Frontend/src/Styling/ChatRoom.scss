@@ -352,7 +352,7 @@
                   width: 250px;
                   height: 14vh;
                   border-radius: 7px;
-                  background-color: #333c47;
+                  background-color: $buttons;
 
                   .markAsAnswered {
                     height: 50%;
@@ -468,7 +468,7 @@
       .chat-bar {
         height: 8vh;
         width: 100%;
-        background-color: #333c47;
+        background-color: $buttons;
 
         form {
           display: flex;
@@ -865,7 +865,7 @@
                   width: 250px;
                   height: 14vh;
                   border-radius: 7px;
-                  background-color: #333c47;
+                  background-color: $buttons;
 
                   .markAsAnswered {
                     height: 50%;
@@ -976,7 +976,7 @@
       .chat-bar {
         height: 8vh;
         width: 100%;
-        background-color: #333c47;
+        background-color: $buttons;
 
         form {
           display: flex;
@@ -1371,7 +1371,7 @@
                   width: 250px;
                   height: 14vh;
                   border-radius: 7px;
-                  background-color: #333c47;
+                  background-color: $buttons;
 
                   .markAsAnswered {
                     height: 50%;
@@ -1482,7 +1482,7 @@
       .chat-bar {
         height: 8vh;
         width: 100%;
-        background-color: #333c47;
+        background-color: $buttons;
 
         form {
           display: flex;
