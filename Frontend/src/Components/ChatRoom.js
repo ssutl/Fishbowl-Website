@@ -440,7 +440,7 @@ function ChatRoom() {
                                 <div className="msg" key={index}>
                                     <div className="top">
                                         <div className="userToClick" onClick={() => redirectToUser(savedMessage.sentBy)}>
-                                            <img src={savedMessage.sentByImage} alt="" />
+                                            <img referrerpolicy="no-referrer" src={savedMessage.sentByImage} alt="" />
                                             <h2>{savedMessage.sentBy}</h2>
                                         </div>
                                         <p>{`· ${current_year === savedMessage.date.year ? current_month === savedMessage.date.month ? current_day === savedMessage.date.day ? current_hour === savedMessage.date.hour ? `<1h` : current_hour - savedMessage.date.hour + `h` : current_day - savedMessage.date.day + `d` : current_month - savedMessage.date.month + `m` : current_year - savedMessage.date.year + `y`}`}</p>
@@ -489,7 +489,7 @@ function ChatRoom() {
                                 <div className="msg" key={index}>
                                     <div className="top">
                                         <div className="userToClick" onClick={() => redirectToUser(liveMessage.sentBy)}>
-                                            <img src={liveMessage.sentByImage} alt="" />
+                                            <img referrerpolicy="no-referrer" src={liveMessage.sentByImage} alt="" />
                                             <h2>{liveMessage.sentBy}</h2>
                                         </div>
                                         <p>{`· ${current_year === liveMessage.date.year ? current_month === liveMessage.date.month ? current_day === liveMessage.date.day ? current_hour === liveMessage.date.hour ? `<1h` : current_hour - liveMessage.date.hour + `h` : current_day - liveMessage.date.day + `d` : current_month - liveMessage.date.month + `m` : current_year - liveMessage.date.year + `y`}`}</p>
@@ -509,7 +509,7 @@ function ChatRoom() {
                                 <div className="msg" key={index}>
                                     <div className="top">
                                         <div className="userToClick" onClick={() => redirectToUser(savedMessage.sentBy)}>
-                                            <img src={savedMessage.sentByImage} alt="" />
+                                            <img referrerpolicy="no-referrer" src={savedMessage.sentByImage} alt="" />
                                             <h2>{savedMessage.sentBy}</h2>
                                         </div>
                                         <p>{`· ${current_year === savedMessage.date.year ? current_month === savedMessage.date.month ? current_day === savedMessage.date.day ? current_hour === savedMessage.date.hour ? `<1h` : current_hour - savedMessage.date.hour + `h` : current_day - savedMessage.date.day + `d` : current_month - savedMessage.date.month + `m` : current_year - savedMessage.date.year + `y`}`}</p>

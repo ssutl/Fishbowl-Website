@@ -31,12 +31,11 @@
 
         .home {
           height: 100%;
-          width: 40%;
+          width: 33%;
           display: flex;
           align-items: center;
           color: white;
           margin-left: 20px;
-          // background-color: purple;
           justify-content: space-between;
 
           a {
@@ -54,7 +53,7 @@
         }
 
         .group {
-          width: 54%;
+          width: 52%;
           // background-color: yellow;
           height: 100%;
           display: flex;
@@ -84,7 +83,7 @@
             width: 39%;
             height: 100%;
             // background-color: purple;
-            margin-right: 10px;
+            margin-right: 15px;
 
             .edit {
               margin-left: auto;
@@ -597,7 +596,6 @@
             justify-content: space-between;
             width: 40%;
             height: 100%;
-            // background-color: purple;
             margin-right: 15px;
 
             .edit {
@@ -720,7 +718,6 @@
             height: 100%;
             width: 100%;
             flex-direction: row;
-            // background-color: teal;
             align-items: center;
             display: flex;
             justify-content: space-evenly;

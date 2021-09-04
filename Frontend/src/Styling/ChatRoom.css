@@ -40,7 +40,7 @@
   }
   .chat-room-section .chat-room-holder .navbar .home {
     height: 100%;
-    width: 40%;
+    width: 33%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -64,7 +64,7 @@
     margin: 0px 65px 7px 0px;
   }
   .chat-room-section .chat-room-holder .navbar .group {
-    width: 54%;
+    width: 52%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -104,7 +104,7 @@
             justify-content: space-between;
     width: 39%;
     height: 100%;
-    margin-right: 10px;
+    margin-right: 15px;
   }
   .chat-room-section .chat-room-holder .navbar .group .room-options .edit {
     margin-left: auto;

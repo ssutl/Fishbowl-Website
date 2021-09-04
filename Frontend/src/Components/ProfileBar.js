@@ -42,13 +42,16 @@ function ProfileBar({ profileToParent, search }) {
     const userSearch = current_page === "" && searching //Search display is true if user is on home page and searching
     const [users, setUsers] = useState('')
     const [following, setFollowing] = useState()
-    const[allRooms,setAllRooms] = useState([])
+    const[myRooms,setMyRooms] = useState([])
+    const[currentRoom,setCurrentRoom] = useState()
+    console.log('currentRoom: ', currentRoom);
+    
     const [displayStatus, setDisplayStaus] = useState(false)
     const [status, setStatus] = useState('')
     const [left, setLeft] = useState()
     const [right, setRight] = useState()
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [chatRoomInfo, setChatRoomInfo] = useState()
+    
     const breakpoint = 1200;
     const upper_breakpoint_laptop = 1800;
 
@@ -58,19 +61,25 @@ function ProfileBar({ profileToParent, search }) {
 
     window.addEventListener("resize", resize);
 
+
+
+    
     useEffect(()=>{
         let isMounted = true;
 
-        axios({
-            method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page}`,
-            headers: { "x-auth-token": `${token}` }
-        }).then((res) => {
-            if(isMounted){
-                setChatRoomInfo(res.data[0]) //Reversing order of rooms before we set variable, so that newest is at the top
-            }
-        })
+        if(current === "Chat"){
+            axios({
+                method: 'GET',
+                url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page}`,
+                headers: { "x-auth-token": `${token}` }
+            }).then((res) => {
+                if(isMounted){
+                    setCurrentRoom(res.data[0]) //Reversing order of rooms before we set variable, so that newest is at the top
+                }
+            })
+        }
     },[current_page])
+    
 
 
 
@@ -129,13 +138,14 @@ function ProfileBar({ profileToParent, search }) {
         if(isMounted){
             getUsers()
 
+        
             axios({
                 method: 'GET',
                 url: `https://fishbowl-heroku.herokuapp.com/chat/get/${info.name}`,
                 headers: { "x-auth-token": `${token}` }
             }).then((res) => {
                 if(isMounted){
-                    setAllRooms(res.data.reverse()) //Reversing order of rooms before we set variable, so that newest is at the top
+                    setMyRooms(res.data.reverse()) //Reversing order of rooms before we set variable, so that newest is at the top
                 }
             })
 
@@ -247,7 +257,7 @@ function ProfileBar({ profileToParent, search }) {
                                <div className="title">
                                    <p>MENU</p>
                                </div>
-                               <div className="menu-item" onClick={()=>history.push("/")}>
+                               <div className="menu-item" onClick={()=>{dashboard?history.push({ pathname: `/People/${info.name}`, state: { user: user } }):history.push("/")}}>
                                 <img src={homeLogo} id="profile-img" alt=""/>
                                 <p>Home</p>
                                </div>
@@ -284,28 +294,19 @@ function ProfileBar({ profileToParent, search }) {
                             </div>
                             {dashboard ? (
                                 <>
-                                    <div className="my-rooms">
+                                    <div className="room-stats">
                                         <div className="room-nav">
-                                            <p>MY ROOMS</p>
-                                            <div className="nav">
-                                                <ChevronLeftIcon style={{ fontSize: 21 }} id="arrow" className={left? "active" : null} />
-                                                <ChevronRightIcon style={{ fontSize: 21 }}  id="arrow" className={right? "active" : null} />
-                                            </div>
+                                            <p>MY STATS</p>
                                         </div>
-                                        <div className="scrollable">
-                                            {allRooms.map((room)=>(
-                                                <div className="room" onClick={()=> history.push({ pathname: `/Chat/${room._id}`, state: { room } })}>
-                                                    <p className="Title">{room.Title}</p>
-                                                    <p className="Question">{room.Question}</p>
-                                                    <p>{room.CreationDate}</p>
-                                                    <p>{room.Messages.length}</p>
-                                                </div>
-                                            ))}
-                                        </div>
+                                        <ol>
+                                            <li>{`Total Rooms: ${myRooms.length}`}</li>
+                                            <li>{`Total Answered: ${myRooms.filter((obj)=> obj.Answered).length}`}</li>
+                                            <li>{`Total Messages: ${myRooms.reduce((accumulator,current) => accumulator + current.Messages.length,0)}`}</li>
+                                        </ol>
                                     </div>  
                                     <div className="user-in">
-                                        <img src={info.image}/>
-                                        <p>{info.name}</p>
+                                        <img src={info.image} referrerpolicy="no-referrer" onClick={()=>history.push({ pathname: `/People/${info.name}`, state: { user: user } })}/>
+                                        <p onClick={()=>history.push({ pathname: `/People/${info.name}`, state: { user: user } })}>{info.name}</p>
                                     </div>
                                 </>
                             ): userSearch? (
@@ -316,7 +317,7 @@ function ProfileBar({ profileToParent, search }) {
                                         }).map((user, index) => {
                                             return (
                                                 <div className="user-holder" key={index}>
-                                                    <img src={user.image} alt="" onClick={()=> redirectToUser([user.name, user])}/>
+                                                    <img src={user.image} referrerpolicy="no-referrer" alt="" onClick={()=> redirectToUser([user.name, user])}/>
                                                     <div className="name-holder" onClick={()=> redirectToUser([user.name, user])}>
                                                         <h2>{user.username}</h2>
                                                     </div>
@@ -333,6 +334,18 @@ function ProfileBar({ profileToParent, search }) {
                                 <div className="chat-prof">
                                     <div className="title">
                                         <p>ROOM STATS</p>
+                                    </div>
+                                    <ol>
+                                        {currentRoom !== undefined? (
+                                        <li>{`Total Messages: ${currentRoom.Messages.length}`}</li>
+
+                                        ):null}
+                                    </ol>
+                                    <div className="contributer-list">
+                                        <p>Contributers :</p>
+                                        <div className="vertical-scroll">
+                                            {}
+                                        </div>
                                     </div>
                                 </div>
                             )

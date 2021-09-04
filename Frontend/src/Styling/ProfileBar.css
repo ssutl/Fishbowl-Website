@@ -277,7 +277,7 @@
     font-weight: 400;
     font-size: 18px;
   }
-  .whole-holder .profile .my-rooms {
+  .whole-holder .profile .room-stats {
     height: 40%;
     width: 85%;
     display: -webkit-box;
@@ -291,7 +291,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .whole-holder .profile .my-rooms .room-nav {
+  .whole-holder .profile .room-stats .room-nav {
     height: 14%;
     width: 100%;
     display: -webkit-box;
@@ -300,87 +300,21 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin-bottom: 30px;
   }
-  .whole-holder .profile .my-rooms .room-nav p {
+  .whole-holder .profile .room-stats .room-nav p {
     color: rgba(255, 255, 255, 0.644);
     font-size: 14px;
     margin-left: 10px;
   }
-  .whole-holder .profile .my-rooms .room-nav .nav {
-    height: 100%;
-    width: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    color: rgba(255, 255, 255, 0.582);
-    margin-right: 10px;
+  .whole-holder .profile .room-stats ol {
+    list-style: none;
+    width: 92%;
   }
-  .whole-holder .profile .my-rooms .room-nav .nav .active {
+  .whole-holder .profile .room-stats ol li {
     color: white;
-  }
-  .whole-holder .profile .my-rooms .room-nav .nav #arrow {
-    cursor: pointer;
-  }
-  .whole-holder .profile .my-rooms .scrollable {
-    width: 210px;
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 10px;
-    overflow-x: scroll;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    will-change: transform;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    cursor: pointer;
-  }
-  .whole-holder .profile .my-rooms .scrollable .room {
-    height: 200px;
-    width: 210px;
-    border-radius: 5px;
-    background-color: #1b1b1b;
-    color: white;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .whole-holder .profile .my-rooms .scrollable .room .Title {
-    font-size: 20px;
-  }
-  .whole-holder .profile .my-rooms .scrollable.active {
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
-  }
-  .whole-holder .profile .my-rooms .scrollable::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    /* Remove scrollbar space */
-    background: transparent;
-    /* Optional: just make scrollbar invisible */
+    font-size: 16px;
+    margin-bottom: 50px;
   }
   .whole-holder .profile .user-in {
     height: 10%;
@@ -396,8 +330,10 @@
     width: 50px;
     border-radius: 100%;
     margin-right: 20px;
+    cursor: pointer;
   }
   .whole-holder .profile .user-in p {
+    cursor: pointer;
     font-size: 16px;
     color: white;
     font-weight: 500;
@@ -521,8 +457,8 @@
     /* Optional: just make scrollbar invisible */
   }
   .whole-holder .profile .chat-prof {
-    height: 45%;
-    width: 100%;
+    height: 40%;
+    width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -535,19 +471,52 @@
             align-items: center;
   }
   .whole-holder .profile .chat-prof .title {
-    height: 10%;
-    width: 85%;
+    height: 14%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
   }
   .whole-holder .profile .chat-prof .title p {
     color: rgba(255, 255, 255, 0.644);
     font-size: 14px;
     margin-left: 10px;
+  }
+  .whole-holder .profile .chat-prof ol {
+    list-style: none;
+    width: 92%;
+  }
+  .whole-holder .profile .chat-prof ol li {
+    color: white;
+    font-size: 16px;
+  }
+  .whole-holder .profile .chat-prof .contributer-list {
+    height: 70%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .whole-holder .profile .chat-prof .contributer-list p {
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .whole-holder .profile .chat-prof .contributer-list .vertical-scroll {
+    height: 80%;
+    width: 100%;
   }
 }
 
@@ -830,7 +799,7 @@
     font-weight: 400;
     font-size: 18px;
   }
-  .whole-holder .profile .my-rooms {
+  .whole-holder .profile .room-stats {
     height: 40%;
     width: 85%;
     display: -webkit-box;
@@ -844,7 +813,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .whole-holder .profile .my-rooms .room-nav {
+  .whole-holder .profile .room-stats .room-nav {
     height: 14%;
     width: 100%;
     display: -webkit-box;
@@ -853,83 +822,21 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin-bottom: 30px;
   }
-  .whole-holder .profile .my-rooms .room-nav p {
+  .whole-holder .profile .room-stats .room-nav p {
     color: rgba(255, 255, 255, 0.644);
     font-size: 14px;
     margin-left: 10px;
   }
-  .whole-holder .profile .my-rooms .room-nav .nav {
-    height: 100%;
-    width: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    color: rgba(255, 255, 255, 0.582);
-    margin-right: 10px;
+  .whole-holder .profile .room-stats ol {
+    list-style: none;
+    width: 92%;
   }
-  .whole-holder .profile .my-rooms .room-nav .nav .active {
+  .whole-holder .profile .room-stats ol li {
     color: white;
-  }
-  .whole-holder .profile .my-rooms .room-nav .nav #arrow {
-    cursor: pointer;
-  }
-  .whole-holder .profile .my-rooms .scrollable {
-    width: 240px;
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 10px;
-    overflow-x: scroll;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    will-change: transform;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    cursor: pointer;
-  }
-  .whole-holder .profile .my-rooms .scrollable .room {
-    height: 200px;
-    width: 240px;
-    border-radius: 5px;
-    background-color: #1b1b1b;
-    color: white;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .whole-holder .profile .my-rooms .scrollable .room .Title {
-    font-size: 20px;
-  }
-  .whole-holder .profile .my-rooms .scrollable::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    /* Remove scrollbar space */
-    background: transparent;
-    /* Optional: just make scrollbar invisible */
+    font-size: 16px;
+    margin-bottom: 50px;
   }
   .whole-holder .profile .user-in {
     height: 10%;
@@ -1068,6 +975,68 @@
     /* Remove scrollbar space */
     background: transparent;
     /* Optional: just make scrollbar invisible */
+  }
+  .whole-holder .profile .chat-prof {
+    height: 40%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whole-holder .profile .chat-prof .title {
+    height: 14%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 30px;
+  }
+  .whole-holder .profile .chat-prof .title p {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .whole-holder .profile .chat-prof ol {
+    list-style: none;
+    width: 92%;
+  }
+  .whole-holder .profile .chat-prof ol li {
+    color: white;
+    font-size: 16px;
+  }
+  .whole-holder .profile .chat-prof .contributer-list {
+    height: 70%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .whole-holder .profile .chat-prof .contributer-list p {
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .whole-holder .profile .chat-prof .contributer-list .vertical-scroll {
+    height: 80%;
+    width: 100%;
   }
 }
 
@@ -1351,7 +1320,7 @@
     font-weight: 400;
     font-size: 18px;
   }
-  .whole-holder .profile .my-rooms {
+  .whole-holder .profile .room-stats {
     height: 40%;
     width: 85%;
     display: -webkit-box;
@@ -1365,7 +1334,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .whole-holder .profile .my-rooms .room-nav {
+  .whole-holder .profile .room-stats .room-nav {
     height: 14%;
     width: 100%;
     display: -webkit-box;
@@ -1379,82 +1348,19 @@
             justify-content: space-between;
     margin-bottom: 30px;
   }
-  .whole-holder .profile .my-rooms .room-nav p {
+  .whole-holder .profile .room-stats .room-nav p {
     color: rgba(255, 255, 255, 0.644);
     font-size: 14px;
     margin-left: 10px;
   }
-  .whole-holder .profile .my-rooms .room-nav .nav {
-    height: 100%;
-    width: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    color: rgba(255, 255, 255, 0.582);
-    margin-right: 10px;
+  .whole-holder .profile .room-stats ol {
+    list-style: none;
+    width: 92%;
   }
-  .whole-holder .profile .my-rooms .room-nav .nav .active {
+  .whole-holder .profile .room-stats ol li {
     color: white;
-  }
-  .whole-holder .profile .my-rooms .room-nav .nav #arrow {
-    cursor: pointer;
-  }
-  .whole-holder .profile .my-rooms .scrollable {
-    width: 240px;
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 10px;
-    overflow-x: scroll;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    will-change: transform;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    cursor: pointer;
-  }
-  .whole-holder .profile .my-rooms .scrollable .room {
-    height: 200px;
-    width: 240px;
-    border-radius: 5px;
-    background-color: #1b1b1b;
-    color: white;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .whole-holder .profile .my-rooms .scrollable .room .Title {
-    font-size: 20px;
-  }
-  .whole-holder .profile .my-rooms .scrollable.active {
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
-  }
-  .whole-holder .profile .my-rooms .scrollable::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    /* Remove scrollbar space */
-    background: transparent;
-    /* Optional: just make scrollbar invisible */
+    font-size: 16px;
+    margin-bottom: 50px;
   }
   .whole-holder .profile .user-in {
     height: 10%;
@@ -1593,6 +1499,68 @@
     /* Remove scrollbar space */
     background: transparent;
     /* Optional: just make scrollbar invisible */
+  }
+  .whole-holder .profile .chat-prof {
+    height: 40%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whole-holder .profile .chat-prof .title {
+    height: 14%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+  }
+  .whole-holder .profile .chat-prof .title p {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .whole-holder .profile .chat-prof ol {
+    list-style: none;
+    width: 92%;
+  }
+  .whole-holder .profile .chat-prof ol li {
+    color: white;
+    font-size: 16px;
+  }
+  .whole-holder .profile .chat-prof .contributer-list {
+    height: 70%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .whole-holder .profile .chat-prof .contributer-list p {
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .whole-holder .profile .chat-prof .contributer-list .vertical-scroll {
+    height: 80%;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=ProfileBar.css.map */

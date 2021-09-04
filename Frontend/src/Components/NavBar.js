@@ -142,7 +142,7 @@ function NavBar({ profileData, followReq }) {
                                     <div className="user-holder" key={index}>
                                         <Link to={{ pathname: `/People/${user.username}`, state: { user: user } }} key={index}>
                                             <div className="circle">
-                                                <img src={user.image} alt=""></img>
+                                                <img src={user.image} referrerpolicy="no-referrer" alt=""></img>
                                             </div>
                                             <div className={user.status === "Online" ? "online-circle" : user.status === "Offline" ? "offline-circle" : user.status === "Busy" ? "busy-circle" : user.status === "Idle" ? "idle-circle" : "empty"}>
 
