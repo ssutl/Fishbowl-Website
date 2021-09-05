@@ -108,8 +108,16 @@
   }
   .login-page .right .login-holder {
     height: 20vh;
-    width: 60%;
+    width: 55%;
+    border-radius: 5px;
     background-color: #212224ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .login-page .right .login-holder .upper {
     height: 12vh;
@@ -148,16 +156,26 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 10px;
   }
-  .login-page .right .login-holder .lower .login-button {
-    width: 60%;
-    height: 50px;
+  .login-page .right .login-holder .lower .loginBtn {
+    background-color: #333333ff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 50px;
+    width: 60%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
   }
 }
 
@@ -250,8 +268,15 @@
   }
   .login-page .right .login-holder {
     height: 20vh;
-    width: 50%;
+    width: 45%;
     background-color: #212224ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .login-page .right .login-holder .upper {
     height: 12vh;
@@ -290,16 +315,26 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 10px;
   }
-  .login-page .right .login-holder .lower .login-button {
-    width: 60%;
-    height: 50px;
+  .login-page .right .login-holder .lower .loginBtn {
+    background-color: #333333ff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 50px;
+    width: 60%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
   }
 }
 
@@ -391,9 +426,16 @@
             justify-content: center;
   }
   .login-page .right .login-holder {
-    height: 40vh;
+    height: 20vh;
     width: 35%;
     background-color: #212224ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .login-page .right .login-holder .upper {
     height: 12vh;
@@ -432,16 +474,26 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 10px;
   }
-  .login-page .right .login-holder .lower .login-button {
-    width: 55%;
-    height: 50px;
+  .login-page .right .login-holder .lower .loginBtn {
+    background-color: #333333ff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 50px;
+    width: 60%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
   }
 }
 /*# sourceMappingURL=Login.css.map */

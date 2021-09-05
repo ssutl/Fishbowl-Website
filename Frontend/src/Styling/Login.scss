@@ -98,9 +98,12 @@
 
       .login-holder {
         height: 20vh;
-        width: 60%;
+        width: 55%;
+        border-radius: 5px;
         // justify-content: center;
         background-color: $secondary-background;
+        display: flex;
+        flex-direction: column;
 
         .upper {
           height: 12vh;
@@ -130,12 +133,20 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          margin-bottom: 10px;
 
-          .login-button {
-            width: 60%;
-            height: 50px;
+          .loginBtn {
+            background-color: $buttons;
             display: flex;
+            align-items: center;
             justify-content: center;
+            height: 50px;
+            width: 60%;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: white;
           }
         }
       }
@@ -224,9 +235,11 @@
 
       .login-holder {
         height: 20vh;
-        width: 50%;
+        width: 45%;
         // justify-content: center;
         background-color: $secondary-background;
+        display: flex;
+        flex-direction: column;
 
         .upper {
           height: 12vh;
@@ -256,12 +269,20 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          margin-bottom: 10px;
 
-          .login-button {
-            width: 60%;
-            height: 50px;
+          .loginBtn {
+            background-color: $buttons;
             display: flex;
+            align-items: center;
             justify-content: center;
+            height: 50px;
+            width: 60%;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: white;
           }
         }
       }
@@ -349,10 +370,12 @@
       justify-content: center;
 
       .login-holder {
-        height: 40vh;
+        height: 20vh;
         width: 35%;
         // justify-content: center;
         background-color: $secondary-background;
+        display: flex;
+        flex-direction: column;
 
         .upper {
           height: 12vh;
@@ -382,12 +405,20 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          margin-bottom: 10px;
 
-          .login-button {
-            width: 55%;
-            height: 50px;
+          .loginBtn {
+            background-color: $buttons;
             display: flex;
+            align-items: center;
             justify-content: center;
+            height: 50px;
+            width: 60%;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: white;
           }
         }
       }

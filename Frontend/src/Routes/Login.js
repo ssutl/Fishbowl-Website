@@ -101,16 +101,7 @@ function Login() {
                                     onSuccess={responseSuccessGoogle}
                                     cookiePolicy={'single_host_origin'}
                                     render={renderProps => (
-                                        <button onClick={renderProps.onClick} style={{
-                                                backgroundColor: "#1F1F1F",
-                                                height: "50px",
-                                                width: "60%",
-                                                borderRadius: "5px",
-                                                outline:"none",
-                                                border: "none",
-                                                cursor:"pointer",
-                                                color:"white"
-                                        }}>Login With Google</button>
+                                        <div className="loginBtn" onClick={renderProps.onClick}>Login With Google</div>
                                       )}
                                     isSignedIn={true}
                                 >Login With Google</GoogleLogin>
