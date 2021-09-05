@@ -292,34 +292,7 @@
     background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .answered {
-    margin: 5px 0px 5px 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .answered .dot {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 24px;
-    width: 90px;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #0096ff;
-  }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete {
     margin-top: 15px;
     height: 100%;
     width: 100%;
@@ -327,7 +300,7 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete .delete-icon-holder {
     cursor: pointer;
     margin-left: 40px;
     height: 42px;
@@ -346,11 +319,38 @@
     -webkit-transition: background 0.2s ease-in;
     transition: background 0.2s ease-in;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder #icon {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete .delete-icon-holder #icon {
     font-size: 25px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete .delete-icon-holder:hover {
     background-color: #fd4d4d;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .answered {
+    margin: 5px 0px 5px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .answered .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    margin-right: 20px;
+    height: 24px;
+    width: 90px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #0096ff;
   }
   .section2 .holder .specificFeedHolder .scrollUser::-webkit-scrollbar {
     width: 0;
@@ -641,7 +641,7 @@
     background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete {
     margin-top: 15px;
     height: 100%;
     width: 100%;
@@ -649,7 +649,7 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete .delete-icon-holder {
     cursor: pointer;
     margin-left: 40px;
     height: 42px;
@@ -668,10 +668,10 @@
     -webkit-transition: background 0.2s ease-in;
     transition: background 0.2s ease-in;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder #icon {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete .delete-icon-holder #icon {
     font-size: 25px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete .delete-icon-holder:hover {
     background-color: #fd4d4d;
   }
 }
@@ -874,9 +874,6 @@
     text-decoration: none;
     color: white;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .cursour {
-    cursor: pointer;
-  }
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms {
     color: white;
     margin-top: 40px;
@@ -963,7 +960,7 @@
     background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete {
     margin-top: 15px;
     height: 100%;
     width: 100%;
@@ -971,7 +968,7 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete .delete-icon-holder {
     cursor: pointer;
     margin-left: 40px;
     height: 45px;
@@ -990,10 +987,10 @@
     -webkit-transition: background 0.2s ease-in;
     transition: background 0.2s ease-in;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder #icon {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete .delete-icon-holder #icon {
     font-size: 25px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .delete .delete-icon-holder:hover {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .delete .delete-icon-holder:hover {
     background-color: #fd4d4d;
   }
 }
