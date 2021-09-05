@@ -106,6 +106,38 @@
   .whole-holder .profile .menu-item:hover {
     background-color: #1d1c1c;
   }
+  .whole-holder .profile .menu-item:hover .blue-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(43%) sepia(41%) saturate(4274%) hue-rotate(184deg) brightness(102%) contrast(105%);
+            filter: invert(43%) sepia(41%) saturate(4274%) hue-rotate(184deg) brightness(102%) contrast(105%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu-item:hover .grey-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(49%) sepia(21%) saturate(173%) hue-rotate(171deg) brightness(121%) contrast(86%);
+            filter: invert(49%) sepia(21%) saturate(173%) hue-rotate(171deg) brightness(121%) contrast(86%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu-item:hover .red-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(38%) sepia(68%) saturate(2094%) hue-rotate(334deg) brightness(105%) contrast(99%);
+            filter: invert(38%) sepia(68%) saturate(2094%) hue-rotate(334deg) brightness(105%) contrast(99%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu-item:hover .yellow-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(70%) sepia(58%) saturate(1688%) hue-rotate(347deg) brightness(103%) contrast(96%);
+            filter: invert(70%) sepia(58%) saturate(1688%) hue-rotate(347deg) brightness(103%) contrast(96%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
   .whole-holder .profile .menu-item:hover #statusPara {
     display: none;
   }
@@ -628,6 +660,38 @@
   .whole-holder .profile .menu-item:hover {
     background-color: #1d1c1c;
   }
+  .whole-holder .profile .menu-item:hover .blue-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(43%) sepia(41%) saturate(4274%) hue-rotate(184deg) brightness(102%) contrast(105%);
+            filter: invert(43%) sepia(41%) saturate(4274%) hue-rotate(184deg) brightness(102%) contrast(105%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu-item:hover .grey-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(49%) sepia(21%) saturate(173%) hue-rotate(171deg) brightness(121%) contrast(86%);
+            filter: invert(49%) sepia(21%) saturate(173%) hue-rotate(171deg) brightness(121%) contrast(86%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu-item:hover .red-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(38%) sepia(68%) saturate(2094%) hue-rotate(334deg) brightness(105%) contrast(99%);
+            filter: invert(38%) sepia(68%) saturate(2094%) hue-rotate(334deg) brightness(105%) contrast(99%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu-item:hover .yellow-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(70%) sepia(58%) saturate(1688%) hue-rotate(347deg) brightness(103%) contrast(96%);
+            filter: invert(70%) sepia(58%) saturate(1688%) hue-rotate(347deg) brightness(103%) contrast(96%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
   .whole-holder .profile .menu-item:hover #statusPara {
     display: none;
   }
@@ -1148,6 +1212,38 @@
   }
   .whole-holder .profile .menu-item:hover {
     background-color: #1d1c1c;
+  }
+  .whole-holder .profile .menu-item:hover .blue-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(43%) sepia(41%) saturate(4274%) hue-rotate(184deg) brightness(102%) contrast(105%);
+            filter: invert(43%) sepia(41%) saturate(4274%) hue-rotate(184deg) brightness(102%) contrast(105%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu-item:hover .grey-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(49%) sepia(21%) saturate(173%) hue-rotate(171deg) brightness(121%) contrast(86%);
+            filter: invert(49%) sepia(21%) saturate(173%) hue-rotate(171deg) brightness(121%) contrast(86%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu-item:hover .red-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(38%) sepia(68%) saturate(2094%) hue-rotate(334deg) brightness(105%) contrast(99%);
+            filter: invert(38%) sepia(68%) saturate(2094%) hue-rotate(334deg) brightness(105%) contrast(99%);
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+  .whole-holder .profile .menu-item:hover .yellow-hue {
+    height: 20px;
+    width: 20px;
+    -webkit-filter: invert(70%) sepia(58%) saturate(1688%) hue-rotate(347deg) brightness(103%) contrast(96%);
+            filter: invert(70%) sepia(58%) saturate(1688%) hue-rotate(347deg) brightness(103%) contrast(96%);
+    margin-left: 15px;
+    margin-right: 20px;
   }
   .whole-holder .profile .menu-item:hover #statusPara {
     display: none;

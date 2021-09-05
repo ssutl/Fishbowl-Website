@@ -262,7 +262,7 @@ function ProfileBar({ profileToParent, search }) {
                                 <p>Home</p>
                                </div>
                                <div className="menu-item" onClick={()=>setDisplayStaus(!displayStatus)}>
-                                   <img src={statusLogo} alt=""/>
+                                   <img src={statusLogo} className={status === "Online"? "blue-hue": status === "Offline" ? "grey-hue": status === "Busy"? "red-hue": status === "Idle"? "yellow-hue":null} alt=""/>
                                    <p id="statusPara">{status.length === 0 ? `choose status` : status}</p>
                                    <div className="options">
                                        <div className="online-circle" onClick={() => updateStatus("Online")}>

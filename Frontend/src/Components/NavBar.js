@@ -120,8 +120,8 @@ function NavBar({ profileData, followReq }) {
                 </div>
                 <div className="people-holder">
                     <div className="upper">
-                        <h1>People</h1>
-                        <h2>Friends</h2>
+                        <h1>Friends</h1>
+                        <h2>People</h2>
                     </div>
                     <div className={list.length === 0 || list == null ? "lower-set" : "lower"}>
                         {loading?(

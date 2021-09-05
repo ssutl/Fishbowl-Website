@@ -10,7 +10,9 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 52vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     width: 92%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -192,7 +194,9 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 50vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     width: 92%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -375,7 +379,9 @@
             justify-content: center;
   }
   .section .section-holder {
-    height: 53vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     width: 87%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -396,6 +402,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.267);
   }
   .section .section-holder .title .home {
@@ -422,6 +431,33 @@
   }
   .section .section-holder .title .home a h2 {
     margin-bottom: 7px;
+  }
+  .section .section-holder .title .posterOrChatHolder {
+    height: 8vh;
+    width: 25%;
+    margin-right: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section .section-holder .title .posterOrChatHolder p {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    border-bottom: 3px solid white;
+  }
+  .section .section-holder .title .posterOrChatHolder .notActive {
+    opacity: 0.4;
   }
   .section .section-holder .inputs {
     height: 18vh;

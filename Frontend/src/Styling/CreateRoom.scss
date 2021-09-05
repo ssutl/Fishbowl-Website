@@ -10,7 +10,7 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 52vh;
+      height: fit-content;
       width: 92%;
       display: flex;
       justify-content: center;
@@ -154,7 +154,7 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 50vh;
+      height: fit-content;
       width: 92%;
       display: flex;
       justify-content: center;
@@ -298,7 +298,7 @@
     // background-color: aqua;
 
     .section-holder {
-      height: 53vh;
+      height: fit-content;
       width: 87%;
       display: flex;
       justify-content: center;
@@ -310,6 +310,7 @@
         height: 8vh;
         width: 100%;
         display: flex;
+        justify-content: space-between;
         border-bottom: 1px solid rgba(255, 255, 255, 0.267);
 
         .home {
@@ -333,6 +334,28 @@
             h2 {
               margin-bottom: 7px;
             }
+          }
+        }
+
+        .posterOrChatHolder {
+          height: 8vh;
+          width: 25%;
+          // background-color: yellow;
+          margin-right: 30px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            cursor: pointer;
+            font-size: 25px;
+            color: white;
+            border-bottom: 3px solid white;
+          }
+
+          .notActive {
+            opacity: 0.4;
           }
         }
       }
