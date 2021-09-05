@@ -27,7 +27,7 @@
   .section2 .holder .banner {
     height: 20%;
     width: 100%;
-    background-color: #0096ff;
+    background-color: #333333ff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -40,15 +40,15 @@
   }
   .section2 .holder .banner h1 {
     color: white;
-    font-size: 65px;
+    font-size: 55px;
   }
   .section2 .holder .imageHolder {
-    height: 135px;
-    width: 135px;
+    height: 120px;
+    width: 120px;
     border-radius: 100%;
     background-color: pink;
     position: absolute;
-    top: 185px;
+    top: 195px;
     right: 30%;
     overflow: hidden;
     border: 3px solid white;
@@ -205,9 +205,12 @@
   .section2 .holder .specificFeedHolder .scrollUser h1 {
     color: white;
   }
-  .section2 .holder .specificFeedHolder .scrollUser a {
+  .section2 .holder .specificFeedHolder .scrollUser .link1 {
     text-decoration: none;
     color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .cursour {
+    cursor: pointer;
   }
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms {
     margin-top: 40px;
@@ -386,16 +389,16 @@
   .section2 .holder .banner {
     height: 20%;
     width: 100%;
-    background-color: #0096ff;
+    background-color: #333333ff;
   }
   .section2 .holder .imageHolder {
-    height: 145px;
-    width: 145px;
+    height: 135px;
+    width: 135px;
     border-radius: 100%;
     background-color: pink;
     position: absolute;
-    top: 180px;
-    right: 28%;
+    top: 190px;
+    right: 28.5%;
     overflow: hidden;
     border: 3px solid white;
     display: block;
@@ -551,9 +554,12 @@
   .section2 .holder .specificFeedHolder .scrollUser h1 {
     color: white;
   }
-  .section2 .holder .specificFeedHolder .scrollUser a {
+  .section2 .holder .specificFeedHolder .scrollUser .link1 {
     text-decoration: none;
     color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .cursour {
+    cursor: pointer;
   }
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms {
     margin-top: 40px;
@@ -699,16 +705,16 @@
   .section2 .holder .banner {
     height: 20%;
     width: 100%;
-    background-color: #0096ff;
+    background-color: #333333ff;
   }
   .section2 .holder .imageHolder {
-    height: 155px;
-    width: 155px;
+    height: 140px;
+    width: 140px;
     border-radius: 100%;
     background-color: pink;
     position: absolute;
-    top: 180px;
-    right: 32%;
+    top: 190px;
+    right: 31.5%;
     overflow: hidden;
     border: 3px solid white;
     display: block;
@@ -863,6 +869,13 @@
   }
   .section2 .holder .specificFeedHolder .scrollUser h1 {
     color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .link1 {
+    text-decoration: none;
+    color: white;
+  }
+  .section2 .holder .specificFeedHolder .scrollUser .cursour {
+    cursor: pointer;
   }
   .section2 .holder .specificFeedHolder .scrollUser .usersRooms {
     color: white;

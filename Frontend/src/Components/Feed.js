@@ -285,7 +285,7 @@ function Feed({ input, followR, dashboard}) {
                             );
                         }).map((room, index) => {
                             return (
-                                <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link" key={index}>
+                                <div onClick={(event)=>{room.Post? event.preventDefault() : history.push({ pathname: `/Chat/${room._id}`, state: { room } })}} className={room.Post? "link" : "link cursour"} key={index}>
                                     <div className="room-holder-friend" key={index}>
                                         <div className="top-section">
                                             <p id="Title">{room.Title}</p>
@@ -306,7 +306,7 @@ function Feed({ input, followR, dashboard}) {
                                             </div>
                                         ):null}
                                     </div>
-                                </Link>
+                                </div>
                             )
                         })
 

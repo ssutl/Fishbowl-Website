@@ -8,8 +8,12 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import DeleteIcon from "@material-ui/icons/Delete";
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import { useHistory } from 'react-router-dom';
+
 
 function SpecificUserPage({ specificUserToParent }) {
+
+    const history = useHistory();
     const [following, setFollowing] = useState()
     const breakpoint = 1200;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -195,7 +199,7 @@ function SpecificUserPage({ specificUserToParent }) {
                                 </>
                             ) : usersRooms.map((room, index) => {
                                 return (
-                                    <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link1" key={index}>
+                                    <div onClick={(event)=>{room.Post? event.preventDefault() : history.push({ pathname: `/Chat/${room._id}`, state: { room } })}} className={room.Post? "link1" : "link1 cursour"} key={index}>
                                         <div className="usersRooms" key={index}>
                                             <div className="upper">
                                                 <p id="Title">{room.Title}</p>
@@ -224,7 +228,7 @@ function SpecificUserPage({ specificUserToParent }) {
                                                     </div>
                                                 ):null}
                                         </div>
-                                    </Link>
+                                    </div>
                                 )
                             })}
                         </div>
