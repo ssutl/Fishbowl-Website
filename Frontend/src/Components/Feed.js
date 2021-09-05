@@ -7,11 +7,13 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import BarLoader from "react-spinners/BarLoader";
 import { css } from "@emotion/react";
+import { useHistory } from 'react-router-dom';
+
 
 function Feed({ input, followR, dashboard}) {
 
 
-
+    const history = useHistory();
     const info = useContext(UserContext) //Stores current user info
     const token = localStorage.getItem('session-token') //Retrieves token from server to pass to api
     const [allRooms, setAllRooms] = useState([]) //Stores all current rooms from api
@@ -240,7 +242,7 @@ function Feed({ input, followR, dashboard}) {
                             );
                         }).map((room, index) => {
                             return (
-                                <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link" key={index}>
+                                <div onClick={(event)=>{room.Post? event.preventDefault() : history.push({ pathname: `/Chat/${room._id}`, state: { room } })}} className={room.Post? "link" : "link cursour"} key={index}>
                                     <div className={following.includes(room.CreatedByName) ? "room-holder-friend" : "room-holder"} key={index}>
                                         <div className="top-section">
                                             <p id="Title">{room.Title}</p>
@@ -261,7 +263,7 @@ function Feed({ input, followR, dashboard}) {
                                             </div>
                                         ):null}
                                     </div>
-                                </Link>
+                                </div>
                             )
                         })) : friends_rooms.length === 0 ? (
                             <div className="noGlobalorFriends">

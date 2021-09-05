@@ -23,6 +23,7 @@
         // background-color: teal;
         width: 100%;
         display: flex;
+        justify-content: space-between;
         border-bottom: 1px solid rgba(255, 255, 255, 0.267);
 
         .home {
@@ -48,10 +49,32 @@
             }
           }
         }
+
+        .posterOrChatHolder {
+          height: 100%;
+          width: 32%;
+          // background-color: yellow;
+          margin-right: 30px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            cursor: pointer;
+            font-size: 22px;
+            color: white;
+            border-bottom: 3px solid white;
+          }
+
+          .notActive {
+            opacity: 0.4;
+          }
+        }
       }
 
       .inputs {
-        height: 18vh;
+        padding: 40px 0px 40px 0px;
         width: 100%;
         // background-color: yellow;
         display: flex;
@@ -84,15 +107,13 @@
         }
       }
       .boxes {
-        height: 20vh;
+        padding: 20px 0px 20px 0px;
         width: 100%;
-        // background-color: aqua;
         display: flex;
         justify-content: center;
 
         .box-holder {
-          // background-color: orange;
-          width: 90%;
+          width: 95%;
           height: 100%;
           display: flex;
           // justify-content: center;
@@ -120,7 +141,7 @@
         }
       }
       .submit {
-        height: 8vh;
+        padding: 0px 0px 10px 0px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -129,8 +150,8 @@
 
         .BTN {
           margin-right: 30px;
-          height: 45px;
-          width: 110px;
+          height: 40px;
+          width: 100px;
           border-radius: 5px;
           background-color: $highlight;
           display: flex;
@@ -163,10 +184,11 @@
       flex-direction: column;
 
       .title {
-        height: 6vh;
+        height: 7vh;
         // background-color: teal;
         width: 100%;
         display: flex;
+        justify-content: space-between;
         border-bottom: 1px solid rgba(255, 255, 255, 0.267);
 
         .home {
@@ -192,10 +214,32 @@
             }
           }
         }
+
+        .posterOrChatHolder {
+          height: 100%;
+          width: 28%;
+          // background-color: yellow;
+          margin-right: 30px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            cursor: pointer;
+            font-size: 25px;
+            color: white;
+            border-bottom: 3px solid white;
+          }
+
+          .notActive {
+            opacity: 0.4;
+          }
+        }
       }
 
       .inputs {
-        height: 18vh;
+        padding: 40px 0px 40px 0px;
         width: 100%;
         // background-color: yellow;
         display: flex;
@@ -228,7 +272,7 @@
         }
       }
       .boxes {
-        height: 20vh;
+        padding: 20px 0px 20px 0px;
         width: 100%;
         // background-color: aqua;
         display: flex;
@@ -236,7 +280,7 @@
 
         .box-holder {
           // background-color: orange;
-          width: 90%;
+          width: 95%;
           height: 100%;
           display: flex;
           // justify-content: center;
@@ -255,7 +299,7 @@
             font-size: 15px;
             padding: 0px 15px 0px 15px;
             background-color: $buttons;
-            margin: 5px 10px 5px 10px;
+            margin: 5px 10px 15px 10px;
           }
 
           .selected {
@@ -264,7 +308,7 @@
         }
       }
       .submit {
-        height: 8vh;
+        padding: 0px 0px 20px 0px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -361,7 +405,7 @@
       }
 
       .inputs {
-        height: 18vh;
+        padding: 40px 0px 40px 0px;
         width: 100%;
         // background-color: yellow;
         display: flex;
@@ -393,15 +437,13 @@
         }
       }
       .boxes {
-        height: 19vh;
+        padding: 20px 0px 20px 0px;
         width: 100%;
-        // background-color: aqua;
         display: flex;
         justify-content: center;
 
         .box-holder {
-          // background-color: orange;
-          width: 90%;
+          width: 95%;
           height: 100%;
           display: flex;
           // justify-content: center;
@@ -420,7 +462,7 @@
             font-size: 15px;
             padding: 0px 15px 0px 15px;
             background-color: $buttons;
-            margin: 5px 10px 5px 10px;
+            margin: 5px 10px 14px 10px;
           }
 
           .selected {
@@ -429,7 +471,7 @@
         }
       }
       .submit {
-        height: 8vh;
+        padding: 0px 0px 20px 0px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -438,8 +480,8 @@
 
         .BTN {
           margin-right: 30px;
-          height: 50px;
-          width: 120px;
+          height: 45px;
+          width: 110px;
           border-radius: 5px;
           background-color: $highlight;
           display: flex;

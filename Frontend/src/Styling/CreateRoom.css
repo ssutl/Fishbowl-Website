@@ -33,6 +33,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.267);
   }
   .section .section-holder .title .home {
@@ -60,8 +63,35 @@
   .section .section-holder .title .home a h2 {
     margin-bottom: 7px;
   }
+  .section .section-holder .title .posterOrChatHolder {
+    height: 100%;
+    width: 32%;
+    margin-right: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section .section-holder .title .posterOrChatHolder p {
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+    border-bottom: 3px solid white;
+  }
+  .section .section-holder .title .posterOrChatHolder .notActive {
+    opacity: 0.4;
+  }
   .section .section-holder .inputs {
-    height: 18vh;
+    padding: 40px 0px 40px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -104,7 +134,7 @@
             justify-content: center;
   }
   .section .section-holder .boxes {
-    height: 20vh;
+    padding: 20px 0px 20px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -114,7 +144,7 @@
             justify-content: center;
   }
   .section .section-holder .boxes .box-holder {
-    width: 90%;
+    width: 95%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -149,7 +179,7 @@
     background-color: orange;
   }
   .section .section-holder .submit {
-    height: 8vh;
+    padding: 0px 0px 10px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -163,8 +193,8 @@
   }
   .section .section-holder .submit .BTN {
     margin-right: 30px;
-    height: 45px;
-    width: 110px;
+    height: 40px;
+    width: 100px;
     border-radius: 5px;
     background-color: #0096ff;
     display: -webkit-box;
@@ -212,11 +242,14 @@
             flex-direction: column;
   }
   .section .section-holder .title {
-    height: 6vh;
+    height: 7vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.267);
   }
   .section .section-holder .title .home {
@@ -244,8 +277,35 @@
   .section .section-holder .title .home a h2 {
     margin-bottom: 7px;
   }
+  .section .section-holder .title .posterOrChatHolder {
+    height: 100%;
+    width: 28%;
+    margin-right: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section .section-holder .title .posterOrChatHolder p {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    border-bottom: 3px solid white;
+  }
+  .section .section-holder .title .posterOrChatHolder .notActive {
+    opacity: 0.4;
+  }
   .section .section-holder .inputs {
-    height: 18vh;
+    padding: 40px 0px 40px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -289,7 +349,7 @@
             justify-content: center;
   }
   .section .section-holder .boxes {
-    height: 20vh;
+    padding: 20px 0px 20px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -299,7 +359,7 @@
             justify-content: center;
   }
   .section .section-holder .boxes .box-holder {
-    width: 90%;
+    width: 95%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -328,13 +388,13 @@
     font-size: 15px;
     padding: 0px 15px 0px 15px;
     background-color: #333333ff;
-    margin: 5px 10px 5px 10px;
+    margin: 5px 10px 15px 10px;
   }
   .section .section-holder .boxes .box-holder .selected {
     background-color: orange;
   }
   .section .section-holder .submit {
-    height: 8vh;
+    padding: 0px 0px 20px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -460,7 +520,7 @@
     opacity: 0.4;
   }
   .section .section-holder .inputs {
-    height: 18vh;
+    padding: 40px 0px 40px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -503,7 +563,7 @@
             justify-content: center;
   }
   .section .section-holder .boxes {
-    height: 19vh;
+    padding: 20px 0px 20px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -513,7 +573,7 @@
             justify-content: center;
   }
   .section .section-holder .boxes .box-holder {
-    width: 90%;
+    width: 95%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -542,13 +602,13 @@
     font-size: 15px;
     padding: 0px 15px 0px 15px;
     background-color: #333333ff;
-    margin: 5px 10px 5px 10px;
+    margin: 5px 10px 14px 10px;
   }
   .section .section-holder .boxes .box-holder .selected {
     background-color: orange;
   }
   .section .section-holder .submit {
-    height: 8vh;
+    padding: 0px 0px 20px 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -562,8 +622,8 @@
   }
   .section .section-holder .submit .BTN {
     margin-right: 30px;
-    height: 50px;
-    width: 120px;
+    height: 45px;
+    width: 110px;
     border-radius: 5px;
     background-color: #0096ff;
     display: -webkit-box;

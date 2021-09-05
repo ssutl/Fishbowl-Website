@@ -289,8 +289,8 @@
     background-color: #333333ff;
     margin: 5px 20px 4px 0px;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder .answered {
-    margin-top: 15px;
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .answered {
+    margin: 5px 0px 5px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -298,7 +298,7 @@
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .low-holder .answered .dot {
+  .section2 .holder .specificFeedHolder .scrollUser .usersRooms .lower .answered .dot {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

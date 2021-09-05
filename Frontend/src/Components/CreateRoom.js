@@ -72,6 +72,7 @@ function CreateRoom({ createRoomToParent }) {
 
             if(createChatRoom){
                 let tags = { //Temporary object to store current option by user
+                    "I Am A Chat Room": true,
                     Math: Math,
                     English: English,
                     Geography: Geography,
@@ -128,6 +129,7 @@ function CreateRoom({ createRoomToParent }) {
                 })
             }else if(createPost){
                 let tags = { //Temporary object to store current option by user
+                    "I Am A Post": true,
                     Reminder: reminder,
                     Homework: homework,
                     Event: event,
@@ -162,9 +164,7 @@ function CreateRoom({ createRoomToParent }) {
                         document.querySelector('.input_field').value = "" //Clearing input
                     } else {
                         setRoomExists(false)
-                        history.push({ //Redirecting user to the page of the room created
-                            pathname: `/Chat/${res.data._id}`
-                        })
+                        history.push('/') //Redirecting to home page because they created a post
                     }
                 })
                 .catch((error) => {

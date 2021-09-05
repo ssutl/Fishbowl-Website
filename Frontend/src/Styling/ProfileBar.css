@@ -346,7 +346,8 @@
   .whole-holder .profile .room-stats ol li {
     color: white;
     font-size: 16px;
-    margin-bottom: 50px;
+    font-weight: 400;
+    margin-bottom: 35px;
   }
   .whole-holder .profile .user-in {
     height: 10%;
@@ -900,7 +901,8 @@
   .whole-holder .profile .room-stats ol li {
     color: white;
     font-size: 16px;
-    margin-bottom: 50px;
+    font-weight: 400;
+    margin-bottom: 35px;
   }
   .whole-holder .profile .user-in {
     height: 10%;
@@ -1456,7 +1458,8 @@
   .whole-holder .profile .room-stats ol li {
     color: white;
     font-size: 16px;
-    margin-bottom: 50px;
+    font-weight: 400;
+    margin-bottom: 30px;
   }
   .whole-holder .profile .user-in {
     height: 10%;
