@@ -72,7 +72,6 @@ function CreateRoom({ createRoomToParent }) {
 
             if(createChatRoom){
                 let tags = { //Temporary object to store current option by user
-                    "I Am A Chat Room": true,
                     Math: Math,
                     English: English,
                     Geography: Geography,
@@ -98,6 +97,7 @@ function CreateRoom({ createRoomToParent }) {
                 let chosenArray = Object.keys(tags).filter((e)=>tags[e]) //Filtering array to only show tags which are true
     
                 const data = { //Creating an object to send to db
+                    chatRoom: true,
                     CreatedByName: info.name,
                     CreatedByImage: info.image,
                     Tags: chosenArray,
@@ -129,7 +129,6 @@ function CreateRoom({ createRoomToParent }) {
                 })
             }else if(createPost){
                 let tags = { //Temporary object to store current option by user
-                    "I Am A Post": true,
                     Reminder: reminder,
                     Homework: homework,
                     Event: event,

@@ -294,7 +294,7 @@
   }
   .nav-holder .people-holder .lower::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #757575;
+    background-color: #333333ff;
   }
   .nav-holder .people-holder .lower-set {
     width: 100%;

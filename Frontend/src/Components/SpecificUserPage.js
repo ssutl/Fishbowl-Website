@@ -179,9 +179,7 @@ function SpecificUserPage({ specificUserToParent }) {
                         <div className="follow-my-section"></div>
                     ) : (
                         <div className="follow-my-section">
-                            <p>My Rooms</p>
                         </div>
-    
                     ) : (
                         <div className="follow-section">
                             <div className={following ? "following-BTN" : "follow-BTN"} onClick={handleInteract}>

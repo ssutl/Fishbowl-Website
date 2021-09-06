@@ -255,6 +255,13 @@ function Feed({ input, followR, dashboard}) {
                                                 })}
                                             </div>
                                         </div>
+                                        {room.Post?(
+                                            <div className="chatOrPost">
+                                                <div className="blockage">
+                                                    <p>Post</p>
+                                                </div>
+                                            </div>
+                                        ):null}
                                         {room.Answered? (
                                             <div className="answered">
                                                 <div className="dot">
@@ -287,6 +294,14 @@ function Feed({ input, followR, dashboard}) {
                             return (
                                 <div onClick={(event)=>{room.Post? event.preventDefault() : history.push({ pathname: `/Chat/${room._id}`, state: { room } })}} className={room.Post? "link" : "link cursour"} key={index}>
                                     <div className="room-holder-friend" key={index}>
+                                        {room.Post?(
+                                            <div className="chatOrPost">
+                                                <div className="blockage">
+                                                    <p>Post</p>
+                                                </div>
+                                            </div>
+                                        ):null}
+                                       
                                         <div className="top-section">
                                             <p id="Title">{room.Title}</p>
                                             <p id="Question">{room.Post? room.Question : room.Question.length >= 105? room.Question.substring(0, 105) + `...` : room.Question}</p>
