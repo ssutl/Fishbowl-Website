@@ -149,9 +149,6 @@
     width: 90%;
     height: 90%;
   }
-  .feed-section .bottom-section .scroll .cursour {
-    cursor: pointer;
-  }
   .feed-section .bottom-section .scroll .link {
     text-decoration: none;
   }
@@ -165,33 +162,6 @@
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder .chatOrPost {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder .chatOrPost .blockage {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 24px;
-    width: 90px;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #0096ff;
   }
   .feed-section .bottom-section .scroll .link .room-holder .top-section {
     color: white;
@@ -300,33 +270,6 @@
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .chatOrPost {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .chatOrPost .blockage {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 24px;
-    width: 90px;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #0096ff;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend .top-section {
     color: white;
@@ -598,33 +541,6 @@
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
   }
-  .feed-section .bottom-section .scroll .link .room-holder .chatOrPost {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder .chatOrPost .blockage {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 25px;
-    width: 100px;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #0096ff;
-  }
   .feed-section .bottom-section .scroll .link .room-holder .top-section {
     color: white;
     height: 57%;
@@ -732,33 +648,6 @@
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .chatOrPost {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .chatOrPost .blockage {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 25px;
-    width: 100px;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #0096ff;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend .top-section {
     color: white;
@@ -1024,32 +913,6 @@
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
   }
-  .feed-section .bottom-section .scroll .link .room-holder .chatOrPost {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder .chatOrPost .blockage {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 25px;
-    width: 110px;
-    border-radius: 5px;
-    background-color: #0096ff;
-  }
   .feed-section .bottom-section .scroll .link .room-holder .top-section {
     color: white;
     height: 57%;
@@ -1155,32 +1018,6 @@
     word-break: break-all;
     border-radius: 5px;
     padding: 15px 0px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .chatOrPost {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .chatOrPost .blockage {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 25px;
-    width: 110px;
-    border-radius: 5px;
-    background-color: #0096ff;
   }
   .feed-section .bottom-section .scroll .link .room-holder-friend .top-section {
     color: white;

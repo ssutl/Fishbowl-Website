@@ -299,8 +299,7 @@ function ProfileBar({ profileToParent, search }) {
                                             <p>MY STATS</p>
                                         </div>
                                         <ol>
-                                            <li>{`Total Rooms: ${myRooms.filter((room)=> room.Post !== true).length}`}</li>
-                                            <li>{`Total Posts: ${myRooms.filter((room)=> room.Post).length}`}</li>
+                                            <li>{`Total Rooms: ${myRooms.length}`}</li>
                                             <li>{`Total Answered: ${myRooms.filter((obj)=> obj.Answered).length}`}</li>
                                             <li>{`Total Messages: ${myRooms.reduce((accumulator,current) => accumulator + current.Messages.length,0)}`}</li>
                                         </ol>

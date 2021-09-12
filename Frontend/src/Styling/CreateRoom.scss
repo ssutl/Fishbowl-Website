@@ -49,28 +49,6 @@
             }
           }
         }
-
-        .posterOrChatHolder {
-          height: 100%;
-          width: 32%;
-          // background-color: yellow;
-          margin-right: 30px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-
-          p {
-            cursor: pointer;
-            font-size: 22px;
-            color: white;
-            border-bottom: 3px solid white;
-          }
-
-          .notActive {
-            opacity: 0.4;
-          }
-        }
       }
 
       .inputs {
@@ -212,28 +190,6 @@
             h2 {
               margin-bottom: 7px;
             }
-          }
-        }
-
-        .posterOrChatHolder {
-          height: 100%;
-          width: 28%;
-          // background-color: yellow;
-          margin-right: 30px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-
-          p {
-            cursor: pointer;
-            font-size: 25px;
-            color: white;
-            border-bottom: 3px solid white;
-          }
-
-          .notActive {
-            opacity: 0.4;
           }
         }
       }
@@ -378,28 +334,6 @@
             h2 {
               margin-bottom: 7px;
             }
-          }
-        }
-
-        .posterOrChatHolder {
-          height: 8vh;
-          width: 25%;
-          // background-color: yellow;
-          margin-right: 30px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-
-          p {
-            cursor: pointer;
-            font-size: 25px;
-            color: white;
-            border-bottom: 3px solid white;
-          }
-
-          .notActive {
-            opacity: 0.4;
           }
         }
       }

@@ -196,42 +196,6 @@ function SpecificUserPage({ specificUserToParent }) {
                                     <div className="svg"><YourSvg id="svg" /></div>
                                 </>
                             ) : usersRooms.map((room, index) => {
-                                if(room.Post){
-                                    return(
-                                        <div className="link1" key={index}>
-                                            <div className="usersRooms" key={index}>
-                                                <div className="upper">
-                                                    <p id="Title">{room.Title}</p>
-                                                    <p id="Question">{room.Question}</p>
-                                                </div>
-                                                <div className="lower">
-                                                    <div className="low-holder">
-                                                    {room.Tags.map((tag, index) => {
-                                                        return <div className="roomTag" key={index}>{tag}</div>
-                                                    })}
-                                                    </div>
-                                                    {mypage?(
-                                                        <div className="delete">
-                                                            <div className="delete-icon-holder" onClick={(event)=>deleteRoom([event, room._id])}>
-                                                            <DeleteIcon/>
-        
-                                                            </div>
-                                                        </div>
-                                                    ):null}
-                                                    
-                                                </div>
-                                                {room.Answered? (
-                                                        <div className="answered">
-                                                            <div className="dot">
-                                                                <p>Answered</p>
-                                                            </div>  
-                                                        </div>
-                                                    ):null}
-       
-                                            </div>
-                                        </div>
-                                    )
-                                }else{
                                     return (
                                         <Link to= {{ pathname: `/Chat/${room._id}`, state: { room } }} className="link1" key={index}>
                                             <div className="usersRooms" key={index}>
@@ -263,10 +227,7 @@ function SpecificUserPage({ specificUserToParent }) {
                                                 
                                             </div>
                                         </Link>
-                                    )
-
-                                }
-                                
+                                    ) 
                             })}
                         </div>
                     </div>

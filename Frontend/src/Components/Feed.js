@@ -242,11 +242,11 @@ function Feed({ input, followR, dashboard}) {
                             );
                         }).map((room, index) => {
                             return (
-                                <div onClick={(event)=>{room.Post? event.preventDefault() : history.push({ pathname: `/Chat/${room._id}`, state: { room } })}} className={room.Post? "link" : "link cursour"} key={index}>
+                                <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link" key={index}>
                                     <div className={following.includes(room.CreatedByName) ? "room-holder-friend" : "room-holder"} key={index}>
                                         <div className="top-section">
                                             <p id="Title">{room.Title}</p>
-                                            <p id="Question">{room.Post? room.Question : room.Question.length >= 105? room.Question.substring(0, 105) + `...` : room.Question}</p>
+                                            <p id="Question">{room.Question.length >= 105? room.Question.substring(0, 105) + `...` : room.Question}</p>
                                         </div>
                                         <div className="low-section">
                                             <div className="low-holder">
@@ -255,13 +255,6 @@ function Feed({ input, followR, dashboard}) {
                                                 })}
                                             </div>
                                         </div>
-                                        {room.Post?(
-                                            <div className="chatOrPost">
-                                                <div className="blockage">
-                                                    <p>Post</p>
-                                                </div>
-                                            </div>
-                                        ):null}
                                         {room.Answered? (
                                             <div className="answered">
                                                 <div className="dot">
@@ -270,7 +263,7 @@ function Feed({ input, followR, dashboard}) {
                                             </div>
                                         ):null}
                                     </div>
-                                </div>
+                                </Link>
                             )
                         })) : friends_rooms.length === 0 ? (
                             <div className="noGlobalorFriends">
@@ -292,19 +285,11 @@ function Feed({ input, followR, dashboard}) {
                             );
                         }).map((room, index) => {
                             return (
-                                <div onClick={(event)=>{room.Post? event.preventDefault() : history.push({ pathname: `/Chat/${room._id}`, state: { room } })}} className={room.Post? "link" : "link cursour"} key={index}>
+                                <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link" key={index}>
                                     <div className="room-holder-friend" key={index}>
-                                        {room.Post?(
-                                            <div className="chatOrPost">
-                                                <div className="blockage">
-                                                    <p>Post</p>
-                                                </div>
-                                            </div>
-                                        ):null}
-                                       
                                         <div className="top-section">
                                             <p id="Title">{room.Title}</p>
-                                            <p id="Question">{room.Post? room.Question : room.Question.length >= 105? room.Question.substring(0, 105) + `...` : room.Question}</p>
+                                            <p id="Question">{room.Question.length >= 105? room.Question.substring(0, 105) + `...` : room.Question}</p>
                                         </div>
                                         <div className="low-section">
                                             <div className="low-holder">
@@ -321,7 +306,7 @@ function Feed({ input, followR, dashboard}) {
                                             </div>
                                         ):null}
                                     </div>
-                                </div>
+                                </Link>
                             )
                         })
 
