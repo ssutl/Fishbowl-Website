@@ -30,22 +30,25 @@ function ProfileBar({ profileToParent, search }) {
     }, [flag]) //Runs whenever flag is altered
 
     let profileSearch = search
+    console.log('profileSearch: ', profileSearch);
     let current_page = useLocation().pathname.split("/").pop(); //Collecting current page
     let current = useLocation().pathname.split("/").slice(-2)[0]; //Collecting current page
 
     const info = useContext(UserContext)
 
     const history = useHistory();
+    const [settings, setSettings] = useState(false)
+
     const token = localStorage.getItem('session-token')
     const [searching, setSearching] = useState(false)
     const chatroom = current === "Chat";
     const dashboard = current_page === "" && !searching; //Dashboard display is true if user is not searching and on home page
-    const userSearch = current_page === "" && searching //Search display is true if user is on home page and searching
+    const userSearch = current_page === "" && searching && !settings //Search display is true if user is on home page and searching
+    console.log('userSearch: ', userSearch);
     const [users, setUsers] = useState('')
     const [following, setFollowing] = useState()
     const [myRooms, setMyRooms] = useState([])
     const [currentRoom, setCurrentRoom] = useState()
-    const [settings, setSettings] = useState(false)
     console.log('currentRoom: ', currentRoom);
 
     const [displayStatus, setDisplayStaus] = useState(false)
@@ -317,6 +320,7 @@ function ProfileBar({ profileToParent, search }) {
                         </div>
                     ) : dashboard && settings ? (
                         <div className="settings">
+                            <h1>Settings Pending</h1>
                         </div>
                     ) : userSearch ? (
                         <div className="users">
@@ -341,21 +345,7 @@ function ProfileBar({ profileToParent, search }) {
                         </div>
                     ) : chatroom ? (
                         <div className="chat-prof">
-                            <div className="title">
-                                <p>ROOM STATS</p>
-                            </div>
-                            <ol>
-                                {currentRoom !== undefined ? (
-                                    <li>{`Total Messages: ${currentRoom.Messages.length}`}</li>
-
-                                ) : null}
-                            </ol>
-                            <div className="contributer-list">
-                                <p>Contributers :</p>
-                                <div className="vertical-scroll">
-                                    { }
-                                </div>
-                            </div>
+                            
                         </div>
                     )
                         : null}

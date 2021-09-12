@@ -3,6 +3,7 @@ import App from '../App'
 import { GoogleLogin } from 'react-google-login';
 import '../Styling/Login.css'
 import axios from 'axios';
+import PublishIcon from '@material-ui/icons/Publish';
 
 function Login() {
     /*
@@ -11,14 +12,16 @@ function Login() {
     ============================
     */
     const [username, setUserName] = useState("")
-    const [userLogged, setUserLogged] = useState()
+    const[createUser, setCreateUser] = useState(false)
+    const [responseSuccesful, setResponseSuccessful] = useState(false)
     const [image, setImage] = useState("")
     const [email, setEmail] = useState("")
-    const [logged, setLogged] = useState()
+    const [logged, setLogged] = useState(false)
     const [id, setUserId] = useState()
     const [status, setStatus] = useState("")
     const [token, setToken] = useState()
     const breakpoint = 1200;
+    const[usernameTaken, setUsernameTaken] = useState(false)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const resize = () => {
         setScreenWidth(window.innerWidth);
@@ -27,45 +30,64 @@ function Login() {
 
 
     const responseSuccessGoogle = (response) => {
-        setUserName(response.profileObj.name) //Using Google Response to stores current Users infos in state
         setEmail(response.profileObj.email)
         setImage(response.profileObj.imageUrl)
-        setToken(response.tokenId)
-        setUserLogged(true)
+        setToken(response.tokenId)        
+        checkUsername([response.tokenId,response.profileObj.email])
     }
 
+    const checkUsername = (prop) =>{
+        localStorage.setItem('session-token', prop[0]) //Storing token from google into local storage for access later
+
+        axios({
+            method: "GET",
+            url: "https://fishbowl-heroku.herokuapp.com/users/get",
+            headers: { "x-auth-token": `${prop[0]}` },
+        }).then((response)=>{
+            if(response.data.length !== 0){
+
+                if(response.data.filter((user)=> user.email === prop[1]).length > 0){
+                    response.data.map((user)=>{
+                        if(user.email === prop[1]){
+                            setUserName(user.username)
+                            setLogged(true)
+                        }
+                    })
+                }else{
+                    setCreateUser(true)
+                }
+
+            }else{
+                setCreateUser(true)
+            }
+                
+        })
+    }
+
+
     
-    useEffect(()=>{ //Once the user is logged into the account we save their data to the database and retrieve their uniques id from the database
-        let isMounted = true;
 
-        if (userLogged && isMounted) {
-            localStorage.setItem('session-token', token) //Storing token from google into local storage for access later
-
-            axios({ //Creating users account & if user already has account it wont be created again
+    const handleUserNameSubmit = () =>{
+        document.querySelector('.username-input').value= ''
+        if(username.length > 0){
+            axios({
                 method: "POST",
                 url: "https://fishbowl-heroku.herokuapp.com/users/new",
                 headers: { "x-auth-token": `${token}` },
-                data: { username, email, image, status }
-            }).then(() => {
-                axios({ //Retrieving the users ID from the database
-                    method: "GET",
-                    url: "https://fishbowl-heroku.herokuapp.com/users/get",
-                    headers: { "x-auth-token": `${token}` }
-                }).then((response) => {
-                    response.data.forEach((student) => {
-                        if (student.username === username) {
-                            setUserId(student._id); //Stroing user id in state
-                            setLogged(true) //Finally setting logged to true so that the main app can be conditionally rendered
-                        }
-                    })
-                })
+                data: {username ,email, status, image}
+            }).then((response)=>{
+                if(response.data.msg === "user already exists"){
+                    setUsernameTaken(true)
+                }else{
+                    setLogged(true)
+                }
+            }).catch((error)=>{
+                console.log('error: ', error);
+
             })
         }
-
-        return () => { isMounted = false };
-    },[userLogged])
-    
-
+        
+    }
 
 
     if(screenWidth >= breakpoint){
@@ -92,19 +114,31 @@ function Login() {
                         <div className="login-holder">
                             <div className="upper">
                                 <p className="title" id="welcomeback">Welcome</p>
-                                <p id="logintoyouraccount">Log Into Your Account</p>
+                                <p id="logintoyouraccount">{createUser? `Enter Username`: `Log Into Your Account`}</p>
                             </div>
                             <div className="lower">
-                                <GoogleLogin
-                                    className="login-button"
-                                    clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
-                                    onSuccess={responseSuccessGoogle}
-                                    cookiePolicy={'single_host_origin'}
-                                    render={renderProps => (
-                                        <div className="loginBtn" onClick={renderProps.onClick}>Login With Google</div>
-                                      )}
-                                    isSignedIn={true}
-                                >Login With Google</GoogleLogin>
+                                {createUser?(
+                                    <>
+                                        <div className={usernameTaken?"input-holder username-taken":"input-holder"}>
+                                            <input className="username-input" onChange={(event)=> setUserName(event.target.value)} required type="text" placeholder={usernameTaken?"Username Already Exists":"Choose Your Username"}></input>
+                                        </div>
+                                        <div className="submit" onClick={()=>handleUserNameSubmit()}>
+                                            <PublishIcon/>
+                                        </div>
+                                    </>
+                                ):(
+                                    <GoogleLogin
+                                        className="login-button"
+                                        clientId="939358098643-4utdojbmnngl2cbtnaccbhh8fard0hbj.apps.googleusercontent.com"
+                                        onSuccess={responseSuccessGoogle}
+                                        cookiePolicy={'single_host_origin'}
+                                        render={renderProps => (
+                                            <div className="loginBtn" onClick={renderProps.onClick}>Login With Google</div>
+                                        )}
+                                        isSignedIn={true}
+                                    >Login With Google</GoogleLogin>
+                                )}
+                                
                             </div>
                         </div>
     

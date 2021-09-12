@@ -347,7 +347,7 @@
       .settings {
         height: 45%;
         width: 85%;
-        background-color: yellow;
+        // background-color: yellow;
       }
 
       .users {
@@ -459,56 +459,7 @@
       .chat-prof {
         height: 45%;
         width: 85%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .title {
-          height: 12%;
-          width: 100%;
-          // background-color: teal;
-          display: flex;
-          align-items: flex-end;
-
-          p {
-            color: rgba(255, 255, 255, 0.644);
-            font-size: 14px;
-            margin-left: 10px;
-          }
-        }
-
-        ol {
-          list-style: none;
-          width: 92%;
-
-          li {
-            color: white;
-            font-size: 16px;
-          }
-        }
-
-        .contributer-list {
-          height: 70%;
-          width: 100%;
-          // background-color: #faa81a;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-          p {
-            color: white;
-            font-size: 16px;
-            margin-left: 10px;
-            margin-top: 20px;
-          }
-
-          .vertical-scroll {
-            height: 80%;
-            // background-color: teal;
-            // overflow-y: scroll;
-            width: 100%;
-          }
-        }
+        // background-color: orange;
       }
     }
   }
@@ -861,7 +812,7 @@
       .settings {
         height: 45%;
         width: 85%;
-        background-color: yellow;
+        // background-color: yellow;
       }
 
       .users {
@@ -973,56 +924,7 @@
       .chat-prof {
         height: 45%;
         width: 85%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .title {
-          height: 12%;
-          width: 100%;
-          // background-color: teal;
-          display: flex;
-          align-items: flex-end;
-
-          p {
-            color: rgba(255, 255, 255, 0.644);
-            font-size: 14px;
-            margin-left: 10px;
-          }
-        }
-
-        ol {
-          list-style: none;
-          width: 92%;
-
-          li {
-            color: white;
-            font-size: 16px;
-          }
-        }
-
-        .contributer-list {
-          height: 70%;
-          width: 100%;
-          // background-color: #faa81a;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-          p {
-            color: white;
-            font-size: 16px;
-            margin-left: 10px;
-            margin-top: 20px;
-          }
-
-          .vertical-scroll {
-            height: 80%;
-            // background-color: teal;
-            // overflow-y: scroll;
-            width: 100%;
-          }
-        }
+        // background-color: orange;
       }
     }
   }
@@ -1376,7 +1278,7 @@
       .settings {
         height: 45%;
         width: 85%;
-        background-color: yellow;
+        // background-color: yellow;
       }
 
       .users {
@@ -1388,10 +1290,10 @@
         .holder {
           width: 90%;
           height: 90%;
-          // background-color: $highlight;
           overflow: auto;
           display: flex;
           flex-direction: column;
+          // background-color: orange;
 
           .user-holder {
             margin-top: 30px;
@@ -1488,56 +1390,7 @@
       .chat-prof {
         height: 45%;
         width: 85%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .title {
-          height: 12%;
-          width: 100%;
-          // background-color: teal;
-          display: flex;
-          align-items: flex-end;
-
-          p {
-            color: rgba(255, 255, 255, 0.644);
-            font-size: 14px;
-            margin-left: 10px;
-          }
-        }
-
-        ol {
-          list-style: none;
-          width: 92%;
-
-          li {
-            color: white;
-            font-size: 16px;
-          }
-        }
-
-        .contributer-list {
-          height: 70%;
-          width: 100%;
-          // background-color: #faa81a;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-          p {
-            color: white;
-            font-size: 16px;
-            margin-left: 10px;
-            margin-top: 20px;
-          }
-
-          .vertical-scroll {
-            height: 80%;
-            // background-color: teal;
-            // overflow-y: scroll;
-            width: 100%;
-          }
-        }
+        // background-color: orange;
       }
     }
   }

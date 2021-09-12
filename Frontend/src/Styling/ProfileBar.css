@@ -385,7 +385,6 @@
   .whole-holder .profile .settings {
     height: 45%;
     width: 85%;
-    background-color: yellow;
   }
   .whole-holder .profile .users {
     height: 45%;
@@ -508,63 +507,6 @@
   .whole-holder .profile .chat-prof {
     height: 45%;
     width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .whole-holder .profile .chat-prof .title {
-    height: 12%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .whole-holder .profile .chat-prof .title p {
-    color: rgba(255, 255, 255, 0.644);
-    font-size: 14px;
-    margin-left: 10px;
-  }
-  .whole-holder .profile .chat-prof ol {
-    list-style: none;
-    width: 92%;
-  }
-  .whole-holder .profile .chat-prof ol li {
-    color: white;
-    font-size: 16px;
-  }
-  .whole-holder .profile .chat-prof .contributer-list {
-    height: 70%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .whole-holder .profile .chat-prof .contributer-list p {
-    color: white;
-    font-size: 16px;
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-  .whole-holder .profile .chat-prof .contributer-list .vertical-scroll {
-    height: 80%;
-    width: 100%;
   }
 }
 
@@ -955,7 +897,6 @@
   .whole-holder .profile .settings {
     height: 45%;
     width: 85%;
-    background-color: yellow;
   }
   .whole-holder .profile .users {
     height: 45%;
@@ -1078,63 +1019,6 @@
   .whole-holder .profile .chat-prof {
     height: 45%;
     width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .whole-holder .profile .chat-prof .title {
-    height: 12%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .whole-holder .profile .chat-prof .title p {
-    color: rgba(255, 255, 255, 0.644);
-    font-size: 14px;
-    margin-left: 10px;
-  }
-  .whole-holder .profile .chat-prof ol {
-    list-style: none;
-    width: 92%;
-  }
-  .whole-holder .profile .chat-prof ol li {
-    color: white;
-    font-size: 16px;
-  }
-  .whole-holder .profile .chat-prof .contributer-list {
-    height: 70%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .whole-holder .profile .chat-prof .contributer-list p {
-    color: white;
-    font-size: 16px;
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-  .whole-holder .profile .chat-prof .contributer-list .vertical-scroll {
-    height: 80%;
-    width: 100%;
   }
 }
 
@@ -1526,7 +1410,6 @@
   .whole-holder .profile .settings {
     height: 45%;
     width: 85%;
-    background-color: yellow;
   }
   .whole-holder .profile .users {
     height: 45%;
@@ -1649,63 +1532,6 @@
   .whole-holder .profile .chat-prof {
     height: 45%;
     width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .whole-holder .profile .chat-prof .title {
-    height: 12%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .whole-holder .profile .chat-prof .title p {
-    color: rgba(255, 255, 255, 0.644);
-    font-size: 14px;
-    margin-left: 10px;
-  }
-  .whole-holder .profile .chat-prof ol {
-    list-style: none;
-    width: 92%;
-  }
-  .whole-holder .profile .chat-prof ol li {
-    color: white;
-    font-size: 16px;
-  }
-  .whole-holder .profile .chat-prof .contributer-list {
-    height: 70%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .whole-holder .profile .chat-prof .contributer-list p {
-    color: white;
-    font-size: 16px;
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-  .whole-holder .profile .chat-prof .contributer-list .vertical-scroll {
-    height: 80%;
-    width: 100%;
   }
 }
 /*# sourceMappingURL=ProfileBar.css.map */

@@ -5,10 +5,10 @@ const router = require('express').Router() //Express
 
 
 router.post('/new', auth, (req, res) => { //Req is the data that the front end is sending to the backend 
-    console.log('req from login: ', req);
+    console.log('req from login: ', req.body);
     const { username, email, image, status } = req.body;
 
-    User.findOne({ username })
+    User.findOne({$or: [{ username: username},{email: email }]})
         .then((user) => {
             if (user) {
                 return res.status(200).json({ msg: "user already exists" }); //if true that means user is already present in the DB

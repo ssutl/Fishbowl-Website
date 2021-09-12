@@ -404,8 +404,41 @@
           width: 100%;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-evenly;
           margin-bottom: 10px;
+
+          .input-holder {
+            height: 50px;
+            width: 65%;
+            background-color: $buttons;
+            display: flex;
+            justify-content: flex-end;
+
+            input {
+              height: 100%;
+              width: 90%;
+              border: none;
+              outline: none;
+              background-color: transparent;
+              color: white;
+              font-size: 15px;
+            }
+          }
+
+          .username-taken {
+            border: 1px solid $negativeBTN;
+          }
+
+          .submit {
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
 
           .loginBtn {
             background-color: $buttons;
