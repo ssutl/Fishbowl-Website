@@ -35,9 +35,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -45,13 +45,13 @@
     border-bottom: 1px solid rgba(247, 246, 246, 0.164);
   }
   .whole-holder .profile .dashboardTitle p {
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 25px;
   }
   .whole-holder .profile .menu {
     border-bottom: 1px solid rgba(247, 246, 246, 0.164);
-    height: 35%;
+    height: 40%;
     width: 85%;
+    padding-bottom: 10px;
   }
   .whole-holder .profile .menu .title {
     height: 12%;
@@ -309,8 +309,36 @@
     font-weight: 400;
     font-size: 18px;
   }
-  .whole-holder .profile .room-stats {
-    height: 40%;
+  .whole-holder .profile .dashboard {
+    height: 45%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .whole-holder .profile .dashboard .room-nav {
+    height: 12%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .whole-holder .profile .dashboard .room-nav p {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .whole-holder .profile .dashboard .room-stats {
     width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -323,34 +351,19 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .whole-holder .profile .room-stats .room-nav {
-    height: 14%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 30px;
-  }
-  .whole-holder .profile .room-stats .room-nav p {
-    color: rgba(255, 255, 255, 0.644);
-    font-size: 14px;
-    margin-left: 10px;
-  }
-  .whole-holder .profile .room-stats ol {
+  .whole-holder .profile .dashboard .room-stats ol {
     list-style: none;
     width: 92%;
   }
-  .whole-holder .profile .room-stats ol li {
+  .whole-holder .profile .dashboard .room-stats ol li {
     color: white;
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
-  .whole-holder .profile .user-in {
-    height: 10%;
+  .whole-holder .profile .dashboard .user-in {
+    height: 25%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -358,18 +371,21 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .whole-holder .profile .user-in img {
+  .whole-holder .profile .dashboard .user-in img {
     height: 50px;
     width: 50px;
     border-radius: 100%;
     margin-right: 20px;
-    cursor: pointer;
   }
-  .whole-holder .profile .user-in p {
-    cursor: pointer;
+  .whole-holder .profile .dashboard .user-in p {
     font-size: 16px;
     color: white;
     font-weight: 500;
+  }
+  .whole-holder .profile .settings {
+    height: 45%;
+    width: 85%;
+    background-color: yellow;
   }
   .whole-holder .profile .users {
     height: 45%;
@@ -419,12 +435,12 @@
   }
   .whole-holder .profile .users .holder .user-holder .name-holder h2 {
     font-family: "Red Hat Text", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
   }
   .whole-holder .profile .users .holder .user-holder .follow-BTN {
     height: 38px;
-    width: 45px;
+    width: 50px;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
@@ -449,7 +465,7 @@
   }
   .whole-holder .profile .users .holder .user-holder .following-BTN {
     height: 38px;
-    width: 45px;
+    width: 50px;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
@@ -490,7 +506,7 @@
     /* Optional: just make scrollbar invisible */
   }
   .whole-holder .profile .chat-prof {
-    height: 40%;
+    height: 45%;
     width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -499,20 +515,19 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .whole-holder .profile .chat-prof .title {
-    height: 14%;
+    height: 12%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 30px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .whole-holder .profile .chat-prof .title p {
     color: rgba(255, 255, 255, 0.644);
@@ -590,9 +605,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -601,12 +616,12 @@
   }
   .whole-holder .profile .dashboardTitle p {
     font-size: 25px;
-    margin-bottom: 20px;
   }
   .whole-holder .profile .menu {
     border-bottom: 1px solid rgba(247, 246, 246, 0.164);
-    height: 35%;
+    height: 40%;
     width: 85%;
+    padding-bottom: 10px;
   }
   .whole-holder .profile .menu .title {
     height: 12%;
@@ -864,8 +879,36 @@
     font-weight: 400;
     font-size: 18px;
   }
-  .whole-holder .profile .room-stats {
-    height: 40%;
+  .whole-holder .profile .dashboard {
+    height: 45%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .whole-holder .profile .dashboard .room-nav {
+    height: 12%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .whole-holder .profile .dashboard .room-nav p {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .whole-holder .profile .dashboard .room-stats {
     width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -878,34 +921,19 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .whole-holder .profile .room-stats .room-nav {
-    height: 14%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 30px;
-  }
-  .whole-holder .profile .room-stats .room-nav p {
-    color: rgba(255, 255, 255, 0.644);
-    font-size: 14px;
-    margin-left: 10px;
-  }
-  .whole-holder .profile .room-stats ol {
+  .whole-holder .profile .dashboard .room-stats ol {
     list-style: none;
     width: 92%;
   }
-  .whole-holder .profile .room-stats ol li {
+  .whole-holder .profile .dashboard .room-stats ol li {
     color: white;
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
-  .whole-holder .profile .user-in {
-    height: 10%;
+  .whole-holder .profile .dashboard .user-in {
+    height: 25%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -913,16 +941,21 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .whole-holder .profile .user-in img {
+  .whole-holder .profile .dashboard .user-in img {
     height: 50px;
     width: 50px;
     border-radius: 100%;
     margin-right: 20px;
   }
-  .whole-holder .profile .user-in p {
+  .whole-holder .profile .dashboard .user-in p {
     font-size: 16px;
     color: white;
     font-weight: 500;
+  }
+  .whole-holder .profile .settings {
+    height: 45%;
+    width: 85%;
+    background-color: yellow;
   }
   .whole-holder .profile .users {
     height: 45%;
@@ -1043,7 +1076,7 @@
     /* Optional: just make scrollbar invisible */
   }
   .whole-holder .profile .chat-prof {
-    height: 40%;
+    height: 45%;
     width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1052,12 +1085,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .whole-holder .profile .chat-prof .title {
-    height: 14%;
+    height: 12%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1065,7 +1098,6 @@
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    margin-bottom: 30px;
   }
   .whole-holder .profile .chat-prof .title p {
     color: rgba(255, 255, 255, 0.644);
@@ -1144,9 +1176,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1155,12 +1187,12 @@
   }
   .whole-holder .profile .dashboardTitle p {
     font-size: 25px;
-    margin-bottom: 20px;
   }
   .whole-holder .profile .menu {
     border-bottom: 1px solid rgba(247, 246, 246, 0.164);
-    height: 35%;
+    height: 40%;
     width: 85%;
+    padding-bottom: 10px;
   }
   .whole-holder .profile .menu .title {
     height: 12%;
@@ -1418,8 +1450,36 @@
     font-weight: 400;
     font-size: 18px;
   }
-  .whole-holder .profile .room-stats {
-    height: 40%;
+  .whole-holder .profile .dashboard {
+    height: 45%;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .whole-holder .profile .dashboard .room-nav {
+    height: 12%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .whole-holder .profile .dashboard .room-nav p {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .whole-holder .profile .dashboard .room-stats {
     width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1432,37 +1492,19 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .whole-holder .profile .room-stats .room-nav {
-    height: 14%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: 30px;
-  }
-  .whole-holder .profile .room-stats .room-nav p {
-    color: rgba(255, 255, 255, 0.644);
-    font-size: 14px;
-    margin-left: 10px;
-  }
-  .whole-holder .profile .room-stats ol {
+  .whole-holder .profile .dashboard .room-stats ol {
     list-style: none;
     width: 92%;
   }
-  .whole-holder .profile .room-stats ol li {
+  .whole-holder .profile .dashboard .room-stats ol li {
     color: white;
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
-  .whole-holder .profile .user-in {
-    height: 10%;
+  .whole-holder .profile .dashboard .user-in {
+    height: 25%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1470,16 +1512,21 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .whole-holder .profile .user-in img {
+  .whole-holder .profile .dashboard .user-in img {
     height: 50px;
     width: 50px;
     border-radius: 100%;
     margin-right: 20px;
   }
-  .whole-holder .profile .user-in p {
+  .whole-holder .profile .dashboard .user-in p {
     font-size: 16px;
     color: white;
     font-weight: 500;
+  }
+  .whole-holder .profile .settings {
+    height: 45%;
+    width: 85%;
+    background-color: yellow;
   }
   .whole-holder .profile .users {
     height: 45%;
@@ -1600,7 +1647,7 @@
     /* Optional: just make scrollbar invisible */
   }
   .whole-holder .profile .chat-prof {
-    height: 40%;
+    height: 45%;
     width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1609,20 +1656,19 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .whole-holder .profile .chat-prof .title {
-    height: 14%;
+    height: 12%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 30px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .whole-holder .profile .chat-prof .title p {
     color: rgba(255, 255, 255, 0.644);

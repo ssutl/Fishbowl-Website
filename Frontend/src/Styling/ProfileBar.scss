@@ -22,22 +22,23 @@
         height: 15%;
         width: 80%;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         color: white;
         border-bottom: 1px solid rgba(247, 246, 246, 0.164);
+
         // background-color: orange;
 
         p {
-          font-size: 22px;
-          margin-bottom: 20px;
+          font-size: 25px;
         }
       }
 
       .menu {
         border-bottom: 1px solid rgba(247, 246, 246, 0.164);
-        height: 35%;
+        height: 40%;
         width: 85%;
+        padding-bottom: 10px;
         // background-color: teal;
 
         .title {
@@ -280,19 +281,19 @@
         }
       }
 
-      .room-stats {
-        height: 40%;
+      .dashboard {
+        height: 45%;
         width: 85%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
 
         .room-nav {
-          height: 14%;
-          width: 100%;
+          height: 12%;
+          // background-color: teal;
           display: flex;
-          align-items: center;
-          margin-bottom: 30px;
+          width: 100%;
+          align-items: flex-end;
 
           p {
             color: rgba(255, 255, 255, 0.644);
@@ -301,39 +302,52 @@
           }
         }
 
-        ol {
-          list-style: none;
-          width: 92%;
-          // background-color: teal;
+        .room-stats {
+          // height: 50%;
+          // background-color: red;
+          width: 85%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-          li {
-            color: white;
+          ol {
+            list-style: none;
+            width: 92%;
+
+            li {
+              color: white;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 25px;
+              margin-bottom: 25px;
+            }
+          }
+        }
+
+        .user-in {
+          height: 25%;
+          display: flex;
+          align-items: center;
+
+          img {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            margin-right: 20px;
+          }
+
+          p {
             font-size: 16px;
-            font-weight: 400;
-            margin-bottom: 35px;
+            color: white;
+            font-weight: 500;
           }
         }
       }
 
-      .user-in {
-        height: 10%;
-        display: flex;
-        align-items: center;
-
-        img {
-          height: 50px;
-          width: 50px;
-          border-radius: 100%;
-          margin-right: 20px;
-          cursor: pointer;
-        }
-
-        p {
-          cursor: pointer;
-          font-size: 16px;
-          color: white;
-          font-weight: 500;
-        }
+      .settings {
+        height: 45%;
+        width: 85%;
+        background-color: yellow;
       }
 
       .users {
@@ -372,7 +386,7 @@
               width: 35%;
               h2 {
                 font-family: "Red Hat Text", sans-serif;
-                font-size: 16px;
+                font-size: 18px;
                 color: white;
               }
             }
@@ -380,7 +394,7 @@
             .follow-BTN {
               // margin-left: auto;
               height: 38px;
-              width: 45px;
+              width: 50px;
               border: 1px solid white;
               border-radius: 5px;
               color: white;
@@ -402,7 +416,7 @@
             .following-BTN {
               // margin-left: auto;
               height: 38px;
-              width: 45px;
+              width: 50px;
               border: 1px solid white;
               border-radius: 5px;
               color: white;
@@ -443,20 +457,18 @@
       }
 
       .chat-prof {
-        height: 40%;
+        height: 45%;
         width: 85%;
-        // background-color: red;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
 
         .title {
-          height: 14%;
+          height: 12%;
           width: 100%;
           // background-color: teal;
           display: flex;
-          align-items: center;
-          margin-bottom: 30px;
+          align-items: flex-end;
 
           p {
             color: rgba(255, 255, 255, 0.644);
@@ -468,7 +480,6 @@
         ol {
           list-style: none;
           width: 92%;
-          // background-color: teal;
 
           li {
             color: white;
@@ -525,7 +536,7 @@
         height: 15%;
         width: 80%;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         color: white;
         border-bottom: 1px solid rgba(247, 246, 246, 0.164);
@@ -534,14 +545,14 @@
 
         p {
           font-size: 25px;
-          margin-bottom: 20px;
         }
       }
 
       .menu {
         border-bottom: 1px solid rgba(247, 246, 246, 0.164);
-        height: 35%;
+        height: 40%;
         width: 85%;
+        padding-bottom: 10px;
         // background-color: teal;
 
         .title {
@@ -784,19 +795,19 @@
         }
       }
 
-      .room-stats {
-        height: 40%;
+      .dashboard {
+        height: 45%;
         width: 85%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
 
         .room-nav {
-          height: 14%;
-          width: 100%;
+          height: 12%;
+          // background-color: teal;
           display: flex;
-          align-items: center;
-          margin-bottom: 30px;
+          width: 100%;
+          align-items: flex-end;
 
           p {
             color: rgba(255, 255, 255, 0.644);
@@ -805,37 +816,52 @@
           }
         }
 
-        ol {
-          list-style: none;
-          width: 92%;
-          // background-color: teal;
+        .room-stats {
+          // height: 50%;
+          // background-color: red;
+          width: 85%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-          li {
-            color: white;
+          ol {
+            list-style: none;
+            width: 92%;
+
+            li {
+              color: white;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 25px;
+              margin-bottom: 25px;
+            }
+          }
+        }
+
+        .user-in {
+          height: 25%;
+          display: flex;
+          align-items: center;
+
+          img {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            margin-right: 20px;
+          }
+
+          p {
             font-size: 16px;
-            font-weight: 400;
-            margin-bottom: 35px;
+            color: white;
+            font-weight: 500;
           }
         }
       }
 
-      .user-in {
-        height: 10%;
-        display: flex;
-        align-items: center;
-
-        img {
-          height: 50px;
-          width: 50px;
-          border-radius: 100%;
-          margin-right: 20px;
-        }
-
-        p {
-          font-size: 16px;
-          color: white;
-          font-weight: 500;
-        }
+      .settings {
+        height: 45%;
+        width: 85%;
+        background-color: yellow;
       }
 
       .users {
@@ -945,20 +971,18 @@
       }
 
       .chat-prof {
-        height: 40%;
+        height: 45%;
         width: 85%;
-        // background-color: red;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
 
         .title {
-          height: 14%;
+          height: 12%;
           width: 100%;
           // background-color: teal;
           display: flex;
           align-items: flex-end;
-          margin-bottom: 30px;
 
           p {
             color: rgba(255, 255, 255, 0.644);
@@ -970,7 +994,6 @@
         ol {
           list-style: none;
           width: 92%;
-          // background-color: teal;
 
           li {
             color: white;
@@ -1028,7 +1051,7 @@
         height: 15%;
         width: 80%;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         color: white;
         border-bottom: 1px solid rgba(247, 246, 246, 0.164);
@@ -1037,14 +1060,14 @@
 
         p {
           font-size: 25px;
-          margin-bottom: 20px;
         }
       }
 
       .menu {
         border-bottom: 1px solid rgba(247, 246, 246, 0.164);
-        height: 35%;
+        height: 40%;
         width: 85%;
+        padding-bottom: 10px;
         // background-color: teal;
 
         .title {
@@ -1287,20 +1310,19 @@
         }
       }
 
-      .room-stats {
-        height: 40%;
+      .dashboard {
+        height: 45%;
         width: 85%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
 
         .room-nav {
-          height: 14%;
-          width: 100%;
+          height: 12%;
+          // background-color: teal;
           display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 30px;
+          width: 100%;
+          align-items: flex-end;
 
           p {
             color: rgba(255, 255, 255, 0.644);
@@ -1309,37 +1331,52 @@
           }
         }
 
-        ol {
-          list-style: none;
-          width: 92%;
-          // background-color: teal;
+        .room-stats {
+          // height: 50%;
+          // background-color: red;
+          width: 85%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-          li {
-            color: white;
+          ol {
+            list-style: none;
+            width: 92%;
+
+            li {
+              color: white;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 25px;
+              margin-bottom: 25px;
+            }
+          }
+        }
+
+        .user-in {
+          height: 25%;
+          display: flex;
+          align-items: center;
+
+          img {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            margin-right: 20px;
+          }
+
+          p {
             font-size: 16px;
-            font-weight: 400;
-            margin-bottom: 30px;
+            color: white;
+            font-weight: 500;
           }
         }
       }
 
-      .user-in {
-        height: 10%;
-        display: flex;
-        align-items: center;
-
-        img {
-          height: 50px;
-          width: 50px;
-          border-radius: 100%;
-          margin-right: 20px;
-        }
-
-        p {
-          font-size: 16px;
-          color: white;
-          font-weight: 500;
-        }
+      .settings {
+        height: 45%;
+        width: 85%;
+        background-color: yellow;
       }
 
       .users {
@@ -1449,20 +1486,18 @@
       }
 
       .chat-prof {
-        height: 40%;
+        height: 45%;
         width: 85%;
-        // background-color: red;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
 
         .title {
-          height: 14%;
+          height: 12%;
           width: 100%;
           // background-color: teal;
           display: flex;
-          align-items: center;
-          margin-bottom: 30px;
+          align-items: flex-end;
 
           p {
             color: rgba(255, 255, 255, 0.644);
