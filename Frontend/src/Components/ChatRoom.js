@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 // import { io } from "socket.io-client";
 import useChat from './UseChat'
 import DeleteIcon from "@material-ui/icons/Delete";
+import backA from '../svg/back.png'
 
 
 
@@ -39,7 +40,7 @@ function ChatRoom() {
     let current_month = current_date.getMonth()
     let current_day = current_date.getDate()
     let current_hour = current_date.getHours()
-    const breakpoint = 1200;
+    const breakpoint = 1024;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
@@ -362,10 +363,7 @@ function ChatRoom() {
                             ):(
                                 <>
                                     <Link to="/">
-                                        <KeyboardBackspaceIcon id="arrow" style={{ fontSize: 40 }} />
-                                    </Link>
-                                    <Link to="/">
-                                            <h2>Home</h2>
+                                        <img id="arrow" src={backA} alt=""/>
                                     </Link>
                                 </>
                             )}

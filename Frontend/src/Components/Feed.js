@@ -21,7 +21,7 @@ function Feed({ input, followR, dashboard}) {
     const [feed, setFeed] = useState(true) //Boolean variable to switch between feeds
     const [following, setFollowing] = useState([]) //Array of the users the current user is following
     const [loading, setLoading] = useState() //Flag to indicate when API call is finished
-    const breakpoint = 1200; //Tablet breakpoint
+    const breakpoint = 1024; //Tablet breakpoint
     const [screenWidth, setScreenWidth] = useState(window.innerWidth); //Settting screenwidth to current viewport size
     const [newRoomsAvailable, setNewRoomAvailable] = useState(false)
     const [cycledFinished, setCycledFinished] = useState(false)

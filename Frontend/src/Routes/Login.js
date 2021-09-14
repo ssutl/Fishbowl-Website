@@ -20,7 +20,7 @@ function Login() {
     const [id, setUserId] = useState()
     const [status, setStatus] = useState("")
     const [token, setToken] = useState()
-    const breakpoint = 1200;
+    const breakpoint = 1024;
     const[usernameTaken, setUsernameTaken] = useState(false)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const resize = () => {

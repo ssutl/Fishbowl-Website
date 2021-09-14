@@ -1,7 +1,7 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .whole-holder {
     height: 100vh;
-    width: 27%;
+    width: 25%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -13,8 +13,9 @@
             justify-content: center;
   }
   .whole-holder .profile {
-    height: 80%;
-    width: 80%;
+    height: 90%;
+    margin-bottom: 5vh;
+    width: 85%;
     border-radius: 15px;
     background-color: #212224ff;
     display: -webkit-box;
@@ -45,7 +46,7 @@
     border-bottom: 1px solid rgba(247, 246, 246, 0.164);
   }
   .whole-holder .profile .dashboardTitle p {
-    font-size: 25px;
+    font-size: 20px;
   }
   .whole-holder .profile .menu {
     border-bottom: 1px solid rgba(247, 246, 246, 0.164);
@@ -66,11 +67,11 @@
   }
   .whole-holder .profile .menu .title p {
     color: rgba(255, 255, 255, 0.644);
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 10px;
   }
   .whole-holder .profile .menu .menu-item {
-    height: 50px;
+    height: 35px;
     width: 100%;
     margin-bottom: 15px;
     display: -webkit-box;
@@ -86,8 +87,8 @@
     position: relative;
   }
   .whole-holder .profile .menu img {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     -webkit-filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
             filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
     margin-left: 15px;
@@ -97,7 +98,7 @@
     margin-left: 20px;
   }
   .whole-holder .profile .menu p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
   }
   .whole-holder .profile .menu .options {
@@ -335,7 +336,7 @@
   }
   .whole-holder .profile .dashboard .room-nav p {
     color: rgba(255, 255, 255, 0.644);
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 10px;
   }
   .whole-holder .profile .dashboard .room-stats {
@@ -357,7 +358,8 @@
   }
   .whole-holder .profile .dashboard .room-stats ol li {
     color: white;
-    font-size: 16px;
+    margin-left: 5px;
+    font-size: 14px;
     font-weight: 400;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -372,13 +374,13 @@
             align-items: center;
   }
   .whole-holder .profile .dashboard .user-in img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     margin-right: 20px;
   }
   .whole-holder .profile .dashboard .user-in p {
-    font-size: 16px;
+    font-size: 15px;
     color: white;
     font-weight: 500;
   }
@@ -510,7 +512,7 @@
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1366px) {
   .whole-holder {
     height: 100vh;
     width: 25%;
@@ -525,7 +527,7 @@
             justify-content: center;
   }
   .whole-holder .profile {
-    height: 80%;
+    height: 85%;
     width: 75%;
     border-radius: 15px;
     background-color: #212224ff;
@@ -557,7 +559,7 @@
     border-bottom: 1px solid rgba(247, 246, 246, 0.164);
   }
   .whole-holder .profile .dashboardTitle p {
-    font-size: 25px;
+    font-size: 22px;
   }
   .whole-holder .profile .menu {
     border-bottom: 1px solid rgba(247, 246, 246, 0.164);
@@ -582,7 +584,7 @@
     margin-left: 10px;
   }
   .whole-holder .profile .menu .menu-item {
-    height: 50px;
+    height: 40px;
     width: 100%;
     margin-bottom: 15px;
     display: -webkit-box;
@@ -598,8 +600,8 @@
     position: relative;
   }
   .whole-holder .profile .menu img {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     -webkit-filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
             filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg) brightness(105%) contrast(103%);
     margin-left: 15px;
@@ -1037,8 +1039,8 @@
             justify-content: center;
   }
   .whole-holder .profile {
-    height: 80%;
-    width: 72%;
+    height: 85%;
+    width: 70%;
     margin-top: 50px;
     border-radius: 15px;
     background-color: #212224ff;

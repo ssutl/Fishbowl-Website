@@ -4,14 +4,13 @@
 @include breakpoint-mixin("laptop") {
   .chat-room-section {
     height: fit-content;
-    padding-bottom: 40px;
-
     width: 100%;
     display: flex;
     justify-content: center;
     // background-color: aqua;
 
     .chat-room-holder {
+      margin-top: 10px;
       height: fit-content;
       width: 92%;
       display: flex;
@@ -35,18 +34,20 @@
           display: flex;
           align-items: center;
           color: white;
-          margin-left: 20px;
           justify-content: space-between;
+          margin-left: 23px;
 
           a {
             text-decoration: none;
             color: white;
 
             #arrow {
-              font-weight: 800;
+              height: 18px;
+              width: 18px;
             }
 
             h2 {
+              font-size: 20px;
               margin: 0px 65px 7px 0px;
             }
           }
@@ -174,7 +175,7 @@
             margin-right: 40px;
           }
           #title {
-            font-size: 22px;
+            font-size: 18px;
             opacity: 0.5;
             margin-bottom: 7px;
 
@@ -185,7 +186,7 @@
           }
 
           #question {
-            font-size: 25px;
+            font-size: 20px;
             margin-bottom: 10px;
             // opacity: 0.5;
           }
@@ -465,7 +466,7 @@
       }
 
       .chat-bar {
-        height: 8vh;
+        height: 10vh;
         width: 100%;
         background-color: $buttons;
 
@@ -481,8 +482,8 @@
             border: none;
             outline: none;
             border-radius: 5px;
-            width: 75%;
-            height: 45px;
+            width: 70%;
+            height: 40px;
             padding-left: 20px;
             font-size: 15px;
             background-color: #141414;
@@ -490,8 +491,8 @@
           }
 
           .send {
-            height: 45px;
-            width: 95px;
+            height: 40px;
+            width: 90px;
             border-radius: 5px;
             background-color: #141414;
             color: white;
@@ -548,7 +549,8 @@
           display: flex;
           align-items: center;
           color: white;
-          margin-left: 20px;
+          margin-left: 25px;
+
           // background-color: purple;
           justify-content: space-between;
 
@@ -558,6 +560,8 @@
 
             #arrow {
               font-weight: 800;
+              height: 20px;
+              width: 20px;
             }
 
             h2 {
@@ -971,7 +975,7 @@
       }
 
       .chat-bar {
-        height: 8vh;
+        height: 9vh;
         width: 100%;
         background-color: $buttons;
 

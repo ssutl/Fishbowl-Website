@@ -19,7 +19,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .login-page {
     width: 100%;
     height: 100vh;
@@ -29,7 +29,7 @@
   }
   .login-page .left {
     height: 100vh;
-    width: 50%;
+    width: 60%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -41,8 +41,8 @@
             justify-content: center;
   }
   .login-page .left .text-holder {
-    height: 70vh;
-    width: 80%;
+    height: 60vh;
+    width: 90%;
   }
   .login-page .left .text-holder .chunkz {
     height: 54%;
@@ -51,7 +51,7 @@
   .login-page .left .text-holder .chunkz .large {
     color: #f2f2f2;
     background: #0096ff;
-    font-size: 60px;
+    font-size: 45px;
     float: left;
     font-weight: 700;
     padding: 10px;
@@ -82,7 +82,7 @@
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    height: 46%;
+    height: 45%;
     width: 100%;
     color: white;
   }
@@ -95,7 +95,7 @@
   }
   .login-page .right {
     height: 100vh;
-    width: 50%;
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -107,8 +107,8 @@
             justify-content: center;
   }
   .login-page .right .login-holder {
-    height: 20vh;
-    width: 55%;
+    height: 30vh;
+    width: 80%;
     border-radius: 5px;
     background-color: #212224ff;
     display: -webkit-box;
@@ -120,7 +120,7 @@
             flex-direction: column;
   }
   .login-page .right .login-holder .upper {
-    height: 12vh;
+    height: 20vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -145,8 +145,48 @@
     font-weight: 650;
   }
   .login-page .right .login-holder .lower {
-    height: 8vh;
+    height: 10vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 10px;
+  }
+  .login-page .right .login-holder .lower .input-holder {
+    height: 50px;
+    width: 65%;
+    background-color: #333333ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .login-page .right .login-holder .lower .input-holder input {
+    height: 100%;
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+  }
+  .login-page .right .login-holder .lower .username-taken {
+    border: 1px solid #fd4d4d;
+  }
+  .login-page .right .login-holder .lower .submit {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -156,7 +196,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 10px;
   }
   .login-page .right .login-holder .lower .loginBtn {
     background-color: #333333ff;
@@ -312,10 +351,49 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 10px;
+  }
+  .login-page .right .login-holder .lower .input-holder {
+    height: 50px;
+    width: 65%;
+    background-color: #333333ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .login-page .right .login-holder .lower .input-holder input {
+    height: 100%;
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+  }
+  .login-page .right .login-holder .lower .username-taken {
+    border: 1px solid #fd4d4d;
+  }
+  .login-page .right .login-holder .lower .submit {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 10px;
   }
   .login-page .right .login-holder .lower .loginBtn {
     background-color: #333333ff;

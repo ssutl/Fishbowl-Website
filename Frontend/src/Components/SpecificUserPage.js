@@ -15,7 +15,7 @@ function SpecificUserPage({ specificUserToParent }) {
 
     const history = useHistory();
     const [following, setFollowing] = useState()
-    const breakpoint = 1200;
+    const breakpoint = 1024;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const { state } = useLocation(); //Next users business
     const info = useContext(UserContext) //Current Logged in users business

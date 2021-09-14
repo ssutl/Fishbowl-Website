@@ -3,14 +3,15 @@
 @include breakpoint-mixin("laptop") {
   .whole-holder {
     height: 100vh;
-    width: 27%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .profile {
-      height: 80%;
-      width: 80%;
+      height: 90%;
+      margin-bottom: 5vh;
+      width: 85%;
       border-radius: 15px;
       background-color: $secondary-background;
       display: flex;
@@ -30,7 +31,7 @@
         // background-color: orange;
 
         p {
-          font-size: 25px;
+          font-size: 20px;
         }
       }
 
@@ -51,13 +52,13 @@
 
           p {
             color: rgba(255, 255, 255, 0.644);
-            font-size: 14px;
+            font-size: 12px;
             margin-left: 10px;
           }
         }
 
         .menu-item {
-          height: 50px;
+          height: 35px;
           width: 100%;
           margin-bottom: 15px;
           display: flex;
@@ -69,8 +70,8 @@
         }
 
         img {
-          height: 20px;
-          width: 20px;
+          height: 18px;
+          width: 18px;
           filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg)
             brightness(105%) contrast(103%);
           margin-left: 15px;
@@ -83,7 +84,7 @@
         }
 
         p {
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 400;
         }
 
@@ -297,7 +298,7 @@
 
           p {
             color: rgba(255, 255, 255, 0.644);
-            font-size: 14px;
+            font-size: 12px;
             margin-left: 10px;
           }
         }
@@ -316,7 +317,8 @@
 
             li {
               color: white;
-              font-size: 16px;
+              margin-left: 5px;
+              font-size: 14px;
               font-weight: 400;
               margin-top: 25px;
               margin-bottom: 25px;
@@ -330,14 +332,14 @@
           align-items: center;
 
           img {
-            height: 50px;
-            width: 50px;
+            height: 40px;
+            width: 40px;
             border-radius: 100%;
             margin-right: 20px;
           }
 
           p {
-            font-size: 16px;
+            font-size: 15px;
             color: white;
             font-weight: 500;
           }
@@ -474,7 +476,7 @@
     justify-content: center;
 
     .profile {
-      height: 80%;
+      height: 85%;
       width: 75%;
       border-radius: 15px;
       background-color: $secondary-background;
@@ -495,7 +497,7 @@
         // background-color: orange;
 
         p {
-          font-size: 25px;
+          font-size: 22px;
         }
       }
 
@@ -522,7 +524,7 @@
         }
 
         .menu-item {
-          height: 50px;
+          height: 40px;
           width: 100%;
           margin-bottom: 15px;
           display: flex;
@@ -534,8 +536,8 @@
         }
 
         img {
-          height: 20px;
-          width: 20px;
+          height: 18px;
+          width: 18px;
           filter: invert(100%) sepia(0%) saturate(10%) hue-rotate(213deg)
             brightness(105%) contrast(103%);
           margin-left: 15px;
@@ -939,8 +941,8 @@
     justify-content: center;
 
     .profile {
-      height: 80%;
-      width: 72%;
+      height: 85%;
+      width: 70%;
       margin-top: 50px;
       border-radius: 15px;
       background-color: $secondary-background;

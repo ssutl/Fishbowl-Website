@@ -16,7 +16,7 @@ function NavBar({ profileData, followReq }) {
     const [following, setFollowing] = useState()
     let list = []
     const [loading, setLoading] = useState()
-    const breakpoint = 1200;
+    const breakpoint = 1024;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const resize = () => {
         setScreenWidth(window.innerWidth);

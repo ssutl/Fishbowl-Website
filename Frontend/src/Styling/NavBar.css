@@ -1,9 +1,9 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .nav-holder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 23%;
+    width: 20%;
     height: 100vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -32,16 +32,17 @@
     text-decoration: none;
   }
   .nav-holder .logo a img {
-    height: 60px;
-    width: 60px;
-    margin-left: 10px;
-    margin-right: 20px;
+    height: 35px;
+    width: 35px;
+    margin-left: 0px;
+    margin-right: 10px;
   }
   .nav-holder .logo a h1 {
     color: white;
+    font-size: 30px;
   }
   .nav-holder .people-holder {
-    width: 90%;
+    width: 80%;
     height: 89%;
   }
   .nav-holder .people-holder .upper {
@@ -50,6 +51,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-bottom: 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -60,13 +62,12 @@
   }
   .nav-holder .people-holder .upper h1,
   .nav-holder .people-holder .upper h2 {
-    margin-left: 25px;
     font-family: "Red Hat Text", sans-serif;
     color: white;
   }
   .nav-holder .people-holder .upper h1 {
-    font-size: 25px;
     font-weight: 600;
+    font-size: 20px;
     margin-bottom: 15px;
   }
   .nav-holder .people-holder .upper h2 {
@@ -90,7 +91,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 60px;
+    height: 40px;
     width: 100%;
     margin-bottom: 20px;
     -webkit-box-align: center;
@@ -107,10 +108,9 @@
             align-items: center;
   }
   .nav-holder .people-holder .lower .user-holder a .circle {
-    margin-left: 20px;
     border-radius: 100%;
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
     background-color: #212224ff;
     overflow: hidden;
   }
@@ -274,7 +274,7 @@
     margin-left: 5px;
     display: block;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Red Hat Text", sans-serif;
     color: white;
   }
@@ -316,7 +316,7 @@
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1366px) {
   .nav-holder {
     display: -webkit-box;
     display: -ms-flexbox;

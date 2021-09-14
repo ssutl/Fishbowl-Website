@@ -1,9 +1,8 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .chat-room-section {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding-bottom: 40px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13,6 +12,7 @@
             justify-content: center;
   }
   .chat-room-section .chat-room-holder {
+    margin-top: 10px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -48,19 +48,21 @@
         -ms-flex-align: center;
             align-items: center;
     color: white;
-    margin-left: 20px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-left: 23px;
   }
   .chat-room-section .chat-room-holder .navbar .home a {
     text-decoration: none;
     color: white;
   }
   .chat-room-section .chat-room-holder .navbar .home a #arrow {
-    font-weight: 800;
+    height: 18px;
+    width: 18px;
   }
   .chat-room-section .chat-room-holder .navbar .home a h2 {
+    font-size: 20px;
     margin: 0px 65px 7px 0px;
   }
   .chat-room-section .chat-room-holder .navbar .group {
@@ -217,7 +219,7 @@
     margin-right: 40px;
   }
   .chat-room-section .chat-room-holder .scrollable .question #title {
-    font-size: 22px;
+    font-size: 18px;
     opacity: 0.5;
     margin-bottom: 7px;
   }
@@ -226,7 +228,7 @@
     margin-left: 10px;
   }
   .chat-room-section .chat-room-holder .scrollable .question #question {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 10px;
   }
   .chat-room-section .chat-room-holder .scrollable .question #creation {
@@ -539,7 +541,7 @@
     /* Optional: just make scrollbar invisible */
   }
   .chat-room-section .chat-room-holder .chat-bar {
-    height: 8vh;
+    height: 10vh;
     width: 100%;
     background-color: #333333ff;
   }
@@ -561,16 +563,16 @@
     border: none;
     outline: none;
     border-radius: 5px;
-    width: 75%;
-    height: 45px;
+    width: 70%;
+    height: 40px;
     padding-left: 20px;
     font-size: 15px;
     background-color: #141414;
     color: white;
   }
   .chat-room-section .chat-room-holder .chat-bar form .send {
-    height: 45px;
-    width: 95px;
+    height: 40px;
+    width: 90px;
     border-radius: 5px;
     background-color: #141414;
     color: white;
@@ -593,7 +595,7 @@
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1366px) {
   .chat-room-section {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -643,7 +645,7 @@
         -ms-flex-align: center;
             align-items: center;
     color: white;
-    margin-left: 20px;
+    margin-left: 25px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -654,6 +656,8 @@
   }
   .chat-room-section .chat-room-holder .navbar .home a #arrow {
     font-weight: 800;
+    height: 20px;
+    width: 20px;
   }
   .chat-room-section .chat-room-holder .navbar .home a h2 {
     margin: 0px 45px 7px 0px;
@@ -1127,7 +1131,7 @@
     color: white;
   }
   .chat-room-section .chat-room-holder .chat-bar {
-    height: 8vh;
+    height: 9vh;
     width: 100%;
     background-color: #333333ff;
   }

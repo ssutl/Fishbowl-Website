@@ -1,6 +1,6 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .middle-holder {
-    width: 50%;
+    width: 55%;
     height: 100vh;
   }
   .middle-holder .section1 {
@@ -21,7 +21,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 45px;
+    height: 40px;
     width: 90%;
     background-color: #333333ff;
     margin-top: 12px;
@@ -40,11 +40,11 @@
     border: none;
     color: white;
     padding: 10px;
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1366px) {
   .middle-holder {
     width: 52%;
     height: 100vh;
@@ -67,7 +67,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 45px;
+    height: 48px;
     width: 90%;
     background-color: #333333ff;
     margin-top: 12px;

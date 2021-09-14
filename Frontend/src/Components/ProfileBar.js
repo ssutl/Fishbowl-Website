@@ -57,7 +57,7 @@ function ProfileBar({ profileToParent, search }) {
     const [right, setRight] = useState()
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-    const breakpoint = 1200;
+    const breakpoint = 1024;
     const upper_breakpoint_laptop = 1800;
 
     const resize = () => {

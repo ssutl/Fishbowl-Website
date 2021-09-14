@@ -26,15 +26,15 @@
 
     .left {
       height: 100vh;
-      width: 50%;
+      width: 60%;
       // background-color: yellow;
       display: flex;
       align-items: center;
       justify-content: center;
 
       .text-holder {
-        height: 70vh;
-        width: 80%;
+        height: 60vh;
+        width: 90%;
         // background-color: yellowgreen;
 
         .chunkz {
@@ -45,7 +45,7 @@
           .large {
             color: #f2f2f2;
             background: $highlight;
-            font-size: 60px;
+            font-size: 45px;
             float: left;
             font-weight: 700;
             padding: 10px;
@@ -72,7 +72,7 @@
         .website-desc {
           display: flex;
           align-items: flex-end;
-          height: 46%;
+          height: 45%;
           width: 100%;
           color: white;
           // background-color: #0096ff;
@@ -90,15 +90,15 @@
     }
     .right {
       height: 100vh;
-      width: 50%;
+      width: 40%;
       // background-color: orange;
       display: flex;
       align-items: center;
       justify-content: center;
 
       .login-holder {
-        height: 20vh;
-        width: 55%;
+        height: 30vh;
+        width: 80%;
         border-radius: 5px;
         // justify-content: center;
         background-color: $secondary-background;
@@ -106,7 +106,7 @@
         flex-direction: column;
 
         .upper {
-          height: 12vh;
+          height: 20vh;
           width: 100%;
           // background-color: green;
           display: flex;
@@ -127,13 +127,46 @@
           }
         }
         .lower {
-          height: 8vh;
+          height: 10vh;
           // background-color: yellow;
           width: 100%;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-evenly;
           margin-bottom: 10px;
+
+          .input-holder {
+            height: 50px;
+            width: 65%;
+            background-color: $buttons;
+            display: flex;
+            justify-content: flex-end;
+
+            input {
+              height: 100%;
+              width: 90%;
+              border: none;
+              outline: none;
+              background-color: transparent;
+              color: white;
+              font-size: 15px;
+            }
+          }
+
+          .username-taken {
+            border: 1px solid $negativeBTN;
+          }
+
+          .submit {
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
 
           .loginBtn {
             background-color: $buttons;
@@ -268,8 +301,41 @@
           width: 100%;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-evenly;
           margin-bottom: 10px;
+
+          .input-holder {
+            height: 50px;
+            width: 65%;
+            background-color: $buttons;
+            display: flex;
+            justify-content: flex-end;
+
+            input {
+              height: 100%;
+              width: 90%;
+              border: none;
+              outline: none;
+              background-color: transparent;
+              color: white;
+              font-size: 15px;
+            }
+          }
+
+          .username-taken {
+            border: 1px solid $negativeBTN;
+          }
+
+          .submit {
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
 
           .loginBtn {
             background-color: $buttons;

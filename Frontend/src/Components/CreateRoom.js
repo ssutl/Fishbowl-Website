@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+import backA from '../svg/back.png'
+
 
 
 function CreateRoom({ createRoomToParent }) {
@@ -42,7 +44,7 @@ function CreateRoom({ createRoomToParent }) {
     const [thoughts, setThoughts] = useState(false)
     const [sixth, setSixth] = useState(false)
 
-    const breakpoint = 1200;
+    const breakpoint = 1024;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
@@ -124,10 +126,7 @@ function CreateRoom({ createRoomToParent }) {
                     <div className="title">
                         <div className="home">
                             <Link to="/">
-                                <KeyboardBackspaceIcon id="arrow" style={{ fontSize: 40 }} />
-                            </Link>
-                            <Link to="/">
-                                <h2>Home</h2>
+                                <img id="arrow" src={backA} alt=""/>
                             </Link>
                         </div>
                     </div>

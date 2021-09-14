@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .section2 {
     height: 88vh;
     width: 100%;
@@ -10,6 +10,7 @@
             justify-content: center;
   }
   .section2 .holder {
+    margin-top: 10px;
     width: 92%;
     height: 100%;
     color: black;
@@ -43,12 +44,12 @@
     font-size: 55px;
   }
   .section2 .holder .imageHolder {
-    height: 120px;
-    width: 120px;
+    height: 95px;
+    width: 95px;
     border-radius: 100%;
     background-color: pink;
     position: absolute;
-    top: 195px;
+    top: 135px;
     right: 30%;
     overflow: hidden;
     border: 3px solid white;
@@ -61,7 +62,7 @@
        object-fit: cover;
   }
   .section2 .holder .follow-section {
-    height: 10%;
+    height: 15%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -72,7 +73,7 @@
   }
   .section2 .holder .follow-section .follow-BTN {
     height: 38px;
-    width: 120px;
+    width: 110px;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
@@ -98,7 +99,7 @@
   }
   .section2 .holder .follow-section .following-BTN {
     height: 38px;
-    width: 120px;
+    width: 100px;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
@@ -149,7 +150,7 @@
     color: white;
   }
   .section2 .holder .specificFeedHolder {
-    height: 70%;
+    height: 65%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -360,7 +361,7 @@
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1366px) {
   .section2 {
     height: 88vh;
     width: 100%;
@@ -392,12 +393,12 @@
     background-color: #333333ff;
   }
   .section2 .holder .imageHolder {
-    height: 135px;
-    width: 135px;
+    height: 125px;
+    width: 125px;
     border-radius: 100%;
     background-color: pink;
     position: absolute;
-    top: 190px;
+    top: 155px;
     right: 28.5%;
     overflow: hidden;
     border: 3px solid white;
@@ -410,7 +411,7 @@
        object-fit: cover;
   }
   .section2 .holder .follow-section {
-    height: 10%;
+    height: 12%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -498,7 +499,7 @@
     color: white;
   }
   .section2 .holder .specificFeedHolder {
-    height: 70%;
+    height: 68%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

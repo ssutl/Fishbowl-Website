@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .feed-section {
     height: 90vh;
     width: 100%;
@@ -20,7 +20,7 @@
             justify-content: center;
   }
   .feed-section .top .holder {
-    width: 81%;
+    width: 88%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -39,11 +39,11 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 250px;
+    width: 200px;
   }
   .feed-section .top .holder .feed-BTN p {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Red Hat Text", sans-serif;
     cursor: pointer;
   }
@@ -58,8 +58,8 @@
     color: white;
   }
   .feed-section .top .holder a .create-BTN {
-    height: 45px;
-    width: 160px;
+    height: 40px;
+    width: 120px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -73,7 +73,7 @@
         -ms-flex-align: center;
             align-items: center;
     font-family: "Red Hat Text", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
   }
   .feed-section .bottom-section {
     height: 77vh;
@@ -376,7 +376,7 @@
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1366px) {
   .feed-section {
     height: 90vh;
     width: 100%;

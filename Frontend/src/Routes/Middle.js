@@ -15,7 +15,7 @@ function Middle({ childToParent, dashboard }) {
     const [search, setSearch] = useState("")
     const [followReq, setFollowReq] = useState("")
     const [roomCreated, setRoomCreated] = useState("")
-    const breakpoint = 1200;
+    const breakpoint = 1024;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const resize = () => {
