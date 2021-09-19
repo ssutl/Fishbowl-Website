@@ -385,6 +385,8 @@
 
             .name-holder {
               // background-color: royalblue;
+              word-wrap: break-word;
+
               width: 35%;
               h2 {
                 font-family: "Red Hat Text", sans-serif;
@@ -850,6 +852,8 @@
 
             .name-holder {
               // background-color: royalblue;
+              word-wrap: break-word;
+
               width: 35%;
               h2 {
                 font-family: "Red Hat Text", sans-serif;
@@ -1315,8 +1319,8 @@
             }
 
             .name-holder {
-              // background-color: royalblue;
               width: 35%;
+              word-wrap: break-word;
               h2 {
                 font-family: "Red Hat Text", sans-serif;
                 font-size: 18px;

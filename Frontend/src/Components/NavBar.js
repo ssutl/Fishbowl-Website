@@ -11,6 +11,7 @@ import { css } from "@emotion/react";
 
 function NavBar({ profileData, followReq }) {
     const info = useContext(UserContext)
+    console.log('info: ', info);
     const token = localStorage.getItem('session-token')
     const [users, setUsers] = useState([])
     const [following, setFollowing] = useState()
@@ -57,7 +58,7 @@ function NavBar({ profileData, followReq }) {
     const getFollowing = () => {
         axios({ //Getting all users on the site
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get`,
+            url: `http://localhost:5000/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data.reverse()) //Setting state with current info
@@ -68,9 +69,10 @@ function NavBar({ profileData, followReq }) {
 
         axios({
             method: "GET", //Getting the users the current user follows to filter 
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
+            console.log('response: ', response);
             setFollowing(response.data[0].following)  //Setting state with current info
             setLoading(false)
         }).catch((error) => {
@@ -140,7 +142,7 @@ function NavBar({ profileData, followReq }) {
                             }).map((user, index) => {
                                 return (
                                     <div className="user-holder" key={index}>
-                                        <Link to={{ pathname: `/People/${user.username}`, state: { user: user } }} key={index}>
+                                        <Link to={{ pathname: `/People/${user._id}`, state: { user: user } }} key={index}>
                                             <div className="circle">
                                                 <img src={user.image} referrerpolicy="no-referrer" alt=""></img>
                                             </div>

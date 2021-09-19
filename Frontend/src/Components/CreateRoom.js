@@ -87,6 +87,7 @@ function CreateRoom({ createRoomToParent }) {
                 let chosenArray = Object.keys(tags).filter((e)=>tags[e]) //Filtering array to only show tags which are true
     
                 const data = { //Creating an object to send to db
+                    CreatedByID: info.id,
                     CreatedByName: info.name,
                     CreatedByImage: info.image,
                     Tags: chosenArray,
@@ -98,7 +99,7 @@ function CreateRoom({ createRoomToParent }) {
         
                 axios({ //Uploadinf room options to the database
                     method: `POST`,
-                    url: `https://fishbowl-heroku.herokuapp.com/chat/new`,
+                    url: `http://localhost:5000/chat/new`,
                     headers: { "x-auth-token": `${token}` },
                     data: data
                 })

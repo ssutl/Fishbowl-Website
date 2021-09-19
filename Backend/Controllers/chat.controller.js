@@ -24,26 +24,21 @@ router.post('/new',auth, (req, res)=>{ //Req is the data that the front end is s
 })
 
 
-router.get('/get', auth, (req,res)=>{
+router.get('/get', auth, (req,res)=>{ //get all rooms
     ChatRoom.find()
         .then(allRooms => res.json(allRooms))
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
-router.get('/get/:name',auth,(req,res)=>{
-    ChatRoom.find({  CreatedByName: req.params.name})
+router.get('/get/specifUserRoom/:id',auth,(req,res)=>{ //get specific users rooms
+    ChatRoom.find({  CreatedByID: req.params.name})
         .then(SpecificRoom => res.json(SpecificRoom))
         .catch(err => res.status(400).json('Error! ' + err))
 })
 
-router.get('/get/Title/:name',auth,(req,res)=>{
-    console.log('req: ', req);
-    ChatRoom.find({  Title: req.params.name})
-        .then(SpecificRoom => res.json(SpecificRoom))
-        .catch(err => res.status(400).json('Error! ' + err))
-})
 
-router.get('/get/id/:id',auth,(req,res)=>{
+
+router.get('/get/:id',auth,(req,res)=>{ //get specific room from id
     console.log('req: ', req);
     ChatRoom.find({  _id: req.params.id})
         .then(SpecificRoom => res.json(SpecificRoom))

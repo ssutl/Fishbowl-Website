@@ -75,7 +75,7 @@ function ProfileBar({ profileToParent, search }) {
         if (current === "Chat") {
             axios({
                 method: 'GET',
-                url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page}`,
+                url: `http://localhost:5000/chat/get/id/${current_page}`,
                 headers: { "x-auth-token": `${token}` }
             }).then((res) => {
                 if (isMounted) {
@@ -120,7 +120,7 @@ function ProfileBar({ profileToParent, search }) {
     const updateStatus = (recievedStatus) => {
         axios({
             method: 'PUT',
-            url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+            url: `http://localhost:5000/users/update/${info.id}`,
             headers: { "x-auth-token": `${token}` },
             data: { status: recievedStatus }
         }).then((res) => {
@@ -146,7 +146,7 @@ function ProfileBar({ profileToParent, search }) {
 
             axios({
                 method: 'GET',
-                url: `https://fishbowl-heroku.herokuapp.com/chat/get/${info.name}`,
+                url: `http://localhost:5000/chat/get/${info.name}`,
                 headers: { "x-auth-token": `${token}` }
             }).then((res) => {
                 if (isMounted) {
@@ -169,7 +169,7 @@ function ProfileBar({ profileToParent, search }) {
         console.log("getting users")
         axios({
             method: "GET",
-            url: "https://fishbowl-heroku.herokuapp.com/users/get",
+            url: "http://localhost:5000/users/get",
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data.reverse()) //Storing array in state
@@ -180,7 +180,7 @@ function ProfileBar({ profileToParent, search }) {
 
         axios({
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following) //Storing list of the users the current follows
@@ -195,7 +195,7 @@ function ProfileBar({ profileToParent, search }) {
         if (value) {
             axios({
                 method: 'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+                url: `http://localhost:5000/users/update/${info.id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { following: userID }
             }).then((res) => {
@@ -208,7 +208,7 @@ function ProfileBar({ profileToParent, search }) {
         } else if (!value) {
             axios({
                 method: 'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+                url: `http://localhost:5000/users/update/${info.id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { unfollowing: userID }
             }).then((res) => {
@@ -224,7 +224,7 @@ function ProfileBar({ profileToParent, search }) {
     const getFollowing = () => { //Get following array
         axios({
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -262,7 +262,7 @@ function ProfileBar({ profileToParent, search }) {
                         <div className="title">
                             <p>MENU</p>
                         </div>
-                        <div className="menu-item" onClick={() => { dashboard ? history.push({ pathname: `/People/${info.name}`, state: { user: user } }) : history.push("/") }}>
+                        <div className="menu-item" onClick={() => { dashboard ? history.push({ pathname: `/People/${info.id}`, state: { user: user } }) : history.push("/") }}>
                             <img src={homeLogo} id="profile-img" alt="" />
                             <p>Home</p>
                         </div>
@@ -314,8 +314,8 @@ function ProfileBar({ profileToParent, search }) {
                                 </ol>
                             </div>
                             <div className="user-in">
-                                <img src={info.image} referrerpolicy="no-referrer" onClick={() => history.push({ pathname: `/People/${info.name}`, state: { user: user } })} />
-                                <p onClick={() => history.push({ pathname: `/People/${info.name}`, state: { user: user } })}>{info.name}</p>
+                                <img src={info.image} referrerpolicy="no-referrer" onClick={() => history.push({ pathname: `/People/${info.id}`, state: { user: user } })} />
+                                <p onClick={() => history.push({ pathname: `/People/${info.id}`, state: { user: user } })}>{info.name}</p>
                             </div>
                         </div>
                     ) : dashboard && settings ? (
@@ -330,8 +330,8 @@ function ProfileBar({ profileToParent, search }) {
                                 }).map((user, index) => {
                                     return (
                                         <div className="user-holder" key={index}>
-                                            <img src={user.image} referrerpolicy="no-referrer" alt="" onClick={() => redirectToUser([user.name, user])} />
-                                            <div className="name-holder" onClick={() => redirectToUser([user.name, user])}>
+                                            <img src={user.image} referrerpolicy="no-referrer" alt="" onClick={() => redirectToUser([user._id, user])} />
+                                            <div className="name-holder" onClick={() => redirectToUser([user._id, user])}>
                                                 <h2>{user.username}</h2>
                                             </div>
                                             <div className={following.includes(user.username) ? "following-BTN" : "follow-BTN"} onClick={() => requests(user.username, !following.includes(user.username))}>

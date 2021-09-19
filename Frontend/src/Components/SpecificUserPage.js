@@ -40,7 +40,7 @@ function SpecificUserPage({ specificUserToParent }) {
 
         axios({
             method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get/${state.user.username}`,
+            url: `http://localhost:5000/chat/get/id/${state.user._id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             if(isMounted){
@@ -50,7 +50,7 @@ function SpecificUserPage({ specificUserToParent }) {
 
         axios({ //Checking if logged in user is following the user which has been clicked
             method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.name}`,
+            url: `http://localhost:5000/users/get/${info.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             if(isMounted){
@@ -104,7 +104,7 @@ function SpecificUserPage({ specificUserToParent }) {
         if (!following) { //If not following make them follow
             axios({
                 method: 'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+                url: `http://localhost:5000/users/update/${info.id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { following: state.user.username }
             }).then((res) => {
@@ -114,7 +114,7 @@ function SpecificUserPage({ specificUserToParent }) {
         } else if (following) { //If following make the unfollow
             axios({
                 method: 'PUT',
-                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.name}`,
+                url: `http://localhost:5000/users/update/${info.id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { unfollowing: state.user.username }
             }).then((res) => {
@@ -143,7 +143,7 @@ function SpecificUserPage({ specificUserToParent }) {
 
         axios({
             method: 'DELETE',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/delete/id/${data[1]}`, //Deleting room clicked on
+            url: `http://localhost:5000/chat/delete/id/${data[1]}`, //Deleting room clicked on
             headers: { "x-auth-token": `${token}` },
         }).then((res) => {
             refreshRooms() //Refreshing feed
@@ -155,7 +155,7 @@ function SpecificUserPage({ specificUserToParent }) {
     const refreshRooms = () =>{ //Function to update users room feed
         axios({
             method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get/${state.user.username}`,
+            url: `http://localhost:5000/chat/get/${state.user._id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
                 setUsersRooms(res.data.reverse())

@@ -432,6 +432,7 @@
     border: 2px solid white;
   }
   .whole-holder .profile .users .holder .user-holder .name-holder {
+    word-wrap: break-word;
     width: 35%;
   }
   .whole-holder .profile .users .holder .user-holder .name-holder h2 {
@@ -944,6 +945,7 @@
     border: 2px solid white;
   }
   .whole-holder .profile .users .holder .user-holder .name-holder {
+    word-wrap: break-word;
     width: 35%;
   }
   .whole-holder .profile .users .holder .user-holder .name-holder h2 {
@@ -1458,6 +1460,7 @@
   }
   .whole-holder .profile .users .holder .user-holder .name-holder {
     width: 35%;
+    word-wrap: break-word;
   }
   .whole-holder .profile .users .holder .user-holder .name-holder h2 {
     font-family: "Red Hat Text", sans-serif;

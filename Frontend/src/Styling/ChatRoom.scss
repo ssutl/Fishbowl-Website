@@ -286,7 +286,7 @@
           // border-top: 1px solid white;
 
           .top {
-            height: 8vh;
+            height: 11vh;
             width: 100%;
             // background-color: pink;
             display: flex;
@@ -300,9 +300,8 @@
               align-items: center;
               img {
                 cursor: pointer;
-
-                height: 55px;
-                width: 55px;
+                height: 45px;
+                width: 45px;
                 border-radius: 100%;
                 margin-left: 20px;
                 margin-right: 15px;
@@ -800,7 +799,7 @@
           // border-top: 1px solid white;
 
           .top {
-            height: 8vh;
+            height: 11vh;
             width: 100%;
             // background-color: pink;
             display: flex;
@@ -815,8 +814,8 @@
               img {
                 cursor: pointer;
 
-                height: 55px;
-                width: 55px;
+                height: 50px;
+                width: 50px;
                 border-radius: 100%;
                 margin-left: 20px;
                 margin-right: 15px;
@@ -1045,7 +1044,7 @@
       flex-direction: column;
 
       .navbar {
-        height: 8vh;
+        height: 6vh;
         width: 100%;
         // background-color: aqua;
         display: flex;
@@ -1057,7 +1056,7 @@
           display: flex;
           align-items: center;
           color: white;
-          margin-left: 20px;
+          margin-left: 25px;
           // background-color: purple;
           justify-content: space-between;
 
@@ -1067,6 +1066,8 @@
 
             #arrow {
               font-weight: 800;
+              height: 20px;
+              width: 20px;
             }
 
             h2 {
@@ -1498,7 +1499,7 @@
             outline: none;
             border-radius: 5px;
             width: 75%;
-            height: 45px;
+            height: 52px;
             padding-left: 20px;
             font-size: 15px;
             background-color: #141414;
@@ -1506,8 +1507,8 @@
           }
 
           .send {
-            height: 45px;
-            width: 95px;
+            height: 52px;
+            width: 105px;
             border-radius: 5px;
             background-color: #141414;
             color: white;

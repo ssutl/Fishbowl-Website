@@ -340,7 +340,7 @@
     border-bottom: 1px solid white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top {
-    height: 8vh;
+    height: 11vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -361,8 +361,8 @@
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick img {
     cursor: pointer;
-    height: 55px;
-    width: 55px;
+    height: 45px;
+    width: 45px;
     border-radius: 100%;
     margin-left: 20px;
     margin-right: 15px;
@@ -936,7 +936,7 @@
     border-bottom: 1px solid white;
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top {
-    height: 8vh;
+    height: 11vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -957,8 +957,8 @@
   }
   .chat-room-section .chat-room-holder .scrollable .msg .top .userToClick img {
     cursor: pointer;
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
     border-radius: 100%;
     margin-left: 20px;
     margin-right: 15px;
@@ -1215,7 +1215,7 @@
             flex-direction: column;
   }
   .chat-room-section .chat-room-holder .navbar {
-    height: 8vh;
+    height: 6vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1234,7 +1234,7 @@
         -ms-flex-align: center;
             align-items: center;
     color: white;
-    margin-left: 20px;
+    margin-left: 25px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1245,6 +1245,8 @@
   }
   .chat-room-section .chat-room-holder .navbar .home a #arrow {
     font-weight: 800;
+    height: 20px;
+    width: 20px;
   }
   .chat-room-section .chat-room-holder .navbar .home a h2 {
     margin: 0px 45px 7px 0px;
@@ -1741,15 +1743,15 @@
     outline: none;
     border-radius: 5px;
     width: 75%;
-    height: 45px;
+    height: 52px;
     padding-left: 20px;
     font-size: 15px;
     background-color: #141414;
     color: white;
   }
   .chat-room-section .chat-room-holder .chat-bar form .send {
-    height: 45px;
-    width: 95px;
+    height: 52px;
+    width: 105px;
     border-radius: 5px;
     background-color: #141414;
     color: white;

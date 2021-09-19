@@ -4,8 +4,9 @@ const Schema = mongoose.Schema
 //Creating a new schema model - To write the format for our user model
 
 const chatSchema = new Schema({ //Creating model
-    CreatedByName:{type:String},
+    CreatedByID:{type:String},
     CreatedByImage:{type:String},
+    CreatedByName: {type:String},
     CreationDate:{ type: Date, default: Date.now },
     Tags: {type:Array},
     Deleted: {type:Boolean},

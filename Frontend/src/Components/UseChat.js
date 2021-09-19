@@ -4,7 +4,7 @@ import { UserContext } from "../Context/CurrentUser";
 
 
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage"; // Name of the event
-const SOCKET_SERVER_URL = "https://fishbowl-heroku.herokuapp.com";
+const SOCKET_SERVER_URL = "http://localhost:5000";
 const useChat = (roomId) => {
 const [messages, setMessages] = useState([]); // Sent and received messages
 const socketRef = useRef();
@@ -62,7 +62,8 @@ const info = useContext(UserContext)
     socketRef.current.emit(NEW_CHAT_MESSAGE_EVENT, { //Emitting to the server
       text: messageBody,
       senderId: socketRef.current.id,
-      sentBy: info.name,
+      sentByID: info.id,
+      sentByName: info.name,
       sentByImage: info.image,
       date: { year: currentdate.getFullYear(), month: currentdate.getMonth(), day: currentdate.getDate(), hour: currentdate.getHours() },
       likes: []

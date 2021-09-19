@@ -41,7 +41,7 @@ function Login() {
 
         axios({
             method: "GET",
-            url: "https://fishbowl-heroku.herokuapp.com/users/get",
+            url: "http://localhost:5000/users/get",
             headers: { "x-auth-token": `${prop[0]}` },
         }).then((response)=>{
             if(response.data.length !== 0){
@@ -50,6 +50,8 @@ function Login() {
                     response.data.map((user)=>{
                         if(user.email === prop[1]){
                             setUserName(user.username)
+                            setUserId(user._id)
+                            localStorage.setItem('userID', user._id) //Storing token from google into local storage for access later
                             setLogged(true)
                         }
                     })
@@ -72,7 +74,7 @@ function Login() {
         if(username.length > 0){
             axios({
                 method: "POST",
-                url: "https://fishbowl-heroku.herokuapp.com/users/new",
+                url: "http://localhost:5000/users/new",
                 headers: { "x-auth-token": `${token}` },
                 data: {username ,email, status, image}
             }).then((response)=>{

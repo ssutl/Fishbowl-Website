@@ -78,7 +78,7 @@ function ChatRoom() {
 
             axios({
                 method: 'GET',
-                url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page_id}`,
+                url: `http://localhost:5000/chat/get/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` }
             }).then((res) => {
                 if(isMounted){
@@ -100,7 +100,7 @@ function ChatRoom() {
     const refreshComments = () =>{ //This updates the stored messages for when user goes into editing mode, does not update live feed
         axios({
             method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page_id}`,
+            url: `http://localhost:5000/chat/get/${current_page_id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
                 setRoomComments(res.data[0].Messages);
@@ -123,7 +123,8 @@ function ChatRoom() {
 
                 const data = { //Creating an object for the current message sent
                     text: newMessage,
-                    sentBy: info.name,
+                    sentByID: info.id,
+                    sentByName: info.name,
                     sentByImage: info.image,
                     date: { year: current_date.getFullYear(), month: current_date.getMonth(), day: current_date.getDate(), hour: current_date.getHours() },
                     likes: [],
@@ -133,7 +134,7 @@ function ChatRoom() {
     
                 axios({ //Uploading the message to the current rooms message array
                     method: `PUT`,
-                    url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
+                    url: `http://localhost:5000/chat/update/${current_page_id}`,
                     headers: { "x-auth-token": `${token}` },
                     data: { message: data }
                 }).then((res) => {
@@ -162,7 +163,7 @@ function ChatRoom() {
         if (editedQuestion.length && editedName.length > 0) {
             axios({
                 method: `PUT`,
-                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
+                url: `http://localhost:5000/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: {Question: editedQuestion, Title: editedName }
             }).then((res) => {
@@ -173,7 +174,7 @@ function ChatRoom() {
         }else if(editedName.length > 0 && !editedQuestion.length > 0){
             axios({
                 method: `PUT`,
-                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
+                url: `http://localhost:5000/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: {Title: editedName }
             }).then((res) => {
@@ -184,7 +185,7 @@ function ChatRoom() {
         }else if(!editedName.length > 0 && editedQuestion.length > 0){
             axios({
                 method: `PUT`,
-                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
+                url: `http://localhost:5000/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: {Question: editedQuestion}
             }).then((res) => {
@@ -207,7 +208,7 @@ function ChatRoom() {
     const refreshChatRoom = () =>{ //Refresh entire room and display saved messages
         axios({
             method: 'GET',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page_id}`,
+            url: `http://localhost:5000/chat/get/${current_page_id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
                 setRoom(res.data[0]);
@@ -233,7 +234,7 @@ function ChatRoom() {
     const userPage = () => {
         axios({
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${room.CreatedByName}`,
+            url: `http://localhost:5000/users/get/${room.CreatedByID}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => { //Have to retrieve the data of the user clicked
             history.push({
@@ -272,7 +273,7 @@ function ChatRoom() {
         let isMounted = true;
         axios({
             method: 'PUT',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
+            url: `http://localhost:5000/chat/update/${current_page_id}`,
             headers: { "x-auth-token": `${token}` },
             data: { Answered: answered }
         }).then((res) => {
@@ -300,7 +301,7 @@ function ChatRoom() {
     const redirectToUser = (props) => {
         axios({
             method: "GET",
-            url: `https://fishbowl-heroku.herokuapp.com/users/get/${props}`,
+            url: `http://localhost:5000/users/get/${props}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             history.push({
@@ -323,7 +324,7 @@ function ChatRoom() {
     const deleteComment = (id) =>{ //Delete the comment whenever clicked
         axios({
             method: 'PUT',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
+            url: `http://localhost:5000/chat/update/${current_page_id}`,
             headers: { "x-auth-token": `${token}` },
             data: { messageID: id }
         }).then((res) => {
@@ -337,7 +338,7 @@ function ChatRoom() {
     const markComment = (props) =>{ //Marked the comment as helped
         axios({
             method: 'PUT',
-            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
+            url: `http://localhost:5000/chat/update/${current_page_id}`,
             headers: { "x-auth-token": `${token}` },
             data: { helped: props }
         }).then((res) => {
@@ -439,7 +440,7 @@ function ChatRoom() {
                                     <div className="top">
                                         <div className="userToClick" onClick={() => redirectToUser(savedMessage.sentBy)}>
                                             <img referrerpolicy="no-referrer" src={savedMessage.sentByImage} alt="" />
-                                            <h2>{savedMessage.sentBy}</h2>
+                                            <h2>{savedMessage.sentByName}</h2>
                                         </div>
                                         <p>{`· ${current_year === savedMessage.date.year ? current_month === savedMessage.date.month ? current_day === savedMessage.date.day ? current_hour === savedMessage.date.hour ? `<1h` : current_hour - savedMessage.date.hour + `h` : current_day - savedMessage.date.day + `d` : current_month - savedMessage.date.month + `m` : current_year - savedMessage.date.year + `y`}`}</p>
                                         <div className="option-holder" onClick={()=>{
@@ -486,9 +487,9 @@ function ChatRoom() {
                             {messages === undefined || messages ==="refresh" ? (<BarLoader color={"#FFFFFF"} css={override} size={300} />) : messages.slice(0).reverse().map((liveMessage, index) => (
                                 <div className="msg" key={index}>
                                     <div className="top">
-                                        <div className="userToClick" onClick={() => redirectToUser(liveMessage.sentBy)}>
+                                        <div className="userToClick" onClick={() => redirectToUser(liveMessage.sentByID)}>
                                             <img referrerpolicy="no-referrer" src={liveMessage.sentByImage} alt="" />
-                                            <h2>{liveMessage.sentBy}</h2>
+                                            <h2>{liveMessage.sentByName}</h2>
                                         </div>
                                         <p>{`· ${current_year === liveMessage.date.year ? current_month === liveMessage.date.month ? current_day === liveMessage.date.day ? current_hour === liveMessage.date.hour ? `<1h` : current_hour - liveMessage.date.hour + `h` : current_day - liveMessage.date.day + `d` : current_month - liveMessage.date.month + `m` : current_year - liveMessage.date.year + `y`}`}</p>
                                     </div>
@@ -506,9 +507,9 @@ function ChatRoom() {
                             {roomSavedMsgs === undefined ? (<BarLoader color={"#FFFFFF"} css={override} size={300} />) : roomSavedMsgs.slice(0).reverse().map((savedMessage, index) => (
                                 <div className="msg" key={index}>
                                     <div className="top">
-                                        <div className="userToClick" onClick={() => redirectToUser(savedMessage.sentBy)}>
+                                        <div className="userToClick" onClick={() => redirectToUser(savedMessage.sentByID)}>
                                             <img referrerpolicy="no-referrer" src={savedMessage.sentByImage} alt="" />
-                                            <h2>{savedMessage.sentBy}</h2>
+                                            <h2>{savedMessage.sentByName}</h2>
                                         </div>
                                         <p>{`· ${current_year === savedMessage.date.year ? current_month === savedMessage.date.month ? current_day === savedMessage.date.day ? current_hour === savedMessage.date.hour ? `<1h` : current_hour - savedMessage.date.hour + `h` : current_day - savedMessage.date.day + `d` : current_month - savedMessage.date.month + `m` : current_year - savedMessage.date.year + `y`}`}</p>
                                         
