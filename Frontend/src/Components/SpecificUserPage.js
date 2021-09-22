@@ -18,9 +18,12 @@ function SpecificUserPage({ specificUserToParent }) {
     const breakpoint = 1024;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const { state } = useLocation(); //Next users business
+    console.log('state: ', state);
     const info = useContext(UserContext) //Current Logged in users business
     const token = localStorage.getItem('session-token')
+    console.log('token: ', token);
     const [usersRooms, setUsersRooms] = useState([])
+    console.log('usersRooms: ', usersRooms);
     let mypage = state.user.username === info.name;
 
     const resize = () => {
@@ -40,17 +43,19 @@ function SpecificUserPage({ specificUserToParent }) {
 
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get/id/${state.user._id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/specificUserRoom/${state.user.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             if(isMounted){
                 setUsersRooms(res.data.reverse())
             }
+        }).catch((err)=>{
+            console.log(err)
         })
 
         axios({ //Checking if logged in user is following the user which has been clicked
             method: 'GET',
-            url: `http://localhost:5000/users/get/${info.id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             if(isMounted){
@@ -104,7 +109,7 @@ function SpecificUserPage({ specificUserToParent }) {
         if (!following) { //If not following make them follow
             axios({
                 method: 'PUT',
-                url: `http://localhost:5000/users/update/${info.id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { following: state.user.username }
             }).then((res) => {
@@ -114,7 +119,7 @@ function SpecificUserPage({ specificUserToParent }) {
         } else if (following) { //If following make the unfollow
             axios({
                 method: 'PUT',
-                url: `http://localhost:5000/users/update/${info.id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { unfollowing: state.user.username }
             }).then((res) => {
@@ -139,11 +144,12 @@ function SpecificUserPage({ specificUserToParent }) {
 
 
     const deleteRoom = (data) =>{
+        console.log('data: ', data);
         data[0].preventDefault() //Preventing it from redirecting to room
 
         axios({
             method: 'DELETE',
-            url: `http://localhost:5000/chat/delete/id/${data[1]}`, //Deleting room clicked on
+            url: `https://fishbowl-heroku.herokuapp.com/chat/delete/id/${data[1]}`, //Deleting room clicked on
             headers: { "x-auth-token": `${token}` },
         }).then((res) => {
             refreshRooms() //Refreshing feed
@@ -155,7 +161,7 @@ function SpecificUserPage({ specificUserToParent }) {
     const refreshRooms = () =>{ //Function to update users room feed
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get/${state.user._id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/specificUserRoom/${state.user.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
                 setUsersRooms(res.data.reverse())

@@ -78,7 +78,7 @@ function ChatRoom() {
 
             axios({
                 method: 'GET',
-                url: `http://localhost:5000/chat/get/${current_page_id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/get/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` }
             }).then((res) => {
                 if(isMounted){
@@ -100,7 +100,7 @@ function ChatRoom() {
     const refreshComments = () =>{ //This updates the stored messages for when user goes into editing mode, does not update live feed
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get/${current_page_id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/${current_page_id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
                 setRoomComments(res.data[0].Messages);
@@ -134,7 +134,7 @@ function ChatRoom() {
     
                 axios({ //Uploading the message to the current rooms message array
                     method: `PUT`,
-                    url: `http://localhost:5000/chat/update/${current_page_id}`,
+                    url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
                     headers: { "x-auth-token": `${token}` },
                     data: { message: data }
                 }).then((res) => {
@@ -163,7 +163,7 @@ function ChatRoom() {
         if (editedQuestion.length && editedName.length > 0) {
             axios({
                 method: `PUT`,
-                url: `http://localhost:5000/chat/update/${current_page_id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: {Question: editedQuestion, Title: editedName }
             }).then((res) => {
@@ -174,7 +174,7 @@ function ChatRoom() {
         }else if(editedName.length > 0 && !editedQuestion.length > 0){
             axios({
                 method: `PUT`,
-                url: `http://localhost:5000/chat/update/${current_page_id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: {Title: editedName }
             }).then((res) => {
@@ -185,7 +185,7 @@ function ChatRoom() {
         }else if(!editedName.length > 0 && editedQuestion.length > 0){
             axios({
                 method: `PUT`,
-                url: `http://localhost:5000/chat/update/${current_page_id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: {Question: editedQuestion}
             }).then((res) => {
@@ -208,7 +208,7 @@ function ChatRoom() {
     const refreshChatRoom = () =>{ //Refresh entire room and display saved messages
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get/${current_page_id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get/${current_page_id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
                 setRoom(res.data[0]);
@@ -234,7 +234,7 @@ function ChatRoom() {
     const userPage = () => {
         axios({
             method: "GET",
-            url: `http://localhost:5000/users/get/${room.CreatedByID}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${room.CreatedByID}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => { //Have to retrieve the data of the user clicked
             history.push({
@@ -273,7 +273,7 @@ function ChatRoom() {
         let isMounted = true;
         axios({
             method: 'PUT',
-            url: `http://localhost:5000/chat/update/${current_page_id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
             headers: { "x-auth-token": `${token}` },
             data: { Answered: answered }
         }).then((res) => {
@@ -301,7 +301,7 @@ function ChatRoom() {
     const redirectToUser = (props) => {
         axios({
             method: "GET",
-            url: `http://localhost:5000/users/get/${props}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${props}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             history.push({
@@ -324,7 +324,7 @@ function ChatRoom() {
     const deleteComment = (id) =>{ //Delete the comment whenever clicked
         axios({
             method: 'PUT',
-            url: `http://localhost:5000/chat/update/${current_page_id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
             headers: { "x-auth-token": `${token}` },
             data: { messageID: id }
         }).then((res) => {
@@ -338,7 +338,7 @@ function ChatRoom() {
     const markComment = (props) =>{ //Marked the comment as helped
         axios({
             method: 'PUT',
-            url: `http://localhost:5000/chat/update/${current_page_id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,
             headers: { "x-auth-token": `${token}` },
             data: { helped: props }
         }).then((res) => {

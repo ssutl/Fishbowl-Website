@@ -58,7 +58,7 @@ function NavBar({ profileData, followReq }) {
     const getFollowing = () => {
         axios({ //Getting all users on the site
             method: "GET",
-            url: `http://localhost:5000/users/get`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data.reverse()) //Setting state with current info
@@ -69,7 +69,7 @@ function NavBar({ profileData, followReq }) {
 
         axios({
             method: "GET", //Getting the users the current user follows to filter 
-            url: `http://localhost:5000/users/get/${info.id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             console.log('response: ', response);

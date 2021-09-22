@@ -17,7 +17,7 @@ function Login() {
     const [image, setImage] = useState("")
     const [email, setEmail] = useState("")
     const [logged, setLogged] = useState(false)
-    const [id, setUserId] = useState()
+    const [id, setUserId] = useState("")
     const [status, setStatus] = useState("")
     const [token, setToken] = useState()
     const breakpoint = 1024;
@@ -41,7 +41,7 @@ function Login() {
 
         axios({
             method: "GET",
-            url: "http://localhost:5000/users/get",
+            url: "https://fishbowl-heroku.herokuapp.com/users/get",
             headers: { "x-auth-token": `${prop[0]}` },
         }).then((response)=>{
             if(response.data.length !== 0){
@@ -66,6 +66,8 @@ function Login() {
         })
     }
 
+    console.log(id)
+
 
     
 
@@ -74,14 +76,34 @@ function Login() {
         if(username.length > 0){
             axios({
                 method: "POST",
-                url: "http://localhost:5000/users/new",
+                url: "https://fishbowl-heroku.herokuapp.com/users/new",
                 headers: { "x-auth-token": `${token}` },
                 data: {username ,email, status, image}
             }).then((response)=>{
                 if(response.data.msg === "user already exists"){
                     setUsernameTaken(true)
                 }else{
-                    setLogged(true)
+
+                    axios({
+                        method: "GET",
+                        url: "https://fishbowl-heroku.herokuapp.com/users/get",
+                        headers: { "x-auth-token": `${token}` },
+                    }).then((response)=>{
+                        if(response.data.length !== 0){
+                            if(response.data.filter((user)=> user.email === email).length > 0){
+                                response.data.map((user)=>{
+                                    if(user.email === email){
+                                        setUserId(user._id)
+                                        localStorage.setItem('userID', user._id) //Storing token from google into local storage for access later
+                                        setLogged(true)
+                                    }
+                                })
+                            }
+                        }
+                            
+                    })
+
+
                 }
             }).catch((error)=>{
                 console.log('error: ', error);
@@ -93,7 +115,7 @@ function Login() {
 
 
     if(screenWidth >= breakpoint){
-        if (logged) { //Conditionally rendering main app
+        if (logged && username !== "" && id !== "" && email!== "") { //Conditionally rendering main app
             return <App name={username} email={email} image={image} id={id} />
         } else {
             return (

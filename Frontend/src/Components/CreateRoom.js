@@ -99,7 +99,7 @@ function CreateRoom({ createRoomToParent }) {
         
                 axios({ //Uploadinf room options to the database
                     method: `POST`,
-                    url: `http://localhost:5000/chat/new`,
+                    url: `https://fishbowl-heroku.herokuapp.com/chat/new`,
                     headers: { "x-auth-token": `${token}` },
                     data: data
                 })

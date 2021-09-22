@@ -50,7 +50,7 @@ function Feed({ input, followR, dashboard}) {
         setLoading(true)
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             if(isMounted){
@@ -60,7 +60,7 @@ function Feed({ input, followR, dashboard}) {
 
         axios({
             method: "GET", //Getting the users the current user follows
-            url: `http://localhost:5000/users/get/${info.id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             if(isMounted){
@@ -124,7 +124,7 @@ function Feed({ input, followR, dashboard}) {
     const checkRooms = () =>{ //Getting rooms and checking if there are any more than whats already displayed
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             if(res.data.length > allRooms.length){ //If recieved rooms array is larger than whats displayed give option to update
@@ -145,7 +145,7 @@ function Feed({ input, followR, dashboard}) {
     const updateCurrentRooms = () =>{ //Updating ooms
         axios({
             method: 'GET',
-            url: `http://localhost:5000/chat/get`,
+            url: `https://fishbowl-heroku.herokuapp.com/chat/get`,
             headers: { "x-auth-token": `${token}` }
         }).then((res) => {
             setAllRooms(res.data.reverse()) //Reversing order of rooms before we set variable, so that newest is at the top

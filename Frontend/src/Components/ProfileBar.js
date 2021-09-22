@@ -42,7 +42,7 @@ function ProfileBar({ profileToParent, search }) {
     const token = localStorage.getItem('session-token')
     const [searching, setSearching] = useState(false)
     const chatroom = current === "Chat";
-    const dashboard = current_page === "" && !searching; //Dashboard display is true if user is not searching and on home page
+    const dashboard = current_page === "" || current === "People" || current === "Create" && !searching ; //Dashboard display is true if user is not searching and on home page
     const userSearch = current_page === "" && searching && !settings //Search display is true if user is on home page and searching
     console.log('userSearch: ', userSearch);
     const [users, setUsers] = useState('')
@@ -75,7 +75,7 @@ function ProfileBar({ profileToParent, search }) {
         if (current === "Chat") {
             axios({
                 method: 'GET',
-                url: `http://localhost:5000/chat/get/id/${current_page}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/get/id/${current_page}`,
                 headers: { "x-auth-token": `${token}` }
             }).then((res) => {
                 if (isMounted) {
@@ -120,7 +120,7 @@ function ProfileBar({ profileToParent, search }) {
     const updateStatus = (recievedStatus) => {
         axios({
             method: 'PUT',
-            url: `http://localhost:5000/users/update/${info.id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.id}`,
             headers: { "x-auth-token": `${token}` },
             data: { status: recievedStatus }
         }).then((res) => {
@@ -146,7 +146,7 @@ function ProfileBar({ profileToParent, search }) {
 
             axios({
                 method: 'GET',
-                url: `http://localhost:5000/chat/get/${info.name}`,
+                url: `https://fishbowl-heroku.herokuapp.com/chat/get/${info.id}`,
                 headers: { "x-auth-token": `${token}` }
             }).then((res) => {
                 if (isMounted) {
@@ -169,7 +169,7 @@ function ProfileBar({ profileToParent, search }) {
         console.log("getting users")
         axios({
             method: "GET",
-            url: "http://localhost:5000/users/get",
+            url: "https://fishbowl-heroku.herokuapp.com/users/get",
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setUsers(response.data.reverse()) //Storing array in state
@@ -180,7 +180,7 @@ function ProfileBar({ profileToParent, search }) {
 
         axios({
             method: "GET",
-            url: `http://localhost:5000/users/get/${info.id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following) //Storing list of the users the current follows
@@ -195,7 +195,7 @@ function ProfileBar({ profileToParent, search }) {
         if (value) {
             axios({
                 method: 'PUT',
-                url: `http://localhost:5000/users/update/${info.id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { following: userID }
             }).then((res) => {
@@ -208,7 +208,7 @@ function ProfileBar({ profileToParent, search }) {
         } else if (!value) {
             axios({
                 method: 'PUT',
-                url: `http://localhost:5000/users/update/${info.id}`,
+                url: `https://fishbowl-heroku.herokuapp.com/users/update/${info.id}`,
                 headers: { "x-auth-token": `${token}` },
                 data: { unfollowing: userID }
             }).then((res) => {
@@ -224,7 +224,7 @@ function ProfileBar({ profileToParent, search }) {
     const getFollowing = () => { //Get following array
         axios({
             method: "GET",
-            url: `http://localhost:5000/users/get/${info.id}`,
+            url: `https://fishbowl-heroku.herokuapp.com/users/get/${info.id}`,
             headers: { "x-auth-token": `${token}` }
         }).then((response) => {
             setFollowing(response.data[0].following)
@@ -262,7 +262,7 @@ function ProfileBar({ profileToParent, search }) {
                         <div className="title">
                             <p>MENU</p>
                         </div>
-                        <div className="menu-item" onClick={() => { dashboard ? history.push({ pathname: `/People/${info.id}`, state: { user: user } }) : history.push("/") }}>
+                        <div className="menu-item" onClick={() => { dashboard && current !== "People" ? history.push({ pathname: `/People/${info.id}`, state: { user: user } }) : history.push("/") }}>
                             <img src={homeLogo} id="profile-img" alt="" />
                             <p>Home</p>
                         </div>
