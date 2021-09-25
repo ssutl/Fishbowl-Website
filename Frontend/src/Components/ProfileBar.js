@@ -30,7 +30,6 @@ function ProfileBar({ profileToParent, search }) {
     }, [flag]) //Runs whenever flag is altered
 
     let profileSearch = search
-    console.log('profileSearch: ', profileSearch);
     let current_page = useLocation().pathname.split("/").pop(); //Collecting current page
     let current = useLocation().pathname.split("/").slice(-2)[0]; //Collecting current page
 
@@ -44,12 +43,10 @@ function ProfileBar({ profileToParent, search }) {
     const chatroom = current === "Chat";
     const dashboard = current_page === "" || current === "People" || current === "Create" && !searching ; //Dashboard display is true if user is not searching and on home page
     const userSearch = current_page === "" && searching && !settings //Search display is true if user is on home page and searching
-    console.log('userSearch: ', userSearch);
     const [users, setUsers] = useState('')
     const [following, setFollowing] = useState()
     const [myRooms, setMyRooms] = useState([])
     const [currentRoom, setCurrentRoom] = useState()
-    console.log('currentRoom: ', currentRoom);
 
     const [displayStatus, setDisplayStaus] = useState(false)
     const [status, setStatus] = useState('')

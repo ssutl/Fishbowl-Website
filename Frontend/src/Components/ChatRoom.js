@@ -54,7 +54,7 @@ function ChatRoom() {
      * Sockets 
      * =======
      */
-    const { roomId } = current_page_id; //Current page id will always be unique and the socket id will match that
+    const roomId  = current_page_id; //Current page id will always be unique and the socket id will match that
     const { messages, sendMessage } = useChat(roomId); //Passing in the room ID into my useChat function which is within another component
     const [newMessage, setNewMessage] = useState() //This stores a message that has currently been typed by a user and submitted
     const [roomSavedMsgs, setRoomSavedMsgs] = useState() //State to store non-live messages from database
@@ -238,7 +238,7 @@ function ChatRoom() {
             headers: { "x-auth-token": `${token}` }
         }).then((response) => { //Have to retrieve the data of the user clicked
             history.push({
-                pathname: `/People/${room.CreatedByName}`,
+                pathname: `/People/${room.CreatedByID}`,
                 state: { user: response.data[0] }
             })
         }).catch((error) => {
@@ -438,7 +438,7 @@ function ChatRoom() {
                             {roomComments === undefined ? (<BarLoader color={"#FFFFFF"} css={override} size={300} />) : roomComments.slice(0).reverse().map((savedMessage, index) => (
                                 <div className="msg" key={index}>
                                     <div className="top">
-                                        <div className="userToClick" onClick={() => redirectToUser(savedMessage.sentBy)}>
+                                        <div className="userToClick" onClick={() => redirectToUser(savedMessage.sentByID)}>
                                             <img referrerpolicy="no-referrer" src={savedMessage.sentByImage} alt="" />
                                             <h2>{savedMessage.sentByName}</h2>
                                         </div>
