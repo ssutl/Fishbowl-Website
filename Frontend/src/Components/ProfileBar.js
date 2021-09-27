@@ -41,7 +41,7 @@ function ProfileBar({ profileToParent, search }) {
     const token = localStorage.getItem('session-token')
     const [searching, setSearching] = useState(false)
     const chatroom = current === "Chat";
-    const dashboard = current_page === "" || current === "People" || current === "Create" && !searching ; //Dashboard display is true if user is not searching and on home page
+    const dashboard = current_page === "" && !searching || current === "People" && !searching || current === "Create" && !searching ; //Dashboard display is true if user is not searching and on home page
     const userSearch = current_page === "" && searching && !settings //Search display is true if user is on home page and searching
     const [users, setUsers] = useState('')
     const [following, setFollowing] = useState()

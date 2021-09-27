@@ -57,6 +57,8 @@ function CreateRoom({ createRoomToParent }) {
 
 
     const handleSubmit = () => {
+        var currentdate = new Date();
+
 
 
         if (roomName.trim().length) { //Checking if room name is not empty
@@ -94,7 +96,8 @@ function CreateRoom({ createRoomToParent }) {
                     Deleted: false,
                     Title: roomName,
                     Question: roomQuestion,
-                    Answered: false
+                    Answered: false,
+                    Date: { year: currentdate.getFullYear(), month: currentdate.getMonth(), day: currentdate.getDate(), hour: currentdate.getHours() }
                 }
         
                 axios({ //Uploadinf room options to the database

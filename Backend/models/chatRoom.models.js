@@ -7,7 +7,7 @@ const chatSchema = new Schema({ //Creating model
     CreatedByID:{type:String},
     CreatedByImage:{type:String},
     CreatedByName: {type:String},
-    CreationDate:{ type: Date, default: Date.now },
+    Date:{ type: Object},
     Tags: {type:Array},
     Deleted: {type:Boolean},
     Title: {type:String},
