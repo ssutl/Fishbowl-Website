@@ -70,6 +70,7 @@
         flex-direction: column;
         color: white;
         overflow-y: scroll;
+        overflow-x: hidden;
 
         .user-holder {
           display: flex;
@@ -227,6 +228,7 @@
             }
 
             p {
+              // word-break: break-all;
               margin-left: 5px;
               display: block;
               font-weight: 500;

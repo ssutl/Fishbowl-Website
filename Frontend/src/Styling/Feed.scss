@@ -93,7 +93,7 @@
 
       .scroll {
         height: 100%;
-        width: 80%;
+        width: 90%;
         overflow: auto;
         scroll-behavior: smooth;
 
@@ -137,54 +137,53 @@
             width: 100%;
             background-color: $secondary-background;
             word-break: break-all;
-            border-radius: 5px;
+            // border-radius: px;
             padding: 15px 0px 10px 0px;
-
-            // .profile {
-            //   height: 60px;
-            //   width: 100%;
-            //   // background-color: yellow;
-            //   display: flex;
-            //   align-items: center;
-            //   margin-bottom: 15px;
-
-            //   img {
-            //     height: 40px;
-            //     width: 40px;
-            //     border-radius: 100%;
-            //     margin-left: 45px;
-            //   }
-            // }
 
             .top-section {
               color: white;
-
-              height: 57%;
               width: 100%;
               display: flex;
-              flex-direction: column;
+              // flex-direction: column;
               align-items: flex-start;
 
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
+              .left-top {
+                width: 30%;
+                // background-color: orange;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                  height: 90px;
+                  width: 90px;
+                  border-radius: 15px;
+                }
               }
 
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
+              .right-top {
+                width: 70%;
+                // background-color: aqua;
+                padding: 10px;
 
-              #Question {
-                font-size: 17px;
+                p {
+                  font-family: "Red Hat Text", sans-serif;
+                }
+
+                #Title {
+                  font-size: 22px;
+                  font-weight: 600;
+                  margin-bottom: 10px;
+                }
+
+                #Question {
+                  font-size: 17px;
+                }
               }
             }
 
             .low-section {
               margin-top: 15px;
-              height: 43%;
               width: 100%;
               // background-color: orange;
               display: flex;
@@ -227,116 +226,6 @@
                 color: white;
                 margin-right: 20px;
                 height: 24px;
-                width: 90px;
-                font-size: 15px;
-                border-radius: 5px;
-                background-color: $highlight;
-
-                // .pop-up {
-                //   position: relative;
-                //   background-color: #2c2f33;
-                //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                //   color: white;
-                //   border-radius: 2px;
-                //   display: none;
-                //   min-width: 90px;
-                //   bottom: 50px;
-                // }
-              }
-
-              // .dot:hover {
-              // }
-
-              // .dot:hover .pop-up {
-              //   position: relative;
-              //   display: flex;
-              //   justify-content: center;
-              //   align-items: center;
-              //   height: 35px;
-              // }
-            }
-          }
-          .room-holder-friend {
-            margin-top: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: #1481ee;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
-                color: white;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 10px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 22px;
                 width: 90px;
                 font-size: 15px;
                 border-radius: 5px;
@@ -618,116 +507,6 @@
               // }
             }
           }
-          .room-holder-friend {
-            margin-top: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: #1481ee;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
-                color: white;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 10px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 25px;
-                width: 100px;
-                font-size: 15px;
-                border-radius: 5px;
-                background-color: $highlight;
-
-                // .pop-up {
-                //   position: relative;
-                //   background-color: #2c2f33;
-                //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                //   color: white;
-                //   border-radius: 2px;
-                //   display: none;
-                //   min-width: 90px;
-                //   bottom: 50px;
-                // }
-              }
-
-              // .dot:hover {
-              // }
-
-              // .dot:hover .pop-up {
-              //   position: relative;
-              //   display: flex;
-              //   justify-content: center;
-              //   align-items: center;
-              //   height: 35px;
-              // }
-            }
-          }
         }
       }
     }
@@ -886,112 +665,6 @@
                 margin-left: 60px;
                 margin-right: 60px;
                 font-family: "Red Hat Text", sans-serif;
-              }
-
-              #Title {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 10px;
-              }
-
-              #Question {
-                font-size: 17px;
-              }
-            }
-
-            .low-section {
-              margin-top: 15px;
-              height: 43%;
-              width: 100%;
-              // background-color: orange;
-              display: flex;
-              justify-content: center;
-
-              .low-holder {
-                height: 100%;
-                width: 85%;
-                display: flex;
-                flex-wrap: wrap;
-
-                .roomTag {
-                  // background-color: aqua;
-                  // cursor: pointer;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 30px;
-                  width: fit-content;
-                  font-family: "Red Hat Text", sans-serif;
-                  color: white;
-                  border-radius: 50px;
-                  font-size: 15px;
-                  padding: 0px 15px 0px 15px;
-                  background-color: $buttons;
-                  margin: 5px 20px 10px 0px;
-                  // box-shadow: 0px 8px 16px 0px rgba(175, 175, 175, 0.1);
-                }
-              }
-            }
-            .answered {
-              // background-color: yellow;
-              display: flex;
-              justify-content: flex-end;
-
-              .dot {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                margin-right: 20px;
-                height: 25px;
-                width: 110px;
-                border-radius: 5px;
-                background-color: $highlight;
-
-                // .pop-up {
-                //   position: relative;
-                //   background-color: #2c2f33;
-                //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-                //   color: white;
-                //   border-radius: 2px;
-                //   display: none;
-                //   min-width: 90px;
-                //   bottom: 40px;
-                // }
-              }
-
-              // .dot:hover .pop-up {
-              //   display: flex;
-              //   justify-content: center;
-              //   align-items: center;
-              //   height: 35px;
-              // }
-            }
-          }
-          .room-holder-friend {
-            margin-top: 30px;
-            height: fit-content;
-            width: 100%;
-            background-color: #1481ee;
-            word-break: break-all;
-            border-radius: 5px;
-            padding: 15px 0px 10px 0px;
-
-            .top-section {
-              color: white;
-
-              height: 57%;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-
-              p {
-                margin-left: 60px;
-                margin-right: 60px;
-                font-family: "Red Hat Text", sans-serif;
-                color: white;
               }
 
               #Title {

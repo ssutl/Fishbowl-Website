@@ -160,7 +160,7 @@ function ChatRoom() {
 
     const updateQuestion = () => {
         setEditing(false)
-        if (editedQuestion.length && editedName.length > 0) {
+        if (editedQuestion.length > 0 && editedName.length > 0) {
             axios({
                 method: `PUT`,
                 url: `https://fishbowl-heroku.herokuapp.com/chat/update/${current_page_id}`,

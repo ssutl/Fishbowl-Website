@@ -109,7 +109,7 @@
   }
   .feed-section .bottom-section .scroll {
     height: 100%;
-    width: 80%;
+    width: 90%;
     overflow: auto;
     scroll-behavior: smooth;
   }
@@ -160,40 +160,52 @@
     width: 100%;
     background-color: #212224ff;
     word-break: break-all;
-    border-radius: 5px;
     padding: 15px 0px 10px 0px;
   }
   .feed-section .bottom-section .scroll .link .room-holder .top-section {
     color: white;
-    height: 57%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .feed-section .bottom-section .scroll .link .room-holder .top-section p {
-    margin-left: 60px;
-    margin-right: 60px;
+  .feed-section .bottom-section .scroll .link .room-holder .top-section .left-top {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .top-section .left-top img {
+    height: 90px;
+    width: 90px;
+    border-radius: 15px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .top-section .right-top {
+    width: 70%;
+    padding: 10px;
+  }
+  .feed-section .bottom-section .scroll .link .room-holder .top-section .right-top p {
     font-family: "Red Hat Text", sans-serif;
   }
-  .feed-section .bottom-section .scroll .link .room-holder .top-section #Title {
+  .feed-section .bottom-section .scroll .link .room-holder .top-section .right-top #Title {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
   }
-  .feed-section .bottom-section .scroll .link .room-holder .top-section #Question {
+  .feed-section .bottom-section .scroll .link .room-holder .top-section .right-top #Question {
     font-size: 17px;
   }
   .feed-section .bottom-section .scroll .link .room-holder .low-section {
     margin-top: 15px;
-    height: 43%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -255,114 +267,6 @@
     color: white;
     margin-right: 20px;
     height: 24px;
-    width: 90px;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #0096ff;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend {
-    margin-top: 30px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 100%;
-    background-color: #1481ee;
-    word-break: break-all;
-    border-radius: 5px;
-    padding: 15px 0px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section {
-    color: white;
-    height: 57%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section p {
-    margin-left: 60px;
-    margin-right: 60px;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Question {
-    font-size: 17px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section {
-    margin-top: 15px;
-    height: 43%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section .low-holder {
-    height: 100%;
-    width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section .low-holder .roomTag {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 30px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-    border-radius: 50px;
-    font-size: 15px;
-    padding: 0px 15px 0px 15px;
-    background-color: #333333ff;
-    margin: 5px 20px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 22px;
     width: 90px;
     font-size: 15px;
     border-radius: 5px;
@@ -638,114 +542,6 @@
     border-radius: 5px;
     background-color: #0096ff;
   }
-  .feed-section .bottom-section .scroll .link .room-holder-friend {
-    margin-top: 30px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 100%;
-    background-color: #1481ee;
-    word-break: break-all;
-    border-radius: 5px;
-    padding: 15px 0px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section {
-    color: white;
-    height: 57%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section p {
-    margin-left: 60px;
-    margin-right: 60px;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Question {
-    font-size: 17px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section {
-    margin-top: 15px;
-    height: 43%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section .low-holder {
-    height: 100%;
-    width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section .low-holder .roomTag {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 30px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-    border-radius: 50px;
-    font-size: 15px;
-    padding: 0px 15px 0px 15px;
-    background-color: #333333ff;
-    margin: 5px 20px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 25px;
-    width: 100px;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #0096ff;
-  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -992,113 +788,6 @@
             justify-content: flex-end;
   }
   .feed-section .bottom-section .scroll .link .room-holder .answered .dot {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: white;
-    margin-right: 20px;
-    height: 25px;
-    width: 110px;
-    border-radius: 5px;
-    background-color: #0096ff;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend {
-    margin-top: 30px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 100%;
-    background-color: #1481ee;
-    word-break: break-all;
-    border-radius: 5px;
-    padding: 15px 0px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section {
-    color: white;
-    height: 57%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section p {
-    margin-left: 60px;
-    margin-right: 60px;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .top-section #Question {
-    font-size: 17px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section {
-    margin-top: 15px;
-    height: 43%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section .low-holder {
-    height: 100%;
-    width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .low-section .low-holder .roomTag {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 30px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-    border-radius: 50px;
-    font-size: 15px;
-    padding: 0px 15px 0px 15px;
-    background-color: #333333ff;
-    margin: 5px 20px 10px 0px;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .answered {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .feed-section .bottom-section .scroll .link .room-holder-friend .answered .dot {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

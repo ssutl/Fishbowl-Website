@@ -17,8 +17,8 @@ function Feed({ input, followR, dashboard}) {
     const info = useContext(UserContext) //Stores current user info
     const token = localStorage.getItem('session-token') //Retrieves token from server to pass to api
     const [allRooms, setAllRooms] = useState([]) //Stores all current rooms from api
-    const [friendFeed, setFriendFeed] = useState(false) //Boolean variable to switch between feeds
-    const [feed, setFeed] = useState(true) //Boolean variable to switch between feeds
+    const [friendFeed, setFriendFeed] = useState(true) //Boolean variable to switch between feeds
+    const [feed, setFeed] = useState(false) //Boolean variable to switch between feeds
     const [following, setFollowing] = useState([]) //Array of the users the current user is following
     const [loading, setLoading] = useState() //Flag to indicate when API call is finished
     const breakpoint = 1024; //Tablet breakpoint
@@ -185,17 +185,17 @@ function Feed({ input, followR, dashboard}) {
             <div className="top">
                 <div className="holder">
                     <div className="feed-BTN">
+                        <p className={friendFeed ? "normal" : "NotActive"} onClick={() => {
+                            setFeed(false);
+                            setFriendFeed(true);
+                            document.querySelector('.scroll').scrollTo(0, 0);
+                        }}>Friend's Feed</p>
                         <p className={newRoomsAvailable? "pink" :feed ? "normal" : "NotActive"} onClick={() => {
                             setFeed(true);
                             setFriendFeed(false);
                             updateCurrentRooms();
                             document.querySelector('.scroll').scrollTo(0, 0)
                         }}>Global Feed</p>
-                        <p className={friendFeed ? "normal" : "NotActive"} onClick={() => {
-                            setFeed(false);
-                            setFriendFeed(true);
-                            document.querySelector('.scroll').scrollTo(0, 0);
-                        }}>Friend's Feed</p>
                     </div>
                     <Link to={{ pathname: `/Create/${info.id}` }}>
                         <div className="create-BTN">
@@ -243,10 +243,15 @@ function Feed({ input, followR, dashboard}) {
                         }).map((room, index) => {
                             return (
                                 <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link" key={index}>
-                                    <div className={following.includes(room.CreatedByName) ? "room-holder-friend" : "room-holder"} key={index}>
+                                    <div className="room-holder" key={index}>
                                         <div className="top-section">
-                                            <p id="Title">{room.Title}</p>
-                                            <p id="Question">{room.Question.length >= 105? room.Question.substring(0, 105) + `...` : room.Question}</p>
+                                            <div className="left-top">
+                                                <img src={room.CreatedByImage}/>
+                                            </div>
+                                            <div className="right-top">
+                                                <p id="Title">{room.Title}</p>
+                                                <p id="Question">{room.Question.length >= 105? room.Question.substring(0, 105) + `...` : room.Question}</p>
+                                            </div>
                                         </div>
                                         <div className="low-section">
                                             <div className="low-holder">
@@ -286,10 +291,16 @@ function Feed({ input, followR, dashboard}) {
                         }).map((room, index) => {
                             return (
                                 <Link to={{ pathname: `/Chat/${room._id}`, state: { room } }} className="link" key={index}>
-                                    <div className="room-holder-friend" key={index}>
-                                        <div className="top-section">
-                                            <p id="Title">{room.Title}</p>
-                                            <p id="Question">{room.Question.length >= 105? room.Question.substring(0, 105) + `...` : room.Question}</p>
+                                    <div className="room-holder" key={index}>
+                                    <div className="top-section">
+                                            <div className="left-top">
+                                                <img src={room.CreatedByImage}/>
+                                            </div>
+                                            <div className="right-top">
+                                                <p id="Title">{room.Title}</p>
+                                                <p id="Title">{room.CreatedByName}</p>
+                                                <p id="Question">{room.Question.length >= 105? room.Question.substring(0, 105) + `...` : room.Question}</p>
+                                            </div>
                                         </div>
                                         <div className="low-section">
                                             <div className="low-holder">
