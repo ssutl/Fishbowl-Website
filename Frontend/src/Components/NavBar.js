@@ -150,7 +150,7 @@ function NavBar({ profileData, followReq }) {
 
                                                 <div className="pop-up">{user.status}</div>
                                             </div>
-                                            <p>{screenWidth < 1024 ? user.username.substring(0, 5) + ' ..' : user.username}</p>
+                                            <p>{screenWidth <= 1024 ? user.username.substring(0, 8) + ' ..' : screenWidth <= 1366? user.username.substring(0, 12): user.username}</p>
                                         </Link>
                                     </div>
                                 )
