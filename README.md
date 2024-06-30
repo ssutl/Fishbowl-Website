@@ -24,13 +24,3 @@ This was my A-Level Computing project & also my first non "hello world" project.
 A user would be able to intialise channels on the server with unique ID's, this would represent a new room created, other users would be able to join these rooms which would subscribe them to the respective channel. So when a user sends a message, the message is emitted to everyone on that channel only, meaning the message stays in that room. Once the user exits the chat room then they unsubscribe from the channel. 
 
 I also created other channels to monitor which users were online currently on the app, and displayed their status so other users could see this. There's similiar implementation for the following and upvoting system, which both use sockets.
-
-# How to run application<br/>
-### Frontend
-1. Run NPM I (to install needed dependencies)
-2. CD to `FRONTEND`
-3. Run `npm start`
-
-### Backend
-1. CD to `BACKEND`
-2. Run `Nodemon`
